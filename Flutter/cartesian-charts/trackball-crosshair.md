@@ -87,7 +87,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 * [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - displays label for all the data points grouped and positioned at the top of the chart area.
 * [`TrackballDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - doesn't display the label.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -136,7 +136,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 >**Note**: The [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) is only applicable for trackball display mode [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -181,7 +181,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 By default, axis value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property by adding desired text as prefix or suffix.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="9" %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -232,7 +232,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) - activates trackball only when performing double tap action.
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) - Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -341,7 +341,7 @@ Trackball markers are used to provide information about the exact point location
 
 Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -349,8 +349,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
     void initState(){
       _trackballBehavior = TrackballBehavior(
                   enable: true,
-                  markerSettings: TrackballMarkerSettings(
-                    markerVisibility: TrackballVisibilityMode.visible)
+                  markerSettings: TrackballMarkerSettings(markerVisibility: TrackballVisibilityMode.visible)
                 );
       super.initState();
     }
@@ -407,62 +406,65 @@ You can customize the appearance of the trackball tooltip with your own widgets 
     late TrackballBehavior _trackballBehavior;
 
     @override
-    void initState(){
+    void initState() {
       _trackballBehavior = TrackballBehavior(
-                    enable: true,
-                    builder: (BuildContext context,
-                        TrackballDetails trackballDetails) {
-                      return Container(
-                          height: 50,
-                          width: 150,
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(0, 8, 22, 0.75),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(6.0)),
-                          ),
-                          child: Row(children: [
-                            Padding(
-                                padding: EdgeInsets.only(left: 5),
-                                child: SizedBox(
-                                  child:
-                                      Image.asset('images/People_Circle16.png'),
-                                  height: 30,
-                                  width: 30,
-                                )),
-                            Center(
-                                child: Container(
-                                    padding: EdgeInsets.only(top: 11, left: 7),
-                                    height: 40,
-                                    width: 100,
-                                    child: Text(
-                                        '${trackballDetails.point.x.toString()} : \$${trackballDetails.point.y.toString()}',
-                                        style: TextStyle(
-                                            fontSize: 13,
-                                            color: Color.fromRGBO(
-                                                255, 255, 255, 1)))))
-                          ]));
-                    },
-                  );
+        enable: true,
+        builder: (BuildContext context, TrackballDetails trackballDetails) {
+          return Container(
+            height: 50,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(0, 8, 22, 0.75),
+              borderRadius: BorderRadius.all(Radius.circular(6.0)),
+            ),
+            child: Row(
+              children: [
+                Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: SizedBox(
+                      child: Image.asset('images/People_Circle16.png'),
+                      height: 30,
+                      width: 30,
+                    )),
+                Center(
+                    child: Container(
+                        padding: EdgeInsets.only(top: 11, left: 7),
+                        height: 40,
+                        width: 100,
+                        child: Text(
+                            '${trackballDetails.point!.x.toString()} : \$${trackballDetails.point!.y.toString()}',
+                            style: TextStyle(
+                                fontSize: 13,
+                                color: Color.fromRGBO(255, 255, 255, 1)
+                              )
+                            )
+                          )
+                        )
+                    ],
+                ),
+            );
+        },
+      );
       super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-     return Scaffold(
-       child: Center(
-         child: Container(
+      return Scaffold(
+        body: Center(
+          child: Container(
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               trackballBehavior: _trackballBehavior,
-              series: <CartesianChart<ChartData, String>>[
+              series: <ChartSeries<ChartData, String>>[
                 SplineSeries<ChartData, String>(
-                    dataSource: ChartData,
+                    dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y)
-                ]
-              )
-            )
-          )
+              ],
+            ),
+          ),
+        ),
       );
     }
 
@@ -470,7 +472,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
         ChartData(this.x, this.y);
         final String x;
         final double? y;
-      }
+    }
 
 {% endhighlight %}
 
