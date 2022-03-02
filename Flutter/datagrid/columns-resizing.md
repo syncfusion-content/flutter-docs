@@ -401,8 +401,21 @@ Widget build(BuildContext context) {
 
 The column resizing indicator color and its width can be customized by using the [SfDataGridThemeData.columnResizeIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorColor.html) and [SfDataGridThemeData.columnResizeIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorStrokeWidth.html) properties.
 
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the below file,
+
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 late Map<String, double> columnWidths = {
   'id': double.nan,
