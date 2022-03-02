@@ -36,11 +36,11 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bar chart
-                            HiloSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                  lowValueMapper: (Sample sales, _) => sales.low,
-              highValueMapper: (Sample sales, _) => sales.high
+                            HiloSeries<ChartData, DateTime>(
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high
                             )
                         ]
                     )
@@ -53,7 +53,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 
 ![hiLo chart](cartesian-chart-types-images/hilo_chart.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

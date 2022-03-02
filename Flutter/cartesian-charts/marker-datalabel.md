@@ -19,10 +19,17 @@ Markers are used to provide information about the exact point location. You can 
 * [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) - used to change the height of the marker shape.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) - used to change the width of the marker shape.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="22" %} 
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10,
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -69,7 +76,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
 * triangle
 * invertedTriangle
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -110,7 +117,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
 
 The markers can be rendered with desired image as shape. For this you have to specify the [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/MarkerSettings.html) as [`DataMarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html) and provide the image using [`DataMarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="17" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -172,7 +179,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) - action on data labels intersection. The intersecting data labels can be hidden.
 * [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) - position of the data label.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15" %}
 
     @override
     Widget build(BuildContext context) {
@@ -212,7 +219,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see that the same format is applied to the data label.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -220,9 +227,11 @@ Data label considers the format used in the vertical axis by default. In the bel
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        // Applies currency format for y axis labels and also for data labels
                         primaryXAxis: CategoryAxis(),
-                        primaryYAxis: NumericAxis(numberFormat: NumberFormat.simpleCurrency()),
+                        primaryYAxis: NumericAxis(
+                          // Applies currency format for y axis labels and also for data labels
+                          numberFormat: NumberFormat.simpleCurrency()
+                        ),
                         series: <CartesianSeries>[
                             LineSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -244,11 +253,10 @@ Data label considers the format used in the vertical axis by default. In the bel
         ChartData(this.x, this.y);
         final String x;
         final double? y;
-      }
+    }
 
 {% endhighlight %}
 
-import
 
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
@@ -258,7 +266,7 @@ Import the following package to use label format in your package in your applica
 
 The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html) property is used to position the Cartesian chart type data labels at [`ChartDataLabelAlignment.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html), [`ChartDataLabelAlignment.bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html), [`ChartDataLabelAlignment.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html), [`ChartDataLabelAlignment.outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html) and [`ChartDataLabelAlignment.middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html) position of the actual data point position. By default, labels are [`ChartDataLabelAlignment.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment.html) positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -266,9 +274,9 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -287,7 +295,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
       }
 
@@ -300,7 +308,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is false.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -308,9 +316,9 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -329,7 +337,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
       }
 
@@ -341,18 +349,18 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) property is used to map the text from data source. 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="24" %} 
 
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData =[
-        ChartData('jan', 21),
-        ChartData('feb', 24),
-        ChartData('mar', 36),
-        ChartData('apr', 38),
-        ChartData('may', 54),
-        ChartData('jun', 57),
-        ChartData('jul', 70)
+        ChartData('Jan', 21),
+        ChartData('Feb', 24),
+        ChartData('Mar', 36),
+        ChartData('Apr', 38),
+        ChartData('May', 54),
+        ChartData('Jun', 57),
+        ChartData('Jul', 70)
      ];
 
         return Scaffold(
@@ -413,7 +421,7 @@ You can customize the appearance of the data label with your own template using 
                                         return Container(
                                         height: 30,
                                         width: 30,
-                                        child: Image.asset('images/livechart.png')
+                                        child: Image.asset('images/bike.png')
                                         );
                                     }
                                 )
@@ -439,15 +447,15 @@ You can customize the appearance of the data label with your own template using 
 
 Data label and its connector line in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="9" %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue: false, 
                                     isVisible: true
@@ -459,8 +467,8 @@ Data label and its connector line in the Cartesian charts for the point value 0 
         );
     }
 
-    class SalesData {
-        SalesData(this.x, this.y);
+    class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }
@@ -473,21 +481,21 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 
 The [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/offset.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) can be used to add padding for the data label to move it in both vertically and horizontally direction from its position. It takes the logical pixel value for x and y values as input.
 
-N>: This is not applicable for other widgets like Circular, Pyramid and Funnel charts.
+>**Note**: This is not applicable for other widgets like Circular, Pyramid and Funnel charts.
 
 #### Horizontal padding
 
 In Horizontal padding, providing positive value for x moves the data label to right and negative value moves to left.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     offset: Offset(30, 0),
@@ -499,8 +507,8 @@ In Horizontal padding, providing positive value for x moves the data l
         );
     }
 
-    class SalesData {
-        SalesData(this.x, this.y);
+    class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }
@@ -513,15 +521,15 @@ In Horizontal padding, providing positive value for x moves the data l
 
 In Vertical padding, providing positive value for y moves the data label upwards and negative value moves downwards.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     offset: Offset(0, 30),
@@ -533,8 +541,8 @@ In Vertical padding, providing positive value for y moves the data lab
         );
     }
 
-     class SalesData {
-        SalesData(this.x, this.y);
+     class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }
@@ -549,4 +557,4 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 ![label_saturation](images/marker-datalabel/cartesian_saturation.png)
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

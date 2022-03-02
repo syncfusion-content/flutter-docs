@@ -39,9 +39,9 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
                                     ChartData('Apr', 9, 17),
                                     ChartData('May', 12, 20),
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                             )
                         ]
                     )
@@ -77,9 +77,9 @@ In the range column chart when data label is enabled, by default there will be t
                         series: <ChartSeries>[
                             RangeColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
                                     labelAlignment: ChartDataLabelAlignment.top
@@ -119,9 +119,9 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                                     ChartData('Apr', 9, 17),
                                     ChartData('May', 12, 20),
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                             )
                         ]
                     )
@@ -139,7 +139,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

@@ -34,8 +34,8 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
                             // Renders spline chart
                             SplineSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                                 )
                             ]
                         )
@@ -54,46 +54,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
 
 ![Spline border](cartesian-chart-types-images/spline.jpg)
 
-## Dashed spline
-
-The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
-
-{% highlight dart %} 
-    
-    @override
-    Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-            ChartData(2010, 35),
-            ChartData(2011, 13),
-            ChartData(2012, 34),
-            ChartData(2013, 27),
-            ChartData(2014, 40)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            SplineSeries<ChartData, int>(
-                                dataSource: chartData,
-                                // Dash values for spline
-                                dashArray: <double>[5, 5],
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
-                                )
-                            ]
-                        )
-                    )
-                )
-            );
-        }
-    }
-
-{% endhighlight %}
-
-![Dashed spline chart](cartesian-chart-types-images/dashed_spline.jpg)
-
-###	Spline rendering types
+## Spline rendering types
 
 The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types can be used in [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html):
 
@@ -127,8 +88,8 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                                 // Type of spline
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                                 )
                             ]
                         )
@@ -142,7 +103,44 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 ![Spline type](cartesian-chart-types-images/cardinal_spline.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the spline series further.
+## Dashed spline
+
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 13),
+            ChartData(2012, 34),
+            ChartData(2013, 27),
+            ChartData(2014, 40)
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            SplineSeries<ChartData, int>(
+                                dataSource: chartData,
+                                // Dash values for spline
+                                dashArray: <double>[5, 5],
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                                )
+                            ]
+                        )
+                    )
+                )
+            );
+        }
+    }
+
+{% endhighlight %}
+
+![Dashed spline chart](cartesian-chart-types-images/dashed_spline.jpg)
 
 ## Vertical spline chart
 
@@ -175,8 +173,8 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <ChartSeries>[
                             SplineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                                 )
                             ]
                         )
@@ -194,3 +192,11 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 {% endhighlight %}
 
 ![Vertical spline chart](cartesian-chart-types-images/inversed-spline.png)
+
+#### See Also
+
+* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
+* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
