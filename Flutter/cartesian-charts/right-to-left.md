@@ -19,7 +19,7 @@ Right to left rendering can be switched in the following ways:
 
 To change the rendering direction from right to left, you can wrap the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
-{% highlight dart %}
+{% highlight dart hl_lines="5" %}
 
     @override
     Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ Right to left rendering is effective only for the legend in the chart. Legend it
 
 In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true.
 
-{% highlight dart %}
+{% highlight dart hl_lines="3 6" %}
 
     SfCartesianChart(
         primaryXAxis: NumericAxis(
@@ -99,16 +99,18 @@ Also, if you want to change the tooltip’s content, to look like it is renderin
 {% highlight dart %}
     
     late TooltipBehavior _tooltipBehavior;
-
     @override
-    void initState(){
-      _tooltipBehavior =  TooltipBehavior(enable: true,
-      format: 'point.y : point.x');
-      super.initState(); 
+    void initState() {
+        _tooltipBehavior =
+            TooltipBehavior(
+            enable: true, 
+            format: 'point.y : point.x'
+            );
+        super.initState();
     }
     SfCartesianChart(
-        tooltipBehavior: _tooltipBehavior,
-        //...
+            tooltipBehavior: _tooltipBehavior,
+            //...
     )
 
 {% endhighlight %}
