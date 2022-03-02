@@ -15,6 +15,13 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
       @override
       Widget build(BuildContext context) {
+        List<ChartData> chartData = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
         return Scaffold(
           body: Center(
             child: Container(
@@ -22,14 +29,19 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
               legend: Legend(isVisible: true),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
           )
         );
       }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
 
 {% endhighlight %}
 
@@ -65,8 +77,8 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -112,8 +124,8 @@ The following properties can be used to define and customize the [`title`](https
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -144,8 +156,8 @@ You can control the visibility of the series by tapping the legend item. You can
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -174,8 +186,8 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -205,8 +217,8 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -242,8 +254,8 @@ You can change the position of the legend inside the chart. The following proper
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )
@@ -314,8 +326,8 @@ You can customize the appearance of legend items with your template by using [`l
               ),
               series: FunnelSeries<ChartData, String>(
                     dataSource:chartData,
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )

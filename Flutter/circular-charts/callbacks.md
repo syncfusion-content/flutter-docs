@@ -311,8 +311,8 @@ Triggers when tapping on the data label of the data point in the series. The [`o
           series: <CircularSeries<Sample, DateTime>>[
             PieSeries<Sample, DateTime>(
                 dataSource: sample,
-                xValueMapper: (Sample sales, _) => data.x,
-                yValueMapper: (Sample sales, _) => data.y,
+                xValueMapper: (Sample data, _) => data.x,
+                yValueMapper: (Sample data, _) => data.y,
                 dataLabelSettings: DataLabelSettings(
                   isVisible: true),
             )

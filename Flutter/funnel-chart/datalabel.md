@@ -31,13 +31,19 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
     @override
     Widget build(BuildContext context) {
+        List<ChartData> chartData = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
                         series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper: (ChartData data, _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
@@ -49,6 +55,11 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 )
             )
         );
+    }
+    class ChartData{
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
     }
 
 {% endhighlight %}
@@ -144,8 +155,8 @@ Data label and its connector line in the Funnel charts for the point value 0 can
                                 ChartData(14, 32),
                                 ChartData(15, 40)
                             ],
-                            xValueMapper: (ChartData sales, _) => data.xValue,
-                            yValueMapper: (ChartData sales, _) => data.yValue,
+                            xValueMapper: (ChartData data, _) => data.xValue,
+                            yValueMapper: (ChartData data, _) => data.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false,
                                 isVisible: true
@@ -171,14 +182,14 @@ Action on data labels when it’s overflowing from its region area. The overflow
 
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
   
-N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+>**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 {% highlight dart %}
 
     Widget build(BuildContext context) {
         return Container(
             child: SfFunnelChart(
-            series: PieSeries<ChartData, String>(
+            series: FunnelSeries<ChartData, String>(
              dataLabelSettings: DataLabelSettings(
                isVisible: true,
                overflowMode: OverflowMode.trim

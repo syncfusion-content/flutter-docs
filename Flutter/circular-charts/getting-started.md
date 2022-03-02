@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -181,8 +181,8 @@ You can add data labels to improve the readability of the chart using the [`data
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => data.x,
-                                yValueMapper: (ChartData sales, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -224,9 +224,9 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => data.x,
-                                yValueMapper: (ChartData sales, _) => data.y,
-                                name: 'Sales'
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                name: 'Data'
                             )
                         ]
                     )
@@ -278,8 +278,8 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => data.x,
-                                yValueMapper: (ChartData sales, _) => data.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

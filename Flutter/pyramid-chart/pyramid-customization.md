@@ -42,10 +42,9 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
             final String x;
             final double y;
-            final Color color;
     }
 
 {% endhighlight %}
@@ -65,7 +64,17 @@ You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/docu
                 child: Container(
                     child: SfPyramidChart(
                         series: PyramidSeries<ChartData, String>(
-                            pyramidMode: PyramidMode.surface
+                            pyramidMode: PyramidMode.surface,
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -92,6 +101,16 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
                         series: PyramidSeries<ChartData, String>(
                             height: '50%',
                             width: '50%',
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -117,6 +136,16 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                     child: SfPyramidChart(
                         series: PyramidSeries<ChartData, String>(
                             gapRatio: 0.1,
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -146,6 +175,16 @@ Also, the segments can be exploded by tapping the segment.
                             explode: true,
                             explodeOffset: '5%',
                             explodeIndex: 2,
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -156,37 +195,6 @@ Also, the segments can be exploded by tapping the segment.
 {% endhighlight %}
 
 ![Explode](images/pyramid-charts/pyramid_explode.jpg)
-
-## Smart data labels
-
-The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/smartLabelMode.html) supports the following values:
-
-* [`SmartLabelMode.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - shifts the data label position when a label intersects with other label.
-* [`SmartLabelMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - renders all the data label when intersect.
-* [`SmartLabelMode.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - hides the intersecting data label, and is the default value.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        smartLabelMode: SmartLabelMode.shift,
-                        series: PyramidSeries<ChartData, String>(
-                            dataLabelSettings: DataLabelSettings(
-                                isVisible: true, 
-                                labelPosition: ChartDataLabelPosition.inside
-                            ),
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
 
 ## Applying palette color
 
@@ -204,7 +212,18 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                             Colors.teal,
                             Colors.orange,
                             Colors.brown
-                        ]
+                        ],
+                        series: PyramidSeries<ChartData, String>(
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                     )
                 )
             )

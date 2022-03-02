@@ -403,8 +403,8 @@ Data label and its connector line in the Circular charts for the point value 0 c
                         series: <CircularSeries<ChartData, String>>[
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => data.xValue,
-                                yValueMapper: (ChartData sales, _) => data.yValue,
+                                xValueMapper: (ChartData data, _) => data.xValue,
+                                yValueMapper: (ChartData data, _) => data.yValue,
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue : false, 
                                     isVisible: true

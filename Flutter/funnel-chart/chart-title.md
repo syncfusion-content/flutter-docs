@@ -58,8 +58,8 @@ You can align the title text content horizontally to the near, center or far of 
                       ChartData('Apr', 32),
                       ChartData('May', 40)
                     ],
-                    xValueMapper: (ChartData sales, _) =>   data.x,
-                    yValueMapper: (ChartData sales, _) => data.y
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
               )
             )

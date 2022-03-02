@@ -35,7 +35,7 @@ documentation: ug
 
 {% endhighlight %}
 
-## Animation delay
+### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
@@ -71,6 +71,8 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+
+![Animation delay](images/Funnel-customization/animation-delay.gif)
 
 ## Empty points
 
@@ -168,7 +170,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 //map Color for each dataPoint datasource.
-                                pointColorMapper: (ChartData data,_) => sales.color,
+                                pointColorMapper: (ChartData data,_) => data.color,
                             )
                         )
                     )
