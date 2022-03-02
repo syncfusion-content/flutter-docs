@@ -39,8 +39,8 @@ The tooltip state will be preserved on the device's orientation change and on br
               tooltipBehavior: _tooltipBehavior,
               series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (ChartData sales, _) =>   sales.year,
-                  yValueMapper: (ChartData sales, _) => sales.sales
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y
                 )
             )
           )

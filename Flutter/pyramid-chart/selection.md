@@ -31,8 +31,8 @@ The selection feature in chart let you to select a segment in a series or the se
             child: SfPyramidChart(
               series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (ChartData sales, _) =>   sales.year,
-                  yValueMapper: (ChartData sales, _) => sales.sales,
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
                   selectionBehavior: _selectionBehavior
                 )
             )
@@ -79,8 +79,8 @@ You can customize the segments using the below properties.
             child: SfPyramidChart(
               series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (ChartData sales, _) =>   sales.year,
-                  yValueMapper: (ChartData sales, _) => sales.sales,
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
                   selectionBehavior: _selectionBehavior
                 )
             )

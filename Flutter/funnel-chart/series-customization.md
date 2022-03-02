@@ -170,7 +170,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 //map Color for each dataPoint datasource.
-                                pointColorMapper: (ChartData sales,_) => sales.color,
+                                pointColorMapper: (ChartData data,_) => data.color,
                             )
                         )
                     )

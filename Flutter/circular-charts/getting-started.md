@@ -181,8 +181,8 @@ You can add data labels to improve the readability of the chart using the [`data
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -224,9 +224,9 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
-                                name: 'Sales'
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                name: 'Data'
                             )
                         ]
                     )
@@ -278,8 +278,8 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

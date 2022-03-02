@@ -37,10 +37,10 @@ The tooltip state will be preserved on the device's orientation change and on br
           child: Container(
             child: SfFunnelChart(
               tooltipBehavior: _tooltipBehavior,
-              series: FunnelSeries<SalesData, String>(
+              series: FunnelSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.x,
-                  yValueMapper: (SalesData sales, _) => sales.y
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y
                 )
              )
           )

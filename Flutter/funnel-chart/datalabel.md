@@ -155,8 +155,8 @@ Data label and its connector line in the Funnel charts for the point value 0 can
                                 ChartData(14, 32),
                                 ChartData(15, 40)
                             ],
-                            xValueMapper: (ChartData sales, _) => sales.xValue,
-                            yValueMapper: (ChartData sales, _) => sales.yValue,
+                            xValueMapper: (ChartData data, _) => data.xValue,
+                            yValueMapper: (ChartData data, _) => data.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false,
                                 isVisible: true
