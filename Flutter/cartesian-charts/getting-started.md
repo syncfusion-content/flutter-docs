@@ -123,9 +123,9 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 #### See Also
 
-* [How to bind data from the list to the Flutter Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12592/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart)
+* [How to bind data from the list to the Flutter Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12592/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart).
 
-* [How to bind data from the array to the Flutter Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12591/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart)
+* [How to bind data from the array to the Flutter Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12591/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
 
 ## Add title
 

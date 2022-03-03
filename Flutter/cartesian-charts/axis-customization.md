@@ -881,7 +881,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 #### See Also
 
-* [How to render a line at a specific axis value in Cartesian charts (SfCartesianChart)]https://www.syncfusion.com/kb/12951/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart
+* [How to render a line at a specific axis value in Cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/12951/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
 
 ### Plot band padding
 
@@ -1123,7 +1123,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 #### See Also
 
-* [How to synchronize on-demand loading in the Cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart)
+* [How to synchronize on-demand loading in the Cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 
 ## Axis label width customization
 

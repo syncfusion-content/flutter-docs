@@ -333,9 +333,9 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 #### See Also 
 
-* [How to fill the Flutter Pie Chart with gradient (SfCircularChart)](https://www.syncfusion.com/kb/12558/how-to-fill-the-flutter-pie-chart-with-gradient-sfcircularchart)
+* [How to fill the Flutter Pie Chart with gradient (SfCircularChart)](https://www.syncfusion.com/kb/12558/how-to-fill-the-flutter-pie-chart-with-gradient-sfcircularchart).
 
-* [How to fill the Flutter Pie Chart with desired images (SfCircularChart)](https://www.syncfusion.com/kb/12533/how-to-fill-the-flutter-pie-chart-with-desired-images-sfcircularchart)
+* [How to fill the Flutter Pie Chart with desired images (SfCircularChart)](https://www.syncfusion.com/kb/12533/how-to-fill-the-flutter-pie-chart-with-desired-images-sfcircularchart).
 
 ## Shader mapping for data points
 
@@ -640,4 +640,4 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 #### See Also
 
-* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart)
+* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart).
