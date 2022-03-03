@@ -66,4 +66,4 @@ The below example demonstrates the infinite scrolling by showing the ci
 
 #### See Also
 
-* [How to lazily load more data to the chart (SfCartesianChart)](https://www.syncfusion.com/kb/12535/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart)
+* [How to lazily load more data to the chart (SfCartesianChart)](https://www.syncfusion.com/kb/12535/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart).

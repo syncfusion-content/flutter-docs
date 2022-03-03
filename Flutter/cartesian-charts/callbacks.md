@@ -934,9 +934,9 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 #### See Also
 
-* [How to achieve sliding viewport functionality using Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart)
+* [How to achieve sliding viewport functionality using Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
 
-* [How to perform an action on swiping over the Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart)
+* [How to perform an action on swiping over the Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
@@ -1163,7 +1163,7 @@ Defaults to `null`.
 
 #### See Also
 
-* [How to format the date-time axis labels in Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart)
+* [How to format the date-time axis labels in Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
 
 ## multiLevelLabelFormatter
 
@@ -1243,8 +1243,11 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 #### See Also
 
 * [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+
 * [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+
 * [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 

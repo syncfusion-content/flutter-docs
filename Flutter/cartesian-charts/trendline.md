@@ -375,7 +375,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 ## Legend for TrendLine
 
-Legend for trendline gets rendered together with the series legend when the legend is set to be visible. Also when the [name](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html) property is assigned to a trendline, the name of the legend is changed based on the name of the trendlines.
+Legend for trendline gets rendered together with the series legend when the legend is set to be visible. Also when the [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html) property is assigned to a trendline, the name of the legend is changed based on the name of the trendlines.
 
 {% highlight dart hl_lines="16" %}
 
