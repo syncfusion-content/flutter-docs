@@ -425,7 +425,8 @@ You can customize the appearance of the trackball tooltip with your own widgets 
                       child: Image.asset('images/People_Circle16.png'),
                       height: 30,
                       width: 30,
-                    )),
+                    )
+                  ),
                 Center(
                     child: Container(
                         padding: EdgeInsets.only(top: 11, left: 7),

@@ -677,9 +677,12 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
                     print('rSquare value: ' + args.rSquaredValue.toString());
                     print('Intercept value (x): ' + args.intercept.toString());
                   })
-              ])
-          ],
-      )));
+                ]
+              )
+            ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
