@@ -879,6 +879,10 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 ![plotband_line](images/axis-customization/plotband_line.png)
 
+#### See Also
+
+* [How to render a line at a specific axis value in Cartesian charts (SfCartesianChart)]https://www.syncfusion.com/kb/12951/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart
+
 ### Plot band padding
 
 Padding to the plot band text can be added using the [`verticalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextPadding.html) or [`horizontalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextPadding.html) properties. The [`verticalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextPadding.html) is used to move the plot band text vertically and [`horizontalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextPadding.html) is used to move the plot band text horizontally.
@@ -1116,6 +1120,10 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 {% endhighlight %}
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
+
+#### See Also
+
+* [How to synchronize on-demand loading in the cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart)
 
 ## Axis label width customization
 

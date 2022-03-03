@@ -121,6 +121,10 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 ![Bind data source](images/getting-started/data_source.jpg)
 
+#### See Also
+
+* [How to bind data from the list to the Flutter Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12592/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart)
+
 ## Add title
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
