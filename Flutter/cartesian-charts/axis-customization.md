@@ -1123,7 +1123,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 #### See Also
 
-* [How to synchronize on-demand loading in the cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart)
+* [How to synchronize on-demand loading in the Cartesian charts (SfCartesianChart)](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart)
 
 ## Axis label width customization
 

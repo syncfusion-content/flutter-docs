@@ -934,7 +934,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 #### See Also
 
-* [How to achieve sliding viewport functionality using cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart)
+* [How to achieve sliding viewport functionality using Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart)
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
