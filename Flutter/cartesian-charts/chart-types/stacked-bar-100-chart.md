@@ -32,25 +32,25 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -79,17 +79,17 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 width: 0.8, 
                                 spacing: 0.2 
                             ),
-                            StackedBar100Series<SalesData, String>(
+                            StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2,
                                 width: 0.8, 
                                 spacing: 0.2 
                             )
@@ -104,7 +104,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ![Stacked 100 bar width and spacing](cartesian-chart-types-images/stacked_bar_100_sizing.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

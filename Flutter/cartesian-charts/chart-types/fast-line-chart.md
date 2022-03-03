@@ -26,10 +26,10 @@ documentation: ug
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders fast line chart
-                            FastLineSeries<SalesData, DateTime>(
+                            FastLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

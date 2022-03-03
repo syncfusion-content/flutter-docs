@@ -53,17 +53,17 @@ You can align the title text content horizontally to the near, center or far of 
                 primaryXAxis: CategoryAxis(),
                 series: <ChartSeries>[
                   // Initialize line series
-                  LineSeries<SalesData, String>(
+                  LineSeries<ChartData, String>(
                     dataSource: [
                       // Bind data source
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
+                      ChartData('Jan', 35),
+                      ChartData('Feb', 28),
+                      ChartData('Mar', 34),
+                      ChartData('Apr', 32),
+                      ChartData('May', 40)
                     ],
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                    xValueMapper: (ChartData data, _) =>   data.x,
+                    yValueMapper: (ChartData data, _) => data.y
                   )
                 ]
               )
@@ -72,10 +72,10 @@ You can align the title text content horizontally to the near, center or far of 
         );
       }
 
-      class SalesData {
-        SalesData(this.year, this.sales);
-        final String year;
-        final double? sales;
+      class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
       }
 
 {% endhighlight %}

@@ -25,15 +25,15 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            StepAreaSeries<SalesData, DateTime>(
+                            StepAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
-                            StepAreaSeries<SalesData, DateTime>(
+                            StepAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData1,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -60,11 +60,11 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            StepAreaSeries<SalesData, DateTime>(
+                            StepAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -77,7 +77,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Dashed step area chart](cartesian-chart-types-images/step_area_dashed.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

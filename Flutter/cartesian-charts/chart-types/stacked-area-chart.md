@@ -34,18 +34,18 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
                         series: <ChartSeries>[
                             StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                         ]
                     )
@@ -79,8 +79,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group B',
@@ -89,8 +89,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
@@ -99,8 +99,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                         ]
                     )
@@ -135,8 +135,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group B',
@@ -146,8 +146,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
@@ -157,8 +157,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                         ]
                     )
@@ -171,7 +171,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ![Stacked area cumulative](cartesian-chart-types-images/stacked_area_cumulative.jpg)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
