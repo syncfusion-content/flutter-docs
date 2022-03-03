@@ -20,12 +20,11 @@ The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/the
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Chart`](https://pub.dev/packages/syncfusion_flutter_charts/versions) widget.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Chart`](https://pub.dev/packages/syncfusion_flutter_charts/versions) widget.
 
 To use the theme widgets, import the following library in your Dart code.
 
@@ -41,6 +40,13 @@ Once the required package has been imported, initialize [`SfTheme`](https://pub.
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 34),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
         return Scaffold(
             body: Center(
                 child: SfTheme(
@@ -49,7 +55,16 @@ Once the required package has been imported, initialize [`SfTheme`](https://pub.
                                 plotAreaBackgroundColor: Colors.grey[400]
                             ) 
                     ),
-                    child: SfCartesianChart()
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries<ChartData, int>>[
+                      // Renders area chart
+                      LineSeries<ChartData, int>(
+                          dataSource: chartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y)
+                        ]
+                    )
                 )
             )
         );
@@ -180,7 +195,9 @@ By default, the light theme will be applied. You can apply a dark theme using th
                     data: SfThemeData(
                         brightness: Brightness.dark
                     ),
-                    child: SfCartesianChart()
+                    child: SfCartesianChart(
+                       // Other configurations
+                    )
                 )  
             )          
         );
@@ -206,7 +223,9 @@ Initialize the specialized theme widget and then add respective widget as a chil
                         brightness: Brightness.dark, 
                         backgroundColor: Colors.blue[300]
                 ),
-                child: SfCartesianChart()
+                child: SfCartesianChart(
+                  // Other configurations
+                )
             )
         );
     }
@@ -214,6 +233,7 @@ Initialize the specialized theme widget and then add respective widget as a chil
 {% endhighlight %}
 
 In the above code snippet, [`data`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartTheme/data.html) property has been configured with [`SfChartThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html) instance.
+
 Here, the [`SfChartThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html) includes the properties required to customize the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html), [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html), and [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) widgets.
 Similarly, refer the following table to know about the other specialized theme widget classes that are applicable for respective widgets.
 
@@ -320,4 +340,4 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
 </table>
 
-N> When dark or light theme is applied to the material app, and Syncfusion theme widgets are not initialized in your application, then based on the theme applied to the material app, the appropriate theme will be applied to Syncfusion widgets.
+>**Note**: When dark or light theme is applied to the material app, and Syncfusion theme widgets are not initialized in your application, then based on the theme applied to the material app, the appropriate theme will be applied to Syncfusion widgets.
