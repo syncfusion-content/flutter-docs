@@ -936,6 +936,8 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 * [How to achieve sliding viewport functionality using Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart)
 
+* [How to perform an action on swiping over the Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart)
+
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
 Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.

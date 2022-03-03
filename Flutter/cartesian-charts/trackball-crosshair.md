@@ -559,6 +559,7 @@ Defaults to `true`.
 
 * [Synchronize trackball with multiple charts in Cartesian charts](https://www.syncfusion.com/kb/11881/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
 
+* [How to hide the marker displayed in the trackball tooltip (SfCartesianChart)](https://www.syncfusion.com/kb/12534/how-to-hide-the-marker-displayed-in-the-trackball-tooltip-sfcartesianchart)
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
