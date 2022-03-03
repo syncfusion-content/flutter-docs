@@ -331,6 +331,12 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 ![Image shader](images/circular-customization/pie_imageshader.jpg)
 
+#### See Also 
+
+* [How to fill the Flutter Pie Chart with gradient (SfCircularChart)](https://www.syncfusion.com/kb/12558/how-to-fill-the-flutter-pie-chart-with-gradient-sfcircularchart)
+
+* [How to fill the Flutter Pie Chart with desired images (SfCircularChart)](https://www.syncfusion.com/kb/12533/how-to-fill-the-flutter-pie-chart-with-desired-images-sfcircularchart)
+
 ## Shader mapping for data points
 
 The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.

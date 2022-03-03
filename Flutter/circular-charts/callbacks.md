@@ -149,6 +149,10 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 
 {% endhighlight %}
 
+#### See Also
+
+* [How to show the tapped point value at the center of the doughnut chart (SfCircularChart)](https://www.syncfusion.com/kb/13045/how-to-show-the-tapped-point-value-at-the-center-of-the-doughnut-chart-sfcircularchart)
+
 ## onPointDoubleTap
 
 Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointDoubleTap.html) callback contains the following arguments.

@@ -87,6 +87,10 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Spark line dashArray](images/sparkline-types/sparkline-dasharray.png)
 
+#### See Also 
+
+* [How to bind data to the Flutter Sparkline chart (SfSparkLineChart)](https://www.syncfusion.com/kb/12317/how-to-bind-data-to-the-flutter-sparkline-chart-sfsparklinechart)
+
 ## Area chart
 
 [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) is used to emphasize a change in values. This is primarily used when the magnitude of the trend is to be communicated rather than individual data values.
@@ -182,6 +186,12 @@ The following properties are used to customize the appearance:
 {% endhighlight %}
 
 ![Spark Bar chart](images/sparkline-types/spark-bar.png)
+
+#### See Also
+
+* [How to export Flutter Spark bar charts as a pdf (SfSparkBarChart)](https://www.syncfusion.com/kb/12914/how-to-export-flutter-spark-bar-charts-as-a-pdf-sfsparkbarchart)
+
+* [How to customize the Flutter Spark bar charts (SfSparkBarChart)](https://www.syncfusion.com/kb/12363/how-to-customize-the-flutter-spark-bar-charts-sfsparkbarchart)
 
 ## WinLoss Sparkline chart
 
