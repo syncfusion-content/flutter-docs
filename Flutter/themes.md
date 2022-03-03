@@ -61,8 +61,8 @@ Once the required package has been imported, initialize [`SfTheme`](https://pub.
                       // Renders area chart
                       LineSeries<ChartData, int>(
                           dataSource: chartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y)
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y)
                         ]
                     )
                 )
