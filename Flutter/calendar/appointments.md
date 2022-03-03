@@ -408,6 +408,47 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ![Adding recurrence appointment](images/appointments/recurrence-appointment.png)
 
+### Monthly recurring appointments on last day of every month
+
+For creating monthly recurring appointments on last day of every month by using BYMONTHDAY=-1in the flutter event calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfCalendar(
+      view: CalendarView.month,
+      dataSource: _getCalendarDataSource(),
+      monthViewSettings: const MonthViewSettings(
+          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+    ));
+  }
+}
+
+DataSource _getCalendarDataSource() {
+  final List<Appointment> appointments = <Appointment>[];
+  appointments.add(Appointment(
+      startTime: DateTime(2022, 2, 27, 9),
+      endTime: DateTime(2022, 2, 27, 10),
+      subject: 'Last day of month',
+      color: Colors.purple,
+      recurrenceRule: 'FREQ=MONTHLY;BYMONTHDAY=-1;INTERVAL=1;COUNT=10;'));
+  return DataSource(appointments);
+}
+
+class DataSource extends CalendarDataSource {
+  DataSource(List<Appointment> source) {
+    appointments = source;
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Monthly recurrence appointment on last day of every month](images/appointments/lastDayOfMonth.png)
+
 ### Creating custom recurrence appointment
 
 For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and `recurrenceRule`.
