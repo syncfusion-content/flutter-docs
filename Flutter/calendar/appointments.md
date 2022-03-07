@@ -408,9 +408,9 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ![Adding recurrence appointment](images/appointments/recurrence-appointment.png)
 
-### Monthly recurring appointments on last day of every month
+### Recurrence appointments on last day of month
 
-For creating monthly recurring appointments on last day of every month by using BYMONTHDAY=-1in the flutter event calendar.
+For creating recurring appointments on last day of month by using BYMONTHDAY=-1 in the flutter event calendar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -434,7 +434,7 @@ DataSource _getCalendarDataSource() {
       endTime: DateTime(2022, 2, 27, 10),
       subject: 'Last day of month',
       color: Colors.purple,
-      recurrenceRule: 'FREQ=MONTHLY;BYMONTHDAY=-1;INTERVAL=1;COUNT=10;'));
+      recurrenceRule: 'FREQ=MONTHLY;BYMONTHDAY=-1;INTERVAL=1;COUNT=10'));
   return DataSource(appointments);
 }
 
@@ -447,7 +447,7 @@ class DataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Monthly recurrence appointment on last day of every month](images/appointments/lastDayOfMonth.png)
+![Recurrence appointment on last day of month](images/appointments/lastDayOfMonth.png)
 
 ### Creating custom recurrence appointment
 
