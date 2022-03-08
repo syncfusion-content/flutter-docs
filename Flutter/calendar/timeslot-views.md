@@ -531,7 +531,7 @@ Widget build(BuildContext context) {
 ![Allday panel Background color](images/getting-started/alldayPanelColor.jpg)
 
 ## Number of days in view
-You can customize the days count, by setting the [numberOfDaysInView]() property of `timeSlotViewSettings` in the calendar.
+You can customize the days count by setting the [numberOfDaysInView]() property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -553,7 +553,7 @@ You can customize the days count, by setting the [numberOfDaysInView]() property
 ![Number of days in view](images/timeslot-views/numberOfDaysInView.png)
 
 >**NOTE**
-* It is applicable for day, week, workweek, timeline day, timeline week and timeline workweek views.
+* It is applicable for day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 ## See also
 

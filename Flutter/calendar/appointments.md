@@ -410,7 +410,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ### Recurrence appointments on last day of month
 
-For creating recurring appointments on last day of month by using BYMONTHDAY=-1 in the flutter event calendar.
+To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in the flutter event calendar.
 
 {% tabs %}
 {% highlight Dart %}
