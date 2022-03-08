@@ -550,7 +550,7 @@ You can customize the days count, by setting the [numberOfDaysInView]() property
 {% endhighlight %}
 {% endtabs %}
 
-![Number of days in view](images/timeslot-views/numberOfDaysInView.jpg)
+![Number of days in view](images/timeslot-views/numberOfDaysInView.png)
 
 >**NOTE**
 * It is applicable for day, week, workweek, timeline day, timeline week and timeline workweek views.
