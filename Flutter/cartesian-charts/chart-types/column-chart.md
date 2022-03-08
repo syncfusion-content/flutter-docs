@@ -235,11 +235,11 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 #### See Also
 
-* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
-* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
-* [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting)
+ * [color palette](./cartesian-charts/series-customization#color-palette) 
+ * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
+ * [animation](./cartesian-charts/series-customization#animation)
+ * [gradient](./cartesian-charts/series-customization#gradient-fill)
+ * [empty points](./cartesian-charts/series-customization#empty-points)
+ * [Sorting](./cartesian-charts/series-customization##sorting)
 
 >**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

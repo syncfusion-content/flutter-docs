@@ -149,8 +149,9 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 #### See Also
 
- * [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
- * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
- * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
- * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
+ * [color palette](./cartesian-charts/series-customization#color-palette) 
+ * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
+ * [animation](./cartesian-charts/series-customization#animation)
+ * [gradient](./cartesian-charts/series-customization#gradient-fill)
+ * [empty points](./cartesian-charts/series-customization#empty-points)
+ * [Sorting](./cartesian-charts/series-customization##sorting)
