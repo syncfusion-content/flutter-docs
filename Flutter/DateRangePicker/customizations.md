@@ -67,13 +67,7 @@ Widget build(BuildContext context) {
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
 >**NOTE**
-* Priority order
-* If we give blackout dates and set blackout dates decoration, decoration will be applied to takes as first priority.
-* If we give special dates and set special dates decoration, decoration will be applied to takes as second priority.
-* If we give disable dates and set disable dates decoration, decoration will be applied to takes as third priority.
-* If we set today date decoration, decoration will be applied to takes as fourth priority.
-* If we give weekend dates and set weekend dates decoration, decoration will be applied to takes as fifth priority.
-* If we give trailing and leading dates and set leading or trailing dates decoration, takes as last priority.
+* Cell decoration will be rendered in this order blackout dates, special dates, disable dates, today date, weekend dates, trailing and leading dates and dates decoration based on the given decoration.
 
 ## Month format
 You can customize the month format of the `DateRangePicker` using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
@@ -179,10 +173,7 @@ Widget build(BuildContext context) {
 ![Year cell customization Date Range Picker](images/customizations/yearcell_customization.png)
 
 >**NOTE**
-* Priority order
-* If we give disable dates and set disable dates decoration, decoration will be applied to takes as first priority.
-* If we set today date decoration, decoration will be applied to takes as second priority.
-* If we give trailing and leading dates and set leading or trailing dates decoration, takes as last priority.
+* Cell decoration will be rendered in this order disable dates, today date, trailing and leading dates and dates decoration based on the given decoration.
 
 ## See also
 
