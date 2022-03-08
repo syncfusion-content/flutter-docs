@@ -41,12 +41,19 @@ To change the chart rendering direction from right to left, you can change the [
 
 {% highlight dart %}
 
+    /// Package import
+    import 'package:flutter_localizations/flutter_localizations.dart';
+    import 'package:syncfusion_localizations/syncfusion_localizations.dart';
+
+    // ...
+
     @override
     Widget build(BuildContext context) {
         return MaterialApp(
             localizationsDelegates: [
                 GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
+                // ... app-specific localization delegate[s] here
+                SfGlobalLocalizations.delegate,
             ],
             supportedLocales: <Locale>[
                 Locale('en'),
@@ -67,19 +74,49 @@ To change the chart rendering direction from right to left, you can change the [
 
 ## RTL supported chart elements
 
-Right to left rendering is effective only for the legend in the chart. Legend items will be rendered from right to left direction.
+### Legend
+
+Right to left rendering is effective for the legend in the chart. Legend items will be rendered from right to left direction.
+
+{% highlight dart %}
+    
+    
+    @override
+    Widget build(BuildContext context) {
+            home: Scaffold(
+                body: SfFunnelChart(
+                    legend: Legend(true),
+                    
+                    //...other configuration
+                ),
+            )
+        );
+    }
+
+
+{% endhighlight %}
 
 ![legend RTL](images/rtl-support/funnel_legend_rtl.png)
 
-In addition, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
+### Tooltip
+
+If you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
 
 {% highlight dart %}
+    
+    late TooltipBehavior _tooltipBehavior;
 
-    SfFunnelChart(
-        tooltipBehavior: TooltipBehavior(
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(
             enable: true,
             format: “point.y : point.x”
-        )
+        );
+      super.initState(); 
+    }
+
+    SfFunnelChart(
+        tooltipBehavior: _tooltipBehavior,
         //...
     )
 
