@@ -81,4 +81,10 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the scatter series further.
+#### See Also
+
+ * [color palette](./cartesian-charts/series-customization#color-palette) 
+ * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
+ * [animation](./cartesian-charts/series-customization#animation)
+ * [gradient](./cartesian-charts/series-customization#gradient-fill)
+ * [empty points](./cartesian-charts/series-customization#empty-points)
