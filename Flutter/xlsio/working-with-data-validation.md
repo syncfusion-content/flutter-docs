@@ -26,7 +26,7 @@ The following code snippet illustrates how to set text length validation.
 {% highlight dart %}
 //Data Validation for text Length
 final DataValidation textLengthValidation = sheet.getRangeByName(‘A1’).dataValidation;
-textLengthValidation.allowType = ExcelDataType.textLength;
+textLengthValidation.allowType = ExcelDataValidationType.textLength;
 
 //Text Length should be less than 5 characters
 textLengthValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between; 
@@ -41,7 +41,7 @@ The following code snippet illustrates how to set time validation.
 {% highlight dart %}
 //Data validation for time
 final DataValidation timeValidation = sheet.getRangeByName(‘A3’).dataValidation;
-timeValidation.allowType = ExceDataType.time;
+timeValidation.allowType = ExcelDataValidationType.time;
 
 //Time between 10:00 and 12:00 ‘o Clock 
 timeValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
@@ -70,7 +70,7 @@ The following code snippet illustrates how to set number validation.
 {% highlight dart %}
 //Data validation for number
 final DataValidation integerValidation = sheet.getRangeByName(‘A3’).dataValidation;
-integerValidation.allowType = ExcelDataType.integer;
+integerValidation.allowType = ExcelDataValidationType.integer;
 
 //Value between 0 to 10
 integerValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
@@ -85,7 +85,7 @@ The following code snippet illustrates how to set date validation.
 {% highlight dart %}
 //Data validation for date
 final DataValidation dateValidation = sheet.getRangeByName(‘A3’).dataValidation;
-dateValidation.allowType = ExcelDataType.Date;
+dateValidation.allowType = ExcelDataValidationType.Date;
 
 //Date between 10/5/2003 to 10/5/2004
 dateValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
@@ -100,7 +100,7 @@ Custom validation can be set to a cell with its **AllowType** as **User**. The f
 {% highlight dart %}
 //Data validation for custom data
 final DataValidation customValidation = sheet.getRangeByName(‘A3’).dataValidation;
-customValidation.allowType = ExcelDataType.formula;
+customValidation.allowType = ExcelDataValidationType.formula;
 customValidation.firstFormula = ‘=A1>10’;
 {% endhighlight %}
 
@@ -112,7 +112,7 @@ The following code snippet illustrates how to set decimal validation.
 //Data Validation for decimal
 final DataValidation decimalValidation = sheet.getRangeByName(‘G3’).dataValidation;
 sheet.getRangeByName(‘G1’).text =’Enter the Decimal Number in G3’;
-decimalValidation.allowType = ExcelDataType.decimal;
+decimalValidation.allowType = ExcelDataValidationType.decimal;
 decimalValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 decimalValidation.firstFormula = ‘1.0’;
 decimalValidation.secondFormula = ’10.0’;
@@ -127,7 +127,7 @@ final sheet = workbook.worksheets[0];
 //Data Validation for Text Length
 final DataValidation textLengthValidation = sheet.getRangeByName(‘A3’).dataValidation;
 sheet.getRangeByName(‘A1’).text = ’Enter the text in A3’;
-textLengthValidation.allowType = ExcelDataType.textLength;
+textLengthValidation.allowType = ExcelDataValidationType.textLength;
 textLengthValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 textLengthValidation.firstFormula = ‘0’;
 textLengthValidation.secondFormula = ‘5’;
@@ -142,7 +142,7 @@ textLengthValidation.showPromptBox = true;
 //Data Validation for time
 final DataValidation timeDataValidation = sheet.getRangeByName(‘B3’).dataValidation;
 sheet.getRangeByName(‘B1’).text = ’Enter the time between 10:00 and 12:00 ‘o Clock in B3’;
-timeDataValidation.allowType = ExcelDataType.time;
+timeDataValidation.allowType = ExcelDataValidationType.time;
 timeDataValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 timeDataValidation.firstFormula = ’10:00’;
 timeDataValidation.secondFormula = ’12:00’;
@@ -168,7 +168,7 @@ listValidation.showPromptBox = true;
 //Data Validation for Numbers
 final DataValidation numberValidation = sheet.getRangeByName(‘D3’).dataValidation;
 sheet.getRangeByName(‘D1’).text =’Enter the Number in D3’;
-numberValidation.allowType = ExcelDataType.integer;
+numberValidation.allowType = ExcelDataValidationType.integer;
 numberValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 numberValidation.firstFormula = ’0’;
 numberValidation.secondFormula = ’10’;
@@ -183,7 +183,7 @@ numberValidation.showPromptBox = true;
 //Data Validation for Date
 final DataValidation dateValidation = sheet.getRangeByName(‘E3’).dataValidation;
 sheet.getRangeByName(‘E1’).text =’Enter the Date in E3’;
-dateValidation.allowType = ExcelDataType.date;
+dateValidation.allowType = ExcelDataValidationType.date;
 dateValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 dateValidation.firstDateTime = DateTime(2003, 5 , 10);
 dateValidation.secondDateTime = DateTime(2004, 5, 10);
@@ -197,7 +197,7 @@ dateValidation.showPromptBox = true;
 
 //Data validation for custom data
 final DataValidation customValidation = sheet.getRangeByName(‘F3’).dataValidation;
-customValidation.allowType = ExcelDataType.formula;
+customValidation.allowType = ExcelDataValidationType.formula;
 customValidation.firstFormula = ‘=F1>10’;
 
 //Shows the error message
@@ -209,7 +209,7 @@ customValidation.showPromptBox = true;
 //Data Validation for decimal
 final DataValidation decimalValidation = sheet.getRangeByName(‘G3’).dataValidation;
 sheet.getRangeByName(‘G1’).text =’Enter the Decimal Number in G3’;
-decimalValidation.allowType = ExcelDataType.decimal;
+decimalValidation.allowType = ExcelDataValidationType.decimal;
 decimalValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
 decimalValidation.firstFormula = ‘1.0’;
 decimalValidation.secondFormula = ’10.0’;
