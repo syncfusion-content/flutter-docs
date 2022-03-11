@@ -84,7 +84,7 @@ workbook.dispose();
 
 ## Table Style Options
 
-You can customize a table with other table style options such as first column, last column, header row, banded row and banded column. The following code snippet illustrates the usage. 
+You can customize a table with other table style options such as first column, last column, header row, total row, banded row and banded column. The following code snippet illustrates the usage. 
 
 ### Show First Column
 
@@ -105,6 +105,13 @@ table.showLastColumn = true;
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display header row.
 table.showHeaderRow = false;
+{% endhighlight %}
+
+## Show Total Row
+
+{% highlight dart %}
+//Gets or sets a Boolean value indicating whether to hide/display total row.
+table.showTotalRow = true;
 {% endhighlight %}
 
 ### Show Banded Rows
