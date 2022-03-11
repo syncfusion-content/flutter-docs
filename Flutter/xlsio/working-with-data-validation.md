@@ -17,7 +17,6 @@ Data Validation is a list of rules to the data that can be entered in a cell. Xl
 * Number Validation
 * Date Validation
 * Custom Validation
-* DataRange Validation
 * Decimal Validation
 
 ## Text Length Validation
@@ -105,6 +104,19 @@ customValidation.allowType = ExcelDataType.formula;
 customValidation.firstFormula = ‘=A1>10’;
 {% endhighlight %}
 
+## Decimal Validation
+
+The following code snippet illustrates how to set decimal validation.
+
+{% highlight dart %}
+//Data Validation for decimal
+final DataValidation decimalValidation = sheet.getRangeByName(‘G3’).dataValidation;
+sheet.getRangeByName(‘G1’).text =’Enter the Decimal Number in G3’;
+decimalValidation.allowType = ExcelDataType.decimal;
+decimalValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
+decimalValidation.firstFormula = ‘1.0’;
+decimalValidation.secondFormula = ’10.0’;
+{% endhighlight %}
 The following complete code snippet includes all the above discussed data validation types.
 
 {% highlight dart %}
