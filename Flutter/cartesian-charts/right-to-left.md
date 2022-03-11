@@ -37,7 +37,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
 
 ### Changing the locale to RTL languages
 
-To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu and so on.
+To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu.
 
 {% highlight dart %}
     
@@ -60,7 +60,7 @@ To change the chart rendering direction from right to left, you can change the [
                 Locale('ar'),
                 // ... other locales the app supports
             ],
-            locale: Locale('en'),
+            locale: Locale('ar'),
             home: Scaffold(
                 body: SfCartesianChart(
                     //...
