@@ -9,9 +9,11 @@ documentation: ug
 
 # Working with Excel Tables
 
+Excel tables helps to organize and analyze data and Flutter XlsIO supports creating and manipulating these tables.
+
 ## Creating a Table
 
-The following code sample explains the creation of a simple table from scratch.
+The following code snippet explains how to create a simple table from scratch.
 
 {% highlight dart %}
 //Create a new Excel Document.
@@ -44,9 +46,9 @@ saveAsExcel(bytes, 'Table.xlsx');
 workbook.dispose();
 {% endhighlight %}
 
-## Formatting a Table
+## Built-In Table Styles
 
-The following code snippet illustrates how to apply built-in table style.
+You can apply the built in table styles available in Microsoft Excel, through **ExcelTableBuiltInStyle** enum of Flutter XlsIO. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Create a new Excel Document.
@@ -88,12 +90,16 @@ You can customize a table with other table style options such as first column, l
 
 ### Show First Column
 
+Enabling the **ShowFirstColumn** property applies default format to first column in the table. It's default value is FALSE.
+
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether first column format is present.
 table.showFirstColumn = true;
 {% endhighlight %}
 
 ### Show Last Column
+
+Enabling the **ShowLastColumn** property applies default format to first column in the table. It's default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether last column format is present.
@@ -102,12 +108,16 @@ table.showLastColumn = true;
 
 ### Show Header Row
 
+Disabling the **ShowHeaderRow** property hides the header row of the table. It's default value is TRUE.
+
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display header row.
 table.showHeaderRow = false;
 {% endhighlight %}
 
 ### Show Total Row
+
+Enabling the **ShowTotalRow** property shows the total row of the table. It's default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display total row.
@@ -116,6 +126,8 @@ table.showTotalRow = true;
 
 ### Show Banded Rows
 
+Disabling the **ShowBandedRows** property removes the row stipes for table rows. It's default value is TRUE.
+
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether row stripes should be present.
 table.showBandedRows = false;
@@ -123,14 +135,21 @@ table.showBandedRows = false;
 
 ### Show Banded Columns
 
+Enabling the **ShowBandedColumns** property adds the column stipes for table columns. It's default value is FALSE.
+
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether column stripes should be present.
 table.showBandedColumns = true;
 {% endhighlight %}
 
-## Removing a table
+## Removing a Table
 
-The following code snippet illustrates how to remove a table from Excel document.
+You can remove table from Excel document in two ways. They are 
+
+* using table object
+* using specific index
+
+The following code snippet illustrates how to remove a table from Excel document using table object.
 
 {% highlight dart %}
 //Create a new Excel Document.
@@ -183,9 +202,7 @@ saveAsExcel(bytes, 'RemoveTable.xlsx');
 workbook.dispose();
 {% endhighlight %}
 
-### Remove table at specific index
-
-The following code snippet illustrates how to remove a table form Excel document using specific index.
+The following code snippet illustrates how to remove a table from Excel document using specific index.
 
 {% highlight dart %}
 //Create a new Excel Document.
