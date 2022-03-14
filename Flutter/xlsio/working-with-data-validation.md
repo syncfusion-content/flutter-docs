@@ -65,7 +65,7 @@ N> The ListOfValues property should be used when the values in the Data Validati
 
 ## Whole Number Validation
 
-Whole number data validation can be applied by selecting the **allowType** as **interger**. The following code snippet illustrates this.
+Whole number data validation can be applied by selecting the **allowType** as **integer**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data validation for number
