@@ -126,7 +126,7 @@ table.showTotalRow = true;
 
 ### Show Banded Rows
 
-Disabling the **ShowBandedRows** property removes the row stipes for table rows. It's default value is TRUE.
+Disabling the **ShowBandedRows** property removes the row stripes for table rows. It's default value is TRUE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether row stripes should be present.
@@ -135,7 +135,7 @@ table.showBandedRows = false;
 
 ### Show Banded Columns
 
-Enabling the **ShowBandedColumns** property adds the column stipes for table columns. It's default value is FALSE.
+Enabling the **ShowBandedColumns** property adds the column stripes for table columns. It's default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether column stripes should be present.
