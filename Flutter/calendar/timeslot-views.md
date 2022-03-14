@@ -118,6 +118,28 @@ Widget build(BuildContext context) {
 
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
+## Number of days in view
+You can customize the days count by setting the [numberOfDaysInView]() property of `timeSlotViewSettings` in the calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: SfCalendar(
+        view: CalendarView.week,
+        timeSlotViewSettings: const TimeSlotViewSettings(numberOfDaysInView: 3),
+      )),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Number of days in view](images/timeslot-views/numberOfDaysInView.png)
+
 >**NOTE**
 * The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
 * Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
@@ -529,6 +551,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Allday panel Background color](images/getting-started/alldayPanelColor.jpg)
+
+>**NOTE**
+* It is applicable for day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 ## See also
 
