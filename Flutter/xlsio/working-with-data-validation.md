@@ -14,14 +14,14 @@ Data Validation is a list of rules to the data that can be entered in a cell. Xl
 * Text Length Validation
 * Time Validation
 * List Validation
-* Number Validation
+* Whole Number Validation
+* Decimal Number Validation
 * Date Validation
 * Custom Validation
-* Decimal Validation
 
 ## Text Length Validation
 
-The following code snippet illustrates how to set text length validation.
+Text length data validation can be applied by selecting the **allowType** as **textLength**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data Validation for text Length
@@ -36,7 +36,7 @@ textLengthValidation.secondFormula = '5';
 
 ## Time Validation
 
-The following code snippet illustrates how to set time validation.
+Time data validation can be applied by selecting the **allowType** as **time**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data validation for time
@@ -53,7 +53,7 @@ N> Time value should be entered in 24 hour format without appending AM or PM at 
 
 ## List Validation
 
-The following code snippet illustrates how to set list validation.
+List data validation can be applied by assigning values to **listOfValues**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //DataValidation for list
@@ -63,9 +63,9 @@ listValidation.listOfValues = <String>[‘ListItem1’,’ListItem2’,’ListIt
 
 N> The ListOfValues property should be used when the values in the Data Validation list are entered manually whose limit is only 255 characters including separators.
 
-## Number Validation
+## Whole Number Validation
 
-The following code snippet illustrates how to set number validation.
+Whole number data validation can be applied by selecting the **allowType** as **interger**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data validation for number
@@ -78,9 +78,23 @@ integerValidation.firstFormula = ‘0’;
 integerValidation.secondFormula = ‘10’;
 {% endhighlight %}
 
+## Decimal Number Validation
+
+Decimal number data validation can be applied by selecting the **allowType** as **decimal**. The following code snippet illustrates this.
+
+{% highlight dart %}
+//Data Validation for decimal
+final DataValidation decimalValidation = sheet.getRangeByName(‘G3’).dataValidation;
+sheet.getRangeByName(‘G1’).text =’Enter the Decimal Number in G3’;
+decimalValidation.allowType = ExcelDataValidationType.decimal;
+decimalValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
+decimalValidation.firstFormula = ‘1.0’;
+decimalValidation.secondFormula = ’10.0’;
+{% endhighlight %}
+
 ## Date Validation
 
-The following code snippet illustrates how to set date validation.
+Date data validation can be applied by selecting the **allowType** as **Date**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data validation for date
@@ -95,7 +109,7 @@ dateValidation.secondFormula = DateTime(2004, 5, 10);
 
 ## Custom Validation
 
-Custom validation can be set to a cell with its **AllowType** as **User**. The following code snippet illustrates how to set custom validation.
+Custom validation can be applied by selecting the **allowType** as **Formula**. The following code snippet illustrates this.
 
 {% highlight dart %}
 //Data validation for custom data
@@ -104,19 +118,6 @@ customValidation.allowType = ExcelDataValidationType.formula;
 customValidation.firstFormula = ‘=A1>10’;
 {% endhighlight %}
 
-## Decimal Validation
-
-The following code snippet illustrates how to set decimal validation.
-
-{% highlight dart %}
-//Data Validation for decimal
-final DataValidation decimalValidation = sheet.getRangeByName(‘G3’).dataValidation;
-sheet.getRangeByName(‘G1’).text =’Enter the Decimal Number in G3’;
-decimalValidation.allowType = ExcelDataValidationType.decimal;
-decimalValidation.comparisonOperator = ExcelDataValidationComparisonOperator.between;
-decimalValidation.firstFormula = ‘1.0’;
-decimalValidation.secondFormula = ’10.0’;
-{% endhighlight %}
 The following complete code snippet includes all the above discussed data validation types.
 
 {% highlight dart %}
