@@ -48,7 +48,7 @@ workbook.dispose();
 
 The following code snippet illustrates how to apply built-in table style.
 
-{ % highlight dart %}
+{% highlight dart %}
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
@@ -107,7 +107,7 @@ table.showLastColumn = true;
 table.showHeaderRow = false;
 {% endhighlight %}
 
-## Show Total Row
+### Show Total Row
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display total row.
