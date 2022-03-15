@@ -11,7 +11,7 @@ documentation: ug
 
 Circular chart supports right to left rendering. But series and other chart elements rendering will be the same for both LTR and RTL. Only, the [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) and [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) rendering will be changed.
 
-## RLT rendering ways
+## RTL rendering ways
 
 Right to left rendering can be switched in the following ways:
 
@@ -23,14 +23,14 @@ To change the rendering direction from right to left, you can wrap the [`SfCircu
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Directionality(
-                textDirection: TextDirection.rtl,
-                child: SfCircularChart(
-                        //...
-                ),
-            ),
-        );
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCircularChart(
+              //...
+          ),
+        ),
+      );
     }
 
 {% endhighlight %}
@@ -49,26 +49,24 @@ To change the chart rendering direction from right to left, you can change the [
 
     @override
     Widget build(BuildContext context) {
-        return MaterialApp(
-            localizationsDelegates: [
-                GlobalMaterialLocalizations.delegate,
-                // ... app-specific localization delegate[s] here
-                SfGlobalLocalizations.delegate,
-            ],
-            supportedLocales: <Locale>[
-                Locale('en'),
-                Locale('ar'),
-                // ... other locales the app supports
-            ],
-            locale: Locale('ar'),
-            home: Scaffold(
-                body: SfCircularChart(
-                    //...
-                ),
-            )
-        );
+      return MaterialApp(
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: <Locale>[
+          Locale('en'),
+          Locale('ar'),
+          // ... other locales the app supports
+        ],
+        locale: Locale('ar'),
+        home: Scaffold(
+          body: SfCircularChart(
+            //...
+          ),
+        )
+      );
     }
-
 
 {% endhighlight %}
 
@@ -79,47 +77,91 @@ To change the chart rendering direction from right to left, you can change the [
 Right to left rendering is effective for the legend in the chart. Legend items will be rendered from right to left direction.
 
 {% highlight dart %}
-    
-    
+
     @override
     Widget build(BuildContext context) {
-            home: Scaffold(
-                body: SfCircularChart(
-                    legend: Legend(true),
-                    
-                    //...other configuration
-                ),
-            )
-        );
-    }
+      final List<ChartData> chartData = <ChartData>[
+        ChartData('Jan', 24),
+        ChartData('Feb', 20),
+        ChartData('Mar', 35),
+        ChartData('Apr', 27),
+        ChartData('May', 30),
+      ];
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCircularChart(
+            legend: Legend(
+              isVisible: true
+            ),
+            series: <ChartSeries<ChartData, String>>[
+              PieSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+              )
+            ]
+          )
+        )
+      );
+    }  
 
+    class ChartData {
+      ChartData(this.x, this.y);
+        final String x;
+        final int y;
+    }
 
 {% endhighlight %}
 
-![legend RTL](images/rtl-support/circular_legend_rtl.png)
+![legend RTL](images/rtl-support/legend_circular_rtl.jpg)
 
 ### Tooltip
 
-If you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. The marker renders at first and following by that the tooltip renders on the right in LTR rendering. In RTL rendering, the tooltip content renders at first and following by that the marker on the right. By default, the tooltip content will be 'point.x : point.y'. In RTL rendering, the tooltip content will be 'point.y : point.x'.
 
 {% highlight dart %}
-    
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior =  TooltipBehavior(
-            enable: true,
-            format: “point.y : point.x”
-        );
+      _tooltipBehavior = TooltipBehavior(enable: true);
       super.initState(); 
     }
 
-    SfCircularChart(
-        tooltipBehavior: _tooltipBehavior,
-        //...
-    )
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData('Jan', 24),
+        ChartData('Feb', 20),
+        ChartData('Mar', 35),
+        ChartData('Apr', 27),
+        ChartData('May', 30),
+      ];
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCircularChart(
+            tooltipBehavior = _tooltipBehavior;
+            series: <ChartSeries<ChartData, String>>[
+              PieSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+              )
+            ]
+          )
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final String x;
+        final int y;
+    }
 
 {% endhighlight %}
 
-![Tooltip RTL](images/rtl-support/circular_tooltip_rtl.png)
+![Tooltip RTL](images/rtl-support/circular_tooltip_rtl.jpg)
