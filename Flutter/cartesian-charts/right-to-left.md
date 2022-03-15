@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Cartesian Chart (SfCartesianChart)
 
-Cartesian chart supports right to left rendering. But chart axis, series, and other chart elements rendering will be the same for both LTR and RTL. Only, the legend rendering will be changed.
+Cartesian chart supports right to left rendering. But chart axis, series, and other chart elements rendering will be the same for both LTR and RTL except trackball, tooltip and legend.
 
 ## RTL rendering ways
 
@@ -40,7 +40,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
 To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu.
 
 {% highlight dart %}
-    
+
     /// Package import
     import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -95,9 +95,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
             legend: Legend(
               isVisible: true
             ),
-            primaryXAxis: NumericAxis(
-              interval: 1
-            ),
+            primaryXAxis: NumericAxis(),
             series: <ChartSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 dataSource: chartData,
@@ -122,41 +120,153 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 ### Tooltip
 
-If you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. The marker renders at first and following by that the tooltip renders on the right in LTR rendering. In RTL rendering, the tooltip content renders at first and following by that the marker on the right. By default, the tooltip content will be 'point.x : point.y'. In RTL rendering, the tooltip content will be 'point.y : point.x'.
 
 {% highlight dart %}
-    
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior =  TooltipBehavior(enable: true,
-      );
+      _tooltipBehavior = TooltipBehavior(enable: true);
       super.initState(); 
     }
-    SfCartesianChart(
-        tooltipBehavior: _tooltipBehavior,
-        //...
-    )
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCartesianChart(
+            tooltipBehavior = _tooltipBehavior;
+            primaryXAxis: NumericAxis(),
+            series: <ChartSeries<ChartData, int>>[
+              LineSeries<ChartData, int>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+              )
+            ]
+          )
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
 
 {% endhighlight %}
 
-![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.png)
+![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.jpg)
 
-In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true.
+### Trackball
+
+Right-to-left rendering is applicable for trackball tooltip elements.
+
+* By default, the trackball will render on the right side of the trackball line in LTR rendering if adequate space is provided.
+* By default, the trackball will render on the left side of the trackball line in RTL rendering if adequate space is provided.
 
 {% highlight dart %}
 
-    SfCartesianChart(
-        primaryXAxis: NumericAxis(
-            opposedPosition: true
-        ),
-        primaryYAxis: NumericAxis(
-            isInversed: true
-        ),
-        //...
-    )
+    late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState() {
+      _trackballBehavior = TrackballBehavior(enable: true);
+      super.initState(); 
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCartesianChart(
+            trackballBehavior = _trackballBehavior;
+            primaryXAxis: NumericAxis(),
+            series: <ChartSeries<ChartData, int>>[
+              LineSeries<ChartData, int>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+              )
+            ]
+          )
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
 
 {% endhighlight %}
 
-![series axis RTL](images/rtl-support/series_axis_rtl.jpg)
+![Trackball RTL](images/rtl-support/trackball_rtl.jpg)
+
+In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            isInversed: true,
+          ),
+          primaryYAxis: NumericAxis(
+            opposedPosition: true,
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![series axis RTL](images/rtl-support/series_rtl.jpg)

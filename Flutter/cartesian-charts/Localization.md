@@ -32,26 +32,26 @@ Next, import the [`flutter_localizations`](https://pub.dev/packages/localization
 
     @override
     Widget build(BuildContext context) {
-    return MaterialApp(
-            localizationsDelegates: const [
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-            ],
-            supportedLocales: [
-                const Locale('zh'),
-                const Locale('ar'),
-                const Locale('ja'),
-            ],
-            locale: const Locale('ar'),
-            title: 'Cartesian Chart Localization',
-            home: Scaffold(
-                body: SfCartesianChart(
+      return MaterialApp(
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: [
+          const Locale('zh'),
+          const Locale('ar'),
+          const Locale('ja'),
+        ],
+        locale: const Locale('ar'),
+        title: 'Cartesian Chart Localization',
+        home: Scaffold(
+          body: SfCartesianChart(
 
-                 // Other Configurations..
+            // Other Configurations..
 
-                ),
+          ),
         ),
-    );
+      );
     }
 
 {% endhighlight %}
@@ -85,43 +85,54 @@ Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
+    late TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(enable: true);
+      super.initState(); 
+    }
+
     @override
     Widget build(BuildContext context) {
-            return MaterialApp(
-                    localizationsDelegates: [
-                            GlobalMaterialLocalizations.delegate,
-                            GlobalWidgetsLocalizations.delegate,
-                            SfGlobalLocalizations.delegate
-                    ],
-                    supportedLocales: [
-                            const Locale('zh'),
-                            const Locale('ar'),
-                            const Locale('ja'),
-                    ],
-                    locale: const Locale('ar'),
-                    title: 'Cartesian Chart Localization',
-                    home: Scaffold(
-                    body: SfCartesianChart(
-                        legend:Legend(isVisible: true),
-                        tooltipBehavior: TooltipBehavior(enable: true),
-                        series: <ChartSeries<_SalesData, int>>[
-                            ColumnSeries<_SalesData, int>(
-                            dataSource: data,
-                            xValueMapper: (_SalesData sales, _) => sales.year,
-                            yValueMapper: (_SalesData sales, _) => sales.sales,
-                            ),
-                            ColumnSeries<_SalesData, int>(
-                            dataSource: data,
-                            xValueMapper: (_SalesData sales, _) => sales.year,
-                            yValueMapper: (_SalesData sales, _) => sales.sales1,
-                            )
-                        ]
-                    ),
-            ),
-        );
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return MaterialApp(
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          SfGlobalLocalizations.delegate
+        ],
+        supportedLocales: [
+          const Locale('en'),
+          const Locale('ar'),
+          const Locale('ja'),
+        ],
+        locale: const Locale('ar'),
+        home: Scaffold(
+          body: SfCartesianChart(
+            legend: Legend(isVisible: true),
+            tooltipBehavior: _tooltipBehavior,
+            series: <ChartSeries<ChartData, int>>[
+              LineSeries<ChartData, int>(
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.year,
+                yValueMapper: (ChartData sales, _) => sales.sales,
+              ),
+            ]
+          ),
+        ),
+      );
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Localization Chart](images/localization/localization.png)
+![Localization Chart](images/localization/localization.jpg)
