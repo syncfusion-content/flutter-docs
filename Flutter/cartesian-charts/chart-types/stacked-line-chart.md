@@ -177,8 +177,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 #### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](/flutter/cartesian-charts/series-customization#animation)
+* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 
