@@ -250,11 +250,12 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 ![Vertical area chart](cartesian-chart-types-images/vertical_area.png)
 
 #### See Also
- * [color palette](./cartesian-charts/series-customization#color-palette) 
- * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
- * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
- * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
+
+* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](/flutter/cartesian-charts/series-customization#animation)
+* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 
 
 
 >**Note**: You can refer to our [Flutter Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/area/default-area-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
