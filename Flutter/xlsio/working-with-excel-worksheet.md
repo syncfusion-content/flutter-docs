@@ -156,16 +156,16 @@ A *worksheet* can be aligned from right to left programmatically through **isRig
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
-//Accessing sheet via index.
+//Access the sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//To display the worksheet in Right-To-Left direction
+//Display the worksheet in Right-To-Left direction.
 sheet.isRightToLeft = true;
 
-//Adding text using setText() method.
+//Add the text using setText() method.
 sheet.getRangeByName('A1').setText('Hello World');
 
-//Save and dispose workbook.
+//Save and dispose the workbook.
 final List<int>? bytes = workbook.saveAsStream();
 File('output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
@@ -177,18 +177,18 @@ It is also possible to align entire *workbook* from right to left through **isRi
 //Create a new Excel Document.
 final Workbook workbook = Workbook(2);
 
-//Accessing sheets via index.
+//Access the sheets via index.
 final Worksheet sheet1 = workbook.worksheets[0];
 final Worksheet sheet2 = workbook.worksheets[1];
 
-//To display the worksheet in Right-To-Left direction
+//Display the workbook in Right-To-Left direction.
 workbook.isRightToLeft = true;
 
-//Adding text using setText() method.
+//Add the text using setText() method.
 sheet1.getRangeByName('A1').setText('Hello World');
 sheet2.getRangeByName('A1').setText('Hello World');
 
-// Save and dispose workbook.
+// Save and dispose the workbook.
 final List<int>? bytes = workbook.saveAsStream();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
