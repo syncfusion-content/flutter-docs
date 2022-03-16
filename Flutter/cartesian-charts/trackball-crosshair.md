@@ -553,6 +553,87 @@ Defaults to `true`.
 
 ![Trackball tooltip marker](images/trackball-crosshair/trackball_tooltip_marker.png)
 
+### Trackball tooltip improvements
+
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to show Customized trackball if size of the chart is smaller than available side spaces Need to provide the same for trackball tooltip and no API is required for this feature as it will be done by default.
+
+{% highlight dart %} 
+
+    late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                  tooltipDisplayMode: TrackballDisplayMode.groupAllPoints);
+      super.initState();
+    }
+    
+    @override
+    Widget build(BuildContext context) {
+      List<ChartData> data = [
+        ChartData(1, 15, 39, 60),
+        ChartData(2, 20, 30, 55),
+        ChartData(3, 25, 28, 48),
+        ChartData(4, 21, 35, 57),
+        ChartData(5, 13, 39, 62),
+        ChartData(6, 18, 41, 64),
+        ChartData(7, 24, 45, 57),
+        ChartData(8, 23, 48, 53),
+        ChartData(9, 19, 54, 63),
+        ChartData(10, 31, 55, 50),
+        ChartData(11, 39, 57, 66),
+        ChartData(12, 50, 60, 65),
+        ChartData(13, 24, 60, 79),
+      ];
+      return Scaffold(
+        child: Center(
+            child: Container(
+                child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
+              trackballBehavior: _trackballBehavior,
+              series: <ChartSeries<ChartData, int>>[
+                LineSeries<ChartData, int>(
+                  dataSource: data,
+                  markerSettings: MarkerSettings(isVisible: true),
+                  name: 'United States of America',
+                  xValueMapper: (ChartData sales, _) => sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales,
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: data,
+                  markerSettings: MarkerSettings(isVisible: true),
+                  name: 'Germany',
+                  xValueMapper: (ChartData sales, _) => sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales1,
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: data,
+                  markerSettings: MarkerSettings(isVisible: true),
+                  name: 'USA',
+                  xValueMapper: (ChartData sales, _) => sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales2,
+                )
+              ])
+            )
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.year, this.sales, this.sales1, this.sales2);
+
+      final int year;
+      final double sales;
+      final double sales1;
+      final double sales2;
+    }
+
+{% endhighlight %}
+
+![Trackball tooltip improvement](images/trackball-crosshair/trackball-tooltip-improvement.gif)
+
+
 #### See Also
 
 * [Synchronize trackball with multiple charts in Cartesian charts](https://www.syncfusion.com/kb/11881/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
