@@ -99,7 +99,7 @@ table.showFirstColumn = true;
 
 ### Show Last Column
 
-Enabling the **ShowLastColumn** property applies default format to first column in the table. Its default value is FALSE.
+Enabling the **ShowLastColumn** property applies default format to last column in the table. Its default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether last column format is present.
