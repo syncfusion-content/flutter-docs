@@ -164,10 +164,11 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ![Stacked bar cumulative](cartesian-chart-types-images/stacked_bar_cumulative.jpg)
 
-##### See Also
+#### See Also
 
-* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](/flutter/cartesian-charts/series-customization#animation)
-* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](/flutter/cartesian-charts/series-customization#empty-points)  
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Gradient](./series-customization#gradient-fill)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 

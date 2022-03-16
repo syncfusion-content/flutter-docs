@@ -195,8 +195,8 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 #### See Also
 
-* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](/flutter/cartesian-charts/series-customization#animation)
-* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
+* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 

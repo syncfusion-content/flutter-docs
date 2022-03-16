@@ -112,7 +112,8 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 #### See Also
 
-* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](/flutter/cartesian-charts/series-customization#animation)
-* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 
