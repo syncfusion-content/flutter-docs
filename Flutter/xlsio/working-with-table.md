@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Excel Tables
 
-Excel tables helps to organize and analyze data and Flutter XlsIO supports creating and manipulating these tables.
+Excel tables helps to organize and analyze data, and Flutter XlsIO supports creating and manipulating these tables.
 
 ## Creating a Table
 
@@ -19,10 +19,10 @@ The following code snippet explains how to create a simple table from scratch.
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
-//Accessing sheet via index.
+//Access the sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Insert data into sheet.
+//Insert data into the sheet.
 sheet.getRangeByName('A1').setText('Fruits');
 sheet.getRangeByName('A2').setText('banana');
 sheet.getRangeByName('A3').setText('Cherry');
@@ -38,7 +38,7 @@ sheet.getRangeByName('C2').setNumber(162.56);
 sheet.getRangeByName('C3').setNumber(1249.2);
 sheet.getRangeByName('C4').setNumber(1062.5);
 
-//Create table with the data in given range.
+//Create a table with the data in given range.
 sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
 
 final List<int> bytes = workbook.saveAsStream();
@@ -54,10 +54,10 @@ You can apply the built in table styles available in Microsoft Excel, through **
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
-//Accessing sheet via index.
+//Access the sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Insert data into sheet.
+//Insert data into the sheet.
 sheet.getRangeByName('A1').setText('Fruits');
 sheet.getRangeByName('A2').setText('banana');
 sheet.getRangeByName('A3').setText('Cherry');
@@ -73,10 +73,10 @@ sheet.getRangeByName('C2').setNumber(162.56);
 sheet.getRangeByName('C3').setNumber(1249.2);
 sheet.getRangeByName('C4').setNumber(1062.5);
 
-//Create table with the data in given range.
+//Create a table with the data in given range.
 final ExcelTable table = sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
 
-//Formatting table with a built-in style.
+//Format the table with a built-in style.
 table.builtInTableStyle = ExcelTableBuiltInStyle.tableStyleDark10;
 
 final List<int> bytes = workbook.saveAsStream();
@@ -86,11 +86,11 @@ workbook.dispose();
 
 ## Table Style Options
 
-You can customize a table with other table style options such as first column, last column, header row, total row, banded row and banded column. The following code snippet illustrates the usage. 
+You can customize a table with other table style options such as first column, last column, header row, total row, banded row, and banded column. The following code snippet illustrates the usage. 
 
 ### Show First Column
 
-Enabling the **ShowFirstColumn** property applies default format to first column in the table. It's default value is FALSE.
+Enabling the **ShowFirstColumn** property applies default format to first column in the table. Its default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether first column format is present.
@@ -99,7 +99,7 @@ table.showFirstColumn = true;
 
 ### Show Last Column
 
-Enabling the **ShowLastColumn** property applies default format to first column in the table. It's default value is FALSE.
+Enabling the **ShowLastColumn** property applies default format to first column in the table. Its default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether last column format is present.
@@ -108,7 +108,7 @@ table.showLastColumn = true;
 
 ### Show Header Row
 
-Disabling the **ShowHeaderRow** property hides the header row of the table. It's default value is TRUE.
+Disabling the **ShowHeaderRow** property hides the header row of the table. Its default value is TRUE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display header row.
@@ -117,7 +117,7 @@ table.showHeaderRow = false;
 
 ### Show Total Row
 
-Enabling the **ShowTotalRow** property shows the total row of the table. It's default value is FALSE.
+Enabling the **ShowTotalRow** property shows the total row of the table. Its default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether to hide/display total row.
@@ -126,7 +126,7 @@ table.showTotalRow = true;
 
 ### Show Banded Rows
 
-Disabling the **ShowBandedRows** property removes the row stripes for table rows. It's default value is TRUE.
+Disabling the **ShowBandedRows** property removes the row stripes for table rows. Its default value is TRUE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether row stripes should be present.
@@ -135,7 +135,7 @@ table.showBandedRows = false;
 
 ### Show Banded Columns
 
-Enabling the **ShowBandedColumns** property adds the column stripes for table columns. It's default value is FALSE.
+Enabling the **ShowBandedColumns** property adds the column stripes for table columns. Its default value is FALSE.
 
 {% highlight dart %}
 //Gets or sets a Boolean value indicating whether column stripes should be present.
@@ -144,21 +144,21 @@ table.showBandedColumns = true;
 
 ## Removing a Table
 
-You can remove table from Excel document in two ways. They are 
+You can remove the table from Excel document in two ways. They are 
 
 * using table object
 * using specific index
 
-The following code snippet illustrates how to remove a table from Excel document using table object.
+The following code snippet illustrates how to remove a table from an Excel document using the table object.
 
 {% highlight dart %}
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
-//Accessing sheet via index.
+//Access the sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Insert data into sheet.
+//Insert data into the sheet.
 sheet.getRangeByName('A1').setText('Fruits');
 sheet.getRangeByName('A2').setText('banana');
 sheet.getRangeByName('A3').setText('Cherry');
@@ -189,12 +189,11 @@ sheet.getRangeByName('H2').setNumber(162.56);
 sheet.getRangeByName('H3').setNumber(1249.2);
 sheet.getRangeByName('H4').setNumber(1062.5);
 
-//Create table with the data in given range.
+//Create tables with the data in given range.
 final ExcelTable table1 = sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
-
 final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRangeByName('F1:H4'));
 
-//Removes a table from worksheet.
+//Remove a table from the worksheet.
 sheet.tableCollection.remove(table1);
 
 final List<int> bytes = workbook.saveAsStream();
@@ -202,16 +201,16 @@ saveAsExcel(bytes, 'RemoveTable.xlsx');
 workbook.dispose();
 {% endhighlight %}
 
-The following code snippet illustrates how to remove a table from Excel document using specific index.
+The following code snippet illustrates how to remove a table from an Excel document using a specific index.
 
 {% highlight dart %}
 //Create a new Excel Document.
 final Workbook workbook = Workbook(1);
 
-//Accessing sheet via index.
+//Access the sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Insert data into sheet.
+//Insert data into the sheet.
 sheet.getRangeByName('A1').setText('Fruits');
 sheet.getRangeByName('A2').setText('banana');
 sheet.getRangeByName('A3').setText('Cherry');
@@ -256,12 +255,11 @@ sheet.getRangeByName('F7').setNumber(967);
 sheet.getRangeByName('F8').setNumber(543);
 sheet.getRangeByName('F9').setNumber(864);
 
-//Create table with the data in given range.
+//Create tables with the data in given range.
 final ExcelTable table1 = sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
-
 final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRangeByName('F1:H4'));
 
-//Removes a table from worksheet at the specified index.
+//Remove a table from the worksheet at the specified index.
 sheet.tableCollection.removeAt(1);
 
 final List<int> bytes = workbook.saveAsStream();
