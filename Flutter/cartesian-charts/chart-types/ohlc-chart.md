@@ -124,8 +124,7 @@ The following are the types of indication when the combination of high, low, ope
 
 #### See Also
 
-* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
- * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
- * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
- * [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting) 
+* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](/flutter/cartesian-charts/series-customization#animation)
+* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 

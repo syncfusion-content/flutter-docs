@@ -43,4 +43,10 @@ documentation: ug
 
 ![Fast line chart](cartesian-chart-types-images/fastline.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the fast line series further.
+#### See Also
+
+* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](/flutter/cartesian-charts/series-customization#animation)
+* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](/flutter/cartesian-charts/series-customization#empty-points)

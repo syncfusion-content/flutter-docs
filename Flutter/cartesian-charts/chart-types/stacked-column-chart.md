@@ -215,9 +215,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 * [How to show cumulative and non-cumulative values on the stacked column charts](https://www.syncfusion.com/kb/13029/how-to-show-cumulative-and-non-cumulative-values-on-the-stacked-column-charts)
 
- * [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
- * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
- * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
- * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
- * [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting)  
+* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](/flutter/cartesian-charts/series-customization#animation)
+* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](/flutter/cartesian-charts/series-customization#empty-points)
