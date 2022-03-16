@@ -150,7 +150,7 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 ## Right to Left Alignment
 
-A *worksheet* can be aligned from right to left programmatically through **isRightToLeft** property of **Worksheet**. The following code snippet explains this.
+A *worksheet* direction can be changed from right to left programmatically through **isRightToLeft** property of **Worksheet**. The following code snippet explains this.
 
 {% highlight dart %}
 //Create a new Excel Document.
@@ -171,7 +171,7 @@ File('output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
 
-It is also possible to align entire *workbook* from right to left through **isRightToLeft** property of **Workbook**. The following code snippet explains this.
+It is also possible to change the direction of entire *workbook* from right to left through **isRightToLeft** property of **Workbook**. The following code snippet explains this.
 
 {% highlight dart %}
 //Create a new Excel Document.
