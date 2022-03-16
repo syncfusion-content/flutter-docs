@@ -148,7 +148,7 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
-## Right to Left Alignment
+## Right to Left Direction
 
 A *worksheet* direction can be changed from right to left programmatically through **isRightToLeft** property of **Worksheet**. The following code snippet explains this.
 
