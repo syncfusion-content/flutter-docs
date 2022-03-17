@@ -95,9 +95,9 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
             legend: Legend(
               isVisible: true
             ),
-            primaryXAxis: NumericAxis(),
             series: <ChartSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
+                name: 'Weekly expenses',
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
@@ -120,7 +120,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 ### Tooltip
 
-Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering, the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of onTooltipRender callback.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering, the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) callback.
 
 {% highlight dart %}
 
@@ -148,9 +148,9 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
             tooltipBehavior = _tooltipBehavior;
-            primaryXAxis: NumericAxis(),
             series: <ChartSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
+                name: 'Weekly expenses',
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
@@ -204,7 +204,6 @@ Right-to-left rendering is applicable for trackball tooltip elements.
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
             trackballBehavior = _trackballBehavior;
-            primaryXAxis: NumericAxis(),
             series: <ChartSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 dataSource: chartData,
