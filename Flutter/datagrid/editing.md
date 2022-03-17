@@ -564,6 +564,90 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## How to check whether currentcell is in editing mode
+
+You can check whether currentcell is in editing or not from the `SfDataGrid.isCurrentCellInEditing`. If current cell is in edit mode it will return true else return false.
+
+{% tabs %}
+{% highlight dart %}
+
+ final DataGridController _dataGridController = DataGridController();
+ 
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('SfDataGrid Editing'),
+      ),
+      body: Column(
+        children: [
+          TextButton(
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                          content: Text(
+                              'Cell is in Edit Mode: ${_dataGridController.isCurrentCellInEditing}'),
+                        ));
+              },
+              child: const Text('In Edit Mode')),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              allowEditing: true,
+              controller: _dataGridController,
+              selectionMode: SelectionMode.single,
+              navigationMode: GridNavigationMode.cell,
+              columnWidthMode: ColumnWidthMode.fitByCellValue,
+              editingGestureType: EditingGestureType.tap,
+              columns: [
+                GridColumn(
+                    columnName: 'id',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'ID',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Name',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'designation',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'salary',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Salary',
+                          overflow: TextOverflow.ellipsis,
+                        )))
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Restrict specific cell or column from being entered into edit mode at run time
 
 In order to cancel the editing for specific cell or column at run time, you can override the [onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method in `DataGridSource` class and return false for specific cell or column.
