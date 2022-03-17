@@ -135,4 +135,4 @@ Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentati
 {% endhighlight %}
 {% endtabs %}
 
-![Localization Chart](images/localization/localization.jpg)
+![Localization Chart](images/localization/localization.png)

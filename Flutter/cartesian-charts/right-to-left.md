@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Cartesian Chart (SfCartesianChart)
 
-Cartesian chart supports right to left rendering. But chart axis, series, and other chart elements rendering will be the same for both LTR and RTL except trackball, tooltip and legend.
+Cartesian chart supports the right to left rendering. But chart axis, series, and other chart elements rendering will be the same for both LTR and RTL except trackball, tooltip, and legend.
 
 ## RTL rendering ways
 
@@ -120,7 +120,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 ### Tooltip
 
-Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. The marker renders at first and following by that the tooltip renders on the right in LTR rendering. In RTL rendering, the tooltip content renders at first and following by that the marker on the right. By default, the tooltip content will be 'point.x : point.y'. In RTL rendering, the tooltip content will be 'point.y : point.x'.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering, the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of onTooltipRender callback.
 
 {% highlight dart %}
 
@@ -175,8 +175,8 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
 
 Right-to-left rendering is applicable for trackball tooltip elements.
 
-* By default, the trackball will render on the right side of the trackball line in LTR rendering if adequate space is provided.
-* By default, the trackball will render on the left side of the trackball line in RTL rendering if adequate space is provided.
+* The trackball tooltip will render on the right side of the trackball line in LTR rendering if adequate space is available else will be moved to the left.
+* The trackball tooltip will render on the left side of the trackball line in RTL rendering if adequate space is available else moved to the right and this is the default behavior.
 
 {% highlight dart %}
 
