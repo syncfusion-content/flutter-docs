@@ -564,9 +564,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to check whether currentcell is in editing mode
+## How to check whether current cell is in editing mode
 
-You can check whether currentcell is in editing or not from the `SfDataGrid.isCurrentCellInEditing`. If current cell is in edit mode it will return true else return false.
+You can check whether current cell is in editing or not from the `SfDataGrid.isCurrentCellInEditing`. If current cell is in edit mode it will return true else return false.
 
 {% tabs %}
 {% highlight dart %}
