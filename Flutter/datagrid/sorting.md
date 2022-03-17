@@ -556,7 +556,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.gif)
+![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.png)
 
 ## Custom sorting
 
