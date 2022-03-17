@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Pyramid Chart (SfPyramidChart)
 
-Pyramid chart supports right to left rendering. But series and other chart elements rendering will be the same for both LTR and RTL. Only, the legend and tooltip rendering will be changed.
+Pyramid chart supports right to left rendering. But series and other chart elements rendering will be the same for both LTR and RTL except legend and tooltip.
 
 ## RTL rendering ways
 
@@ -110,11 +110,11 @@ Right to left rendering is effective for the legend in the chart. Legend items w
 
 {% endhighlight %}
 
-![legend RTL](images/rtl-support/pyramid_legend.jpg)
+![legend RTL](images/rtl-support/pyramid_legend_rtl.jpg)
 
 ### Tooltip
 
-Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. The marker renders at first and following by that the tooltip renders on the right in LTR rendering. In RTL rendering, the tooltip content renders at first and following by that the marker on the right. By default, the tooltip content will be 'point.x : point.y'. In RTL rendering, the tooltip content will be 'point.y : point.x'.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements.By default, the tooltip content will be `point.x : point.y`, in RTL rendering, the tooltip content will be `point.y : point.x`. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/onTooltipRender.html) callback.
 
 {% highlight dart %}
 
@@ -158,4 +158,4 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
 
 {% endhighlight %}
 
-![Tooltip RTL](images/rtl-support/tooltip_pyramid.jpg)
+![Tooltip RTL](images/rtl-support/pyramid_tooltip_rtl.jpg)
