@@ -11,8 +11,6 @@ documentation: ug
 
 By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
-As of February 2020, [flutter package](https://flutter.dev/docs/development/accessibility-and-localization/internationalization) supports 77 languages.
-
 To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
 
 {% highlight dart %}
