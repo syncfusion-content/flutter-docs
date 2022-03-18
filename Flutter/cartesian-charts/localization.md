@@ -53,6 +53,12 @@ Next, import the [`flutter_localizations`](https://pub.dev/packages/localization
 
 {% endhighlight %}
 
+## Localization support for built-in text
+
+Based on the current locale, the built-in text in the legend and tooltips are translated automatically.
+
+![Localization with built-in text](images/localization/localization_built-in_text.gif)
+
 ## Localize the custom text in chart
 
 Cartesian chart custom text can be localized using the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package and specifying [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) in [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp/MaterialApp.html).
