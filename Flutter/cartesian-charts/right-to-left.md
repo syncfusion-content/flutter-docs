@@ -116,7 +116,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 {% endhighlight %}
 
-![legend RTL](images/rtl-support/cartesian_legend_rtl.jpg)
+![Legend RTL](images/rtl-support/cartesian_legend_rtl.jpg)
 
 ### Tooltip
 
@@ -268,4 +268,4 @@ In addition, if you want the chart series and axis to look like it is rendering 
 
 {% endhighlight %}
 
-![series axis RTL](images/rtl-support/series_rtl.jpg)
+![Series axis RTL](images/rtl-support/series_rtl.jpg)

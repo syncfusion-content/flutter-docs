@@ -110,7 +110,7 @@ Right to left rendering is effective for the legend in the chart. Legend items w
 
 {% endhighlight %}
 
-![legend RTL](images/rtl-support/pyramid_legend_rtl.jpg)
+![Legend RTL](images/rtl-support/pyramid_legend_rtl.jpg)
 
 ### Tooltip
 
