@@ -73,7 +73,7 @@ To change the chart rendering direction from right to left, you can change the [
 
 ### Legend
 
-Right to left rendering is applicable for the [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html) in the chart. Legend items will be rendered from right to left direction. In right-to-left rendering, the legend text will appear on the left first, followed by the legend icon on the right.
+Right to left rendering is applicable for the [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html) in the chart. Legend items will be rendered from right to left direction. In right-to-left rendering, the legend text will appear on the left first, followed by the legend icon on the right. i.e. the legend text will appear on the left first, followed by the legend icon on the right.
 
 {% highlight dart %}
 
@@ -120,7 +120,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 ### Tooltip
 
-Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering, the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) callback.
+Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) callback.
 
 {% highlight dart %}
 

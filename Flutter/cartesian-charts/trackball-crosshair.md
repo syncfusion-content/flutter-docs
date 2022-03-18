@@ -331,7 +331,7 @@ The ActivationMode enum contains the following values:
 
 ![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
 
-And moreover, the trackball tooltip will render on the right side of the trackball line if adequate space is available else will be moved to the left by default. But the trackball tooltip renders neatly across the trackball line within the available chart area when the chart size is smaller and the trackball tooltip cannot be placed on the sides of the trackball line.
+And moreover, the trackball tooltip will render on the right side of the trackball line if adequate space is available else will be moved to the left by default. The trackball tooltip is smartly positioned above the trackball line if there is no space on the right and left sides of the trackball line. However, the trackball tooltip size must be smaller than the chart's plot area size.
 
 {% highlight dart %}
 
@@ -406,6 +406,8 @@ And moreover, the trackball tooltip will render on the right side of the trackba
     }
 
 {% endhighlight %}
+
+![Trackball tooltip smart positioning](images/trackball-crosshair/trackball_smart_positioning.gif)
 
 ### Trackball marker settings
 
