@@ -146,13 +146,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 ![Bar track](cartesian-chart-types-images/track_bar.jpg)
 
-#### See Also
-
- * [color palette](./cartesian-charts/series-customization#color-palette) 
- * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](./cartesian-charts/series-customization#animation)
- * [gradient](./cartesian-charts/series-customization#gradient-fill)
- * [empty points](./cartesian-charts/series-customization#empty-points) 
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
 
 >**Note**: You can refer to our [Flutter Bar Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bar-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bar Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bar/default-bar-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
 

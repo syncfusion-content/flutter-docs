@@ -177,8 +177,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 #### See Also
 
- * [color palette](./cartesian-charts/series-customization#color-palette) 
- * [color mapping](./cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](./cartesian-charts/series-customization#animation)
- * [empty points](./cartesian-charts/series-customization#empty-points)
- * [Sorting](./cartesian-charts/series-customization##sorting) 
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 
