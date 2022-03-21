@@ -37,13 +37,12 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
 
 ### Changing the locale to RTL languages
 
-To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu and so on.
+To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
 {% highlight dart %}
     
     /// Package import
     import 'package:flutter_localizations/flutter_localizations.dart';
-    import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
     // ...
 
@@ -52,15 +51,14 @@ To change the chart rendering direction from right to left, you can change the [
         return MaterialApp(
             localizationsDelegates: [
                 GlobalMaterialLocalizations.delegate,
-                // ... app-specific localization delegate[s] here
-                SfGlobalLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
             ],
             supportedLocales: <Locale>[
                 Locale('en'),
                 Locale('ar'),
                 // ... other locales the app supports
             ],
-            locale: Locale('en'),
+            locale: Locale('ar'),
             home: Scaffold(
                 body: SfCartesianChart(
                     //...
@@ -74,33 +72,29 @@ To change the chart rendering direction from right to left, you can change the [
 
 ## RTL supported chart elements
 
-### Legend
-
-Right to left rendering is only for the [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html) in the chart. Legend items will be rendered from right to left direction.
-
-{% highlight dart %}
-    
-    
-    @override
-    Widget build(BuildContext context) {
-            home: Scaffold(
-                body: SfCartesianChart(
-                    legend: Legend(true),
-                    
-                    //...other configuration
-                ),
-            )
-        );
-    }
-
-
-{% endhighlight %}
+Right to left rendering is effective only for the legend in the chart. Legend items will be rendered from right to left direction.
 
 ![legend RTL](images/rtl-support/cartesian_legend_rtl.png)
 
-### Tooltip
+In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true.
 
-if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
+{% highlight dart %}
+
+    SfCartesianChart(
+        primaryXAxis: NumericAxis(
+            opposedPosition: true
+        ),
+        primaryYAxis: NumericAxis(
+            isInversed: true
+        ),
+        //...
+    )
+
+{% endhighlight %}
+
+![series axis RTL](images/rtl-support/series_axis_rtl.jpg)
+
+Also, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `point.y : point.x`. By default, the tooltip format will be `point.x : point.y`.
 
 {% highlight dart %}
     
@@ -120,21 +114,3 @@ if you want to change the tooltip’s content, to look like it is rendering from
 {% endhighlight %}
 
 ![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.png)
-
-In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true.
-
-{% highlight dart %}
-
-    SfCartesianChart(
-        primaryXAxis: NumericAxis(
-            opposedPosition: true
-        ),
-        primaryYAxis: NumericAxis(
-            isInversed: true
-        ),
-        //...
-    )
-
-{% endhighlight %}
-
-![series axis RTL](images/rtl-support/series_axis_rtl.jpg)
