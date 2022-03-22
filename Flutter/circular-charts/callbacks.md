@@ -151,7 +151,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 
 #### See Also
 
-* [How to show the tapped point value at the center of the doughnut chart (SfCircularChart)](https://www.syncfusion.com/kb/13045/how-to-show-the-tapped-point-value-at-the-center-of-the-doughnut-chart-sfcircularchart).
+* [Show the tapped point value at the center of the doughnut chart](https://www.syncfusion.com/kb/13045/how-to-show-the-tapped-point-value-at-the-center-of-the-doughnut-chart-sfcircularchart).
 
 ## onPointDoubleTap
 

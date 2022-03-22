@@ -89,7 +89,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 #### See Also 
 
-* [How to bind data to the Flutter Sparkline chart (SfSparkLineChart)](https://www.syncfusion.com/kb/12317/how-to-bind-data-to-the-flutter-sparkline-chart-sfsparklinechart).
+* [Bind data to the Flutter Sparkline chart](https://www.syncfusion.com/kb/12317/how-to-bind-data-to-the-flutter-sparkline-chart-sfsparklinechart).
 
 ## Area chart
 
@@ -189,9 +189,9 @@ The following properties are used to customize the appearance:
 
 #### See Also
 
-* [How to export Flutter Spark bar charts as a pdf (SfSparkBarChart)](https://www.syncfusion.com/kb/12914/how-to-export-flutter-spark-bar-charts-as-a-pdf-sfsparkbarchart).
+* [Export Flutter Spark bar charts as a pdf](https://www.syncfusion.com/kb/12914/how-to-export-flutter-spark-bar-charts-as-a-pdf-sfsparkbarchart).
 
-* [How to customize the Flutter Spark bar charts (SfSparkBarChart)](https://www.syncfusion.com/kb/12363/how-to-customize-the-flutter-spark-bar-charts-sfsparkbarchart).
+* [Customize the Flutter Spark bar charts](https://www.syncfusion.com/kb/12363/how-to-customize-the-flutter-spark-bar-charts-sfsparkbarchart).
 
 ## WinLoss Sparkline chart
 

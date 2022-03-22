@@ -192,7 +192,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 * [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart).
 
-* [How to render a customized column chart (SfCartesianChart)](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
+* [Render a customized column chart (SfCartesianChart)](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
 
 ## Track customization
 

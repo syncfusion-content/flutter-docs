@@ -937,9 +937,9 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 #### See Also
 
-* [How to achieve sliding viewport functionality using Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
+* [Achieve sliding viewport functionality using Cartesian chart](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
 
-* [How to perform an action on swiping over the Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
+* [Perform an action on swiping over the Cartesian chart](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
@@ -1166,7 +1166,7 @@ Defaults to `null`.
 
 #### See Also
 
-* [How to format the date-time axis labels in Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
+* [Format the date-time axis labels in Cartesian chart](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
 
 ## multiLevelLabelFormatter
 
