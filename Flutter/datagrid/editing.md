@@ -564,9 +564,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to check whether current cell is in editing mode
+## How to check whether the current cell is in editing mode
 
-You can check whether current cell is in editing or not by using `DataGridController.isCurrentCellInEditing` property.
+You can check whether the current cell is in editing mode or not by using the `DataGridController.isCurrentCellInEditing` property.
 
 {% tabs %}
 {% highlight dart %}
