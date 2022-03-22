@@ -66,6 +66,9 @@ Widget build(BuildContext context) {
 
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
+>**NOTE**
+* Based on the given decoration, cell decoration will be rendered in the following order: blackout dates, special dates, disable dates, today date, weekend dates, leading or trailing dates, and dates decoration.
+
 ## Month format
 You can customize the month format of the `DateRangePicker` using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
 
@@ -168,6 +171,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Year cell customization Date Range Picker](images/customizations/yearcell_customization.png)
+
+>**NOTE**
+* Based on the given decoration, cell decoration will be rendered in the following order: disable dates, today date, leading or trailing dates, and dates decoration.
 
 ## See also
 
