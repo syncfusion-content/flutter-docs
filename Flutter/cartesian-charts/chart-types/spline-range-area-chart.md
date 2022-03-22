@@ -138,3 +138,4 @@ The borders of the spline range area chart can be customized using the [`borderD
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

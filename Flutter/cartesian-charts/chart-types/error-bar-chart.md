@@ -282,3 +282,4 @@ The [`capLength`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

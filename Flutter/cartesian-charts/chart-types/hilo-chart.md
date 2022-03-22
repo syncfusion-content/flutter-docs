@@ -59,3 +59,4 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

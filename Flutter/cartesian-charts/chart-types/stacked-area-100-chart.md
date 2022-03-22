@@ -71,3 +71,4 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

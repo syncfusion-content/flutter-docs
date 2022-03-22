@@ -153,4 +153,5 @@ To render a multi-colored line series, map the individual colors to the data usi
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
-* [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting) 

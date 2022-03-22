@@ -54,3 +54,4 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

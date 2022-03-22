@@ -128,3 +128,4 @@ The following are the types of indication when the combination of high, low, ope
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)
