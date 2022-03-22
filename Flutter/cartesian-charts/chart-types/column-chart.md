@@ -192,7 +192,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 * [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart).
 
-* [Render a customized column chart (SfCartesianChart)](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
+* [Render a customized column chart](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
 
 ## Track customization
 
@@ -239,10 +239,10 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 #### See Also
 
-* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](/flutter/cartesian-charts/series-customization#animation)
-* [gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
 
 >**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

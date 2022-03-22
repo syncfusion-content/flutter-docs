@@ -65,7 +65,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 #### See Also 
 
-* [Display volume data of financial series in Flutter Cartesian Chart](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
+* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
 
 ## Indication for same values
 
@@ -124,7 +124,7 @@ The following are the types of indication when the combination of high, low, ope
 
 #### See Also
 
-* [color palette](/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](/flutter/cartesian-charts/series-customization#animation)
-* [empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
