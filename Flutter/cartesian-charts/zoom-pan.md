@@ -329,6 +329,60 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 
 Also refer [`zooming`](./callbacks#onzooming), [`zoom start`](./callbacks#onzoomstart) and [`zoom end`](./callbacks#onzoomend) events for customizing the zooming further.
 
+### AnchorRangeToVisiblePoints
+
+[`AnchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) determines the value axis range, based on the visible data points or based on the overall data points available in chart. By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMinimum.html) and [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMaximum.html) values.
+
+To toggle this functionality, this property can be used. i.e. on setting false to this property,
+value axis range will be calculated based on all the data points in chart irrespective of
+visible points.
+ 
+>**Note**: This is applicable only to the value axis and not for other axis.
+  
+Defaults to `true`.
+{% highlight dart hl_lines="7" %}  
+    
+    late ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                    enablePinching: true,
+                    zoomMode: ZoomMode.x,
+                    enablePanning: true,
+                );
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                zoomPanBehavior: _zoomPanBehavior,
+                 primaryXAxis: DateTimeAxis(),
+                 primaryYAxis: NumericAxis(
+                          anchorRangeToVisiblePoints: false,),
+                 series: <ChartSeries<ChartData, DateTime>>[
+                      AreaSeries<ChartData, DateTime>(
+                          dataSource: chartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y,s
+                        )
+                     ]
+                  )
+                )
+              )
+            )
+          );
+        }
+
+{% endhighlight %}
+
+![Panning](images/zooming-panning/anchorRange.gif)
+
 #### See Also
 
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
