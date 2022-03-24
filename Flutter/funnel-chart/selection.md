@@ -30,10 +30,10 @@ The selection feature in chart let you to select a segment in a series or the se
         body: Center(
           child: Container(
             child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
+              series: FunnelSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
                   selectionBehavior: _selectionBehavior
                 )
             )
@@ -78,10 +78,10 @@ You can customize the segments using the below properties.
         body: Center(
           child: Container(
             child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
+              series: FunnelSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  xValueMapper: (ChartData data, _) =>   data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
                   selectionBehavior: _selectionBehavior
                 )
             )
@@ -166,7 +166,7 @@ Defaults to `true`.
         body: Center(
           child: Container(
             child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
+              series: FunnelSeries<ChartData, String>(
               dataSource: chartData1,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,

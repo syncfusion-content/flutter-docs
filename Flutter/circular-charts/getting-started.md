@@ -27,7 +27,6 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
@@ -58,7 +57,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -121,7 +120,7 @@ Based on your data, initialize the series type. In the series, you need to map t
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %}
 
     @override
     Widget build(BuildContext context) {
@@ -162,7 +161,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="21" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -172,17 +171,17 @@ You can add data labels to improve the readability of the chart using the [`data
                     child: SfCircularChart(
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -203,7 +202,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %}
 
     @override
     Widget build(BuildContext context) {
@@ -215,18 +214,18 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                         legend: Legend(isVisible: true), 
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
-                                name: 'Sales'
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                name: 'Data'
                             )
                         ]
                     )
@@ -245,7 +244,8 @@ The tooltip is used when you cannot display information using the data labels du
 
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled as demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="5" %}
+ 
 
     late TooltipBehavior _tooltipBehavior;
 
@@ -267,19 +267,19 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         tooltipBehavior: _tooltipBehavior,
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 // Enables the tooltip for individual series
                                 enableTooltip: true, 
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

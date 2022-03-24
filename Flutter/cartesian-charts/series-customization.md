@@ -208,6 +208,8 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 * [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart).
 
+* [Change the series delay duration in Flutter Cartesian charts](https://www.syncfusion.com/kb/12972/change-the-series-delay-duration-in-flutter-cartesian-charts).
+
 ## Transpose the series
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.

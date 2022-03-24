@@ -67,7 +67,7 @@ By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion
 
 The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -107,7 +107,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -146,7 +146,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical Spline chart.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="21" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -195,8 +195,9 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 #### See Also
 
-* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
-* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)
