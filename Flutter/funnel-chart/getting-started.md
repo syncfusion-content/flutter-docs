@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel charts. Here, as we are rendering Funnel chart, initialize SfFunnelChart widget as a child of Container widget.
 
-{% highlight dart hl_lines="7" %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -107,9 +107,10 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y);
+      ChartData(this.x, this.y, [this.color]);
         final String x;
         final double y;
+        final Color color;
     }
 
 {% endhighlight %}

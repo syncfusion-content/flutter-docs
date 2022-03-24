@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
-{% highlight dart hl_lines="7" %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -172,17 +172,17 @@ You can add data labels to improve the readability of the chart using the [`data
                     child: SfCircularChart(
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<ChartData, String>(
+                            PieSeries<SalesData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    ChartData('Jan', 35),
-                                    ChartData('Feb', 28),
-                                    ChartData('Mar', 34),
-                                    ChartData('Apr', 32),
-                                    ChartData('May', 40)
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
                                 ],
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -215,18 +215,18 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                         legend: Legend(isVisible: true), 
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<ChartData, String>(
+                            PieSeries<SalesData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    ChartData('Jan', 35),
-                                    ChartData('Feb', 28),
-                                    ChartData('Mar', 34),
-                                    ChartData('Apr', 32),
-                                    ChartData('May', 40)
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
                                 ],
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                name: 'Data'
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                name: 'Sales'
                             )
                         ]
                     )
@@ -267,19 +267,19 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         tooltipBehavior: _tooltipBehavior,
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<ChartData, String>(
+                            PieSeries<SalesData, String>(
                                 // Enables the tooltip for individual series
                                 enableTooltip: true, 
                                 dataSource: [
                                     // Bind data source
-                                    ChartData('Jan', 35),
-                                    ChartData('Feb', 28),
-                                    ChartData('Mar', 34),
-                                    ChartData('Apr', 32),
-                                    ChartData('May', 40)
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
                                 ],
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
                             )
                         ]
                     )

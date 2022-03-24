@@ -51,18 +51,18 @@ You can align the title text content horizontally to the near, center or far of 
                 ),
                 series: <ChartSeries>[
                   // Initialize line series
-                  PieSeries<ChartData, String>(
+                  PieSeries<SalesData, String>(
                     dataSource: [
                       // Bind data source
-                      ChartData('Jan', 35),
-                      ChartData('Feb', 28),
-                      ChartData('Mar', 34),
-                      ChartData('Apr', 32),
-                      ChartData('May', 40)
+                      SalesData('Jan', 35),
+                      SalesData('Feb', 28),
+                      SalesData('Mar', 34),
+                      SalesData('Apr', 32),
+                      SalesData('May', 40)
                     ],
-                    pointColorMapper: (ChartData data, _) => data.color,
-                    xValueMapper: (ChartData data, _) =>   data.x,
-                    yValueMapper: (ChartData data, _) => data.y
+                    pointColorMapper: (SalesData sales, _) => sales.color,
+                    xValueMapper: (SalesData sales, _) =>   sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales
                   )
                 ]
               )

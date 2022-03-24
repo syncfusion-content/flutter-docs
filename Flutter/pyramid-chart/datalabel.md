@@ -35,22 +35,15 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-            ChartData('Jan', 35),
-            ChartData('Feb', 28),
-            ChartData('Mar', 38),
-            ChartData('Apr', 32),
-            ChartData('May', 40)
-        ];
-
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
+                        series: PyramidSeries<SalesData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                pointColorMapper: (SalesData data, _) => data.color,
+                                xValueMapper: (SalesData data, _) => data.x,
+                                yValueMapper: (SalesData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     // Renders the data label
                                     isVisible: true
@@ -60,11 +53,6 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 )
             )
         );
-    }
-    class ChartData {
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
     }
 
 {% endhighlight %}
@@ -126,10 +114,10 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
+                        series: PyramidSeries<SalesData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (SalesData data, _) => data.x,
+                                yValueMapper: (SalesData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -160,10 +148,10 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
+                        series: PyramidSeries<SalesData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (SalesData data, _) => data.x,
+                                yValueMapper: (SalesData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -194,10 +182,10 @@ You can customize the appearance of the data label with your own template using 
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
+                        series: PyramidSeries<SalesData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (SalesData data, _) => data.x,
+                                yValueMapper: (SalesData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Templating the data label
@@ -231,16 +219,16 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
         return Scaffold(
             body: Center(
                     child:SfPyramidChart(
-                        series: PyramidSeries<ChartData, num>(
+                        series: PyramidSeries<SalesData, num>(
                             dataSource: [
-                                ChartData(11, 35),
-                                ChartData(12, 28),
-                                ChartData(13, 0),
-                                ChartData(14, 32),
-                                ChartData(15, 40)
+                                SalesData(11, 35),
+                                SalesData(12, 28),
+                                SalesData(13, 0),
+                                SalesData(14, 32),
+                                SalesData(15, 40)
                             ],
-                            xValueMapper: (ChartData data, _) => data.xValue,
-                            yValueMapper: (ChartData data, _) => data.yValue,
+                            xValueMapper: (SalesData sales, _) => sales.xValue,
+                            yValueMapper: (SalesData sales, _) => sales.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false, 
                                 isVisible: true
@@ -266,7 +254,7 @@ Action on data labels when it’s overflowing from its region area. The overflow
   
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
 
->**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 {% highlight dart %}
 
@@ -284,72 +272,3 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
     }
 {% endhighlight %}
 ![label_overflow](images/datalabel/pyramid_overflow.jpg)
-
-## Smart labels
-
-This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The enum property called the [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) in [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is used to arrange the data labels smartly when labels get intersect. By default, the label intersection action property is [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html).
-
-If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), then the overlapped labels will shift to outside the slices and arrange smartly. If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), then the overlapped labels will be hidden.
-
-If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), then the overlapped labels arrange smartly. If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), then the overlapped labels will be hidden.
-
-If the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), then the overlapped labels will be visible irrespective of [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html).
-
-When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html), and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label. The values of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) are listed below.
-* [`LabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - hides the intersected data labels.
-* [`LabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - intersected data labels will be visible.
-* [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - smartly arranges the overlapped data labels.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-      final List<ChartData> chartData = <ChartData>[
-        ChartData('USA', 46),
-        ChartData('Great Britain', 27),
-        ChartData('China', 26),
-        ChartData('Russia', 19),
-        ChartData('Germany', 17),
-        ChartData('Japan', 12),
-        ChartData('France', 10),
-        ChartData('Korea', 9),
-        ChartData('Italy', 8),
-        ChartData('Australia', 8),
-        ChartData('Netherlands', 8),
-        ChartData('Hungary', 8),
-        ChartData('Brazil', 7),
-        ChartData('Spain', 7),
-        ChartData('Kenya', 6),
-        ChartData('Jamaica', 6),
-        ChartData('Croatia', 5),
-        ChartData('Cuba', 5),
-        ChartData('New Zealand', 4)
-    ];
-      return SfPyramidChart(
-        series: PyramidSeries<ChartData, String>(
-            dataSource: chartData,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-            dataLabelMapper: (ChartData data, _) => data.x,
-            radius: '60%',
-            dataLabelSettings: DataLabelSettings(
-              isVisible: true,
-              // Avoid labels intersection
-              labelIntersectAction: LabelIntersectAction.shift,
-              labelPosition: ChartDataLabelPosition.outside,
-              connectorLineSettings: ConnectorLineSettings(
-                type: ConnectorType.curve, length: '25%')
-              )
-          )
-        ]);
-    }
-
-    class ChartData {
-      ChartData({this.x, this.y});
-      final String? x;
-      final num? y;
-    }
-
-{% endhighlight %}
-
-![Smart labels](images/datalabel/smart_datalabel.png)

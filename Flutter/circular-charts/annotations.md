@@ -113,8 +113,8 @@ Chart supports watermark which allows you to mark the specific area of interest 
                       ChartData('apr', 38),
                       ChartData('may', 40),
                       ],
-                      xValueMapper: (ChartData data, _) => data.x,
-                      yValueMapper: (ChartData data, _) => data.y),
+                      xValueMapper: (ChartData sales, _) => sales.year,
+                      yValueMapper: (ChartData sales, _) => sales.sales),
                       ],
                     )
                   )
@@ -125,9 +125,9 @@ Chart supports watermark which allows you to mark the specific area of interest 
         }
 
         class ChartData {
-          ChartData(this.x, this.y);
-          final String x;
-          final double y;
+          ChartData(this.year, this.sales);
+          final String year;
+          final double sales;
         }
         
 {% endhighlight %}

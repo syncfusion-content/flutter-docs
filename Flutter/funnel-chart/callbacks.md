@@ -211,8 +211,8 @@ Triggers when tapping on the data label of the data point in the series. The [`o
           },
           series: FunnelSeries<Sample, DateTime>(
               dataSource: sample,
-              xValueMapper: (Sample data, _) => data.x,
-              yValueMapper: (Sample data, _) => data.y,
+              xValueMapper: (Sample sales, _) => sales.x,
+              yValueMapper: (Sample sales, _) => sales.y,
               dataLabelSettings: DataLabelSettings(
                 isVisible: true),
           )

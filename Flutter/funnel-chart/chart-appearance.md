@@ -40,13 +40,6 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
     @override
       Widget build(BuildContext context) {
-        List<ChartData> chartData = [
-          ChartData('Jan', 35),
-          ChartData('Feb', 28),
-          ChartData('Mar', 38),
-          ChartData('Apr', 32),
-          ChartData('May', 40)
-        ];
         return Scaffold(
           body: SafeArea(
             child: Center(
@@ -58,11 +51,6 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
                   borderWidth: 2,
                   // Sets 15 logical pixels as margin for all the 4 sides.
                   margin: EdgeInsets.all(15)
-                  ),
-                  series: FunnelSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
                   )
                 )
               )
@@ -71,9 +59,6 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
       }
 
 {% endhighlight %}
-
-![margin](images\chart-title\chart_margin.png)
-
 
 ## Chart area customization
 
@@ -93,15 +78,8 @@ You can customize the area of the chart using the below properties.
               height: 300, 
               width: 350, 
               child: SfFunnelChart(
-                borderColor: Colors.red,
-                borderWidth: 2,
-                margin: EdgeInsets.all(15),
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: const AssetImage('images/train.png'),
-                series: FunnelSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
+                backgroundImage: 'images/livechart.png',
               )
             )
           )
@@ -110,5 +88,3 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
-
-![margin](images\chart-title\background_image.png)

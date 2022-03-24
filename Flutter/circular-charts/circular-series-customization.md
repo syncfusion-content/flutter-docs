@@ -119,25 +119,25 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-        static List<ChartData> chartData = <ChartData>[
-            ChartData('Rent', 1000,Colors.teal),
-            ChartData('Food', 2500,Colors.lightBlue),
-            ChartData('Savings', 760,Colors.brown),
-            ChartData('Tax', 1897,Colors.grey),
-            ChartData('Others', 2987,Colors.blueGrey)
+        static List<SalesData> chartData = <SalesData>[
+            SalesData('Rent', 1000,Colors.teal),
+            SalesData('Food', 2500,Colors.lightBlue),
+            SalesData('Savings', 760,Colors.brown),
+            SalesData('Tax', 1897,Colors.grey),
+            SalesData('Others', 2987,Colors.blueGrey)
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <PieSeries<ChartData, String>>[
-                            PieSeries<ChartData, String>(
+                        series: <PieSeries<SalesData, String>>[
+                            PieSeries<SalesData, String>(
                                 dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales,
               //map Color for each dataPoint datasource.
-              pointColorMapper: (ChartData data,_) => data.color,
+              pointColorMapper: (SalesData sales,_) => sales.color,
                             )
                         ]
                     )
@@ -189,11 +189,11 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     return Gradient.linear(chartShaderDetails.outerRect.topRight,
                         chartShaderDetails.outerRect.centerLeft, colors, stops);
                 },
-                series: <CircularSeries<_ChartData, String>>[
-                    PieSeries<_ChartData, String>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
                     )
                 ]
             ));
@@ -222,15 +222,14 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         _resolveTransform(chartShaderDetails.outerRect, TextDirection.ltr)
                     );
                 },
-                series: <CircularSeries<_ChartData, String>>[
-                    RadialBarSeries<_ChartData, String>(
+                series: <CircularSeries<_SalesData, String>>[
+                    RadialBarSeries<_SalesData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
                     )
                 ]
-            )
-        );
+            ));
     }
 
     // Rotate the sweep gradient according to the start angle 
@@ -262,11 +261,11 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         stops
                     );
                 },
-                series: <CircularSeries<_ChartData, String>>[
-                    DoughnutSeries<_ChartData, String>(
+                series: <CircularSeries<_SalesData, String>>[
+                    DoughnutSeries<_SalesData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
                     )
                 ]
             ));
@@ -312,11 +311,11 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
                                 Matrix4.identity().scaled(0.4).storage
                     );
                 },
-                series: <CircularSeries<_ChartData, String>>[
-                    PieSeries<_ChartData, String>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
                     )
                 ]
             ));
@@ -493,13 +492,13 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
         getImage();
         return Container(
             child: SfCircularChart(
-                series: <CircularSeries<_ChartData, String>>[
-                    PieSeries<_ChartData, String>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
                         // Sweep gradient will be formed with default palette colors.
                         pointRenderMode: PointRenderMode.gradient,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_SalesData sales, _) => sales.year,
                     )
                 ]
             )

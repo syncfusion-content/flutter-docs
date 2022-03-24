@@ -25,32 +25,20 @@ The tooltip state will be preserved on the device's orientation change and on br
 
     @override
     Widget build(BuildContext context) {
-      List<ChartData> chartData = [
-          ChartData('Jan', 35),
-          ChartData('Feb', 28),
-          ChartData('Mar', 38),
-          ChartData('Apr', 32),
-          ChartData('May', 40)
-        ];
       return Scaffold(
         body: Center(
           child: Container(
             child: SfFunnelChart(
               tooltipBehavior: _tooltipBehavior,
-              series: FunnelSeries<ChartData, String>(
+              series: FunnelSeries<SalesData, String>(
                   dataSource: chartData,
-                  xValueMapper: (ChartData data, _) =>   data.x,
-                  yValueMapper: (ChartData data, _) => data.y
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
                 )
-             )
+            )
           )
         )
       );
-    }
-    class ChartData{
-      ChartData(this.x, this.y);
-      final String x;
-      final double? y;
     }
 
 {% endhighlight %}

@@ -15,11 +15,6 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
     @override
     Widget build(BuildContext context) {
-      final List<ChartData> chartData = [
-        ChartData('USA', 20),
-        ChartData('China', 35),
-        ChartData('UK', 38),
-      ];
       return Scaffold(
         body: Center(
           child: Container(
@@ -37,11 +32,6 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
             )
           )
         );
-      }
-      class ChartData {
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
       }
 
 {% endhighlight %}

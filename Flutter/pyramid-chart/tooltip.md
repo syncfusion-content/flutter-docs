@@ -25,32 +25,20 @@ The tooltip state will be preserved on the device's orientation change and on br
 
     @override
     Widget build(BuildContext context) {
-      final List<ChartData> chartData = [
-        ChartData('Jan', 35),
-        ChartData('Feb', 28),
-        ChartData('Mar', 38),
-        ChartData('Apr', 32),
-        ChartData('May', 40)
-      ];
       return Scaffold(
         body: Center(
           child: Container(
             child: SfPyramidChart(
               tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
+              series: PyramidSeries<SalesData, String>(
                   dataSource: chartData,
-                  xValueMapper: (ChartData data, _) =>   data.x,
-                  yValueMapper: (ChartData data, _) => data.y
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
                 )
             )
           )
         )
       );
-    }
-    class ChartData {
-      ChartData(this.x, this.y);
-      final String x;
-      final double? y;
     }
 
 {% endhighlight %}
@@ -102,10 +90,6 @@ You can use the following properties to customize the tooltip appearance.
             width: 350,
             child: SfPyramidChart(
               tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y)
             )
           )
         )
@@ -144,11 +128,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y)
+              tooltipBehavior: _tooltipBehavior
             )
           )
         )
@@ -182,11 +162,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y)
+              tooltipBehavior: _tooltipBehavior
             )
           )
         )
@@ -228,11 +204,7 @@ You can customize the appearance of the tooltip with your own widget by using th
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y)
+              tooltipBehavior: _tooltipBehavior
             )
           )
         )
@@ -274,11 +246,7 @@ The ActivationMode enum contains the following values:
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y)
+              tooltipBehavior: _tooltipBehavior
             )
           )
         )
