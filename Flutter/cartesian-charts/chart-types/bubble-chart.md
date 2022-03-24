@@ -39,9 +39,9 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
                             // Renders bubble chart
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                sizeValueMapper: (ChartData data, _) => data.size,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -65,7 +65,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 
 The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/minimumRadius.html) property is used to change the minimum size of the series and the [`maximumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/maximumRadius.html) property is used to change the maximum size of the series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13 15" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -77,11 +77,13 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
-                                minimumRadius:9, // Minimum radius of bubble
-                                maximumRadius: 15, // Maximum radius of bubble
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                sizeValueMapper: (ChartData data, _) => data.size,
+                                // Minimum radius of bubble
+                                minimumRadius:9, 
+                                // Maximum radius of bubble
+                                maximumRadius: 15, 
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -112,10 +114,10 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
-                                pointColorMapper:(ChartData sales, _) => sales.pointColor,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                sizeValueMapper: (ChartData data, _) => data.size,
+                                pointColorMapper:(ChartData data, _) => data.pointColor,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -157,9 +159,9 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                         series: <CartesianSeries>[
                             BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
-                                 sizeValueMapper:(ChartData sales, _) => sales.size,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                 sizeValueMapper:(ChartData data, _) => data.size,
                                 // Applies gradient color
                                 gradient: gradientColors
                             )
@@ -189,24 +191,24 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, num>(
                                   dataSource: northAmerica,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: europe,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper:(ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper:(ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: asia,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: africa,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                         ]
                     )
                 )   
@@ -218,4 +220,4 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)
 
-N> You can refer to our [Flutter Bubble Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bubble-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bubble Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bubble/default-bubble-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can refer to our [Flutter Bubble Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bubble-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bubble Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bubble/default-bubble-chart) that shows how to easily configure with built-in support for creating stunning visual effects.

@@ -20,22 +20,34 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <ChartSeries<ChartData, int>>[
                             // Renders column chart
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
                 )      
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y, this.y1);
+        final int x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -46,43 +58,48 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 
 By default, all the column series that have the same x and y-axes are placed side by side in a chart. If you want to place a series one over the other (overlapped), set the [`enableSideBySideSeriesPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableSideBySideSeriesPlacement.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html) to false and configure the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property to differentiate the series. The following code snippet and screenshot illustrate the overlapped placement of column series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
     
     @override
     Widget build(BuildContext context) {
-        final List<SalesData> chartData = [
-            SalesData(2010, 35, 23),
-            SalesData(2011, 38, 49),
-            SalesData(2012, 34, 12),
-            SalesData(2013, 52, 33),
-            SalesData(2014, 40, 30)
+        final List<ChartData> chartData = [
+            ChartData(2010, 35, 23),
+            ChartData(2011, 38, 49),
+            ChartData(2012, 34, 12),
+            ChartData(2013, 52, 33),
+            ChartData(2014, 40, 30)
         ];
         
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, DateTime>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
-                            ColumnSeries<SalesData, DateTime>(
+                            ColumnSeries<ChartData, DateTime>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.loss
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             )
                         ]
                     )
                 )   
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y, this.y1);
+        final int x;
+        final double y;
+        final double y1;
     }
 
 {% endhighlight %}
@@ -95,21 +112,30 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20 22" %} 
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
-                                width: 0.8, // Width of the columns
-                                spacing: 0.2 // Spacing between the columns
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                // Width of the columns
+                                width: 0.8, 
+                                // Spacing between the columns
+                                spacing: 0.2 
                             )
                         ]
                     )
@@ -126,19 +152,26 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20" %} 
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Sets the corner radius
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
@@ -153,11 +186,13 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
-### See Also
+#### See Also
 
 * [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
 
-* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
+* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart).
+
+* [Render a customized column chart](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
 
 ## Track customization
 
@@ -168,21 +203,28 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - adds padding to the track.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -195,6 +237,13 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 ![Track](cartesian-chart-types-images/track_column.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the column series further.
+#### See Also
 
-N> You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)
+
+>**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

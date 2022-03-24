@@ -34,7 +34,7 @@ The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ## Easily tappable targets
 
-The `SfFunnelChart` Provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) Provides callback support to notify when tapping on the essential elements in the chart.
 * [Data points](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onpointtapped)
 * [Data labels](https://help.syncfusion.com/flutter/funnel-chart/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onlegendtapped)
