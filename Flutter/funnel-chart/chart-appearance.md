@@ -31,6 +31,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Chart margin
 
@@ -71,6 +72,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\chart_margin.png)
 
@@ -82,7 +84,8 @@ You can customize the area of the chart using the below properties.
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundImage.html) - used to set the image path.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -110,5 +113,6 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\background_image.png)

@@ -17,7 +17,8 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
  
  >**Note**: The method will return the center value of the segment.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     //Initialize the series controller
     PyramidSeriesController? seriesController;
@@ -50,4 +51,5 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 
 {% endhighlight %}
+{% endtabs %}
 

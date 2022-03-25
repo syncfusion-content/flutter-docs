@@ -44,6 +44,7 @@ The tooltip state will be preserved on the device's orientation change and on br
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip](images/tooltip/default_tooltip.jpg)
 
@@ -68,7 +69,8 @@ You can use the following properties to customize the tooltip appearance.
 * [`shared`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shared.html) - used to share the tooltip with same index points.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 
@@ -96,6 +98,7 @@ You can use the following properties to customize the tooltip appearance.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customized tooltip](images/tooltip/customized_tooltip.jpg)
 
@@ -135,6 +138,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Tooltip positioning
 
@@ -167,6 +171,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![pointer tooltip](images/tooltip/tooltip_pointer.jpg)
 
@@ -174,7 +179,8 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 
@@ -209,6 +215,7 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip template](images/tooltip/tooltip_template.jpg)
 
@@ -251,5 +258,6 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 Also refer [`tooltip event`](./callbacks#ontooltiprender) for customizing the tooltip further.

@@ -21,7 +21,8 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -52,6 +53,7 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Range area chart](cartesian-chart-types-images/range_area.png)
 
@@ -59,7 +61,8 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
 
 The borders of the range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries/borderDrawMode.html) property. The default value of the [`RangeAreaBorderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode.html) property is `all` and the other value is `excludeSides`.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -86,6 +89,7 @@ The borders of the range area chart can be customized using the [`borderDrawMode
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Range area border](cartesian-chart-types-images/range_area_border.png)
 

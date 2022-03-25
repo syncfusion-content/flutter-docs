@@ -20,7 +20,8 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -57,6 +58,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Line chart](cartesian-chart-types-images/line.jpg)
 
@@ -95,6 +97,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/dashed_line.jpg)
 
@@ -106,7 +109,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 To render a multi-colored line series, map the individual colors to the data using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) property.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -144,6 +148,7 @@ To render a multi-colored line series, map the individual colors to the data usi
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 

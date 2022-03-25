@@ -33,7 +33,8 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -61,6 +62,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![candle chart](cartesian-chart-types-images/candle.png)
 
@@ -122,6 +124,7 @@ The following are the types of indication when the combination of high, low, ope
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
 

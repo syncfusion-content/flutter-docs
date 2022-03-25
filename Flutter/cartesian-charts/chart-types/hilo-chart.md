@@ -25,7 +25,8 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -50,6 +51,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![hiLo chart](cartesian-chart-types-images/hilo_chart.png)
 

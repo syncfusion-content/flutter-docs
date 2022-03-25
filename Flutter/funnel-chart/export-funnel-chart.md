@@ -15,7 +15,8 @@ documentation: ug
 
 To export the funnel chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     Future<void> _renderFunnelImage() async {
       dart_ui.Image data = await _funnelChartKey.currentState!.toImage(pixelRatio: 3.0);
@@ -40,12 +41,14 @@ To export the funnel chart as a PNG image, we can get the image by calling [`toI
     }
 
   {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF
 
 Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     Future<void> _renderFunnelPDF() async {
       var document = PdfDocument();
@@ -66,5 +69,6 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     } 
 
   {% endhighlight %}
+{% endtabs %}
   
   ![pdf_export](images/export-funnel-chart/pdf_view.png)

@@ -34,12 +34,14 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Changing the locale to RTL languages
 
 To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     /// Package import
     import 'package:flutter_localizations/flutter_localizations.dart';
@@ -68,6 +70,7 @@ To change the chart rendering direction from right to left, you can change the [
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RTL supported chart elements
 
@@ -115,6 +118,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend RTL](images/rtl-support/cartesian_legend_rtl.jpg)
 
@@ -122,7 +126,8 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 
 Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) callback.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     late TooltipBehavior _tooltipBehavior;
     @override
@@ -167,6 +172,7 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.jpg)
 
@@ -177,7 +183,8 @@ Right-to-left rendering is applicable for trackball tooltip elements.
 * The trackball tooltip will render on the right side of the trackball line in LTR rendering if adequate space is available else will be moved to the left.
 * The trackball tooltip will render on the left side of the trackball line in RTL rendering if adequate space is available else moved to the right and this is the default behavior.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     late TrackballBehavior _trackballBehavior;
 
@@ -222,12 +229,14 @@ Right-to-left rendering is applicable for trackball tooltip elements.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Trackball RTL](images/rtl-support/trackball_rtl.jpg)
 
 In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -266,5 +275,6 @@ In addition, if you want the chart series and axis to look like it is rendering 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series axis RTL](images/rtl-support/series_rtl.jpg)

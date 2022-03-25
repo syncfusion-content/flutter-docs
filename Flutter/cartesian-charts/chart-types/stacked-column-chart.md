@@ -22,7 +22,8 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -76,6 +77,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column](cartesian-chart-types-images/stacked_column.jpg)
 
@@ -134,6 +136,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column grouping](cartesian-chart-types-images/stacked_column_grouping.jpg)
 
@@ -208,6 +211,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column cumulative](cartesian-chart-types-images/stacked_column_cumulative.jpg)
 

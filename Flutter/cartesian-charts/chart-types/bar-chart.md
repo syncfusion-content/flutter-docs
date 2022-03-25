@@ -21,7 +21,8 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bar chart](cartesian-chart-types-images/bar.jpg)
 
@@ -79,6 +81,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bar width and spacing](cartesian-chart-types-images/bar_width_spacing.jpg)
 
@@ -109,6 +112,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bar rounded corners](cartesian-chart-types-images/rounded_bar.jpg)
 
@@ -145,6 +149,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bar track](cartesian-chart-types-images/track_bar.jpg)
 

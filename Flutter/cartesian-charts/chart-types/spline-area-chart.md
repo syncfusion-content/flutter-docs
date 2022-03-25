@@ -15,7 +15,8 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -57,6 +58,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline area chart](cartesian-chart-types-images/spline_area.png)
 
@@ -108,6 +110,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline area type](cartesian-chart-types-images/spline_area_types.png)
 
@@ -149,6 +152,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed spline area chart](cartesian-chart-types-images/spline_area_dashed.png)
 

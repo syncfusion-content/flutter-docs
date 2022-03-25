@@ -15,7 +15,8 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -39,6 +40,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Step line chart](cartesian-chart-types-images/stepline.jpg)
 
@@ -71,6 +73,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Step line chart](cartesian-chart-types-images/dashed_stepline.jpg)
 

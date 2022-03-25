@@ -22,7 +22,8 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -55,6 +56,7 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked area](cartesian-chart-types-images/stacked_area.jpg)
 
@@ -62,7 +64,8 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries/groupName.html) will be stacked in a single group.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -110,6 +113,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked area grouping](cartesian-chart-types-images/stacked_area_grouping.jpg)
 
@@ -168,6 +172,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked area cumulative](cartesian-chart-types-images/stacked_area_cumulative.jpg)
 

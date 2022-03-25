@@ -34,12 +34,14 @@ To change the rendering direction from right to left, you can wrap the [`SfCircu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Changing the locale to RTL languages
 
 To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     /// Package import
     import 'package:flutter_localizations/flutter_localizations.dart';
@@ -69,6 +71,7 @@ To change the chart rendering direction from right to left, you can change the [
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RTL supported chart elements
 
@@ -76,7 +79,8 @@ To change the chart rendering direction from right to left, you can change the [
 
 Right to left rendering is effective for the legend in the chart. Legend items will be rendered from right to left direction. i.e. the legend text will appear on the left first, followed by the legend icon on the right.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -113,6 +117,7 @@ Right to left rendering is effective for the legend in the chart. Legend items w
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend RTL](images/rtl-support/circular_legend_rtl.jpg)
 
@@ -120,7 +125,8 @@ Right to left rendering is effective for the legend in the chart. Legend items w
 
 Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering the tooltip content will be `point.y : point.x`. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onTooltipRender.html) callback.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     late TooltipBehavior _tooltipBehavior;
 
@@ -163,5 +169,6 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip RTL](images/rtl-support/circular_tooltip_rtl.jpg)

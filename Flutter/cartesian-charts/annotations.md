@@ -11,7 +11,8 @@ documentation: ug
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -40,6 +41,7 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Annotation](images/annotation/default_annotation.jpg)
 
@@ -81,6 +83,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 **Positioning based on coordinateUnit as pixels**
 
@@ -115,6 +118,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
 
@@ -170,6 +174,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as percentage](images/annotation/percentage.png)
 
@@ -205,6 +210,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Alignment of annotation
 
@@ -241,12 +247,14 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding multiple annotation
 
 You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) property. as depicted in below code snippet.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -299,6 +307,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple annotation](images/annotation/multiple_annotation_pixel.jpg)
 
@@ -306,7 +315,8 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
 
 When there are multiple axes in the chart, annotation can be added for a particular axis by using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/yAxisName.html  ) properties. It is shown in the below code snippet.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -371,6 +381,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple axis annotation](images/annotation/annotation_axis.jpg)
 
@@ -378,7 +389,8 @@ When there are multiple axes in the chart, annotation can be added for a particu
 
 Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -434,6 +446,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![Chart with Watermark](images/annotation/watermark.png)

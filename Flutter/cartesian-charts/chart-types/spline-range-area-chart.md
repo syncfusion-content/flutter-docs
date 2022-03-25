@@ -22,7 +22,8 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -58,6 +59,7 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea](cartesian-chart-types-images/splinerangearea.png)
 
@@ -97,6 +99,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea](cartesian-chart-types-images/splinerangeareatype.png)
 
@@ -104,7 +107,8 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 The borders of the spline range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries/borderDrawMode.html) property. The default value of the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries/borderDrawMode.html) property is [`RangeAreaBorderMode.all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode.html) and the other value is [`RangeAreaBorderMode.excludeSides`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -128,6 +132,7 @@ The borders of the spline range area chart can be customized using the [`borderD
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea_bordermode](cartesian-chart-types-images/splinerangearea_bordermode.png)
 

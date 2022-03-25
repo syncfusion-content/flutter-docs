@@ -42,6 +42,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/legend.png)
 
@@ -66,7 +67,8 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * The [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) property of [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html) is used to set the shape for the legend icon. Any shape in the [`LegendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/legendIconType.html) can be applied to this property.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -103,6 +105,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customized Legend](images/legend/customized_legend.png)
 
@@ -118,7 +121,8 @@ The following properties can be used to define and customize the [`title`](https
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font size for the legend text.
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the alignment of the title text, it can be near, center, or far.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -165,6 +169,7 @@ The following properties can be used to define and customize the [`title`](https
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend title](images/legend/legend_tittle.png)
 
@@ -206,6 +211,7 @@ You can control the visibility of the series by tapping the legend item. You can
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Legend visibility
 
@@ -244,6 +250,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Legend item visibility
 
@@ -288,6 +295,7 @@ You can control the visibility of a particular series legend item using the [`is
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend isVisibleInLegend](images/legend/toggle_visibility.jpg)
 
@@ -363,6 +371,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/overflow_wrap.png)
 
@@ -408,6 +417,7 @@ You can change the position of the legend inside the chart. The following proper
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/legend_position.png)
 
@@ -449,6 +459,7 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Floating legend](images/legend/floating-legend.jpg)
 
@@ -456,7 +467,8 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -495,5 +507,6 @@ You can customize the appearance of legend items with your template by using [`l
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

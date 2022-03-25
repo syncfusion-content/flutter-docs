@@ -68,6 +68,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/datalabel/default_datalabel.png)
 
@@ -111,6 +112,7 @@ This feature is used to connect label and data point using a line. It can be ena
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Positioning the labels
 
@@ -143,6 +145,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/datalabel/datalabel_position.png)
 
@@ -179,6 +182,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/datalabel/use_series_color.png)
 
@@ -186,7 +190,8 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -217,6 +222,7 @@ You can customize the appearance of the data label with your own template using 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Label template](images/datalabel/datalabel_template.png)
 
@@ -252,6 +258,7 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)
 
@@ -285,6 +292,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 ![label_overflow](images/datalabel/pyramid_overflow.jpg)
 
 ## Smart labels
@@ -353,5 +361,6 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Smart labels](images/datalabel/smart_datalabel.png)

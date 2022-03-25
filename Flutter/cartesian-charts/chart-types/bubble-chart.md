@@ -18,7 +18,8 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke width of the series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke color of the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -58,6 +59,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble chart](cartesian-chart-types-images/bubble.jpg)
 
@@ -93,6 +95,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble size](cartesian-chart-types-images/bubble_radius.jpg)
 
@@ -102,7 +105,8 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) and [`sizeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sizeValueMapper.html) properties in the Cartesian charts, the Bubble series with different colors and sizes can be rendered.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -127,6 +131,7 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble various color](cartesian-chart-types-images/bubble_variouscolors.png)
 
@@ -134,7 +139,8 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -173,6 +179,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble gradients](cartesian-chart-types-images/bubble_gradients.png)
 
@@ -180,7 +187,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -217,6 +225,7 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)
 

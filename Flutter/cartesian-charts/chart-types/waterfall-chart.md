@@ -24,7 +24,8 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 * [`intermediateSumPredicate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/intermediateSumPredicate.html) - the boolean value based on which the data point will be considered as an intermediate sum or not. If this has true value, then that point will be considered as an intermediate sum. Else if it has false, then it will be considered as a normal data point in the chart.
 * [`totalSumPredicate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/totalSumPredicate.html) - the boolean value based on which the data point will be considered as the total sum or not. If this has true value, then that point will be considered as a total sum. Else if it has false, then it will be considered as a normal data point in the chart.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -75,6 +76,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![waterfall_chart](cartesian-chart-types-images/waterfall_series.png)
 

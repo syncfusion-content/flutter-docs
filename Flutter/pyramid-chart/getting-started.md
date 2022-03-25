@@ -24,12 +24,14 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     dependencies:
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
@@ -37,21 +39,25 @@ Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/
 
 Run the following command to get the required packages.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     import 'package:syncfusion_flutter_charts/charts.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initialize chart
 
@@ -72,6 +78,7 @@ Once the package has been imported, initialize the chart as a child of any widge
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 _note_ : An empty chart will be displayed.This is charts default behavior. 
 
@@ -79,7 +86,8 @@ _note_ : An empty chart will be displayed.This is charts default behavior.
 
 Based on your data, initialize the series type. In the series, you need to map the data source and the fields for x and y data points. Here, pyramid series is rendered that is demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -111,6 +119,7 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bind data source](images/getting-started/data_source.png)
 
@@ -118,7 +127,8 @@ Based on your data, initialize the series type. In the series, you need to map t
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -140,6 +150,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Title to chart](images/getting-started/title_chart.png)
 
@@ -169,6 +180,7 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel to chart](images/getting-started/datalabel.png)
 
@@ -200,6 +212,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend in chart](images/getting-started/legend.png)
 
@@ -242,6 +255,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 

@@ -59,6 +59,7 @@ Markers are used to provide information about the exact point location. You can 
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Marker](images/marker-datalabel/default_marker.jpg)
 
@@ -110,6 +111,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Marker Shapes](images/marker-datalabel/marker_shape.jpg)
 
@@ -152,6 +154,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Image Marker](images/marker-datalabel/image_marker.jpg)
 
@@ -212,6 +215,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/marker-datalabel/default_datalabel.jpg)
 
@@ -256,6 +260,7 @@ Data label considers the format used in the vertical axis by default. In the bel
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
@@ -300,6 +305,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/marker-datalabel/datalabel_alignment.png)
 
@@ -342,6 +348,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/marker-datalabel/useseries_color.png)
 
@@ -393,6 +400,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label mapper](images/marker-datalabel/datalabel_mapper.png)
 
@@ -400,7 +408,8 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -440,6 +449,7 @@ You can customize the appearance of the data label with your own template using 
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Label template](images/marker-datalabel/datalabel_builder.png)
 
@@ -474,6 +484,7 @@ Data label and its connector line in the Cartesian charts for the point value 0 
       }
     
 {% endhighlight %}
+{% endtabs %}
 
 ![hide_0_value](images/marker-datalabel/dataLabel_0_value.png)
 
@@ -514,6 +525,7 @@ In Horizontal padding, providing positive value for x moves the data l
       }
     
 {% endhighlight %}
+{% endtabs %}
 
 ![Horizontal padding](images/marker-datalabel/horizontal_padding.png)
 
@@ -548,6 +560,7 @@ In Vertical padding, providing positive value for y moves the data lab
       }
     
 {% endhighlight %}
+{% endtabs %}
 
 ![Vertical padding](images/marker-datalabel/vertical_padding.png)
 

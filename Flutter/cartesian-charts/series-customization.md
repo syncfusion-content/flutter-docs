@@ -44,6 +44,7 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Dynamic series animation
 
@@ -128,6 +129,7 @@ If you wish to perform the initial rendering animation again in the existing ser
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
@@ -199,6 +201,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Animation Delay](images/cartesian-customization/animationDelay.gif)
 
@@ -245,6 +248,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Transposed chart](images/cartesian-customization/transposes.jpg)
 
@@ -252,7 +256,8 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/palette.html) property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -300,6 +305,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
      
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/cartesian-customization/palettee.jpg)
 
@@ -307,7 +313,8 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -345,6 +352,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
@@ -353,7 +361,8 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -395,6 +404,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
@@ -410,7 +420,8 @@ The [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderColor.html) and [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) are defined then [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) is considered.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -449,6 +460,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
@@ -458,7 +470,8 @@ The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 Defaults to `null`.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     /// Package import
     import 'dart:ui' as ui;
@@ -523,6 +536,7 @@ Defaults to `null`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Shader](images/cartesian-customization/shader.png)
 
@@ -530,7 +544,8 @@ Defaults to `null`.
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/mode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -570,6 +585,7 @@ The data points that has null value are considered as empty points. Empty data p
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/cartesian-customization/emptyPoint.jpg)
 
@@ -577,7 +593,8 @@ The data points that has null value are considered as empty points. Empty data p
 
 Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -621,6 +638,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
 
@@ -628,7 +646,8 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) property determines whether the data points in the sequence should be sorted in [`SortingOrder.ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) or [`SortingOrder.descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) is set to [`SortingOrder.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -668,6 +687,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 

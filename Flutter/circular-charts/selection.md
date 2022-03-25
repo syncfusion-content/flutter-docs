@@ -44,6 +44,7 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Selection](images/selection/default_selection.jpg)
 
@@ -61,7 +62,8 @@ You can customize the segments using the below properties.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 * [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - used to customize the minimum range of selected series or points.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     late SelectionBehavior _selectionBehavior;
 
@@ -92,6 +94,7 @@ You can customize the segments using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.jpg)
 
@@ -116,6 +119,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.jpg)
 
@@ -159,6 +163,7 @@ Defaults to `true`.
    }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Toggle selection](images/selection/deselection.gif)
 

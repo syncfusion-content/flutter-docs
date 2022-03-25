@@ -14,7 +14,8 @@ documentation: ug
 
 You can add multiple series to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) property of the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) class. By default, all the series are rendered based on the [`PrimaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) and [`PrimaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). If you want to plot different unit or value that is specific to a particular series, specify separate axis for that series using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) properties of series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -61,6 +62,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple series](images/cartesian-customization/multipleSeriess.jpg)
 
@@ -70,7 +72,8 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render a combination of different types of series. The column and line type series have been combined in the following code snippet.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -112,6 +115,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Combination series](images/cartesian-customization/combinationseries.jpg)
 

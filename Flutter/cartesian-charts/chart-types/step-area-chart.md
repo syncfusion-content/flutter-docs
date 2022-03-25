@@ -15,7 +15,8 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -43,6 +44,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Step area chart](cartesian-chart-types-images/step_area.png)
 
@@ -74,6 +76,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed step area chart](cartesian-chart-types-images/step_area_dashed.png)
 

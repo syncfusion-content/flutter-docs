@@ -20,7 +20,8 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -58,6 +59,7 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 line chart](cartesian-chart-types-images/stacked_line_100.png)
 
@@ -107,6 +109,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/stacked_line_100_dashes.png)
 

@@ -21,7 +21,8 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -59,6 +60,7 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line chart](cartesian-chart-types-images/stacked_line.jpg)
 
@@ -66,7 +68,8 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries/groupName.html) will be stacked in a single group.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -114,6 +117,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line grouping](cartesian-chart-types-images/stacked_line_grouping.jpg)
 
@@ -172,6 +176,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line cumulative](cartesian-chart-types-images/stacked_line_cumulative.jpg)
 

@@ -16,7 +16,8 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -40,6 +41,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter chart](cartesian-chart-types-images/scatter.jpg)
 
@@ -78,6 +80,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 

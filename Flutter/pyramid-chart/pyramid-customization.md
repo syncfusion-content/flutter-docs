@@ -16,7 +16,8 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/borderColor.html) - changes the stroke color of the series.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/pointColorMapper.html) - maps the color from data source.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -48,6 +49,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid chart](images/pyramid-charts/pyramid.jpg)
 
@@ -83,6 +85,7 @@ You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/docu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid chart](images/pyramid-charts/pyramid_surface.jpg)
 
@@ -119,6 +122,7 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid size](images/pyramid-charts/pyramid_size.jpg)
 
@@ -154,6 +158,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid gap](images/pyramid-charts/pyramid_gap.jpg)
 
@@ -193,6 +198,7 @@ Also, the segments can be exploded by tapping the segment.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Explode](images/pyramid-charts/pyramid_explode.jpg)
 
@@ -200,7 +206,8 @@ Also, the segments can be exploded by tapping the segment.
 
 The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/palette.html) property is used to define colors for the series available in chart. By default, a set of 10 colors is predefined for applying it to the series. If the colors specified in the series are less than the number of series, then the remaining series will be filled with the specified palette colors rotationally.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -231,5 +238,6 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/pyramid-charts/pyramid_palette.jpg)

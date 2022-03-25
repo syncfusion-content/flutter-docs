@@ -24,7 +24,8 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
 * [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) - defines the painting mode for the data points either as segment or gradient.
 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -61,6 +62,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut chart](circular-chart-types-images/doughnut.jpg)
 
@@ -92,6 +94,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut corner style](circular-chart-types-images/doughnut_roundCorner.jpg)
 
@@ -99,7 +102,8 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 You can use the Annotations property in charts, to provide center elevation text in doughnut charts as shown below:
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -139,6 +143,7 @@ You can use the Annotations property in charts, to provide center elevation text
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut elevation](circular-chart-types-images/doughnut_elevation.png)
 
@@ -146,7 +151,8 @@ You can use the Annotations property in charts, to provide center elevation text
 
 You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -172,6 +178,7 @@ You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_fl
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut color mapping](circular-chart-types-images/doughnut_colormapping.png)
 
@@ -204,6 +211,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut size](circular-chart-types-images/doughnut_size.jpg)
 
@@ -235,6 +243,7 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut innner radius](circular-chart-types-images/doughnut_innerRadius.jpg)
 
@@ -272,6 +281,7 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut explode](circular-chart-types-images/doughnut_explode.jpg)
 
@@ -305,6 +315,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie explode all](circular-chart-types-images/doughnut_explodeAll.jpg)
 
@@ -339,6 +350,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut angle](circular-chart-types-images/doughnut_angle.jpg)
 
@@ -372,6 +384,7 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Doughnut grouping](circular-chart-types-images/doughnut_grouping.jpg)
 

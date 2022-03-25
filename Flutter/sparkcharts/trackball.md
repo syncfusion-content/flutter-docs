@@ -19,7 +19,8 @@ You can use the following properties to customize the appearance:
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/width.html) - Represent the width of trackball line.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/color.html) - Represent the color of trackball line.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -46,6 +47,7 @@ You can use the following properties to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline trackball](images/trackball/spark-trackball.png)
 
@@ -57,7 +59,8 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 * [`ActivationMode.tap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing tap action.
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing double tap action.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -76,3 +79,4 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}

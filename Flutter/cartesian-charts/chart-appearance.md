@@ -38,6 +38,7 @@ You can also customize the following properties:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Chart size](images/appearance/chart_sizing.jpg)
 
@@ -68,6 +69,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Chart Margin](images/appearance/chart_margin.jpg)
 
@@ -80,7 +82,8 @@ You can customize the plot area of the chart using the below properties.
 * [`plotAreaBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderWidth.html) - used to change the stroke width of the plot area.
 * [`plotAreaBackgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundImage.html) - used to set the image path.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -103,6 +106,7 @@ You can customize the plot area of the chart using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Chart plot area](images/appearance/plot_area_customization.jpg)
 

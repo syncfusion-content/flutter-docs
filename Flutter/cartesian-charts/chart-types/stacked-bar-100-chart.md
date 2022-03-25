@@ -22,7 +22,8 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBar100Series/borderRadius.html) -  used to add the rounded corners to the rectangle.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -60,6 +61,7 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 bar chart](cartesian-chart-types-images/stacked100_bar.png)
 
@@ -101,6 +103,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 bar width and spacing](cartesian-chart-types-images/stacked_bar_100_sizing.png)
 

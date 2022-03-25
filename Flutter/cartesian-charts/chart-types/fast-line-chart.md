@@ -15,7 +15,8 @@ documentation: ug
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -40,6 +41,7 @@ documentation: ug
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Fast line chart](cartesian-chart-types-images/fastline.jpg)
 

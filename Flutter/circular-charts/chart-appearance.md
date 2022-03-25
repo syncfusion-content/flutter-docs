@@ -33,6 +33,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Chart margin
 
@@ -61,6 +62,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Chart area customization
 
@@ -71,7 +73,8 @@ You can customize the area of the chart using the below properties.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderWidth.html) - used to change chart area the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderColor.html) - used to change the chart area border color.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -92,3 +95,4 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}

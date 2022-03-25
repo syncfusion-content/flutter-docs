@@ -21,7 +21,8 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -58,6 +59,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Range column chart](cartesian-chart-types-images/range_column.jpg)
 
@@ -65,7 +67,8 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 
 In the range column chart when data label is enabled, by default there will be two values displayed namely, high and low, but in the other types of charts, only y value will be displayed.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -93,6 +96,7 @@ In the range column chart when data label is enabled, by default there will be t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Range column datalabel](cartesian-chart-types-images/range_column_datalabel.jpg)
 
@@ -138,6 +142,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 

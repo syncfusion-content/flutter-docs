@@ -13,7 +13,8 @@ documentation: ug
 
 [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -34,12 +35,14 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
     
     @override
     Widget build(BuildContext context) {
@@ -71,6 +74,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![animation_delay](images\chart-title\animation_delay.gif)
 
@@ -78,7 +82,8 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/mode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -105,6 +110,7 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/Pyramid-customization/emptyPoints.png)
 
@@ -112,7 +118,8 @@ The data points that has null value are considered as empty points. Empty data p
 
 Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -143,6 +150,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/Pyramid-customization/emptyPointcustomization.png)
 
@@ -150,7 +158,8 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -179,5 +188,6 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![mapcolor](images/Pyramid-customization/color-mapping.png)
