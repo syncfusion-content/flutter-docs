@@ -64,7 +64,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html) is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %}
     
     @override
     Widget build(BuildContext context) {
@@ -149,8 +149,9 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 #### See Also
 
- * [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
- * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
- * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
- * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
- * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting) 

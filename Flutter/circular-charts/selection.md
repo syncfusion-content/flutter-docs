@@ -11,7 +11,7 @@ documentation: ug
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
     
     late SelectionBehavior _selectionBehavior;
 
@@ -99,7 +99,7 @@ You can customize the segments using the below properties.
 
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) property of chart.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ You can decide, whether to deselect the selected data point/series or remain sel
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     late SelectionBehavior _selectionBehavior;
 
@@ -134,7 +134,7 @@ Defaults to `true`.
       _selectionBehavior =  SelectionBehavior(
                           enable: true,
                           toggleSelection: false,
-                            );
+                        );
       super.initState(); 
     }
 

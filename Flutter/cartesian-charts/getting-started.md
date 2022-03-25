@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="2 7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -120,6 +120,12 @@ Based on your data, initialize the appropriate axis type and series type. In the
 {% endhighlight %}
 
 ![Bind data source](images/getting-started/data_source.jpg)
+
+#### See Also
+
+* [Bind data from the list to the Flutter Cartesian chart](https://www.syncfusion.com/kb/12592/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart).
+
+* [Bind data from the array to the Flutter Cartesian chart](https://www.syncfusion.com/kb/12591/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
 
 ## Add title
 
