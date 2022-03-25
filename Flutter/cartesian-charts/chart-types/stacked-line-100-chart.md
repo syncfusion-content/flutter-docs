@@ -59,7 +59,6 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Stacked 100 line chart](cartesian-chart-types-images/stacked_line_100.png)
 
@@ -67,6 +66,7 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLine100Series/dashArray.html) property of [`StackedLine100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLine100Series-class.html) is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart hl_lines="11 17 23 29" %}
     
     @override
@@ -109,7 +109,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/stacked_line_100_dashes.png)
 

@@ -18,6 +18,7 @@ You can also customize the following properties:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - used to change the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - used to change the color of the chart border.
  
+{% tabs %}
 {% highlight dart hl_lines="8 10" %} 
 
     @override
@@ -38,7 +39,6 @@ You can also customize the following properties:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Chart size](images/appearance/chart_sizing.jpg)
 
@@ -46,6 +46,7 @@ You can also customize the following properties:
 
 Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/margin.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -69,7 +70,6 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Chart Margin](images/appearance/chart_margin.jpg)
 
@@ -106,7 +106,6 @@ You can customize the plot area of the chart using the below properties.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Chart plot area](images/appearance/plot_area_customization.jpg)
 

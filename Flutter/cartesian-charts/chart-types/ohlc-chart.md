@@ -61,7 +61,6 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
     } 
     
 {% endhighlight %}
-{% endtabs %}
 
 ![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
 
@@ -78,6 +77,7 @@ The following are the types of indication when the combination of high, low, ope
 * In the OHLC chart, if the open and close values are same then a horizontal line will be drawn at that value by default.
 * If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
 
     @override
@@ -121,7 +121,6 @@ The following are the types of indication when the combination of high, low, ope
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
 

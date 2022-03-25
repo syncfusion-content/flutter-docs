@@ -23,6 +23,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 
 Numeric axis uses numerical scale and displays numbers as labels. By default, [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis-class.html) is set to both horizontal axis and vertical axis.
 
+{% tabs %}
 {% highlight dart hl_lines="14 15" %} 
 
     @override
@@ -67,7 +68,6 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Numeric axis](images/axis-types/numeric.jpg)
 
@@ -75,6 +75,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
+{% tabs %}
 {% highlight dart hl_lines="18 19" %} 
 
     @override
@@ -115,7 +116,6 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Inversed Numeric axis](images/axis-types/inversed-numeric.png)
 
@@ -123,6 +123,7 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) properties of [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/NumericAxis.html). By default, nice range will be calculated automatically based on the provided data.
 
+{% tabs %}
 {% highlight dart hl_lines="15 16" %} 
 
     @override
@@ -155,7 +156,6 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Numeric axis range](images/axis-types/numeric_range.jpg)
 
@@ -163,6 +163,7 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
 
 Axis interval can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of [`ChartAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis-class.html). By default, nice interval will be calculated based on the minimum and maximum values of the provided data.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -188,7 +189,6 @@ Axis interval can be customized using the [`interval`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Numeric axis interval](images/axis-types/numeric_interval.jpg)
 
@@ -206,6 +206,7 @@ Padding can be applied to the minimum and maximum extremes of the axis range usi
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additional`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the axis range will be rounded and an interval of the axis will be added as padding to the minimum and maximum values of the range.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -231,7 +232,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding additional](images/axis-types/numeric_additional.jpg)
 
@@ -239,6 +239,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the horizontal numeric axis takes none for padding calculation, whereas the vertical numeric axis takes normal for padding calculation. This is also the default value of rangePadding.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -263,7 +264,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding auto](images/axis-types/numeric_auto.jpg)
 
@@ -271,6 +271,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will not be applied to the axis.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -295,12 +296,12 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 **normal**
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding is applied to the axis based on the default range calculation.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -325,7 +326,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding normal](images/axis-types/numeric_normal.jpg)
 
@@ -333,6 +333,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible numeric value.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -357,7 +358,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding round](images/axis-types/numeric_round.jpg)
 
@@ -365,6 +365,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
 
+{% tabs %}
 {% highlight dart hl_lines="11"%} 
 
     import 'package:intl/intl.dart';
@@ -392,7 +393,6 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Number format](images/axis-types/number_format.jpg)
 
@@ -406,6 +406,7 @@ further.
 
 The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property of numeric axis can be used to control the number of decimal digits of the numeric axis labels. The default value of [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property is 3.
 
+{% tabs %}
 {% highlight dart hl_lines="19 22" %} 
 
     @override
@@ -446,7 +447,6 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Decimal Places](images/axis-types/numeric_decimalplaces.jpg)
 
@@ -458,6 +458,7 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -495,7 +496,6 @@ Category axis displays text labels instead of numbers. When the string values ar
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Category Axis](images/axis-types/category.jpg)
 
@@ -503,6 +503,7 @@ Category axis displays text labels instead of numbers. When the string values ar
 
 Labels in category axis can be placed on the ticks by setting the [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) to [`LabelPlacement.onTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement.html). The default value of the [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) property is [`LabelPlacement.betweenTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement.html). So, the labels will be placed between the ticks by default.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -522,12 +523,12 @@ Labels in category axis can be placed on the ticks by setting the [`labelPlaceme
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Displaying labels after a fixed interval
 
 To display the labels after a fixed interval n, set the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of ChartAxis to n. The default value of interval is null.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -547,7 +548,6 @@ To display the labels after a fixed interval n, set the [`interval`](https://pub
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Fixed interval](images/axis-types/category_interval.jpg)
 
@@ -555,6 +555,7 @@ To display the labels after a fixed interval n, set the [`interval`](https://pub
 
 Category axis can also be rendered based on the index values of data source by setting the [`arrangeByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/arrangeByIndex.html) property to true in the axis.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
 
     final List<ChartData> chartData = [
@@ -604,7 +605,6 @@ Category axis can also be rendered based on the index values of data source by s
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Indexed category axis](images/axis-types/category_arrangebyIndex.jpg)
 
@@ -612,6 +612,7 @@ Category axis can also be rendered based on the index values of data source by s
 
 The date-time axis uses date-time scale and displays date-time values as axis labels in specified format.
 
+{% tabs %}
 {% highlight dart hl_lines="14"%} 
 
     @override
@@ -649,7 +650,6 @@ The date-time axis uses date-time scale and displays date-time values as axis la
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTime axis](images/axis-types/datetime.jpg)
 
@@ -657,6 +657,7 @@ The date-time axis uses date-time scale and displays date-time values as axis la
 
 To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). By default, nice range will be calculated automatically based on the provided data.
 
+{% tabs %}
 {% highlight dart hl_lines="8 9"%} 
 
     @override
@@ -682,7 +683,6 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTime range](images/axis-types/datetime_range.jpg)
 
@@ -701,6 +701,7 @@ The Flutter Chart supports the following types of interval for date-time axis:
 * seconds
 * milliseconds
 
+{% tabs %}
 {% highlight dart hl_lines="10" %} 
 
     @override
@@ -727,7 +728,6 @@ The Flutter Chart supports the following types of interval for date-time axis:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTime range](images/axis-types/datetime_interval.jpg)
 
@@ -742,6 +742,7 @@ Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_cha
 For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depending upon the number of days in the month.
 
 
+{% tabs %}
 {% highlight dart hl_lines="15" %} 
 
     @override
@@ -774,7 +775,6 @@ For example, if you are rendering a series with months in x-axis with an interva
      }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![doublerange](images/axis-types/doublerange.png)
 
@@ -791,6 +791,7 @@ Padding can be applied to the [`minimum`](https://pub.dev/documentation/syncfusi
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will not be applied to the axis.
 
+{% tabs %}
 {% highlight dart hl_lines="15" %} 
 
     @override
@@ -822,7 +823,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Range padding none](images/axis-types/datetime_rangePadding_none.jpg)
 
@@ -830,6 +830,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible date-time value.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -848,7 +849,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding round](images/axis-types/datetime_rangePadding_round.png)
 
@@ -856,6 +856,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additional`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), range will be rounded and date-time interval of the axis will be added as padding to the minimum and maximum extremes of a range.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -874,7 +875,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding round](images/axis-types/datetime_rangePadding_add.jpg)
 
@@ -882,6 +882,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will be applied to the axis based on the default range calculation.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -900,7 +901,6 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![RangePadding normal](images/axis-types/datetime_rangePadding_normal.jpg)
 
@@ -908,6 +908,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
 
+{% tabs %}
 {% highlight dart hl_lines="11" %} 
 
     import 'package:intl/intl.dart';
@@ -929,7 +930,6 @@ The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
 
@@ -941,6 +941,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 
 Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html) and [`CategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis-class.html). Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -978,7 +979,6 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTimeCategory axis](images/axis-types/datetimecategory.jpg)
 
@@ -986,6 +986,7 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
 
 To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/maximum.html) properties of [`DateTimeCategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis-class.html). By default, nice range will be calculated automatically based on the provided data.
 
+{% tabs %}
 {% highlight dart hl_lines="16 17" %} 
 
     @override
@@ -1013,7 +1014,6 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTimeCategory range](images/axis-types/datetimecategory_range.jpg)
 
@@ -1032,6 +1032,7 @@ The Flutter Chart supports the following types of interval for date-time categor
 * seconds
 * milliseconds
 
+{% tabs %}
 {% highlight dart hl_lines="9 10" %} 
 
     @override
@@ -1052,7 +1053,6 @@ The Flutter Chart supports the following types of interval for date-time categor
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTimeCategory intervals](images/axis-types/datetimecategory_interval.jpg)
 
@@ -1060,6 +1060,7 @@ The Flutter Chart supports the following types of interval for date-time categor
 
 The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/dateFormat.html) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
 
+{% tabs %}
 {% highlight dart hl_lines="11" %} 
 
     import 'package:intl/intl.dart';
@@ -1081,7 +1082,6 @@ The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DateTimeCategory  date format](images/axis-types/datetimecategory_dateFormat.jpg)
 
@@ -1093,6 +1093,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 
 Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -1124,7 +1125,6 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Logarithmic axis](images/axis-types/logarthmic.jpg)
 
@@ -1153,7 +1153,6 @@ To customize the range of log axis, use the [`minimum`](https://pub.dev/document
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Logarithmic range](images/axis-types/logarthmic_range.jpg)
 
@@ -1161,6 +1160,7 @@ To customize the range of log axis, use the [`minimum`](https://pub.dev/document
 
 To customize the log base value, use the [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="8"%}
 
     @override
@@ -1179,7 +1179,6 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
     }
      
 {% endhighlight %}
-{% endtabs %}
 
 ![Logarithmic base](images/axis-types/log_base.jpg)
 
@@ -1187,6 +1186,7 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 
 By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted. Axis gets rendered from the minimum value to the maximum value by default and can be inverted from the maximum value to the minimum value.
 
+{% tabs %}
 {% highlight dart hl_lines="18"%}
 
     @override
@@ -1229,7 +1229,6 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
     }
      
 {% endhighlight %}
-{% endtabs %}
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
 

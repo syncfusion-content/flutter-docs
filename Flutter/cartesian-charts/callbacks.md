@@ -50,7 +50,6 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onActualRangeChanged
 
@@ -85,7 +84,6 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onDataLabelRender
 
@@ -138,7 +136,6 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onLegendItemRender
 
@@ -170,7 +167,6 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onTrackballPositionChanging
 
@@ -205,7 +201,6 @@ Triggers while the trackball position is changing. Here, you can customize the t
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onCrosshairPositionChanging
 
@@ -247,7 +242,6 @@ Triggers while the crosshair position is changing. Here, you can customize the t
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onZooming
 
@@ -292,7 +286,6 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onZoomStart
 
@@ -337,7 +330,6 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onZoomEnd
 
@@ -382,7 +374,6 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onZoomReset
 
@@ -427,7 +418,6 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onPointTap
 
@@ -460,7 +450,6 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onPointDoubleTap
 
@@ -493,7 +482,6 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onPointLongPress
 
@@ -525,7 +513,6 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       );
     }
 {% endhighlight %}
-{% endtabs %}
 
 ## onAxisLabelTapped
 
@@ -554,7 +541,6 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 #### See Also
 
@@ -588,7 +574,6 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onSelectionChanged
 
@@ -643,7 +628,6 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onRenderDetailsUpdate (TechnicalIndicators)
  
@@ -680,7 +664,6 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
     }
     
 {% endhighlight %}
-{% endtabs %}
 
 ## onRenderDetailsUpdate (Trendline)
 
@@ -721,7 +704,6 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 >**Note**
 * The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
@@ -790,7 +772,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onChartTouchInteractionDown
 
@@ -812,7 +793,6 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onChartTouchInteractionUp
 
@@ -834,7 +814,6 @@ Triggers when tapped or clicked on the chart area. You can get the tapped region
   }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onChartTouchInteractionMove
 
@@ -856,7 +835,6 @@ Triggers when touched or clicked and moved on the chart area. You can get the ta
   }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onMarkerRender
 
@@ -894,7 +872,6 @@ Triggers when the marker is being rendered. Here, you can customize the followin
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onDataLabelTapped
 Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelTapped.html) Callback contains the following arguments.
@@ -939,7 +916,6 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onPlotAreaSwipe
 
@@ -983,7 +959,6 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 #### See Also
 
@@ -1043,7 +1018,6 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## onCreateRenderer
 
@@ -1125,7 +1099,6 @@ Defaults to `null`.
     }
   
 {% endhighlight %}
-{% endtabs %}
 
 ## onCreateShader
 
@@ -1194,7 +1167,6 @@ the data points and legend. For further reference on this callback, Check the [`
   }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## axisLabelFormatter
 
@@ -1220,7 +1192,6 @@ Defaults to `null`.
       return ChartAxisLabel('Label', details.textStyle);
     }
 {% endhighlight %}
-{% endtabs %}
 
 #### See Also
 
@@ -1301,7 +1272,6 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 #### See Also
 

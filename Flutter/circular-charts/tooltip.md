@@ -13,6 +13,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -44,7 +45,6 @@ The tooltip state will be preserved on the device's orientation change and on br
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip](images/tooltip/default_tooltip.jpg)
 
@@ -98,7 +98,6 @@ You can use the following properties to customize the tooltip appearance.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Customized tooltip](images/tooltip/customized_tooltip.jpg)
 
@@ -110,6 +109,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Y value - `point.y`
 * Name of the series - `series.name`
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -138,12 +138,12 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Tooltip positioning
 
 The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html).
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
     
     late TooltipBehavior _tooltipBehavior;
@@ -171,7 +171,6 @@ The tooltip can be made to display in the fixed location or at the pointer locat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![pointer tooltip](images/tooltip/tooltip_pointer.jpg)
 
@@ -215,7 +214,6 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip template](images/tooltip/tooltip_template.jpg)
 
@@ -230,6 +228,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates tooltip only when performing double tap action.
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - hides the visibility of tooltip when setting activation mode to none.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
     
     late TooltipBehavior _tooltipBehavior;
@@ -258,6 +257,5 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 Also refer [`tooltip event`](./callbacks#ontooltiprender) for customizing the tooltip further.

@@ -64,7 +64,6 @@ The radial bar chart is used for showing the comparisons among the categories us
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Radial bar chart](circular-chart-types-images/radialbar.jpg)
 
@@ -72,6 +71,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 
 You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the radial bar chart with respect to the plot area. The default value is 80%.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -97,7 +97,6 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Radial bar size](circular-chart-types-images/radialbar_sizing.jpg)
 
@@ -105,6 +104,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 You can change the inner radius of radial bar chart using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) property with respect to the plot area. The value ranges from 0% to 100%.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -129,12 +129,12 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Rounded corners
 
 The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for radial bar chart. The corners can be customized using the [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), and [`CornerStyle.endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html) options. The default value of this property is [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html).
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -159,7 +159,6 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
 
@@ -180,6 +179,7 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderColor.html) - changes the stroke color of the data label shape.
 * [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) - uses the series color for filling the data label shape.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -206,7 +206,6 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Radial bar data label](circular-chart-types-images/radialbar_dataLabel.jpg)
 
@@ -243,6 +242,5 @@ For example, if you set the maximum value of the radial bar to 100% but the give
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Overfilled radial bar](circular-chart-types-images/overfilled-radial-bar.jpg)

@@ -60,7 +60,6 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar](cartesian-chart-types-images/error_bar_color.png)
 
@@ -73,6 +72,7 @@ You can customize the error bar depending on the error value by setting the valu
 * [`horizontalErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalErrorValue.html) - This property horizontally depicts the error value in positive and negative directions. The default value is `1`.
 * [`verticalErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalErrorValue.html) - This property vertically depicts the error value in positive and negative directions. The default value is `3`.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
 
     @override
@@ -103,7 +103,6 @@ You can customize the error bar depending on the error value by setting the valu
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar type](cartesian-chart-types-images/error_bar_type.png)
 
@@ -151,7 +150,6 @@ For [`ErrorBarType.custom`](https://pub.dev/documentation/syncfusion_flutter_cha
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar custom type](cartesian-chart-types-images/error_bar_custom_type.png)
 
@@ -165,6 +163,7 @@ The default value is [`RenderingMode.vertical`](https://pub.dev/documentation/sy
 * [`RenderingMode.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RenderingMode.html) - This property displays horizontal error value only.
 * [`RenderingMode.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RenderingMode.html)  - This property displays both vertical and horizontal error values.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
 
     @override
@@ -197,7 +196,6 @@ The default value is [`RenderingMode.vertical`](https://pub.dev/documentation/sy
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar mode](cartesian-chart-types-images/error_bar_mode.jpg)
 
@@ -211,6 +209,7 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
 * [`Direction.minus`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Direction.html) - Used to set error value in a negative direction.
 * [`Direction.plus`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Direction.html) - Used to set error value in a positive direction.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
 
     @override
@@ -241,7 +240,6 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar direction](cartesian-chart-types-images/error_bar_direction.jpg)
 
@@ -249,6 +247,7 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
 
 The [`capLength`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/capLength.html) property is used to customize the length of the error bar's cap. The default value is `10`.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
 
     @override
@@ -279,7 +278,6 @@ The [`capLength`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.png)
 

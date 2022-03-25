@@ -44,7 +44,6 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Step area chart](cartesian-chart-types-images/step_area.png)
 
@@ -52,6 +51,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`StepAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepAreaSeries-class.html) is used to render spline area series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart hl_lines="11" %}
     
     @override
@@ -76,7 +76,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Dashed step area chart](cartesian-chart-types-images/step_area_dashed.png)
 

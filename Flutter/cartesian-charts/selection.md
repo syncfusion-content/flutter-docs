@@ -58,7 +58,6 @@ The selection feature in chart let you to select a segment in a series or the se
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Customizing the segments
 
@@ -123,7 +122,6 @@ You can customize the segments using the below properties.
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.jpg)
 
@@ -187,7 +185,6 @@ The selection features allows you to select segments in following modes using [`
 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Cluster mode](images/selection/cluster_mode.jpg)
 
@@ -235,7 +232,6 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.jpg)
 
@@ -295,7 +291,6 @@ You can select a point or series programmatically on a chart using [`initialSele
         final double y1;
     }
 {% endhighlight %}
-{% endtabs %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
 
@@ -347,7 +342,6 @@ Defaults to `true`.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Toggle selection](images/selection/cartesian_deselection.gif)
 

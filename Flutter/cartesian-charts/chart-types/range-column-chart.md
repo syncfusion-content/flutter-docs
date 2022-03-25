@@ -59,7 +59,6 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Range column chart](cartesian-chart-types-images/range_column.jpg)
 
@@ -96,7 +95,6 @@ In the range column chart when data label is enabled, by default there will be t
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Range column datalabel](cartesian-chart-types-images/range_column_datalabel.jpg)
 
@@ -104,6 +102,7 @@ In the range column chart when data label is enabled, by default there will be t
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render range column chart.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %} 
     
     @override
@@ -142,7 +141,6 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 #### See Also
 

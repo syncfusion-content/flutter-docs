@@ -62,7 +62,6 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Multiple series](images/cartesian-customization/multipleSeriess.jpg)
 
@@ -115,7 +114,6 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Combination series](images/cartesian-customization/combinationseries.jpg)
 

@@ -41,7 +41,6 @@ documentation: ug
 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Fast line chart](cartesian-chart-types-images/fastline.jpg)
 

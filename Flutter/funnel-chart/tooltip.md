@@ -55,7 +55,6 @@ The tooltip state will be preserved on the device's orientation change and on br
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip](images/tooltip/default_tooltip.png)
 
@@ -107,7 +106,6 @@ You can use the following properties to customize the tooltip appearance.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Customized tooltip](images/tooltip/customized_tooltip.png)
 
@@ -148,7 +146,6 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![tooltip format](images/tooltip/tooltip_format.png)
 
@@ -184,7 +181,6 @@ The tooltip can be made to display in the fixed location or at the pointer locat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![pointer tooltip](images/tooltip/tooltip_pointer.png)
 
@@ -228,7 +224,6 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip template](images/tooltip/tooltip_template.png)
 
@@ -272,6 +267,5 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 Also refer [`tooltip event`](./callbacks#ontooltiprender) for customizing the tooltip further.

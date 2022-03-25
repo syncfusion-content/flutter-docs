@@ -37,7 +37,6 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Annotation](images/annotation/default_annotation.jpg)
 
@@ -79,7 +78,6 @@ To place the annotation based on the radius values, set the [`radius`](https://p
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Positioning based on Alignment and radius](images/annotation/annotation_positioning.jpg)
 
@@ -136,7 +134,6 @@ Chart supports watermark which allows you to mark the specific area of interest 
         }
         
 {% endhighlight %}
-{% endtabs %}
 
 
 ![Chart with Watermark](images/annotation/watermark.jpg)

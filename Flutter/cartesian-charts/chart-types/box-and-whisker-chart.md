@@ -45,7 +45,6 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 

@@ -62,7 +62,6 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![candle chart](cartesian-chart-types-images/candle.png)
 
@@ -82,6 +81,7 @@ The following are the types of indication when the combination of high, low, ope
 * If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
 
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -124,7 +124,6 @@ The following are the types of indication when the combination of high, low, ope
         }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
 

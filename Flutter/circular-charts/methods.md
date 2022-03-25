@@ -67,7 +67,6 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
   
 {% endhighlight %}
-{% endtabs %}
 
 ### showByIndex method in tooltipBehavior
 
@@ -130,7 +129,6 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### showByPixel method in tooltipBehavior
 
@@ -188,7 +186,6 @@ x & y - logical pixel values to position the tooltip.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Hide method in tooltipBehavior
 
@@ -245,7 +242,6 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Methods in selectionBehavior
 
@@ -309,7 +305,6 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## PixelToPoint 
 
@@ -351,4 +346,3 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}

@@ -58,7 +58,6 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Line chart](cartesian-chart-types-images/line.jpg)
 
@@ -66,6 +65,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html) is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart hl_lines="18" %}
     
     @override
@@ -97,7 +97,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/dashed_line.jpg)
 
@@ -148,7 +147,6 @@ To render a multi-colored line series, map the individual colors to the data usi
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 

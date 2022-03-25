@@ -57,7 +57,6 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![numeric Axis](images/axis-types/numeric.jpg)
 
@@ -115,7 +114,6 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Datetime Axis](images/axis-types/datetime.jpg)
 
@@ -162,7 +160,6 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![category Axis](images/axis-types/category.jpg)
 
@@ -207,6 +204,5 @@ Axis line of the spark charts can be customized using the following properties.
     ]; 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Axis customization](images/axis-types/axis-customization.jpg)

@@ -13,6 +13,7 @@ documentation: ug
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -38,12 +39,12 @@ documentation: ug
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
+{% tabs %}
 {% highlight dart hl_lines="17" %}
     
     @override
@@ -78,7 +79,6 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Dynamic animation
 
@@ -116,7 +116,6 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Color Palette](images/circular-customization/color_palette.jpg)
 
@@ -157,7 +156,6 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![mapcolor](images/circular-customization/color-mapping.jpg)
 
@@ -212,7 +210,6 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }   
 
 {% endhighlight %}
-{% endtabs %}
 
 ![shader linear](images/circular-customization/pie_linear.jpg)
 
@@ -257,7 +254,6 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     double _degreeToRadian(int deg) => deg * (3.141592653589793 / 180);
 
 {% endhighlight %}
-{% endtabs %}
 
 ![shader sweep](images/circular-customization/radialbar_sweep.jpg)
 
@@ -289,7 +285,6 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }  
 
 {% endhighlight %}
-{% endtabs %}
 
 ![shader radial](images/circular-customization/doughnut_radial.jpg)
 
@@ -341,7 +336,6 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
     }  
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Image shader](images/circular-customization/pie_imageshader.jpg)
 
@@ -495,7 +489,6 @@ The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Image pointshadermapper](images/circular-customization/pie_pointshadermapper.jpg)
 
@@ -509,6 +502,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 >**Note**: This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %}
 
     @override
@@ -530,7 +524,6 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Image pointshadermapper](images/circular-customization/pie_rendermode.jpg)
 
@@ -571,7 +564,6 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Empty points](images/circular-customization/emptyPoints.jpg)
 
@@ -613,7 +605,6 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Empty points customization](images/circular-customization/emptyPointcustomization.jpg)
 
@@ -653,7 +644,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sorting](images/circular-customization/sortings.jpg)
 

@@ -31,7 +31,6 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
-{% endtabs %}
 
 >**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
@@ -45,7 +44,6 @@ Run the following command to get the required packages.
     $ flutter pub get
 
 {% endhighlight %}
-{% endtabs %}
 
 **Import package**
 
@@ -57,12 +55,12 @@ Import the following package in your Dart code.
     import 'package:syncfusion_flutter_charts/charts.dart';
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Initialize chart
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %} 
 
     @override
@@ -78,7 +76,6 @@ Once the package has been imported, initialize the chart as a child of any widge
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 >**Note**: An empty chart will be displayed. This is the charts default behavior.
 
@@ -121,7 +118,6 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Bind data source](images/getting-started/data_source.jpg)
 
@@ -129,6 +125,7 @@ Based on your data, initialize the series type. In the series, you need to map t
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %}
 
     @override
@@ -163,7 +160,6 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Title to chart](images/getting-started/title_chart.jpg)
 
@@ -171,6 +167,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %} 
 
     @override
@@ -203,7 +200,6 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![DataLabel to chart](images/getting-started/datalabel.png)
 
@@ -213,6 +209,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
 
     @override
@@ -246,7 +243,6 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Legend in chart](images/getting-started/legend.png)
 
@@ -256,6 +252,7 @@ The tooltip is used when you cannot display information using the data labels du
 
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled as demonstrated in the following code snippet.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %}
  
 
@@ -301,7 +298,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 

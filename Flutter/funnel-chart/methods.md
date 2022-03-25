@@ -51,5 +51,4 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 
 {% endhighlight %}
-{% endtabs %}
 

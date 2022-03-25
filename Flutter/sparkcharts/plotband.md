@@ -36,6 +36,5 @@ The following properties are used to customize the appearances:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sparkline plot band](images/plotband/spark-plotband.png)

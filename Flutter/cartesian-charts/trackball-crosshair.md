@@ -76,7 +76,6 @@ You can use the following properties to customize the appearance of trackball to
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball](images/trackball-crosshair/default_trackball.jpg)
 
@@ -89,6 +88,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 * [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - displays label for all the data points grouped and positioned at the top of the chart area.
 * [`TrackballDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - doesn't display the label.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
@@ -125,7 +125,6 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Label display mode](images/trackball-crosshair/label_display_mode.jpg)
 
@@ -139,6 +138,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 >**Note**: The [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) is only applicable for trackball display mode [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
@@ -175,7 +175,6 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Label alignment](images/trackball-crosshair/label_alignment.jpg)
 
@@ -185,6 +184,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 By default, axis value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property by adding desired text as prefix or suffix.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %}
     
     late TrackballBehavior _trackballBehavior;
@@ -222,7 +222,6 @@ By default, axis value will be displayed in the tooltip, and it can be customize
       );
     }
 {% endhighlight %}
-{% endtabs %}
 
 ![Label format](images/trackball-crosshair/label_format.jpg)
 
@@ -237,6 +236,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) - activates trackball only when performing double tap action.
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) - Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
     
     late TrackballBehavior _trackballBehavior;
@@ -274,7 +274,6 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Trackball tooltip overlap
 
@@ -335,7 +334,6 @@ The ActivationMode enum contains the following values:
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
 
@@ -415,7 +413,6 @@ And moreover, the trackball tooltip will render on the right side of the trackba
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball tooltip smart positioning](images/trackball-crosshair/trackball_smart_positioning.gif)
 
@@ -429,6 +426,7 @@ Trackball markers are used to provide information about the exact point location
 
 Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
     
     late TrackballBehavior _trackballBehavior;
@@ -478,7 +476,6 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball marker](images/trackball-crosshair/trackball_marker.png)
 
@@ -566,7 +563,6 @@ You can customize the appearance of the trackball tooltip with your own widgets 
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball template](images/trackball-crosshair/trackball_template.jpg)
 
@@ -645,7 +641,6 @@ Defaults to `true`.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Trackball tooltip marker](images/trackball-crosshair/trackball_tooltip_marker.png)
 
@@ -701,7 +696,6 @@ The crosshair state will be preserved on the device's orientation change and on 
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
 
@@ -748,7 +742,6 @@ The appearance of the track line in crosshair can be customized using the follow
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
 
@@ -808,7 +801,6 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 Also refer [`crosshair`](./events#oncrosshairpositionchanging) and [`trackball`](./events#ontrackballpositionchanging) events for customizing the crosshair and trackball further.
 

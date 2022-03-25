@@ -19,6 +19,7 @@ Right to left rendering can be switched in the following ways:
 
 To change the rendering direction from right to left, you can wrap the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
+{% tabs %}
 {% highlight dart hl_lines="5" %}
 
     @override
@@ -34,7 +35,6 @@ To change the rendering direction from right to left, you can wrap the [`SfCircu
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Changing the locale to RTL languages
 
@@ -71,7 +71,6 @@ To change the chart rendering direction from right to left, you can change the [
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## RTL supported chart elements
 
@@ -117,7 +116,6 @@ Right to left rendering is effective for the legend in the chart. Legend items w
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Legend RTL](images/rtl-support/circular_legend_rtl.jpg)
 
@@ -169,6 +167,5 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Tooltip RTL](images/rtl-support/circular_tooltip_rtl.jpg)

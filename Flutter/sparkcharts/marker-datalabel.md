@@ -43,7 +43,6 @@ You can use the following properties to customize the appearance:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sparkline marker](images/marker/spark-marker-circle.png)
 
@@ -79,7 +78,6 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sparkline marker shape](images/marker/spark-marker-square.png)
 
@@ -119,7 +117,6 @@ Following possible values are available in spark charts to render data label:
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
 

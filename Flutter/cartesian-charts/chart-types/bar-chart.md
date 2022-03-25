@@ -45,7 +45,6 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Bar chart](cartesian-chart-types-images/bar.jpg)
 
@@ -55,6 +54,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
+{% tabs %}
 {% highlight dart hl_lines="13 15" %} 
     
     @override
@@ -81,7 +81,6 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Bar width and spacing](cartesian-chart-types-images/bar_width_spacing.jpg)
 
@@ -89,6 +88,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
+{% tabs %}
 {% highlight dart hl_lines="12" %} 
     
     @override
@@ -112,7 +112,6 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Bar rounded corners](cartesian-chart-types-images/rounded_bar.jpg)
 
@@ -125,6 +124,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackPadding.html) - Adds padding to the track.
 
+{% tabs %}
 {% highlight dart hl_lines="11" %} 
     
     @override
@@ -149,7 +149,6 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Bar track](cartesian-chart-types-images/track_bar.jpg)
 

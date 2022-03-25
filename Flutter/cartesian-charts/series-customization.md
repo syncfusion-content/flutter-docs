@@ -13,6 +13,7 @@ documentation: ug
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) property. You can disable the animation by setting this property to 0.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -44,7 +45,6 @@ documentation: ug
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ### Dynamic series animation
 
@@ -52,6 +52,7 @@ documentation: ug
 
 If you wish to perform the initial rendering animation again in the existing series, [`animate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/animate.html) method should be called. On calling this method, this particular series will be animated again based on the  [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property's value in the series. If this property's value is 0, then the animation will not be performed.
 
+{% tabs %}
 {% highlight dart hl_lines="50 58" %} 
 
     @override
@@ -129,7 +130,6 @@ If you wish to perform the initial rendering animation again in the existing ser
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
@@ -140,6 +140,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 >**Note**: The animation delay is applicable for series, trendline, and indicators.
 
+{% tabs %}
 {% highlight dart hl_lines="38" %}
 
     import 'package:intl/intl.dart';
@@ -201,7 +202,6 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Animation Delay](images/cartesian-customization/animationDelay.gif)
 
@@ -217,6 +217,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -248,7 +249,6 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Transposed chart](images/cartesian-customization/transposes.jpg)
 
@@ -305,7 +305,6 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
      
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Palette](images/cartesian-customization/palettee.jpg)
 
@@ -352,7 +351,6 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
@@ -404,7 +402,6 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
@@ -460,7 +457,6 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
@@ -536,7 +532,6 @@ Defaults to `null`.
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Shader](images/cartesian-customization/shader.png)
 
@@ -585,7 +580,6 @@ The data points that has null value are considered as empty points. Empty data p
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Empty points](images/cartesian-customization/emptyPoint.jpg)
 
@@ -638,7 +632,6 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
 
@@ -687,7 +680,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
       }
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 
