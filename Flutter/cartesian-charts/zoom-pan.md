@@ -364,12 +364,12 @@ Defaults to `true`.
                 zoomPanBehavior: _zoomPanBehavior,
                  primaryXAxis: DateTimeAxis(),
                  primaryYAxis: NumericAxis(
-                          anchorRangeToVisiblePoints: false,),
+                          anchorRangeToVisiblePoints: false),
                  series: <ChartSeries<ChartData, DateTime>>[
                       AreaSeries<ChartData, DateTime>(
                           dataSource: chartData,
                           xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y,s
+                          yValueMapper: (ChartData sales, _) => sales.y,
                         )
                      ]
                   )
