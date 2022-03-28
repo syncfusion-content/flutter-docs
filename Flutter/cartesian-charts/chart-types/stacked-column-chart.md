@@ -84,8 +84,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html) will be stacked in a single group.
 
-{% tabs %}
-{% highlight dart hl_lines="10 16 22 28 %} 
+{% highlight dart hl_lines="10 16 22 28" %} 
     
     @override
     Widget build(BuildContext context) {
