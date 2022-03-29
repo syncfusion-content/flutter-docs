@@ -42,6 +42,7 @@ To export the pyramid chart as a PNG image, we can get the image by calling [`to
      }
 
   {% endhighlight %}
+{% endtabs %}
 
 ### Export PDF
 
@@ -70,5 +71,6 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     }
   
 {% endhighlight %}
+{% endtabs %}
 
 ![pdf_export](images/export-pyramid-chart/pdf_view.png)

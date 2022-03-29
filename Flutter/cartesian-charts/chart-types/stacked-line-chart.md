@@ -60,6 +60,7 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line chart](cartesian-chart-types-images/stacked_line.jpg)
 
@@ -116,6 +117,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line grouping](cartesian-chart-types-images/stacked_line_grouping.jpg)
 
@@ -175,6 +177,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked line cumulative](cartesian-chart-types-images/stacked_line_cumulative.jpg)
 

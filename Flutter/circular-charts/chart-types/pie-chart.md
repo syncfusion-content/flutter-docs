@@ -61,6 +61,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie chart](circular-chart-types-images/pie.jpg)
 
@@ -93,6 +94,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie size](circular-chart-types-images/pie_sizing.jpg)
 
@@ -131,6 +133,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie explode](circular-chart-types-images/pie_explode.jpg)
 
@@ -164,6 +167,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie explode all](circular-chart-types-images/pie_explodeAll.jpg)
 
@@ -198,6 +202,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     } 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie angle](circular-chart-types-images/pie_angle.jpg)
 
@@ -232,6 +237,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie grouping](circular-chart-types-images/pie_grouping.jpg)
 
@@ -277,5 +283,6 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie various radius](circular-chart-types-images/pie_radius.jpg)

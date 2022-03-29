@@ -45,6 +45,7 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Dynamic series animation
 
@@ -130,6 +131,7 @@ If you wish to perform the initial rendering animation again in the existing ser
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
@@ -202,6 +204,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Animation Delay](images/cartesian-customization/animationDelay.gif)
 
@@ -249,6 +252,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Transposed chart](images/cartesian-customization/transposes.jpg)
 
@@ -305,6 +309,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
      
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/cartesian-customization/palettee.jpg)
 
@@ -351,6 +356,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
@@ -402,6 +408,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
@@ -457,6 +464,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
@@ -532,6 +540,7 @@ Defaults to `null`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Shader](images/cartesian-customization/shader.png)
 
@@ -580,6 +589,7 @@ The data points that has null value are considered as empty points. Empty data p
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/cartesian-customization/emptyPoint.jpg)
 
@@ -632,6 +642,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
 
@@ -680,6 +691,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 

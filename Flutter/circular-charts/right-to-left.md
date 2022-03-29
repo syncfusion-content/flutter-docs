@@ -35,6 +35,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCircu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Changing the locale to RTL languages
 
@@ -71,6 +72,7 @@ To change the chart rendering direction from right to left, you can change the [
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RTL supported chart elements
 
@@ -116,6 +118,7 @@ Right to left rendering is effective for the legend in the chart. Legend items w
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend RTL](images/rtl-support/circular_legend_rtl.jpg)
 
@@ -167,5 +170,6 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip RTL](images/rtl-support/circular_tooltip_rtl.jpg)

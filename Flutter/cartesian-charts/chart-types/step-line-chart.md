@@ -40,6 +40,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Step line chart](cartesian-chart-types-images/stepline.jpg)
 
@@ -73,6 +74,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Step line chart](cartesian-chart-types-images/dashed_stepline.jpg)
 

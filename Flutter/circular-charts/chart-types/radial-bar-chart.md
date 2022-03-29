@@ -64,6 +64,7 @@ The radial bar chart is used for showing the comparisons among the categories us
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Radial bar chart](circular-chart-types-images/radialbar.jpg)
 
@@ -97,6 +98,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Radial bar size](circular-chart-types-images/radialbar_sizing.jpg)
 
@@ -129,6 +131,7 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Rounded corners
 
@@ -159,6 +162,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
 
@@ -206,6 +210,7 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Radial bar data label](circular-chart-types-images/radialbar_dataLabel.jpg)
 
@@ -242,5 +247,6 @@ For example, if you set the maximum value of the radial bar to 100% but the give
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Overfilled radial bar](circular-chart-types-images/overfilled-radial-bar.jpg)

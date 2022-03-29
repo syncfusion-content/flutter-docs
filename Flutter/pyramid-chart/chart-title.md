@@ -69,5 +69,6 @@ You can align the title text content horizontally to the near, center or far of 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Chart title](images/chart-title/chart_title.png)

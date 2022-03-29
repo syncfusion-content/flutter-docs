@@ -84,6 +84,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 **Positioning based on coordinateUnit as pixels**
 
@@ -119,6 +120,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
 
@@ -175,6 +177,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as percentage](images/annotation/percentage.png)
 
@@ -211,6 +214,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Alignment of annotation
 
@@ -248,6 +252,7 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding multiple annotation
 
@@ -307,6 +312,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple annotation](images/annotation/multiple_annotation_pixel.jpg)
 
@@ -380,6 +386,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple axis annotation](images/annotation/annotation_axis.jpg)
 
@@ -444,6 +451,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![Chart with Watermark](images/annotation/watermark.png)

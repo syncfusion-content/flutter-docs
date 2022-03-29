@@ -49,6 +49,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid chart](images/pyramid-charts/pyramid.jpg)
 
@@ -85,6 +86,7 @@ You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/docu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid chart](images/pyramid-charts/pyramid_surface.jpg)
 
@@ -122,6 +124,7 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid size](images/pyramid-charts/pyramid_size.jpg)
 
@@ -158,6 +161,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pyramid gap](images/pyramid-charts/pyramid_gap.jpg)
 
@@ -198,6 +202,7 @@ Also, the segments can be exploded by tapping the segment.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Explode](images/pyramid-charts/pyramid_explode.jpg)
 
@@ -237,5 +242,6 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/pyramid-charts/pyramid_palette.jpg)

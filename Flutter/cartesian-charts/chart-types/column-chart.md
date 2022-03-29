@@ -52,6 +52,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column chart](cartesian-chart-types-images/column.jpg)
 
@@ -105,6 +106,7 @@ By default, all the column series that have the same x and y-axes are placed sid
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column side by side placement](cartesian-chart-types-images/sidebySidePlacement.jpg)
 
@@ -148,6 +150,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column width and spacing](cartesian-chart-types-images/column_width_spacing.jpg)
 
@@ -187,6 +190,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
@@ -239,6 +243,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Track](cartesian-chart-types-images/track_column.jpg)
 

@@ -49,6 +49,7 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel chart](images/funnel-charts/funnel.jpg)
 
@@ -86,6 +87,7 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel size](images/funnel-charts/funnel_size.jpg)
 
@@ -123,6 +125,7 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Neck size](images/funnel-charts/neck_size.jpg)
 
@@ -159,6 +162,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel gap](images/funnel-charts/funnel_gap.jpg)
 
@@ -199,6 +203,7 @@ Also, the segments can be exploded by tapping the segment.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Explode](images/funnel-charts/funnel_explode.jpg)
 
@@ -232,5 +237,6 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/funnel-charts/funnel_palette.jpg)

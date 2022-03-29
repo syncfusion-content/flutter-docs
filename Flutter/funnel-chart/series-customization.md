@@ -35,6 +35,7 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Animation delay
 
@@ -73,6 +74,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Animation delay](images/Funnel-customization/animation-delay.gif)
 
@@ -108,6 +110,7 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/Funnel-customization/emptyPoints.png)
 
@@ -147,6 +150,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/Funnel-customization/emptyPointcustomization.png)
 
@@ -184,5 +188,6 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![mapcolor](images/Funnel-customization/color-mapping.png)

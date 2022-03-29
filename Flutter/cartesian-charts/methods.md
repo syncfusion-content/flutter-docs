@@ -71,6 +71,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### showByIndex method in tooltipBehavior
 
@@ -139,6 +140,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 
   {% endhighlight %}
+{% endtabs %}
 
 ### showByPixel method in tooltipBehavior
 
@@ -202,6 +204,7 @@ x & y - logical pixel values to position the tooltip.
 
   
 {% endhighlight %}
+{% endtabs %}
 
 ### Hide method in tooltipBehavior
 
@@ -263,6 +266,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Methods in trackballBehavior
 
@@ -325,6 +329,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### showByIndex  method in trackballBehavior
 
@@ -389,6 +394,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Hide method in trackballBehavior
 
@@ -451,6 +457,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         final double? y;
       }
 {% endhighlight %}
+{% endtabs %}
 
 ## Methods in crosshairBehavior
 
@@ -516,6 +523,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### showByIndex method in crosshairBehavior
 
@@ -580,6 +588,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Hide method in crosshairBehavior
 
@@ -642,6 +651,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Methods in selectionBehavior
 
@@ -713,6 +723,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Methods in zoomPanBehavior
 
@@ -783,6 +794,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### ZoomOut method in zoomPanBehavior
 
@@ -852,6 +864,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### zoomByFactor method in zoomPanBehavior
 
@@ -920,6 +933,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### ZoomByRect method in zoomPanBehavior
 
@@ -989,6 +1003,7 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### ZoomToSingleAxis method in zoomPanBehavior
 
@@ -1063,6 +1078,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ### PanToDirection method in zoomPanBehavior
 
@@ -1135,6 +1151,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Reset method in zoomPanBehavior
 
@@ -1204,6 +1221,7 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## UpdateDataSource
 
@@ -1275,6 +1293,7 @@ Widget build(BuildContext context) {
 
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 
@@ -1324,6 +1343,7 @@ Since this method is in the series controller, x and y-axis associated with this
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PointToPixel 
 Converts chart data point value to logical pixel value.
@@ -1372,6 +1392,7 @@ and funnel charts.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 

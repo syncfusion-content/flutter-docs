@@ -43,6 +43,7 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Customizing the segments
 
@@ -92,6 +93,7 @@ You can customize the segments using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.png)
 
@@ -117,6 +119,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.png)
 
@@ -159,6 +162,7 @@ Defaults to `true`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Selection on initial rendering
 
@@ -181,6 +185,7 @@ You can select a point or series programmatically on a chart using [`initialSele
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Initial selection](images/selection/initial_render_selection.png)
 
@@ -249,3 +254,4 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}

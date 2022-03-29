@@ -74,6 +74,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![linear trendline](images/trendline/linear.png)
 
@@ -117,6 +118,7 @@ To render an exponential trendline, use trendline type as Exponential.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![exponential trendline](images/trendline/exponential.png)
 
@@ -160,6 +162,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
       }
 
 {% endhighlight %}
+{% endtabs %}
  
 ![logarithmic trendline](images/trendline/logarithmic.png)
 
@@ -203,6 +206,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![polynomial trendline](images/trendline/polynomial.png)
@@ -246,6 +250,7 @@ To render a power trendline, use trendline type as Power
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![power trendline](images/trendline/power.png)
 
@@ -288,6 +293,7 @@ To render a moving average trendline, use trendline type as MovingAverage
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![linear trendline](images/trendline/movingaverage.png)
 
@@ -336,6 +342,7 @@ The value set for forwardForecast is used to determine the distance moving towar
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/forwardforecast.png)
 
@@ -378,6 +385,7 @@ The value set for the backwardForecast is used to determine the past trends.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/backwardforecast.png)
 
@@ -421,6 +429,7 @@ Legend for trendline gets rendered together with the series legend when the lege
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/legend.png)
 
@@ -465,6 +474,7 @@ Data markers are used to provide information about the data points in the series
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![backward forecast](images/trendline/marker.png)
 
@@ -519,6 +529,7 @@ Chart will display details about the points through tooltip, when user interacti
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![tooltip](images/trendline/tooltip.png)

@@ -64,6 +64,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/datalabel/default_datalabel.png)
 
@@ -99,6 +100,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/datalabel/datalabel_position.png)
 
@@ -136,6 +138,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/datalabel/use_series_color.png)
 
@@ -171,6 +174,7 @@ Data label and its connector line in the Funnel charts for the point value 0 can
         );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)
 
@@ -204,5 +208,6 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
         );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![label_overflow](images/datalabel/funnel_overflow.jpg)

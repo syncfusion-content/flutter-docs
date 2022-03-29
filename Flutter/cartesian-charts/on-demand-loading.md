@@ -60,6 +60,7 @@ The below example demonstrates the infinite scrolling by showing the ci
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Infinite_scrolling](images/on-demand-loading/infinite_scrolling.gif)
 

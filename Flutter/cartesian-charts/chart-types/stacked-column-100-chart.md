@@ -61,6 +61,7 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 column chart](cartesian-chart-types-images/stacked_column_100.png)
 
@@ -103,6 +104,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
 

@@ -46,6 +46,7 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Double tap zooming
 
@@ -83,6 +84,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Selection zooming
 
@@ -130,6 +132,7 @@ You can customize the selection rectangle using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Selection Zooming](images/zooming-panning/before_zooming.jpg)
 
@@ -199,6 +202,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Mouse wheel zooming
 
@@ -233,6 +237,7 @@ The [`enableMouseWheelZooming`](https://pub.dev/documentation/syncfusion_flutter
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Auto interval on zooming
 
@@ -260,6 +265,7 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Maximum zoom level
 
@@ -292,6 +298,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Panning 
 
@@ -330,6 +337,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Panning](images/zooming-panning/panning.gif)
 

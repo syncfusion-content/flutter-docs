@@ -59,6 +59,7 @@ The following properties can be used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area chart](cartesian-chart-types-images/area.jpg)
 
@@ -94,6 +95,7 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area border](cartesian-chart-types-images/area_border.jpg)
 
@@ -163,6 +165,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area gradients](cartesian-chart-types-images/area_gradient.png)
 
@@ -217,6 +220,7 @@ Data points with a null value are considered empty points. Empty data points are
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area with empty points](cartesian-chart-types-images/area_emptypoints.png)
 
@@ -251,6 +255,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Vertical area chart](cartesian-chart-types-images/vertical_area.png)
 

@@ -59,6 +59,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble chart](cartesian-chart-types-images/bubble.jpg)
 
@@ -95,6 +96,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble size](cartesian-chart-types-images/bubble_radius.jpg)
 
@@ -130,6 +132,7 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble various color](cartesian-chart-types-images/bubble_variouscolors.png)
 
@@ -177,6 +180,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble gradients](cartesian-chart-types-images/bubble_gradients.png)
 
@@ -222,6 +226,7 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)
 

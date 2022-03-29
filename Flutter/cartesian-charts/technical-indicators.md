@@ -88,6 +88,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![ADIndicator](images/technical-indicators/ad.jpg)
 
@@ -130,6 +131,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![ATRIndicator](images/technical-indicators/atr.jpg)
 
@@ -172,6 +174,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![BollingerBand](images/technical-indicators/bollinger.jpg)
 
@@ -216,6 +219,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![EMAIndicator](images/technical-indicators/ema.jpg)
 
@@ -263,6 +267,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![MACDIndicator](images/technical-indicators/macd.jpg)
 
@@ -304,6 +309,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![MomentumIndicator](images/technical-indicators/momentum.jpg)
 
@@ -348,6 +354,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![RSIIndicator](images/technical-indicators/rsi.jpg)
 
@@ -388,6 +395,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![SMAIndicator](images/technical-indicators/sma.jpg)
 
@@ -432,6 +440,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![StochasticIndicator](images/technical-indicators/stochastic.jpg)
 
@@ -473,6 +482,7 @@ Refer the following example,
         final double? close;
       }
 {% endhighlight %}
+{% endtabs %}
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
 
@@ -516,6 +526,7 @@ The following code example can define the legend.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/technical-indicators/legend.jpg)
 
@@ -569,6 +580,7 @@ The chart will display the segment information through the tooltip. It is used t
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![tooltip](images/technical-indicators/tooltip.jpg)
 
@@ -626,6 +638,7 @@ Refer the following example below
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Binding data source to Indicators](images/technical-indicators/indicator_binding.jpg)
 

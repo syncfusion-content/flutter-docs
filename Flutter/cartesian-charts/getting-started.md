@@ -32,6 +32,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
@@ -45,6 +46,7 @@ Run the following command to get the required packages.
     $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
@@ -56,6 +58,7 @@ Import the following package in your Dart code.
     import 'package:syncfusion_flutter_charts/charts.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initialize chart
 
@@ -77,6 +80,7 @@ Once the package has been imported, initialize the chart as a child of any widge
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Initialize chart](images/getting-started/default.jpg)
 
@@ -123,6 +127,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bind data source](images/getting-started/data_source.jpg)
 
@@ -176,6 +181,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Title to chart](images/getting-started/title_chart.jpg)
 
@@ -225,6 +231,7 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel to chart](images/getting-started/datalabel.jpg)
 
@@ -277,6 +284,7 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend in chart](images/getting-started/legend.png)
 
@@ -340,6 +348,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 

@@ -37,6 +37,7 @@ Axis visibility can be controlled using the [`isVisible`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis visibility](images/axis-customization/axis_visible.jpg)
 
@@ -80,6 +81,7 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis title](images/axis-customization/axis_title.jpg)
 
@@ -107,6 +109,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis label rotation](images/axis-customization/label_rotation.jpg)
 
@@ -141,6 +144,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis line](images/axis-customization/axis_line_custom.jpg)
 
@@ -180,6 +184,7 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis label](images/axis-customization/label_custom.jpg)
 
@@ -232,6 +237,7 @@ The color and width of the axis border can be customized with [`borderColor`](ht
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis border customization](images/axis-customization/axis_border_customization.jpg)
 
@@ -253,6 +259,7 @@ On setting the [`enableAxisAnimation`](https://pub.dev/documentation/syncfusion_
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis label](images/axis-customization/animatedAxis.gif)
 
@@ -282,6 +289,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
@@ -311,6 +319,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis label and tick position](images/axis-customization/label_tick_poisition.jpg)
 
@@ -338,6 +347,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Edge label placement](images/axis-customization/edge_label_placement.jpg)
 
@@ -374,6 +384,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Grid lines customization](images/axis-customization/gridLine.jpg)
 
@@ -410,6 +421,7 @@ The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tick lines customization](images/axis-customization/tickLine.jpg)
 
@@ -437,6 +449,7 @@ Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/sync
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Inversing axis](images/axis-customization/inverse.jpg)
 
@@ -464,6 +477,7 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Opposed axis](images/axis-customization/opposite.jpg)
 
@@ -491,6 +505,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Plot Offset](images/axis-customization/plot_offset.jpg)
 
@@ -517,6 +532,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Visible minimum
 
@@ -541,6 +557,7 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an axis.
 
@@ -567,6 +584,7 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Smart axis labels
 
@@ -592,6 +610,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Label intesect action](images/axis-customization/smartLabels.jpg)
 
@@ -621,6 +640,7 @@ Axis can be positioned anywhere in the plot area using the [`crossesAt`](https:/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Axis crossing](images/axis-customization/axis_crossing.jpg)
 
@@ -648,6 +668,7 @@ For crossing in horizontal category axis, index value should be provided for the
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Category crossing](images/axis-customization/category_crossing.jpg)
 
@@ -674,7 +695,8 @@ For crossing in horizontal date-time axis, date value should be provided for the
         );
     }
 
-{% endhighlight %}  
+{% endhighlight %}
+{% endtabs %}  
 
 ![Datetime crossing](images/axis-customization/datetime_crossing.jpg)
 
@@ -704,6 +726,7 @@ The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter
     } 
     
 {% endhighlight %}
+{% endtabs %}
 
 ![Datetime crossing](images/axis-customization/axis_crossing_labels.jpg)
 
@@ -759,7 +782,8 @@ Plot band can be added to the category axis by specifying index values to the [`
         );
     }
 
-{% endhighlight %}    
+{% endhighlight %}
+{% endtabs %}    
 
 ![Category plotband](images/axis-customization/category_plotband.jpg)
 
@@ -792,6 +816,7 @@ Plot band can be added to the date-time axis by specifying date values to the [`
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DateTime plotband](images/axis-customization/datetime_plotband.jpg)
 
@@ -832,6 +857,7 @@ The following code snippet and screenshot demonstrate this feature by highlighti
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Recursive plotband](images/axis-customization/recursive_plotband.jpg)
 
@@ -870,6 +896,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
@@ -904,6 +931,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![plotband_line](images/axis-customization/plotband_line.png)
 
@@ -948,6 +976,7 @@ If [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![plotband padding](images/axis-customization/plotband_padding.png)
 
@@ -1031,6 +1060,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple axes](images/axis-customization/multiple_axis.jpg)
 
@@ -1070,6 +1100,7 @@ Aligns the axis label to the center of the gridlines.
     }
      
 {% endhighlight %}
+{% endtabs %}
 
 ![center](images/axis-customization/center.png)
 
@@ -1097,6 +1128,7 @@ If it is a horizontal axis, aligns the labels before the gridline and if it is a
     }
      
 {% endhighlight %}
+{% endtabs %}
 
 ![start](images/axis-customization/start.png)
 
@@ -1125,6 +1157,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
     }
      
 {% endhighlight %}
+{% endtabs %}
 
 ![end](images/axis-customization/end.png)
 
@@ -1152,6 +1185,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
@@ -1197,6 +1231,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
@@ -1221,6 +1256,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### AutoScrollingMode
 
@@ -1241,6 +1277,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### AutoScrollingDeltaType
 
@@ -1261,6 +1298,7 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RangeController
 
@@ -1342,6 +1380,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Multi-level labels
 
@@ -1416,6 +1455,7 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/numeric_multi_level_label.jpg)
 
@@ -1480,6 +1520,7 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
 
@@ -1547,6 +1588,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/datetime_multi_level_label.jpg)
 
@@ -1611,6 +1653,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/datetime_category_multi_level_label.jpg)
 
@@ -1678,6 +1721,7 @@ The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/logarithmic_multi_level_label.jpg)
 
@@ -1754,6 +1798,7 @@ The text style of the multi-level label like color, font size, font-weight, etc 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/multi_level_label_text_customization.jpg)
 
@@ -1833,6 +1878,7 @@ The different types of multi-level label's border are mentioned below,
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-level labels](images/axis-customization/multi_level_label_border_customization.jpg)
 

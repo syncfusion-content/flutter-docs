@@ -60,6 +60,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark line chart](images/sparkline-types/sparkline.png)
 
@@ -86,6 +87,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark line dashArray](images/sparkline-types/sparkline-dasharray.png)
 
@@ -141,6 +143,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark area chart](images/sparkline-types/spark-area.png)
 
@@ -188,6 +191,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark Bar chart](images/sparkline-types/spark-bar.png)
 
@@ -237,5 +241,6 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark win-loss chart](images/sparkline-types/spark-win-loss.png)

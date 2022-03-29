@@ -59,6 +59,7 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea](cartesian-chart-types-images/splinerangearea.png)
 
@@ -99,6 +100,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea](cartesian-chart-types-images/splinerangeareatype.png)
 
@@ -131,6 +133,7 @@ The borders of the spline range area chart can be customized using the [`borderD
         }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![splinerangearea_bordermode](cartesian-chart-types-images/splinerangearea_bordermode.png)
 

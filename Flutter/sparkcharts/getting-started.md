@@ -27,6 +27,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 > **NOTE** 
 Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
@@ -41,6 +42,7 @@ Run the following command to get the required packages.
     $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
@@ -52,6 +54,7 @@ Import the following package in your Dart code.
     import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initialize spark charts
 
@@ -73,6 +76,7 @@ Once the package has been imported, initialize the spark charts as a child of an
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Bind data source
 
@@ -98,6 +102,7 @@ The `data` property is used for binding data to the spark charts. This property 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![bind datasource](images/getting-started/bind-data.png)
 
@@ -126,6 +131,7 @@ You can initialize the required spark charts type by specifying the widget name 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![chart type](images/getting-started/sparkline-type.png)
 
@@ -155,6 +161,7 @@ You can add data labels to improve the readability of the chart using the [`labe
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![datalabel](images/getting-started/sparkline-datalabel.png)
 
@@ -185,5 +192,6 @@ The spark charts displays additional information through trackball when touched 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![trackball](images/getting-started/sparkline-trackball.png)

@@ -32,6 +32,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Chart margin
 
@@ -73,6 +74,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\chart_margin.png)
 
@@ -113,5 +115,6 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\background_image.png)

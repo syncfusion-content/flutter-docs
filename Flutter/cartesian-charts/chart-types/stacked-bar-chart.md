@@ -60,6 +60,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar](cartesian-chart-types-images/stacked_bar.jpg)
 
@@ -109,6 +110,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar grouping](cartesian-chart-types-images/stacked_bar_grouping.jpg)
 
@@ -163,6 +165,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar cumulative](cartesian-chart-types-images/stacked_bar_cumulative.jpg)
 

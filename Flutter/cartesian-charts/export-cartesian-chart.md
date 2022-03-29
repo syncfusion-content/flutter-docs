@@ -107,6 +107,7 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF
 
@@ -207,5 +208,6 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![pdf_export](images/export-cartesian-chart/pdf_view.png)

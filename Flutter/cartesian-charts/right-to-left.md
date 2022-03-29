@@ -35,6 +35,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Changing the locale to RTL languages
 
@@ -70,6 +71,7 @@ To change the chart rendering direction from right to left, you can change the [
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RTL supported chart elements
 
@@ -118,6 +120,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend RTL](images/rtl-support/cartesian_legend_rtl.jpg)
 
@@ -171,6 +174,7 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.jpg)
 
@@ -227,6 +231,7 @@ Right-to-left rendering is applicable for trackball tooltip elements.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Trackball RTL](images/rtl-support/trackball_rtl.jpg)
 
@@ -272,5 +277,6 @@ In addition, if you want the chart series and axis to look like it is rendering 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series axis RTL](images/rtl-support/series_rtl.jpg)

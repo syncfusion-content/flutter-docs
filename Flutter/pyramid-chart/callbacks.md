@@ -41,6 +41,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onTooltipRender
 
@@ -82,6 +83,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onDataLabelRender
 
@@ -117,6 +119,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onLegendTapped
 
@@ -145,6 +148,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onSelectionChanged
 
@@ -192,6 +196,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onDataLabelTapped
 
@@ -229,6 +234,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointTap
 
@@ -259,6 +265,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointDoubleTap
 
@@ -289,6 +296,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointLongPress
 
@@ -318,6 +326,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionUp
 
@@ -339,6 +348,7 @@ Triggers when tapped or clicked on the chart area. You can get the tapped region
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionMove
 
@@ -360,6 +370,7 @@ Triggers when touched or clicked and moved on the chart area. You can get the ta
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionDown
 
@@ -381,6 +392,7 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onRendererCreated
 
@@ -444,3 +456,4 @@ Triggers when the series renderer is created. This callback can be used to obtai
     }
 
 {% endhighlight %}
+{% endtabs %}

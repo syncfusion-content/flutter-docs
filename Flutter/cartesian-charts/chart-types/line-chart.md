@@ -58,6 +58,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Line chart](cartesian-chart-types-images/line.jpg)
 
@@ -97,6 +98,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/dashed_line.jpg)
 
@@ -147,6 +149,7 @@ To render a multi-colored line series, map the individual colors to the data usi
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 

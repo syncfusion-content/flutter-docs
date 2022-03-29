@@ -41,6 +41,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter chart](cartesian-chart-types-images/scatter.jpg)
 
@@ -80,6 +81,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 

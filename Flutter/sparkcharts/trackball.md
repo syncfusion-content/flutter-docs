@@ -47,6 +47,7 @@ You can use the following properties to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline trackball](images/trackball/spark-trackball.png)
 
@@ -78,3 +79,4 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}

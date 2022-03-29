@@ -160,6 +160,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![histogram chart](cartesian-chart-types-images/Histogram.png)
 

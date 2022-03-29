@@ -58,6 +58,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/datalabel/default_datalabel.jpg)
 
@@ -100,6 +101,7 @@ Data label considers the format used in the Circular series by default. In the b
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel format](images/datalabel/datalabel_format.jpg)
 
@@ -137,6 +139,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/datalabel/datalabel_position.jpg)
 
@@ -212,6 +215,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Smart labels](images/datalabel/smart_datalabel.jpg)
 
@@ -249,6 +253,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/datalabel/use_series_color.jpg)
 
@@ -293,6 +298,7 @@ This feature is used to connect label and data point using a line. It is applica
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Connector line](images/datalabel/connector_line.jpg)
 
@@ -343,6 +349,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label mapper](images/datalabel/value_mapper.jpg)
 
@@ -385,6 +392,7 @@ You can customize the appearance of the data label with your own template using 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Label template](images/datalabel/datalabel_template.jpg)
 
@@ -427,6 +435,7 @@ Data label and its connector line in the Circular charts for the point value 0 c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![datalabel0value](images/datalabel/datalabel_0_value.png)
 
@@ -463,4 +472,5 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 ![dataLabel_overflow](images/datalabel/circular_overflow.jpg)

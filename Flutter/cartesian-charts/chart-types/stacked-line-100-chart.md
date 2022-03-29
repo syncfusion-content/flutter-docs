@@ -59,6 +59,7 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 line chart](cartesian-chart-types-images/stacked_line_100.png)
 
@@ -109,6 +110,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed line chart](cartesian-chart-types-images/stacked_line_100_dashes.png)
 

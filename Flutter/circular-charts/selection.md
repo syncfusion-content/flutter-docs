@@ -45,6 +45,7 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Selection](images/selection/default_selection.jpg)
 
@@ -94,6 +95,7 @@ You can customize the segments using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.jpg)
 
@@ -119,6 +121,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.jpg)
 
@@ -163,6 +166,7 @@ Defaults to `true`.
    }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Toggle selection](images/selection/deselection.gif)
 

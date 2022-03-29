@@ -62,6 +62,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100Area chart](cartesian-chart-types-images/stacked_area_100.png)
 
