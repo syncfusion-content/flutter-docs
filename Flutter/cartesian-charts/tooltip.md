@@ -81,7 +81,7 @@ You can use the following properties to customize the tooltip appearance.
 * [`shared`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shared.html) - share the tooltip with same index points.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 
@@ -195,7 +195,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 

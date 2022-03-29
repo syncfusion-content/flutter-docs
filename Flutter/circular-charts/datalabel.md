@@ -31,7 +31,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) - action on data labels intersection. The intersecting data labels can be hidden.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 Data label considers the format used in the Circular series by default. In the below code snippet, we have specified format for the data label in the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) and you can see that the same format is applied to the data label.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -307,7 +307,7 @@ This feature is used to connect label and data point using a line. It is applica
 The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) property is used to map the text from data source. 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -358,7 +358,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

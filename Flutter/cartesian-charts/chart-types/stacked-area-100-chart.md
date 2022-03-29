@@ -24,7 +24,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 * [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedArea100Series/borderDrawMode.html) - specifies the type of the border mode and it defaults to [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

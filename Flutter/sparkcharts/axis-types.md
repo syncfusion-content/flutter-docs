@@ -23,7 +23,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 To use the numeric values or to bind the custom data source use the [`SfSparkBarChart.custom()`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/SfSparkBarChart.custom.html) method and map the x, y values to [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) and [`yValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) respectively. Here you have to specify the length of the data using [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/SfSparkLineChart.custom.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
 To use the date-time values i.e to bind the custom data source use the [`SfSparkBarChart.custom()`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/SfSparkBarChart.custom.html) method and map the x, y values to [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) and [`yValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) respectively. Here you have to specify the length of the data using [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/SfSparkBarChart.custom.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -124,7 +124,7 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
 To use the category values i.e to bind the custom data source use the [`SfSparkBarChart.custom()`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/SfSparkBarChart.custom.html) method and map the x, y values to [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) and [`yValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartIndexedValueMapper.html) respectively. Here you have to specify the length of the data using [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/SfSparkBarChart.custom.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -177,7 +177,7 @@ Axis line of the spark charts can be customized using the following properties.
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

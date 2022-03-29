@@ -24,7 +24,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 * [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) - defines the painting mode for the data points either as segment or gradient.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -246,7 +246,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRadiusMapper.html) maps the field name, which will be considered for calculating the radius of the data points.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

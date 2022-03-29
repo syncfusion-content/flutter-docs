@@ -22,7 +22,7 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
 [`Marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/MarkerSettings.html), [`data label`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html), [`trendline`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline-class.html), [`Technical indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html), and other user interaction features are not applicable for error bar series. And events like [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html), [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) and [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) are not applicable for this series.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ For [`ErrorBarType.custom`](https://pub.dev/documentation/syncfusion_flutter_cha
 * [`verticalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalNegativeErrorValue.html) - This property vertically depicts the error value in negative direction. The default value is `3`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

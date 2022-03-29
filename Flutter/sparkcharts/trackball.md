@@ -20,7 +20,7 @@ You can use the following properties to customize the appearance:
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/color.html) - Represent the color of trackball line.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing double tap action.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

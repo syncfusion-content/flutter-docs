@@ -17,7 +17,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {

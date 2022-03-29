@@ -25,7 +25,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 * [`totalSumPredicate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/totalSumPredicate.html) - the boolean value based on which the data point will be considered as the total sum or not. If this has true value, then that point will be considered as a total sum. Else if it has false, then it will be considered as a normal data point in the chart.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

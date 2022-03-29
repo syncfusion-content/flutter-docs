@@ -25,7 +25,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -104,7 +104,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 You can use the Annotations property in charts, to provide center elevation text in doughnut charts as shown below:
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -153,7 +153,7 @@ You can use the Annotations property in charts, to provide center elevation text
 You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

@@ -52,7 +52,7 @@ Accumulation distribution indicator is a volume-based indicator designed to meas
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
      @override
      Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ ATR indicator is a technical analysis volatility indicator. This indicator does 
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -144,7 +144,7 @@ Also, we can specify standard deviation values for the BollingerBand indicator u
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -187,7 +187,7 @@ It also has a [`valueField`](https://pub.dev/documentation/syncfusion_flutter_ch
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -234,7 +234,7 @@ The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     @override
     Widget build(BuildContext context) {
@@ -278,7 +278,7 @@ This indicator also has a centerline. The [`centerLineColor`](https://pub.dev/do
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -321,7 +321,7 @@ The [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -363,7 +363,7 @@ Refer the following example,
 The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) is similar to [`Exponential moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmaIndicator-class.html) and this can be defined using the following code examples.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -408,7 +408,7 @@ In this indicator [`upperLineColor`](https://pub.dev/documentation/syncfusion_fl
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -451,7 +451,7 @@ A TMA indicator is simply a double-smoothed simple moving average of data calcul
 Refer the following example,
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -591,7 +591,7 @@ In order to use [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion
 Refer the following example below
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context){

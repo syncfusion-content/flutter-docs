@@ -16,7 +16,7 @@ documentation: ug
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -85,7 +85,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -149,7 +149,7 @@ The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 x & y - logical pixel values to position the tooltip.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -211,7 +211,7 @@ x & y - logical pixel values to position the tooltip.
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -275,7 +275,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method is used to activate the trackball at the specified location.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
   late SfCartesianChart chart;
   late TrackballBehavior _trackballBehavior;
@@ -338,7 +338,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) - index of the point for which the trackball must be shown.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TrackballBehavior _trackballBehavior;
@@ -401,7 +401,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hide.html) method is used to hide the displaying trackball programmatically.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late TrackballBehavior _trackballBehavior;
@@ -466,7 +466,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method is used to activate the crosshair at the specified location.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late CrosshairBehavior _crosshairBehavior;
@@ -532,7 +532,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 [`pointIndex`] - index of point at which the crosshair needs to be shown.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late CrosshairBehavior _crosshairBehavior;
@@ -595,7 +595,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/hide.html) method is used to hide the displaying crosshair programmatically.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCartesianChart chart;
     late CrosshairBehavior _crosshairBehavior;
@@ -665,7 +665,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 >**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) are also applicable for this but, it is based on their API values specified in the chart.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late SelectionBehavior _selectionBehavior;
@@ -732,7 +732,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increase the magnification of the plot area.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -801,7 +801,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decrease the magnification of the plot area.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -871,7 +871,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByFactor.html) method changes the zoom level using zoom factor. Here, you can pass the zoom factor of an axis to magnify the plot area. The value ranges from 0 to 1.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -940,7 +940,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByRect.html) method zooms the chart for a given rectangle value. Here, you can pass the rectangle with the left, right, top, and bottom values, using which the selection zooming will be performed.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -1010,7 +1010,7 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomToSingleAxis.html) method changes the zoom level of an appropriate axis. Here, you need to pass axis, zoom factor, zoom position of the zoom level that needs to be modified.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -1085,7 +1085,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
 The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/panToDirection.html) method pans the plot area for given left, right, top, and bottom directions. To perform this action, the plot area needs to be in zoomed state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late NumericAxis xAxis;
@@ -1158,7 +1158,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/reset.html) method returns the plot area back to its original position after zooming..
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCartesianChart chart;
     late ZoomPanBehavior _zoomPanBehavior;
@@ -1242,7 +1242,7 @@ The following are the arguments of this method.
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 Widget build(BuildContext context) {
 
@@ -1308,7 +1308,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
         //Initialize the series controller
     ChartSeriesController? seriesController;
@@ -1356,7 +1356,7 @@ Since this method is in the series controller, x and y-axis associated with this
 and funnel charts.
   
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 
     //Initialize the series controller

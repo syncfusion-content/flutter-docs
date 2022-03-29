@@ -37,7 +37,7 @@ You can use the following properties to customize the appearance of trackball to
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TrackballBehavior _trackballBehavior;
 
@@ -285,7 +285,7 @@ The ActivationMode enum contains the following values:
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TrackballBehavior _trackballBehavior;
 
@@ -346,7 +346,7 @@ The ActivationMode enum contains the following values:
 And moreover, the trackball tooltip will render on the right side of the trackball line if adequate space is available else will be moved to the left by default. The trackball tooltip is smartly positioned above the trackball line if there is no space on the right and left sides of the trackball line. However, the trackball tooltip size must be smaller than the chart's plot area size.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late TrackballBehavior _trackballBehavior;
     final List<ChartData> data = <ChartData>[
@@ -496,7 +496,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TrackballBehavior _trackballBehavior;
 
@@ -596,7 +596,7 @@ Trackball tooltip marker uses the same shape specified for the series marker. Bu
 Defaults to `true`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late TrackballBehavior _trackballBehavior;
 
@@ -671,7 +671,7 @@ The crosshair state will be preserved on the device's orientation change and on 
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -721,7 +721,7 @@ The appearance of the track line in crosshair can be customized using the follow
 * [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/shouldAlwaysShow.html) - enables or disables the crosshair. Defaults to `false`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -783,7 +783,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late CrosshairBehavior _crosshairBehavior;
 

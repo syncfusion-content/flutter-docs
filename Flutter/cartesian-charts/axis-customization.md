@@ -54,7 +54,7 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the axis title.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -122,7 +122,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - used to render axis line series with dashes.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -160,7 +160,7 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the axis label.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -196,7 +196,7 @@ The color and width of the axis border can be customized with [`borderColor`](ht
 * [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border without the top and bottom of a rectangle.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -356,7 +356,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorGridLines/width.html) property is used to control the visibility of grid lines. [`majorGridLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/majorGridLines.html) and [`minorGridLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorGridLines.html) properties in axis are used to customize the major grid lines and minor grid lines of an axis respectively. We have provided options to change the width, dashes, color of grid lines. By default minor grid lines will not be visible.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -393,7 +393,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/majorTickLines.html) and [`minorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTickLines.html) properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. We have provided options to customize the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/width.html), [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/size.html), [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/color.html) and [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTicksPerInterval.html) of tick lines. By default minor tick lines will not be visible.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -761,7 +761,7 @@ The following properties are used to configure the plot bands:
 Plot band can be added to the category axis by specifying index values to the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) properties.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -792,7 +792,7 @@ Plot band can be added to the category axis by specifying index values to the [`
 Plot band can be added to the date-time axis by specifying date values to the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) properties.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -830,7 +830,7 @@ This feature is used to enable the plot bands to be drawn repeatedly at the regu
 The following code snippet and screenshot demonstrate this feature by highlighting weekends.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -868,7 +868,7 @@ Typically, if you draw a plot band for a vertical axis, the height of the plot b
 Suppose, you need to draw a plot band that should not stretch along its associated axis, you have to set the [`associatedAxisStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/associatedAxisStart.html) and [`associatedAxisEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/associatedAxisEnd.html) properties. The values provided in these two properties correspond to its associated axis specified by the [`associatedAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/associatedAxisName.html) property in the axis.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -905,7 +905,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 When you specify the same value for both [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html), it will draw a line. You can customize the line using the  [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) properties.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -950,7 +950,7 @@ This is applicable for both vertical and horizontal axis. Positi
 If [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) or [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) is specified, text padding will be calculated from that modified position. Defaults to `null`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -985,7 +985,7 @@ If [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_
 By default, the chart is rendered with primary x axis and primary y axis. But, the users can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property, and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -1307,7 +1307,7 @@ The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/
 Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMinimum.html), and [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMaximum.html) properties to the axis and the axis values will be visible with respect to visibleMinimum and visibleMaximum properties.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1396,7 +1396,7 @@ The multi-level labels in the Cartesian chart are used to categorize axis labels
 The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/NumericMultiLevelLabel.html) class is used to render multi-level labels in the numeric axis. Here the values for [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) have to be double.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1464,7 +1464,7 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
 The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/end.html) values need to be string values that are available in the data source.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1529,7 +1529,7 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
 The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel-class.html) is used to render multi-level labels in the date-time axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1597,7 +1597,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
 The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1662,7 +1662,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
 The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/end.html) properties need to be double values.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1734,7 +1734,7 @@ The [`multiLevelLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_ch
 The text style of the multi-level label like color, font size, font-weight, etc can be customized by using [`TextStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/textStyle.html) class.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1814,7 +1814,7 @@ The different types of multi-level label's border are mentioned below,
 * [`MultiLevelBorderType.curlyBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as curly braces.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

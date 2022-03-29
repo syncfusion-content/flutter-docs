@@ -22,7 +22,7 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries/groupName.html) will be stacked in a single group.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {

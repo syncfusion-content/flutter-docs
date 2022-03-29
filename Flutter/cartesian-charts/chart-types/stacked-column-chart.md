@@ -23,7 +23,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {

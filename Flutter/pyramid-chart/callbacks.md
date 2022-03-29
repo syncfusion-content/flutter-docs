@@ -22,7 +22,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/color.html) - to get and set the color of the legend icon.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late TooltipBehavior _tooltipBehavior;
 
@@ -97,7 +97,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - to get and set the color of data label.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -166,7 +166,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late electionBehavior _selectionBehavior;
 
@@ -212,7 +212,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 >**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -246,7 +246,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -277,7 +277,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -308,7 +308,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -333,7 +333,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
 Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -355,7 +355,7 @@ Triggers when tapped or clicked on the chart area. You can get the tapped region
 Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -377,7 +377,7 @@ Triggers when touched or clicked and moved on the chart area. You can get the ta
 Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -399,7 +399,7 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
 Triggers when the series renderer is created. This callback can be used to obtain the [`PyramidSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeriesController-class.html) instance, which is used to access the the public methods in the series.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     //Initialize the series controller
     PyramidSeriesController? pyramidSeriesController;

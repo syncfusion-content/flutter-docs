@@ -22,7 +22,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 In the range column chart when data label is enabled, by default there will be two values displayed namely, high and low, but in the other types of charts, only y value will be displayed.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {

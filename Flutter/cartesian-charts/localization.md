@@ -14,7 +14,7 @@ By default, the Cartesian charts widget supports US English localizations. You c
 To use [`flutter_localizations`](https://pub.dev/packages/localization), add the package as dependency to `pubspec.yaml` file.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     dependencies:
       flutter_localizations:
@@ -26,7 +26,7 @@ To use [`flutter_localizations`](https://pub.dev/packages/localization), add the
 Next, import the [`flutter_localizations`](https://pub.dev/packages/localization) library and specify [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) and [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) for [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp/MaterialApp.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     import 'package:flutter_localizations/flutter_localizations.dart'; 
 
@@ -70,7 +70,7 @@ Cartesian chart custom text can be localized using the [`syncfusion_localization
 To use [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations), add the package as dependency to `pubspec.yaml` file.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     dependencies:
       syncfusion_localizations: ^xx.x.xx
@@ -83,7 +83,7 @@ To use [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localiza
 Next, import the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) library.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
@@ -93,7 +93,7 @@ Next, import the [`syncfusion_localizations`](https://pub.dev/packages/syncfusio
 Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations-class.html) in the [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html), which is used to localize the custom string (series name displayed in legend) in the Cartesian chart and specify the [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) as well.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
 

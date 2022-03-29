@@ -64,7 +64,7 @@ You can customize the segments using the below properties.
 * [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - used to customize the minimum range of selected series or points.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
 

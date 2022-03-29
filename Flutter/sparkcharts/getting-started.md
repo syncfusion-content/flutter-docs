@@ -20,7 +20,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     dependencies:
 
@@ -37,7 +37,7 @@ Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](ht
 Run the following command to get the required packages.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     $ flutter pub get
 
@@ -49,7 +49,7 @@ Run the following command to get the required packages.
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 Once the package has been imported, initialize the spark charts as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) widget as a child of Container widget.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ Once the package has been imported, initialize the spark charts as a child of an
 The `data` property is used for binding data to the spark charts. This property takes the list value as input. 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -111,7 +111,7 @@ The `data` property is used for binding data to the spark charts. This property 
 You can initialize the required spark charts type by specifying the widget name to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html), [`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html), [`SfSparkLWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLWinLossChart-class.html). Here, the spark chart type has been set to [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -140,7 +140,7 @@ You can initialize the required spark charts type by specifying the widget name 
 You can add data labels to improve the readability of the chart using the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -170,7 +170,7 @@ You can add data labels to improve the readability of the chart using the [`labe
 The spark charts displays additional information through trackball when touched on a specific location of the chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {

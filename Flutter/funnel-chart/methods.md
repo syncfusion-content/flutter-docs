@@ -18,7 +18,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 >**Note**: The method will return the center value of the segment.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     //Initialize the series controller
     FunnelSeriesController? seriesController;

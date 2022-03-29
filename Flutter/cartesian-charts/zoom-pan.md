@@ -155,7 +155,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the chart title.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late ZoomPanBehavior _zoomPanBehavior;
     

@@ -30,7 +30,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 * [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) - maps the shader (gradient or image shader) for individual points from the data source.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -220,7 +220,7 @@ The overfilled radial bar is a graphical representation of the exit value of the
 For example, if you set the maximum value of the radial bar to 100% but the given data is more than the maximum value it shows the extra value as an overfilled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

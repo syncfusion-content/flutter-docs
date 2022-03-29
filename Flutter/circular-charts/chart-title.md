@@ -28,7 +28,7 @@ Following properties can be used to customize its appearance.
 You can align the title text content horizontally to the near, center or far of the chart using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/alignment.html) property of the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
       @override
       Widget build(BuildContext context) {

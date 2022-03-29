@@ -25,7 +25,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     dependencies:
     syncfusion_flutter_charts: ^xx.x.xx
@@ -40,7 +40,7 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
 Run the following command to get the required packages.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     $ flutter pub get
 
@@ -52,7 +52,7 @@ Run the following command to get the required packages.
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -88,7 +88,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 Based on your data, initialize the series type. In the series, you need to map the data source and the fields for x and y data points. Here, Funnel series is rendered that is demonstrated in the following code snippet.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ Based on your data, initialize the series type. In the series, you need to map t
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -161,7 +161,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/dataLabelSettings.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -194,7 +194,7 @@ The legend provides information about the series rendered in the chart.
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -227,7 +227,7 @@ The tooltip is used when you cannot display information using the data labels du
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the Funnel series. The tooltip is enabled as demonstrated in the following code snippet.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 

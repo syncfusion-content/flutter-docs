@@ -16,7 +16,7 @@ documentation: ug
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCircularChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -81,7 +81,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCircularChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -139,7 +139,7 @@ The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 x & y - logical pixel values to position the tooltip.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCircularChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -195,7 +195,7 @@ x & y - logical pixel values to position the tooltip.
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SfCircularChart chart;
     late TooltipBehavior _tooltipBehavior;
@@ -259,7 +259,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 >**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late SfCircularChart chart;
     late SelectionBehavior _selectionBehavior;
@@ -320,7 +320,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 >**Note**: The method will return the center value of the segment.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     //Initialize the series controller
     CircularSeriesController? seriesController;

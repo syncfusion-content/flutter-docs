@@ -30,7 +30,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 * [`curveDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveDashArray.html) - renders the normal distribution curve  with dashes.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
         
     @override

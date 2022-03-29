@@ -18,7 +18,7 @@ The [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutte
 The below example demonstrates the infinite scrolling by showing the circular progress indicator until the data is loaded when horizontal scrolling reaches the end of the chart.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

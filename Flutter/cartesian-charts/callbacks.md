@@ -25,7 +25,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - specifies the viewport index value of the tooltip.
 
  {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
 
@@ -67,7 +67,7 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/orientation.html) - specifies the current axis orientation.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - used to get and set the background color of a data label.
  
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -151,7 +151,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/color.html) - used to get and set the color of the legend icon.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
 * [`chartPointInfo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballArgs/chartPointInfo.html) - holds the information about the current point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
   late TrackballBehavior _trackballBehavior;
 
@@ -219,7 +219,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 * [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - used to get and set the color of the crosshair line.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -260,7 +260,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
 
@@ -305,7 +305,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
 
@@ -350,7 +350,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
 
@@ -395,7 +395,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
 
@@ -439,7 +439,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -472,7 +472,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -505,7 +505,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -537,7 +537,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axisName.html) - used to get the axis name.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -570,7 +570,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -606,7 +606,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - used to get the viewport index value of the selected data points.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
     
     late SelectionBehavior _selectionBehavior;
 
@@ -658,7 +658,7 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 * [`signalLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineDashArray.html) - used to change the dash array size of the signal line.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -694,7 +694,7 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
 * `slope` - specifies the slope value of the trendline.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -731,7 +731,7 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
 Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     //Initialize the series controller
     ChartSeriesController? _chartSeriesController;
@@ -797,7 +797,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
 Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -819,7 +819,7 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
 Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -841,7 +841,7 @@ Triggers when tapped or clicked on the chart area. You can get the tapped region
 Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
   @override
   Widget build(BuildContext context) {
@@ -873,7 +873,7 @@ Triggers when the marker is being rendered. Here, you can customize the followin
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -910,7 +910,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 >**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -946,7 +946,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     //Initialize the series controller
     ChartSeriesController? SeriesController;
@@ -1000,7 +1000,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 * `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1056,7 +1056,7 @@ Series state will be created only once per series and will not be created again 
 Defaults to `null`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -1135,7 +1135,7 @@ The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     /// Package import
     import 'dart:ui' as ui;
@@ -1205,7 +1205,7 @@ You can customize the text and text style using the [`ChartAxisLabel`](https://p
 Defaults to `null`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     Widget build(BuildContext context) {
       return Container(
@@ -1237,7 +1237,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {

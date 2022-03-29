@@ -64,7 +64,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`itemPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/itemPadding.html) - used to add padding between the first legend text and the second legend icon shape.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
       @override
       Widget build(BuildContext context) {
@@ -107,7 +107,7 @@ The following properties can be used to define and customize the [`title`](https
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text. It can be near, center, or far.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
       @override
       Widget build(BuildContext context) {
@@ -321,7 +321,7 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
       @override
       Widget build(BuildContext context) {

@@ -12,7 +12,7 @@ documentation: ug
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
 
@@ -75,7 +75,7 @@ You can customize the segments using the below properties.
 * [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - to customize the minimum range of selected series or points.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
     
@@ -136,7 +136,7 @@ The selection features allows you to select segments in following modes using [`
 * [`SelectionType.Cluster`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the cluster of points of different series i.e selects the points with same index in each series.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SelectionBehavior _selectionBehavior;
 
@@ -196,7 +196,7 @@ The selection features allows you to select segments in following modes using [`
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) property of chart.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
 
     late SelectionBehavior _selectionBehavior;
 
@@ -244,7 +244,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/initialSelectedDataIndexes.html) property of the [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html).
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
     
@@ -307,7 +307,7 @@ This works even while calling public methods, in various selection modes, with m
 Defaults to `true`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     late selectionBehavior _selectionBehavior;
 

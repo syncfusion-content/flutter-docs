@@ -34,7 +34,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight dart %} 
     
     @override
     Widget build(BuildContext context) {

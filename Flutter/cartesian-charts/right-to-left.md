@@ -42,7 +42,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
 To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     /// Package import
     import 'package:flutter_localizations/flutter_localizations.dart';
@@ -129,7 +129,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
 Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) elements. Here, the tooltip content renders at first and followed by that the marker on the right. By default, the tooltip content will be `point.x : point.y`, in RTL rendering the tooltip content will be `point.y : point.x`. There will not be any change in the header content. If you wish the format to be applied as it is despite RTL rendering in this case, you can make use of [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) callback.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
     @override
@@ -186,7 +186,7 @@ Right-to-left rendering is applicable for trackball tooltip elements.
 * The trackball tooltip will render on the left side of the trackball line in RTL rendering if adequate space is available else moved to the right and this is the default behavior.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     late TrackballBehavior _trackballBehavior;
 
@@ -238,7 +238,7 @@ Right-to-left rendering is applicable for trackball tooltip elements.
 In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
