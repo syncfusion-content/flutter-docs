@@ -166,6 +166,50 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
 
+## Track opacity
+
+The [`trackOpacity`]() property specifies the opacity for the track in radial bar chart. The track can be
+cutomize using [`trackColor`],[`trackBorderColor`], [`trackBorderWidth`].
+
+Also, [`useSeriesColor`] property can be uses the point color for filling the track.
+
+{% tabs %}
+{% highlight dart hl_lines="13" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1924, 90, '100%', Colors.blue),
+            ChartData(1925, 50, '100%', Colors.green),
+            ChartData(1926, 70, '100%', Colors.red),
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series:  <RadialBarSeries<ChartData, int>>[
+                            RadialBarSeries<ChartData, int>(
+                                useSeriesColor: true,
+                                trackOpacity: 0.3,
+                                cornerStyle: CornerStyle.bothCurve,
+                                dataSource: chartData,
+                                pointRadiusMapper: (ChartData data, _) => data.text,
+                                pointColorMapper: (ChartData data, _) => data.color,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track opacity](circular-chart-types-images/trackopacity.png)
+
 ## Rendering data labels
 
 Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html). The appearance of label can be customized using the following properties:
