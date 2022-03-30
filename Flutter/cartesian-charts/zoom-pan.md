@@ -343,6 +343,10 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 
 Also refer [`zooming`](./callbacks#onzooming), [`zoom start`](./callbacks#onzoomstart) and [`zoom end`](./callbacks#onzoomend) events for customizing the zooming further.
 
+### Calculate range based on visible points
+
+The [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html)  property can be used to calculate the value axis range based on the visible points. When the property is set to false the value axis range will be calculated based on all the data points in the chart irrespective of visible points. For further reference, check this [AutoRangeCalculation](./axis-customization.md) section.
+
 #### See Also
 
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).

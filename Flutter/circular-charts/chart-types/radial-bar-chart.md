@@ -22,11 +22,6 @@ The radial bar chart is used for showing the comparisons among the categories us
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - maps the color for individual points from the data source.
 * [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/gap.html) - changes the spacing between two individual segments. The default value of spacing is 1%.
 * [`maximumValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/maximumValue.html) - represents the entire span of an individual circle. The default value of the this property is null.
-* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html) - changes the color of the track area.
-* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html) - changes the color of the track border.
-* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - changes the width of the track border.
-* [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) - controls the transparency of the track area.
-* [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) - uses the point color for filling the track area.
 * [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) - maps the shader (gradient or image shader) for individual points from the data source.
 
 {% tabs %}
@@ -165,6 +160,52 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 {% endtabs %}
 
 ![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
+
+## Track customization
+The radial bar series renders above the track area. The following properties are used to customize the appearance.
+
+[`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html) - changes the color of the track area.
+[`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html) - changes the stroke color of the track area.
+[`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - changes the stroke width of the track area.
+[`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) - specifies the opacity of the track area.
+[`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) - uses the point color for filling the track area.
+
+{% tabs %}
+{% highlight dart hl_lines="14 15" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1924, 90, '100%', Colors.blue),
+            ChartData(1925, 50, '100%', Colors.green),
+            ChartData(1926, 70, '100%', Colors.red),
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series:  <RadialBarSeries<ChartData, int>>[
+                            RadialBarSeries<ChartData, int>(
+                                useSeriesColor: true,
+                                trackOpacity: 0.3,
+                                cornerStyle: CornerStyle.bothCurve,
+                                dataSource: chartData,
+                                pointRadiusMapper: (ChartData data, _) => data.text,
+                                pointColorMapper: (ChartData data, _) => data.color,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track customization](circular-chart-types-images/trackopacity.png)
 
 ## Rendering data labels
 
