@@ -168,10 +168,10 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## Track opacity
 
-The [`trackOpacity`]() property specifies the opacity for the track in radial bar chart. The track can be
-cutomize using [`trackColor`],[`trackBorderColor`], [`trackBorderWidth`].
+The [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) property specifies the opacity for the track in radial bar chart. The track can be
+cutomize using [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html),[`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html), [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html).
 
-Also, [`useSeriesColor`] property can be uses the point color for filling the track.
+Also, [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) property can be uses the point color for filling the track.
 
 {% tabs %}
 {% highlight dart hl_lines="13" %} 
