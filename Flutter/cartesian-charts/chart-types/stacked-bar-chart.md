@@ -68,6 +68,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) will be stacked in a single group.
 
+{% tabs %}
 {% highlight dart hl_lines="10 16 22 28" %} 
     
     @override
