@@ -32,25 +32,25 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -65,11 +65,11 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
 
 ## Column width and spacing
 
-The `spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumn100Series/spacing.html) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
 
-The `width` property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13 14 20 21" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -79,17 +79,17 @@ The `width` property is used to change the width of the rectangle. The default v
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             )
@@ -104,11 +104,11 @@ The `width` property is used to change the width of the rectangle. The default v
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Gradient](./series-customization#gradient-fill)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

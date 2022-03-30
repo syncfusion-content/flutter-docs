@@ -45,12 +45,12 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                         series: <ChartSeries>[
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high, 
-                                openValueMapper: (ChartData sales, _) => sales.open,
-                          closeValueMapper: (ChartData sales, _) => sales.close,
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high, 
+                                openValueMapper: (ChartData data, _) => data.open,
+                          closeValueMapper: (ChartData data, _) => data.close,
 
                             )
                         ]
@@ -64,9 +64,11 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 ![candle chart](cartesian-chart-types-images/candle.png)
 
-### See Also 
+#### See Also 
 
 * [Rendering flutter candlestick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
+
+* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart)
 
 ## Indication for same values
 
@@ -78,7 +80,7 @@ The following are the types of indication when the combination of high, low, ope
 * If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -123,10 +125,10 @@ The following are the types of indication when the combination of high, low, ope
 
 ![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)  

@@ -199,7 +199,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
->**NOTE**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+>**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
 {% highlight dart %}
 
@@ -212,8 +212,8 @@ Triggers when tapping on the data label of the data point in the series. The [`o
           },
           series: PyramidSeries<Sample, DateTime>(
               dataSource: sample,
-              xValueMapper: (Sample sales, _) => sales.x,
-              yValueMapper: (Sample sales, _) => sales.y,
+              xValueMapper: (Sample data, _) => data.x,
+              yValueMapper: (Sample data, _) => data.y,
               dataLabelSettings: DataLabelSettings(
                 isVisible:true
               ),

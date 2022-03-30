@@ -27,19 +27,25 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - used to add the rounded corners to the data label shape.
 * [`angle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/angle.html)  - used to rotate the labels.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %}
 
     @override
     Widget build(BuildContext context) {
+        List<ChartData> chartData = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper: (SalesData data, _) => data.color,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     // Renders the data label
                                     isVisible: true
@@ -49,6 +55,11 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 )
             )
         );
+    }
+    class ChartData{
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
     }
 
 {% endhighlight %}
@@ -61,7 +72,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the Funnel series data labels either [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) or [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html). By default the label of Funnel chart is placed [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) the series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -69,10 +80,10 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -89,13 +100,13 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Data label position](images/datalabel/datalabel_position.png)
 
->**NOTE**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Funnel chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the Funnel chart labels.
+>**Note**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Funnel chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the Funnel chart labels.
 
 ## Apply series color
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -103,10 +114,10 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -129,23 +140,23 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 Data label and its connector line in the Funnel charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="17" %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                     child:SfFunnelChart(
-                        series: FunnelSeries<SalesData, num>(
+                        series: FunnelSeries<ChartData, num>(
                             dataSource: [
-                                SalesData(11, 35),
-                                SalesData(12, 28),
-                                SalesData(13, 0),
-                                SalesData(14, 32),
-                                SalesData(15, 40)
+                                ChartData(11, 35),
+                                ChartData(12, 28),
+                                ChartData(13, 0),
+                                ChartData(14, 32),
+                                ChartData(15, 40)
                             ],
-                            xValueMapper: (SalesData sales, _) => sales.xValue,
-                            yValueMapper: (SalesData sales, _) => sales.yValue,
+                            xValueMapper: (ChartData data, _) => data.xValue,
+                            yValueMapper: (ChartData data, _) => data.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false,
                                 isVisible: true
@@ -171,14 +182,14 @@ Action on data labels when it’s overflowing from its region area. The overflow
 
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
   
-N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+>**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
-{% highlight dart %}
+{% highlight dart hl_lines="7" %}
 
     Widget build(BuildContext context) {
         return Container(
             child: SfFunnelChart(
-            series: PieSeries<ChartData, String>(
+            series: FunnelSeries<ChartData, String>(
              dataLabelSettings: DataLabelSettings(
                isVisible: true,
                overflowMode: OverflowMode.trim

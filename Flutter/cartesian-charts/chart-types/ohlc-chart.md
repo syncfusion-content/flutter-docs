@@ -43,13 +43,13 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                lowValueMapper: (Sample sales, _) => sales.low,
-                                highValueMapper: (Sample sales, _) => sales.high, 
-                                openValueMapper: (Sample sales, _) => sales.open,
-                                closeValueMapper: (Sample sales, _) => sales.close,
+                            hiloOpenCloseSeries<ChartData, DateTime>(
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (Sample data, _) => data.low,
+                                highValueMapper: (Sample data, _) => data.high, 
+                                openValueMapper: (Sample data, _) => data.open,
+                                closeValueMapper: (Sample data, _) => data.close,
 
                             )
                         ]
@@ -57,11 +57,15 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                 )   
             )
         );
-    }
-
+    } 
+    
 {% endhighlight %}
 
 ![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
+
+#### See Also 
+
+* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
 
 ## Indication for same values
 
@@ -72,7 +76,7 @@ The following are the types of indication when the combination of high, low, ope
 * In the OHLC chart, if the open and close values are same then a horizontal line will be drawn at that value by default.
 * If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %}
 
     @override
     Widget build(BuildContext context) {
@@ -118,10 +122,10 @@ The following are the types of indication when the combination of high, low, ope
 
 ![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points) 
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

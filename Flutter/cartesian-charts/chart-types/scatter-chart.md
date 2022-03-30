@@ -29,8 +29,8 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
                             // Renders scatter chart
                             ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -43,13 +43,13 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 
 ![Scatter chart](cartesian-chart-types-images/scatter.jpg)
 
-###	Change shape and size of the scatter
+##	Change shape and size of the scatter
 
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property is used to change the rendering shape of scatter series. The available shapes are [`circle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`pentagon`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`verticalLine`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`horizontalLine`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`diamond`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), [`image`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html), and [`invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/DataMarkerType.html). If [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) shape is specified, then you can assign the image using the [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) property.
 
 The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) can be used to change the height and width of the scatter series, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="17" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -61,8 +61,8 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
                         series: <ChartSeries>[
                             ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 markerSettings: MarkerSettings(
                                     height: 15,
                                     width: 15,
@@ -81,4 +81,11 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the scatter series further.
+#### See Also
+
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

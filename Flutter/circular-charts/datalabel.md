@@ -107,7 +107,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the circular series data labels either [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) or [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html). By default the label of circular chart is placed [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) the series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -137,7 +137,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Data label position](images/datalabel/datalabel_position.jpg)
 
->**NOTE**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
+>**Note**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
 
 ## Smart labels
 
@@ -154,9 +154,9 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 * [`LabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - intersected data labels will be visible.
 * [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - smartly arranges the overlapped data labels.
 
->**NOTE**: The smart label positioning is applicable only for the pie and doughnut series.
+>**Note**: The smart label positioning is applicable only for the pie and doughnut series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="35" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -215,7 +215,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="17" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -256,7 +256,7 @@ This feature is used to connect label and data point using a line. It is applica
 * [`length`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/length.html) - specifies the length of the connector line.
 * [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/type.html) - specifies the shape of connector line either [`ConnectorType.curve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html) or [`ConnectorType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html). 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -384,14 +384,14 @@ You can customize the appearance of the data label with your own template using 
 
 Data label and its connector line in the Circular charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="21" %} 
 
-    final List<SalesData> chartData = <SalesData>[
-        SalesData('Jan', 35),
-        SalesData('Feb', 28),
-        SalesData('March', 0),
-        SalesData('April', 32),
-        SalesData('May', 40)
+    final List<ChartData> chartData = <ChartData>[
+        ChartData('Jan', 35),
+        ChartData('Feb', 28),
+        ChartData('March', 0),
+        ChartData('April', 32),
+        ChartData('May', 40)
     ];
     
     @override
@@ -400,11 +400,11 @@ Data label and its connector line in the Circular charts for the point value 0 c
             body: Center(
                 child: Container(
                     child:SfCircularChart(
-                        series: <CircularSeries<SalesData, String>>[
-                            PieSeries<SalesData, String>(
+                        series: <CircularSeries<ChartData, String>>[
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.xValue,
-                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                xValueMapper: (ChartData data, _) => data.xValue,
+                                yValueMapper: (ChartData data, _) => data.yValue,
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue : false, 
                                     isVisible: true
@@ -433,9 +433,9 @@ Action on data labels when it’s overflowing from its region area. The overflow
 
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
   
- N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+ >**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
-{% highlight dart %}
+{% highlight dart hl_lines="8" %}
 
     Widget build(BuildContext context) {
         return Container(
@@ -451,5 +451,6 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
             )
         );
     }
+
 {% endhighlight %}
 ![dataLabel_overflow](images/datalabel/circular_overflow.jpg)

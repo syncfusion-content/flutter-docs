@@ -473,6 +473,89 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.png)
 
+## Set a custom sorting icon
+
+`SfDataGrid` allows you to change the sort icon by using the `SfDataGridThemeData.sortIcon` property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
+
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          leading: const BackButton(),
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataGridTheme(
+          data:
+              SfDataGridThemeData(sortIcon: const Icon(Icons.arrow_circle_up)),
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              allowSorting: true,
+              selectionMode: SelectionMode.multiple,
+              navigationMode: GridNavigationMode.cell,
+              columnWidthMode: ColumnWidthMode.fill,
+              columns: [
+                GridColumn(
+                    columnName: 'id',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'ID',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Name',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'designation',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'salary',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Salary',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+              ]),
+        ));
+  }
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.png)
+
 ## Custom sorting
 
 The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding the following methods from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html),

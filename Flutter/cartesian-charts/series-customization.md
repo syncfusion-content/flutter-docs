@@ -13,7 +13,7 @@ documentation: ug
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) property. You can disable the animation by setting this property to 0.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -49,9 +49,9 @@ documentation: ug
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provides dynamic animation support for the series.
 
-If you wish to perform the initial rendering animation again in the existing series, this method should be called. On calling this method, this particular series will be animated again based on the  [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property's value in the series. If this property's value is 0, then the animation will not be performed.
+If you wish to perform the initial rendering animation again in the existing series, [`animate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/animate.html) method should be called. On calling this method, this particular series will be animated again based on the  [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property's value in the series. If this property's value is 0, then the animation will not be performed.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="50 58" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -78,8 +78,8 @@ If you wish to perform the initial rendering animation again in the existing ser
                     _chartSeriesController1 = controller;
                 },
                 dataSource: chartData,
-                xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                yValueMapper: (_ChartSampleData sales, _) => sales.y,
+                xValueMapper: (_ChartSampleData data, _) => data.x,
+                yValueMapper: (_ChartSampleData data, _) => data.y,
                 name: 'Unit Sold'),
             LineSeries<_ChartSampleData, String>(
                 animationDuration: 4500,
@@ -87,9 +87,9 @@ If you wish to perform the initial rendering animation again in the existing ser
                 onRendererCreated: (ChartSeriesController controller) {
                     _chartSeriesController2 = controller;
                 },
-                xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                yValueMapper: (_ChartSampleData sales, _) =>
-                    sales.secondSeriesYValue,
+                xValueMapper: (_ChartSampleData data, _) => data.x,
+                yValueMapper: (_ChartSampleData data, _) =>
+                    data.secondSeriesYValue,
                 yAxisName: 'yAxis1',
                 markerSettings: MarkerSettings(isVisible: true),
                 name: 'Total Transaction')
@@ -131,15 +131,14 @@ If you wish to perform the initial rendering animation again in the existing ser
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
-## Animation delay
+### Animation delay
 
-The `animationDelay` property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration.
-Defaults to `0` for all the series except `ErrorBarSeries`. The default value for the `ErrorBarSeries` is `1500`.
+The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration.
+Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html). The default value for the [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html) is `1500`.
 
->**NOTE**
-* The animation delay is applicable for series, trendline, and indicators.
+>**Note**: The animation delay is applicable for series, trendline, and indicators.
 
-{% highlight dart %}
+{% highlight dart hl_lines="38" %}
 
     import 'package:intl/intl.dart';
     
@@ -156,37 +155,40 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
         ];
         
         return Column(children: <Widget>[
-        Container(
-          child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            axes: <ChartAxis>[
-              NumericAxis(
-                numberFormat: NumberFormat.compact(),
-                majorGridLines: const MajorGridLines(width: 0),
-                opposedPosition: true,
-                name: 'yAxis1',
-                interval: 1000,
-                minimum: 0,
-                maximum: 7000)
+           Container(
+              child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                axes: <ChartAxis>[
+                   NumericAxis(
+                    numberFormat: NumberFormat.compact(),
+                    majorGridLines: const MajorGridLines(width: 0),
+                    opposedPosition: true,
+                    name: 'yAxis1',
+                    interval: 1000,
+                    minimum: 0,
+                    maximum: 7000)
                 ],
-            series: <ChartSeries<ChartData, String>>[
-            ColumnSeries<ChartData, String>(
-                animationDuration: 2000,
-                dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.yValue1,
-                name: 'Unit Sold'),
-            LineSeries<ChartData, String>(
-                animationDuration: 4500,
-                animationDelay: 2000,
-                dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.yValue2,
-                yAxisName: 'yAxis1',
-                markerSettings: MarkerSettings(isVisible: true),
-                name: 'Total Transaction')
-            ],)),
-        ]);
+                series: <ChartSeries<ChartData, String>>[
+                  ColumnSeries<ChartData, String>(
+                    animationDuration: 2000,
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.yValue1,
+                    name: 'Unit Sold'),
+                 LineSeries<ChartData, String>(
+                    animationDuration: 4500,
+                    animationDelay: 2000,
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.yValue2,
+                    yAxisName: 'yAxis1',
+                    markerSettings: MarkerSettings(isVisible: true),
+                    name: 'Total Transaction')
+                    ]
+                  )
+               ) 
+           ]
+        );
     }
 
     class ChartData {
@@ -206,11 +208,13 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
 
 * [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart).
 
+* [Change the series delay duration in Flutter Cartesian charts](https://www.syncfusion.com/kb/12972/change-the-series-delay-duration-in-flutter-cartesian-charts).
+
 ## Transpose the series
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -235,7 +239,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
     class ChartData {
-        ChartData(this.x, this.y)'
+        ChartData(this.x, this.y)
         final String x;
         final double? y;
     }
@@ -344,7 +348,8 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
-## Gradient fill
+## Gradient
+### Gradient fill
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
@@ -397,7 +402,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 * [Rotating the gradient applied to a chart in Cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart).
 
-N>: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
+>**Note**: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
 
 ### Gradient stroke
  
@@ -447,9 +452,9 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
-## Gradient based on values
+### Gradient based on values
 
-The `onCreateShader` callback is used to fill the data points with the [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html). All the data points are together considered as a single segment and the shader is applied commonly.
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateShader.html) callback is used to fill the data points with the [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html). All the data points are together considered as a single segment and the shader is applied commonly.
 
 Defaults to `null`.
 
@@ -670,4 +675,4 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 * [Rendering a chart using JSON data retrieved from a fire base](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

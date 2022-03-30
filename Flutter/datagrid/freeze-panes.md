@@ -439,12 +439,25 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 ## Appearance
 
-`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The frozen line will be shown only the [SfDataGridThemeData.frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property to 0.
+`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
 
-The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the below file,
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+The frozen line will be shown only the [SfDataGridThemeData.frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property to 0. The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 @override
 Widget build(BuildContext context) {

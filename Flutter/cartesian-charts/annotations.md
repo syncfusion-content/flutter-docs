@@ -52,7 +52,7 @@ The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/
 To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15 17" %}
 
     @override
     Widget build(BuildContext context) {
@@ -67,8 +67,10 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
                       child: const Text('Text')
                     ),
                     coordinateUnit: CoordinateUnit.point,
-                    x: 20, // x position of annotation
-                    y: 40 // y position of annotation
+                    // x position of annotation
+                    x: 20, 
+                    // y position of annotation
+                    y: 40 
                   )
                 ]
               )
@@ -84,7 +86,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
 
 To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15" %}
 
     @override
     Widget build(BuildContext context) {
@@ -121,7 +123,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 To position the annotation based on the percentage values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the percentage values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %}
 
     @override
     Widget build(BuildContext context) {
@@ -175,7 +177,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %}
 
     @override
     Widget build(BuildContext context) {
@@ -210,7 +212,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
 
 The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/horizontalAlignment.html) for annotation
 
-{% highlight dart %}
+{% highlight dart hl_lines="17" %}
 
     @override
     Widget build(BuildContext context) {
@@ -279,8 +281,8 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
                                         ChartData('Japan', 14),
                                         ChartData('France', 10)
                                       ],
-                            xValueMapper: (ChartData sales, _) => sales.year,
-                            yValueMapper: (ChartData sales, _) => sales.sales)
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                           ]
                         )
                       )
@@ -291,9 +293,9 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             }
 
             class ChartData {
-              ChartData(this.year, this.sales);
-              final String year;
-              final double sales;
+              ChartData(this.x, this.y);
+              final String x;
+              final double y;
             }
 
 {% endhighlight %}
@@ -414,8 +416,8 @@ Chart supports watermark which allows you to mark the specific area of interest 
                     ChartData('jun', 54),
                     ChartData('jul', 70),
                     ],
-                    xValueMapper: (ChartData sales, _) => sales.year,
-                    yValueMapper: (ChartData sales, _) => sales.sales),
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y),
                   ],
                 )
               )
@@ -426,9 +428,9 @@ Chart supports watermark which allows you to mark the specific area of interest 
     }
 
     class ChartData {
-      ChartData(this.year, this.sales);
-      final String year;
-      final double sales;
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
     }
 
 {% endhighlight %}
@@ -436,4 +438,4 @@ Chart supports watermark which allows you to mark the specific area of interest 
 
 ![Chart with Watermark](images/annotation/watermark.png)
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

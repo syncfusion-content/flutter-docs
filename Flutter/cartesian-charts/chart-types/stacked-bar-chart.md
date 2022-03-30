@@ -33,23 +33,23 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
                         series: <ChartSeries>[
                             StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                              StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -66,7 +66,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) will be stacked in a single group.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10 16 22 28" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -79,26 +79,26 @@ You can group and stack the similar stacked series types using the [`groupName`]
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -129,29 +129,29 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -164,11 +164,11 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ![Stacked bar cumulative](cartesian-chart-types-images/stacked_bar_cumulative.jpg)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Gradient](./series-customization#gradient-fill)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

@@ -29,12 +29,12 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<SalesData, double>>[
-                           BoxAndWhiskerSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, double>>[
+                           BoxAndWhiskerSeries<ChartData, double>(
                                 dataSource: data,
                                 boxPlotMode: BoxPlotMode.exclusive,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.number
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -47,11 +47,11 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
-* [Color mapping](./series-customization#color-mapping-for-data-points)
-* [Animation](./series-customization#animation)
-* [Gradient](./series-customization#gradient-fill)
-* [Empty points](./series-customization#empty-points)  
-* [Sorting](./series-customization##sorting) 
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)
