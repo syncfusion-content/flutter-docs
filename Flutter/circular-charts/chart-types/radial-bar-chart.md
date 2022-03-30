@@ -166,14 +166,14 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
 
-## Track opacity
+## Track customization
+The radial bar series renders above the track area. The following properties are used to customize the appearance.
 
-The [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) property specifies the opacity for the track in radial bar chart. The track can be
-cutomize using [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html),[`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html), [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html).
-
-Also, [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) property can be uses the point color for filling the track.
-
->**Note**: [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) is only applicable for radial bar chart.
+[`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html) - changes the color of the track area.
+[`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html) - changes the stroke color of the track area.
+[`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - changes the stroke width of the track area.
+[`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) - specifies the opacity of the track area.
+[`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) - uses the point color for filling the track area.
 
 {% tabs %}
 {% highlight dart hl_lines="13" %} 
@@ -210,7 +210,7 @@ Also, [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 {% endtabs %}
 
-![Track opacity](circular-chart-types-images/trackopacity.png)
+![Track customization](circular-chart-types-images/trackopacity.png)
 
 ## Rendering data labels
 

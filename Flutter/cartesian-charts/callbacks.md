@@ -24,7 +24,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - specifies the viewport index value of the tooltip.
 
- {% tabs %}
+{% tabs %}
 {% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
