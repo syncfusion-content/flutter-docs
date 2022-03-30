@@ -15,6 +15,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -51,6 +52,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline border](cartesian-chart-types-images/spline.jpg)
 
@@ -67,6 +69,7 @@ By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion
 
 The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
+{% tabs %}
 {% highlight dart hl_lines="18" %} 
     
     @override
@@ -100,6 +103,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline type](cartesian-chart-types-images/cardinal_spline.jpg)
 
@@ -107,6 +111,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart hl_lines="18" %} 
     
     @override
@@ -139,6 +144,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed spline chart](cartesian-chart-types-images/dashed_spline.jpg)
 
@@ -146,6 +152,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical Spline chart.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %} 
 
     @override
@@ -190,6 +197,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Vertical spline chart](cartesian-chart-types-images/inversed-spline.png)
 

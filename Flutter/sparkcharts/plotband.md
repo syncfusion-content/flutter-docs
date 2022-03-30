@@ -17,6 +17,7 @@ The following properties are used to customize the appearances:
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderColor.html) - used to change the border color of plot band.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderWidth.html) - used to change the border width of plot band.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -35,5 +36,6 @@ The following properties are used to customize the appearances:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline plot band](images/plotband/spark-plotband.png)

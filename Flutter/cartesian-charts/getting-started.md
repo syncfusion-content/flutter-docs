@@ -24,6 +24,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
+{% tabs %}
 {% highlight dart %} 
 
     dependencies:
@@ -31,6 +32,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
@@ -38,26 +40,31 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 Run the following command to get the required packages.
 
+{% tabs %}
 {% highlight dart %} 
 
     $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
+{% tabs %}
 {% highlight dart %} 
 
     import 'package:syncfusion_flutter_charts/charts.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initialize chart
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
+{% tabs %}
 {% highlight dart hl_lines="2 7" %} 
 
     @override
@@ -73,6 +80,7 @@ Once the package has been imported, initialize the chart as a child of any widge
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Initialize chart](images/getting-started/default.jpg)
 
@@ -80,6 +88,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 Based on your data, initialize the appropriate axis type and series type. In the series, you need to map the data source and the fields for x and y data points. Here, line series is rendered with category axis that is demonstrated in the following code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -118,6 +127,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Bind data source](images/getting-started/data_source.jpg)
 
@@ -131,6 +141,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -170,6 +181,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Title to chart](images/getting-started/title_chart.jpg)
 
@@ -177,6 +189,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) property.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -218,6 +231,7 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel to chart](images/getting-started/datalabel.jpg)
 
@@ -229,6 +243,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
 
 Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in corresponding legends.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -269,6 +284,7 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend in chart](images/getting-started/legend.png)
 
@@ -278,6 +294,7 @@ The tooltip is used when you cannot display information using the data labels du
 
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled, as demonstrated in the following code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     late TooltipBehavior _tooltipBehavior;
@@ -331,6 +348,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 

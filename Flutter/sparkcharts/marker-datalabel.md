@@ -20,6 +20,7 @@ You can use the following properties to customize the appearance:
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/color.html) - Represents the color of the marker.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/borderColor.html) - Represents the border color of the marker.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -42,6 +43,7 @@ You can use the following properties to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline marker](images/marker/spark-marker-circle.png)
 
@@ -55,6 +57,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
 * triangle,
 * invertedTriangle
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -76,6 +79,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline marker shape](images/marker/spark-marker-square.png)
 
@@ -96,6 +100,7 @@ Following possible values are available in spark charts to render data label:
 * [`SparkChartLabelDisplayMode.last`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the last point.
 * [`SparkChartLabelDisplayMode.first`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the first point.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -114,6 +119,7 @@ Following possible values are available in spark charts to render data label:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
 

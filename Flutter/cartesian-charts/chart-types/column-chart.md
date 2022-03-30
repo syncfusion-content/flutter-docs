@@ -16,6 +16,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -51,6 +52,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column chart](cartesian-chart-types-images/column.jpg)
 
@@ -58,6 +60,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 
 By default, all the column series that have the same x and y-axes are placed side by side in a chart. If you want to place a series one over the other (overlapped), set the [`enableSideBySideSeriesPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableSideBySideSeriesPlacement.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html) to false and configure the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property to differentiate the series. The following code snippet and screenshot illustrate the overlapped placement of column series.
 
+{% tabs %}
 {% highlight dart hl_lines="16" %} 
     
     @override
@@ -103,6 +106,7 @@ By default, all the column series that have the same x and y-axes are placed sid
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column side by side placement](cartesian-chart-types-images/sidebySidePlacement.jpg)
 
@@ -112,6 +116,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
+{% tabs %}
 {% highlight dart hl_lines="20 22" %} 
     
     @override
@@ -145,6 +150,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Column width and spacing](cartesian-chart-types-images/column_width_spacing.jpg)
 
@@ -152,6 +158,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
+{% tabs %}
 {% highlight dart hl_lines="20" %} 
     
     @override
@@ -183,6 +190,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
@@ -203,6 +211,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - adds padding to the track.
 
+{% tabs %}
 {% highlight dart hl_lines="18" %} 
     
     @override
@@ -234,6 +243,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Track](cartesian-chart-types-images/track_column.jpg)
 
