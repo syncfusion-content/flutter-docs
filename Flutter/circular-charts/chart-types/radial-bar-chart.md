@@ -173,6 +173,8 @@ cutomize using [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_c
 
 Also, [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) property can be uses the point color for filling the track.
 
+>**Note**: [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) is only applicable for radial bar chart.
+
 {% tabs %}
 {% highlight dart hl_lines="13" %} 
 
