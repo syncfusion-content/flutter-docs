@@ -107,3 +107,7 @@ File('HeaderAndFooter.pdf').writeAsBytes(document.save());
 document.dispose();
 
 {% endhighlight %}
+
+By executing the above code sample, you will get the PDF document as follows:
+
+![Headers and Footers](images/getting-started/output.jpg)
