@@ -55,9 +55,9 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
               Container(
                 child: IconButton(
                   onPressed: () {
-                    duration: Duration(milliseconds: 100),
+                    duration: Duration(milliseconds: 100);
                     content:
-                      Text('Chart has been exported as PNG image'),
+                      Text('Chart has been exported as PNG image');
                     _renderImage();
                   }, 
                   icon: const Icon(Icons.image, color: Colors.white),
