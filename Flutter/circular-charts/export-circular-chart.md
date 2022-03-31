@@ -70,7 +70,7 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
       OpenFile.open('$path/Output.pdf');
     }
 
-{% endhighlight %}
+  {% endhighlight %}
 {% endtabs %}
 
   ![pdf_export](images/export-circular-chart/pdf_view.png)
