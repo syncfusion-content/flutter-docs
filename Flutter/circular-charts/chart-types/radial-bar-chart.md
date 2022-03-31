@@ -205,7 +205,7 @@ The radial bar series renders above the track area. The following properties are
 {% endhighlight %}
 {% endtabs %}
 
-![Track customization](circular-chart-types-images/trackopacity.png)
+![Track customization](circular-chart-types-images/trackcustomization.png)
 
 ## Rendering data labels
 
