@@ -189,7 +189,7 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 
 ![Multi-date picker view](images/views/multi-picker-view.jpg)
 
-#### Vertical picker
+## Vertical picker
 You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as `DateRangePickerNavigationDirection.vertical` in the `SfDateRangePicker`.`
 
 {% tabs %}
