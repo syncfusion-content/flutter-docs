@@ -13,6 +13,7 @@ documentation: ug
 
 Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
 
+{% tabs %}
 {% highlight dart hl_lines="13 14" %} 
 
     @override
@@ -31,11 +32,13 @@ Chart renders based on the parent widget size. If you need the chart to be rende
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Chart margin
 
 Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/margin.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -71,6 +74,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\chart_margin.png)
 
@@ -82,6 +86,7 @@ You can customize the area of the chart using the below properties.
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundImage.html) - used to set the image path.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -110,5 +115,6 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![margin](images\chart-title\background_image.png)
