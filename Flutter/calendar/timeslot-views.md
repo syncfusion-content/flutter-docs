@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
 ## Number of days in view
-You can customize the days count by setting the [numberOfDaysInView]() property of `timeSlotViewSettings` in the calendar.
+You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
 {% highlight Dart %}
