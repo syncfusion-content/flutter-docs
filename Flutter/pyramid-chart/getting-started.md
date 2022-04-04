@@ -27,7 +27,6 @@ Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
@@ -58,7 +57,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -106,10 +105,9 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y, [this.color]);
+      ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color color;
     }
 
 {% endhighlight %}
@@ -149,7 +147,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="12" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -180,7 +178,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -211,7 +209,7 @@ The tooltip is used when you cannot display information using the data labels du
 
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the pyramid series. The tooltip is enabled as demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="5" %}  
     
     late TooltipBehavior _tooltipBehavior;
 

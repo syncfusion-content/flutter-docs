@@ -677,9 +677,12 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
                     print('rSquare value: ' + args.rSquaredValue.toString());
                     print('Intercept value (x): ' + args.intercept.toString());
                   })
-              ])
-          ],
-      )));
+                ]
+              )
+            ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -932,6 +935,12 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 {% endhighlight %}
 
+#### See Also
+
+* [Achieve sliding viewport functionality using Cartesian chart](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
+
+* [Perform an action on swiping over the Cartesian chart](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
+
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
 Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
@@ -1133,9 +1142,9 @@ the data points and legend. For further reference on this callback, Check the [`
 
 ## axisLabelFormatter
 
-Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the [`AxisLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderDetails-class.html) class.
 
-You can customize the text and text style using the `ChartAxisLabel` class and can return it.
+You can customize the text and text style using the [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class and can return it.
 
 Defaults to `null`.
 
@@ -1154,6 +1163,10 @@ Defaults to `null`.
       return ChartAxisLabel('Label', details.textStyle);
     }
 {% endhighlight %}
+
+#### See Also
+
+* [Format the date-time axis labels in Cartesian chart](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
 
 ## multiLevelLabelFormatter
 
@@ -1233,8 +1246,11 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 #### See Also
 
 * [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+
 * [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+
 * [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 

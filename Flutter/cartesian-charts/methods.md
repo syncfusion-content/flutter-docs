@@ -1259,7 +1259,7 @@ Widget build(BuildContext context) {
 
 #### See Also
 
-*[Rendering real time live charts using updateDataSource method](https://www.syncfusion.com/kb/12316/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart).
+* [Rendering real time live charts using updateDataSource method](https://www.syncfusion.com/kb/12316/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart).
 
 ## PixelToPoint 
 

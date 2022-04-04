@@ -13,7 +13,7 @@ documentation: ug
 
 Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget. By default initializing only the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) without defining any of its properties renders a white screen.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8 10" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -21,8 +21,10 @@ Chart renders based on the parent widget size. If you need the chart to be rende
         body: SafeArea(
           child: Center(
             child: Container(
-              height: 300, // height of the Container widget
-              width: 350,  // width of the Container widget
+              // height of the Container widget
+              height: 300, 
+              // width of the Container widget
+              width: 350,  
               child: SfCircularChart()
             )
           )
@@ -36,7 +38,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
 Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/margin.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {

@@ -65,7 +65,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 
 The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/minimumRadius.html) property is used to change the minimum size of the series and the [`maximumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/maximumRadius.html) property is used to change the maximum size of the series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13 15" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -78,8 +78,10 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData data, _) => data.size,
-                                minimumRadius:9, // Minimum radius of bubble
-                                maximumRadius: 15, // Maximum radius of bubble
+                                // Minimum radius of bubble
+                                minimumRadius:9, 
+                                // Maximum radius of bubble
+                                maximumRadius: 15, 
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             )

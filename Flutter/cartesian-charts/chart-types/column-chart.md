@@ -58,7 +58,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 
 By default, all the column series that have the same x and y-axes are placed side by side in a chart. If you want to place a series one over the other (overlapped), set the [`enableSideBySideSeriesPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableSideBySideSeriesPlacement.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html) to false and configure the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property to differentiate the series. The following code snippet and screenshot illustrate the overlapped placement of column series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20 22" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -132,8 +132,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                width: 0.8, // Width of the columns
-                                spacing: 0.2 // Spacing between the columns
+                                // Width of the columns
+                                width: 0.8, 
+                                // Spacing between the columns
+                                spacing: 0.2 
                             )
                         ]
                     )
@@ -150,7 +152,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -186,9 +188,11 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 #### See Also
 
-* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the)
+* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
 
-* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
+* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart).
+
+* [Render a customized column chart](https://www.syncfusion.com/kb/13033/how-to-render-a-customized-column-chart-sfcartesianchart).
 
 ## Track customization
 
@@ -199,7 +203,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - adds padding to the track.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -235,11 +239,11 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 #### See Also
 
-* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
-* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
-* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
-* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
-* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
-* [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting)
+* [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
+* [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [Animation](/flutter/cartesian-charts/series-customization#animation)
+* [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
+* [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)
 
 >**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

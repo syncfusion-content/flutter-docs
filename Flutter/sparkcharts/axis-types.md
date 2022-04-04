@@ -39,18 +39,18 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
       );
     }
   
-    final List<SalesData> data = [
-      SalesData(xval: 1, yval: 190),
-      SalesData(xval: 2, yval: 165),
-      SalesData(xval: 3, yval: 158),
-      SalesData(xval: 4, yval: 175),
-      SalesData(xval: 5, yval: 200),
-      SalesData(xval: 6, yval: 180),
-      SalesData(xval: 7, yval: 210),
+    final List<ChartData> data = [
+      ChartData(xval: 1, yval: 190),
+      ChartData(xval: 2, yval: 165),
+      ChartData(xval: 3, yval: 158),
+      ChartData(xval: 4, yval: 175),
+      ChartData(xval: 5, yval: 200),
+      ChartData(xval: 6, yval: 180),
+      ChartData(xval: 7, yval: 210),
     ];
  
-    class SalesData {
-      SalesData({this.xval, this.yval});
+    class ChartData {
+      ChartData({this.xval, this.yval});
       final double xval;
       final double yval;
     }
@@ -79,34 +79,34 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
         ),
       );
     }
-    final List<SalesData> data = [
-      SalesData(xval: DateTime(2018, 0, 1), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 2), yval: 4.5),
-      SalesData(xval: DateTime(2018, 0, 3), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 4), yval: 7),
-      SalesData(xval: DateTime(2018, 0, 5), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 8), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 9), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 10), yval: 6.5),
-      SalesData(xval: DateTime(2018, 0, 11), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 12), yval: 5.5),
-      SalesData(xval: DateTime(2018, 0, 15), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 16), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 17), yval: 6.5),
-      SalesData(xval: DateTime(2018, 0, 18), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 19), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 22), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 23), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 24), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 25), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 26), yval: 4.5),
-      SalesData(xval: DateTime(2018, 0, 29), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 30), yval: 5),
-      SalesData(xval: DateTime(2018, 0, 31), yval: 7),
+    final List<ChartData> data = [
+      ChartData(xval: DateTime(2018, 0, 1), yval: 4),
+      ChartData(xval: DateTime(2018, 0, 2), yval: 4.5),
+      ChartData(xval: DateTime(2018, 0, 3), yval: 8),
+      ChartData(xval: DateTime(2018, 0, 4), yval: 7),
+      ChartData(xval: DateTime(2018, 0, 5), yval: 6),
+      ChartData(xval: DateTime(2018, 0, 8), yval: 8),
+      ChartData(xval: DateTime(2018, 0, 9), yval: 8),
+      ChartData(xval: DateTime(2018, 0, 10), yval: 6.5),
+      ChartData(xval: DateTime(2018, 0, 11), yval: 4),
+      ChartData(xval: DateTime(2018, 0, 12), yval: 5.5),
+      ChartData(xval: DateTime(2018, 0, 15), yval: 8),
+      ChartData(xval: DateTime(2018, 0, 16), yval: 6),
+      ChartData(xval: DateTime(2018, 0, 17), yval: 6.5),
+      ChartData(xval: DateTime(2018, 0, 18), yval: 7.5),
+      ChartData(xval: DateTime(2018, 0, 19), yval: 7.5),
+      ChartData(xval: DateTime(2018, 0, 22), yval: 4),
+      ChartData(xval: DateTime(2018, 0, 23), yval: 8),
+      ChartData(xval: DateTime(2018, 0, 24), yval: 6),
+      ChartData(xval: DateTime(2018, 0, 25), yval: 7.5),
+      ChartData(xval: DateTime(2018, 0, 26), yval: 4.5),
+      ChartData(xval: DateTime(2018, 0, 29), yval: 6),
+      ChartData(xval: DateTime(2018, 0, 30), yval: 5),
+      ChartData(xval: DateTime(2018, 0, 31), yval: 7),
     ];
  
-    class SalesData {
-      SalesData({this.xval, this.yval});
+    class ChartData {
+      ChartData({this.xval, this.yval});
       final DateTime xval;
       final double yval;
     }
@@ -135,23 +135,23 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
         ),
       );
     }
-    final List<SalesData> data = [
-      SalesData(xval: 'Robert', yval: 60),
-      SalesData(xval: 'Andrew', yval: 65),
-      SalesData(xval: 'Suyama', yval: 70),
-      SalesData(xval: 'Michael', yval: 80),
-      SalesData(xval: 'Janet', yval: 55),
-      SalesData(xval: 'Davolio', yval: 90),
-      SalesData(xval: 'Fuller', yval: 75),
-      SalesData(xval: 'Nancy', yval: 85),
-      SalesData(xval: 'Margaret', yval: 77),
-      SalesData(xval: 'Steven', yval: 68),
-      SalesData(xval: 'Laura', yval: 96),
-      SalesData(xval: 'Elizabeth', yval: 57)
+    final List<ChartData> data = [
+      ChartData(xval: 'Robert', yval: 60),
+      ChartData(xval: 'Andrew', yval: 65),
+      ChartData(xval: 'Suyama', yval: 70),
+      ChartData(xval: 'Michael', yval: 80),
+      ChartData(xval: 'Janet', yval: 55),
+      ChartData(xval: 'Davolio', yval: 90),
+      ChartData(xval: 'Fuller', yval: 75),
+      ChartData(xval: 'Nancy', yval: 85),
+      ChartData(xval: 'Margaret', yval: 77),
+      ChartData(xval: 'Steven', yval: 68),
+      ChartData(xval: 'Laura', yval: 96),
+      ChartData(xval: 'Elizabeth', yval: 57)
     ];  
  
-    class SalesData {
-      SalesData({this.xval, this.yval});
+    class ChartData {
+      ChartData({this.xval, this.yval});
       final String xval;
       final double yval;
     }
@@ -189,14 +189,14 @@ Axis line of the spark charts can be customized using the following properties.
       );
     }
 
-    final List<SalesData> data = [
-      SalesData(xval: 1, yval: 190),
-      SalesData(xval: 2, yval: 165),
-      SalesData(xval: 3, yval: 158),
-      SalesData(xval: 4, yval: 175),
-      SalesData(xval: 5, yval: 200),
-      SalesData(xval: 6, yval: 180),
-      SalesData(xval: 7, yval: 210),
+    final List<ChartData> data = [
+      ChartData(xval: 1, yval: 190),
+      ChartData(xval: 2, yval: 165),
+      ChartData(xval: 3, yval: 158),
+      ChartData(xval: 4, yval: 175),
+      ChartData(xval: 5, yval: 200),
+      ChartData(xval: 6, yval: 180),
+      ChartData(xval: 7, yval: 210),
     ]; 
 
 {% endhighlight %}
