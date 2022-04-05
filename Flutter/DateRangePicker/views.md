@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 ![Month view Date Range Picker](images/views/monthview.png)
 
 
-### Week number
+#### Week number
 
 Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the `DateRangePickerMonthViewSettings` as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
 {% tabs %}
@@ -55,7 +55,7 @@ Display the Week number of the year in the MonthView by setting the [showWeekNum
 
 ![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
 
-### Week number appearance
+#### Week number appearance
 Customize the Week number style by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/backgroundColor.html) properties of the [DateRangePickerWeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle-class.html).
 
 {% tabs %}
@@ -189,7 +189,7 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 
 ![Multi-date picker view](images/views/multi-picker-view.jpg)
 
-### Vertical picker
+## Vertical picker
 You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as `DateRangePickerNavigationDirection.vertical` in the `SfDateRangePicker`.`
 
 {% tabs %}
