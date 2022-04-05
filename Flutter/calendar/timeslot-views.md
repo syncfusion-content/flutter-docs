@@ -118,8 +118,16 @@ Widget build(BuildContext context) {
 
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
+>**NOTE**
+* The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
+* Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
+* No need to specify the decimal point values for `startHour` and `endHour`, if you don’t want to set the minutes.
+* The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
+* If custom timeInterval is given, then the number of time slots calculated based on the given TimeInterval should result in integer value (total minutes % timeInterval = 0), otherwise next immediate time interval that result in integer value when divide total minutes of a day will be considered. For example, if timeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then timeInterval will be changed to ‘144’ (1440%144=0) by considering (total minutes % timeInterval = 0), it will return integer value for time slots rendering.
+* If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
+
 ## Number of days in view
-You can customize the days count by setting the [numberOfDaysInView]() property of `timeSlotViewSettings` in the calendar.
+You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -141,12 +149,7 @@ You can customize the days count by setting the [numberOfDaysInView]() property 
 ![Number of days in view](images/timeslot-views/numberOfDaysInView.png)
 
 >**NOTE**
-* The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
-* Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
-* No need to specify the decimal point values for `startHour` and `endHour`, if you don’t want to set the minutes.
-* The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
-* If custom timeInterval is given, then the number of time slots calculated based on the given TimeInterval should result in integer value (total minutes % timeInterval = 0), otherwise next immediate time interval that result in integer value when divide total minutes of a day will be considered. For example, if timeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then timeInterval will be changed to ‘144’ (1440%144=0) by considering (total minutes % timeInterval = 0), it will return integer value for time slots rendering.
-* If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
+* It is applicable for day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 ## Special time regions
 You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialRegions](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/specialRegions.html) property of `SfCalendar`. You need to set the [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/startTime.html) and [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/endTime.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) to create a `specialTimeRegion`, you can use the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/timeZone.html) property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) or [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) property of `TimeRegion`.
@@ -551,9 +554,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Allday panel Background color](images/getting-started/alldayPanelColor.jpg)
-
->**NOTE**
-* It is applicable for day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 ## See also
 

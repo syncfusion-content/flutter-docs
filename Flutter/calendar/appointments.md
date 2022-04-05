@@ -606,7 +606,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-### How to get the Recurrence editor field values from RRULE?
+#### How to get the Recurrence editor field values from RRULE?
 
 You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from calendar.
 
@@ -626,7 +626,7 @@ recurrenceProperties.interval = 1;
 recurrenceProperties.recurrenceCount = 3;
 recurrenceProperties.recurrenceRange = RecurrenceRange.count;
 
-### How to get the recurrence dates from RRULE?
+#### How to get the recurrence dates from RRULE?
 
 You can get the occurrences date time list of recurring appointment from RRULE using the [getRecurrenceDateTimeCollection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/getRecurrenceDateTimeCollection.html) method of SfCalendar.
 
@@ -661,7 +661,7 @@ You can also change any occurrence appointment, which exception from recurrence 
 
 You can add the recurrence exception appointments and recurrence exception dates to `Appointment` or remove them from `Appointment` by using its [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property.
 
-### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
+#### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
@@ -715,7 +715,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 You can add the recurrence exception appointments and recurrence exception dates to the CustomAppointment or remove them from CustomAppointment, you can create a custom class `Meeting` with mandatory field `RecurrenceExceptionDates`.
 
-### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
+#### Delete occurrence from custom recurrence pattern appointment or adding exception dates to custom recurrence pattern appointment
 
 You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the `getRecurrenceExceptionDates` override method of `CalendarDataSource`, which is used to map the exception dates to the calendar recurrence appointment. The deleted occurrence date will be considered as recurrence exception dates.
 To add the exception dates in the recurrence series of custom appointment, add the `recurrenceExceptionDates` property to custom class Meeting.
