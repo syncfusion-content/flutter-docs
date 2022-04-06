@@ -475,7 +475,7 @@ Widget build(BuildContext context) {
 
 ## Set a custom sorting icon
 
-`SfDataGrid` allows you to change the sort icon by using the `SfDataGridThemeData.sortIcon` property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
+`SfDataGrid` allows you to change the sort icon by using the [SfDataGridThemeData.sortIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIcon.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
 
