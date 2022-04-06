@@ -566,7 +566,7 @@ Widget build(BuildContext context) {
 
 ## How to check whether the current cell is in editing mode
 
-You can check whether the current cell is in editing mode or not by using the `DataGridController.isCurrentCellInEditing` property.
+You can check whether the current cell is in editing mode or not by using the [DataGridController.isCurrentCellInEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/isCurrentCellInEditing.html) property.
 
 {% tabs %}
 {% highlight dart %}
