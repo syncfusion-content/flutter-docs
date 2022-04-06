@@ -13,7 +13,7 @@ documentation: ug
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -39,11 +39,11 @@ documentation: ug
 
 {% endhighlight %}
 
-## Animation delay
+### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
-{% highlight dart %}
+{% highlight dart hl_lines="17" %}
     
     @override
     Widget build(BuildContext context) {
@@ -77,6 +77,11 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+
+### Dynamic animation
+
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
+
 
 ## Color Palette
 
@@ -119,25 +124,25 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-        static List<SalesData> chartData = <SalesData>[
-            SalesData('Rent', 1000,Colors.teal),
-            SalesData('Food', 2500,Colors.lightBlue),
-            SalesData('Savings', 760,Colors.brown),
-            SalesData('Tax', 1897,Colors.grey),
-            SalesData('Others', 2987,Colors.blueGrey)
+        static List<ChartData> chartData = <ChartData>[
+            ChartData('Rent', 1000,Colors.teal),
+            ChartData('Food', 2500,Colors.lightBlue),
+            ChartData('Savings', 760,Colors.brown),
+            ChartData('Tax', 1897,Colors.grey),
+            ChartData('Others', 2987,Colors.blueGrey)
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <PieSeries<SalesData, String>>[
-                            PieSeries<SalesData, String>(
+                        series: <PieSeries<ChartData, String>>[
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
               //map Color for each dataPoint datasource.
-              pointColorMapper: (SalesData sales,_) => sales.color,
+              pointColorMapper: (ChartData data,_) => data.color,
                             )
                         ]
                     )
@@ -189,11 +194,11 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     return Gradient.linear(chartShaderDetails.outerRect.topRight,
                         chartShaderDetails.outerRect.centerLeft, colors, stops);
                 },
-                series: <CircularSeries<_SalesData, String>>[
-                    PieSeries<_SalesData, String>(
+                series: <CircularSeries<_ChartData, String>>[
+                    PieSeries<_ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_ChartData data, _) => data.x,
                     )
                 ]
             ));
@@ -222,14 +227,15 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         _resolveTransform(chartShaderDetails.outerRect, TextDirection.ltr)
                     );
                 },
-                series: <CircularSeries<_SalesData, String>>[
-                    RadialBarSeries<_SalesData, String>(
+                series: <CircularSeries<_ChartData, String>>[
+                    RadialBarSeries<_ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_ChartData data, _) => data.x,
                     )
                 ]
-            ));
+            )
+        );
     }
 
     // Rotate the sweep gradient according to the start angle 
@@ -261,11 +267,11 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         stops
                     );
                 },
-                series: <CircularSeries<_SalesData, String>>[
-                    DoughnutSeries<_SalesData, String>(
+                series: <CircularSeries<_ChartData, String>>[
+                    DoughnutSeries<_ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_ChartData data, _) => data.x,
                     )
                 ]
             ));
@@ -311,11 +317,11 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
                                 Matrix4.identity().scaled(0.4).storage
                     );
                 },
-                series: <CircularSeries<_SalesData, String>>[
-                    PieSeries<_SalesData, String>(
+                series: <CircularSeries<_ChartData, String>>[
+                    PieSeries<_ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_ChartData data, _) => data.x,
                     )
                 ]
             ));
@@ -324,6 +330,12 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 {% endhighlight %}
 
 ![Image shader](images/circular-customization/pie_imageshader.jpg)
+
+#### See Also 
+
+* [Fill the Flutter Pie Chart with gradient](https://www.syncfusion.com/kb/12558/how-to-fill-the-flutter-pie-chart-with-gradient-sfcircularchart).
+
+* [Fill the Flutter Pie Chart with desired images](https://www.syncfusion.com/kb/12533/how-to-fill-the-flutter-pie-chart-with-desired-images-sfcircularchart).
 
 ## Shader mapping for data points
 
@@ -461,13 +473,9 @@ The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
 
     class _ChartShaderData {
         _ChartShaderData(this.x, this.y, this.text, this.shader);
-
         final String x;
-
         final num y;
-
         final String text;
-
         final Shader shader;
     }
 
@@ -485,20 +493,20 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 >**Note**: This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
-{% highlight dart %}
+{% highlight dart hl_lines="10" %}
 
     @override
     Widget build(BuildContext context) {
         getImage();
         return Container(
             child: SfCircularChart(
-                series: <CircularSeries<_SalesData, String>>[
-                    PieSeries<_SalesData, String>(
+                series: <CircularSeries<_ChartData, String>>[
+                    PieSeries<_ChartData, String>(
                         dataSource: chartData,
                         // Sweep gradient will be formed with default palette colors.
                         pointRenderMode: PointRenderMode.gradient,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
+                        xValueMapper: (_ChartData data, _) => data.x,
+                        xValueMapper: (_ChartData data, _) => data.x,
                     )
                 ]
             )
@@ -508,10 +516,6 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 
 ![Image pointshadermapper](images/circular-customization/pie_rendermode.jpg)
-
-## Dynamic animation
-
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
 
 
 ## Empty points
@@ -632,4 +636,4 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 #### See Also
 
-* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart)
+* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart).

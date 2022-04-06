@@ -52,7 +52,7 @@ The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/
 To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15 17" %}
 
     @override
     Widget build(BuildContext context) {
@@ -67,8 +67,10 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
                       child: const Text('Text')
                     ),
                     coordinateUnit: CoordinateUnit.point,
-                    x: 20, // x position of annotation
-                    y: 40 // y position of annotation
+                    // x position of annotation
+                    x: 20, 
+                    // y position of annotation
+                    y: 40 
                   )
                 ]
               )
@@ -84,7 +86,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
 
 To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="15" %}
 
     @override
     Widget build(BuildContext context) {
@@ -121,7 +123,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 To position the annotation based on the percentage values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the percentage values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %}
 
     @override
     Widget build(BuildContext context) {
@@ -175,7 +177,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %}
 
     @override
     Widget build(BuildContext context) {
@@ -210,7 +212,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
 
 The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/horizontalAlignment.html) for annotation
 
-{% highlight dart %}
+{% highlight dart hl_lines="17" %}
 
     @override
     Widget build(BuildContext context) {

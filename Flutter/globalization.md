@@ -156,13 +156,12 @@ To accomplish this add to your pub spec file the [`syncfusion_localizations`](ht
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_calendar: ^xx.x.xx
     syncfusion_localizations: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter`](https://pub.dev/publishers/syncfusion.com/packages ) widgets.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter`](https://pub.dev/publishers/syncfusion.com/packages ) widgets.
 
 To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_localizations) and [`Syncfusion Flutter Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widgets, import the following libraries in your Dart code.
 
@@ -173,7 +172,7 @@ To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_local
 
 {% endhighlight %}
 
-After importing the required packages, initialize the [`calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widget as a child of any widget and specify `localizationsDelegates` and `supportedLocales` for the MaterialApp.
+After importing the required packages, initialize the [`calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widget as a child of any widget and specify [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) and [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) for the MaterialApp.
 
 {% highlight dart %} 
 
@@ -215,9 +214,14 @@ And some languages may require more than language code to differentiate properly
 {% highlight dart %} 
 
     supportedLocales: [
-        const Locale.fromSubtags(languageCode: 'zh'), // generic Chinese 'zh'
-        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'), // generic traditional Chinese 'zh_Hant'
-        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'), // 'zh_Hant_TW'
+        // generic Chinese 'zh'
+        const Locale.fromSubtags(languageCode: 'zh'), 
+
+        // generic traditional Chinese 'zh_Hant'
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'), 
+
+        // 'zh_Hant_TW'
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'), 
     ],
 
 {% endhighlight %}
@@ -233,9 +237,11 @@ If you wish to add your own custom culture apart from the supported 74 languages
 Create a dart file in your application and import the required packages.
 
 {% highlight dart %} 
+
     import 'package:flutter/foundation.dart';
     import 'package:flutter/material.dart';
     import 'package:syncfusion_flutter_core/localizations.dart';
+    
 {% endhighlight %}
 
 **Step 2**
@@ -253,6 +259,8 @@ Create a dart file in your application and import the required packages.
 
         @override
         String get noSelectedDateCalendarLabel => 'Üritusi pole';
+
+        // other properties
     }
 
 {% endhighlight %}
@@ -283,7 +291,7 @@ Create a delegate for the `Estonian` language.
 
 **Step 4**
 
-Import the created dart file in your application and specify the `localizationsDelegates`, `supportedLocales` and `locale`. Then run your application.
+Import the created dart file in your application and specify the [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html), [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) and [`locale`](https://api.flutter.dev/flutter/package-intl_locale/package-intl_locale-library.html). Then run your application.
 
 {% highlight dart %} 
 
