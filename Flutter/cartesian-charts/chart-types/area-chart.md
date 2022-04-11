@@ -23,6 +23,7 @@ The following properties can be used to customize the appearance:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -58,6 +59,7 @@ The following properties can be used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area chart](cartesian-chart-types-images/area.jpg)
 
@@ -65,6 +67,7 @@ The following properties can be used to customize the appearance:
 
 The borders of the area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property. The default value of the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property is [`BorderDrawMode.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html). The other values are [`BorderDrawMode.all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html) and [`BorderDrawMode.excludeBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html).
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -92,6 +95,7 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area border](cartesian-chart-types-images/area_border.jpg)
 
@@ -100,6 +104,7 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
 
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -160,6 +165,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area gradients](cartesian-chart-types-images/area_gradient.png)
 
@@ -167,6 +173,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 Data points with a null value are considered empty points. Empty data points are ignored and are not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/mode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -213,6 +220,7 @@ Data points with a null value are considered empty points. Empty data points are
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Area with empty points](cartesian-chart-types-images/area_emptypoints.png)
 
@@ -222,6 +230,7 @@ Data points with a null value are considered empty points. Empty data points are
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical area chart.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %} 
 
     @override
@@ -246,6 +255,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Vertical area chart](cartesian-chart-types-images/vertical_area.png)
 

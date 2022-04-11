@@ -22,6 +22,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -76,6 +77,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column](cartesian-chart-types-images/stacked_column.jpg)
 
@@ -83,6 +85,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html) will be stacked in a single group.
 
+{% tabs %}
 {% highlight dart hl_lines="10 16 22 28" %} 
     
     @override
@@ -134,6 +137,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column grouping](cartesian-chart-types-images/stacked_column_grouping.jpg)
 
@@ -141,6 +145,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
 
 You can show the cumulative data label values using the [`showCumulativeValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showCumulativeValues.html) property. If the series are grouped using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html), then cumulative values will be shown based on grouping.
 
+{% tabs %}
 {% highlight dart hl_lines="13 23 33 43" %} 
     
     @override
@@ -208,6 +213,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked column cumulative](cartesian-chart-types-images/stacked_column_cumulative.jpg)
 

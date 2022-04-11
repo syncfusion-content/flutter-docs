@@ -11,6 +11,7 @@ documentation: ug
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -44,6 +45,7 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Selection](images/selection/default_selection.jpg)
 
@@ -61,6 +63,7 @@ You can customize the segments using the below properties.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 * [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - used to customize the minimum range of selected series or points.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -92,6 +95,7 @@ You can customize the segments using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.jpg)
 
@@ -99,6 +103,7 @@ You can customize the segments using the below properties.
 
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) property of chart.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -116,6 +121,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.jpg)
 
@@ -125,6 +131,7 @@ You can decide, whether to deselect the selected data point/series or remain sel
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %} 
 
     late SelectionBehavior _selectionBehavior;
@@ -159,6 +166,7 @@ Defaults to `true`.
    }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Toggle selection](images/selection/deselection.gif)
 

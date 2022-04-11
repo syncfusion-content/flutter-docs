@@ -11,6 +11,7 @@ documentation: ug
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -40,6 +41,7 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Annotation](images/annotation/default_annotation.jpg)
 
@@ -52,6 +54,7 @@ The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/
 To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
 
 
+{% tabs %}
 {% highlight dart hl_lines="15 17" %}
 
     @override
@@ -81,11 +84,13 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 **Positioning based on coordinateUnit as pixels**
 
 To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
+{% tabs %}
 {% highlight dart hl_lines="15" %}
 
     @override
@@ -115,6 +120,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
 
@@ -123,6 +129,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 To position the annotation based on the percentage values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`CoordinateUnit.percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the percentage values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
 
+{% tabs %}
 {% highlight dart hl_lines="18" %}
 
     @override
@@ -170,6 +177,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on coordinateUnit as percentage](images/annotation/percentage.png)
 
@@ -177,6 +185,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %}
 
     @override
@@ -205,6 +214,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Alignment of annotation
 
@@ -212,6 +222,7 @@ Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](h
 
 The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/horizontalAlignment.html) for annotation
 
+{% tabs %}
 {% highlight dart hl_lines="17" %}
 
     @override
@@ -241,11 +252,13 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding multiple annotation
 
 You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) property. as depicted in below code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -299,6 +312,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple annotation](images/annotation/multiple_annotation_pixel.jpg)
 
@@ -306,6 +320,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
 
 When there are multiple axes in the chart, annotation can be added for a particular axis by using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/yAxisName.html  ) properties. It is shown in the below code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -371,6 +386,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multiple axis annotation](images/annotation/annotation_axis.jpg)
 
@@ -378,6 +394,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
 
 Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -434,6 +451,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![Chart with Watermark](images/annotation/watermark.png)

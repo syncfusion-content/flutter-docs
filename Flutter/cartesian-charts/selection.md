@@ -11,6 +11,7 @@ documentation: ug
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -57,6 +58,7 @@ The selection feature in chart let you to select a segment in a series or the se
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Customizing the segments
 
@@ -72,6 +74,7 @@ You can customize the segments using the below properties.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 * [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - to customize the minimum range of selected series or points.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -120,6 +123,7 @@ You can customize the segments using the below properties.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.jpg)
 
@@ -131,6 +135,7 @@ The selection features allows you to select segments in following modes using [`
 * [`SelectionType.Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the entire series.
 * [`SelectionType.Cluster`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the cluster of points of different series i.e selects the points with same index in each series.
 
+{% tabs %}
 {% highlight dart %} 
 
     late SelectionBehavior _selectionBehavior;
@@ -182,6 +187,7 @@ The selection features allows you to select segments in following modes using [`
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Cluster mode](images/selection/cluster_mode.jpg)
 
@@ -189,6 +195,7 @@ The selection features allows you to select segments in following modes using [`
 
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) property of chart.
 
+{% tabs %}
 {% highlight dart %} 
 
     late SelectionBehavior _selectionBehavior;
@@ -228,6 +235,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.jpg)
 
@@ -235,6 +243,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/initialSelectedDataIndexes.html) property of the [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html).
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -286,6 +295,7 @@ You can select a point or series programmatically on a chart using [`initialSele
         final double y1;
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
 
@@ -296,6 +306,7 @@ You can decide, whether to deselect the selected data point/series or remain sel
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
+{% tabs %}
 {% highlight dart %} 
     
     late selectionBehavior _selectionBehavior;
@@ -336,6 +347,7 @@ Defaults to `true`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Toggle selection](images/selection/cartesian_deselection.gif)
 

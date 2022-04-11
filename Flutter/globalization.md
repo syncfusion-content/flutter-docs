@@ -69,7 +69,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
 
 ## Localizations
 
-By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations). As of now, this package supports 74 languages which are listed below.
+By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations). As of now, this package supports 76 languages which are listed below.
 
 *  af - Afrikaans 
 *  am - Amharic 
@@ -121,6 +121,8 @@ By default, the Syncfusion widgets are implemented with English localization (en
 *  nb - Norwegian Bokmål 
 *  ne - Nepali 
 *  nl - Dutch Flemish 
+*  no - Norwegian
+*  or - Oriya
 *  pa - Panjabi Punjabi 
 *  pl - Polish 
 *  ps - Pushto Pashto 

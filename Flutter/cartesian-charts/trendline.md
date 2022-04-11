@@ -40,6 +40,7 @@ Chart supports 6 types of trendlines.
 
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline, use trendline type as Linear.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -73,6 +74,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![linear trendline](images/trendline/linear.png)
 
@@ -82,6 +84,7 @@ An exponential trendline is a curved line that is most useful when data values r
 
 To render an exponential trendline, use trendline type as Exponential.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -115,6 +118,7 @@ To render an exponential trendline, use trendline type as Exponential.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![exponential trendline](images/trendline/exponential.png)
 
@@ -124,6 +128,7 @@ A logarithmic trendline is a best-fit curved line that is most useful when the r
 
 To render a logarithmic trendline, use trendline type as Logarithmic 
 
+{% tabs %}
 {% highlight dart hl_lines="14" %}
 
     @override
@@ -157,6 +162,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
       }
 
 {% endhighlight %}
+{% endtabs %}
  
 ![logarithmic trendline](images/trendline/logarithmic.png)
 
@@ -166,6 +172,7 @@ A polynomial trendline is a curved line that is used when data fluctuates.
 
 To render a polynomial trendline, use trendline type as Polynomial.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %}
 
     @override
@@ -199,6 +206,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![polynomial trendline](images/trendline/polynomial.png)
@@ -208,6 +216,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 To render a power trendline, use trendline type as Power
 
+{% tabs %}
 {% highlight dart hl_lines="14" %}
 
     @override
@@ -241,6 +250,7 @@ To render a power trendline, use trendline type as Power
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![power trendline](images/trendline/power.png)
 
@@ -249,6 +259,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 To render a moving average trendline, use trendline type as MovingAverage 
 
+{% tabs %}
 {% highlight dart hl_lines="14" %}
 
     @override
@@ -282,6 +293,7 @@ To render a moving average trendline, use trendline type as MovingAverage
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![linear trendline](images/trendline/movingaverage.png)
 
@@ -295,6 +307,7 @@ Forward Forecasting and Backward Forecasting are the two types of forecasting.
 
 The value set for forwardForecast is used to determine the distance moving towards the future trend.
 
+{% tabs %}
 {% highlight dart hl_lines="15" %}
 
     @override
@@ -329,6 +342,7 @@ The value set for forwardForecast is used to determine the distance moving towar
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/forwardforecast.png)
 
@@ -336,6 +350,7 @@ The value set for forwardForecast is used to determine the distance moving towar
 
 The value set for the backwardForecast is used to determine the past trends.
 
+{% tabs %}
 {% highlight dart hl_lines="15" %}
 
     @override
@@ -370,6 +385,7 @@ The value set for the backwardForecast is used to determine the past trends.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/backwardforecast.png)
 
@@ -377,6 +393,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 Legend for trendline gets rendered together with the series legend when the legend is set to be visible. Also when the [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html) property is assigned to a trendline, the name of the legend is changed based on the name of the trendlines.
 
+{% tabs %}
 {% highlight dart hl_lines="16" %}
 
     @override
@@ -412,6 +429,7 @@ Legend for trendline gets rendered together with the series legend when the lege
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![forward forecast](images/trendline/legend.png)
 
@@ -420,6 +438,7 @@ Legend for trendline gets rendered together with the series legend when the lege
 
 Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/markerSettings.html) .
 
+{% tabs %}
 {% highlight dart hl_lines="16" %}
 
     @override
@@ -455,6 +474,7 @@ Data markers are used to provide information about the data points in the series
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![backward forecast](images/trendline/marker.png)
 
@@ -462,6 +482,7 @@ Data markers are used to provide information about the data points in the series
 
 Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %}
 
     late TooltipBehavior _tooltipBehavior;
@@ -508,6 +529,7 @@ Chart will display details about the points through tooltip, when user interacti
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![tooltip](images/trendline/tooltip.png)

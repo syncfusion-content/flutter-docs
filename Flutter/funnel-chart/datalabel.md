@@ -27,6 +27,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - used to add the rounded corners to the data label shape.
 * [`angle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/angle.html)  - used to rotate the labels.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
 
     @override
@@ -63,6 +64,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/datalabel/default_datalabel.png)
 
@@ -72,6 +74,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the Funnel series data labels either [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) or [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html). By default the label of Funnel chart is placed [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) the series.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -97,6 +100,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/datalabel/datalabel_position.png)
 
@@ -106,6 +110,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
+{% tabs %}
 {% highlight dart hl_lines="16" %} 
 
     @override
@@ -133,6 +138,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/datalabel/use_series_color.png)
 
@@ -140,6 +146,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 Data label and its connector line in the Funnel charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
+{% tabs %}
 {% highlight dart hl_lines="17" %} 
 
     @override
@@ -167,6 +174,7 @@ Data label and its connector line in the Funnel charts for the point value 0 can
         );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)
 
@@ -184,6 +192,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
   
 >**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
 
     Widget build(BuildContext context) {
@@ -199,5 +208,6 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
         );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![label_overflow](images/datalabel/funnel_overflow.jpg)
