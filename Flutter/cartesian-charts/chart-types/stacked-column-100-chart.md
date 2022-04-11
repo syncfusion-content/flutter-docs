@@ -22,6 +22,7 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/borderRadius.html) -  used to add the rounded corners to the rectangle.
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -60,6 +61,7 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 column chart](cartesian-chart-types-images/stacked_column_100.png)
 
@@ -69,6 +71,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
+{% tabs %}
 {% highlight dart hl_lines="13 14 20 21" %} 
     
     @override
@@ -101,6 +104,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
 

@@ -11,6 +11,7 @@ documentation: ug
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -42,6 +43,7 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Customizing the segments
 
@@ -56,6 +58,7 @@ You can customize the segments using the below properties.
 * [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedOpacity.html) - used to control the transparency of the selected segment.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -90,6 +93,7 @@ You can customize the segments using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing segments](images/selection/customizing_segments.png)
 
@@ -97,6 +101,7 @@ You can customize the segments using the below properties.
 
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) property of chart.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -114,6 +119,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Multi selection](images/selection/multi_select.png)
 
@@ -124,6 +130,7 @@ You can decide, whether to deselect the selected data point/series or remain sel
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
+{% tabs %}
 {% highlight dart %} 
     
     late SelectionBehavior _selectionBehavior;
@@ -155,11 +162,13 @@ Defaults to `true`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Selection on initial rendering
 
 You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/initialSelectedDataIndexes.html) property of chart.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -176,6 +185,7 @@ You can select a point or series programmatically on a chart using [`initialSele
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Initial selection](images/selection/initial_render_selection.png)
 
@@ -192,6 +202,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 >**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
+{% tabs %}
 {% highlight dart %}
 
     late SfPyramidChart chart;
@@ -243,3 +254,4 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}

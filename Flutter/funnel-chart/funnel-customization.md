@@ -16,6 +16,7 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderColor.html) - changes the stroke color of the series.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/pointColorMapper.html) - Maps the color from data source.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -48,6 +49,7 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel chart](images/funnel-charts/funnel.jpg)
 
@@ -55,6 +57,7 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
 
 You can modify the size of funnel series using the [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/width.html) properties. It ranges from 0% to 100%.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -84,6 +87,7 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel size](images/funnel-charts/funnel_size.jpg)
 
@@ -91,6 +95,7 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
 
 You can modify the neck size of funnel series using the [`neckHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckHeight.html) and [`neckWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckWidth.html) properties. It ranges from 0% to 100%.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -120,6 +125,7 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Neck size](images/funnel-charts/neck_size.jpg)
 
@@ -127,6 +133,7 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
 
 You can control the gap between the two segments using the [`gapRatio`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/gapRatio.html) property. It ranges from 0 to 1.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -155,6 +162,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Funnel gap](images/funnel-charts/funnel_gap.jpg)
 
@@ -164,6 +172,7 @@ You can explode a funnel segment using the [`explodeIndex`](https://pub.dev/docu
 
 Also, the segments can be exploded by tapping the segment.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -194,6 +203,7 @@ Also, the segments can be exploded by tapping the segment.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Explode](images/funnel-charts/funnel_explode.jpg)
 
@@ -201,6 +211,7 @@ Also, the segments can be exploded by tapping the segment.
 
 The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/palette.html) property is used to define colors for the series available in chart. By default, a set of 10 colors is predefined for applying it to the series. If the colors specified in the series are less than the number of series, then the remaining series will be filled with the specified palette colors rotationally.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -226,5 +237,6 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/funnel-charts/funnel_palette.jpg)

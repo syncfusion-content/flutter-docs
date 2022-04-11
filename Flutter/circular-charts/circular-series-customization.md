@@ -13,6 +13,7 @@ documentation: ug
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -38,11 +39,13 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
+{% tabs %}
 {% highlight dart hl_lines="17" %}
     
     @override
@@ -77,6 +80,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Dynamic animation
 
@@ -88,6 +92,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
 
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -113,6 +118,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Color Palette](images/circular-customization/color_palette.jpg)
 
@@ -120,6 +126,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -152,6 +159,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![mapcolor](images/circular-customization/color-mapping.jpg)
 
@@ -168,6 +176,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 #### Linear gradient
 
+{% tabs %}
 {% highlight dart %}
 
     List<Color> colors = <Color>[
@@ -205,11 +214,13 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }   
 
 {% endhighlight %}
+{% endtabs %}
 
 ![shader linear](images/circular-customization/pie_linear.jpg)
 
 #### Sweep gradient
 
+{% tabs %}
 {% highlight dart %}
     
     @override
@@ -248,11 +259,13 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     double _degreeToRadian(int deg) => deg * (3.141592653589793 / 180);
 
 {% endhighlight %}
+{% endtabs %}
 
 ![shader sweep](images/circular-customization/radialbar_sweep.jpg)
 
 #### Radial gradient
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -278,6 +291,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }  
 
 {% endhighlight %}
+{% endtabs %}
 
 ![shader radial](images/circular-customization/doughnut_radial.jpg)
 
@@ -285,6 +299,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 The data points of pie, doughnut and radial bar charts can also be filled with image by returning [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) with required parameters.
 
+{% tabs %}
 {% highlight dart %}
 
     /// Package import
@@ -328,6 +343,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
     }  
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Image shader](images/circular-customization/pie_imageshader.jpg)
 
@@ -341,6 +357,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
+{% tabs %}
 {% highlight dart %}
 
     /// Package import
@@ -480,6 +497,7 @@ The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Image pointshadermapper](images/circular-customization/pie_pointshadermapper.jpg)
 
@@ -493,6 +511,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 >**Note**: This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %}
 
     @override
@@ -514,6 +533,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Image pointshadermapper](images/circular-customization/pie_rendermode.jpg)
 
@@ -522,6 +542,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -553,6 +574,7 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/circular-customization/emptyPoints.jpg)
 
@@ -560,6 +582,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -593,6 +616,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/circular-customization/emptyPointcustomization.jpg)
 
@@ -600,6 +624,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) property specifies the data points in the series can be sorted in [`SortingOrder.ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) or [`SortingOrder.descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) is set to [`SortingOrder.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -631,6 +656,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sorting](images/circular-customization/sortings.jpg)
 

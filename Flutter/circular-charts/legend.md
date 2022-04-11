@@ -11,6 +11,7 @@ documentation: ug
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) contains list of data points in chart. The information provided in each legend item helps to identify the corresponding data points in chart.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -45,6 +46,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/default_legend.jpg)
 
@@ -62,6 +64,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`iconBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconBorderColor.html) - used to change the stroke color of the legend icon shape.
 * [`itemPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/itemPadding.html) - used to add padding between the first legend text and the second legend icon shape.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -90,6 +93,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customized Legend](images/legend/customized_legend.jpg)
 
@@ -105,6 +109,7 @@ The following properties can be used to define and customize the [`title`](https
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the legend text.
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text. It can be near, center, or far.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -145,6 +150,7 @@ The following properties can be used to define and customize the [`title`](https
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend title](images/legend/legend_title.jpg)
 
@@ -152,6 +158,7 @@ The following properties can be used to define and customize the [`title`](https
 
 You can control the visibility of the series by tapping the legend item. You can enable this feature by enabling the [`toggleSeriesVisibility`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/toggleSeriesVisibility.html) property.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %} 
 
     @override
@@ -179,11 +186,13 @@ You can control the visibility of the series by tapping the legend item. You can
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Legend visibility
 
 The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) is used to toggle the visibility of legend.
 
+{% tabs %}
 {% highlight dart hl_lines="9" %} 
 
     @override
@@ -210,11 +219,13 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Legend overflow
 
 The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`LegendItemOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode.html).
 
+{% tabs %}
 {% highlight dart hl_lines="10" %} 
 
     @override
@@ -242,6 +253,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/overflow_wrap.jpg)
 
@@ -253,6 +265,7 @@ You can change the position of the legend inside the chart. The following proper
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html).
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is [`LegendItemOrientation.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html). Also you can set this to [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html).
 
+{% tabs %}
 {% highlight dart hl_lines="10" %} 
 
     @override
@@ -280,6 +293,7 @@ You can change the position of the legend inside the chart. The following proper
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/legend_position.jpg)
 
@@ -288,6 +302,7 @@ You can change the position of the legend inside the chart. The following proper
 Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) is [`LegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html), then the legend will be placed in the top but in the position added to the actual top position. 
 Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %}
 
     @override
@@ -320,11 +335,13 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Legend item template
 
 You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -358,5 +375,6 @@ You can customize the appearance of legend items with your template by using [`l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/legend/legend_template.jpg)

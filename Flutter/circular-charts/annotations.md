@@ -11,6 +11,7 @@ documentation: ug
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -36,6 +37,7 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Annotation](images/annotation/default_annotation.jpg)
 
@@ -49,6 +51,7 @@ Defaults to `0%`.
 
 To place the annotation based on the radius values, set the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html), and for changing the alignment of the annotation use the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) properties of annotation are shown in the following code snippet.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -76,6 +79,7 @@ To place the annotation based on the radius values, set the [`radius`](https://p
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Positioning based on Alignment and radius](images/annotation/annotation_positioning.jpg)
 
@@ -83,6 +87,7 @@ To place the annotation based on the radius values, set the [`radius`](https://p
 
 Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -131,6 +136,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
         }
         
 {% endhighlight %}
+{% endtabs %}
 
 
 ![Chart with Watermark](images/annotation/watermark.jpg)

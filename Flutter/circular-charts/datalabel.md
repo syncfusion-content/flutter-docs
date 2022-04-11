@@ -30,6 +30,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`showCumulativeValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showCumulativeValues.html) - to show the cumulative values in stacked type series charts.
 * [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) - action on data labels intersection. The intersecting data labels can be hidden.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -57,6 +58,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel](images/datalabel/default_datalabel.jpg)
 
@@ -64,6 +66,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 Data label considers the format used in the Circular series by default. In the below code snippet, we have specified format for the data label in the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) and you can see that the same format is applied to the data label.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -98,6 +101,7 @@ Data label considers the format used in the Circular series by default. In the b
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DataLabel format](images/datalabel/datalabel_format.jpg)
 
@@ -107,6 +111,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the circular series data labels either [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) or [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html). By default the label of circular chart is placed [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) the series.
 
+{% tabs %}
 {% highlight dart hl_lines="15" %} 
 
     @override
@@ -134,6 +139,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label position](images/datalabel/datalabel_position.jpg)
 
@@ -156,6 +162,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 
 >**Note**: The smart label positioning is applicable only for the pie and doughnut series.
 
+{% tabs %}
 {% highlight dart hl_lines="35" %} 
 
     @override
@@ -208,6 +215,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Smart labels](images/datalabel/smart_datalabel.jpg)
 
@@ -215,6 +223,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
+{% tabs %}
 {% highlight dart hl_lines="17" %} 
 
     @override
@@ -244,6 +253,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Series color](images/datalabel/use_series_color.jpg)
 
@@ -256,6 +266,7 @@ This feature is used to connect label and data point using a line. It is applica
 * [`length`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/length.html) - specifies the length of the connector line.
 * [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/type.html) - specifies the shape of connector line either [`ConnectorType.curve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html) or [`ConnectorType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html). 
 
+{% tabs %}
 {% highlight dart hl_lines="18" %} 
 
     @override
@@ -287,6 +298,7 @@ This feature is used to connect label and data point using a line. It is applica
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Connector line](images/datalabel/connector_line.jpg)
 
@@ -294,6 +306,7 @@ This feature is used to connect label and data point using a line. It is applica
 
 The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) property is used to map the text from data source. 
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -336,6 +349,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Data label mapper](images/datalabel/value_mapper.jpg)
 
@@ -343,6 +357,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html).
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -377,6 +392,7 @@ You can customize the appearance of the data label with your own template using 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Label template](images/datalabel/datalabel_template.jpg)
 
@@ -384,6 +400,7 @@ You can customize the appearance of the data label with your own template using 
 
 Data label and its connector line in the Circular charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %} 
 
     final List<ChartData> chartData = <ChartData>[
@@ -418,6 +435,7 @@ Data label and its connector line in the Circular charts for the point value 0 c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![datalabel0value](images/datalabel/datalabel_0_value.png)
 
@@ -435,6 +453,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
   
  >**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %}
 
     Widget build(BuildContext context) {
@@ -453,4 +472,5 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
     }
 
 {% endhighlight %}
+{% endtabs %}
 ![dataLabel_overflow](images/datalabel/circular_overflow.jpg)
