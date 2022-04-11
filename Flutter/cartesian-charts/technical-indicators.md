@@ -51,6 +51,7 @@ Accumulation distribution indicator is a volume-based indicator designed to meas
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
      @override
@@ -87,6 +88,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![ADIndicator](images/technical-indicators/ad.jpg)
 
@@ -96,6 +98,7 @@ ATR indicator is a technical analysis volatility indicator. This indicator does 
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -128,6 +131,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![ATRIndicator](images/technical-indicators/atr.jpg)
 
@@ -139,6 +143,7 @@ Also, we can specify standard deviation values for the BollingerBand indicator u
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -169,6 +174,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![BollingerBand](images/technical-indicators/bollinger.jpg)
 
@@ -180,6 +186,7 @@ It also has a [`valueField`](https://pub.dev/documentation/syncfusion_flutter_ch
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -212,6 +219,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![EMAIndicator](images/technical-indicators/ema.jpg)
 
@@ -225,6 +233,7 @@ The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
     
     @override
@@ -258,6 +267,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![MACDIndicator](images/technical-indicators/macd.jpg)
 
@@ -267,6 +277,7 @@ This indicator also has a centerline. The [`centerLineColor`](https://pub.dev/do
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -298,6 +309,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![MomentumIndicator](images/technical-indicators/momentum.jpg)
 
@@ -308,6 +320,7 @@ The [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -341,6 +354,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![RSIIndicator](images/technical-indicators/rsi.jpg)
 
@@ -348,6 +362,7 @@ Refer the following example,
 
 The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) is similar to [`Exponential moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmaIndicator-class.html) and this can be defined using the following code examples.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -380,6 +395,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![SMAIndicator](images/technical-indicators/sma.jpg)
 
@@ -391,6 +407,7 @@ In this indicator [`upperLineColor`](https://pub.dev/documentation/syncfusion_fl
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -423,6 +440,7 @@ Refer the following example,
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![StochasticIndicator](images/technical-indicators/stochastic.jpg)
 
@@ -432,6 +450,7 @@ A TMA indicator is simply a double-smoothed simple moving average of data calcul
 
 Refer the following example,
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -463,6 +482,7 @@ Refer the following example,
         final double? close;
       }
 {% endhighlight %}
+{% endtabs %}
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
 
@@ -473,6 +493,7 @@ Legend provides information about the series rendered in the chart. Legend for t
 
 The following code example can define the legend.
 
+{% tabs %}
 {% highlight dart hl_lines="10 11" %}
 
     @override
@@ -505,6 +526,7 @@ The following code example can define the legend.
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Legend](images/technical-indicators/legend.jpg)
 
@@ -515,6 +537,7 @@ Also refer [`technical indicators event`](https://pub.dev/documentation/syncfusi
 
 The chart will display the segment information through the tooltip. It is used to show information about the segment when you tap on the segment. The technical indicator tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html) that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) of the series.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %}
    
    late TooltipBehavior _tooltipBehavior;
@@ -557,6 +580,7 @@ The chart will display the segment information through the tooltip. It is used t
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![tooltip](images/technical-indicators/tooltip.jpg)
 
@@ -566,6 +590,7 @@ In order to use [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion
 
 Refer the following example below
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -613,6 +638,7 @@ Refer the following example below
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Binding data source to Indicators](images/technical-indicators/indicator_binding.jpg)
 

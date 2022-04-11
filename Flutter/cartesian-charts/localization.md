@@ -13,6 +13,7 @@ By default, the Cartesian charts widget supports US English localizations. You c
 
 To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
 
+{% tabs %}
 {% highlight dart %}
 
     dependencies:
@@ -20,9 +21,11 @@ To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` 
         sdk: flutter
 
 {% endhighlight %}
+{% endtabs %}
 
 Next, import the `flutter_localizations` library and specify [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) and [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) for [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp/MaterialApp.html).
 
+{% tabs %}
 {% highlight dart %}
 
     import 'package:flutter_localizations/flutter_localizations.dart'; 
@@ -52,6 +55,7 @@ Next, import the `flutter_localizations` library and specify [`localizationsDele
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Localization support for built-in text
 
@@ -65,25 +69,30 @@ Cartesian chart custom text can be localized using the [`syncfusion_localization
 
 To use [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations), add the package as dependency to `pubspec.yaml` file.
 
+{% tabs %}
 {% highlight dart %}
 
     dependencies:
       syncfusion_localizations: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**: Here xx.x.xx denotes the current version of [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 
 Next, import the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) library.
 
+{% tabs %}
 {% highlight dart %}
 
     import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations-class.html) in the [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html), which is used to localize the custom string (series name displayed in legend) in the Cartesian chart and specify the [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) as well.
 
+{% tabs %}
 {% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
@@ -140,5 +149,6 @@ Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentati
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Localization Chart](images/localization/localization.jpg)

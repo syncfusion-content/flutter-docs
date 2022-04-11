@@ -34,6 +34,7 @@ The following properties are used to customize the appearance:
 * [`lastPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/lastPointColor.html) - Specifies the last point color.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/width.html) - Specifies the width of the line series.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -59,6 +60,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark line chart](images/sparkline-types/sparkline.png)
 
@@ -66,6 +68,7 @@ The following properties are used to customize the appearance:
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/dashArray.html) property of [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) is used to render line chart with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -84,6 +87,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark line dashArray](images/sparkline-types/sparkline-dasharray.png)
 
@@ -117,6 +121,7 @@ The following properties are used to customize the appearance:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/borderWidth.html) - Changes the stroke width of the spark area chart.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/borderColor.html) - Changes the stroke color of the spark area chart.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -138,6 +143,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark area chart](images/sparkline-types/spark-area.png)
 
@@ -164,6 +170,7 @@ The following properties are used to customize the appearance:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/borderWidth.html) - Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/borderColor.html) - Changes the stroke color of the series.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -184,6 +191,7 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark Bar chart](images/sparkline-types/spark-bar.png)
 
@@ -216,6 +224,7 @@ The following properties are used to customize the appearance:
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/borderColor.html) - Changes the stroke color of the win loss chart.
 * [`tiePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/tiePointColor.html) - Specifies the tie point color of win loss chart. color.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -232,5 +241,6 @@ The following properties are used to customize the appearance:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spark win-loss chart](images/sparkline-types/spark-win-loss.png)

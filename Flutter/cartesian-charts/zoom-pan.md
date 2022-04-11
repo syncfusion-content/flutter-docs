@@ -14,6 +14,7 @@ documentation: ug
 
 Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to `false`. Pinching can be performed by moving two fingers over the chart.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
 
     late ZoomPanBehavior _zoomPanBehavior;
@@ -45,11 +46,13 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Double tap zooming
 
 Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to `false`.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -81,6 +84,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Selection zooming
 
@@ -94,6 +98,7 @@ You can customize the selection rectangle using the below properties.
 * [`selectionRectBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/selectionRectBorderColor.html) - used to change the stroke color of the selection rectangle.
 * [`selectionRectColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/selectionRectColor.html) - used to change the background color of the selection rectangle.
 
+{% tabs %}
 {% highlight dart hl_lines="6" %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -127,6 +132,7 @@ You can customize the selection rectangle using the below properties.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Selection Zooming](images/zooming-panning/before_zooming.jpg)
 
@@ -148,6 +154,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 * [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the chart title.
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the chart title.
 
+{% tabs %}
 {% highlight dart %} 
 
     late ZoomPanBehavior _zoomPanBehavior;
@@ -195,11 +202,13 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Mouse wheel zooming
 
 The [`enableMouseWheelZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableMouseWheelZooming.html) can be performed by rolling the mouse wheel up or down. The place where the cursor is hovering gets zoomed in or out according to the mouse wheel rolling up or down.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %}
 
     late ZoomPanBehavior _zoomPanBehavior;
@@ -228,11 +237,13 @@ The [`enableMouseWheelZooming`](https://pub.dev/documentation/syncfusion_flutter
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Auto interval on zooming
 
 The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/enableAutoIntervalOnZooming.html) property determines the update of axis interval based on the current visible range while zooming and panning the chart. Default value of this property is true. If this property is false, the nice interval will not be calculated for new range after zoom in and actual interval will be sustained.
 
+{% tabs %}
 {% highlight dart hl_lines="10" %} 
 
     @override
@@ -254,11 +265,13 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Maximum zoom level
 
 The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to `null`.
 
+{% tabs %}
 {% highlight dart hl_lines="5" %} 
 
     late ZoomPanBehavior _zoomPanBehavior;
@@ -285,6 +298,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Panning 
 
@@ -292,6 +306,7 @@ Panning can be performed on a zoomed axis. You can pan the zoomed chart with [`e
 
 If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html) means you can only pan to the  horizontal direction, in case the [`zoomMode.y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html) means you can pan only to the  vertical direction and [`zoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html) means you can pan to both horizontal and vertical directions on the chart.
 
+{% tabs %}
 {% highlight dart hl_lines="7" %}  
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -322,10 +337,15 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Panning](images/zooming-panning/panning.gif)
 
 Also refer [`zooming`](./callbacks#onzooming), [`zoom start`](./callbacks#onzoomstart) and [`zoom end`](./callbacks#onzoomend) events for customizing the zooming further.
+
+### Calculate range based on visible points
+
+The [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html)  property can be used to calculate the value axis range based on the visible points. When the property is set to false the value axis range will be calculated based on all the data points in the chart irrespective of visible points. For further reference, check this [AutoRangeCalculation](./axis-customization.md) section.
 
 #### See Also
 

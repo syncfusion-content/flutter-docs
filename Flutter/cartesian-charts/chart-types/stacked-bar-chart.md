@@ -21,6 +21,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -59,6 +60,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar](cartesian-chart-types-images/stacked_bar.jpg)
 
@@ -66,6 +68,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
 
 You can group and stack the similar stacked series types using the [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) property of stacked series. The stacked series that contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) will be stacked in a single group.
 
+{% tabs %}
 {% highlight dart hl_lines="10 16 22 28" %} 
     
     @override
@@ -108,6 +111,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar grouping](cartesian-chart-types-images/stacked_bar_grouping.jpg)
 
@@ -115,6 +119,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
 
 You can show the cumulative data label values using the [`showCumulativeValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showCumulativeValues.html) property. If the series are grouped using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html), then cumulative values will be shown based on grouping.
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -161,6 +166,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Stacked bar cumulative](cartesian-chart-types-images/stacked_bar_cumulative.jpg)
 

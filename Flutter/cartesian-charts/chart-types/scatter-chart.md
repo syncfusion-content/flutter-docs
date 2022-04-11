@@ -16,6 +16,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
+{% tabs %}
 {% highlight dart %} 
     
     @override
@@ -40,6 +41,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter chart](cartesian-chart-types-images/scatter.jpg)
 
@@ -49,6 +51,7 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) can be used to change the height and width of the scatter series, respectively.
 
+{% tabs %}
 {% highlight dart hl_lines="17" %} 
     
     @override
@@ -78,6 +81,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 
