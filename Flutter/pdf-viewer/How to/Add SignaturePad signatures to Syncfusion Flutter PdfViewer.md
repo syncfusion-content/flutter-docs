@@ -1,0 +1,173 @@
+---
+layout: post
+title: Add SfSignaturePad signatures in the Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: Flutter
+control: SfPdfViewer
+documentation: ug
+---
+
+# How to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer?
+
+In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
+
+In the `_handleSigningProcess()` method, initially convert the signature drawn in the SfSignaturePad as an image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method in SfSignaturePad .Then create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and drew the signature image in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then saved the document as bytes and then loaded those bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:syncfusion_flutter_pdf/pdf.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
+
+void main() {
+  return runApp(const SignaturePadApp());
+}
+
+class SignaturePadApp extends StatelessWidget {
+  const SignaturePadApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: _MyHomePage(),
+    );
+  }
+}
+
+@immutable
+class _MyHomePage extends StatefulWidget {
+  const _MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<_MyHomePage> {
+  final GlobalKey<SfSignaturePadState> _signaturePadGlobalKey = GlobalKey();
+  Uint8List? _documentBytes;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  //Add the signature in the PDF document.
+  void _handleSigningProcess() async {
+    final data =
+        await _signaturePadGlobalKey.currentState!.toImage(pixelRatio: 3.0);
+    final bytes = await data.toByteData(format: ui.ImageByteFormat.png);
+
+    final ByteData docBytes = await rootBundle.load("assets/sample.pdf");
+    final Uint8List documentBytes = docBytes.buffer.asUint8List();
+    ByteData certBytes = await rootBundle.load("assets/certificate.pfx");
+    final Uint8List certificateBytes = certBytes.buffer.asUint8List();
+
+    PdfDocument document = PdfDocument(inputBytes: documentBytes);
+
+    //Gets the first page of the document
+    PdfPage page = document.pages[0];
+
+    //Creates a digital signature and sets signature information.
+    PdfSignatureField _signatureField = PdfSignatureField(page, 'signature',
+        bounds: const Rect.fromLTRB(300, 500, 550, 700),
+        signature: PdfSignature(
+            //Creates a certificate instance from the PFX file with a private key.
+            certificate: PdfCertificate(certificateBytes, 'password123'),
+            contactInfo: 'johndoe@owned.us',
+            locationInfo: 'Honolulu, Hawaii',
+            reason: 'I am author of this document.',
+            digestAlgorithm: DigestAlgorithm.sha256,
+            cryptographicStandard: CryptographicStandard.cms));
+
+    //Gets the signature field appearance graphics.
+    PdfGraphics? graphics = _signatureField.appearance.normal.graphics;
+
+    //Draws the signature image in PDF page.
+    graphics?.drawImage(PdfBitmap(bytes!.buffer.asUint8List()),
+        const Rect.fromLTWH(0, 0, 250, 200));
+
+    //Add a signature field to the form.
+    document.form.fields.add(_signatureField);
+
+    //Flattens the PDF form field annotation
+    document.form.flattenAllFields();
+
+    _documentBytes = Uint8List.fromList(document.save());
+    document.dispose();
+    setState(() {});
+  }
+
+  //Clear the signature in the SfSignaturePad.
+  void _handleClearButtonPressed() {
+    _signaturePadGlobalKey.currentState!.clear();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('PdfViewer with Signature pad'),
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: _documentBytes != null
+                  ? SfPdfViewer.memory(
+                      _documentBytes!,
+                    )
+                  : const Center(child: CircularProgressIndicator()),
+            ),
+            Container(
+              height: 170,
+              decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      height: 100,
+                      width: 300,
+                      decoration:
+                          BoxDecoration(border: Border.all(color: Colors.grey)),
+                      child: SfSignaturePad(
+                          key: _signaturePadGlobalKey,
+                          backgroundColor: Colors.white,
+                          strokeColor: Colors.black,
+                          minimumStrokeWidth: 1.0,
+                          maximumStrokeWidth: 4.0),
+                    ),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
+                        child: ElevatedButton(
+                          child:
+                              const Text('Add signature and load the document'),
+                          onPressed: _handleSigningProcess,
+                        ),
+                      ),
+                      ElevatedButton(
+                        child: const Text('Clear'),
+                        onPressed: _handleClearButtonPressed,
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              ),
+            )
+          ],
+        ));
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![PdfViewer with Signature pad](images/samples/PdfViewer with Signature pad.png)
