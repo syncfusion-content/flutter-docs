@@ -170,4 +170,4 @@ class _MyHomePageState extends State<_MyHomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![PdfViewer with Signature pad](images/samples/PdfViewer with Signature pad.png)
+![PdfViewer with Signature pad](images/samples/PdfViewer with Signature pad.jpg)
