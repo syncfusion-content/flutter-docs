@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add SfSignaturePad signatures in the Flutter PDF Viewer widget | Syncfusion
+title: Add SfSignaturePad signature in Flutter PDF Viewer | Syncfusion
 description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer?
+# How to add SfSignaturePad signature in SfPdfViewer?
 
 In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
 
