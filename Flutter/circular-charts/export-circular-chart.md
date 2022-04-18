@@ -15,21 +15,16 @@ documentation: ug
 
 To export the circular chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
 
-{% highlight dart %} 
+{% highlight dart %}
 
-    /// Dart import
     import 'dart:typed_data';
     import 'dart:ui' as ui;
-
-    ///Package imports
     import 'package:flutter/material.dart';
-
-    /// Chart import
     import 'package:syncfusion_flutter_charts/charts.dart';
 
-    ///Renders default circular chart sample
+    
     class ExportCircular extends StatefulWidget {
-      ///Renders default circular chart sample
+      
       const ExportCircular({Key? key}) : super(key: key);
 
       @override
@@ -42,85 +37,92 @@ To export the circular chart as a PNG image, we can get the image by calling [`t
       late GlobalKey<SfCircularChartState> _circularChartKey;
       late List<ChartSampleData> _chartData;
 
-    @override
-    void initState() {
-      _circularChartKey = GlobalKey();
-      _chartData = <ChartSampleData>[
-        ChartSampleData(x: 'Jan', y: 12),
-        ChartSampleData(x: 'Feb', y: 28),
-        ChartSampleData(x: 'Mar', y: 35),
-        ChartSampleData(x: 'Apr', y: 47),
-        ChartSampleData(x: 'May', y: 56),
-        ChartSampleData(x: 'Jun', y: 70),
-      ];
-      super.initState();
+      @override
+      void initState() {
+        _circularChartKey = GlobalKey();
+        _chartData = <ChartSampleData>[
+          ChartSampleData(x: 'Jan', y: 12),
+          ChartSampleData(x: 'Feb', y: 28),
+          ChartSampleData(x: 'Mar', y: 35),
+          ChartSampleData(x: 'Apr', y: 47),
+          ChartSampleData(x: 'May', y: 56),
+          ChartSampleData(x: 'Jun', y: 70),
+        ];
+        super.initState();
+      }
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              SfCircularChart(
+                key: _circularChartKey,
+                series: <CircularSeries<ChartSampleData, String>>[
+                  PieSeries<ChartSampleData, String>(
+                    dataSource: _chartData,
+                    xValueMapper: (ChartSampleData data, _) => data.x,
+                    yValueMapper: (ChartSampleData data, _) => data.y,
+                  )
+                ]
+              ),
+              TextButton(
+                child: const Text('Export as image'),
+                onPressed: () {
+                  _renderCircularImage();
+                },
+              )
+            ]
+          ),
+        );
+      }
+
+      Future<void> _renderCircularImage() async {
+        final ui.Image data =
+          await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
+        final ByteData? bytes =
+          await data.toByteData(format: ui.ImageByteFormat.png);
+        final Uint8List imageBytes =
+          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+        await Navigator.of(context).push<dynamic>(
+          MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) {
+              return Scaffold(body: Image.memory(imageBytes));
+            },
+          ),
+        );
+      }
     }
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            SfCircularChart(
-              key: _circularChartKey,
-              series: <CircularSeries<ChartSampleData, String>>[
-                PieSeries<ChartSampleData, String>(
-                  dataSource: _chartData,
-                  xValueMapper: (ChartSampleData data, _) => data.x,
-                  yValueMapper: (ChartSampleData data, _) => data.y,
-                )
-              ]
-            ),
-            TextButton(
-              child: const Text('Export as image'),
-              onPressed: () {
-                _renderCircularImage();
-              },
-            )
-          ]
-        ),
-      );
+    class ChartSampleData {
+      ChartSampleData({this.x, this.y});
+        final String? x;
+        final num? y;
     }
-
-    Future<void> _renderCircularImage() async {
-      final ui.Image data =
-        await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
-      final ByteData? bytes =
-        await data.toByteData(format: ui.ImageByteFormat.png);
-      final Uint8List imageBytes =
-        bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-      await Navigator.of(context).push<dynamic>(
-        MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) {
-          return Scaffold(body: Image.memory(imageBytes));
-          },
-        ),
-      );
-    }
-  }
 
   {% endhighlight %}
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.And it is necessary to include the platform-specific file generating codes to save the file as a PDF document. So, we have created two dart files ([`save_file_mobile`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_mobile.dart) and [`save_file_web`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_web.dart)) to save and launch the file in different platforms. On that two dart files, we have used a common method to save the exported content as a file.
+Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.It is necessary to include the platform-specific file generating codes to save the file as a PDF document. So, create two dart files ([`save_file_mobile`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_mobile.dart) and [`save_file_web`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_web.dart)) to save and launch the file in different platforms.
 
 {% highlight dart %} 
 
-    /// Dart import
     import 'dart:typed_data';
     import 'dart:ui' as ui;
     import 'package:flutter/material.dart';
     import '../save_file_mobile.dart'
       if (dart.library.html) '../save_file_web.dart';
     import 'dart:async';
+
+    /// Chart import.
     import 'package:syncfusion_flutter_charts/charts.dart';
+    /// Pdf import.
     import 'package:syncfusion_flutter_pdf/pdf.dart';
 
-    ///Renders default circular chart sample
     class Export extends StatefulWidget {
-      ///Renders default circular chart sample
+      
       const Export({Key? key}) : super(key: key);
 
       @override
@@ -170,12 +172,7 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
       }
 
       Future<void> _renderPDF() async {
-        final ui.Image data =
-          await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
-        final ByteData? bytes =
-          await data.toByteData(format: ui.ImageByteFormat.png);
-        final Uint8List imageBytes =
-          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+        final List<int> imageBytes = await _readImageData();
         final PdfBitmap bitmap = PdfBitmap(imageBytes);
         final PdfDocument document = PdfDocument();
         document.pageSettings.size =
@@ -194,6 +191,20 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
           content: Text('Chart has been exported as PDF document.'),
         ));
       }
+
+      Future<List<int>> _readImageData() async {
+        final ui.Image data =
+          await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
+        final ByteData? bytes =
+          await data.toByteData(format: ui.ImageByteFormat.png);
+        return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+      }
+    }
+
+    class ChartSampleData {
+      ChartSampleData({this.x, this.y});
+        final String? x;
+        final num? y;
     }
 
   {% endhighlight %}
