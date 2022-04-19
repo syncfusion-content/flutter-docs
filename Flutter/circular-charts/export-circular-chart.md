@@ -136,7 +136,7 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
 
       @override
       void initState() {
-        _cartesianChartKey = GlobalKey();
+        _circularChartKey = GlobalKey();
         _chartData = <ChartSampleData>[
           ChartSampleData(x: 'Jan', y: 35),
           ChartSampleData(x: 'Feb', y: 28),
@@ -182,7 +182,7 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
         page.graphics.drawImage(
           bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
         await FileSaveHelper.saveAndLaunchFile(
-          document.save(), 'cartesian_chart.pdf');
+          document.save(), 'circular_chart.pdf');
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(
