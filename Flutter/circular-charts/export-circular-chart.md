@@ -15,6 +15,7 @@ documentation: ug
 
 To export the circular chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
 
+{% tabs %}
 {% highlight dart %}
 
     import 'dart:typed_data';
@@ -102,11 +103,13 @@ To export the circular chart as a PNG image, we can get the image by calling [`t
     }
 
   {% endhighlight %}
+  {% endtabs %}
 
 ## Export PDF
 
 Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.It is necessary to include the platform-specific file generating codes to save the file as a PDF document. So, create two dart files ([`save_file_mobile`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_mobile.dart) and [`save_file_web`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_web.dart)) to save and launch the file in different platforms.
 
+{% tabs %}
 {% highlight dart %} 
 
     import 'dart:typed_data';
@@ -208,5 +211,6 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     }
 
   {% endhighlight %}
+  {% endtabs %}
 
   ![pdf_export](images/export-circular-chart/pdf_view.png)
