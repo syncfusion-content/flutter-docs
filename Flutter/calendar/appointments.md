@@ -12,7 +12,7 @@ documentation: ug
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 15 29 30" %}
 
 @override
 Widget build(BuildContext context) {
@@ -135,7 +135,7 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 3" %}
 
 class Meeting {
   Meeting({this.eventName = '', required this.from, required this.to, required this.background, this.isAllDay = false});
@@ -153,7 +153,7 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using the `CalendarDataSource` override methods properties.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="1 2" %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -238,7 +238,7 @@ MeetingDataSource _getCalendarDataSource() {
 The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the `CalendarDataSource`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="27 28" %}
 
 class _DataSource extends CalendarDataSource<_Meeting> {
    _DataSource(List<_Meeting> source) {
@@ -321,7 +321,7 @@ MeetingDataSource _getCalendarDataSource() {
 All-Day appointment is an appointment which is scheduled for a whole day. It can be set by using the [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) property in the `Appointment`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 _AppointmentDataSource _getCalendarDataSource() {
   List<Appointment> appointments = <Appointment>[];
@@ -368,7 +368,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the `recurrenceRule` property of `Appointment`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="22" %}
 
 @override
 Widget build(BuildContext context) {
@@ -413,7 +413,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in the flutter event calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="20" %}
 
 @override
   Widget build(BuildContext context) {
@@ -611,7 +611,7 @@ class Meeting {
 You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 3" %}
 
 DateTime dateTime = DateTime(2020, 03, 15);
 RecurrenceProperties recurrenceProperties =
@@ -631,7 +631,7 @@ recurrenceProperties.recurrenceRange = RecurrenceRange.count;
 You can get the occurrences date time list of recurring appointment from RRULE using the [getRecurrenceDateTimeCollection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/getRecurrenceDateTimeCollection.html) method of SfCalendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 3" %}
 
 DateTime dateTime = DateTime(2020, 03, 15);
 List<DateTime> dateCollection = SfCalendar.getRecurrenceDateTimeCollection(
@@ -666,7 +666,7 @@ You can add the recurrence exception appointments and recurrence exception dates
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="24" %}
 
 @override
 Widget build(BuildContext context) {
@@ -882,7 +882,7 @@ AppointmentDataSource _getDataSource() {
 The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -937,7 +937,7 @@ You can customize the displaying time format in the appointment widget in the mo
 You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="19" %}
 
 @override
 initState() {
@@ -979,7 +979,7 @@ Widget build(BuildContext context) {
 Gets an occurrence at the specified date within a series of recurring appointments by using the [getOccurrenceAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getOccurrenceAppointment.html). 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="11 12" %}
 
  @override
   Widget build(BuildContext context) {
@@ -1013,7 +1013,7 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 Gets the pattern appointment for the specified occurrence by using the [getPatternAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getPatternAppointment.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="12 14 15" %}
  
  @override
   Widget build(BuildContext context) {
