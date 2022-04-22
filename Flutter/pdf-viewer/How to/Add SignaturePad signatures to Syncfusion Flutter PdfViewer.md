@@ -9,9 +9,9 @@ documentation: ug
 
 # How to add a digital signature in SfPdfViewer using SfSignaturePad?
 
-In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
+In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) to the document in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
 
-In the `_handleSigningProcess()` method, the signature in SfSignaturePad is saved as image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method.Create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and add the signature image as digital signature in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then save the document as bytes. Load the saved document bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
+In the `_handleSigningProcess()` method, the signature in SfSignaturePad is saved as image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method. Created a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and added the signature image as digital signature in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then save the document as bytes. Loaded the saved document bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -57,18 +57,20 @@ class _MyHomePageState extends State<_MyHomePage> {
 
   //Add the signature in the PDF document.
   void _handleSigningProcess() async {
+  
+    //Save the signature as PNG image.
     final data =
         await _signaturePadGlobalKey.currentState!.toImage(pixelRatio: 3.0);
     final bytes = await data.toByteData(format: ui.ImageByteFormat.png);
-
     final ByteData docBytes = await rootBundle.load("assets/sample.pdf");
     final Uint8List documentBytes = docBytes.buffer.asUint8List();
     ByteData certBytes = await rootBundle.load("assets/certificate.pfx");
     final Uint8List certificateBytes = certBytes.buffer.asUint8List();
 
+    //Load the document
     PdfDocument document = PdfDocument(inputBytes: documentBytes);
 
-    //Get the first page of the document
+    //Get the first page of the document. The page in which signature need to be added.
     PdfPage page = document.pages[0];
 
     //Create a digital signature and set the signature information.
