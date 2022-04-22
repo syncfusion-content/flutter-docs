@@ -11,7 +11,7 @@ documentation: ug
 
 In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
 
-In the `_handleSigningProcess()` method, initially convert the signature drawn in the SfSignaturePad as an image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method in SfSignaturePad .Then create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and drew the signature image in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then saved the document as bytes and then loaded those bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
+In the `_handleSigningProcess()` method, initially use the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method in the SfSignaturePad to convert the signature drawn in the SfSignaturePad to an image.Then create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and draw the signature image in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` then save the document as bytes and then load those bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -68,14 +68,14 @@ class _MyHomePageState extends State<_MyHomePage> {
 
     PdfDocument document = PdfDocument(inputBytes: documentBytes);
 
-    //Gets the first page of the document
+    //Get the first page of the document
     PdfPage page = document.pages[0];
 
-    //Creates a digital signature and sets signature information.
+    //Create a digital signature and set the signature information.
     PdfSignatureField _signatureField = PdfSignatureField(page, 'signature',
         bounds: const Rect.fromLTRB(300, 500, 550, 700),
         signature: PdfSignature(
-            //Creates a certificate instance from the PFX file with a private key.
+            //Create a certificate instance from the PFX file with a private key.
             certificate: PdfCertificate(certificateBytes, 'password123'),
             contactInfo: 'johndoe@owned.us',
             locationInfo: 'Honolulu, Hawaii',
@@ -83,17 +83,17 @@ class _MyHomePageState extends State<_MyHomePage> {
             digestAlgorithm: DigestAlgorithm.sha256,
             cryptographicStandard: CryptographicStandard.cms));
 
-    //Gets the signature field appearance graphics.
+    //Get the signature field appearance graphics.
     PdfGraphics? graphics = _signatureField.appearance.normal.graphics;
 
-    //Draws the signature image in PDF page.
+    //Draw the signature image in the PDF page.
     graphics?.drawImage(PdfBitmap(bytes!.buffer.asUint8List()),
         const Rect.fromLTWH(0, 0, 250, 200));
 
     //Add a signature field to the form.
     document.form.fields.add(_signatureField);
 
-    //Flattens the PDF form field annotation
+    //Flatten the PDF form field annotation
     document.form.flattenAllFields();
 
     _documentBytes = Uint8List.fromList(document.save());
