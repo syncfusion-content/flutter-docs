@@ -11,7 +11,7 @@ documentation: ug
 
 In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
 
-In the `_handleSigningProcess()` method, initially use the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method in the SfSignaturePad to convert the signature drawn in the SfSignaturePad to an image.Then create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and draw the signature image in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` then save the document as bytes and then load those bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
+In the `_handleSigningProcess()` method, save the signature as image in SfSignaturePad using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method.Then create a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and add the signature image as digital signature in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then saved the document as bytes and then loaded those bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -171,3 +171,5 @@ class _MyHomePageState extends State<_MyHomePage> {
 {% endtabs %}
 
 ![PdfViewer with Signature pad](images/samples/PdfViewer with Signature pad.jpg)
+
+To know more about adding a digital signature to PDF document, please refer [here](https://help.syncfusion.com/flutter/pdf/working-with-digital-signature).
