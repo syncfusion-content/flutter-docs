@@ -110,6 +110,57 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ![Customized Legend](images/legend/customized_legend.png)
 
+## Customizing legend icon as image
+
+An image is also used as legend icon by using the [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html). If an image is used as legend icon, it should be added in the project and referred as asset in pubspec file.
+
+{% tabs %}
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = [
+        ChartData(2005,38),
+        ChartData(2006,20),
+        ChartData(2007,60),
+        ChartData(2008,50)
+      ];
+      return SfCartesianChart(
+        legend: Legend(
+          isVisible: true,
+          legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
+            return SizedBox(
+              height: 30,
+              width: 90,
+              child: Row(
+                children: <Widget>[
+                  Image.asset('images/truck_legend.png'),
+                  SizedBox(child: Text(series.name)),
+                ]
+              )
+            );
+          }
+        ),
+        series: <CartesianSeries>[
+          LineSeries<ChartData, num>(
+            dataSource: chartData!,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            name: 'Truck',
+          ),
+        ]
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final num x;
+        final num y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Legend title
 
 The following properties can be used to define and customize the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/title.html) of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html).
