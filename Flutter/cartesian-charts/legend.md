@@ -110,9 +110,9 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ![Customized Legend](images/legend/customized_legend.png)
 
-### Customizing legend icon as image
+### Legend icon with image
 
-An image is also used as legend icon by setting required image in [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property and setting the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as [LegendIconType.image] in series. If an image is used as legend icon, it should be included inside a folder in the project and that same folder should referred in asset of pubspec file.
+By providing the needed image in [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html) and the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as `LegendIconType.image` in [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html), an image can also be utilised as a legend icon. If an image is used as a legend icon, it should be placed in its own folder in the project, and that folder should be referenced in the pubspec file's asset.
 
 {% tabs %}
 {% highlight dart %} 
