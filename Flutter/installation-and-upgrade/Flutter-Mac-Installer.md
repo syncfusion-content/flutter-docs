@@ -12,7 +12,7 @@ documentation: ug
 
 ## How to download Flutter Mac installer?
 
-1. Essential Studio Flutter Mac installer can be downloaded from your account’s [download](https://help.syncfusion.com/common/essential-studio/download) section. You can download Syncfusion Mac installer based on your license.
+1. Essential Studio Flutter Mac installer can be downloaded from your account’s [download](https://help.syncfusion.com/common/essential-studio/download) section. You can download trial\licensed Mac installer based on your license.
 
 2. In the downloads page, click the "Mac" button and download the required Essential Studio Flutter Mac installer.
 
