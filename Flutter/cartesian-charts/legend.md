@@ -110,6 +110,49 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ![Customized Legend](images/legend/customized_legend.png)
 
+### Legend icon with image
+
+The legend icon shape can be changed using the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) of the [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html). To use the legend icon as image, specify the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as `LegendIconType.image`, add the image using the [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html). Ensure that the image or image folder is included as an asset in the pubspec.yaml file.
+
+{% tabs %}
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = [
+        ChartData(2005,38),
+        ChartData(2006,20),
+        ChartData(2007,60),
+        ChartData(2008,50)
+      ];
+      return SfCartesianChart(
+        legend: Legend(
+          isVisible: true,
+          image: AssetImage('images/truck_legend.png'),
+        ),
+        series: <CartesianSeries>[
+          LineSeries<ChartData, num>(
+            legendIconType: LegendIconType.image,
+            dataSource: chartData!,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            name: 'Truck',
+          ),
+        ]
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final num x;
+        final num y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized Legend icon](images/legend/legend_icon_as_image.png)
+
 ## Legend title
 
 The following properties can be used to define and customize the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/title.html) of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html).
