@@ -112,7 +112,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### Legend icon with image
 
-By providing the needed image in [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html) and the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as `LegendIconType.image` in [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html), an image can also be utilised as a legend icon. If an image is used as a legend icon, it should be placed in its own folder in the project, and that folder should be referenced in the pubspec file's asset.
+The legend icon shape can be changed using the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) of the [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html). To use the legend icon as image, specify the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as `LegendIconType.image`, add the image using the [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html). Ensure that the image or image folder is included as an asset in the pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %} 
