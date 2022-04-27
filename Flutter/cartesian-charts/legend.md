@@ -161,6 +161,8 @@ An image is also used as legend icon by using the [`legendItemBuilder`](https://
 {% endhighlight %}
 {% endtabs %}
 
+![Customized Legend icon](images/legend/legend_icon_as_image.png)
+
 ## Legend title
 
 The following properties can be used to define and customize the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/title.html) of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html).
