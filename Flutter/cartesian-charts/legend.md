@@ -110,9 +110,9 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ![Customized Legend](images/legend/customized_legend.png)
 
-## Customizing legend icon as image
+### Customizing legend icon as image
 
-An image is also used as legend icon by using the [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html). If an image is used as legend icon, it should be added in the project and referred as asset in pubspec file.
+An image is also used as legend icon by setting required image in [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/image.html) property and setting the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) as [LegendIconType.image] in series. If an image is used as legend icon, it should be included inside a folder in the project and that same folder should referred in asset of pubspec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -128,21 +128,11 @@ An image is also used as legend icon by using the [`legendItemBuilder`](https://
       return SfCartesianChart(
         legend: Legend(
           isVisible: true,
-          legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
-            return SizedBox(
-              height: 30,
-              width: 90,
-              child: Row(
-                children: <Widget>[
-                  Image.asset('images/truck_legend.png'),
-                  SizedBox(child: Text(series.name)),
-                ]
-              )
-            );
-          }
+          image: AssetImage('images/truck_legend.png'),
         ),
         series: <CartesianSeries>[
           LineSeries<ChartData, num>(
+            legendIconType: LegendIconType.image,
             dataSource: chartData!,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
