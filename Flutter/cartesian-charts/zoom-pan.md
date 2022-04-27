@@ -278,7 +278,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
     
     @override
     void initState(){
-     _zoomPanBehavior = ZoomPanBehavior(maximumZoomLevel: 3);
+     _zoomPanBehavior = ZoomPanBehavior(maximumZoomLevel: 0.3);
       super.initState();
     }
 
