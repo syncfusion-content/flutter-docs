@@ -10,7 +10,7 @@ documentation: ug
 
 # Installation using Offline Installer
 
-You can refer to the [**Download**](https://help.syncfusion.com/flutter/installation-and-upgrade/download) section to learn how to get the Flutter installer.
+You can refer to the [**Download**](https://help.syncfusion.com/flutter/installation-and-upgrade/download) section to learn how to get the Flutter trial or licensed installer.
 
 ## Installing with UI   
 

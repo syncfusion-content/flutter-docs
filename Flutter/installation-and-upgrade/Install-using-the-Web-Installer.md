@@ -10,7 +10,7 @@ documentation: ug
 
 # Installation using Web Installer
 
-You can refer to the [**Download**](https://help.syncfusion.com/flutter/installation-and-upgrade/download) section to learn how to get the Flutter installer.
+You can refer to the [**Download**](https://help.syncfusion.com/flutter/installation-and-upgrade/download) section to learn how to get the Flutter trial or licensed installer.
 
 ## Overview
 
@@ -86,7 +86,9 @@ The steps below show how to install Essential Studio Flutter Web Installer.
 
 9.  The login wizard will appear. You must enter your Syncfusion email address and password. If you do not already have a Syncfusion account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
 
-    ![Login wizard install](WebInstaller/Step-by-Step-Installation_img9.png)	
+    ![Login wizard install](WebInstaller/Step-by-Step-Installation_img9.png)
+	
+	I> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
 
 10. The download and installation\uninstallation progress will be displayed as shown below.
 
@@ -168,7 +170,9 @@ N> If the **Syncfusion Essential Studio for Flutter {version}** entry is selecte
 
 7.	The login wizard will appear. You must enter your Syncfusion email address and password. If you do not already have a Syncfusion account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
-    ![Login wizard install/uninstall](WebInstaller/Step-by-Step-Installation_img9.png)	
+    ![Login wizard install/uninstall](WebInstaller/Step-by-Step-Installation_img9.png)
+	
+	I> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
 
 8.	The download, installation, and uninstallation progresses will be shown.
 
