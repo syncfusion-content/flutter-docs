@@ -23,15 +23,13 @@ The following code snippet explains how to use the graphics and automatic fields
 PdfDocument document = PdfDocument();
 
 //Add the pages to the document
-for (int i = 1; i <= 5; i++) {
-  document.pages.add().graphics.drawString(
-      'page$i', PdfStandardFont(PdfFontFamily.timesRoman, 11),
-      bounds: Rect.fromLTWH(250, 0, 615, 100));
+for (int i = 0; i < 5; i++) {
+  document.pages.add();
 }
 
 //Create the header with specific bounds
 PdfPageTemplateElement header = PdfPageTemplateElement(
-    Rect.fromLTWH(0, 0, document.pages[0].getClientSize().width, 300));
+    Rect.fromLTWH(0, 0, document.pages[0].getClientSize().width, 100));
 
 //Create the date and time field
 PdfDateTimeField dateAndTimeField = PdfDateTimeField(
@@ -99,6 +97,13 @@ compositeField.draw(footer.graphics,
 
 //Add the footer at the bottom of the document
 document.template.bottom = footer;
+
+//Draw text on the page
+for (int index = 0; index < 5; index++) {
+  document.pages[index].graphics.drawString(
+      'Page ${index + 1}', PdfStandardFont(PdfFontFamily.timesRoman, 11),
+      bounds: Rect.fromLTWH(250, 0, 615, 100));
+}
 
 //Save the PDF document
 File('HeaderAndFooter.pdf').writeAsBytes(document.save());
