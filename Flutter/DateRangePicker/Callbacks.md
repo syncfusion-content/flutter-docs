@@ -16,7 +16,7 @@ The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/
 `visibleDateRange` - returns the start and end dates of the current visible month.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ The [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepi
 `args.value` - returns the dates based on the selection mode.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
