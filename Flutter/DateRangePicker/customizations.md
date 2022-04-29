@@ -30,7 +30,7 @@ You can customize the calendar month view by using the `monthCellStyle` of `SfDa
 •    **Weekend Dates** – You can change weekend dates to `DateRangePicker` by using the [weekendDays](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/weekendDays.html) property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendTextStyle.html) and [weekendDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendDatesDecoration.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7 8 9 11 15 19" %}
 
 @override
 Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 You can customize the month format of the `DateRangePicker` using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ You can also customize the date range picker section by using the `monthCellStyl
 •    **Range selection color** - Range selection color text style can be customized using the [startRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/startRangeSelectionColor.html), [endRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/endRangeSelectionColor.html) , [rangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/rangeSelectionColor.html)  properties that is applicable when `selectionMode` is in `range` or `multi-range`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8 9 10 11" %}
 
 @override
   Widget build(BuildContext context) {
@@ -137,7 +137,7 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
 •   **Today date** – You can customize the today date text style and background of the `DateRangePicker` by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayCellDecoration.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 12 13 17 18 22" %}
 
 @override
 Widget build(BuildContext context) {

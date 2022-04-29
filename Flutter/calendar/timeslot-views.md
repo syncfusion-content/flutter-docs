@@ -23,7 +23,7 @@ documentation: ug
 You can customize the interval of timeslots in all the timeslots view by using the [timeInterval](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeInterval.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
 You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ The default values for [startHour](https://pub.dev/documentation/syncfusion_flut
 You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of `timeSlotViewSettings` to show only the required days for the users.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ You can restrict the user interaction such as selection and highlights specific 
 You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 11 12 13 14 15 16 17 18" %}
 
 @override
   Widget build(BuildContext context) {

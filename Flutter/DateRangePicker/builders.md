@@ -19,7 +19,7 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 `visibleDates`: The visible dates of the current view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="12 13" %}
 
 class MyAppState extends State<MyApp> {
   final DateRangePickerController _controller = DateRangePickerController();

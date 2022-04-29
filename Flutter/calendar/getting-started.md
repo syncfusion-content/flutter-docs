@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
 The SfCalendar widget provides seven different types of views to display dates. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) property. By default, the widget is assigned day view. The current date will be displayed initially for all the calendar views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5" %}
 
 @override
 Widget build(BuildContext context) {
@@ -102,7 +102,7 @@ The calendar widget has a built-in capability to handle appointment arrangement 
 You can also map custom appointment data to our calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -178,7 +178,7 @@ class Meeting {
 The calendar widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/firstDayOfWeek.html) property.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -199,7 +199,7 @@ Widget build(BuildContext context) {
 You can programmatically select the specific calendar month cell, and time slot by setting corresponding date and time value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialSelectedDate.html) property of calendar. By default, it is null.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -225,7 +225,7 @@ Widget build(BuildContext context) {
 You can change the initial display date of calendar by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of calendar, which displays the calendar based on the given date time. By default, current date will be set as `initialDisplayDate`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -251,9 +251,9 @@ Widget build(BuildContext context) {
 You can decorate the selection view of calendar by using the [selectionDecoration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/selectionDecoration.html) property of Calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9 10 11 12 13" %}
 
-	@override
+@override
 Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
@@ -282,9 +282,9 @@ Widget build(BuildContext context) {
 You can customize the today highlight color of calendar by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property in calendar, which will highlight the today text in calendar view header, month cell, and agenda view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
-	@override
+@override
 Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
@@ -308,7 +308,7 @@ Widget build(BuildContext context) {
 You can customize the vertical and horizontal line color of calendar by using the [cellBorderColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellBorderColor.html) property in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -334,7 +334,7 @@ Widget build(BuildContext context) {
 The calendar widgets background color can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/backgroundColor.html) property in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -359,7 +359,7 @@ Widget build(BuildContext context) {
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -384,7 +384,7 @@ Widget build(BuildContext context) {
 You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -411,7 +411,7 @@ Widget build(BuildContext context) {
 You can display the current time indicator in all timeslot views of SfCalendar by using the [showCurrentTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showCurrentTimeIndicator.html) property and you can also customize the color of current time indicator by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property. 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -433,7 +433,7 @@ Widget build(BuildContext context) {
 Display the Week number of the year in all views except schedule view of the `SfCalendar` by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -457,7 +457,7 @@ Display the Week number of the year in all views except schedule view of the `Sf
 Customize the Week number text style of the calendar by using the [WeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle-class.html) property. Allows to customize the [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/backgroundColor.html) in the Week number of the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9 10 11" %}
 
 @override
   Widget build(BuildContext context) {

@@ -13,7 +13,7 @@ documentation: ug
 You can programmatically navigate dates in the calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/displayDate.html)  property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html)
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 6 16" %}
 
 class MyAppState extends State<MyApp> {
   DateRangePickerController _datePickerController = DateRangePickerController();
@@ -46,7 +46,7 @@ class MyAppState extends State<MyApp> {
 You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 6 15" %}
 
 class MyAppState extends State<MyApp> {
   DateRangePickerController _datePickerController = DateRangePickerController();
@@ -78,7 +78,7 @@ class MyAppState extends State<MyApp> {
 You can allow or restrict the built-in view navigation to any picker views by using the [enableViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) property of `SfDateRangePicker`. It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5" %}
 
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -98,10 +98,10 @@ Widget build(BuildContext context) {
 You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
 
 ### Single selection
-Initially or during the run time,you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) is set to `DateRangePickerSelectionMode.single`.
+Initially or during the run time,you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) is set to `DateRangePickerSelectionMode.single`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 10 20 21" %}
 
 class MyApp extends StatefulWidget {
   @override
@@ -139,7 +139,7 @@ class _MyAppState extends State<MyApp> {
 Initially or during the run time, you can selects the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiple`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5 9 24 25" %}
 
 class MyApp extends StatefulWidget {
   @override
@@ -182,7 +182,7 @@ class _MyAppState extends State<MyApp> {
 Initially or during run time, you can selects the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 6 7 17 18" %}
 
 class MyAppState extends State<MyApp> {
   DateRangePickerController _datePickerController = DateRangePickerController();
@@ -217,7 +217,7 @@ class MyAppState extends State<MyApp> {
 Initially or during run time, you can selects more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 10 25 26" %}
 
 class MyApp extends StatefulWidget {
   @override
@@ -263,7 +263,7 @@ By default, the date can be navigated to next and previous views using the touch
 You can use the `forward` method of `DateRangePickerController` for viewing the next immediate next visible dates in the `SfDateRangePicker`. It will move to next month if the calendar view is a month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 13 20" %}
 
 class MyAppState extends State<MyApp> {
   DateRangePickerController _datePickerController = DateRangePickerController();
@@ -298,7 +298,7 @@ class MyAppState extends State<MyApp> {
 You can use the `backward` method of  `DateRangePickerController` for viewing the previous immediate previous visible dates in the `SfDateRangePicker`. It will move to the previous month if the calendar view is in month, similarly it will move to the previous week for week view and previous day for day view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 14 21" %}
 
 class MyAppState extends State<MyApp> {
   DateRangePickerController _datePickerController = DateRangePickerController();
@@ -335,7 +335,7 @@ class MyAppState extends State<MyApp> {
 You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) property of `DateRangePicker`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -351,10 +351,10 @@ Widget build(BuildContext context) {
 
 
 ## Navigation mode
-You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the `navigationMode` is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode-class.html).
+You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the `navigationMode` is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -382,7 +382,7 @@ When the navigation mode is set to `DateRangePickerNavigationMode.scroll`.
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
