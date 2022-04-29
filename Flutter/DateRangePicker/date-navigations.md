@@ -98,7 +98,7 @@ Widget build(BuildContext context) {
 You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
 
 ### Single selection
-Initially or during the run time,you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) is set to `DateRangePickerSelectionMode.single`.
+Initially or during the run time,you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is set to `DateRangePickerSelectionMode.single`.
 
 {% tabs %}
 {% highlight dart hl_lines="6 10 20 21" %}
@@ -351,7 +351,7 @@ Widget build(BuildContext context) {
 
 
 ## Navigation mode
-You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the `navigationMode` is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html).
+You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the `navigationMode` is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html).
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
