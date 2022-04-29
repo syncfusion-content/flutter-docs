@@ -33,7 +33,7 @@ The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 {% endhighlight %}
 
-![Animate axis in linear gauge](images/animation/animation_axis_range/animation_axis.gif)
+![Animate axis in linear gauge](images/animation/animation-axis-range/animation_axis.gif)
 
 ## Animate range
 
@@ -57,7 +57,7 @@ The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
 
   {% endhighlight %}
 
-  ![Animate range in linear gauge](images/animation/animation_axis_range/animation_range.gif)
+  ![Animate range in linear gauge](images/animation/animation-axis-range/animation_range.gif)
 
 ## Pointer animation
 
