@@ -172,6 +172,6 @@ class _MyHomePageState extends State<_MyHomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![PdfViewer with Signature pad](images/samples/PdfViewer with Signature pad.jpg)
+![PdfViewer with Signature pad](images/pdfviewer-with-signaturepad.jpg)
 
 To know more about adding a digital signature to a PDF document, please refer [here](https://help.syncfusion.com/flutter/pdf/working-with-digital-signature).
