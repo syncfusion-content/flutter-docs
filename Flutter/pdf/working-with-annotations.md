@@ -170,6 +170,7 @@ PdfLineAnnotation lineAnnotation = PdfLineAnnotation(
     leaderLineExt: 10,
     leaderLine: 2,
     lineCaption: true,
+    setAppearance: true,    //The annotation is not shown if this is not set to true
     captionType: PdfLineCaptionType.top,
     modifiedDate: DateTime.now());
 
