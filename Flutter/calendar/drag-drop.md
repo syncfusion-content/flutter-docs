@@ -16,7 +16,7 @@ Easily reschedule an appointment by dragging it from one time slot or month cell
 To perform drag-and-drop operations within the calendar, enable the [allowDragAndDrop](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowDragAndDrop.html) property of SfCalendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/targetResource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) - Get the target resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -158,7 +158,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of `DragDropSettings`. Default value of `allowNavigation` property is true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
 You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -210,7 +210,7 @@ Widget build(BuildContext context) {
 [showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -236,7 +236,7 @@ Widget build(BuildContext context) {
 Using [timeIndicatorStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/timeIndicatorStyle.html) property you can customize the text style of the time indicator. Also using [indicatorTimeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/indicatorTimeFormat.html) property you can customize the indicator time format.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10 11 12 13 14 15 16 17" %}
 
 @override
 Widget build(BuildContext context) {
@@ -272,7 +272,7 @@ Widget build(BuildContext context) {
 Using [autoNavigateDelay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/autoNavigateDelay.html) property you can handle the navigation time when navigating to next/previous view while dragging the appointment.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10 11" %}
 
 @override
 Widget build(BuildContext context) {

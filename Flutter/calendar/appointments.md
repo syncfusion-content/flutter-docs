@@ -202,7 +202,7 @@ class MeetingDataSource extends CalendarDataSource {
 You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 16 17 18 19 20 21 22 23 24 26" %}
 
 @override
 Widget build(BuildContext context) {
@@ -298,7 +298,7 @@ class Meeting {
 Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5 6" %}
 
 MeetingDataSource _getCalendarDataSource() {
   List<Meeting> meetings = <Meeting>[];
@@ -368,7 +368,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the `recurrenceRule` property of `Appointment`.
 
 {% tabs %}
-{% highlight dart hl_lines="22" %}
+{% highlight dart hl_lines="23" %}
 
 @override
 Widget build(BuildContext context) {
@@ -666,7 +666,7 @@ You can add the recurrence exception appointments and recurrence exception dates
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
 {% tabs %}
-{% highlight dart hl_lines="24" %}
+{% highlight dart hl_lines="25" %}
 
 @override
 Widget build(BuildContext context) {
@@ -912,7 +912,7 @@ Widget build(BuildContext context) {
 You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property of the SfCalendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 @override
  Widget build(BuildContext context) {
    return SfCalendar(
