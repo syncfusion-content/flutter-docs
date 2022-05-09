@@ -16,7 +16,7 @@ You can quickly change an appointment’s start and end times by resizing the ap
 [allowAppointmentResize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowAppointmentResize.html) property allows to reschedule the appointment by resizing the appointment in desktop platforms.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -120,7 +120,7 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {

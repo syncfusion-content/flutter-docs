@@ -26,7 +26,7 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ You can design your custom view and assign this view to the month header of a sc
 `bounds` - returns the header bounds.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutte
 `isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="11 12" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _controller = CalendarController();
@@ -263,7 +263,7 @@ The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calenda
 `region`: The Region detail associated with the time region view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="22 23" %}
 
 List<TimeRegion> _getTimeRegions() {
   final List<TimeRegion> regions = <TimeRegion>[];
@@ -328,7 +328,7 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8" %}
 
 @override
   Widget build(BuildContext context) {

@@ -16,7 +16,7 @@ Dates can be selected by touching the on month view cells. The default [selectio
  A `single` date range picker cell can be selected in a date range picker view by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to `single`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ Eg:
 You can randomly select more than one date range picker cell by setting the `DateRangePickerSelectionMode` to `multiple`. By Clicking again you can deselect the selected cells.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ Widget build(BuildContext context) {
 You can select a range of cells in any date range picker view by setting the `DateRangePickerSelectionMode` to the `range`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ Eg:
 You can select more than one range of cells in any of the date range picker views by setting the `DateRangePickerSelectionMode` to the `multiRange`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
 Extend the selected range with the new selected date in any date range picker view by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to `extendableRange`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -144,7 +144,7 @@ It allows to extend the selection direction by using the [extendableRangeSelecti
 You can set the extendable range selection direction as forward, backward, both and none. 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -171,7 +171,7 @@ You can set the extendable range selection direction as forward, backward, both 
 Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -192,7 +192,7 @@ Widget build(BuildContext context) {
 You can customize the selection shape of the selected date using the [selectionShape](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionShape.html) property of the `DateRangePicker`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -213,7 +213,7 @@ Widget build(BuildContext context) {
 Using the [enableSwipeSelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html) property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the `SfDateRangePicker`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {

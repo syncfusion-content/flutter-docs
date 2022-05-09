@@ -23,7 +23,7 @@ documentation: ug
 You can customize the interval of timeslots in all the timeslots view by using the [timeInterval](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeInterval.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
 You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ The default values for [startHour](https://pub.dev/documentation/syncfusion_flut
 You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of `timeSlotViewSettings` to show only the required days for the users.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ You can restrict the user interaction such as selection and highlights specific 
 You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 11 12 13 14 15 16 17 18" %}
 
 @override
   Widget build(BuildContext context) {
@@ -208,7 +208,7 @@ in the region
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in `TimeRegion`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="17" %}
 
 @override
   Widget build(BuildContext context) {
@@ -245,7 +245,7 @@ You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointment
 You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="17 20" %}
 
 @override
   Widget build(BuildContext context) {
@@ -281,7 +281,7 @@ You can delete any of occurrence that is an exception from the recurrence patter
 The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of `TimeRegion` that is used to customize the text style for the `text` and `iconData` of the `specialTimeRegion`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="17 18 19" %}
 
 @override
   Widget build(BuildContext context) {
@@ -317,7 +317,7 @@ The `specialTimeRegion` background color can be customized by using the [color](
 The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -341,7 +341,7 @@ Widget build(BuildContext context) {
 You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -367,7 +367,7 @@ Widget build(BuildContext context) {
 The [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/minimumAppointmentDuration.html) property in timeSlotViewSettings is to set an arbitrary height to appointments when it has minimum duration, in timeslot views, so that the subject can be readable.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -422,7 +422,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -449,7 +449,7 @@ Widget build(BuildContext context) {
 You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -475,7 +475,7 @@ Widget build(BuildContext context) {
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -502,7 +502,7 @@ Widget build(BuildContext context) {
 You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of `timeSlotViewSettings` in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14" %}
 
 @override
 Widget build(BuildContext context) {
@@ -533,7 +533,7 @@ Widget build(BuildContext context) {
 All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 9 " %}
 
 @override
 Widget build(BuildContext context) {
