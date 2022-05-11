@@ -61,7 +61,7 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 After importing the package, initialize the calendar widget as a child of any widget. Here, the calendar widget is added as a child of the scaffold widget.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5" %}
 
 @override
 Widget build(BuildContext context) {
@@ -102,7 +102,7 @@ The calendar widget has a built-in capability to handle appointment arrangement 
 You can also map custom appointment data to our calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="6 12 13 14 15 16 17 18 19 20 21" %}
 
 @override
 Widget build(BuildContext context) {

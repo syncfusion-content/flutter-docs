@@ -109,7 +109,7 @@ List<TimeRegion> _specialTimeRegions = <TimeRegion>[];
 You can customize the number of visible resources in the current view using the [visibleResourceCount](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/visibleResourceCount.html) property of [resourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). By default, the value of this property is set to ‘-1.’ 
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
