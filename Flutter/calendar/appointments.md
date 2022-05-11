@@ -882,7 +882,7 @@ AppointmentDataSource _getDataSource() {
 The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="9 10 11 12 13" %}
 
 @override
 Widget build(BuildContext context) {
@@ -937,7 +937,7 @@ You can customize the displaying time format in the appointment widget in the mo
 You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
 
 {% tabs %}
-{% highlight dart hl_lines="19" %}
+{% highlight dart hl_lines="19 20 21" %}
 
 @override
 initState() {
