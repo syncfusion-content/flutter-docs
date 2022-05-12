@@ -17,7 +17,7 @@ The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/la
 `visibleDates` - returns the current view visible dates collection.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/c
 `targetElement` - returns the element tapped.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -87,7 +87,7 @@ Return calendar details based on the given offset passed through argument by usi
 `resource` - returns the resource based on the given offset.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
   Widget build(BuildContext context) {
@@ -127,7 +127,7 @@ The long-pressed date, appointments, and element details when the long-press act
 `targetElement` - returns the long-pressed calendar element.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
