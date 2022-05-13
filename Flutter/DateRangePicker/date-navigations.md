@@ -139,7 +139,7 @@ class _MyAppState extends State<MyApp> {
 Initially or during the run time, you can selects the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiple`.
 
 {% tabs %}
-{% highlight dart hl_lines="5 9 24 25" %}
+{% highlight dart hl_lines="6 11 12 13 14 15 16 26 27" %}
 
 class MyApp extends StatefulWidget {
   @override
@@ -217,7 +217,7 @@ class MyAppState extends State<MyApp> {
 Initially or during run time, you can selects more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
-{% highlight dart hl_lines="6 10 25 26" %}
+{% highlight dart hl_lines="6 10 11 12 13 14 15 25 26" %}
 
 class MyApp extends StatefulWidget {
   @override

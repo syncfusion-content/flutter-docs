@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 
 Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the `DateRangePickerMonthViewSettings` as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="7 8 9" %}
 
 @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ Display the Week number of the year in the MonthView by setting the [showWeekNum
 Customize the Week number style by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/backgroundColor.html) properties of the [DateRangePickerWeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="8 9" %}
+{% highlight dart hl_lines="8 9 10 11" %}
 
 @override
   Widget build(BuildContext context) {
@@ -147,7 +147,7 @@ Widget build(BuildContext context) {
 The number of weeks in the month view can be customized by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/numberOfWeeksInView.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="6 7" %}
 
 @override
 Widget build(BuildContext context) {
