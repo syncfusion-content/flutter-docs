@@ -328,7 +328,7 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8" %}
 
 @override
   Widget build(BuildContext context) {
