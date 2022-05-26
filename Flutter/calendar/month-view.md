@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 You can customize the month agenda view height from calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaViewHeight.html) property of `MonthViewSettings`. By default, the agenda view will occupy the 30% height of the calendar height.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11" %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ Widget build(BuildContext context) {
 You can customize the height of an appointment in agenda view by using the [agendaItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaItemHeight.html) property of `MonthViewSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11" %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -216,7 +216,7 @@ Widget build(BuildContext context) {
 You can hide the previous and next month dates of a calendar month view by using the [showLeadingAndTrailingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the `MonthViewSettings` of the calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="5 6 7" %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -339,7 +339,7 @@ Widget build(BuildContext context) {
 By using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/monthCellStyle.html) property of `MonthViewSettings`, you can customize the month properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/backgroundColor.html), [todayBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/todayBackgroundColor.html), [trailingDatesBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/trailingDatesBackgroundColor.html), [leadingDatesBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/leadingDatesBackgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/textStyle.html), [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/todayTextStyle.html), [trailingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/trailingDatesTextStyle.html), and [leadingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/leadingDatesTextStyle.html) from [MonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="9 10 11 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight dart hl_lines="9 10 11 12 13 14 15 16 17 18 19 20 21 23 24 25 26 27 28" %}
 
 @override
 Widget build(BuildContext context) {
