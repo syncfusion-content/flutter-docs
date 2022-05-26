@@ -230,7 +230,7 @@ For selection [refer](https://help.syncfusion.com/flutter/daterangepicker/select
 You can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.single`.
 
 {% tabs %}
-{% highlight dart hl_lines="2 7 17" %}
+{% highlight dart hl_lines="2 7 16 17" %}
 
 class MyAppState extends State<MyApp> {
   HijriDatePickerController _controller = HijriDatePickerController();
@@ -448,7 +448,7 @@ Customize the Hijri date picker month view by using the [monthCellStyle](https:/
 
 
 {% tabs %}
-{% highlight dart hl_lines="15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 21" %}
+{% highlight dart hl_lines="15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
 
 @override
 Widget build(BuildContext context) {
@@ -499,7 +499,7 @@ You can customize the calendar year, and decade view by using the [yearCellStyle
 
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
 @override
 Widget build(BuildContext context) {
