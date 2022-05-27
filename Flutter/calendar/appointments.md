@@ -238,7 +238,7 @@ MeetingDataSource _getCalendarDataSource() {
 The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the `CalendarDataSource`.
 
 {% tabs %}
-{% highlight dart hl_lines="27 28" %}
+{% highlight dart hl_lines="27 28 29 30 31 32 33 34" %}
 
 class _DataSource extends CalendarDataSource<_Meeting> {
    _DataSource(List<_Meeting> source) {
@@ -454,7 +454,7 @@ class DataSource extends CalendarDataSource {
 For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and `recurrenceRule`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 14" %}
 
 class Meeting {
   Meeting(
@@ -479,7 +479,7 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using `CalendarDataSource`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="31 32 33 34" %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -721,7 +721,7 @@ You can delete any occurrence, which is an exception from the recurrence pattern
 To add the exception dates in the recurrence series of custom appointment, add the `recurrenceExceptionDates` property to custom class Meeting.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="18 26 65 66 67 68" %}
 
 @override
 Widget build(BuildContext context) {
@@ -824,7 +824,7 @@ class Meeting {
 Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceId.html) of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/id.html). We can get the type of appointment from the [appointmentType](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/appointmentType.html) property. 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="16 25 28 29 30 31 32 33 34 36" %}
 
 @override
   Widget build(BuildContext context) {
@@ -1013,7 +1013,7 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 Gets the pattern appointment for the specified occurrence by using the [getPatternAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getPatternAppointment.html).
 
 {% tabs %}
-{% highlight dart hl_lines="12 14 15" %}
+{% highlight dart hl_lines="12 13 14 15" %}
  
  @override
   Widget build(BuildContext context) {
