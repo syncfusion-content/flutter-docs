@@ -22,7 +22,7 @@ The schedule view display two different UI for mobile and web, for mobile it wil
 You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8" %}
+{% highlight dart hl_lines="7" %}
 
 @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ The day header can be customized by using the [dayHeaderSettings](https://pub.de
 The [DayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings-class.html) contains the properties to customize the day format, width, day text style, and date text style of the day header by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayFormat.html), [width](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/width.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayTextStyle.html), and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dateTextStyle.html) of `DayHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight dart hl_lines=" 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
   @override
   Widget build(BuildContext context) {

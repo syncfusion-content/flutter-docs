@@ -16,7 +16,7 @@ The Calendar provides the support to display an interactive view when the calend
 Build your own custom widget by using the `loadMoreWidgetBuilder` that will be displayed as a loading indicator in the calendar when the calendar view changes, and in the calendar schedule view, the loading indicator will be displayed when it reaches the start or end position to load more appointments.
 
 {% tabs %}
-{% highlight dart hl_lines="5 6" %}
+{% highlight dart hl_lines="5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 return SfCalendar(
         controller: calendarController,

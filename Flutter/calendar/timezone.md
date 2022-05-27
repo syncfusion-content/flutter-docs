@@ -1196,7 +1196,7 @@ You can display the appointments based on the client’s local time zone in cale
 You can set specific time zone to calendar using the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeZone.html) property of calendar. On this scenario, the appointments will be displayed in UTC time when the `startTimeZone` and `endTimeZone` properties of `Appointment` are set to null. The appointments will be displayed in UTC time based on the given calendar time zone.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {

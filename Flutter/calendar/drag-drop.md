@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="10 17 18 19 20" %}
 
 @override
 Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/targetResource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="10 17 18 19 20 21 22 23" %}
 
 @override
 Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) - Get the target resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="10 17 18 19 20 21 22" %}
 
 @override
 Widget build(BuildContext context) {
@@ -158,7 +158,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of `DragDropSettings`. Default value of `allowNavigation` property is true.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
 You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
