@@ -67,7 +67,7 @@ You can customize the view header of the `DateRangePicker` using the [viewHeader
 You can customize the view header height of `DateRangePicker` using the `viewHeaderHeight` property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="6 7" %}
 
 @override
 Widget build(BuildContext context) {

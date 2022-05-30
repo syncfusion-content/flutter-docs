@@ -1165,7 +1165,7 @@ You can create appointments at different time zones using the [startTimeZone](ht
 You can use the `startTime` and `endTime` properties of `Appointment` to get the exact start time and end time of an appointment. 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8" %}
 
 List<Appointment> appointments = <Appointment>[];
 

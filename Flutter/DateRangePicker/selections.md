@@ -144,7 +144,7 @@ It allows to extend the selection direction by using the [extendableRangeSelecti
 You can set the extendable range selection direction as forward, backward, both and none. 
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="8 9" %}
 
 @override
   Widget build(BuildContext context) {

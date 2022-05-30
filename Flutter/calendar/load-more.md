@@ -58,7 +58,7 @@ You can get the complete load more sample from this [link](https://github.com/Sy
 Update the appointments on-demand, when the loading indicator is displaying in the calendar by using the [handleLoadMore](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/handleLoadMore.html) method in the `CalendarDataSource,` which allows adding the appointments to the data source, update the data source, and notify the listener to update the appointment on view.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="7 8 9 19 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32" %}
 
 class _MeetingDataSource extends CalendarDataSource {
   _MeetingDataSource(List<Appointment> source) {
