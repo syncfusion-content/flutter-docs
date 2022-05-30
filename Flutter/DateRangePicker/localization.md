@@ -24,7 +24,7 @@ flutter_localizations:
 Next, import the `flutter_localizations` library and specify `localizationsDelegates` and `supportedLocale` for `MaterialApp`.
 
 {% tabs %}
-{% highlight dart hl_lines="4 8 13" %}
+{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15" %}
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 
