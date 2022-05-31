@@ -164,7 +164,7 @@ The month header can be customized by using the [monthHeaderSettings](https://pu
 The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings-class.html) contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/backgroundColor.html), and [monthTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthTextStyle.html) of `MonthHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12  13 14 15" %}
+{% highlight dart hl_lines="7 8 9 10 11 12  13 14 15" %}
 
 @override
   Widget build(BuildContext context) {
