@@ -12,7 +12,7 @@ documentation: ug
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="8 15 29 30" %}
+{% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 23 24 26 27 29 30 31 32 33" %}
 
 @override
 Widget build(BuildContext context) {
@@ -135,7 +135,7 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 
 {% tabs %}
-{% highlight dart hl_lines="2 3" %}
+{% highlight dart hl_lines="1 2 4 5 6 7 8 9" %}
 
 class Meeting {
   Meeting({this.eventName = '', required this.from, required this.to, required this.background, this.isAllDay = false});
@@ -153,7 +153,7 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using the `CalendarDataSource` override methods properties.
 
 {% tabs %}
-{% highlight dart hl_lines="1 2" %}
+{% highlight dart hl_lines="1 2 3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39" %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -202,7 +202,7 @@ class MeetingDataSource extends CalendarDataSource {
 You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 16 17 18 19 20 21 22 23 24 26" %}
+{% highlight dart hl_lines="7 14 15 16 17 18 19 20 21 23 24" %}
 
 @override
 Widget build(BuildContext context) {
