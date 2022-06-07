@@ -13,7 +13,7 @@ documentation: ug
 The [minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/minDate.html) will restrict `backward` date navigations features, and cannot swipe the control using the touch gesture beyond the min date range in all views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ Widget build(BuildContext context) {
 The [maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) will restrict `forward` date navigations features, and cannot swipe the control using the touch gesture beyond the max date range in all views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ Widget build(BuildContext context) {
 The `DateRangePicker` allows you to enable or disable the past dates from today's date in `MonthView`. This can be achieved by changing the [enablePastDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enablePastDates.html) property. By default, the value of this property is set to true.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -75,7 +75,7 @@ Widget build(BuildContext context) {
 In `DateRangePicker`, [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/blackoutDates.html) refer to the disabled dates that restrict the user from selecting it. These dates will be marked with Strikethrough.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in the date range picker.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="4 5 6 7 8 9" %}
 
 @override
 Widget build(BuildContext context) {

@@ -16,7 +16,7 @@ Visible dates can be restricted between certain range of dates, using [minDate](
 `minDate` will restrict date navigations features of  backward, also cannot swipe the control using touch gesture beyond the min date range.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 `maxDate` will restrict date navigations features of forward, and also cannot swipe the control using touch gesture beyond the max date range.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
 You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 6 16" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _calendarController = CalendarController();
@@ -93,7 +93,7 @@ class MyAppState extends State<MyApp> {
 You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of `CalendarController`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 6 16" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _calendarController = CalendarController();
@@ -127,7 +127,7 @@ By default, the date can be navigated to next and previous views using touch ges
 You can use the `forward` method of `CalendarController` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 13 20" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _calendarController = CalendarController();
@@ -162,7 +162,7 @@ class MyAppState extends State<MyApp> {
 You can use the `backward` method of `controller` for viewing the previous immediate visible dates in the `SfCalendar`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="2 14 21" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _calendarController = CalendarController();
@@ -198,7 +198,7 @@ class MyAppState extends State<MyApp> {
 You can enable the date picker for the calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property in the calendar, which displays the date picker and `Today` button in the header view. It allows you to quickly navigate to today and different calendar views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5" %}
 
 @override
 Widget build(BuildContext context) {
@@ -218,7 +218,7 @@ You can quickly navigate to the day view by a tap on the month cell and view hea
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5" %}
 
 @override
 Widget build(BuildContext context) {
@@ -237,7 +237,7 @@ Widget build(BuildContext context) {
 You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the `SfCalendar`. The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5 6 7 8 9 10 11 12" %}
 
 @override
 Widget build(BuildContext context) {
@@ -264,7 +264,7 @@ Widget build(BuildContext context) {
 You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict switching to the previous or next views using the swipe interaction of SfCalendar. By default, the view navigation mode is set to [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
   Widget build(BuildContext context) {

@@ -24,7 +24,7 @@ flutter_localizations:
 Next, import the `flutter_localizations` library and specify `localizationsDelegates` and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="1 6 7 8 9 10 11 12 13 14 15" %}
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -79,7 +79,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) using in calendar and specify the `supportedLocales` as well.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
