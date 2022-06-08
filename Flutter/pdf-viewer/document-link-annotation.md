@@ -16,7 +16,7 @@ By default, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_p
 You can enable or disable the navigation of document link annotation using the [enableDocumentLinkAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableDocumentLinkAnnotation.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
