@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrading Syncfusion Flutter installer to a latest version - Syncfusion
+title: Upgrading Syncfusion Flutter installer to a latest version
 description: Learn here about the how upgrade Syncfusion Flutter installer to a latest version from website and control panel.
 platform: flutter
 control: Essential Studio
