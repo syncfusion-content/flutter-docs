@@ -20,7 +20,7 @@ The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBoo
 The following code example explains the opening of built-in bookmark view programmatically.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="1 15" %}
 
 final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
 You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="24 31 32 33 34" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfBookmark _pdfBookmark;

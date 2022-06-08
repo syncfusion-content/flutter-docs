@@ -20,7 +20,7 @@ N> The images in the document will not be selected and, the multiple-page text s
 You can enable or disable the text selection in the PDF page using the [enableTextSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableTextSelection.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ N> On a desktop web browser, this `enableTextSelection` property will have no ef
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to customize the color used for text selection and its handle based on your requirements. The properties [selectionColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionColor.html) and [selectionHandleColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionHandleColor.html) of the [TextSelectionThemeData](https://api.flutter.dev/flutter/material/TextSelectionThemeData-class.html) class can be used to customize them. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="3 4 5 6" %}
 
 void main() => runApp(MaterialApp(
       title: 'Syncfusion PDF Viewer Demo',
@@ -83,7 +83,7 @@ The `SfPdfViewer` text selection supports the [PdfTextSelectionChangedCallback](
 The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback triggers when the text is selected or deselected in the SfPdfViewer. The [PdfTextSelectionChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails-class.html) will hold the [globalSelectedRegion](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/globalSelectedRegion.html) representing the global bounds information of the selected text region and the [selectedText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/selectedText.html) representing the selected text value. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10 11 12" %}
 
 @override
 Widget build(BuildContext context) {
