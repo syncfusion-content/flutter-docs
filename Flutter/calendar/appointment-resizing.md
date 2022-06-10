@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="10 17 18 19 20" %}
 
 @override
 Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="10 17 18 19 20 21 22" %}
 
 @override
 Widget build(BuildContext context) {
@@ -120,7 +120,7 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="10 17 18 19 20 21 22" %}
 
 @override
 Widget build(BuildContext context) {
