@@ -23,13 +23,16 @@ documentation: ug
 
    While running Essential Studio Flutter Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
-   ![Alert Image](Mac-Installer_images/Mac_Catalina_MacOS_Alert.png)  
+   ![Alert Image](Mac-Installer_images/Mac_Catalina_MacOS_Alert1.png)  
      
    If you receive this alert, follow the below steps for the easiest solution.   
 
    1.	Right-click the downloaded pkg file.
-   2.	Select the "Open With" option and choose "Installer (Default)".
-   3.	Installer window will be opened.
+   2.	Select the "Open With" option and choose "Installer (Default)". The following pop-up appears.
+   
+		![pop-up Image](Mac-Installer_images/Mac_Catalina_MacOS_Alert2.png)
+   
+   3.	When you click "Open" the installer window will be opened.
 
 ## Step-by-Step Installation
 
