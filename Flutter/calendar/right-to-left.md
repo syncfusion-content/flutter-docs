@@ -73,7 +73,7 @@ Right to left rendering is supported for all the elements in the `SfCalendar`.
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8" %}
 
 @override
 Widget build(BuildContext context) {

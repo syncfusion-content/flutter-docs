@@ -122,7 +122,7 @@ The [DateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicke
 The selected date or range details can be obtained using the [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback of date range picker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
 
 {% tabs %}
-{% highlight dart hl_lines="1 11" %}
+{% highlight dart hl_lines="1 2 3 11" %}
 
 void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
 // TODO: implement your code here

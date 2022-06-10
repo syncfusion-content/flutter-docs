@@ -26,7 +26,7 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 1213 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 @override
 Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ You can design your custom view and assign this view to the month header of a sc
 `bounds` - returns the header bounds.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11 12 131 4 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30" %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30" %}
 
 @override
 Widget build(BuildContext context) {
