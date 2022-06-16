@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation Errors of Essential Studio | Flutter |Syncfusion
-description: Learn here some information about the essential studio installation errors and steps for resolving it.
+title: Installation Errors in Flutter - Syncfusion
+description: Learn here about the common installation errors and solution to those errors in Syncfusion Flutter Components installation.
 platform: Flutter
 control: Essential Studio
 documentation: ug
