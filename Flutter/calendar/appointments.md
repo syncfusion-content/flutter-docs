@@ -130,6 +130,75 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 {% endhighlight %}
 {% endtabs %}
 
+## Notify listener
+
+Notify listener is used to notify the action performed in the CalendarDataSource. 
+You can performed the action like add, remove and reset in the calendar datasource.
+
+Add
+You can dynamically add the appointment to the data source by call Notifylistener. 
+Used to notify the item will be added in the collection.
+
+{% tabs %}
+{% highlight dart hl_lines="14 15 16" %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            child: const Text('Add appointment'),
+            onPressed: () {
+              final Appointment app = Appointment(
+                  startTime: _controller.displayDate!,
+                  endTime:
+                      _controller.displayDate!.add(const Duration(hours: 2)),
+                  subject: 'Add Appointment',
+                  color: Colors.pink);
+              _events?.appointments!.add(app);
+              _events?.notifyListeners(
+                  CalendarDataSourceAction.add, <Appointment>[app]);
+            },
+          ),
+          body: SfCalendar(
+            view: CalendarView.month,
+            controller: _controller,
+            dataSource: _events,
+          )),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+Remove
+Used to notify the item will be removed from the collection.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4" %}
+
+_events?.appointments!.removeAt(
+    _events!.appointments!.indexOf(_events?.appointments![0]));
+_events?.notifyListeners(CalendarDataSourceAction.remove,
+    <Appointment>[]..add(_events?.appointments![0]));	
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Reset
+It is used to notify the collection resetting with new collection.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3" %}
+
+_events?.appointments!.clear();
+_events?.notifyListeners(
+    CalendarDataSourceAction.reset, _events!.appointments!);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Creating business objects
 
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
@@ -357,7 +426,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 | FREQ | Maintains the Repeat type value of the appointment. (Example: Daily, Weekly, Monthly, Yearly, Every week day) Example: FREQ=DAILY;INTERVAL=1 |
 | INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday. (creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
 | COUNT | It holds the appointment’s count value. For example, when the recurrence appointment count value is 10, it means 10 appointments are created in the recurrence series. Example: FREQ=DAILY;INTERVAL=1;COUNT=10 |
-| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z |
+| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z. The T separates the date portion from the time of day portion. The Z on the end means UTC. In between value of T and Z is holds the time value of appointment.|
 | BYDAY | It holds the “DAY” values of an appointment to render.For example, when you create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday).  When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property.  When you select multiple days, the values are separated by commas. Example: FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10 |
 | BYMONTHDAY | This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, when you create a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example: FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 |
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
