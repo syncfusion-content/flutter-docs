@@ -132,12 +132,11 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 
 ## Notify listener
 
-By call this method whenever the object changes, to notify any clients the object may have. Listeners that are added during this iteration will not be visited. Listeners that are removed during this iteration will not be visited after they are removed.
+By call this method whenever the datasource changes, to notify any clients the datasource may have. We have provided support to perform three operations like Add, Remove and Reset. NotifyListener is used to notify the dataSource may have changed.
 
-AddListener
+#### Add Action
 
-You can dynamically add the appointment to the data source by call Notifylistener. 
-Used to notify the item will be added in the collection.
+We need to notify the datasource changes due to add the appointment from the collection. 
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16" %}
@@ -171,22 +170,23 @@ Used to notify the item will be added in the collection.
 {% endhighlight %}
 {% endtabs %}
 
-RemoveListener
-Used to notify the item will be removed from the collection.
+#### Remove Action
+We need to notify the datasource changes due to remove the appointment from the collection.
 
 {% tabs %}
-{% highlight dart hl_lines="1 2 3" %}
+{% highlight dart hl_lines="2 3 4" %}
 
-_events?.appointments!.remove(_events?.appointments![0]);
+final Appointment removeAppointment = appointmentCollection[0];
+appointmentCollection.remove(removeAppointment);
 _events?.notifyListeners(CalendarDataSourceAction.remove,
-    <Appointment>[_events?.appointments![0]]);
+    <Appointment>[removeAppointment]);
+
 
 {% endhighlight %}
 {% endtabs %}
 
-
-ResetListener
-It is used to notify the collection resetting with new collection.
+#### Reset Action
+We need to notify the datasource changes due to reset the appointments.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
@@ -197,6 +197,18 @@ _events?.notifyListeners(
 
 {% endhighlight %}
 {% endtabs %}
+
+#### Add Resource
+
+We need to notify the datasource changes due to add the resource from the collection.
+
+#### Remove Resource
+
+We need to notify the datasource changes due to remove the resource from the collection.
+
+#### Reset Resource
+
+We need to notify the datasource changes due to reset the resources.
 
 ## Creating business objects
 
