@@ -132,11 +132,11 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 
 ## Notify listener
 
-By call this method whenever the datasource changes, to notify any clients the datasource may have. We have provided support to perform three operations like Add, Remove and Reset. NotifyListener is used to notify the dataSource may have changed.
+By call this method whenever the datasource changes, to notify the datasource may have. Need to notify the datasource action(add, remove and reset) through notify listener.
 
 #### Add Action
 
-We need to notify the datasource changes due to add the appointment from the collection. 
+Due to the dynamic addition of the appointment in the datasource, we need to notify the data source changes.
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16" %}
@@ -171,7 +171,8 @@ We need to notify the datasource changes due to add the appointment from the col
 {% endtabs %}
 
 #### Remove Action
-We need to notify the datasource changes due to remove the appointment from the collection.
+
+Due to the appointment being removed in the datasource, we need to notify the data source changes.
 
 {% tabs %}
 {% highlight dart hl_lines="2 3 4" %}
@@ -186,7 +187,8 @@ _events?.notifyListeners(CalendarDataSourceAction.remove,
 {% endtabs %}
 
 #### Reset Action
-We need to notify the datasource changes due to reset the appointments.
+
+Due to reset the appointments in the datasource, we need to notify the data source changes.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
@@ -200,15 +202,15 @@ _events?.notifyListeners(
 
 #### Add Resource
 
-We need to notify the datasource changes due to add the resource from the collection.
+Due to the dynamic addition of the resource in the datasource, we need to notify the data source changes.
 
 #### Remove Resource
 
-We need to notify the datasource changes due to remove the resource from the collection.
+Due to the resource being removed in the datasource, we need to notify the data source changes.
 
 #### Reset Resource
 
-We need to notify the datasource changes due to reset the resources.
+Due to reset the resource in the datasource, we need to notify the data source changes.
 
 ## Creating business objects
 
@@ -437,7 +439,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 | FREQ | Maintains the Repeat type value of the appointment. (Example: Daily, Weekly, Monthly, Yearly, Every week day) Example: FREQ=DAILY;INTERVAL=1 |
 | INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday. (creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
 | COUNT | It holds the appointment’s count value. For example, when the recurrence appointment count value is 10, it means 10 appointments are created in the recurrence series. Example: FREQ=DAILY;INTERVAL=1;COUNT=10 |
-| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z. The T separates the date portion from the time of day portion. The Z on the end means UTC. In between value of T and Z is holds the time value.|
+| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z. The T separates the date portion from the time of day portion. Z denotes the UTC timzone. In between value of T and Z is holds the time value.|
 | BYDAY | It holds the “DAY” values of an appointment to render.For example, when you create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday).  When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property.  When you select multiple days, the values are separated by commas. Example: FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10 |
 | BYMONTHDAY | This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, when you create a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example: FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 |
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
