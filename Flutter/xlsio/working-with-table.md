@@ -42,7 +42,7 @@ sheet.getRangeByName('C4').setNumber(1062.5);
 sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
 
 final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'Table.xlsx');
+File('Table.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -80,7 +80,7 @@ final ExcelTable table = sheet.tableCollection.create('Table1',  sheet.getRangeB
 table.builtInTableStyle = ExcelTableBuiltInStyle.tableStyleDark10;
 
 final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'BuiltInStyle.xlsx');
+File('BuiltInStyle.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -197,7 +197,7 @@ final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRange
 sheet.tableCollection.remove(table1);
 
 final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'RemoveTable.xlsx');
+File('RemoveTable.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -263,6 +263,6 @@ final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRange
 sheet.tableCollection.removeAt(1);
 
 final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'RemoveTable.xlsx');
+File('RemoveTable.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}

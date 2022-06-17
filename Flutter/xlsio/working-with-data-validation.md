@@ -234,7 +234,7 @@ Sheet.getRangeByName(‘A1:H5’).autoFit();
 
 //Save and dispose the Workbook
 final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, ‘DataValidation.xlsx’);
+File('DataValidation.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
