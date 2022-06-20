@@ -145,7 +145,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       onQueryRowHeight: (details) {
           return details.getIntrinsicRowHeight(details.rowIndex,
-              excludedColumns: ['Contact Name'], canIncludeHiddenColumns: true);
+              excludedColumns: ['City'], canIncludeHiddenColumns: true);
       },
       columns: <GridColumn>[
         GridColumn(
@@ -167,6 +167,7 @@ Widget build(BuildContext context) {
                   softWrap: true,
                 ))),
         GridColumn(
+            visible: false,
             columnName: 'Company Name',
             label: Container(
                 padding: EdgeInsets.all(16.0),
@@ -182,6 +183,15 @@ Widget build(BuildContext context) {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'City',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Country',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Country',
                   softWrap: true,
                 )))
       ]);

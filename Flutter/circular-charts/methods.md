@@ -15,6 +15,7 @@ documentation: ug
 
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
+{% tabs %}
 {% highlight dart %} 
 
     late SfCircularChart chart;
@@ -66,6 +67,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
   
 {% endhighlight %}
+{% endtabs %}
 
 ### showByIndex method in tooltipBehavior
 
@@ -78,6 +80,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html)  - index of the point for which the tooltip should be shown.
 
 
+{% tabs %}
 {% highlight dart %} 
 
     late SfCircularChart chart;
@@ -127,6 +130,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### showByPixel method in tooltipBehavior
 
@@ -134,6 +138,7 @@ The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 x & y - logical pixel values to position the tooltip.
 
+{% tabs %}
 {% highlight dart %} 
 
     late SfCircularChart chart;
@@ -183,11 +188,13 @@ x & y - logical pixel values to position the tooltip.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Hide method in tooltipBehavior
 
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
 
+{% tabs %}
 {% highlight dart %} 
 
     late SfCircularChart chart;
@@ -238,6 +245,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Methods in selectionBehavior
 
@@ -250,6 +258,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 >**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
+{% tabs %}
 {% highlight dart %}
 
     late SfCircularChart chart;
@@ -300,6 +309,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PixelToPoint 
 
@@ -309,6 +319,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 >**Note**: The method will return the center value of the segment.
 
+{% tabs %}
 {% highlight dart %}
 
     //Initialize the series controller
@@ -340,3 +351,4 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}

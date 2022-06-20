@@ -13,6 +13,7 @@ documentation: ug
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) property. You can disable the animation by setting this property to 0.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -44,6 +45,7 @@ documentation: ug
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Dynamic series animation
 
@@ -51,6 +53,7 @@ documentation: ug
 
 If you wish to perform the initial rendering animation again in the existing series, [`animate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/animate.html) method should be called. On calling this method, this particular series will be animated again based on the  [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property's value in the series. If this property's value is 0, then the animation will not be performed.
 
+{% tabs %}
 {% highlight dart hl_lines="50 58" %} 
 
     @override
@@ -128,6 +131,7 @@ If you wish to perform the initial rendering animation again in the existing ser
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
@@ -138,6 +142,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 >**Note**: The animation delay is applicable for series, trendline, and indicators.
 
+{% tabs %}
 {% highlight dart hl_lines="38" %}
 
     import 'package:intl/intl.dart';
@@ -199,6 +204,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Animation Delay](images/cartesian-customization/animationDelay.gif)
 
@@ -214,6 +220,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
 
+{% tabs %}
 {% highlight dart hl_lines="8" %} 
 
     @override
@@ -245,6 +252,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Transposed chart](images/cartesian-customization/transposes.jpg)
 
@@ -252,6 +260,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/palette.html) property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -300,6 +309,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
      
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Palette](images/cartesian-customization/palettee.jpg)
 
@@ -307,6 +317,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -345,6 +356,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
@@ -353,6 +365,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -395,6 +408,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
@@ -410,6 +424,7 @@ The [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderColor.html) and [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) are defined then [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) is considered.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -449,6 +464,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
@@ -458,6 +474,7 @@ The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 Defaults to `null`.
 
+{% tabs %}
 {% highlight dart %} 
 
     /// Package import
@@ -523,6 +540,7 @@ Defaults to `null`.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Shader](images/cartesian-customization/shader.png)
 
@@ -530,6 +548,7 @@ Defaults to `null`.
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/mode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -570,6 +589,7 @@ The data points that has null value are considered as empty points. Empty data p
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points](images/cartesian-customization/emptyPoint.jpg)
 
@@ -577,6 +597,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -621,6 +642,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
 
@@ -628,6 +650,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) property determines whether the data points in the sequence should be sorted in [`SortingOrder.ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) or [`SortingOrder.descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) is set to [`SortingOrder.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -668,6 +691,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
       }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 

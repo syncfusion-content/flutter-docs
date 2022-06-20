@@ -23,6 +23,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 * [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) - maps the shader (gradient or image shader) for individual points from the data source.
 * [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) - defines the painting mode for the data points either as segment or gradient.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -60,6 +61,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie chart](circular-chart-types-images/pie.jpg)
 
@@ -67,6 +69,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 
 You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the pie chart with respect to the plot area. The default value is `80%`.
 
+{% tabs %}
 {% highlight dart hl_lines="13" %} 
 
     @override
@@ -91,6 +94,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie size](circular-chart-types-images/pie_sizing.jpg)
 
@@ -102,6 +106,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
 * [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeOffset.html) - specifies the offset of exploded slice. The value ranges from 0% to 100%.
 * [`explodeGesture`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeGesture.html) - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), and [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) and the default value is [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html).
 
+{% tabs %}
 {% highlight dart hl_lines="13 15" %}  
 
     @override
@@ -128,6 +133,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie explode](circular-chart-types-images/pie_explode.jpg)
 
@@ -135,6 +141,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
 
 Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeAll.html) property of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html), you can explode all the pie segments.
 
+{% tabs %}
 {% highlight dart hl_lines="14" %} 
 
     @override
@@ -160,6 +167,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie explode all](circular-chart-types-images/pie_explodeAll.jpg)
 
@@ -167,6 +175,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) allows you to render all the data points or segments in semi-pie, quarter-pie, or in any sector using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/endAngle.html) properties.
 
+{% tabs %}
 {% highlight dart hl_lines="13 15" %}  
 
     @override
@@ -193,6 +202,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     } 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie angle](circular-chart-types-images/pie_angle.jpg)
 
@@ -200,6 +210,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 The small segments in the pie chart can be grouped into **others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property specifies the grouping type based on the actual data point value or by points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property sets the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is null, and the default value of [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`CircularChartGroupMode.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartGroupMode.html).
 
+{% tabs %}
 {% highlight dart hl_lines="12 14" %}
 
     @override
@@ -226,6 +237,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie grouping](circular-chart-types-images/pie_grouping.jpg)
 
@@ -233,6 +245,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 
 The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRadiusMapper.html) maps the field name, which will be considered for calculating the radius of the data points.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -270,5 +283,6 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Pie various radius](circular-chart-types-images/pie_radius.jpg)

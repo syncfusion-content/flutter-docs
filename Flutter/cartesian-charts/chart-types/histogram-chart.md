@@ -29,6 +29,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 * [`curveWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveWidth.html) - changes the width of the normal distribution curve.
 * [`curveDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveDashArray.html) - renders the normal distribution curve  with dashes.
 
+{% tabs %}
 {% highlight dart %} 
 
         
@@ -159,6 +160,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 
 
 {% endhighlight %}
+{% endtabs %}
 
 ![histogram chart](cartesian-chart-types-images/Histogram.png)
 

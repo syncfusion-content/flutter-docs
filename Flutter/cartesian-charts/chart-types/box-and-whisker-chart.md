@@ -21,6 +21,7 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 * [`showMean`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/showMean.html) - indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
 * [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/spacing.html) - spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -44,6 +45,7 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 

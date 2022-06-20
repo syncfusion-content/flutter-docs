@@ -24,7 +24,8 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - specifies the viewport index value of the tooltip.
 
- {% highlight dart %}
+{% tabs %}
+{% highlight dart %}
 
     late TooltipBehavior _tooltipBehavior;
 
@@ -49,6 +50,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onActualRangeChanged
 
@@ -64,6 +66,7 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 * [`visibleInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/visibleInterval.html) - specifies the visible interval of an axis. 
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/orientation.html) - specifies the current axis orientation.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -82,6 +85,7 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onDataLabelRender
 
@@ -96,6 +100,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/offset.html) - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - used to get and set the background color of a data label.
  
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -133,6 +138,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onLegendItemRender
 
@@ -144,6 +150,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
 * [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/legendIconType.html) - specifies the shape of the legend.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/color.html) - used to get and set the color of the legend icon.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -163,6 +170,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onTrackballPositionChanging
 
@@ -170,6 +178,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
 
 * [`chartPointInfo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballArgs/chartPointInfo.html) - holds the information about the current point.
 
+{% tabs %}
 {% highlight dart %}
 
   late TrackballBehavior _trackballBehavior;
@@ -196,6 +205,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onCrosshairPositionChanging
 
@@ -208,6 +218,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/axis.html) - holds the information about the current axis.
 * [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - used to get and set the color of the crosshair line.
 
+{% tabs %}
 {% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
@@ -236,6 +247,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onZooming
 
@@ -247,6 +259,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
+{% tabs %}
 {% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -279,6 +292,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onZoomStart
 
@@ -290,6 +304,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
+{% tabs %}
 {% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -322,6 +337,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onZoomEnd
 
@@ -333,6 +349,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
+{% tabs %}
 {% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -365,6 +382,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onZoomReset
 
@@ -376,6 +394,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
+{% tabs %}
 {% highlight dart %}
     
     late ZoomPanBehavior _zoomPanBehavior;
@@ -408,6 +427,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointTap
 
@@ -418,6 +438,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -439,6 +460,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointDoubleTap
 
@@ -449,6 +471,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -470,6 +493,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPointLongPress
 
@@ -480,6 +504,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -500,6 +525,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       );
     }
 {% endhighlight %}
+{% endtabs %}
 
 ## onAxisLabelTapped
 
@@ -510,6 +536,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/value.html) - specifies the actual value of the current axis label.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axisName.html) - used to get the axis name.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -527,6 +554,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 
@@ -541,6 +569,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 * [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/series.html) - specifies the current series and the series type may vary based on the chart type.
 
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -559,6 +588,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onSelectionChanged
 
@@ -575,6 +605,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - used to get and set the border width of the unselected data points or series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - used to get the viewport index value of the selected data points.
 
+{% tabs %}
 {% highlight dart %}
     
     late SelectionBehavior _selectionBehavior;
@@ -612,6 +643,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onRenderDetailsUpdate (TechnicalIndicators)
  
@@ -625,6 +657,7 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 * [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineWidth.html) - used to change the width of the signal line.
 * [`signalLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineDashArray.html) - used to change the dash array size of the signal line.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -647,6 +680,7 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
     }
     
 {% endhighlight %}
+{% endtabs %}
 
 ## onRenderDetailsUpdate (Trendline)
 
@@ -659,6 +693,7 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
 * `rSquaredValue` - specifies the r-squared value of the trendline.
 * `slope` - specifies the slope value of the trendline.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -686,6 +721,7 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**Note**
 * The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
@@ -694,6 +730,7 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
 
 Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
 
+{% tabs %}
 {% highlight dart %}
 
     //Initialize the series controller
@@ -753,11 +790,13 @@ Triggers when the series renderer is created. This callback can be used to obtai
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionDown
 
 Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -773,11 +812,13 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionUp
 
 Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -793,11 +834,13 @@ Triggers when tapped or clicked on the chart area. You can get the tapped region
   }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onChartTouchInteractionMove
 
 Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
+{% tabs %}
 {% highlight dart %}
 
   @override
@@ -813,6 +856,7 @@ Triggers when touched or clicked and moved on the chart area. You can get the ta
   }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onMarkerRender
 
@@ -828,6 +872,7 @@ Triggers when the marker is being rendered. Here, you can customize the followin
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/borderColor.html) - to get and set the border color of the marker.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -849,6 +894,7 @@ Triggers when the marker is being rendered. Here, you can customize the followin
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onDataLabelTapped
 Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelTapped.html) Callback contains the following arguments.
@@ -863,6 +909,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 >**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -892,11 +939,13 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onPlotAreaSwipe
 
 Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
 
+{% tabs %}
 {% highlight dart %}
 
     //Initialize the series controller
@@ -934,6 +983,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 
@@ -949,6 +999,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 * `viewPortPointIndex` - To obtain the viewport index value of the error bar.
 * `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -992,6 +1043,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## onCreateRenderer
 
@@ -1003,6 +1055,7 @@ Series state will be created only once per series and will not be created again 
 
 Defaults to `null`.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -1072,6 +1125,7 @@ Defaults to `null`.
     }
   
 {% endhighlight %}
+{% endtabs %}
 
 ## onCreateShader
 
@@ -1080,6 +1134,7 @@ The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
 
+{% tabs %}
 {% highlight dart %}
 
     /// Package import
@@ -1139,6 +1194,7 @@ the data points and legend. For further reference on this callback, Check the [`
   }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## axisLabelFormatter
 
@@ -1148,6 +1204,7 @@ You can customize the text and text style using the [`ChartAxisLabel`](https://p
 
 Defaults to `null`.
 
+{% tabs %}
 {% highlight dart %}
 
     Widget build(BuildContext context) {
@@ -1163,6 +1220,7 @@ Defaults to `null`.
       return ChartAxisLabel('Label', details.textStyle);
     }
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 
@@ -1178,6 +1236,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 * [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
 
+{% tabs %}
 {% highlight dart %}
 
     @override
@@ -1242,6 +1301,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### See Also
 

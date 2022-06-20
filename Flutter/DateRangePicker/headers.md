@@ -14,7 +14,7 @@ You can customize the header of the data range picker using the [headerStyle](ht
 You can customize the height of the header of `DateRangePicker` by using the `headerHeight` property.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 You can customize the header style of the `DataRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textAlign.html) properties of [DateRangePickerHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14" %}
 
 @override
 Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ You can customize the view header of the `DateRangePicker` using the [viewHeader
 You can customize the view header height of `DateRangePicker` using the `viewHeaderHeight` property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ Widget build(BuildContext context) {
 You can customize the view header style of `DateRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of [DateRangePickerViewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -113,7 +113,7 @@ Widget build(BuildContext context) {
 You can customize the view header of `DateRangePicker` by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {

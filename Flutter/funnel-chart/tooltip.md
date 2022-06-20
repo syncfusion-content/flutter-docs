@@ -13,6 +13,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -54,6 +55,7 @@ The tooltip state will be preserved on the device's orientation change and on br
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip](images/tooltip/default_tooltip.png)
 
@@ -73,6 +75,7 @@ You can use the following properties to customize the tooltip appearance.
 * [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
 * [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -104,6 +107,7 @@ You can use the following properties to customize the tooltip appearance.
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customized tooltip](images/tooltip/customized_tooltip.png)
 
@@ -115,6 +119,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Y value - `point.y`
 * Name of the series - `series.name`
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -143,6 +148,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![tooltip format](images/tooltip/tooltip_format.png)
 
@@ -150,6 +156,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html).
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -177,6 +184,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![pointer tooltip](images/tooltip/tooltip_pointer.png)
 
@@ -184,6 +192,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/tooltipBehavior.html).
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -219,6 +228,7 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tooltip template](images/tooltip/tooltip_template.png)
 
@@ -233,6 +243,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates tooltip only when performing double tap action.
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - hides the visibility of tooltip when setting activation mode to none.
 
+{% tabs %}
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
@@ -261,5 +272,6 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 Also refer [`tooltip event`](./callbacks#ontooltiprender) for customizing the tooltip further.

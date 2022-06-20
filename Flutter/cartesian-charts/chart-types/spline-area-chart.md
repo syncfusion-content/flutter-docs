@@ -15,6 +15,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
+{% tabs %}
 {% highlight dart %} 
 
     @override
@@ -57,6 +58,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline area chart](cartesian-chart-types-images/spline_area.png)
 
@@ -73,6 +75,7 @@ By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion
 
 The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %} 
     
     @override
@@ -108,6 +111,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Spline area type](cartesian-chart-types-images/spline_area_types.png)
 
@@ -115,6 +119,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html) is used to render spline area series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
+{% tabs %}
 {% highlight dart hl_lines="21" %}
     
     @override
@@ -149,6 +154,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Dashed spline area chart](cartesian-chart-types-images/spline_area_dashed.png)
 

@@ -20,7 +20,7 @@ To differentiate the highlighted texts, the current text instance highlight colo
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="23 24 25 26" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -65,7 +65,7 @@ void initState() {
 The [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) and [previousInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/previousInstance.html) methods in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class help you to navigate to the next and previous search text instance in the PDF document. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="36 48" %}
 
 
 late PdfViewerController _pdfViewerController;
@@ -134,7 +134,7 @@ Widget build(BuildContext context) {
 The [clear](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/clear.html) method in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class is used to cancel the text search operation. When the text search is in progress, this method can be used to cancel the same and clear all the highlighted texts in the `SfPdfViewer`. The following code example explains the same
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="37" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -194,7 +194,7 @@ The colors in which the current instance and other instances are highlighted can
 The following code example explains how to customize the search text highlight color.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="32 33" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -240,7 +240,7 @@ Widget build(BuildContext context) {
 The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) property in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if no instance of the searched text is found in the PDF document. That is, if the [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) returns value 0, then there is no matching instance found for the searched text. The following code explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="25 26 27" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -286,7 +286,7 @@ Widget build(BuildContext context) {
 The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) and [currentInstanceIndex](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/currentInstanceIndex.html) properties in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if a complete cycle of text search is completed in the PDF document. That is, when the [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) method is called, you can check if the `currentInstanceIndex` equals the `totalInstanceCount`, then it can be considered that a complete cycle of text search is completed. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="63 64 65" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
