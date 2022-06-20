@@ -136,7 +136,7 @@ By call this method whenever the datasource changes, to notify the datasource ma
 
 #### Add Action
 
-Due to the dynamic addition of the appointment in the datasource, we need to notify the data source changes.
+The notify listener will be triggered when the appointments are added to the data source. 
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16" %}
@@ -172,7 +172,7 @@ Due to the dynamic addition of the appointment in the datasource, we need to not
 
 #### Remove Action
 
-Due to the appointment being removed in the datasource, we need to notify the data source changes.
+The notify listener will be triggered when the appointment is removed from the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="2 3 4" %}
@@ -182,13 +182,12 @@ appointmentCollection.remove(removeAppointment);
 _events?.notifyListeners(CalendarDataSourceAction.remove,
     <Appointment>[removeAppointment]);
 
-
 {% endhighlight %}
 {% endtabs %}
 
 #### Reset Action
 
-Due to reset the appointments in the datasource, we need to notify the data source changes.
+When the appointments are reset from the data source, the notify listener is triggered.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
@@ -202,15 +201,57 @@ _events?.notifyListeners(
 
 #### Add Resource
 
-Due to the dynamic addition of the resource in the datasource, we need to notify the data source changes.
+The notify listener will be triggered when the resources are added to the data source. 
+
+{% tabs %}
+{% highlight dart hl_lines="6 7" %}
+
+final CalendarResource resource = CalendarResource(
+displayName: 'Sophia',
+color: Colors.red,
+id: '00045',
+);
+_events!.resources!.add(resource);
+_events!.notifyListeners(CalendarDataSourceAction.addResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
 
 #### Remove Resource
 
-Due to the resource being removed in the datasource, we need to notify the data source changes.
+The notify listener will be triggered when the resource is removed from the data source.
+
+{% tabs %}
+{% highlight dart hl_lines="2 4" %}
+
+final CalendarResource resource = _employeeCollection[0];
+_events!.resources!.remove(resource);
+_events!.notifyListeners(
+    CalendarDataSourceAction.removeResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
 
 #### Reset Resource
 
-Due to reset the resource in the datasource, we need to notify the data source changes.
+When the resources are reset from the data source, the notify listener is triggered.
+
+{% tabs %}
+{% highlight dart hl_lines="5 8" %}
+
+final List<CalendarResource> collection =
+    <CalendarResource>[];
+collection.add(CalendarResource(
+    displayName: "Sophia", id: '00045', color: Colors.green));
+_events!.resources!.clear();
+_events!.resources!.addAll(collection);
+_events!.notifyListeners(
+    CalendarDataSourceAction.resetResource, collection);
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Creating business objects
 
