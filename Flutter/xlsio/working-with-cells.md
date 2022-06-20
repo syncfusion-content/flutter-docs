@@ -192,18 +192,17 @@ workbook.dispose();
 
 ## Data Filtering
 
-Using [AutoFilters](https://support.office.com/en-US/article/Filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e), data can be filtered to enable quick and easy way to find and work with a subset of data in a range of cells. When the data is filtered, entire rows are hidden if values in one or more columns does not meet the filtering criteria. The following are the types of filters that can be used in XlsIO.
+This feature allows filtering data to display only rows that meet criteria specified by the user and hide rows that do not. Syncfusion Flutter Excel creation library supports different filter types such as,
 
 * Text filter
 * Custom filter
 * Date filter
 * Dynamic filter
-* Font color filter
-* Cell color filter
+* Color filter
 
 ### Text Filter
 
-Text filter can be applied through **addTextFilter** method of **AutoFilter** class. The following code snippet explains this.
+Text filter as the name says filters the rows that contain required text. This can be used applied through **addTextFilter** method of **AutoFilter** class. This filter is case sensitive and the following code snippet explains this.
 
 {% highlight dart %}
 
@@ -259,7 +258,7 @@ workbook.dispose();
 
 ### Custom Filter
 
-The following code snippet explains how to apply a custom filter.
+Custom filters helps to filter data that satifies either of the given conditions. The following code snippet explains how to apply a custom filter.
 
 {% highlight dart %}
 
@@ -304,13 +303,13 @@ final AutoFilter autofilter = worksheet.autofilters[0];
 
 // First condition.
 final AutoFilterCondition firstCondition = autofilter.firstCondition;
-firstCondition.conditionOperator = ExcelFilterCondition.equal;
-firstCondition.textValue = 'Owner';
+firstCondition.conditionOperator = ExcelFilterCondition.greaterOrEqual;
+firstCondition.numberValue = 10;
 
 // Second condition.
 final AutoFilterCondition secondCondition = autofilter.secondCondition;
-secondCondition.conditionOperator = ExcelFilterCondition.equal;
-secondCondition.textValue = 'Sales Representative';
+secondCondition.conditionOperator = ExcelFilterCondition.less;
+secondCondition.numberValue = 15;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -321,7 +320,7 @@ workbook.dispose();
 
 ### Date Filter
 
-Date filter can be applied through **addDateFilter** method of **AutoFilter** class. The following code snippet explains this.
+Date filter as the name says filters the rows that contain required dates. Date filter can be applied through **addDateFilter** method of **AutoFilter** class. The following code snippet explains this.
 
 {% highlight dart %}
 
@@ -377,7 +376,7 @@ workbook.dispose();
 
 ### Dynamic Filter
 
-Dynamic filter can be applied through **addDynamicFilter** method of **AutoFilter** class. The following code snippet explains this.
+Dynamic filter helps to filter data that satisfies the conditions based on calender. Dynamic filter can be applied through **addDynamicFilter** method of **AutoFilter** class. The following code snippet explains this.
 
 {% highlight dart %}
 
@@ -431,9 +430,13 @@ workbook.dispose();
 
 {% endhighlight %}
 
-### Font Color Filter
+### Color Filter
 
-Font color filter can be applied through **addColorFilter** method of **AutoFilter** class and **fontColor** option of **ExcelColorFilterType** enumeratioon. The following code snippet explains this.
+Color filter helps to filter the data based on color. **addColorFilter** method of **AutoFilter** class helps to achieve this. There are two types of color filters that can be used namely, font color filter and cell color filter.
+
+#### Font Color Filter
+
+Font color filter can be applied by selecting **fontColor** option of **ExcelColorFilterType** enumeration. The following code snippet explains this.
 
 {% highlight dart %}
 
@@ -506,9 +509,9 @@ workbook.dispose();
 
 {% endhighlight %}
 
-### Cell Color Filter
+#### Cell Color Filter
 
-Cell color filter can be applied through **addColorFilter** method of **AutoFilter** class and **cellColor** option of **ExcelColorFilterType** enumeratioon. The following code snippet explains this.
+Cell color filter can be applied by selecting **cellColor** option of **ExcelColorFilterType** enumeration. The following code snippet explains this.
 
 {% highlight dart %}
 
