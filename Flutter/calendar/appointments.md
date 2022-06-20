@@ -130,13 +130,16 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 {% endhighlight %}
 {% endtabs %}
 
-## Notify listener
+## DataSource manipulation
 
 By call this method whenever the datasource changes, to notify the datasource may have. Need to notify the datasource action(add, remove and reset) through notify listener.
 
 #### Add Action
 
-The notify listener will be triggered when the appointments are added to the data source. 
+If the appointment is added in an underlying datasource, you can call the notifyListeners.
+
+In the following example, the appointment is added and notifyListeners is called in onPressed callback of the FloatingActionButton. 
+So, users can call notifyListeners methods to refresh the dataSource.
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16" %}
@@ -172,7 +175,7 @@ The notify listener will be triggered when the appointments are added to the dat
 
 #### Remove Action
 
-The notify listener will be triggered when the appointment is removed from the data source.
+If the appointment is removed in an underlying datasource, you can call the notifyListeners.
 
 {% tabs %}
 {% highlight dart hl_lines="2 3 4" %}
@@ -187,7 +190,7 @@ _events?.notifyListeners(CalendarDataSourceAction.remove,
 
 #### Reset Action
 
-When the appointments are reset from the data source, the notify listener is triggered.
+If the appointment is replaced in an underlying datasource, you can call the notifyListeners.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
@@ -201,7 +204,7 @@ _events?.notifyListeners(
 
 #### Add Resource
 
-The notify listener will be triggered when the resources are added to the data source. 
+If the resource is added in an underlying datasource, you can call the notifyListeners.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7" %}
@@ -220,7 +223,7 @@ _events!.notifyListeners(CalendarDataSourceAction.addResource,
 
 #### Remove Resource
 
-The notify listener will be triggered when the resource is removed from the data source.
+If the resource is removed in an underlying datasource, you can call the notifyListeners.
 
 {% tabs %}
 {% highlight dart hl_lines="2 4" %}
@@ -236,7 +239,7 @@ _events!.notifyListeners(
 
 #### Reset Resource
 
-When the resources are reset from the data source, the notify listener is triggered.
+If the resource is replaced in an underlying datasource, you can call the notifyListeners.
 
 {% tabs %}
 {% highlight dart hl_lines="5 8" %}
