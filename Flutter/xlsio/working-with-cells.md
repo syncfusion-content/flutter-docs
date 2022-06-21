@@ -242,10 +242,10 @@ worksheet.getRangeByName('C9').setText('Madrid');
 worksheet.getRangeByName('C10').setText('Marseille');
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
 
 // Add text filter.
-final AutoFilter autofilter = worksheet.autofilters[0];
+final AutoFilter autofilter = worksheet.autoFilters[0];
 autofilter.addTextFilter(<String>{'Owner'});
 worksheet.getRangeByName('A1:C10').autoFitColumns();
 
@@ -298,8 +298,8 @@ worksheet.getRangeByName('C9').setText('Madrid');
 worksheet.getRangeByName('C10').setText('Marseille');
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
-final AutoFilter autofilter = worksheet.autofilters[0];
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
+final AutoFilter autofilter = worksheet.autoFilters[0];
 
 // First condition.
 final AutoFilterCondition firstCondition = autofilter.firstCondition;
@@ -360,10 +360,10 @@ worksheet.getRangeByName('C9').setText('Madrid');
 worksheet.getRangeByName('C10').setText('Marseille');
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
 
 // Add date filter.
-final AutoFilter autofilter = worksheet.autofilters[1];
+final AutoFilter autofilter = worksheet.autoFilters[1];
 autofilter.addDateFilter(DateTime(2002), DateTimeFilterType.year);
 autofilter.addDateFilter(DateTime(2009, 5), DateTimeFilterType.year);
 
@@ -416,10 +416,10 @@ worksheet.getRangeByName('C9').setText('Madrid');
 worksheet.getRangeByName('C10').setText('Marseille');
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
 
 // Add dynamic filter.
-final AutoFilter autofilter = worksheet.autofilters[1];
+final AutoFilter autofilter = worksheet.autoFilters[1];
 autofilter.addDynamicFilter(DynamicFilterType.quarter2);
 worksheet.getRangeByName('A1:C10').autoFitColumns();
 
@@ -496,10 +496,10 @@ worksheet.getRangeByName('C9').cellStyle.fontColor = '#000000';
 worksheet.getRangeByName('C10').cellStyle.fontColor = '#FF0000';
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
 
 // Add font color filter.
-final AutoFilter autofilter = worksheet.autofilters[2];
+final AutoFilter autofilter = worksheet.autoFilters[2];
 autofilter.addColorFilter('#0000FF', ExcelColorFilterType.fontColor);
 
 // Save and dispose workbook.
@@ -571,10 +571,10 @@ worksheet.getRangeByName('C9').cellStyle.fontColor = '#000000';
 worksheet.getRangeByName('C10').cellStyle.fontColor = '#FF0000';
 
 // Intialize filter range.
-worksheet.autofilters.filterRange = worksheet.getRangeByName('A1:C10');
+worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
 
 // Add cell color filter.
-final AutoFilter autofilter = worksheet.autofilters[0];
+final AutoFilter autofilter = worksheet.autoFilters[0];
 autofilter.addColorFilter('#FF0000', ExcelColorFilterType.cellColor);
 
 // Save and dispose workbook.
