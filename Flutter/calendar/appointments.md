@@ -136,7 +136,7 @@ By call this method whenever the datasource changes, to notify the datasource ma
 
 #### Add Action
 
-If the dynamic appointment is added to an underlying datasource, we need to notify the data source changes.
+When dynamically adding appointments to a data source, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16" %}
@@ -172,7 +172,7 @@ If the dynamic appointment is added to an underlying datasource, we need to noti
 
 #### Remove Action
 
-If the dynamic appointment is removed in an underlying datasource, we need to notify the data source changes.
+When we remove appointments from a data source dynamically, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="2 3 4" %}
@@ -187,7 +187,7 @@ _events?.notifyListeners(CalendarDataSourceAction.remove,
 
 #### Reset Action
 
-If the dynamic appointment is replaced in an underlying datasource, we need to notify the data source changes.
+When we replace appointments in a data source dynamically, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
@@ -201,7 +201,7 @@ _events?.notifyListeners(
 
 #### Add Resource
 
-If the dynamic resource is added to an underlying datasource, we need to notify the data source changes.
+When dynamically adding resource to a data source, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7" %}
@@ -220,7 +220,7 @@ _events!.notifyListeners(CalendarDataSourceAction.addResource,
 
 #### Remove Resource
 
-If the dynamic resource is removed to an underlying datasource, we need to notify the data source changes.
+When we remove resource from a data source dynamically, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="2 4" %}
@@ -236,7 +236,7 @@ _events!.notifyListeners(
 
 #### Reset Resource
 
-If the dynamic resources are replaced to an underlying datasource, we need to notify the data source changes.
+When we replace resource in a data source dynamically, we must notify the data source.
 
 {% tabs %}
 {% highlight dart hl_lines="5 8" %}
