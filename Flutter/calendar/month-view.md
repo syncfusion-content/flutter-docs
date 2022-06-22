@@ -1,4 +1,4 @@
-	---
+---
 layout: post
 title: Month view in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Month view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
