@@ -132,7 +132,7 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 
 ## Datasource manipulation
 
-By call this method whenever the datasource changes, to notify the datasource may have. Need to notify the datasource action(add, remove and reset) through notify listener. In the following example, the appointment and resource is added, removed and replaced and notifyListeners is called in onPressed callback of the FloatingActionButton.
+By call this method whenever the datasource changes, to notify the datasource may have. Need to notify the datasource action(add, remove, and reset) through notify listener. In the following example, the appointment and resource are added, removed, and replaced and notifyListeners is called in onPressed callback of the FloatingActionButton.
 
 #### Add Action
 
