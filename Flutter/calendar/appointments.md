@@ -139,7 +139,7 @@ By call this method whenever the datasource changes, to notify the datasource ma
 When dynamically adding appointments to a data source, we must notify the data source for the add action.
 
 {% tabs %}
-{% highlight dart hl_lines="14 15 16" %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16" %}
 
 @override
   Widget build(BuildContext context) {
@@ -175,7 +175,7 @@ When dynamically adding appointments to a data source, we must notify the data s
 When we remove appointments from a data source dynamically, we must notify the data source for the remove action.
 
 {% tabs %}
-{% highlight dart hl_lines="2 3 4" %}
+{% highlight dart hl_lines="1 2 3 4" %}
 
 final Appointment removeAppointment = _events?.appointments![0];
 _events?.appointments!.remove(removeAppointment);
@@ -204,7 +204,7 @@ _events?.notifyListeners(
 When dynamically adding resource to a data source, we must notify the data source for add resource.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7" %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
 
 final CalendarResource resource = CalendarResource(
 displayName: 'Sophia',
@@ -223,7 +223,7 @@ _events!.notifyListeners(CalendarDataSourceAction.addResource,
 When we remove resource from a data source dynamically, we must notify the data source for remove resource.
 
 {% tabs %}
-{% highlight dart hl_lines="2 4" %}
+{% highlight dart hl_lines="1 2 3 4 5" %}
 
 final CalendarResource resource = _events!.resources![0];
 _events!.resources!.remove(resource);
@@ -239,7 +239,7 @@ _events!.notifyListeners(
 When we replace resource in a data source dynamically, we must notify the data source for reset resource.
 
 {% tabs %}
-{% highlight dart hl_lines="5 8" %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
 
 final List<CalendarResource> collection =
     <CalendarResource>[];
