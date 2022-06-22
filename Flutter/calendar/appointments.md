@@ -177,8 +177,8 @@ When we remove appointments from a data source dynamically, we must notify the d
 {% tabs %}
 {% highlight dart hl_lines="2 3 4" %}
 
-final Appointment removeAppointment = appointmentCollection[0];
-appointmentCollection.remove(removeAppointment);
+final Appointment removeAppointment = _events?.appointments![0];
+_events?.appointments!.remove(removeAppointment);
 _events?.notifyListeners(CalendarDataSourceAction.remove,
     <Appointment>[removeAppointment]);
 
@@ -225,7 +225,7 @@ When we remove resource from a data source dynamically, we must notify the data 
 {% tabs %}
 {% highlight dart hl_lines="2 4" %}
 
-final CalendarResource resource = _employeeCollection[0];
+final CalendarResource resource = _events!.resources![0];
 _events!.resources!.remove(resource);
 _events!.notifyListeners(
     CalendarDataSourceAction.removeResource,
