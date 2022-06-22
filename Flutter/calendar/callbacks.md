@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
 
 ## Calendar tap callback
 
-The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar tapped.
+The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar tapped.
 
 `date` - returns the selected date.
 `appointments` - returns the selected appointments.
