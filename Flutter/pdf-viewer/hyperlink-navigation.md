@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlink navigation in Flutter PDF Viewer (SfPdfViewer)
 
-The SfPdfViewer supports the hyperlink navigation that enables the hyperlinks in the PDF document and tapping on the hyperlink will open the URL in the browser.
+The SfPdfViewer supports the hyperlink navigation that enables the hyperlinks in the PDF document and tapping on the hyperlink it will open in the browser.
 
 ![Hyperlink navigation dialog](images/hyperlink-navigation/hyperlink_navigation_dialog.jpg)
 
