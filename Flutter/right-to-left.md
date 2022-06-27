@@ -108,4 +108,12 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
             <a href="https://help.syncfusion.com/flutter/treemap/right-to-left">Link</a>
         </td>
     </tr>
+    <tr>
+        <td>
+            PDF Viewer
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/pdf-viewer/right-to-left">Link</a>
+        </td>
+    </tr>
 </table>
