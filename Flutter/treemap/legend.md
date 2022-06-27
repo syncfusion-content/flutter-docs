@@ -548,6 +548,148 @@ class SocialMediaUsers {
 N>
 * Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.html), for changing the size of the icon.
 
+## Scrollbar for legend
+
+<b>For default legend</b>
+
+You can scroll the legend items using the [`TreemapLegendOverflowMode.scroll`]() property. Basically, the scrollbar is not visible. Now using this [`shouldAlwaysShowScrollbar`] boolean property to make it visible. The possible values are `true` and `false`.
+
+If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
+
+If the legend position is `top` or `bottom`, then the default scroll direction is `horizontal`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<SocialMediaUsers> _source;
+
+@override
+void initState() {
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('China', 'Facebook', 12.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('South America', 'Twitter', 5.54),
+      SocialMediaUsers('United Kingdom', 'Instagram', 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              overflowMode: TreemapLegendOverflowMode.scroll,
+              position: TreemapLegendPosition.bottom,
+              shouldAlwaysShowScrollbar: true,
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
+
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default legend scrollbar](images/legend/treemap-default-legend-scroll.gif)
+
+<b>For bar legend</b>
+
+You can scroll the legend items using the [`MapLegendOverflowMode.scroll`]() property. Basically, the scrollbar is not visible. Now using this [`shouldAlwaysShowScrollbar`] boolean property to make it visible. The possible values are `true` and `false`.
+
+If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
+
+If the legend position is `top` or `bottom`, then the default scroll direction is `horizontal`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<SocialMediaUsers> _source;
+
+@override
+void initState() {
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: const TreemapLegend.bar(
+              position: TreemapLegendPosition.bottom,
+              overflowMode: TreemapLegendOverflowMode.scroll,
+              shouldAlwaysShowScrollbar: true,
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
+
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend scrollbar](images/legend/treemap-bar-legend-scroll.gif)
+
 ## Text style
 
 You can customize the legend item's text style using the [`TreemapLegend.textStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/textStyle.html) property.
