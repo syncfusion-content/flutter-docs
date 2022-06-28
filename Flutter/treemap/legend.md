@@ -619,7 +619,7 @@ class SocialMediaUsers {
 {% endhighlight %}
 {% endtabs %}
 
-![Default legend scrollbar](images/legend/treemap-default-legend-scroll.gif)
+![Default legend scrollbar](images/legend/treemap-default-legend-scroll.png)
 
 <b>For bar legend</b>
 
@@ -688,7 +688,7 @@ class SocialMediaUsers {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar legend scrollbar](images/legend/treemap-bar-legend-scroll.gif)
+![Bar legend scrollbar](images/legend/treemap-bar-legend-scroll.png)
 
 ## Text style
 

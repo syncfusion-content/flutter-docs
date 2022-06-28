@@ -908,7 +908,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Map default legend scroll](images/legend/map-default-legend-scroll.gif)
+![Map default legend scroll](images/legend/map-default-legend-scroll.png)
 
 <b>For bar legend</b>
 
@@ -999,7 +999,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Map bar legend scroll](images/legend/map-bar-legend-scroll.gif)
+![Map bar legend scroll](images/legend/map-bar-legend-scroll.png)
 
 ## Legend toggling
 
