@@ -130,6 +130,129 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 {% endhighlight %}
 {% endtabs %}
 
+## Datasource manipulation
+
+Whenever the datasource changes, to notify the datasource action (add, remove, and reset) through notify listener. In the following example, the appointment and resource are added, removed, and replaced and notifyListeners is called in onPressed callback of the FloatingActionButton.
+
+#### Add Action
+
+When dynamically adding appointments to a data source, we must notify the data source for the add action.
+
+{% tabs %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16" %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            child: const Text('Add appointment'),
+            onPressed: () {
+              final Appointment app = Appointment(
+                  startTime: _controller.displayDate!,
+                  endTime:
+                      _controller.displayDate!.add(const Duration(hours: 2)),
+                  subject: 'Add Appointment',
+                  color: Colors.pink);
+              _events?.appointments!.add(app);
+              _events?.notifyListeners(
+                  CalendarDataSourceAction.add, <Appointment>[app]);
+            },
+          ),
+          body: SfCalendar(
+            view: CalendarView.month,
+            controller: _controller,
+            dataSource: _events,
+          )),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Remove Action
+
+When we remove appointments from a data source dynamically, we must notify the data source for the remove action.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4" %}
+
+final Appointment removeAppointment = _events?.appointments![0];
+_events?.appointments!.remove(removeAppointment);
+_events?.notifyListeners(CalendarDataSourceAction.remove,
+    <Appointment>[removeAppointment]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Reset Action
+
+When we replace appointments in a data source dynamically, we must notify the data source for the reset action.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3" %}
+
+_events?.appointments!.clear();
+_events?.notifyListeners(
+    CalendarDataSourceAction.reset, _events!.appointments!);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Add Resource
+
+When dynamically adding resource to a data source, we must notify the data source for add resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
+
+final CalendarResource resource = CalendarResource(
+displayName: 'Sophia',
+color: Colors.red,
+id: '00045',
+);
+_events!.resources!.add(resource);
+_events!.notifyListeners(CalendarDataSourceAction.addResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Remove Resource
+
+When we remove resource from a data source dynamically, we must notify the data source for remove resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5" %}
+
+final CalendarResource resource = _events!.resources![0];
+_events!.resources!.remove(resource);
+_events!.notifyListeners(
+    CalendarDataSourceAction.removeResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Reset Resource
+
+When we replace resource in a data source dynamically, we must notify the data source for reset resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
+
+final List<CalendarResource> collection =
+    <CalendarResource>[];
+collection.add(CalendarResource(
+    displayName: "Sophia", id: '00045', color: Colors.green));
+_events!.resources!.clear();
+_events!.resources!.addAll(collection);
+_events!.notifyListeners(
+    CalendarDataSourceAction.resetResource, collection);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Creating business objects
 
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
@@ -355,9 +478,9 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 | PropertyName | Purpose |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | FREQ | Maintains the Repeat type value of the appointment. (Example: Daily, Weekly, Monthly, Yearly, Every week day) Example: FREQ=DAILY;INTERVAL=1 |
-| INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday. (creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
+| INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday, and Friday. (Creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
 | COUNT | It holds the appointment’s count value. For example, when the recurrence appointment count value is 10, it means 10 appointments are created in the recurrence series. Example: FREQ=DAILY;INTERVAL=1;COUNT=10 |
-| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z |
+| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of the appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z. The T separates the date portion from the time of day portion. Z denotes the UTC timezone for the date time value.|
 | BYDAY | It holds the “DAY” values of an appointment to render.For example, when you create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday).  When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property.  When you select multiple days, the values are separated by commas. Example: FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10 |
 | BYMONTHDAY | This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, when you create a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example: FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 |
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
