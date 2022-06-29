@@ -12,7 +12,7 @@ documentation: ug
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="8 15 29 30" %}
+{% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 23 24 26 27 29 30 31 32 33" %}
 
 @override
 Widget build(BuildContext context) {
@@ -130,12 +130,135 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 {% endhighlight %}
 {% endtabs %}
 
+## Datasource manipulation
+
+Whenever the datasource changes, to notify the datasource action (add, remove, and reset) through notify listener. In the following example, the appointment and resource are added, removed, and replaced and notifyListeners is called in onPressed callback of the FloatingActionButton.
+
+#### Add Action
+
+When dynamically adding appointments to a data source, we must notify the data source for the add action.
+
+{% tabs %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16" %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            child: const Text('Add appointment'),
+            onPressed: () {
+              final Appointment app = Appointment(
+                  startTime: _controller.displayDate!,
+                  endTime:
+                      _controller.displayDate!.add(const Duration(hours: 2)),
+                  subject: 'Add Appointment',
+                  color: Colors.pink);
+              _events?.appointments!.add(app);
+              _events?.notifyListeners(
+                  CalendarDataSourceAction.add, <Appointment>[app]);
+            },
+          ),
+          body: SfCalendar(
+            view: CalendarView.month,
+            controller: _controller,
+            dataSource: _events,
+          )),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Remove Action
+
+When we remove appointments from a data source dynamically, we must notify the data source for the remove action.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4" %}
+
+final Appointment removeAppointment = _events?.appointments![0];
+_events?.appointments!.remove(removeAppointment);
+_events?.notifyListeners(CalendarDataSourceAction.remove,
+    <Appointment>[removeAppointment]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Reset Action
+
+When we replace appointments in a data source dynamically, we must notify the data source for the reset action.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3" %}
+
+_events?.appointments!.clear();
+_events?.notifyListeners(
+    CalendarDataSourceAction.reset, _events!.appointments!);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Add Resource
+
+When dynamically adding resource to a data source, we must notify the data source for add resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
+
+final CalendarResource resource = CalendarResource(
+displayName: 'Sophia',
+color: Colors.red,
+id: '00045',
+);
+_events!.resources!.add(resource);
+_events!.notifyListeners(CalendarDataSourceAction.addResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Remove Resource
+
+When we remove resource from a data source dynamically, we must notify the data source for remove resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5" %}
+
+final CalendarResource resource = _events!.resources![0];
+_events!.resources!.remove(resource);
+_events!.notifyListeners(
+    CalendarDataSourceAction.removeResource,
+    <CalendarResource>[resource]);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Reset Resource
+
+When we replace resource in a data source dynamically, we must notify the data source for reset resource.
+
+{% tabs %}
+{% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
+
+final List<CalendarResource> collection =
+    <CalendarResource>[];
+collection.add(CalendarResource(
+    displayName: "Sophia", id: '00045', color: Colors.green));
+_events!.resources!.clear();
+_events!.resources!.addAll(collection);
+_events!.notifyListeners(
+    CalendarDataSourceAction.resetResource, collection);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Creating business objects
 
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 
 {% tabs %}
-{% highlight dart hl_lines="2 3" %}
+{% highlight dart hl_lines="1 2 4 5 6 7 8 9" %}
 
 class Meeting {
   Meeting({this.eventName = '', required this.from, required this.to, required this.background, this.isAllDay = false});
@@ -153,7 +276,7 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using the `CalendarDataSource` override methods properties.
 
 {% tabs %}
-{% highlight dart hl_lines="1 2" %}
+{% highlight dart hl_lines="1 2 3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39 40" %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -202,7 +325,7 @@ class MeetingDataSource extends CalendarDataSource {
 You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 24 25" %}
 
 @override
 Widget build(BuildContext context) {
@@ -238,7 +361,7 @@ MeetingDataSource _getCalendarDataSource() {
 The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the `CalendarDataSource`.
 
 {% tabs %}
-{% highlight dart hl_lines="27 28" %}
+{% highlight dart hl_lines=" 26 27 28 29 30 31 32 33 34 35" %}
 
 class _DataSource extends CalendarDataSource<_Meeting> {
    _DataSource(List<_Meeting> source) {
@@ -298,7 +421,7 @@ class Meeting {
 Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="5 6" %}
 
 MeetingDataSource _getCalendarDataSource() {
   List<Meeting> meetings = <Meeting>[];
@@ -355,9 +478,9 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 | PropertyName | Purpose |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | FREQ | Maintains the Repeat type value of the appointment. (Example: Daily, Weekly, Monthly, Yearly, Every week day) Example: FREQ=DAILY;INTERVAL=1 |
-| INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday. (creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
+| INTERVAL | Maintains the interval value of the appointments. For example, when you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday, and Friday. (Creates the appointment on all days by leaving the interval of one day gap) Example: FREQ=DAILY;INTERVAL=1 |
 | COUNT | It holds the appointment’s count value. For example, when the recurrence appointment count value is 10, it means 10 appointments are created in the recurrence series. Example: FREQ=DAILY;INTERVAL=1;COUNT=10 |
-| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z |
+| UNTIL | This property is used to store the recurrence end date value. For example, when you set the end date of the appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence ends. Example: FREQ=DAILY;INTERVAL=1;UNTIL=20200827T183000Z. The T separates the date portion from the time of day portion. Z denotes the UTC timezone for the date time value.|
 | BYDAY | It holds the “DAY” values of an appointment to render.For example, when you create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday).  When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property.  When you select multiple days, the values are separated by commas. Example: FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10 |
 | BYMONTHDAY | This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, when you create a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example: FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 |
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
@@ -368,7 +491,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the `recurrenceRule` property of `Appointment`.
 
 {% tabs %}
-{% highlight dart hl_lines="22" %}
+{% highlight dart hl_lines="23" %}
 
 @override
 Widget build(BuildContext context) {
@@ -454,7 +577,7 @@ class DataSource extends CalendarDataSource {
 For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and `recurrenceRule`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8 15" %}
 
 class Meeting {
   Meeting(
@@ -479,7 +602,7 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using `CalendarDataSource`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="31 32 33 34" %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -666,7 +789,7 @@ You can add the recurrence exception appointments and recurrence exception dates
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
 {% tabs %}
-{% highlight dart hl_lines="24" %}
+{% highlight dart hl_lines="25" %}
 
 @override
 Widget build(BuildContext context) {
@@ -721,7 +844,7 @@ You can delete any occurrence, which is an exception from the recurrence pattern
 To add the exception dates in the recurrence series of custom appointment, add the `recurrenceExceptionDates` property to custom class Meeting.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="18 26 66 67 68 69" %}
 
 @override
 Widget build(BuildContext context) {
@@ -824,7 +947,7 @@ class Meeting {
 Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceId.html) of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/id.html). We can get the type of appointment from the [appointmentType](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/appointmentType.html) property. 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="16 25 27 29 30 31 32 33 34 35 37" %}
 
 @override
   Widget build(BuildContext context) {
@@ -882,7 +1005,7 @@ AppointmentDataSource _getDataSource() {
 The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="9 10 11 12 13" %}
 
 @override
 Widget build(BuildContext context) {
@@ -912,7 +1035,7 @@ Widget build(BuildContext context) {
 You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property of the SfCalendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 @override
  Widget build(BuildContext context) {
    return SfCalendar(
@@ -937,7 +1060,7 @@ You can customize the displaying time format in the appointment widget in the mo
 You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
 
 {% tabs %}
-{% highlight dart hl_lines="19" %}
+{% highlight dart hl_lines="19 20 21" %}
 
 @override
 initState() {
@@ -1013,7 +1136,7 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 Gets the pattern appointment for the specified occurrence by using the [getPatternAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getPatternAppointment.html).
 
 {% tabs %}
-{% highlight dart hl_lines="12 14 15" %}
+{% highlight dart hl_lines="12 13 14 15" %}
  
  @override
   Widget build(BuildContext context) {

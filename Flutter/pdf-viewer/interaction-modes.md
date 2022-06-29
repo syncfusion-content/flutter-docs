@@ -21,7 +21,7 @@ N> On a touch device, setting the [interactionMode](https://pub.dev/documentatio
 By default, the `selection` interaction mode will be enabled on a desktop web browser and allows users to select and copy text from the PDF files. This also helps to copy and share the text content. Refer to the following code to enable the `selection` mode in `SfPdfViewer`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ Widget build(BuildContext context) {
 In `pan` mode, the dragging and scrolling of the pages can be performed in any direction using the mouse and touch interactions on a desktop web browser, but the text selection cannot be performed. Refer to the following code to enable the `pan` mode in `SfPdfViewer`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {

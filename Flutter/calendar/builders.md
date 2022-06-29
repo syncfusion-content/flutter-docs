@@ -26,7 +26,7 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 @override
 Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ You can design your custom view and assign this view to the month header of a sc
 `bounds` - returns the header bounds.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9" %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30" %}
 
 @override
 Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutte
 `isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
 
 {% tabs %}
-{% highlight dart hl_lines="11 12" %}
+{% highlight dart hl_lines="11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _controller = CalendarController();
@@ -263,7 +263,7 @@ The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calenda
 `region`: The Region detail associated with the time region view.
 
 {% tabs %}
-{% highlight dart hl_lines="22 23" %}
+{% highlight dart hl_lines="22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44" %}
 
 List<TimeRegion> _getTimeRegions() {
   final List<TimeRegion> regions = <TimeRegion>[];
@@ -328,7 +328,7 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25" %}
 
 @override
   Widget build(BuildContext context) {
