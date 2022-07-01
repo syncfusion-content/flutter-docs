@@ -75,7 +75,7 @@ Widget build(BuildContext context) {
             child: Text('Export To Pdf'),
             onPressed: () {
               PdfDocument document = key.currentState!.exportToPdfDocument()
-              final List<int> bytes = document.save();
+              final List<int> bytes = document.saveSync();
             }),
         Expanded(
           child: SfDataGrid(
@@ -140,7 +140,7 @@ You can export the data to [PdfDocument](https://pub.dev/documentation/syncfusio
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument();
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 File('DataGrid.pdf').writeAsBytes(bytes);
   
 {% endhighlight %}
@@ -160,7 +160,7 @@ pdfGrid.draw(
  page: pdfPage,
  bounds: Rect.fromLTWH(0, 0, 0, 0),
 );
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 File('DataGrid.pdf').writeAsBytes(bytes);
   
 {% endhighlight %}
@@ -176,7 +176,7 @@ By default, all the columns in the SfDataGrid are exported to PDF. To exclude so
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument( excludeColumns: ['Name']);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
      
 {% endhighlight %}
 {% endtabs %}
@@ -191,7 +191,7 @@ You can disable the column headers on each page by setting the [canRepeatHeaders
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(canRepeatHeaders: false);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -204,7 +204,7 @@ You can fit all the columns in one page by setting the [fitAllColumnsInOnePage](
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(fitAllColumnsInOnePage: true);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -217,7 +217,7 @@ By default, table summaries in `SfDataGrid` are exported to PDF. Set the [export
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(exportTableSummaries: false);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +231,7 @@ By default, stacked headers in `SfDataGrid` are exported to PDF. Set the [export
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(exportStackedHeaders: false);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,7 +244,7 @@ In order, to export the actual column width from `SfDataGrid` instead of the aut
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(autoColumnWidth: false);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -269,7 +269,7 @@ PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
 pdfGrid.draw(
   page: pdfPage,
   bounds: Rect.fromLTWH(0, 0, 0, 0));
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
   
 {% endhighlight %}
 {% endtabs %}
@@ -282,7 +282,7 @@ By default, entire grid is exported to PDF. You can export selected rows only by
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(rows: dataGridController.selectedRows,);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -308,7 +308,7 @@ PdfDocument document = key.currentState!.exportToPdfDocument(
       headerFooterExport.pdfDocumentTemplate.top = header;
     },
 );
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 
 {% endhighlight %}
@@ -331,7 +331,7 @@ PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (detail
       details.pdfCell.style.backgroundBrush = PdfBrushes.lightCyan;
     }
 });
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -355,7 +355,7 @@ PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (detail
      }
    }    
 });
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -375,7 +375,7 @@ PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (detail
     }
   }
 );
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -430,7 +430,7 @@ The following code sample illustrates how to create an instance of `CustomDataGr
 CustomDataGridToPdfConverter customDataGridToPdfConverter = CustomDataGridToPdfConverter();
 
 PdfDocument document = key.currentState!.exportToPdfDocument(converter: customDataGridToPdfConverter);
-final List<int> bytes = document.save();
+final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
