@@ -33,6 +33,6 @@ It is not required to install the Volume release before installing the Service P
 Uninstall the trial version and install the fully licensed installer from the [License and Downloads](https://www.syncfusion.com/account/downloads) section of our website to upgrade from the trial version.
 
 N> * The License key registration is no longer required for Flutter from version 18.3.0.x. So, there is no need to generate or register Syncfusion Flutter license keys in your Flutter projects.
-* If you are using Syncfusion controls prior to version 18.3.0.x, please follow this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key#flutter) to register your license key.
+* If you are using Syncfusion controls prior to version 18.3.0.x, please follow this [link](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application#flutter) to register your license key.
 
 
