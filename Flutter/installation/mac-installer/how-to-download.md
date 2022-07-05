@@ -46,7 +46,7 @@ You should initiate an evaluation if you have already obtained our components th
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com//flutter/licensing/licensing) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/flutter/licensing/overview) here at any time before the trial period expires. (as shown in below screenshot.)
 
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-installer.png)
 
@@ -66,4 +66,4 @@ You should initiate an evaluation if you have already obtained our components th
    
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)
 
-You can also refer to the [**Flutter Mac installer**](https://help.syncfusion.com/flutter/installation-and-upgrade/install-using-the-web-installer) links for step-by-step installation guidelines.	
+You can also refer to the [**Flutter Mac installer**](https://help.syncfusion.com/flutter/installation/mac-installer/how-to-install) links for step-by-step installation guidelines.	
