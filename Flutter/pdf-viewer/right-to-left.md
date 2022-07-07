@@ -20,7 +20,7 @@ Right to left rendering can be switched in the following ways:
 To change the rendering direction from right to left, wrap the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget inside the [Directionality](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the `textDirection`  property as [TextDirection.rtl](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html).
 
 {% tabs %}
-{% highlight dart hl_lines="24 25" %}
+{% highlight dart hl_lines="26 27" %}
 
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
@@ -77,7 +77,7 @@ flutter_localizations:
 Then, import the `flutter_localizations` library, specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="6 7 9 10 11 12 13 14 15 16" %}
 
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
