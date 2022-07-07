@@ -1198,7 +1198,7 @@ the data points and legend. For further reference on this callback, Check the [`
 
 ## axisLabelFormatter
 
-Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the [`AxisLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderDetails-class.html) class.
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight, and the currentdateTimeIntervalType of the axis label and the currentdateFormat of the axis label to the user using the [`AxisLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderDetails-class.html) class.
 
 You can customize the text and text style using the [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class and can return it.
 
@@ -1207,18 +1207,30 @@ Defaults to `null`.
 {% tabs %}
 {% highlight dart %}
 
+    @override
     Widget build(BuildContext context) {
-      return Container(
-        child: SfCartesianChart(
-            primarXAxis: CategoryAxis(
-               axisLabelFormatter: (AxisLabelRenderDetails details) => axis(details),
-            ),
-        ));
+        return Scaffold(
+          body: SfCartesianChart(
+              primaryXAxis: DateTimeCategoryAxis(
+              axisLabelFormatter: (AxisLabelRenderDetails details) {
+                final DateFormat format = DateFormat('EEEE');
+                String currentText = '';
+                if (details.currentDateTimeIntervalType ==
+                        DateTimeIntervalType.auto &&
+                    details.currentDateFormat == 'EEEE') {
+                  currentText = format.format(DateTime.now());
+                } else {
+                  currentText = details.text;
+                }
+                print('$currentText');
+                return ChartAxisLabel(details.text, details.textStyle);
+              },
+            ),     
+          ),
+        );
+      }
     }
-
-    ChartAxisLabel axis(AxisLabelRenderDetails details) {
-      return ChartAxisLabel('Label', details.textStyle);
-    }
+    
 {% endhighlight %}
 {% endtabs %}
 

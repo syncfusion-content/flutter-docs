@@ -483,6 +483,43 @@ Widget build(BuildContext context) {
 
 ![Label placement support](images/label-and-divider/vertical-label-placement.png)
 
+## Edge Label Placement
+
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`]() property can be used to avoid the partial appearance of labels at the corners. Default value of this property is [`EdgeLabelPlacement.auto`](). Another available options of edgeLabelPlacement is inside. [`EdgeLabelPlacement.inside`]() option will move the edge labels inside the axis bounds.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(    
+        body: Center(
+          child: SfSlider(
+            interval: 1,
+            dateIntervalType: DateIntervalType.years,
+            dateFormat: DateFormat.y(),
+            showLabels: true,
+            value: originalValues,
+            showTicks: true,
+            showDividers: true,          
+            edgeLabelPlacement: EdgeLabelPlacement.inside,
+            min: DateTime(2015),
+            max: DateTime(2020),
+            onChanged: (dynamic tempValue) {
+              setState(() {
+                originalValues = tempValue as DateTime;
+              });
+            },
+          ),
+        ),
+      );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge label placement](images/label-and-divider/slider_placement.jpg)
+
 ## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html). Its arguments are,
