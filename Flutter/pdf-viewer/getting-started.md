@@ -113,6 +113,16 @@ tag to enable the network access in your application:
 <true/>
 ```
 
+N> Due to CORS security restriction in web application, some PDF obtained from URL is not loaded in the SfPdfViewer web platform. Kindly refer the following flutter forum,
+https://github.com/flutter/flutter/issues/51125
+
+The issue can be resolved by configure the CORS settings in the requested server or by disabling the security settings in chrome. dart as mentioned below steps:
+
+1. Go to flutter\bin\cache and remove a file named: flutter_tools.stamp
+2. Go to flutter\packages\flutter_tools\lib\src\web and open the file chrome.dart.
+3. Find '--disable-extensions'.
+4. Add '--disable-web-security'.
+
 ### Load document from the File
 
 The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) creates a widget that displays the PDF document obtained from a [`File`](https://api.flutter.dev/flutter/dart-io/File-class.html). The following code example explains the same.
