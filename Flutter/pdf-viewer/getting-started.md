@@ -312,7 +312,27 @@ The [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfv
 The [PdfDocumentLoadFailedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadFailedDetails-class.html) will return the `error` title and `description` message for the failure reason. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight dart hl_lines="25 26" %}
+
+ /// Displays the error message.
+  void showErrorDialog(BuildContext context, String error, String description) {
+    showDialog<dynamic>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(error),
+            content: Text(description),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        });
+ }
 
 @override
 Widget build(BuildContext context) {
@@ -320,18 +340,7 @@ Widget build(BuildContext context) {
       body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
-      AlertDialog(
-        title: Text(details.error),
-        content: Text(details.description),
-        actions: <Widget>[
-          FlatButton(
-            child: Text('OK'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
+        showErrorDialog(context, details.error, details.description);
     },
   ));
 }
