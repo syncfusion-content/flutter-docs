@@ -15,7 +15,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 ## Enable or disable the hyperlink navigation
 
-You can enable or disable the hyperlink navigation using the `enableHyperlinkNavigation` property. The following code example explains the same.
+You can enable or disable the hyperlink navigation using the [enableHyperlinkNavigation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableHyperlinkNavigation.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -38,7 +38,7 @@ You can enable or disable the hyperlink navigation using the `enableHyperlinkNav
 
 ## Customize the visibility of the hyperlink navigation dialog
 
-By default, the built-in hyperlink navigation dialog will be displayed when any hyperlink is clicked. You can customize the visibility of the hyperlink navigation dialog using the `canShowHyperlinkDialog property.` The following code example explains the same.
+By default, the built-in hyperlink navigation dialog will be displayed when any hyperlink is clicked. You can customize the visibility of the hyperlink navigation dialog using the [canShowHyperlinkDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowHyperlinkDialog.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -61,11 +61,11 @@ By default, the built-in hyperlink navigation dialog will be displayed when any 
 
 ## Callbacks
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) hyperlink navigation supports the `PdfHyperlinkClickedCallback` to notify when any hyperlink is clicked.
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) hyperlink navigation supports the [PdfHyperlinkClickedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfHyperlinkClickedCallback.html) to notify when any hyperlink is clicked.
 
 ### Hyperlink clicked callback
 
-The `onHyperlinkClicked` callback triggers when any hyperlink in the PDF document is clicked. The `PdfHyperlinkClickedDetails` will return the `uri` clicked in the PDF document. The following code example explains the same.
+The [onHyperlinkClicked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onHyperlinkClicked.html) callback triggers when any hyperlink in the PDF document is clicked. The [PdfHyperlinkClickedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfHyperlinkClickedDetails-class.html) will return the [uri](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfHyperlinkClickedDetails/uri.html) clicked in the PDF document. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10" %}
