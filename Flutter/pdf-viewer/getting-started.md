@@ -113,6 +113,15 @@ tag to enable the network access in your application:
 <true/>
 ```
 
+N> Due to CORS security restrictions in a web application, some PDFs obtained from URLs might not be loaded in the `SfPdfViewer` web platform. Kindly refer to the flutter [forum](https://github.com/flutter/flutter/issues/51125) reported on the same.
+
+This issue can be resolved by configuring the CORS settings in the requested server or by disabling the security settings in **chrome.dart** as mentioned in the below steps:
+
+1. Go to **flutter\bin\cache** and remove a file named: **flutter_tools.stamp**
+2. Go to **flutter\packages\flutter_tools\lib\src\web** and open the file **chrome.dart**.
+3. Find **'--disable-extensions'**.
+4. Add **'--disable-web-security'**.
+
 ### Load document from the File
 
 The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) creates a widget that displays the PDF document obtained from a [`File`](https://api.flutter.dev/flutter/dart-io/File-class.html). The following code example explains the same.
@@ -302,7 +311,27 @@ The [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfv
 The [PdfDocumentLoadFailedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadFailedDetails-class.html) will return the `error` title and `description` message for the failure reason. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight dart hl_lines="25 26" %}
+
+ /// Displays the error message.
+  void showErrorDialog(BuildContext context, String error, String description) {
+    showDialog<dynamic>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(error),
+            content: Text(description),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        });
+ }
 
 @override
 Widget build(BuildContext context) {
@@ -310,18 +339,7 @@ Widget build(BuildContext context) {
       body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
-      AlertDialog(
-        title: Text(details.error),
-        content: Text(details.description),
-        actions: <Widget>[
-          FlatButton(
-            child: Text('OK'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
+        showErrorDialog(context, details.error, details.description);
     },
   ));
 }

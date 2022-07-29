@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
 You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="24 31 32 33 34" %}
+{% highlight dart hl_lines="23 31 32 33" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfBookmark _pdfBookmark;
