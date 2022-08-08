@@ -252,6 +252,9 @@ class MyAppState extends State<MyApp> {
 >**NOTE**
 * For recurring appointments, this will always return as `Appointment`, even for the custom business objects.
 
+### How to identify the spanned appointment view date in Flutter Calendar?
+
+We have improved the behavior appointment builder date property to hold the appointment view start date. For example in month view with spanned appointment (start date = June 20, 2022 and end date = June 30, 2022), now the improvement holds the dates as June 20,2022 and June 30, 2022. We have attached the simple sample to find the current appointment view date an based on this customize the appointment builder. Please [click here]()to view the sample.
 
 ## Time region builder
 The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionBuilder.html) allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeRegionBuilder.html) of SfCalendar.
