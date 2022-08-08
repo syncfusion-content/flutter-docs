@@ -254,7 +254,7 @@ class MyAppState extends State<MyApp> {
 
 ### How to identify the spanned appointment view date in Flutter Calendar?
 
-By using the appointmentBuilder date property we can identify the appointment view start date. For example in month view with spanned appointment, now the improvement holds the dates as August 05,2022, August 07,2022, August 14,2022 and August 21, 2022. We have attached the simple sample to find the current appointment view date an based on this customize the appointment builder. Please [click here]()to view the sample.
+By using the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) date property we can identify the appointment view start date. For example in month view with spanned appointment, now the improvement holds the dates as August 05,2022, August 07,2022, August 14,2022 and August 21, 2022. We have attached the simple sample to find the current appointment view date an based on this customize the appointment builder. Please [click here]()to view the sample.
 
 ![Appointment builder ](images/builder/appointment-builder-improvement.jpg)
 
