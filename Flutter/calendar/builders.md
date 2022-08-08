@@ -254,61 +254,7 @@ class MyAppState extends State<MyApp> {
 
 ### How to identify the spanned appointment view date in Flutter Calendar?
 
-By using the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) date property we can identify the appointment view start date. For example in month view with the spanned appointment, now the `appointmentBuilder` date property improvement holds the dates as August 05,2022, August 07,2022, August 14,2022 and August 21, 2022. Please [click here]()to view the sample.
-
-{% tabs %}
-{% highlight dart hl_lines="22" %}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfCalendar(
-      dataSource: MeetingDataSource(_getDataSource()),
-      view: CalendarView.month,
-      controller: _controller,
-      cellEndPadding: 0,
-      allowedViews: const <CalendarView>[
-        CalendarView.day,
-        CalendarView.week,
-        CalendarView.workWeek,
-        CalendarView.month,
-        CalendarView.timelineDay,
-        CalendarView.timelineWeek,
-        CalendarView.timelineWorkWeek,
-        CalendarView.timelineMonth,
-        CalendarView.schedule
-      ],
-      appointmentBuilder:
-          (BuildContext context, CalendarAppointmentDetails details) {
-        return Container(
-          margin: EdgeInsets.fromLTRB(
-              isStartAppointment ? 20 : 0, 0, isEndAppointment ? 20 : 0, 0),
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          color: appointment.background,
-          child: Text(appointment.eventName),
-        );
-      },
-      monthViewSettings: const MonthViewSettings(
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ),
-  );
-}
-
-List<Meeting> _getDataSource() {
-  final List<Meeting> meetings = <Meeting>[];
-  final DateTime today = DateTime.now();
-  final DateTime startTime = DateTime(today.year, today.month, today.day, 9);
-  final DateTime endTime = startTime.add(const Duration(days: 6));
-  meetings.add(Meeting(
-      'Conference', startTime, endTime, const Color(0xFF0F8644), false));
-  meetings.add(Meeting('Conference1', startTime,
-      startTime.add(const Duration(hours: 20)), Colors.blue, false));
-  meetings.add(Meeting('Conference2', startTime,
-      startTime.add(const Duration(days: 20)), Colors.red, false));
-  return meetings;
-}
-{% endhighlight %}
-{% endtabs %}
+By using the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) date property we can identify the appointment view start date. For example in month view we have spanned appointment(StartTime - August 20,2022 and EndTime - August 30,2022) and the appointment renders with 3 view, the appointmentBuilder holds the start date (August 20,2022, August 21,2022 and August 28,2022) of the each appointment view.  Please [click here]()to view the sample.
 
 ![Appointment builder ](images/builder/appointment-builder-improvement.jpg)
 
