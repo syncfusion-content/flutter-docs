@@ -175,6 +175,8 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid editing](images/editing/editing.gif)
+
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
