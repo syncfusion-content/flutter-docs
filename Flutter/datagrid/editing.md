@@ -175,7 +175,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid editing](images/editing/editing.gif)
+![flutter datagrid editing](images/editing/datagrid_editing.gif)
 
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
@@ -238,6 +238,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid disable the editing for specific column](images/editing/disable_editing.gif)
 
 ## Entering edit mode
 
@@ -496,6 +498,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid begin edit](images/editing/begin_editing.gif)
 
 ### EndEdit
 

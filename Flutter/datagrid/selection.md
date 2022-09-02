@@ -1613,5 +1613,5 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
 
-
-
+>**NOTE**  
+  Also, You can change the current row border's color by the `currentCellStyle` property of `SfDataGridThemeData` in `SfDataGridTheme`.
