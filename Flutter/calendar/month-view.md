@@ -152,7 +152,7 @@ Widget build(BuildContext context) {
 ![Appointment display count](images/monthview/appointment-indicator-count.png)
 
 >**NOTE**
-* If appointments count is lesser than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
+* If appointments count is less than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
 * Appointment indicator will be shown on the basis of date meetings, usable month cell size and indicator count. For eg, if the month cell size is less (available for only 4 dots) and the indicator count is 10, then 4 indicators will be shown.
 
 
