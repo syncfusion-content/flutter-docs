@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
 ![Month agenda view](images/monthview/appointment-indicator-count.png)
 
 >**NOTE**
-* An agenda view displays text as `No Selected Date` until no date is selected.
+* An agenda view displays text as `No Selected Date` while no date is selected.
 * If there is no appointment in a selected day, agenda view displays the text as `No Events`.
 
 ## Month appointment display mode
