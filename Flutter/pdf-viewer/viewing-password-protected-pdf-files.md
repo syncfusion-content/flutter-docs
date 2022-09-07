@@ -24,8 +24,8 @@ The password-protected document can be loaded by providing the password in the [
 Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
-          child: SfPdfViewer.asset(
-              'assets/encrypted_document.pdf',
+          child: SfPdfViewer.network(
+            'https://cdn.syncfusion.com/content/PDFViewer/encrypted.pdf',
             password:'syncfusion',
             canShowPasswordDialog: false,)));
 }
