@@ -15,4 +15,4 @@ Usually, the **"usr/lib/swift"** path will be added automatically to the **Runpa
  
 To overcome this issue, you are suggested to add the **"usr/lib/swift"** path to the **Runpath Search Paths** manually in the project build settings. Find and edit the **Runpath Search Paths** option by opening the project in the **XCode** and then going to **Build Settings -> Linking -> Runpath Search Paths**. Please find the Runpath search path option screenshot in the following project build settings.
 
-![PdfViewer with Signature pad](images/xcode-runpath-search-paths.jpg)
+![XCode Runpath Search Paths](images/xcode-runpath-search-paths.jpg)
