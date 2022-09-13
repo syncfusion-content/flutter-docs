@@ -69,6 +69,28 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## Highlight Worksheet Tabs
+
+A particular worksheet tab can be highlighted to denote its importance. Tab color can be set through the **tabColor** property, as shown below.
+
+{% highlight dart %}
+
+//Create a new Excel Document.
+final Workbook workbook = Workbook(2);
+
+//Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[1];
+sheet.getRangeByName('A1:M10').setText('TabColor');
+
+//Applied tab color for worksheet.
+sheet.tabColor = '#0000FF';
+
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %} 
+
 ## View Settings
 
 **Show or Hide Grid Lines**
