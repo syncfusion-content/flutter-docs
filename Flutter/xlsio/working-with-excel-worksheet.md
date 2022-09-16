@@ -148,6 +148,32 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## Move a Worksheet
+
+XlsIO allows moving worksheets from one position to another by using the *moveTo* method. The following code example illustrates this.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(20);
+
+//Access worksheets
+final Worksheet sheet = workbook.worksheets[10];
+final Worksheet sheet1 = workbook.worksheets[3];
+
+sheet.getRangeByName('A1:B10').text = 'Moving Sheet';
+sheet1.getRangeByName('A1:B20').dateTime = DateTime(2006, 9, 10);
+sheet.hyperlinks.add(sheet.getRangeByName('C1:C5'), HyperlinkType.url, 'http://www.gmail.com');
+
+//Move worksheet
+workbook.worksheets.moveTo(workbook.worksheets[10], 5);
+workbook.worksheets.moveTo(workbook.worksheets[3], 15);
+
+//save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
 ## Right to Left Direction
 
 A *worksheet* direction can be changed from right to left programmatically through **isRightToLeft** property of **Worksheet**. The following code snippet explains this.
