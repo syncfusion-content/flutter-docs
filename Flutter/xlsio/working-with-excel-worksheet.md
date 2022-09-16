@@ -116,6 +116,28 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## Show or Hide Worksheet
+
+The following code snippet shows how to hide the worksheet using **visibility** property.
+
+{% highlight dart %}
+
+//Create a new Excel Document.
+final Workbook workbook = Workbook(10);
+
+//Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[2];
+sheet.getRangeByName('A1:M10').setText('Visibility');
+
+//set the visibility for the worksheet.
+sheet.visibility = WorksheetVisibility.hidden;
+
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %}
+
 ## Adjust Row Height and Column Width
 
 **Resize a range of rows or columns**
