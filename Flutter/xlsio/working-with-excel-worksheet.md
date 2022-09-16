@@ -69,9 +69,9 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
-## Highlight Worksheet Tabs
+## Worksheet Tab Color
 
-A particular worksheet tab can be highlighted to denote its importance. Tab color can be set through the **tabColor** property, as shown below.
+A worksheet can be highlighted with a tab color. Tab color can be set through the **tabColor** property, as shown below.
 
 {% highlight dart %}
 
