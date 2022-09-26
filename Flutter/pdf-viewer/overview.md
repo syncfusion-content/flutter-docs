@@ -22,5 +22,7 @@ The Syncfusion [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/f
 * **Document link annotation navigation** - Navigate to the desired topic or position by tapping the document link annotation of the topics in the table of contents in a PDF document.
 * **Themes** - Easily switch between light and dark themes.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
+* **Accessibility** - Easily accessible by screen readers.
+* **Right to Left (RTL)** - Change the user interface and functionalities such as text search and text copying to accommodate RTL languages such as Hebrew and Arabic.
 
 N> You can also explore our [Flutter PDF Viewer example](https://flutter.syncfusion.com/#/pdf-viewer/getting-started) that shows you how to render and configure the PDF Viewer.
