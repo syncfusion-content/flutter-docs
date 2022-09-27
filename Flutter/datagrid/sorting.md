@@ -11,7 +11,7 @@ documentation: ug
 
 The datagrid provides the built-in support to sort one or more columns by setting the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. 
 
-By default, the datagrid shows unsort icon on every column header to indicating the sorting is enabled in the respective column. After tapping on column header dtagrid shows a respective sort icon in the column header to indicating the sort direction.
+By default, the datagrid shows unsort icon on every column header to indicate the sorting is enabled in the respective column. When sorting is applied to columns, datagrid shows a respective sort icon in the column header to indicate the sort direction.
 
 ## Programmatic sorting
 
