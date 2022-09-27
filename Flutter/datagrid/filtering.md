@@ -133,7 +133,7 @@ Widget build(BuildContext context) {
         ]),
       ),
       MaterialButton(
-          child: Text('Add Filter'),
+          child: Text('Remove Filter'),
           onPressed: () {
             _employeeDataSource.removeFilter('Name',
                 FilterCondition(type: FilterType.equals, value: 'James'));
@@ -197,12 +197,8 @@ Widget build(BuildContext context) {
         ]),
       ),
       MaterialButton(
-          child: Text('Add Filter'),
+          child: Text('Clear Filters'),
           onPressed: () {
-            // To clear filter conditions from a specific column.
-            _employeeDataSource.clearFilters(columnName: 'Salary');
-            
-            // To clear filter conditions from the entire filtered columns.
             _employeeDataSource.clearFilters();
           }),
     ],
@@ -214,7 +210,7 @@ Widget build(BuildContext context) {
 
 ### Filter behavior
 
-The `FilterBehavior` enum property is used to specify whether to consider the `FilterValue` as the string or actual data type.
+The `FilterBehavior` property is used to specify whether filtering should consider the value of a cell as the string or its data type
 
 * **stringDataType** - It converts the cell value as string data type and compare the condition.
 * **strongDataType** - It compares the cell value with its actual data type.
@@ -287,7 +283,7 @@ Widget build(BuildContext context) {
 
 ### Filter operator
 
-The `FilterOperator` enum property is used to decide how a logical operator is to be applied between multiple filter conditions.
+The `FilterOperator` property is used to decide how a logical operator is to be applied between multiple filter conditions.
 
 * **and** - `AND` logical operator applies between multiple filter conditions 
 * **or** - `OR` logical operator applies between multiple filter conditions
@@ -367,14 +363,97 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+### Filter rows with a range between two dates
+
+A `DateTime` type of column can be filtered with a range between two dates by applying the two filter conditions to the same column. The `FilterType` for the filter condition with the start date should be `GreaterThanOrEqual` and the end date should be `LessThanOrEqual` and the `FilterOperator` for the filter condition should be `and`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Column(
+    children: [
+      Expanded(
+        child: SfDataGrid(source: _employeeDataSource, columns: [
+          GridColumn(
+              columnName: 'ID',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'Name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'Date of Joining',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Date of Joining',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'Salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]),
+      ),
+      MaterialButton(
+          child: Text('Filter rows with a range'),
+          onPressed: () {
+            _employeeDataSource.addFilter(
+              'Date of Joining',
+              FilterCondition(
+                value: DateTime(2000, 07, 12),
+                filterOperator: FilterOperator.and,
+                type: FilterType.greaterThanOrEqual,
+              ),
+            );
+
+            _employeeDataSource.addFilter(
+              'Date of Joining',
+              FilterCondition(
+                value: DateTime(2022, 03, 24),
+                filterOperator: FilterOperator.and,
+                type: FilterType.lessThanOrEqual,
+              ),
+            );
+          }),
+    ],
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Retrieving the filtered rows
+
+After filtering, the rows can be retrieved in the same order as displayed in the view by using the [DataGridSource.effectiveRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/effectiveRows.html) property. It holds the filtered collection if the filtering is applied in the data grid.
+
 ## UI Filtering
 
-The `SfDataGrid` provides excel like filtering UI and also advanced filter UI to filter the data easily. UI filtering can be enabled by setting `SfDataGrid.allowFiltering` property to `true`. This allows to open the filter UI by clicking on the filter icon in column header to filter the records. The filtering UI will be shown as a popup menu on the desktop and web platforms and it will be shown as a new page on the mobile platforms.
+The `SfDataGrid` provides excel-like filtering UI and also advanced filter UI to filter the data easily. UI filtering can be enabled by setting `SfDataGrid.allowFiltering` property to `true`. This allows to open the filter UI by clicking on the filter icon available in the column header. The filtering UI will be shown as a popup menu on the desktop and web platforms and it will be shown as a new page on the mobile platforms.
 
 The `SfDataGrid` provides the following types of filter popup modes,
 
 * **Checkbox Filter** - Provides excel like filter interface with list of check boxes.
-* **Advanced Filter** - Provides advanced filter options to filter the data.
+* **Advanced Filter** - Provides advanced filter options to filter the data with multiple conditions.
 
 ![Flutter datagrid shows a checkbox filter in web platform](images/filtering/flutter-datagrid-checkbox-filter-view.png)
 
@@ -386,7 +465,7 @@ The `SfDataGrid` provides the following types of filter popup modes,
 
 ### Checkbox filtering
 
-The Checkbox filtering is like the Excel like filter popup that shows the checked list box of the unique items with the search text field. The items which are in the checked state will be visible in the view other items will be filtered out from the view.
+The Checkbox filtering is like the Excel-like filter popup that shows the checked list box of the unique items with the search text field. The items which are in the checked state will be visible in the view. Other items will be filtered out from the view.
 
 ![Flutter datagrid shows a checkbox filter popup view](images/filtering/flutter-datagrid-checkbox-view-before-filter.png)
 
@@ -408,9 +487,9 @@ Below are the built-in filter types supported.
 <th>Date Filters </th>
 </tr>
 <tr>
-<td>When the string value is bounded to the <code>GridColumn</code>, then <code>TextFilters</code> are loaded in <code>AdvancedFilterControl</code>. </td>
-<td>When the int or double values are bounded to the <code>GridColumn</code>, then <code>NumberFilters</code> are loaded in <code>AdvancedFilterControl</code>. </td>
-<td> When the DateTime type value is bounded to the <code>GridColumn</code>, then <code>DateFilters</code> are loaded in <code>AdvancedFilterControl</code>. </td>
+<td>When the string value is loaded to the <code>GridColumn</code>, then <code>TextFilters</code> options are loaded in <code>advanced filter view</code>. </td>
+<td>When the numeric value is loaded to the <code>GridColumn</code>, then <code>NumberFilters</code> options are loaded in <code>advanced filter view</code>. </td>
+<td> When the DateTime type value is loaded to the <code>GridColumn</code>, then <code>DateFilters</code> options are loaded in <code>advanced filter view</code>. </td>
 </tr>
 <tr>
 <td> <img src="images/filtering/flutter-datagrid-advanced-text-filter.png"/> </td>
@@ -430,7 +509,7 @@ Below are the built-in filter types supported.
 
 #### Case sensitive filtering
 
-The case sensitive filtering can be enabled for the column by using the casing icon available in the advanced filter UI. If the icon is active, the filtering will be applied with the case sensitive with the filter text. The case sensitive icon will be shown only to the string type columns.
+The case sensitive filtering can be enabled for the column by using the casing icon available in the advanced filter UI. This is available only for `TextFilters` filter view. If the icon is active, the filtering will be applied with the case sensitive with the filter text. The case sensitive icon will be shown only to the string type columns.
 
 ![Flutter datagrid shows the case sensitive icon](images/filtering/flutter-datagrid-casesensitive-filtering.png)
 
