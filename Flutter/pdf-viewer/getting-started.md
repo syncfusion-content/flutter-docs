@@ -139,7 +139,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On Android, this may require the `android.permission.READ_EXTERNAL_STORAGE`.
+N> The file path mentioned in the above code example is just for the Android platform. On Android, this may require the `android.permission.READ_EXTERNAL_STORAGE`.
 
 ### Load document from the Memory
 
