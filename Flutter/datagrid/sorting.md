@@ -9,7 +9,9 @@ documentation: ug
 
 # Sorting in Flutter Datagrid (SfDataGrid)
 
-The datagrid provides the built-in support to sort one or more columns by setting the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. Once sorting is applied, the datagrid shows a sort icon in the respective column header indicating the sort direction.
+The datagrid provides the built-in support to sort one or more columns by setting the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. 
+
+By default, the datagrid shows unsort icon on every column header to indicating the sorting is enabled in the respective column. After tapping on column header dtagrid shows a respective sort icon in the column header to indicating the sort direction.
 
 ## Programmatic sorting
 
@@ -93,7 +95,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows programmatical sorting](images/sorting/flutter-datagrid-programmatical-sorting.png)
+![flutter datagrid shows programmatical sorting](images/sorting/flutter-datagrid-programmatical-sorting.jpg)
 
 ## Multi-column sorting
 
@@ -471,13 +473,15 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.png)
+![flutter datagrid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.jpg)
 
 ## Set a custom sorting icon
 
 `SfDataGrid` allows you to change the sort icon by using the [SfDataGridThemeData.sortIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIcon.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
+
+By using the [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget, you can change the icon based on each state of the sorting. You have to return the icons for all three states even if you want to change the icon for a specific state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -493,68 +497,81 @@ import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: const BackButton(),
-          title: const Text('Syncfusion Flutter DataGrid'),
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          sortIcon: Builder(
+            builder: (context) {
+              Widget? icon;
+              String columnName = '';
+              context.visitAncestorElements((element) {
+                if (element is GridHeaderCellElement) {
+                  columnName = element.column.columnName;
+                }
+                return true;
+              });
+              var column = _employeeDataSource.sortedColumns
+                  .where((element) => element.name == columnName)
+                  .firstOrNull;
+              if (column != null) {
+                if (column.sortDirection == DataGridSortDirection.ascending) {
+                  icon = const Icon(Icons.arrow_circle_up_rounded, size: 16);
+                } else if (column.sortDirection ==
+                    DataGridSortDirection.descending) {
+                  icon = const Icon(Icons.arrow_circle_down_rounded, size: 16);
+                }
+              }
+              return icon ??
+                  const Icon(
+                    Icons.sort_outlined,
+                    size: 16,
+                  );
+            },
+          ),
         ),
-        body: SfDataGridTheme(
-          data:
-              SfDataGridThemeData(sortIcon: const Icon(Icons.arrow_circle_up)),
-          child: SfDataGrid(
-              source: _employeeDataSource,
-              allowSorting: true,
-              selectionMode: SelectionMode.multiple,
-              navigationMode: GridNavigationMode.cell,
-              columnWidthMode: ColumnWidthMode.fill,
-              columns: [
-                GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-              ]),
-        ));
+        child: SfDataGrid(
+          source: _employeeDataSource,
+          allowSorting: true,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.centerRight,
+                    child: const Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.centerLeft,
+                    child: const Text('Name'))),
+            GridColumn(
+                columnName: 'city',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.centerLeft,
+                    child: const Text('City'))),
+            GridColumn(
+                columnName: 'freight',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.centerRight,
+                    child: const Text('Freight'))),
+          ],
+        ),
+      ),
+    );
   }
-
 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.png)
+![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.jpg)
 
 ## Custom sorting
 
@@ -645,7 +662,7 @@ class EmployeeDataSource extends DataGridSource {
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-sort-the-columns-based-on-length-of-the-text-in-Flutter-datagrid).
 
-![flutter datagrid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.png)
+![flutter datagrid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.jpg)
 
 ### Case-insensitive sorting
 
@@ -726,4 +743,4 @@ class EmployeeDataSource extends DataGridSource {
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
 
-![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.png)
+![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
