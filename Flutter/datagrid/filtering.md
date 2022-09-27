@@ -365,7 +365,7 @@ Widget build(BuildContext context) {
 
 ### Filter rows with a range between two dates
 
-A `DateTime` type of column can be filtered with a range between two dates by applying the two filter conditions to the same column. The `FilterType` for the filter condition with the start date should be `GreaterThanOrEqual` and the end date should be `LessThanOrEqual` and the `FilterOperator` for the filter condition should be `and`.
+The column which holds the `DateTime` type data can be filtered with a range between two dates by applying the two filter conditions to the same column. The `FilterType` for the filter condition with the start date should be `GreaterThanOrEqual` and the end date should be `LessThanOrEqual` and the `FilterOperator` for the filter condition should be `and`.
 
 {% tabs %}
 {% highlight Dart %} 
