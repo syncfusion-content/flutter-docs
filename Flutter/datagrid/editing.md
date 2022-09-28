@@ -175,6 +175,8 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid editing](images/editing/datagrid_editing.gif)
+
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
@@ -236,6 +238,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid disable the editing for specific column](images/editing/disable_editing.gif)
 
 ## Entering edit mode
 
@@ -495,6 +499,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid begin edit](images/editing/begin_editing.gif)
+
 ### EndEdit
 
 The [SfDataGrid.endEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/endEdit.html) method can be called to programmatically end the editing for specific cell.
@@ -695,6 +701,8 @@ class EmployeeDataSource extends DataGridSource {
 ## Cancel edited cell value from being committed
 
 You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return false based on your criteria.
+
+If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow the focus to the other widget which is added outside the DataGrid. The focus would be always on the `currentCell`.
 
 {% tabs %}
 {% highlight dart %}
