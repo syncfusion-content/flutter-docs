@@ -702,7 +702,7 @@ class EmployeeDataSource extends DataGridSource {
 
 You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return false based on your criteria.
 
-If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow the focus to the other widget which is added outside the DataGrid. The focus would be always on the `currentCell`.
+If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow the focus to the other widget, which is added outside the DataGrid. The focus would always be on the `currentCell`.
 
 {% tabs %}
 {% highlight dart %}
