@@ -135,8 +135,15 @@ Widget build(BuildContext context) {
       MaterialButton(
           child: Text('Remove Filter'),
           onPressed: () {
-            _employeeDataSource.removeFilter('Name',
-                FilterCondition(type: FilterType.equals, value: 'James'));
+            if (_employeeDataSource.filterConditions.keys.contains('Name')) {
+              final FilterCondition? condition = _employeeDataSource
+                  .filterConditions['Name']!
+                  .firstWhereOrNull((item) =>
+                      item.value == 'James' && item.type == FilterType.equals);
+              if (condition != null) {
+                _employeeDataSource.removeFilter('Name', condition);
+              }
+            }
           }),
     ],
   );
@@ -455,19 +462,28 @@ The `SfDataGrid` provides the following types of filter popup modes:
 * **Checkbox Filter** - Provides excel like filter interface with a list of checkboxes.
 * **Advanced Filter** - Provides advanced filter options to filter the data with multiple conditions.
 
+The following image shows the checkbox filter popup menu on the web and desktop platforms,
+
 ![Flutter datagrid shows a checkbox filter in web platform](images/filtering/flutter-datagrid-checkbox-filter-view.png)
+
+The following image shows the advanced filter popup menu on the web and desktop platforms,
 
 ![Flutter datagrid shows a advanced filter in web platform](images/filtering/flutter-datagrid-advanced-filter-view.png)
 
-![Flutter datagrid shows a checkbox filter in mobile platform](images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png)
+The following images show the checkbox and advanced filter popup menu on the mobile platform,
 
-![Flutter datagrid shows a advanced filter in mobile platform](images/filtering/flutter-datagrid-advanced-filter-view-mobile.png)
+| ![Flutter datagrid shows a checkbox filter in mobile platform](images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png)  | ![Flutter datagrid shows a advanced filter in mobile platform](images/filtering/flutter-datagrid-advanced-filter-view-mobile.png)  |
+|:---:|:---:|
 
 ### Checkbox filtering
 
 The Checkbox filtering is like the Excel-like filter popup that shows the checked list box of the unique items with the search text field. The items which are in the checked state will be visible in the view. Other items will be filtered out from the view.
 
+The following image shows the checkbox filter popup menu with some selected rows in the checkbox list view in order to filter,
+
 ![Flutter datagrid shows a checkbox filter popup view](images/filtering/flutter-datagrid-checkbox-view-before-filter.png)
+
+The following image shows the filtered data rows which are filtered by the checkbox filter popup menu,
 
 ![Flutter datagrid shows the filtered rows](images/filtering/flutter-datagrid-checkbox-view-after-filter.png)
 
@@ -498,18 +514,24 @@ Below are the built-in filter types supported:
 </tr>
 <tr>
 <td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Begins With</li> <li>Does Not Begin With</li> <li>Ends With</li> <li>Does Not End With</li> <li>Contains</li> <li>Does Not Contain</li> <li>Empty</li> <li>Not Empty</li> <li>Null</li> <li>Not Null</li></ul> </td>
-<td align="left" valign="top"><b>Filter menu options</b> <li>Equals</li> <li>Does Not Equal</li> <li>Less Than</li> <li>Less Than Or Equal</li> <li>Greater Than</li> <li>Greater Than Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
-<td align="left" valign="top"><b>Filter menu options</b> <li>Equals</li> <li>Does Not Equal</li> <li>Before</li> <li>Before Or Equal</li> <li>After</li> <li>After Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
+<td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Less Than</li> <li>Less Than Or Equal</li> <li>Greater Than</li> <li>Greater Than Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
+<td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Before</li> <li>Before Or Equal</li> <li>After</li> <li>After Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
 </tr>
 <table>
 
+The following image shows the advanced filter popup menu with multiple filter values and types in order to filter the range of data rows,
+
 ![Flutter datagrid shows a advanced filter popup view](images/filtering/flutter-datagrid-advanced-view-before-filter.png)
+
+The following image shows the filtered data rows which are filtered by the advanced filter popup menu,
 
 ![Flutter datagrid shows the filtered rows](images/filtering/flutter-datagrid-advanced-view-after-filter.png)
 
 #### Case sensitive filtering
 
 Case-sensitive filtering can be enabled for the column using the casing icon available in the advanced filter UI. This is available only for the `TextFilters` filter view. If the icon is active, the filtering will be applied with the case sensitive with the filter text. The case-sensitive icon will be shown only to the string-type columns.
+
+The following image shows the advanced filter popup menu with a case-sensitive icon,
 
 ![Flutter datagrid shows the case sensitive icon](images/filtering/flutter-datagrid-casesensitive-filtering.png)
 
