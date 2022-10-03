@@ -9,17 +9,17 @@ documentation: ug
 
 # Filtering in Flutter DataGrid (SfDataGrid)
 
-Filtering is the process of fetching the values from a collection that satisfies a specified condition. In the `SfDataGrid`, filtering can be applied through the UI and programmatically.
+Filtering is the process of fetching the values from a collection that satisfies a specified condition. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied through the UI and programmatically.
 
 ## Programmatical Filtering
 
-The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the `DataGridSource.filterConditions` map collection. In the map collection, the `key` defines the `columnName` and the `values` defines the list of `FilterCondition`.
+The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` defines the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
 
 `DataGridSource.filterConditions` is an unmodifiable map collection. So, it doesn't allow us to perform CRUD operations directly in the `DataGridSource.filterConditions` property. However, it can be done by the following public methods:
 
 ### Add filter
 
-A filter condition to the specific column can be added by the `DataGridSource.addFilter` method.
+A filter condition to the specific column can be added by the [DataGridSource.addFilter](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/addFilter.html) method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
 
 ### Remove filter
 
-A filter condition to the specific column can be removed by the `DataGridSource.removeFilter` method.
+A filter condition to the specific column can be removed by the [DataGridSource.removeFilter](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/removeFilter.html) method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -154,7 +154,7 @@ Widget build(BuildContext context) {
 
 ### Clear filter
 
-The filter conditions from the entire column can be cleared by the `DataGridSource.clearFilters` method. The filter conditions in the specific column can also be cleared by invoking the `DataGridSource.clearFilters` method along with the corresponding `columnName` as an argument.
+The filter conditions from the entire column can be cleared by the [DataGridSource.clearFilters](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/clearFilters.html) method. The filter conditions in the specific column can also be cleared by invoking the `DataGridSource.clearFilters` method along with the corresponding `columnName` as an argument.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -217,7 +217,7 @@ Widget build(BuildContext context) {
 
 ### Filter behavior
 
-The `FilterBehavior` property is used to specify whether filtering should consider the value of a cell as the string or its data type
+The [FilterBehavior](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterBehavior.html) property is used to specify whether filtering should consider the value of a cell as the string or its data type
 
 * **stringDataType** - It converts the cell value as string data type and compares the condition.
 * **strongDataType** - It compares the cell value with its actual data type.
@@ -290,7 +290,7 @@ Widget build(BuildContext context) {
 
 ### Filter operator
 
-The `FilterOperator` property is used to decide how a logical operator is to be applied between multiple filter conditions.
+The [FilterOperator](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterOperator.html) property is used to decide how a logical operator is to be applied between multiple filter conditions.
 
 * **and** - `AND` logical operator applies between multiple filter conditions. 
 * **or** - `OR` logical operator applies between multiple filter conditions.
@@ -372,7 +372,7 @@ Widget build(BuildContext context) {
 
 ### Filter rows with a range between two dates
 
-The column which holds the `DateTime` type data can be filtered with a range between two dates by applying the two filter conditions to the same column. The `FilterType` for the filter condition with the start date should be `GreaterThanOrEqual` and the end date should be `LessThanOrEqual` and the `FilterOperator` for the filter condition should be `and`.
+The column which holds the [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html) type data can be filtered with a range between two dates by applying the two filter conditions to the same column. The [FilterType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterType.html) for the filter condition with the start date should be `GreaterThanOrEqual` and the end date should be `LessThanOrEqual` and the `FilterOperator` for the filter condition should be `and`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -455,7 +455,7 @@ After filtering, the rows can be retrieved in the same order as displayed in the
 
 ## UI Filtering
 
-The `SfDataGrid` provides an excel-like filtering UI and an advanced filter UI to filter the data easily. UI filtering can be enabled by setting the `SfDataGrid.allowFiltering` property to `true`. This allows the filter UI to be opened by clicking on the filter icon in the column header. The filtering UI will be shown as a popup menu on the desktop and web platforms, and it will be shown as a new page on the mobile platforms.
+The `SfDataGrid` provides an excel-like filtering UI and an advanced filter UI to filter the data easily. UI filtering can be enabled by setting the [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) property to `true`. This allows the filter UI to be opened by clicking on the filter icon in the column header. The filtering UI will be shown as a popup menu on the desktop and web platforms, and it will be shown as a new page on the mobile platforms.
 
 The `SfDataGrid` provides the following types of filter popup modes:
 
@@ -472,8 +472,12 @@ The following image shows the advanced filter popup menu on the web and desktop 
 
 The following images show the checkbox and advanced filter popup menu on the mobile platform,
 
-| ![Flutter datagrid shows a checkbox filter in mobile platform](images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png)  | ![Flutter datagrid shows a advanced filter in mobile platform](images/filtering/flutter-datagrid-advanced-filter-view-mobile.png)  |
-|:---:|:---:|
+<table>
+<tr>
+<th><img alt="Flutter datagrid shows a checkbox filter menu on mobile platform" src="images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png"/></td>
+<th><img alt="Flutter datagrid shows a advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-advanced-filter-view-mobile.png"/></td>
+</tr>
+</table>
 
 ### Checkbox filtering
 
@@ -494,7 +498,7 @@ Below are the built-in filter types supported:
 
 * **Text Filters** – Loads various menu options to filter the display text effectively.
 * **Number Filters** – Loads various menu options to filter the numeric data.
-* **Date Filters** – Loads various menu options and `DatePicker` to filter DateTime type column.
+* **Date Filters** – Loads various menu options and [DatePicker](https://api.flutter.dev/flutter/material/showDatePicker.html) to filter DateTime type column.
 
 <table>
 <tr>
@@ -517,7 +521,7 @@ Below are the built-in filter types supported:
 <td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Less Than</li> <li>Less Than Or Equal</li> <li>Greater Than</li> <li>Greater Than Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
 <td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Before</li> <li>Before Or Equal</li> <li>After</li> <li>After Or Equal</li> <li>Null</li> <li>Not Null</li></ul> </td>
 </tr>
-<table>
+</table>
 
 The following image shows the advanced filter popup menu with multiple filter values and types in order to filter the range of data rows,
 
@@ -537,7 +541,7 @@ The following image shows the advanced filter popup menu with a case-sensitive i
 
 ### Disable filtering for an individual column
 
-The `GridColumn.allowFiltering` has a higher priority than the `SfDataGrid.allowFiltering` property. So, you can disable the filtering for any particular column by setting the `GridColumn.allowFiltering` property to `false`.
+The [GridColumn.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowFiltering.html) has a higher priority than the `SfDataGrid.allowFiltering` property. So, you can disable the filtering for any particular column by setting the `GridColumn.allowFiltering` property to `false`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -597,7 +601,7 @@ The SfDataGrid provides the following callbacks to notify the filtering stages:
 
 ### OnFilterChanging callback
 
-`onFilterChanging` callback invokes when the filtering is being applied to the particular column through UI filtering. You can return `false` from this callback to restrict the column from being filtered.
+[onFilterChanging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onFilterChanging.html) callback invokes when the filtering is being applied to the particular column through UI filtering. You can return `false` from this callback to restrict the column from being filtered.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -658,7 +662,7 @@ Widget build(BuildContext context) {
 
 ### OnFilterChanged callback
 
-`onFilterChanged` callback invokes after the filtering is applied to the particular column through UI filtering. You can use this callback to get filter conditions.
+[onFilterChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onFilterChanged.html) callback invokes after the filtering is applied to the particular column through UI filtering. You can use this callback to get filter conditions.
 
 {% tabs %}
 {% highlight Dart %} 
