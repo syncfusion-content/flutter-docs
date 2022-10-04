@@ -474,8 +474,8 @@ The following images show the checkbox and advanced filter popup menu on the mob
 
 <table>
 <tr>
-<th><img alt="Flutter datagrid shows a checkbox filter menu on mobile platform" src="images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png"/></td>
-<th><img alt="Flutter datagrid shows a advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-advanced-filter-view-mobile.png"/></td>
+<th><img alt="Flutter datagrid shows a checkbox filter menu on mobile platform" src="images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png"/></th>
+<th><img alt="Flutter datagrid shows a advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-advanced-filter-view-mobile.png"/></th>
 </tr>
 </table>
 
