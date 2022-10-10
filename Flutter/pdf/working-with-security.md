@@ -41,7 +41,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -80,7 +80,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -110,7 +110,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -119,7 +119,7 @@ You can protect the PDF document from printing, editing, copying with the [`owne
 
 {% highlight dart %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Document security
@@ -144,7 +144,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -170,7 +170,7 @@ security.ownerPassword = 'ownerPassword';
 security.userPassword = 'userPassword';
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -189,7 +189,7 @@ PdfDocument document = PdfDocument(
 document.security.userPassword = 'NewPassword';
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -208,7 +208,7 @@ PdfDocument document = PdfDocument(
 document.security.userPassword = '';
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -236,7 +236,7 @@ document.security.permissions.addAll(<PdfPermissionsFlags>[
     PdfPermissionsFlags.fullQualityPrint]);
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}

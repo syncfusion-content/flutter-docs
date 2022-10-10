@@ -27,10 +27,10 @@ You can create a PDF/A-1b document by specifying the conformance level as a1b th
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b)
   ..pages.add().graphics.drawString('Hello World!',
       PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-      bounds: Rect.fromLTWH(20, 20, 200, 50));
+      bounds: const Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -47,10 +47,10 @@ You can create a PDF/A-2b document by specifying the conformance level as a2b th
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b)
   ..pages.add().graphics.drawString('Hello World!',
       PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-      bounds: Rect.fromLTWH(20, 20, 200, 50));
+      bounds: const Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -69,7 +69,7 @@ You can create a PDF/A-3b document by specifying the conformance level as a3b th
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b)
   ..pages.add().graphics.drawString('Hello World!',
       PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-      bounds: Rect.fromLTWH(20, 20, 200, 50));
+      bounds: const Rect.fromLTWH(20, 20, 200, 50));
 
 //Creates an attachment
 PdfAttachment attachment = PdfAttachment(
@@ -82,7 +82,7 @@ PdfAttachment attachment = PdfAttachment(
 document.attachments.add(attachment);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

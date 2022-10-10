@@ -28,20 +28,23 @@ PdfGraphics graphics = document.pages.add().graphics;
 //Watermark text
 PdfGraphicsState state = graphics.save();
 
+//Set transparency and rotation 
 graphics.setTransparency(0.25);
 
 graphics.rotateTransform(-40);
 
+//Add text watermark 
 graphics.drawString('Imported using Essential PDF',
     PdfStandardFont(PdfFontFamily.helvetica, 20),
     pen: PdfPens.red,
     brush: PdfBrushes.red,
-    bounds: Rect.fromLTWH(-150, 450, 0, 0));
+    bounds: const Rect.fromLTWH(-150, 450, 0, 0));
 
+//Restore graphics state
 graphics.restore(state);
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -60,17 +63,22 @@ PdfDocument document = PdfDocument();
 //Add a page to the document and get page graphics
 PdfGraphics graphics = document.pages.add().graphics;
 
+//Get image data
+File imageFile = File('image.jpg'); 
+Uint8List imagebytes = await imageFile.readAsBytes();
+String imageBase64 = base64.encode(imagebytes);
+
 //Watermark image
 PdfGraphicsState state = graphics.save();
 graphics.setTransparency(0.25);
 graphics.drawImage(
-    PdfBitmap.fromBase64String(imageData),
+    PdfBitmap.fromBase64String(imageBase64),
     Rect.fromLTWH(
         0, 0, graphics.clientSize.width, graphics.clientSize.height));
 graphics.restore(state);
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}

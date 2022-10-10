@@ -17,17 +17,17 @@ To add a digital signature, you need a certificate with private keys. The follow
 
 {% highlight dart %}
 
-//Creates a new PDF document.
+//Creates a new PDF document
 PdfDocument document = PdfDocument();
 
-//Adds a new page.
+//Adds a new page
 PdfPage page = document.pages.add();
 
-//Creates a digital signature and sets signature information.
+//Creates a digital signature and sets signature information
 PdfSignatureField field = PdfSignatureField(page, 'signature',
     bounds: Rect.fromLTWH(0, 0, 200, 100),
     signature: PdfSignature(
-        //Creates a certificate instance from the PFX file with a private key.
+        //Creates a certificate instance from the PFX file with a private key
         certificate:
             PdfCertificate(File('PDF.pfx').readAsBytesSync(), 'password123'),
         contactInfo: 'johndoe@owned.us',
@@ -36,11 +36,11 @@ PdfSignatureField field = PdfSignatureField(page, 'signature',
         digestAlgorithm: DigestAlgorithm.sha256,
         cryptographicStandard: CryptographicStandard.cms));
 
-//Add a signature field to the form.
+//Add a signature field to the form
 document.form.fields.add(field);
 
-//Save and dispose the PDF document.
-File('Output.pdf').writeAsBytes(document.save());
+//Save and dispose the PDF document
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -70,7 +70,7 @@ field.signature = PdfSignature(
     cryptographicStandard: CryptographicStandard.cades);
 
 //Save and dispose the PDF document.
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -207,7 +207,7 @@ field.signature = PdfSignature(
     cryptographicStandard: CryptographicStandard.cades);
 
 //Save and load the PDF document.
-document = PdfDocument(inputBytes: document.save());
+document = PdfDocument(inputBytes: await document.save());
 
 //Gets the second signature field of the PDF document.
 field = document.form.fields[1] as PdfSignatureField;
@@ -224,7 +224,7 @@ field.signature = PdfSignature(
     cryptographicStandard: CryptographicStandard.cms);
 
 //Save and dispose the PDF document.
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}

@@ -27,18 +27,18 @@ PdfTemplate template = PdfTemplate(100, 50);
 
 //Draw a rectangle on the template graphics
 template.graphics!.drawRectangle(
-    brush: PdfBrushes.burlyWood, bounds: Rect.fromLTWH(0, 0, 100, 50));
+    brush: PdfBrushes.burlyWood, bounds: const Rect.fromLTWH(0, 0, 100, 50));
 
 //Draw a string using the graphics of the template.
 template.graphics!.drawString(
     'Hello World', PdfStandardFont(PdfFontFamily.helvetica, 14),
-    brush: PdfBrushes.black, bounds: Rect.fromLTWH(5, 5, 0, 0));
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(5, 5, 0, 0));
 
 //Add a new page and draw the template on the page graphics of the document.
-document.pages.add().graphics.drawPdfTemplate(template, Offset(0, 0));
+document.pages.add().graphics.drawPdfTemplate(template, const Offset(0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -63,10 +63,15 @@ PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 7);
 //Create a header and draw the image
 PdfPageTemplateElement header = PdfPageTemplateElement(bounds);
 
+//Get image data
+File imageFile = File('image.jpg');
+Uint8List imagebytes = await imageFile.readAsBytes();
+String imageData = base64.encode(imagebytes);
+
 //Draw the image in the header
 header.graphics.drawImage(
     PdfBitmap.fromBase64String(imageData),
-    Rect.fromLTWH(0, 0, 100, 50));
+    const Rect.fromLTWH(0, 0, 100, 50));
 
 //Add the header at the top
 document.template.top = header;
@@ -86,13 +91,13 @@ PdfCompositeField compositeField = PdfCompositeField(
 compositeField.bounds = footer.bounds;
 
 //Draw the composite field in footer
-compositeField.draw(footer.graphics, Offset(470, 40));
+compositeField.draw(footer.graphics, const Offset(470, 40));
 
 //Add the footer template at the bottom
 document.template.bottom = footer;
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -134,7 +139,7 @@ page.graphics.drawRectangle(
     bounds: Offset(0, 0) & page.getClientSize());
 
 //Save the document
-final List<int> bytes = document.save();
+final List<int> bytes = await document.save();
 
 //Dispose the document
 document.dispose();

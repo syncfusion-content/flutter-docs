@@ -36,7 +36,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -56,7 +56,7 @@ PdfPage page = document.pages[0];
 
 //Creates a rectangle annotation
 PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
-    Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
+    const Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     modifiedDate: DateTime.now());
@@ -65,7 +65,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -90,7 +90,7 @@ PdfPage page = document.pages.add();
 
 //Creates a rectangle annotation
 PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
-    Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
+    const Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
@@ -101,7 +101,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -124,7 +124,7 @@ PdfPage page = document.pages.add();
 
 //Creates an ellipse annotation
 PdfEllipseAnnotation ellipseAnnotation = PdfEllipseAnnotation(
-    Rect.fromLTWH(40, 70, 80, 80), 'Ellipse Annotation',
+    const Rect.fromLTWH(40, 70, 80, 80), 'Ellipse Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
@@ -135,7 +135,7 @@ PdfEllipseAnnotation ellipseAnnotation = PdfEllipseAnnotation(
 page.annotations.add(ellipseAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -177,7 +177,7 @@ PdfLineAnnotation lineAnnotation = PdfLineAnnotation(
 page.annotations.add(lineAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -210,7 +210,7 @@ PdfPolygonAnnotation polygonAnnotation = PdfPolygonAnnotation(
 page.annotations.add(polygonAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -233,14 +233,14 @@ PdfPage page = document.pages.add();
 
 //Creates a new document link annotation
 PdfDocumentLinkAnnotation documentLinkAnnotation =
-    PdfDocumentLinkAnnotation(Rect.fromLTWH(10, 40, 30, 30),
-        PdfDestination(document.pages.add(), Offset(10, 0)));
+    PdfDocumentLinkAnnotation(const Rect.fromLTWH(10, 40, 30, 30),
+        PdfDestination(document.pages.add(), const Offset(10, 0)));
 
 //Adds this annotation the page.
 page.annotations.add(documentLinkAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -263,13 +263,13 @@ PdfPage page = document.pages.add();
 
 //Creates a new URI annotation
 PdfUriAnnotation uriAnnotation = PdfUriAnnotation(
-    bounds: Rect.fromLTWH(10, 10, 100, 30), uri: 'http://www.google.com');
+    bounds: const Rect.fromLTWH(10, 10, 100, 30), uri: 'http://www.google.com');
 
 //Adds this annotation to the page.
 page.annotations.add(uriAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -300,10 +300,10 @@ PdfTextWebLink textWebLink = PdfTextWebLink(
     pen: PdfPen(PdfColor(0, 0, 255)));
 
 //Draws the text web link to the page
-textWebLink.draw(page, Offset(10, 10));
+textWebLink.draw(page, const Offset(10, 10));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -336,7 +336,7 @@ for (int i = 0; i < document.pages.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -376,7 +376,7 @@ for (int i = 0; i < document.pages.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -400,7 +400,7 @@ PdfPage page = document.pages[0];
 PdfRectangleAnnotation annotation =
     page.annotations[0] as PdfRectangleAnnotation;
 annotation.border = PdfAnnotationBorder(4);
-annotation.bounds = Rect.fromLTWH(300, 300, 100, 100);
+annotation.bounds = const Rect.fromLTWH(300, 300, 100, 100);
 annotation.color = PdfColor(0, 0, 255);
 annotation.innerColor = PdfColor(0, 255, 0);
 annotation.text = 'Modified Annotation';
@@ -408,7 +408,7 @@ annotation.author = 'Syncfusion';
 annotation.modifiedDate = DateTime.now();
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -435,7 +435,7 @@ PdfAnnotationCollection collection = page.annotations;
 collection.remove(collection[0]);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
