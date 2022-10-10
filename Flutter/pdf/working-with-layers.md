@@ -33,13 +33,13 @@ PdfGraphics graphics = layer.graphics;
 graphics.translateTransform(100, 60);
 
 //Draw an Arc.
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 0, 250), width: 30));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 250, 0), width: 20));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Add another layer on the page.
@@ -49,13 +49,13 @@ graphics = layer.graphics;
 graphics.translateTransform(100, 180);
 
 //Draw another set of elements.
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 0, 250), width: 30));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 250, 0), width: 20));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Save the PDF document.
@@ -81,13 +81,13 @@ PdfGraphics graphics = layer.graphics;
 graphics.translateTransform(300, 360);
 
 //Draw an Arc.
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 0, 250), width: 30));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 250, 0), width: 20));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Save the PDF document.
@@ -113,14 +113,14 @@ PdfPage page = document.pages.add();
 PdfPageLayer layer = page.layers.add(name: 'Layer1', visible: true);
 PdfGraphics graphics = layer.graphics;
 graphics.translateTransform(100, 60);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
 
 //Add another layer on the page and disable the visibility.
 PdfPageLayer layer2 = page.layers.add(name: 'Layer2', visible: false);
 graphics = layer2.graphics;
 graphics.translateTransform(100, 180);
-graphics.drawEllipse(const Rect.fromLTWH(0, 0, 50, 50),
+graphics.drawEllipse(Rect.fromLTWH(0, 0, 50, 50),
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
 
 //Save the PDF document.
@@ -159,12 +159,12 @@ PdfPage page = document.pages.add();
 //Add the first layer.
 PdfLayer layer = document.layers.add(name: 'Layer1', visible: true)
   ..createGraphics(page).drawRectangle(
-      bounds: const Rect.fromLTWH(0, 0, 200, 100), brush: PdfBrushes.red);
+      bounds: Rect.fromLTWH(0, 0, 200, 100), brush: PdfBrushes.red);
 
 //Create nested layer.
 layer.layers.add(name: 'Nested Layer1', visible: true)
   ..createGraphics(page)
-      .drawRectangle(bounds: const Rect.fromLTWH(0, 120, 200, 100), brush: PdfBrushes.green);
+      .drawRectangle(bounds: Rect.fromLTWH(0, 120, 200, 100), brush: PdfBrushes.green);
 
 //Save the PDF document.
 File('output.pdf').writeAsBytes(await document.save());

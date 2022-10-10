@@ -24,7 +24,7 @@ PdfDocument document = PdfDocument();
 PdfBookmark bookmark = document.bookmarks.add('page 1');
 
 //Sets the destination page and destination location
-bookmark.destination = PdfDestination(document.pages.add(), const Offset(100, 100));
+bookmark.destination = PdfDestination(document.pages.add(), Offset(100, 100));
 
 //Sets the text style
 bookmark.textStyle = [PdfTextStyle.bold];
@@ -66,8 +66,8 @@ childBookmark1.textStyle = [PdfTextStyle.bold, PdfTextStyle.italic];
 childBookmark2.textStyle = [PdfTextStyle.italic];
 
 //Sets the destination page and destination location
-childBookmark1.destination = PdfDestination(page, const Offset(100, 100));
-childBookmark2.destination = PdfDestination(page, const Offset(100, 400));
+childBookmark1.destination = PdfDestination(page, Offset(100, 100));
+childBookmark2.destination = PdfDestination(page, Offset(100, 400));
 
 //Sets the bookmark color(RGB)
 childBookmark1.color = PdfColor(0, 255, 0);
@@ -95,7 +95,7 @@ PdfDocument document =
 PdfBookmark bookmark = document.bookmarks.add('Page 1');
 
 //Sets the destination page and location
-bookmark.destination = PdfDestination(document.pages[0], const Offset(20, 20));
+bookmark.destination = PdfDestination(document.pages[0], Offset(20, 20));
 
 //Sets the bookmark color
 bookmark.color = PdfColor(255, 0, 0);
@@ -127,7 +127,7 @@ PdfDocument document =
 PdfBookmark bookmark = document.bookmarks.insert(1, 'New Bookmark');
 
 //Sets the destination page and location
-bookmark.destination = PdfDestination(document.pages[0], const Offset(40, 40));
+bookmark.destination = PdfDestination(document.pages[0], Offset(40, 40));
 
 //Saves the document
 File('output.pdf').writeAsBytes(await document.save());
@@ -190,13 +190,13 @@ PdfBookmarkBase collection = document.bookmarks;
 //Gets the first bookmark and changes the properties of the bookmark
 PdfBookmark bookmark = collection[0];
 bookmark.color = PdfColor(0, 0, 255);
-bookmark.destination = PdfDestination(page, const Offset(20, 20));
+bookmark.destination = PdfDestination(page, Offset(20, 20));
 bookmark.textStyle = [PdfTextStyle.italic];
 bookmark.title = 'Changed Title';
 
 //Adds a child to the existing bookmark
 PdfBookmark childBookmark = bookmark.add('Child Bookmark');
-childBookmark.destination = PdfDestination(page, const Offset(100, 100));
+childBookmark.destination = PdfDestination(page, Offset(100, 100));
 
 //Saves the document
 File('output.pdf').writeAsBytes(await document.save());

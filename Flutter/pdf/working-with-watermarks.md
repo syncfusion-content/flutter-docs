@@ -38,7 +38,7 @@ graphics.drawString('Imported using Essential PDF',
     PdfStandardFont(PdfFontFamily.helvetica, 20),
     pen: PdfPens.red,
     brush: PdfBrushes.red,
-    bounds: const Rect.fromLTWH(-150, 450, 0, 0));
+    bounds: Rect.fromLTWH(-150, 450, 0, 0));
 
 //Restore graphics state
 graphics.restore(state);

@@ -38,7 +38,7 @@ security.userPassword = 'password';
 document.pages.add().graphics.drawString(
     'Encrypted with RC4 128bit', PdfStandardFont(PdfFontFamily.helvetica, 27),
     brush: PdfBrushes.mediumVioletRed,
-    bounds: const Rect.fromLTWH(10, 10, 500, 50));
+    bounds: Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
@@ -77,7 +77,7 @@ document.pages.add().graphics.drawString(
     'This document is protected with owner password',
     PdfStandardFont(PdfFontFamily.helvetica, 27),
     brush: PdfBrushes.mediumVioletRed,
-    bounds: const Rect.fromLTWH(10, 10, 500, 50));
+    bounds: Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
@@ -107,7 +107,7 @@ security.userPassword = 'password';
 document.pages.add().graphics.drawString(
     'Encrypted with AES 256bit', PdfStandardFont(PdfFontFamily.helvetica, 27),
     brush: PdfBrushes.mediumVioletRed,
-    bounds: const Rect.fromLTWH(10, 10, 500, 50));
+    bounds: Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
@@ -141,7 +141,7 @@ document.pages.add().graphics.drawString(
     'This document is protected with owner password',
     PdfStandardFont(PdfFontFamily.helvetica, 27),
     brush: PdfBrushes.mediumVioletRed,
-    bounds: const Rect.fromLTWH(10, 10, 500, 50));
+    bounds: Rect.fromLTWH(10, 10, 500, 50));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());

@@ -56,7 +56,7 @@ PdfPage page = document.pages[0];
 
 //Creates a rectangle annotation
 PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
-    const Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
+    Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     modifiedDate: DateTime.now());
@@ -90,7 +90,7 @@ PdfPage page = document.pages.add();
 
 //Creates a rectangle annotation
 PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
-    const Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
+    Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
@@ -124,7 +124,7 @@ PdfPage page = document.pages.add();
 
 //Creates an ellipse annotation
 PdfEllipseAnnotation ellipseAnnotation = PdfEllipseAnnotation(
-    const Rect.fromLTWH(40, 70, 80, 80), 'Ellipse Annotation',
+    Rect.fromLTWH(40, 70, 80, 80), 'Ellipse Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
@@ -233,8 +233,8 @@ PdfPage page = document.pages.add();
 
 //Creates a new document link annotation
 PdfDocumentLinkAnnotation documentLinkAnnotation =
-    PdfDocumentLinkAnnotation(const Rect.fromLTWH(10, 40, 30, 30),
-        PdfDestination(document.pages.add(), const Offset(10, 0)));
+    PdfDocumentLinkAnnotation(Rect.fromLTWH(10, 40, 30, 30),
+        PdfDestination(document.pages.add(), Offset(10, 0)));
 
 //Adds this annotation the page.
 page.annotations.add(documentLinkAnnotation);
@@ -263,7 +263,7 @@ PdfPage page = document.pages.add();
 
 //Creates a new URI annotation
 PdfUriAnnotation uriAnnotation = PdfUriAnnotation(
-    bounds: const Rect.fromLTWH(10, 10, 100, 30), uri: 'http://www.google.com');
+    bounds: Rect.fromLTWH(10, 10, 100, 30), uri: 'http://www.google.com');
 
 //Adds this annotation to the page.
 page.annotations.add(uriAnnotation);
@@ -300,7 +300,7 @@ PdfTextWebLink textWebLink = PdfTextWebLink(
     pen: PdfPen(PdfColor(0, 0, 255)));
 
 //Draws the text web link to the page
-textWebLink.draw(page, const Offset(10, 10));
+textWebLink.draw(page, Offset(10, 10));
 
 //Saves the document
 File('output.pdf').writeAsBytes(await document.save());
@@ -400,7 +400,7 @@ PdfPage page = document.pages[0];
 PdfRectangleAnnotation annotation =
     page.annotations[0] as PdfRectangleAnnotation;
 annotation.border = PdfAnnotationBorder(4);
-annotation.bounds = const Rect.fromLTWH(300, 300, 100, 100);
+annotation.bounds = Rect.fromLTWH(300, 300, 100, 100);
 annotation.color = PdfColor(0, 0, 255);
 annotation.innerColor = PdfColor(0, 255, 0);
 annotation.text = 'Modified Annotation';
