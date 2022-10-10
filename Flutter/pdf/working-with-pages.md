@@ -24,7 +24,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -43,7 +43,7 @@ PdfDocument document =
 document.pages.insert(0);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -69,7 +69,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.darkBlue);
 
 //Save and dispose the PDF document
-List<int> bytes = document.save();
+List<int> bytes =await document.save();
 document.dispose();
 
 {% endhighlight %}
@@ -137,7 +137,7 @@ section.pages.add().graphics.drawString('Rotated by 270 degrees', font,
     brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -194,7 +194,7 @@ section.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -219,7 +219,7 @@ document.pages.remove(page);
 document.pages.removeAt(0);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

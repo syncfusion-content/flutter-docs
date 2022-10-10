@@ -30,7 +30,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -51,7 +51,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.mediumVioletRed);
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -76,7 +76,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -101,7 +101,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -125,7 +125,7 @@ section.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -147,7 +147,7 @@ document.fileStructure.incrementalUpdate = false;
 document.compressionLevel = PdfCompressionLevel.best;
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

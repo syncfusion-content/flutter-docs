@@ -24,7 +24,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -50,7 +50,7 @@ page.graphics.drawString(
     bounds: Rect.fromLTWH(40, 40, 500, 40));
  
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -84,7 +84,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -106,7 +106,7 @@ document.pages.add().graphics.drawString('Hello World!!!',
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -128,7 +128,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -158,7 +158,7 @@ document.pages.add().graphics.drawString(text, font,
     bounds: Rect.fromLTWH(0, 0, size.width, size.height));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -192,7 +192,7 @@ page.graphics.drawString(
         paragraphIndent: 35));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -233,7 +233,7 @@ PdfTextElement(
             page.getClientSize().width / 2, page.getClientSize().height / 2));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 // Disposes the document
 document.dispose();
@@ -279,7 +279,7 @@ textElement.draw(
     format: layoutFormat);
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -303,7 +303,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(0, 0, 500, 50));
 
 //Save the document
-final List<int> bytes = document.save();
+final List<int> bytes =await document.save();
 
 //Dispose the document
 document.dispose();
