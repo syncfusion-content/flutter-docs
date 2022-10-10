@@ -44,7 +44,7 @@ PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Saves the document into a list of bytes
-List<int> bytes = document.save();
+List<int> bytes =await document.save();
 
 //Saves the bytes to the file system
 File('output.pdf').writeAsBytes(bytes);
