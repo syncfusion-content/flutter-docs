@@ -162,7 +162,7 @@ document.dispose();
 
 ## Rotating a PDF page
 
-You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) a PDF page in the PDF document using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle-class.html) enum as shown in the following code snippet.
+You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) a PDF page in the PDF document using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle.html) enum as shown in the following code snippet.
 
 {% highlight dart %}
 
