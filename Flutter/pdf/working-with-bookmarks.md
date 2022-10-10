@@ -89,7 +89,7 @@ To add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest
 
 //Loads an existing PDF document
 PdfDocument document =
-    PdfDocument(inputBytes: File('').readAsBytesSync());
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Creates a document bookmark
 PdfBookmark bookmark = document.bookmarks.add('Page 1');

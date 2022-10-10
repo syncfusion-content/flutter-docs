@@ -98,11 +98,11 @@ field.signature = PdfSignature(
 PdfGraphics graphics = field.appearance.normal.graphics;
 
 //Draws the signature image.
-graphics.drawImage(
-    PdfBitmap(File('image.jpg').readAsBytesSync()), field.bounds);
+graphics!.drawImage(
+    PdfBitmap(File('image.jpg').readAsBytesSync()), Rect.fromLTWH(0, 0, field.bounds.width, field.bounds.height));
 
 //Save and dispose the PDF document.
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -131,7 +131,7 @@ field.signature = PdfSignature()
         [File('certificate.cer').readAsBytesSync()]);
 
 //Save and dispose the PDF document.
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
