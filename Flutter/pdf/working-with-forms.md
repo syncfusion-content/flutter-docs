@@ -814,7 +814,7 @@ final PdfDocument document =
 
 //Import the FDF into the existing form.
 document.form
-  ..importData(File('Import.fdf').readAsBytesSync(), DataFormat.fdf);
+  .importData(File('Import.fdf').readAsBytesSync(), DataFormat.fdf);
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(await document.save());
@@ -835,7 +835,7 @@ final PdfDocument document =
 
 //Import the XFDF into the existing form.
 document.form
-  ..importData(File('Import.xfdf').readAsBytesSync(), DataFormat.xfdf);
+  .importData(File('Import.xfdf').readAsBytesSync(), DataFormat.xfdf);
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(await document.save());
@@ -856,7 +856,7 @@ final PdfDocument document =
 
 //Import the JSON into the existing form.
 document.form
-  ..importData(File('Import.json').readAsBytesSync(), DataFormat.json);
+  .importData(File('Import.json').readAsBytesSync(), DataFormat.json);
 
 //Enable the form default appearance.
 document.form.setDefaultAppearance(true);
@@ -880,7 +880,7 @@ final PdfDocument document =
 
 //Import the XML into the existing form.
 document.form
-  ..importData(File('Import.xml').readAsBytesSync(), DataFormat.xml);
+  .importData(File('Import.xml').readAsBytesSync(), DataFormat.xml);
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(await document.save());
@@ -899,7 +899,7 @@ The following code sample explains how to export the FDF file from a PDF documen
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Export the form data to FDF format.
-File('Export.fdf').writeAsBytesSync(await document.form.exportData(DataFormat.fdf));
+File('Export.fdf').writeAsBytesSync(document.form.exportData(DataFormat.fdf));
 
 //Dispose the PDF document.
 document.dispose();
@@ -918,7 +918,7 @@ The following code sample explains how to export the XFDF file from a PDF docume
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Export the form data to XFDF format.
-File('Export.xfdf').writeAsBytesSync(await document.form.exportData(DataFormat.xfdf));
+File('Export.xfdf').writeAsBytesSync(document.form.exportData(DataFormat.xfdf));
 
 //Dispose the PDF document.
 document.dispose();
@@ -936,7 +936,7 @@ The following code sample explains how to export JSON files from a PDF document.
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Export the form data to JSON format.
-File('Export.json').writeAsBytesSync(await document.form.exportData(DataFormat.json));
+File('Export.json').writeAsBytesSync(document.form.exportData(DataFormat.json));
 
 //Dispose the PDF document.
 document.dispose();
@@ -955,7 +955,7 @@ The following code sample explains how to export an XML file from a PDF document
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Export the form data to XML format.
-File('Export.xml').writeAsBytesSync(await document.form.exportData(DataFormat.xml));
+File('Export.xml').writeAsBytesSync(document.form.exportData(DataFormat.xml));
 
 //Dispose the PDF document.
 document.dispose();
