@@ -59,7 +59,7 @@ graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
 
@@ -87,11 +87,11 @@ graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 0, 250), width: 30));
 graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(250, 250, 0), width: 20));
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
     pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
 
@@ -124,7 +124,7 @@ graphics.drawEllipse(Rect.fromLTWH(0, 0, 50, 50),
     pen: PdfPen(PdfColor(250, 0, 0), width: 50));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
 
@@ -140,7 +140,7 @@ PdfDocument document =
       ..pages[0].layers.removeAt(1);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
 
@@ -167,7 +167,7 @@ layer.layers.add(name: 'Nested Layer1', visible: true)
       .drawRectangle(bounds: Rect.fromLTWH(0, 120, 200, 100), brush: PdfBrushes.green);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
 
@@ -182,7 +182,7 @@ PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync())..layers.removeAt(0, false);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 
 {% endhighlight %}

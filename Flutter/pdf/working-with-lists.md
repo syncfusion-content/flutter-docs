@@ -36,7 +36,7 @@ PdfOrderedList(
     .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 20, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -63,7 +63,7 @@ PdfUnorderedList(
     .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 10, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -149,7 +149,7 @@ uList.draw(
         0, 400, page.getClientSize().width, page.getClientSize().height));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

@@ -60,7 +60,7 @@ grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -129,7 +129,7 @@ grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -194,7 +194,7 @@ grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -248,7 +248,7 @@ grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -339,7 +339,7 @@ grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -392,7 +392,7 @@ grid.draw(
     format: format);
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -459,7 +459,7 @@ grid2.draw(
     bounds: Rect.fromLTWH(0, result.bounds.bottom + 20, 400, 300));
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -526,7 +526,7 @@ grid.applyBuiltInStyle(PdfGridBuiltInStyle.listTable6ColorfulAccent1,
 grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(10, 10, 0, 0));
 //Save the document.
-List<int> bytes = document.save();
+List<int> bytes =await document.save();
 //Dispose the document.
 document.dispose();
 
