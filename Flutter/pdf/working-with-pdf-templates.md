@@ -38,7 +38,7 @@ template.graphics!.drawString(
 document.pages.add().graphics.drawPdfTemplate(template, Offset(0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -62,6 +62,11 @@ PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 7);
 
 //Create a header and draw the image
 PdfPageTemplateElement header = PdfPageTemplateElement(bounds);
+
+//Get image data
+File imageFile = File('image.jpg');
+Uint8List imagebytes = await imageFile.readAsBytes();
+String imageData = base64.encode(imagebytes);
 
 //Draw the image in the header
 header.graphics.drawImage(
@@ -92,7 +97,7 @@ compositeField.draw(footer.graphics, Offset(470, 40));
 document.template.bottom = footer;
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
@@ -134,7 +139,7 @@ page.graphics.drawRectangle(
     bounds: Offset(0, 0) & page.getClientSize());
 
 //Save the document
-final List<int> bytes = document.save();
+final List<int> bytes = await document.save();
 
 //Dispose the document
 document.dispose();

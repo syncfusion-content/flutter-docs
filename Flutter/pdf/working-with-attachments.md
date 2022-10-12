@@ -28,7 +28,7 @@ document.attachments.add(PdfAttachment(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -48,7 +48,7 @@ document.attachments.add(PdfAttachment.fromBase64String(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -69,7 +69,7 @@ document.attachments.add(PdfAttachment(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -96,7 +96,7 @@ document.attachments.remove(attachment);
 document.attachments.removeAt(1);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -124,7 +124,7 @@ for (int i = 0; i < attachmentCollection.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
