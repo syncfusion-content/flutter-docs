@@ -40,7 +40,7 @@ document.pages.add().graphics.drawPolygon(
     pen: PdfPens.black, brush: PdfSolidBrush(PdfColor(165, 42, 42)));
 
 //Save the PDF document
-File('Polygon.pdf').writeAsBytes(document.save());
+File('Polygon.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -63,7 +63,7 @@ document.pages.add().graphics.drawLine(
     Offset(10, 200));
 
 //Save the PDF document
-File('Line.pdf').writeAsBytes(document.save());
+File('Line.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -88,7 +88,7 @@ bezier.draw(
     page: document.pages.add(), bounds: Rect.fromLTWH(200, 100, 0, 0));
 
 //Save the PDF document
-File('Curve.pdf').writeAsBytes(document.save());
+File('Curve.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -116,7 +116,7 @@ path.addLine(Offset(100, 200), Offset(55, 150));
 path.draw(page: document.pages.add(), bounds: Rect.zero);
 
 //Save the PDF document
-File('Path.pdf').writeAsBytes(document.save());
+File('Path.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -137,7 +137,7 @@ document.pages.add().graphics.drawRectangle(
     brush: PdfBrushes.chocolate, bounds: Rect.fromLTWH(10, 10, 100, 50));
 
 //Save the PDF document
-File('Rectangle.pdf').writeAsBytes(document.save());
+File('Rectangle.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -159,7 +159,7 @@ document.pages.add().graphics.drawPie(
     pen: PdfPen(PdfColor(165, 42, 42), width: 5), brush: PdfBrushes.green);
 
 //Save the PDF document
-File('Pie.pdf').writeAsBytes(document.save());
+File('Pie.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -181,7 +181,7 @@ document.pages.add().graphics.drawArc(
     pen: PdfPen(PdfColor(165, 42, 42), width: 5));
 
 //Save the PDF document
-File('Arc.pdf').writeAsBytes(document.save());
+File('Arc.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -203,7 +203,7 @@ document.pages.add().graphics.drawBezier(
     pen: PdfPen(PdfColor(165, 42, 42), width: 1));
 
 //Save the PDF document
-File('Bezier.pdf').writeAsBytes(document.save());
+File('Bezier.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -225,12 +225,7 @@ document.pages.add().graphics.drawEllipse(Rect.fromLTWH(10, 200, 450, 150),
     brush: PdfBrushes.darkOrange);
 
 //Save the PDF document
-final List<int> bytes = document.save();
-final File file = File('SampleOutput.pdf');
-file.writeAsBytes(bytes);
-
-//Save the PDF document
-File('Ellipse.pdf').writeAsBytes(document.save());
+File('Ellipse.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();

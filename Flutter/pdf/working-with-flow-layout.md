@@ -79,7 +79,7 @@ grid.draw(
     bounds: Rect.fromLTWH(0, layoutResult.bounds.bottom + 20, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

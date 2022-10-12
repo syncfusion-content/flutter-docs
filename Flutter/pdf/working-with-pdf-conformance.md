@@ -30,7 +30,7 @@ PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b)
       bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -50,7 +50,7 @@ PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b)
       bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -82,7 +82,7 @@ PdfAttachment attachment = PdfAttachment(
 document.attachments.add(attachment);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
