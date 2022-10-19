@@ -684,14 +684,14 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback contains the following arguments.
+Triggers when the trendline gets rendered. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/onRenderDetailsUpdate.html) callback contains the following arguments.
 
-* `seriesName` - specifies the series name of the trendline.
-* `calculatedDataPoints` - specifies the calculated data points of the trendline.
-* `trendlineName` - specifies the name of the trendline.
-* `intercept` - specifies the intercept value of the trendline.
-* `rSquaredValue` - specifies the r-squared value of the trendline.
-* `slope` - specifies the slope value of the trendline.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/seriesName.html) - specifies the series name of the trendline.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/calculatedDataPoints.html) - specifies the calculated data points of the trendline.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/trendlineName.html) - specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - specifies the intercept value of the trendline.
+* [`rSquaredValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/rSquaredValue.html) - specifies the r-squared value of the trendline.
+* [`slope`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/slope.html) - specifies the slope value of the trendline.
 
 {% tabs %}
 {% highlight dart %}
@@ -993,11 +993,11 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
-Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
+Triggers when the error bar is being rendered. In this [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/onRenderDetailsUpdate.html) callback, you can get the following arguments.
 
-* `pointIndex` - To obtain the point index of the error bar.
-* `viewPortPointIndex` - To obtain the viewport index value of the error bar.
-* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/pointIndex.html) - To obtain the point index of the error bar.
+* [`viewPortPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/viewPortPointIndex.html) - To obtain the viewport index value of the error bar.
+* [`calculatedErrorBarValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/calculatedErrorBarValues.html)- This contains the calculated error bar values such as [`horizontalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalPositiveErrorValue.html),[`horizontalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalNegativeErrorValue.html),[`verticalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalPositiveErrorValue.html) and [`verticalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalNegativeErrorValue.html).
 
 {% tabs %}
 {% highlight dart %}
@@ -1312,6 +1312,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 * [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
 
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
