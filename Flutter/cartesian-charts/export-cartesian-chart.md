@@ -21,15 +21,8 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
     import 'dart:typed_data';
     import 'dart:ui' as ui;
     import 'package:flutter/material.dart';
-    import '../save_file_mobile.dart';
-    if (dart.library.html) '../save_file_web.dart';
-    import 'dart:async';
-
-    /// Chart import
     import 'package:syncfusion_flutter_charts/charts.dart';
-    /// Pdf import
-    import 'package:syncfusion_flutter_pdf/pdf.dart';
-  
+     
     class ExportChart extends StatefulWidget {
     
       const ExportChart({Key? key}) : super(key: key);
