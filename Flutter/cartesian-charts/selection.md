@@ -351,7 +351,7 @@ Defaults to `true`.
 
 ![Toggle selection](images/selection/cartesian_deselection.gif)
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [selection event](https://help.syncfusion.com/flutter/circular-charts/callbacks#onselectionchanged) for customizing the selection further.
 
 #### See Also
 
