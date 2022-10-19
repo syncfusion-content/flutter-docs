@@ -62,8 +62,8 @@ You can customize the color of the [`SfRangeSelector`](https://pub.dev/documenta
 * [`Track`](https://help.syncfusion.com/flutter/range-selector/track#track-color)
 * [`Major ticks`](https://help.syncfusion.com/flutter/range-selector/ticks#major-ticks-color)
 * [`Minor ticks`](https://help.syncfusion.com/flutter/range-selector/ticks#minor-ticks-color)
-* `Labels`
-* `Dividers`
+* [`Labels`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#show-labels)
+* [`Dividers`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#show-dividers)
 * [`Thumb`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay#thumb-color)
 * [`Thumb overlay`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay#thumb-overlay-color)
 * [`Active region color`](https://help.syncfusion.com/flutter/range-selector/basic-features#active-region-color)
@@ -73,7 +73,7 @@ You can customize the color of the [`SfRangeSelector`](https://pub.dev/documenta
 
 The font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) elements using the following APIs:
 
-* `Label style`
+* [`Label style`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-selector/tooltip#tooltip-label-style)
 
 ## Easier touch targets

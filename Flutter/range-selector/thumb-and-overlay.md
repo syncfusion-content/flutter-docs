@@ -11,8 +11,8 @@ documentation: ug
 
 This section helps to learn about how to customize the thumb and thumb overlay in the range selector.
 
-* Thumb - It is one of the elements of range selector which can be used to drag and change the selected values of the range selector.
-* Thumb overlay - It is rendered around the thumb while interacting with them.
+* **Thumb** - It is one of the elements of range selector which can be used to drag and change the selected values of the range selector.
+* **Thumb overlay** - It is rendered around the thumb while interacting with them.
 
 ## Thumb size
 
