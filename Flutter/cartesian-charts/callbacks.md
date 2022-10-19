@@ -993,7 +993,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
-Triggers when the error bar is being rendered. In this [`onRenderDetailsUpdate`]((https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/onRenderDetailsUpdate.html) callback, you can get the following arguments.
+Triggers when the error bar is being rendered. In this [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/onRenderDetailsUpdate.html) callback, you can get the following arguments.
 
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/pointIndex.html) - To obtain the point index of the error bar.
 * [`viewPortPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/viewPortPointIndex.html) - To obtain the viewport index value of the error bar.
