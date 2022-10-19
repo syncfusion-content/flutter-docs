@@ -464,11 +464,11 @@ The `SfDataGrid` provides the following types of filter popup modes:
 
 The following image shows the checkbox filter popup menu on the web and desktop platforms,
 
-<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/filtering/flutter-datagrid-checkbox-filter-view.png" width="989"/>
+<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/filtering/flutter-datagrid-checkbox-filter-view.png" width="689"/>
 
 The following image shows the advanced filter popup menu on the web and desktop platforms,
 
-<img alt="Flutter datagrid shows a advanced filter in web platform" src="images/filtering/flutter-datagrid-advanced-filter-view.png" width="989"/>
+<img alt="Flutter datagrid shows a advanced filter in web platform" src="images/filtering/flutter-datagrid-advanced-filter-view.png" width="689"/>
 
 The following images show the checkbox and advanced filter popup menu on the mobile platform,
 
@@ -480,11 +480,11 @@ The Checkbox filtering is like the Excel-like filter popup that shows the checke
 
 The following image shows the checkbox filter popup menu with some selected rows in the checkbox list view in order to filter,
 
-<img alt="Flutter datagrid shows a checkbox filter popup view" src="images/filtering/flutter-datagrid-checkbox-view-before-filter.png" width="989"/>
+<img alt="Flutter datagrid shows a checkbox filter popup view" src="images/filtering/flutter-datagrid-checkbox-view-before-filter.png" width="689"/>
 
 The following image shows the filtered data rows which are filtered by the checkbox filter popup menu,
 
-<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-checkbox-view-after-filter.png" width="989"/>
+<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-checkbox-view-after-filter.png" width="689"/>
 
 ### Advanced filtering
 
@@ -520,11 +520,11 @@ Below are the built-in filter types supported:
 
 The following image shows the advanced filter popup menu with multiple filter values and types in order to filter the range of data rows,
 
-<img alt="Flutter datagrid shows a advanced filter popup view" src="images/filtering/flutter-datagrid-advanced-view-before-filter.png" width="989"/>
+<img alt="Flutter datagrid shows a advanced filter popup view" src="images/filtering/flutter-datagrid-advanced-view-before-filter.png" width="689"/>
 
 The following image shows the filtered data rows which are filtered by the advanced filter popup menu,
 
-<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-advanced-view-after-filter.png" width="989"/>
+<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-advanced-view-after-filter.png" width="689"/>
 
 #### Case sensitive filtering
 
@@ -532,7 +532,7 @@ Case-sensitive filtering can be enabled for the column using the casing icon ava
 
 The following image shows the advanced filter popup menu with a case-sensitive icon,
 
-<img alt="Flutter datagrid shows the case sensitive icon" src="images/filtering/flutter-datagrid-casesensitive-filtering.png" width="989"/>
+<img alt="Flutter datagrid shows the case sensitive icon" src="images/filtering/flutter-datagrid-casesensitive-filtering.png" width="689"/>
 
 ### Disable filtering for an individual column
 
