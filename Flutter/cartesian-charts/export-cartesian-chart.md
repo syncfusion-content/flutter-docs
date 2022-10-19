@@ -119,8 +119,8 @@ It is necessary to include the platform-specific file generating codes to save t
     import 'dart:typed_data';
     import 'dart:ui' as ui;
     import 'package:flutter/material.dart';
-    import '../save_file_mobile.dart'
-      if (dart.library.html) '../save_file_web.dart';
+    import '../save_file_mobile.dart';
+    if (dart.library.html) '../save_file_web.dart';
     import 'dart:async';
 
     /// Chart import.
