@@ -36,7 +36,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -65,7 +65,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -101,7 +101,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -135,7 +135,7 @@ PdfEllipseAnnotation ellipseAnnotation = PdfEllipseAnnotation(
 page.annotations.add(ellipseAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -177,7 +177,7 @@ PdfLineAnnotation lineAnnotation = PdfLineAnnotation(
 page.annotations.add(lineAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -210,7 +210,7 @@ PdfPolygonAnnotation polygonAnnotation = PdfPolygonAnnotation(
 page.annotations.add(polygonAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -240,7 +240,7 @@ PdfDocumentLinkAnnotation documentLinkAnnotation =
 page.annotations.add(documentLinkAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -269,7 +269,7 @@ PdfUriAnnotation uriAnnotation = PdfUriAnnotation(
 page.annotations.add(uriAnnotation);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -303,7 +303,7 @@ PdfTextWebLink textWebLink = PdfTextWebLink(
 textWebLink.draw(page, Offset(10, 10));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -336,7 +336,7 @@ for (int i = 0; i < document.pages.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -376,7 +376,7 @@ for (int i = 0; i < document.pages.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -408,7 +408,7 @@ annotation.author = 'Syncfusion';
 annotation.modifiedDate = DateTime.now();
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -435,7 +435,7 @@ PdfAnnotationCollection collection = page.annotations;
 collection.remove(collection[0]);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

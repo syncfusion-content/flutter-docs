@@ -101,7 +101,7 @@ for (int i = 1; i <= 5; i++) {
 }
 
 //Save the PDF document
-File('HeaderAndFooter.pdf').writeAsBytes(document.save());
+File('HeaderAndFooter.pdf').writeAsBytes(await document.save());
 
 //Dispose document
 document.dispose();

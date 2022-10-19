@@ -35,7 +35,7 @@ PdfTextWebLink(
     .draw(document.pages.add(), Offset(50, 40));
 
 //Save the PDF document
-File('Hyperlink.pdf').writeAsBytes(document.save());
+File('Hyperlink.pdf').writeAsBytes(await document.save());
 
 //Dispose document
 document.dispose();
@@ -68,7 +68,7 @@ docLink.destination!.mode = PdfDestinationMode.fitToPage;
 page.annotations.add(docLink);
 
 //Save the PDF document
-File('Hyperlink.pdf').writeAsBytes(document.save());
+File('Hyperlink.pdf').writeAsBytes(await document.save());
 
 //Dispose document
 document.dispose();

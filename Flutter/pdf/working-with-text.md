@@ -24,7 +24,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -50,7 +50,7 @@ page.graphics.drawString(
     bounds: Rect.fromLTWH(40, 40, 500, 40));
  
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -84,7 +84,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -106,7 +106,7 @@ document.pages.add().graphics.drawString('Hello World!!!',
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -128,7 +128,7 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -158,7 +158,7 @@ document.pages.add().graphics.drawString(text, font,
     bounds: Rect.fromLTWH(0, 0, size.width, size.height));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -167,7 +167,7 @@ document.dispose();
 
 ## Drawing Right-To-Left text
 
-The Syncfusion Flutter PDF allows you to draw the right-to-left language text in a PDF document. To draw RTL scripts such as Arabic, Hebrew, Persian, and Urdu, set the value of [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property in the [`PdfStringFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat-class.html) class to rightToLeft using [`PdfTextDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextDirection-class.html) enum. The languages (e.g., Sindhi and Kurdish) that have more than one script and can be written in either right-to-left or left-to-right format. The leftToRight value of the [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property is used to draw RTL text in the left-to-right format. Refer to the following code sample.
+The Syncfusion Flutter PDF allows you to draw the right-to-left language text in a PDF document. To draw RTL scripts such as Arabic, Hebrew, Persian, and Urdu, set the value of [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property in the [`PdfStringFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat-class.html) class to rightToLeft using [`PdfTextDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextDirection.html) enum. The languages (e.g., Sindhi and Kurdish) that have more than one script and can be written in either right-to-left or left-to-right format. The leftToRight value of the [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property is used to draw RTL text in the left-to-right format. Refer to the following code sample.
 
 {% highlight dart %}
 
@@ -192,7 +192,7 @@ page.graphics.drawString(
         paragraphIndent: 35));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -233,7 +233,7 @@ PdfTextElement(
             page.getClientSize().width / 2, page.getClientSize().height / 2));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 // Disposes the document
 document.dispose();
@@ -279,7 +279,7 @@ textElement.draw(
     format: layoutFormat);
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -303,7 +303,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(0, 0, 500, 50));
 
 //Save the document
-final List<int> bytes = document.save();
+final List<int> bytes =await document.save();
 
 //Dispose the document
 document.dispose();

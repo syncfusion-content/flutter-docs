@@ -38,7 +38,7 @@ document.form.fields.add(PdfTextBoxField(
     foreColor: PdfColor(0, 0, 255)));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ document.form.fields.add(PdfTextBoxField(
     foreColor: PdfColor(0, 0, 255)));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -91,7 +91,7 @@ document.form.fields.add(PdfComboBoxField(
     ]));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -117,7 +117,7 @@ document.form.fields.add(PdfComboBoxField(
     ]));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -158,7 +158,7 @@ selectedIndex: 0,
 ));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -196,7 +196,7 @@ selectedIndex: 0,
 ));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -220,7 +220,7 @@ if (radioButtonListField is PdfRadioButtonListField &&
 }
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -250,7 +250,7 @@ document.form.fields.add(PdfListBoxField(
 document.form.setDefaultAppearance(true);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -277,7 +277,7 @@ document.form.fields.add(PdfListBoxField(
 document.form.setDefaultAppearance(true);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -305,7 +305,7 @@ document.form.fields.add(PdfCheckBoxField(
     isChecked: true));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -330,7 +330,7 @@ document.form.fields.add(PdfCheckBoxField(
     isChecked: true));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -367,7 +367,7 @@ document.form.fields.add(PdfSignatureField(document.pages[0], 'Sign',
     bounds: Rect.fromLTWH(100, 100, 100, 50)));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -396,7 +396,7 @@ document.form.fields.add(PdfButtonField(
 ..addPrintAction());
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -422,7 +422,7 @@ document.form.fields.add(PdfButtonField(
 ..addPrintAction());
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -445,7 +445,7 @@ document.form.setDefaultAppearance(true);
 (document.form.fields[0] as PdfTextBoxField).text = 'Updated';
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -474,7 +474,7 @@ if (field is PdfTextBoxField) {
 }
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -503,7 +503,7 @@ if (field is PdfTextBoxField) {
   field.backColor = fColor;
 }
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -525,7 +525,7 @@ final PdfDocument document =
 (document.form.fields[0] as PdfTextBoxField).text = 'Updated';
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -546,7 +546,7 @@ if (comboBox is PdfComboBoxField && comboBox.selectedIndex != 1) {
 }
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -568,7 +568,7 @@ if (radioButtonListField is PdfRadioButtonListField &&
 }
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -586,7 +586,7 @@ final PdfDocument document =
 (document.form.fields[0] as PdfListBoxField).selectedIndexes = [1,3];
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -604,7 +604,7 @@ final PdfDocument document =
 (document.form.fields[0] as PdfCheckBoxField).isChecked = true;
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -629,7 +629,7 @@ for (int i = 0; i < document.form.fields.count; i++) {
 }
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -674,7 +674,7 @@ final PdfDocument document =
 document.form.flattenAllFields();
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -710,7 +710,7 @@ PdfDocument document =
     ..form.readOnly = true;
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -736,7 +736,7 @@ collection.removeAt(1);
 collection.remove(collection[0]);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -769,7 +769,7 @@ document.form.fields.add(PdfTextBoxField(
     text: 'Last name', spellCheck: true));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -796,7 +796,7 @@ document.form.fields.add(PdfButtonField(document.pages.add(),
     )));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -814,10 +814,10 @@ final PdfDocument document =
 
 //Import the FDF into the existing form.
 document.form
-  ..importData(File('Import.fdf').readAsBytesSync(), DataFormat.fdf);
+  .importData(File('Import.fdf').readAsBytesSync(), DataFormat.fdf);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -835,10 +835,10 @@ final PdfDocument document =
 
 //Import the XFDF into the existing form.
 document.form
-  ..importData(File('Import.xfdf').readAsBytesSync(), DataFormat.xfdf);
+  .importData(File('Import.xfdf').readAsBytesSync(), DataFormat.xfdf);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -856,13 +856,13 @@ final PdfDocument document =
 
 //Import the JSON into the existing form.
 document.form
-  ..importData(File('Import.json').readAsBytesSync(), DataFormat.json);
+  .importData(File('Import.json').readAsBytesSync(), DataFormat.json);
 
 //Enable the form default appearance.
 document.form.setDefaultAppearance(true);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -880,10 +880,10 @@ final PdfDocument document =
 
 //Import the XML into the existing form.
 document.form
-  ..importData(File('Import.xml').readAsBytesSync(), DataFormat.xml);
+  .importData(File('Import.xml').readAsBytesSync(), DataFormat.xml);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
@@ -990,6 +990,6 @@ document.form.fields.add(PdfListBoxField(
 document.form.setDefaultAppearance(true);
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
