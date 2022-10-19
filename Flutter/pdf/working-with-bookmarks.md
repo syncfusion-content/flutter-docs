@@ -33,7 +33,7 @@ bookmark.textStyle = [PdfTextStyle.bold];
 bookmark.color = PdfColor(255, 0, 0);
 
 //Save the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -74,7 +74,7 @@ childBookmark1.color = PdfColor(0, 255, 0);
 childBookmark2.color = PdfColor(0, 0, 255);
 
 //Saves the bookmark
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -104,7 +104,7 @@ bookmark.color = PdfColor(255, 0, 0);
 bookmark.textStyle = [PdfTextStyle.bold];
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
   
 //Disposes the document
 document.dispose();
@@ -130,7 +130,7 @@ PdfBookmark bookmark = document.bookmarks.insert(1, 'New Bookmark');
 bookmark.destination = PdfDestination(document.pages[0], Offset(40, 40));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -157,7 +157,7 @@ bookmark.removeAt(1);
 bookmark.remove('Page 1');
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -199,7 +199,7 @@ PdfBookmark childBookmark = bookmark.add('Child Bookmark');
 childBookmark.destination = PdfDestination(page, Offset(100, 100));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

@@ -81,7 +81,7 @@ Future<void> _createPDF() async {
       bounds: Rect.fromLTWH(0, 0, 500, 50));
 
   //Save the document
-  List<int> bytes = document.save();
+  List<int> bytes = await document.save();
 
   //Dispose the document
   document.dispose();
@@ -119,7 +119,7 @@ Include the following code snippet in _createPDF method to open the PDF document
 {% highlight dart %}
 
 //Get external storage directory
-final directory = await getApplicationDocumentsDirectory();
+final directory = await getApplicationSupportDirectory();
 
 //Get directory path
 final path = directory.path;
@@ -194,10 +194,10 @@ PdfDocument document = PdfDocument();
 //Draw the image
 document.pages.add().graphics.drawImage(
     PdfBitmap(File('image.jpg').readAsBytesSync()),
-    Rect.fromLTWH(0, 0, 100, 100));
+   Rect.fromLTWH(0, 0, 100, 100));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -242,10 +242,10 @@ row.cells[2].value = '8';
 
 //Draw grid to the page of the PDF document
 grid.draw(
-    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: Rect.fromLTWH(0, 0, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -485,7 +485,7 @@ The following code example shows how to save the invoice document and dispose th
 {% highlight dart %}
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();

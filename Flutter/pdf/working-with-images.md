@@ -37,7 +37,7 @@ page.graphics.drawImage(
         0, 0, page.getClientSize().width, page.getClientSize().height));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -78,7 +78,7 @@ page.graphics.drawImage(
 page.graphics.restore(state);
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -128,7 +128,7 @@ This is explained in the following code snippet.
             0, 0, page.getClientSize().width, page.getClientSize().height));
 
     //Save and launch the document.
-    final List<int> bytes = document.save();
+    final List<int> bytes =await document.save();
 
     //Dispose the document.
     document.dispose();
