@@ -184,7 +184,7 @@ The following code example gives you the complete view of the above configuratio
 
 {% highlight dart %} 
 
-   import 'package:flutter/material.dart';
+   import 'package:flutter/material.dart';\
    import 'package:syncfusion_flutter_gauges/gauges.dart';
 
    void main() => runApp(ChartApp());
