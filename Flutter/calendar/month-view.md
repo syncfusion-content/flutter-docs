@@ -40,9 +40,9 @@ Widget build(BuildContext context) {
 
 You can handle the calendar month view appointment display by using the [appointmentDisplayMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayMode.html) property of `MonthViewSettings`. By default, `appointmentDisplayMode` is set to Indicator, using the `appointmentDisplayMode` you can set the month view appointments display as follows.
 
-`indicator` - appointment will be denoted as the circle.
-`appointment` - appointment subject will be displayed in month cell.
-`none` - appointment will not be displayed.
+* `indicator` - appointment will be denoted as the circle.
+* `appointment` - appointment subject will be displayed in month cell.
+* `none` - appointment will not be displayed.
 
 {% tabs %}
 {% highlight dart hl_lines="8 9" %}
