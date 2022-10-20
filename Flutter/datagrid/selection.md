@@ -12,7 +12,7 @@ This section explains how to enable selection in the datagrid; modes, properties
 
 The datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property of SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
-N> The [rows] property must be initialized in [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
+N> The [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property must be initialized in [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
 
 ## Selection modes 
 
