@@ -87,7 +87,7 @@ Widget build(BuildContext context) {
 ![Numeric interval support](images/interval/vertical-numeric-interval.png)
 
 N>
-* Refer the `showDividers` to know about the rendering of dividers at given interval.
+* Refer the [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDividers.html) to know about the rendering of dividers at given interval.
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showTicks.html) to know about the rendering of major ticks at given interval.
 * Refer the [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showLabels.html) to know about the rendering of labels at given interval.
 
