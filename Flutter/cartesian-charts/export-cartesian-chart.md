@@ -18,92 +18,92 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
 {% tabs %}
 {% highlight dart %} 
 
-    import 'dart:typed_data';
-    import 'dart:ui' as ui;
-    import 'package:flutter/material.dart';
-    import 'package:syncfusion_flutter_charts/charts.dart';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+
+class ExportChart extends StatefulWidget {
+
+  const ExportChart({Key? key}) : super(key: key);
+
+  @override
+  _ExportState createState() => _ExportState();
+}
+
+  class _ExportState extends State<ExportChart> {
   
-    class ExportChart extends StatefulWidget {
-    
-      const ExportChart({Key? key}) : super(key: key);
+  _ExportState();
 
-      @override
-      _ExportState createState() => _ExportState();
-    }
+  late GlobalKey<SfCartesianChartState> _cartesianChartKey;
+  late List<ChartSampleData> _chartData;
 
-     class _ExportState extends State<ExportChart> {
-      
-      _ExportState();
+  @override
+  void initState() {
+    _cartesianChartKey = GlobalKey();
+    _chartData = <ChartSampleData>[
+      ChartSampleData(x: 'Jan', y: 12),
+      ChartSampleData(x: 'Feb', y: 28),
+      ChartSampleData(x: 'Mar', y: 35),
+      ChartSampleData(x: 'Apr', y: 27),
+      ChartSampleData(x: 'May', y: 42),
+      ChartSampleData(x: 'Jun', y: 33)
+    ];
+    super.initState();
+  }
 
-      late GlobalKey<SfCartesianChartState> _cartesianChartKey;
-      late List<ChartSampleData> _chartData;
-
-      @override
-      void initState() {
-        _cartesianChartKey = GlobalKey();
-        _chartData = <ChartSampleData>[
-          ChartSampleData(x: 'Jan', y: 12),
-          ChartSampleData(x: 'Feb', y: 28),
-          ChartSampleData(x: 'Mar', y: 35),
-          ChartSampleData(x: 'Apr', y: 27),
-          ChartSampleData(x: 'May', y: 42),
-          ChartSampleData(x: 'Jun', y: 33)
-        ];
-        super.initState();
-      }
-
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              SfCartesianChart(
-                key: _cartesianChartKey,
-                primaryXAxis: CategoryAxis(),
-                series: <ColumnSeries<ChartSampleData, String>>[
-                  ColumnSeries<ChartSampleData, String>(
-                    dataSource: _chartData,
-                    xValueMapper: (ChartSampleData data, _) => data.x,
-                    yValueMapper: (ChartSampleData data, _) => data.y,
-                  )
-                ]
-              ),
-              TextButton(
-                child: const Text('Export as image'),
-                onPressed: () {
-                  _renderChartAsImage();
-                },
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SfCartesianChart(
+            key: _cartesianChartKey,
+            primaryXAxis: CategoryAxis(),
+            series: <ColumnSeries<ChartSampleData, String>>[
+              ColumnSeries<ChartSampleData, String>(
+                dataSource: _chartData,
+                xValueMapper: (ChartSampleData data, _) => data.x,
+                yValueMapper: (ChartSampleData data, _) => data.y,
               )
             ]
           ),
-        );
-      }
-
-      Future<void> _renderChartAsImage() async {
-        final ui.Image data =
-          await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
-        final ByteData? bytes =
-          await data.toByteData(format: ui.ImageByteFormat.png);
-        final Uint8List imageBytes =
-          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-        await Navigator.of(context).push<dynamic>(
-          MaterialPageRoute<dynamic>(
-            builder: (BuildContext context) {
-              return Scaffold(
-                body: Image.memory(imageBytes)
-              );
+          TextButton(
+            child: const Text('Export as image'),
+            onPressed: () {
+              _renderChartAsImage();
             },
-          ),
-        );
-      }
-    }
+          )
+        ]
+      ),
+    );
+  }
 
-    class ChartSampleData {
-      ChartSampleData({this.x, this.y});
-        final String? x;
-        final num? y;
-    }
+  Future<void> _renderChartAsImage() async {
+    final ui.Image data =
+      await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
+    final ByteData? bytes =
+      await data.toByteData(format: ui.ImageByteFormat.png);
+    final Uint8List imageBytes =
+      bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+    await Navigator.of(context).push<dynamic>(
+      MaterialPageRoute<dynamic>(
+        builder: (BuildContext context) {
+          return Scaffold(
+            body: Image.memory(imageBytes)
+          );
+        },
+      ),
+    );
+  }
+}
+
+class ChartSampleData {
+  ChartSampleData({this.x, this.y});
+    final String? x;
+    final num? y;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -116,104 +116,104 @@ It is necessary to include the platform-specific file generating codes to save t
 {% tabs %}
 {% highlight dart %}
 
-    import 'dart:typed_data';
-    import 'dart:ui' as ui;
-    import 'package:flutter/material.dart';
-    import '../save_file_mobile.dart'
-      if (dart.library.html) '../save_file_web.dart';
-    import 'dart:async';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+import 'package:flutter/material.dart';
+import '../save_file_mobile.dart';
+if (dart.library.html) '../save_file_web.dart';
+import 'dart:async';
 
-    /// Chart import.
-    import 'package:syncfusion_flutter_charts/charts.dart';
-    /// Pdf import.
-    import 'package:syncfusion_flutter_pdf/pdf.dart';
+/// Chart import.
+import 'package:syncfusion_flutter_charts/charts.dart';
+/// Pdf import.
+import 'package:syncfusion_flutter_pdf/pdf.dart';
 
-    class Export extends StatefulWidget {
+class Export extends StatefulWidget {
 
-      const Export({Key? key}) : super(key: key);
+  const Export({Key? key}) : super(key: key);
 
-      @override
-      _ExportState createState() => _ExportState();
-    }
+  @override
+  _ExportState createState() => _ExportState();
+}
 
-    class _ExportState extends State<Export> {
-      _ExportState();
-      late GlobalKey<SfCartesianChartState> _cartesianChartKey;
-      late List<ChartSampleData> _chartData;
+class _ExportState extends State<Export> {
+  _ExportState();
+  late GlobalKey<SfCartesianChartState> _cartesianChartKey;
+  late List<ChartSampleData> _chartData;
 
-      @override
-      void initState() {
-        _cartesianChartKey = GlobalKey();
-        _chartData = <ChartSampleData>[
-          ChartSampleData(x: 'Jan', y: 35),
-          ChartSampleData(x: 'Feb', y: 28),
-          ChartSampleData(x: 'Mar', y: 33),
-          ChartSampleData(x: 'Apr', y: 32),
-          ChartSampleData(x: 'May', y: 40),
-        ];
-        super.initState();
-      }
+  @override
+  void initState() {
+    _cartesianChartKey = GlobalKey();
+    _chartData = <ChartSampleData>[
+      ChartSampleData(x: 'Jan', y: 35),
+      ChartSampleData(x: 'Feb', y: 28),
+      ChartSampleData(x: 'Mar', y: 33),
+      ChartSampleData(x: 'Apr', y: 32),
+      ChartSampleData(x: 'May', y: 40),
+    ];
+    super.initState();
+  }
 
-      @override
-      Widget build(BuildContext context) {
-        return Column(
-          children: <Widget>[
-            SfCartesianChart(
-              key: _cartesianChartKey,
-              primaryXAxis: CategoryAxis(),
-              series: <LineSeries<ChartSampleData, String>>[
-                LineSeries<ChartSampleData, String>(
-                  dataSource: _chartData,
-                  xValueMapper: (ChartSampleData data, _) => data.x,
-                  yValueMapper: (ChartSampleData data, _) => data.y,
-                )
-              ]
-            ),
-            TextButton(
-              child: const Text('Export as PDF'),
-              onPressed: () {
-                _renderPDF();
-              },
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        SfCartesianChart(
+          key: _cartesianChartKey,
+          primaryXAxis: CategoryAxis(),
+          series: <LineSeries<ChartSampleData, String>>[
+            LineSeries<ChartSampleData, String>(
+              dataSource: _chartData,
+              xValueMapper: (ChartSampleData data, _) => data.x,
+              yValueMapper: (ChartSampleData data, _) => data.y,
             )
           ]
-        );
-      }
+        ),
+        TextButton(
+          child: const Text('Export as PDF'),
+          onPressed: () {
+            _renderPDF();
+          },
+        )
+      ]
+    );
+  }
 
-      Future<void> _renderPDF() async {
-        final List<int> imageBytes = await _readImageData();
-        final PdfBitmap bitmap = PdfBitmap(imageBytes);
-        final PdfDocument document = PdfDocument();
-        document.pageSettings.size =
-          Size(bitmap.width.toDouble(), bitmap.height.toDouble());
-        final PdfPage page = document.pages.add();
-        final Size pageSize = page.getClientSize();
-        page.graphics.drawImage(
-          bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
-        await FileSaveHelper.saveAndLaunchFile(
-          document.save(), 'cartesian_chart.pdf');
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5))),
-          duration: Duration(milliseconds: 2000),
-          content: Text('Chart has been exported as PDF document.'),
-        ));
-      }
+  Future<void> _renderPDF() async {
+    final List<int> imageBytes = await _readImageData();
+    final PdfBitmap bitmap = PdfBitmap(imageBytes);
+    final PdfDocument document = PdfDocument();
+    document.pageSettings.size =
+      Size(bitmap.width.toDouble(), bitmap.height.toDouble());
+    final PdfPage page = document.pages.add();
+    final Size pageSize = page.getClientSize();
+    page.graphics.drawImage(
+      bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
+    await FileSaveHelper.saveAndLaunchFile(
+      document.save(), 'cartesian_chart.pdf');
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(5))),
+      duration: Duration(milliseconds: 2000),
+      content: Text('Chart has been exported as PDF document.'),
+    ));
+  }
 
-      Future<List<int>> _readImageData() async {
-        final ui.Image data =
-          await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
-        final ByteData? bytes =
-          await data.toByteData(format: ui.ImageByteFormat.png);
-        return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-      }
-    }
+  Future<List<int>> _readImageData() async {
+    final ui.Image data =
+      await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
+    final ByteData? bytes =
+      await data.toByteData(format: ui.ImageByteFormat.png);
+    return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+  }
+}
 
-    class ChartSampleData {
-      ChartSampleData({this.x, this.y});
-        final String? x;
-        final num? y;
-    }
+class ChartSampleData {
+  ChartSampleData({this.x, this.y});
+    final String? x;
+    final num? y;
+}
 
 {% endhighlight %}
 {% endtabs %}
