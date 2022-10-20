@@ -335,7 +335,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/showByIndex.html) method is used to activate the trackball at the specified point index.
 
-[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) index of the point for which the trackball must be shown.
+The [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) specifies the index of the trackball point.
 
 {% tabs %}
 {% highlight dart %} 
