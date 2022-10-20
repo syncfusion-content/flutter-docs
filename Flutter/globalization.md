@@ -169,7 +169,7 @@ To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_local
 
 {% highlight dart %} 
 
-import 'package:syncfusion_flutter_calendar/calendar.dart';\
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
