@@ -169,8 +169,8 @@ To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_local
 
 {% highlight dart %} 
 
-    import 'package:syncfusion_flutter_calendar/calendar.dart';
-    import 'package:syncfusion_localizations/syncfusion_localizations.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';\
+import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
@@ -240,9 +240,9 @@ Create a dart file in your application and import the required packages.
 
 {% highlight dart %} 
 
-    import 'package:flutter/foundation.dart';
-    import 'package:flutter/material.dart';
-    import 'package:syncfusion_flutter_core/localizations.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/localizations.dart';
     
 {% endhighlight %}
 
