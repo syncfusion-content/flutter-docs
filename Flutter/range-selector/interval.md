@@ -83,7 +83,7 @@ class Data {
 ![Numeric interval](images/interval/numeric_interval.png)
 
 N>
-* Refer the `showDividers` to know about the rendering of dividers at given interval.
+* Refer the [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDividers.html) to know about the rendering of dividers at given interval.
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) to know about the rendering of major ticks at given interval.
 * Refer the [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showLabels.html) to know about the rendering of labels at given interval.
 

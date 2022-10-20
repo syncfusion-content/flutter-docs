@@ -207,8 +207,8 @@ class CarSale {
 
 The breadcrumb is used to display information about the drilled item and provides option to navigate back to previous level. You can customize the breadcrumb items using the following properties:
 
-* Position - Positions the breadcrumbs either top or bottom of the treemap. The default value of the `position` is ` TreemapBreadcrumbPosition.top`.
-* Divider - Used to add a separator between two breadcrumbs.
+* **Position** - Positions the breadcrumbs either top or bottom of the treemap. The default value of the `position` is ` TreemapBreadcrumbPosition.top`.
+* **Divider** - Used to add a separator between two breadcrumbs.
 
 {% tabs %}
 {% highlight Dart %}
