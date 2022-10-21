@@ -14,7 +14,7 @@ Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfu
 
 The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onViewChanged.html) callback triggers when the current view of calendar changed, that is view swiped to previous /next view, calendar view switched to another calendar view.
 
-`visibleDates` - returns the current view visible dates collection.
+* `visibleDates` - returns the current view visible dates collection.
 
 {% tabs %}
 {% highlight dart hl_lines="8 9 10" %}
@@ -45,9 +45,9 @@ Widget build(BuildContext context) {
 
 The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar tapped.
 
-`date` - returns the selected date.
-`appointments` - returns the selected appointments.
-`targetElement` - returns the element tapped.
+* `date` - returns the selected date.
+* `appointments` - returns the selected appointments.
+* `targetElement` - returns the element tapped.
 
 {% tabs %}
 {% highlight dart hl_lines="8 9 10 11 12" %}
@@ -81,10 +81,10 @@ Widget build(BuildContext context) {
 
 Return calendar details based on the given offset passed through argument by using the [getCalendarDetailsAtOffset](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/getCalendarDetailsAtOffset.html) method.
 
-`date` - returns the date based on the given offset.
-`appointments` - returns the appointments based on the given offset.
-`targetElement` - returns the calendar element based on the given offset.
-`resource` - returns the resource based on the given offset.
+* `date` - returns the date based on the given offset.
+* `appointments` - returns the appointments based on the given offset.
+* `targetElement` - returns the calendar element based on the given offset.
+* `resource` - returns the resource based on the given offset.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16" %}
@@ -122,9 +122,9 @@ The [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/late
 
 The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarLongPressDetails-class.html).
 
-`date` - returns the long-pressed date.
-`appointments` - returns the long-pressed appointments.
-`targetElement` - returns the long-pressed calendar element.
+* `date` - returns the long-pressed date.
+* `appointments` - returns the long-pressed appointments.
+* `targetElement` - returns the long-pressed calendar element.
 
 {% tabs %}
 {% highlight dart hl_lines="8 9 10 11 12" %}

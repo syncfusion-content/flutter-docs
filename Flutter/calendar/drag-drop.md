@@ -45,8 +45,8 @@ Widget build(BuildContext context) {
 
 [onDragStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragStart.html) callback was called whenever the appointment starts to drag in the SfCalendar. The [AppointmentDragStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails-class.html) arguments contains the dragging appointment and associated resource details. 
 
-[appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/appointment.html) - Get the dragged appointment details. 
-[resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/resource.html) - Get the resource details.
+* [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/appointment.html) - Get the dragged appointment details. 
+* [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20" %}
@@ -79,11 +79,11 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 
 [onDragUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragUpdate.html) callback was called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails-class.html) arguments contains the dragging appointment, dragging time, dragging offset, source resource and target resource details. 
 
-[appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/appointment.html) - Get the dragged appointment details. 
-[draggingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingTime.html) - Get the resource details.
-[draggingPosition](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingPosition.html) - Get the drag position.
-[sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/sourceResource.html) - Get the source resource details.
-[targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/targetResource.html) - Get the resource details.
+* [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/appointment.html) - Get the dragged appointment details. 
+* [draggingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingTime.html) - Get the resource details.
+* [draggingPosition](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingPosition.html) - Get the drag position.
+* [sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/sourceResource.html) - Get the source resource details.
+* [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/targetResource.html) - Get the resource details.
 
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20 21 22 23" %}
@@ -119,10 +119,10 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 
 [onDragEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragEnd.html) callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails-class.html) arguments contains the dropped appointment, dropping time, source and target resource details. 
 
-[appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/appointment.html) - Get the dragged appointment details. 
-[droppingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/droppingTime.html) - Get the resource details.
-[sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/sourceResource.html) - Get the resource details.
-[targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) - Get the target resource details.
+* [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/appointment.html) - Get the dragged appointment details. 
+* [droppingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/droppingTime.html) - Get the resource details.
+* [sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/sourceResource.html) - Get the resource details.
+* [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) - Get the target resource details.
 
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20 21 22" %}
