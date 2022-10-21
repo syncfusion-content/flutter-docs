@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![SingleSelection Date Range Picker](images/selections/singleselection.jpg)
+![SingleSelection Date Range Picker](images/selections/singleselection.png)
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` is set to false.
@@ -61,7 +61,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![MultiSelection Date Range Picker](images/selections/multiselection.jpg)
+![MultiSelection Date Range Picker](images/selections/multiselection.png)
 
 ## Range selection
 You can select a range of cells in any date range picker view by setting the `DateRangePickerSelectionMode` to the `range`.
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![RangeSelection Date Range Picker](images/selections/range-selection.jpg)
+![RangeSelection Date Range Picker](images/selections/range-selection.png)
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` set is as false.
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
+![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
 
 ## Extendable range selection
 Extend the selected range with the new selected date in any date range picker view by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to `extendableRange`.
