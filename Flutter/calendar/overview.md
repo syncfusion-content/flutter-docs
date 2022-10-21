@@ -23,7 +23,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has nin
 ![Calendar appointments](images/overview/appointments_events.png)
 * **Recurring appointments**: Easily configure recurring events to be repeated on a daily, weekly, monthly, or yearly basis with optimized recurrence options. You can also skip or change the occurrence of a recurring appointment. 
 
-![Recurring appointments](images/overview/recurring_events.jpg)
+![Recurring appointments](images/overview/recurring_events.png)
 * **Time zone**: Regardless of the time zone in your device, Calendar supports setting any required time zone for the control itself, as well as individual events.
 
 ![Calendar timezone](images/overview/timezone.png)
