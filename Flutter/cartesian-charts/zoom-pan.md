@@ -345,7 +345,7 @@ Also refer [`zooming`](./callbacks#onzooming), [`zoom start`](./callbacks#onzoom
 
 ### Calculate range based on visible points
 
-The [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html)  property can be used to calculate the value axis range based on the visible points. When the property is set to false the value axis range will be calculated based on all the data points in the chart irrespective of visible points. For further reference, check this [AutoRangeCalculation](./axis-customization.md) section.
+The [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html)  property can be used to calculate the value axis range based on the visible points. When the property is set to false the value axis range will be calculated based on all the data points in the chart irrespective of visible points. For further reference, check this [AutoRangeCalculation](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#auto-range-calculation) section.
 
 #### See Also
 
