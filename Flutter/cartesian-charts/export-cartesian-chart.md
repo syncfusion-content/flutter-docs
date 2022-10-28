@@ -124,7 +124,7 @@ syncfusion_flutter_pdf: ^20.3.50
 
 {% endhighlight %}
 
-Include the following code snippet in the main.dart file of your flutter application to export the rendered chart widget as a PDF document.
+Include the following code snippet in the main.dart file of your flutter application to export the rendered chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %}
