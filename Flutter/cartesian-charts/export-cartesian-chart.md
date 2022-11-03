@@ -25,60 +25,60 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 class ExportChart extends StatefulWidget {
 
-const ExportChart({Key? key}) : super(key: key);
+  const ExportChart({Key? key}) : super(key: key);
 
-@override
-_ExportState createState() => _ExportState();
+  @override
+  _ExportState createState() => _ExportState();
 }
 
-class _ExportState extends State<ExportChart> {
+  class _ExportState extends State<ExportChart> {
+  
+  _ExportState();
 
-_ExportState();
+  late GlobalKey<SfCartesianChartState> _cartesianChartKey;
+  late List<ChartSampleData> _chartData;
 
-late GlobalKey<SfCartesianChartState> _cartesianChartKey;
-late List<ChartSampleData> _chartData;
+  @override
+  void initState() {
+    _cartesianChartKey = GlobalKey();
+    _chartData = <ChartSampleData>[
+      ChartSampleData(x: 'Jan', y: 12),
+      ChartSampleData(x: 'Feb', y: 28),
+      ChartSampleData(x: 'Mar', y: 35),
+      ChartSampleData(x: 'Apr', y: 27),
+      ChartSampleData(x: 'May', y: 42),
+      ChartSampleData(x: 'Jun', y: 33)
+    ];
+    super.initState();
+  }
 
-@override
-void initState() {
-_cartesianChartKey = GlobalKey();
-_chartData = <ChartSampleData>[
-  ChartSampleData(x: 'Jan', y: 12),
-  ChartSampleData(x: 'Feb', y: 28),
-  ChartSampleData(x: 'Mar', y: 35),
-  ChartSampleData(x: 'Apr', y: 27),
-  ChartSampleData(x: 'May', y: 42),
-  ChartSampleData(x: 'Jun', y: 33)
-];
-super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-  body: Column(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: <Widget>[
-      SfCartesianChart(
-        key: _cartesianChartKey,
-        primaryXAxis: CategoryAxis(),
-        series: <ColumnSeries<ChartSampleData, String>>[
-          ColumnSeries<ChartSampleData, String>(
-            dataSource: _chartData,
-            xValueMapper: (ChartSampleData data, _) => data.x,
-            yValueMapper: (ChartSampleData data, _) => data.y,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SfCartesianChart(
+            key: _cartesianChartKey,
+            primaryXAxis: CategoryAxis(),
+            series: <ColumnSeries<ChartSampleData, String>>[
+              ColumnSeries<ChartSampleData, String>(
+                dataSource: _chartData,
+                xValueMapper: (ChartSampleData data, _) => data.x,
+                yValueMapper: (ChartSampleData data, _) => data.y,
+              )
+            ]
+          ),
+          TextButton(
+            child: const Text('Export as image'),
+            onPressed: () {
+              _renderChartAsImage();
+            },
           )
         ]
       ),
-      TextButton(
-        child: const Text('Export as image'),
-        onPressed: () {
-          _renderChartAsImage();
-        },
-      )
-    ]
-  ),
-);
-}
+    );
+  }
 
   Future<void> _renderChartAsImage() async {
     final ui.Image data =
