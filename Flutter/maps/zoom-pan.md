@@ -537,7 +537,6 @@ Widget build(BuildContext context) {
 ### Zooming
 
 Whenever zooming happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html).
-
 [MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains following properties,
 * [MapZoomDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
 * [MapZoomDetails.newVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newVisibleBounds.html) - provides the new visible bounds when the current zoom completes. Hence, if the
