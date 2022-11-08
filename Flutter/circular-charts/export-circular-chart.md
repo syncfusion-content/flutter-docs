@@ -107,11 +107,11 @@ To export the circular chart as a PNG image, we can get the image by calling [`t
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above way, we can also export the rendered circular chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
 
 **Add dependency**
 
-Add the following packages to the dependencies in your pubspec.yaml file.
+Add the following additional packages to the dependencies in your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -121,7 +121,7 @@ Add the following packages to the dependencies in your pubspec.yaml file.
 
 {% endhighlight %}
 
-Include the following code snippet in the main.dart file of your flutter application to export the rendered chart as a PDF document.
+Include the following code snippet in the main.dart file of your flutter application to export the rendered Circular chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %} 

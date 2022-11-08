@@ -18,103 +18,100 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
 {% tabs %}
 {% highlight dart %} 
 
-import 'dart:typed_data';
-import 'dart:ui' as ui;
-import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+    import 'dart:typed_data';
+    import 'dart:ui' as ui;
+    import 'package:flutter/material.dart';
+    import 'package:syncfusion_flutter_charts/charts.dart';
 
-class ExportChart extends StatefulWidget {
+    class ExportChart extends StatefulWidget {
 
-  const ExportChart({Key? key}) : super(key: key);
+      const ExportChart({Key? key}) : super(key: key);
 
-  @override
-  _ExportState createState() => _ExportState();
-}
+      @override
+      _ExportState createState() => _ExportState();
+    }
 
-  class _ExportState extends State<ExportChart> {
+    class _ExportState extends State<ExportChart> {
   
-  _ExportState();
+      _ExportState();
 
-  late GlobalKey<SfCartesianChartState> _cartesianChartKey;
-  late List<ChartSampleData> _chartData;
+      late GlobalKey<SfCartesianChartState> _cartesianChartKey;
+      late List<ChartSampleData> _chartData;
 
-  @override
-  void initState() {
-    _cartesianChartKey = GlobalKey();
-    _chartData = <ChartSampleData>[
-      ChartSampleData(x: 'Jan', y: 12),
-      ChartSampleData(x: 'Feb', y: 28),
-      ChartSampleData(x: 'Mar', y: 35),
-      ChartSampleData(x: 'Apr', y: 27),
-      ChartSampleData(x: 'May', y: 42),
-      ChartSampleData(x: 'Jun', y: 33)
-    ];
-    super.initState();
-  }
+      @override
+      void initState() {
+        _cartesianChartKey = GlobalKey();
+        _chartData = <ChartSampleData>[
+          ChartSampleData(x: 'Jan', y: 12),
+          ChartSampleData(x: 'Feb', y: 28),
+          ChartSampleData(x: 'Mar', y: 35),
+          ChartSampleData(x: 'Apr', y: 27),
+          ChartSampleData(x: 'May', y: 42),
+          ChartSampleData(x: 'Jun', y: 33)
+        ];
+        super.initState();
+      }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          SfCartesianChart(
-            key: _cartesianChartKey,
-            primaryXAxis: CategoryAxis(),
-            series: <ColumnSeries<ChartSampleData, String>>[
-              ColumnSeries<ChartSampleData, String>(
-                dataSource: _chartData,
-                xValueMapper: (ChartSampleData data, _) => data.x,
-                yValueMapper: (ChartSampleData data, _) => data.y,
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              SfCartesianChart(
+                key: _cartesianChartKey,
+                primaryXAxis: CategoryAxis(),
+                series: <ColumnSeries<ChartSampleData, String>>[
+                    ColumnSeries<ChartSampleData, String>(
+                      dataSource: _chartData,
+                      xValueMapper: (ChartSampleData data, _) => data.x,
+                      yValueMapper: (ChartSampleData data, _) => data.y,
+                    ) 
+                ]
+              ),  
+              TextButton(
+                child: const Text('Export as image'),
+                onPressed: () {
+                  _renderChartAsImage();
+                },
               )
             ]
           ),
-          TextButton(
-            child: const Text('Export as image'),
-            onPressed: () {
-              _renderChartAsImage();
-            },
-          )
-        ]
-      ),
-    );
-  }
+        );
+      }
 
-  Future<void> _renderChartAsImage() async {
-    final ui.Image data =
-      await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
-    final ByteData? bytes =
-      await data.toByteData(format: ui.ImageByteFormat.png);
-    final Uint8List imageBytes =
-      bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-    await Navigator.of(context).push<dynamic>(
-      MaterialPageRoute<dynamic>(
-        builder: (BuildContext context) {
-          return Scaffold(
-            body: Image.memory(imageBytes)
-          );
-        },
-      ),
-    );
-  }
-}
+      Future<void> _renderChartAsImage() async {
+        final ui.Image data =
+            await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
+        final ByteData? bytes =
+            await data.toByteData(format: ui.ImageByteFormat.png);
+        final Uint8List imageBytes =
+            bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+        await Navigator.of(context).push<dynamic>(
+          MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) {
+              return Scaffold(body: Image.memory(imageBytes));
+          }),
+        );
+      }
+    }
 
-class ChartSampleData {
-  ChartSampleData({this.x, this.y});
-    final String? x;
-    final num? y;
-}
+    class ChartSampleData {
+      ChartSampleData({this.x, this.y});
+      final String? x;
+      final num? y;
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above way, we can also export the rendered Cartesian chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
 
 **Add dependency**
 
-Add the following packages to the dependencies in your pubspec.yaml file.
+Add the following additional packages to the dependencies in your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -124,7 +121,7 @@ Add the following packages to the dependencies in your pubspec.yaml file.
 
 {% endhighlight %}
 
-Include the following code snippet in the main.dart file of your flutter application to export the rendered chart as a PDF document.
+Include the following code snippet in the main.dart file of your flutter application to export the rendered Cartesian chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %}
