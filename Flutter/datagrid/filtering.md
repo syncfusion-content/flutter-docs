@@ -472,7 +472,7 @@ The following image shows the advanced filter popup menu on the web and desktop 
 
 The following images show the checkbox and advanced filter popup menu on the mobile platform,
 
-<img alt="Flutter datagrid shows a checkbox filter menu on mobile platform" src="images/filtering/flutter-datagrid-checkbox-filter-view-mobile.png" width="248"/> <img alt="Flutter datagrid shows a advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-advanced-filter-view-mobile.png" width="248"/>
+<img alt="Flutter datagrid shows checkbox and advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-filter-view-mobile.png" width="689"/>
 
 ### Checkbox filtering
 
