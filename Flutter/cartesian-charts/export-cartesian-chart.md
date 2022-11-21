@@ -117,7 +117,7 @@ Add the following additional packages to the dependencies in your pubspec.yaml f
 
     path_provider: ^2.0.11
     open_file: ^3.2.1
-    syncfusion_flutter_pdf: ^20.3.50
+    syncfusion_flutter_pdf: ^latest_version
 
 {% endhighlight %}
 
