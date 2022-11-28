@@ -105,6 +105,8 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
 {% endhighlight %}
 {% endtabs %}
 
+![image_export](images/export-cartesian-chart/image_view.gif)
+
 ## Export PDF
 
 Similar to the above way, we can also export the rendered Cartesian chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
