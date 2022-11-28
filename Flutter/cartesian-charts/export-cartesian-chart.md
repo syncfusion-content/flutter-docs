@@ -246,4 +246,4 @@ Include the following code snippet in the main.dart file of your flutter applica
 {% endhighlight %}
 {% endtabs %}
 
-![pdf_export](images/export-cartesian-chart/pdf_view.png)
+![pdf_export](images/export-cartesian-chart/pdf_view.gif)
