@@ -247,4 +247,4 @@ Include the following code snippet in the main.dart file of your flutter applica
   {% endhighlight %}
   {% endtabs %}
 
-  ![pdf_export](images/export-circular-chart/pdf_view.gif)
+  ![pdf_export](images/export-circular-chart/pdf_view.png)
