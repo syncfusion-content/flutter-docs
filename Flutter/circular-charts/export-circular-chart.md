@@ -107,33 +107,64 @@ To export the circular chart as a PNG image, we can get the image by calling [`t
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.It is necessary to include the platform-specific file generating codes to save the file as a PDF document. So, create two dart files ([`save_file_mobile`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_mobile.dart) and [`save_file_web`](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/pdf/helper/save_file_web.dart)) to save and launch the file in different platforms.
+Similar to the above way, we can also export the rendered circular chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+
+**Add dependency**
+
+Add the following additional packages to the dependencies in your pubspec.yaml file.
+
+{% highlight dart %} 
+
+    path_provider: ^2.0.11
+    open_file: ^3.2.1
+    syncfusion_flutter_pdf: ^latest_version
+
+{% endhighlight %}
+
+Include the following code snippet in the main.dart file of your flutter application to export the rendered Circular chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %} 
 
+    import 'dart:io';
     import 'dart:typed_data';
     import 'dart:ui' as ui;
-    import 'package:flutter/material.dart';
-    import '../save_file_mobile.dart'
-      if (dart.library.html) '../save_file_web.dart';
     import 'dart:async';
+    import 'package:flutter/material.dart';
+    import 'package:open_file/open_file.dart';
+    import 'package:path_provider/path_provider.dart';
 
     /// Chart import.
     import 'package:syncfusion_flutter_charts/charts.dart';
+
     /// Pdf import.
     import 'package:syncfusion_flutter_pdf/pdf.dart';
 
-    class Export extends StatefulWidget {
-      
-      const Export({Key? key}) : super(key: key);
 
-      @override
-      _ExportState createState() => _ExportState();
+    void main() {
+        runApp(const MyApp());
     }
 
-    class _ExportState extends State<Export> {
-      _ExportState();
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+
+      @override
+      Widget build(BuildContext context) {
+          return const MaterialApp(
+          home: ExportChartToPdf(),
+        );
+      }
+    }
+
+    class ExportChartToPdf extends StatefulWidget {
+      const ExportChartToPdf({Key? key}) : super(key: key);
+
+      @override
+      ExportChartToPdfState createState() => ExportChartToPdfState();
+    }
+
+    class ExportChartToPdfState extends State<ExportChartToPdf> {
+      ExportChartToPdfState();
       late GlobalKey<SfCircularChartState> _circularChartKey;
       late List<ChartSampleData> _chartData;
 
@@ -141,71 +172,72 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
       void initState() {
         _circularChartKey = GlobalKey();
         _chartData = <ChartSampleData>[
-          ChartSampleData(x: 'Jan', y: 35),
-          ChartSampleData(x: 'Feb', y: 28),
-          ChartSampleData(x: 'Mar', y: 33),
-          ChartSampleData(x: 'Apr', y: 32),
-          ChartSampleData(x: 'May', y: 40),
-        ];
+        ChartSampleData(x: 'Jan', y: 35),
+        ChartSampleData(x: 'Feb', y: 28),
+        ChartSampleData(x: 'Mar', y: 33),
+        ChartSampleData(x: 'Apr', y: 32),
+        ChartSampleData(x: 'May', y: 40),];
         super.initState();
       }
 
       @override
       Widget build(BuildContext context) {
-        return Column(
-          children: <Widget>[
-            SfCircularChart(
-              key: _circularChartKey,
-              series: <PieSeries<ChartSampleData, String>>[
-                PieSeries<ChartSampleData, String>(
-                  dataSource: _chartData,
-                  xValueMapper: (ChartSampleData data, _) => data.x,
-                  yValueMapper: (ChartSampleData data, _) => data.y,
-                )
-              ]
-            ),
-            TextButton(
-              child: const Text('Export as PDF'),
+        return Scaffold(
+          appBar: AppBar(title: const Text('Syncfusion Flutter Charts'),),
+          body: SfCircularChart(
+                key: _circularChartKey,
+                series: <PieSeries<ChartSampleData, String>>[
+                  PieSeries<ChartSampleData, String>(
+                    dataSource: _chartData,
+                    xValueMapper: (ChartSampleData data, _) => data.x,
+                    yValueMapper: (ChartSampleData data, _) => data.y,
+                  )
+                ]
+          ),
+          floatingActionButton: FloatingActionButton(
               onPressed: () {
                 _renderPDF();
               },
-            )
-          ]
+              child: const Icon(Icons.picture_as_pdf),
+          ),
         );
       }
 
       Future<void> _renderPDF() async {
-        final List<int> imageBytes = await _readImageData();
-        final PdfBitmap bitmap = PdfBitmap(imageBytes);
-        final PdfDocument document = PdfDocument();
-        document.pageSettings.size =
+          final List<int> imageBytes = await _readImageData();
+          final PdfBitmap bitmap = PdfBitmap(imageBytes);
+          final PdfDocument document = PdfDocument();
+          document.pageSettings.size =
           Size(bitmap.width.toDouble(), bitmap.height.toDouble());
-        final PdfPage page = document.pages.add();
-        final Size pageSize = page.getClientSize();
-        page.graphics.drawImage(
-          bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
-        await FileSaveHelper.saveAndLaunchFile(
-          document.save(), 'circular_chart.pdf');
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5))),
-          duration: Duration(milliseconds: 2000),
-          content: Text('Chart has been exported as PDF document.'),
-        ));
+          final PdfPage page = document.pages.add();
+          final Size pageSize = page.getClientSize();
+          page.graphics.drawImage(
+              bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
+          final List<int> bytes = document.saveSync();
+          document.dispose();
+          //Get external storage directory
+          final Directory directory = await getApplicationSupportDirectory();
+          //Get directory path
+          final String path = directory.path;
+          //Create an empty file to write PDF data
+          File file = File('$path/Output.pdf');
+          //Write PDF bytes data
+          await file.writeAsBytes(bytes, flush: true);
+          //Open the PDF document in mobile
+          OpenFile.open('$path/Output.pdf');
       }
 
       Future<List<int>> _readImageData() async {
-        final ui.Image data =
-          await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
-        final ByteData? bytes =
-          await data.toByteData(format: ui.ImageByteFormat.png);
-        return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+          final ui.Image data =
+              await _circularChartKey.currentState!.toImage(pixelRatio: 3.0);
+          final ByteData? bytes =
+              await data.toByteData(format: ui.ImageByteFormat.png);
+          return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
       }
     }
 
     class ChartSampleData {
-      ChartSampleData({this.x, this.y});
+        ChartSampleData({this.x, this.y});
         final String? x;
         final num? y;
     }
