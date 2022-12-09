@@ -220,7 +220,7 @@ workbook.dispose();
 
 ## Freeze Panes
 
-It is possible to freeze a portion of the sheet to keep it visible while you scroll through the rest of the sheet. The following code snippet shows how to freeze panes.
+A portion of the worksheet can be frozen to keep it visible while you scroll through the rest of the sheet. The following code snippet shows how to freeze panes.
 
 {% highlight dart %}
 //Create a new Excel Document.
