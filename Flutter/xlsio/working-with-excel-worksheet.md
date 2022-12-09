@@ -116,6 +116,41 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## PageSetup Settings
+
+PageSetup settings like orientation, margins, scaling, paper size, print area, gridlines, black and white, draft quality, row and column headings, and page order can be applied to the worksheet. The follwoing code snippet shows some of the properties.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+//Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+//Set text
+sheet.getRangeByName('A1:D4').text = 'Hello';
+
+//Center Horizontally and center Vertically
+sheet.pageSetup.isCenterHorizontally = true;
+sheet.pageSetup.isCenterVertically = true;
+
+//Orientation
+sheet.pageSetup.orientation = ExcelPageOrientation.landscape;
+
+//Margins
+sheet.pageSetup.topMargin = 1;
+sheet.pageSetup.leftMargin = 2;
+sheet.pageSetup.rightMargin = 1.25;
+sheet.pageSetup.bottomMargin = 1;
+sheet.pageSetup.footerMargin = 4;
+sheet.pageSetup.headerMargin = 3.5;
+
+//Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+File('Output.xlsx').writeAsBytes(bytes);
+{% endhighlight %}
+
 ## Show or Hide Worksheet
 
 The following code snippet shows how to hide the worksheet using **visibility** property.
