@@ -367,7 +367,7 @@ workbook.dispose();
 
 ## Named Range
 
-Cell ranges can be defined by names and used in formulas. This section explains about creating named ranges and accessing them from workbook or worksheet levels.
+A named range is one or more cells that have been given a name. Using named ranges can make formulas easier to read and understand. This section explains about creating named ranges and accessing them from workbook or worksheet levels.
 
 The following code shows how to define a named range from workbook level. 
 
@@ -434,7 +434,7 @@ final Range range2 = worksheet.getRangeByName('A2');
 worksheet.names.add('SecondRange', range2);
 
 //Set formula in the cell.
-worksheet.getRangeByName('A3').formula = '=FirstRange+SecondRange';
+worksheet.getRangeByName('A3').formula = '=IF(FirstRange<SecondRange, "Yes", "No")';
 
 //Save and dispose the workbook.
 final List<int>? bytes = workbook.saveAsStream();
@@ -454,7 +454,7 @@ final Workbook workbook = Workbook(1);
 final Worksheet worksheet = workbook.worksheets[0];
 
 //Set text in worksheet range
-worksheet.getRangeByName('A1:D4').setText('Hello');
+worksheet.getRangeByName('A1:D4').setText('NamedRange');
 
 //Access the sheet range and define named range in worksheet level.
 final Range range1 = worksheet.getRangeByName('A1:C1');
