@@ -364,3 +364,116 @@ final List<int> bytes = workbook.saveAsCSV(',');
 File('Output.csv').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
+
+## Named Range
+
+A named range is one or more cells that have been given a name. Using named ranges can make formulas easier to read and understand. This section explains about creating named ranges and accessing them from workbook or worksheet levels.
+
+The following code shows how to define a named range from workbook level. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Access the sheet range.
+final Range range = worksheet.getRangeByName('A1:C1'); 
+
+//Define named range in workbook level.
+workbook.names.add('BookName', range);
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+The following code shows how to define a named range from worksheet level. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Access the sheet range.
+final Range range = worksheet.getRangeByName('A1:C1'); 
+
+//Define named range in worksheet level.
+worksheet.names.add('SheetName', range);
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+### Named range in formulas
+
+Following code example illustrates how to create workbook-level named ranges and use it in formulas. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set the value to the cell.
+worksheet.getRangeByName('A1').setNumber(10);
+worksheet.getRangeByName('A2').setNumber(20);
+
+//Access the sheet range and define named range in worksheet level.
+final Range range1 = worksheet.getRangeByName('A1'); 
+worksheet.names.add('FirstRange', range1);
+
+final Range range2 = worksheet.getRangeByName('A2'); 
+worksheet.names.add('SecondRange', range2);
+
+//Set formula in the cell.
+worksheet.getRangeByName('A3').formula = '=IF(FirstRange<SecondRange, "Yes", "No")';
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+### Delete named range
+
+Named ranges defined in workbook and worksheet levels can be deleted. The following code shows this. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text in worksheet range
+worksheet.getRangeByName('A1:D4').setText('NamedRange');
+
+//Access the sheet range and define named range in worksheet level.
+final Range range1 = worksheet.getRangeByName('A1:C1');
+final Name name1 = worksheet.names.add('named1', range1);
+
+final Range range2 = worksheet.getRangeByName('A2:C2');
+final Name name2 = worksheet.names.add('named2', range2);
+
+final Range range3 = worksheet.getRangeByName('A3:C3');
+final Name name3 = worksheet.names.add('named3', range3);
+
+final Range range4 = worksheet.getRangeByName('A4:C4');
+final Name name4 = worksheet.names.add('named4', range4);
+
+//Delete the named range
+name2.delete();
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
