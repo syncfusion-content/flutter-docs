@@ -218,6 +218,55 @@ File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
+## Freeze Panes
+
+A portion of the worksheet can be frozen to keep it visible while scrolling through the rest of the sheet. The following code snippet shows how to create freeze panes.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access worksheet
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text
+worksheet.getRangeByName('A1:H10').text = 'FreezePanes';
+
+//Freeze Panes
+worksheet.getRangeByName('A2').freezePanes();
+
+//save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
+## Unfreeze Panes
+
+The following code snippet explains how to remove freeze panes.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access worksheet
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text
+worksheet.getRangeByName('A1:H10').text = 'FreezePanes';
+
+//Freeze Panes
+worksheet.getRangeByName('A2').freezePanes();
+
+//Unfreeze the existing freeze panes
+worksheet.unfreezePanes();
+
+//save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
 ## Right to Left Direction
 
 A *worksheet* direction can be changed from right to left programmatically through **isRightToLeft** property of **Worksheet**. The following code snippet explains this.
