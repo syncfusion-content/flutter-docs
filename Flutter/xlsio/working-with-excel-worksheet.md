@@ -220,7 +220,7 @@ workbook.dispose();
 
 ## Freeze Panes
 
-A portion of the worksheet can be frozen to keep it visible while you scroll through the rest of the sheet. The following code snippet shows how to freeze panes.
+A portion of the worksheet can be frozen to keep it visible while scrolling through the rest of the sheet. The following code snippet shows how to create freeze panes.
 
 {% highlight dart %}
 //Create a new Excel Document.
@@ -243,7 +243,7 @@ workbook.dispose();
 
 ## Unfreeze Panes
 
-The following code snippet explains how to unfreeze the panes.
+The following code snippet explains how to remove freeze panes.
 
 {% highlight dart %}
 //Create a new Excel Document.
