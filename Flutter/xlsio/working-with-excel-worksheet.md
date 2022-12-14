@@ -128,7 +128,7 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 //Set text
-sheet.getRangeByName('A1:D4').text = 'Hello';
+sheet.getRangeByName('A1:Z100').text = 'Hello';
 
 //Center Horizontally and center Vertically
 sheet.pageSetup.isCenterHorizontally = true;
@@ -144,6 +144,27 @@ sheet.pageSetup.rightMargin = 1.25;
 sheet.pageSetup.bottomMargin = 1;
 sheet.pageSetup.footerMargin = 4;
 sheet.pageSetup.headerMargin = 3.5;
+
+//Paper size
+sheet.pageSetup.paperSize = ExcelPaperSize.a2Paper;
+
+//Print area
+sheet.pageSetup.printArea = 'A1:D20';
+
+//Gridlines
+sheet.pageSetup.showGridlines = true;
+
+//Black and white
+sheet.pageSetup.isBlackAndWhite = true;
+
+//Draft
+sheet.pageSetup.isDraft = true;
+
+//Row and column headings
+sheet.pageSetup.showHeadings = true;
+
+//Page order
+sheet.pageSetup.order = ExcelPageOrder.overThenDown;
 
 //Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
