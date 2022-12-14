@@ -349,9 +349,7 @@ Widget build(BuildContext context) {
 
 ## Change sort number and backgroud color.
 
-The color of the sort number and its background color can be customized by using `SfDataGridThemeData.sortOrderNumberColor` and `SfDataGridThemeData.sortOrderNumberBackgroundColor` respectively.
-
-The following code describes how to change sort number and background color by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+The color of the sort order number and its rounded background color can be customized by using `SfDataGridThemeData.sortOrderNumberColor` and `SfDataGridThemeData.sortOrderNumberBackgroundColor` respectively.
 
 {% tabs %}
 {% highlight Dart %} 
