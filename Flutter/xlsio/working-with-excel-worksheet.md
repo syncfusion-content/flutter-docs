@@ -118,7 +118,7 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 ## PageSetup Settings
 
-PageSetup settings like orientation, margins, scaling, paper size, print area, gridlines, black and white, draft quality, row and column headings, and page order can be applied to the worksheet. The follwoing code snippet shows some of the properties.
+Excel worksheets can be customized with page setup settings such as orientation, margins, scaling, paper size, print area, gridlines, black and white, draft quality, row and column headings, and page order. The following code snippet shows how to use page setup properties.
 
 {% highlight dart %}
 //Create a new Excel Document.
