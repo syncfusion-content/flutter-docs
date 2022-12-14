@@ -199,3 +199,23 @@ The following chart types are supported in Flutter XlsIO.
 * [Bar_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-bar-chart)
 * [Column_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-column-chart)
 * [Line_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-line-chart)
+* Line With Markers
+* Stacked Line With Markers
+* 100% Stacked Line With Markers
+* 3-D Line3D
+* 3-D Column
+* 3-D Clustered Column
+* 3-D 100% Stacked Column
+* 3-D Stacked Column
+* 3-D Clustered Bar
+* 3-D 100% Stacked Bar
+* High Low Close
+* Open High Low Close
+* Volume High Low Close
+* Volume Open High Low Close
+* 3-D Pie
+* Pie Of Pie
+* Bar Of Pie
+* Doughnut
+* Doughnut Exploded
+
