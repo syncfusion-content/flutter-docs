@@ -505,6 +505,57 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+### Change the shape of checkbox column
+
+By default, the checkbox shows in the DataGrid as a square shape. You can change the checkbox shape by setting the required shape in the `SfDataGrid.checkboxShape` property.
+
+{% tabs %}
+{% highlight Dart %} 
+ 
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      showCheckboxColumn: true,
+      checkboxShape: CircleBorder(),
+      selectionMode: SelectionMode.multiple,
+      columns: [
+        GridColumn(
+            columnName: 'ID',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                  child: Text('ID'))),
+        GridColumn(
+            columnName: 'Name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'Designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Designation'))),
+        GridColumn(
+            columnName: 'Salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Salary')))
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid checkbox shape](images/column-types/flutter-datagrid-checkbox-shape.png)
+
 ### Limitations
 
 The following are the limitations of GridCheckboxColumn:

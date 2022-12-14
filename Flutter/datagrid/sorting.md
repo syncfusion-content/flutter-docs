@@ -347,6 +347,66 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
 
+## Change sort number and backgroud color.
+
+The color of the sort order number and its rounded background color can be customized by using `SfDataGridThemeData.sortOrderNumberColor` and `SfDataGridThemeData.sortOrderNumberBackgroundColor` respectively.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+    body: SfDataGridTheme(
+      data: SfDataGridThemeData(
+          sortOrderNumberBackgroundColor: Colors.tealAccent,
+          sortOrderNumberColor: Colors.pink),
+      child: SfDataGrid(
+          source: employeeDataSource,
+          columnWidthMode: ColumnWidthMode.auto,
+          allowSorting: true,
+          allowMultiColumnSorting: true,
+          showSortNumbers: true,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'ID'))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Name'))),
+            GridColumn(
+                columnName: 'city',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.center,
+                    child: const Text('City'))),
+            GridColumn(
+                columnName: 'freight',
+                label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Freight'))),
+          ]),
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid sort order number and its background color change](images/sorting/flutter-datagrid-sort-order-number-style.png)
+
 ## Disable sorting for an individual column
 
 The data grid disables sorting for an individual column by setting the [GridColumn.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowSorting.html) property to false. The default value of this property is true. So all the columns in the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection can be sorted when `SfDataGrid.allowSorting` is set to true.
@@ -409,7 +469,7 @@ Widget build(BuildContext context) {
 
 ## Change the color of sort icon
 
-The color of sort icon can be customized by using [SfDataGridThemeData.sortIconColor]().
+The color of sort icon can be customized by using [SfDataGridThemeData.sortIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIconColor.html).
 
 The following code describes how to change sort icon color by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
 
