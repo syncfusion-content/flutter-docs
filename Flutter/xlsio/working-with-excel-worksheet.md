@@ -116,6 +116,62 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## PageSetup Settings
+
+Excel worksheets can be customized with page setup settings such as orientation, margins, scaling, paper size, print area, gridlines, black and white, draft quality, row and column headings, and page order. The following code snippet shows how to use page setup properties.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+//Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+//Set text
+sheet.getRangeByName('A1:Z100').text = 'Hello';
+
+//Center Horizontally and center Vertically
+sheet.pageSetup.isCenterHorizontally = true;
+sheet.pageSetup.isCenterVertically = true;
+
+//Orientation
+sheet.pageSetup.orientation = ExcelPageOrientation.landscape;
+
+//Margins
+sheet.pageSetup.topMargin = 1;
+sheet.pageSetup.leftMargin = 2;
+sheet.pageSetup.rightMargin = 1.25;
+sheet.pageSetup.bottomMargin = 1;
+sheet.pageSetup.footerMargin = 4;
+sheet.pageSetup.headerMargin = 3.5;
+
+//Paper size
+sheet.pageSetup.paperSize = ExcelPaperSize.a2Paper;
+
+//Print area
+sheet.pageSetup.printArea = 'A1:D20';
+
+//Gridlines
+sheet.pageSetup.showGridlines = true;
+
+//Black and white
+sheet.pageSetup.isBlackAndWhite = true;
+
+//Draft
+sheet.pageSetup.isDraft = true;
+
+//Row and column headings
+sheet.pageSetup.showHeadings = true;
+
+//Page order
+sheet.pageSetup.order = ExcelPageOrder.overThenDown;
+
+//Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+File('Output.xlsx').writeAsBytes(bytes);
+{% endhighlight %}
+
 ## Show or Hide Worksheet
 
 The following code snippet shows how to hide the worksheet using **visibility** property.
