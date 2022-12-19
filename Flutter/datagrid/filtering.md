@@ -715,13 +715,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing the Filter Popup Menu Options
+## Customizing the filter popup menu options
 
 The `SfDataGrid` provides the support to customizing the following options in the filter popup menu.
 
-### Filter Mode
+### Show checkbox or advanced filtering mode
 
-The Filter popup mode for the column can be set by using the `FilterPopupMenuOptions.filterMode` in `GridColumn.filterPopupMenuOptions` property.
+The checkbox or advanced filtering mode for the respective column can be set by using the `FilterPopupMenuOptions.filterMode` in `GridColumn.filterPopupMenuOptions` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -882,7 +882,7 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid hiding clear filter options in popup menu" src="images/filtering/flutter-datagrid-hide-clear-filter-option.png" width="400"/>
 
-### Hiding column name
+### Hiding column name from "clear filter" option
 
 The column name which is shown along with the clear filter option in the filter popup menu can be hidden by setting the `FilterPopupMenuOptions.showColumnName` property to `false` in the `GridColumn.filterPopupMenuOptions`.
 
