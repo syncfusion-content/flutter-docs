@@ -116,6 +116,62 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## PageSetup Settings
+
+Excel worksheets can be customized with page setup settings such as orientation, margins, scaling, paper size, print area, gridlines, black and white, draft quality, row and column headings, and page order. The following code snippet shows how to use page setup properties.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+//Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+//Set text
+sheet.getRangeByName('A1:Z100').text = 'Hello';
+
+//Center Horizontally and center Vertically
+sheet.pageSetup.isCenterHorizontally = true;
+sheet.pageSetup.isCenterVertically = true;
+
+//Orientation
+sheet.pageSetup.orientation = ExcelPageOrientation.landscape;
+
+//Margins
+sheet.pageSetup.topMargin = 1;
+sheet.pageSetup.leftMargin = 2;
+sheet.pageSetup.rightMargin = 1.25;
+sheet.pageSetup.bottomMargin = 1;
+sheet.pageSetup.footerMargin = 4;
+sheet.pageSetup.headerMargin = 3.5;
+
+//Paper size
+sheet.pageSetup.paperSize = ExcelPaperSize.a2Paper;
+
+//Print area
+sheet.pageSetup.printArea = 'A1:D20';
+
+//Gridlines
+sheet.pageSetup.showGridlines = true;
+
+//Black and white
+sheet.pageSetup.isBlackAndWhite = true;
+
+//Draft
+sheet.pageSetup.isDraft = true;
+
+//Row and column headings
+sheet.pageSetup.showHeadings = true;
+
+//Page order
+sheet.pageSetup.order = ExcelPageOrder.overThenDown;
+
+//Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+File('Output.xlsx').writeAsBytes(bytes);
+{% endhighlight %}
+
 ## Show or Hide Worksheet
 
 The following code snippet shows how to hide the worksheet using **visibility** property.
@@ -211,6 +267,55 @@ sheet.hyperlinks.add(sheet.getRangeByName('C1:C5'), HyperlinkType.url, 'http://w
 //Move worksheet
 workbook.worksheets.moveTo(workbook.worksheets[10], 5);
 workbook.worksheets.moveTo(workbook.worksheets[3], 15);
+
+//save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
+## Freeze Panes
+
+A portion of the worksheet can be frozen to keep it visible while scrolling through the rest of the sheet. The following code snippet shows how to create freeze panes.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access worksheet
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text
+worksheet.getRangeByName('A1:H10').text = 'FreezePanes';
+
+//Freeze Panes
+worksheet.getRangeByName('A2').freezePanes();
+
+//save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
+## Unfreeze Panes
+
+The following code snippet explains how to remove freeze panes.
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access worksheet
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text
+worksheet.getRangeByName('A1:H10').text = 'FreezePanes';
+
+//Freeze Panes
+worksheet.getRangeByName('A2').freezePanes();
+
+//Unfreeze the existing freeze panes
+worksheet.unfreezePanes();
 
 //save and dispose.
 final List<int> bytes = workbook.saveAsStream();
@@ -362,5 +467,118 @@ worksheet.getRangeByName('G2:G8').numberFormat = r"'$'#,##0_)";
 //Save workbook as CSV
 final List<int> bytes = workbook.saveAsCSV(',');
 File('Output.csv').writeAsBytes(bytes);
+workbook.dispose();
+{% endhighlight %}
+
+## Named Range
+
+A named range is one or more cells that have been given a name. Using named ranges can make formulas easier to read and understand. This section explains about creating named ranges and accessing them from workbook or worksheet levels.
+
+The following code shows how to define a named range from workbook level. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Access the sheet range.
+final Range range = worksheet.getRangeByName('A1:C1'); 
+
+//Define named range in workbook level.
+workbook.names.add('BookName', range);
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+The following code shows how to define a named range from worksheet level. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Access the sheet range.
+final Range range = worksheet.getRangeByName('A1:C1'); 
+
+//Define named range in worksheet level.
+worksheet.names.add('SheetName', range);
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+### Named range in formulas
+
+Following code example illustrates how to create workbook-level named ranges and use it in formulas. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set the value to the cell.
+worksheet.getRangeByName('A1').setNumber(10);
+worksheet.getRangeByName('A2').setNumber(20);
+
+//Access the sheet range and define named range in worksheet level.
+final Range range1 = worksheet.getRangeByName('A1'); 
+worksheet.names.add('FirstRange', range1);
+
+final Range range2 = worksheet.getRangeByName('A2'); 
+worksheet.names.add('SecondRange', range2);
+
+//Set formula in the cell.
+worksheet.getRangeByName('A3').formula = '=IF(FirstRange<SecondRange, "Yes", "No")';
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+{% endhighlight %}
+
+### Delete named range
+
+Named ranges defined in workbook and worksheet levels can be deleted. The following code shows this. 
+
+{% highlight dart %}
+//Create a new Excel Document.
+final Workbook workbook = Workbook(1);
+
+//Access the sheet via index.
+final Worksheet worksheet = workbook.worksheets[0];
+
+//Set text in worksheet range
+worksheet.getRangeByName('A1:D4').setText('NamedRange');
+
+//Access the sheet range and define named range in worksheet level.
+final Range range1 = worksheet.getRangeByName('A1:C1');
+final Name name1 = worksheet.names.add('named1', range1);
+
+final Range range2 = worksheet.getRangeByName('A2:C2');
+final Name name2 = worksheet.names.add('named2', range2);
+
+final Range range3 = worksheet.getRangeByName('A3:C3');
+final Name name3 = worksheet.names.add('named3', range3);
+
+final Range range4 = worksheet.getRangeByName('A4:C4');
+final Name name4 = worksheet.names.add('named4', range4);
+
+//Delete the named range
+name2.delete();
+
+//Save and dispose the workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
