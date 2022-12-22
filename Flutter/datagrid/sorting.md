@@ -347,7 +347,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
 
-## Change sort number and background color
+## Change the sort number and background color
 
 The color of the sort order number and its rounded background color can be customized by using [SfDataGridThemeData.sortOrderNumberColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberColor.html) and [SfDataGridThemeData.sortOrderNumberBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberBackgroundColor.html) respectively.
 
