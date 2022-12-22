@@ -505,9 +505,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Change the shape of checkbox column
+### Change the shape of the checkbox column
 
-By default, the checkbox shows in the DataGrid as a square shape. You can change the checkbox shape by setting the required shape in the `SfDataGrid.checkboxShape` property.
+By default, the checkbox shows in the DataGrid as a square shape. Change the checkbox shape by setting the required shape in the [SfDataGrid.checkboxShape](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/checkboxShape.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
