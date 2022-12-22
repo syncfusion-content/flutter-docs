@@ -717,11 +717,11 @@ Widget build(BuildContext context) {
 
 ## Customizing the filter popup menu options
 
-The `SfDataGrid` provides the support to customizing the following options in the filter popup menu.
+The `SfDataGrid` provides the support to customize the menu options in the filter popup menu. Please refer to the following topics for more information.
 
 ### Show checkbox or advanced filtering mode
 
-The checkbox or advanced filtering mode for the respective column can be set by using the `FilterPopupMenuOptions.filterMode` in `GridColumn.filterPopupMenuOptions` property.
+By default, both the checkbox and advanced filtering options are shown in the filter popup menu. You can show either checkbox or advanced filtering menu option for specific columns can be set by using the [FilterPopupMenuOptions.filterMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/filterMode.html) in [GridColumn.filterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterPopupMenuOptions.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -776,7 +776,7 @@ Widget build(BuildContext context) {
 
 ### Hiding sort options
 
-The sort options in the filter popup menu can be hidden by setting the `FilterPopupMenuOptions.canShowSortingOptions` property to `false` in the `GridColumn.filterPopupMenuOptions`.
+The sort options in the filter popup menu can be hidden by setting the [FilterPopupMenuOptions.canShowSortingOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/canShowSortingOptions.html) property to `false` in the `GridColumn.filterPopupMenuOptions`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -830,7 +830,7 @@ Widget build(BuildContext context) {
 
 ### Hiding clear filter option
 
-The clear filter options in the filter popup menu can be hidden by setting the `FilterPopupMenuOptions.canShowClearFilterOption` property to `false` in the `GridColumn.filterPopupMenuOptions`.
+The `Clear Filter From {Column Name}` menu option from the filter popup menu can be hidden by setting the [FilterPopupMenuOptions.canShowClearFilterOption](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/canShowClearFilterOption.html) property to false in the `GridColumn.filterPopupMenuOptions`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -884,7 +884,7 @@ Widget build(BuildContext context) {
 
 ### Hiding column name from "clear filter" option
 
-The column name which is shown along with the clear filter option in the filter popup menu can be hidden by setting the `FilterPopupMenuOptions.showColumnName` property to `false` in the `GridColumn.filterPopupMenuOptions`.
+The name of the column which is showing along with the `Clear Filter From {Column Name}` menu option in the filter popup menu can be hidden by setting the [FilterPopupMenuOptions.showColumnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/showColumnName.html) property to false in the `GridColumn.filterPopupMenuOptions`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -936,13 +936,9 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid hiding column name in popup menu" src="images/filtering/flutter-datagrid-hide-column-name.png" width="400"/>
 
-## Appearance
-
-The `SfDataGrid` provides support for changing the following appearances of the filter icon.
-
 ### Change the color of filter Icon
 
-The color and hover color of filter icon and can be customized by using `SfDataGridThemeData.filterIconColor` and `SfDataGridThemeData.filterIconHoverColor` properties respectively.
+The color and hover color of filter icon can be customized by using [SfDataGridThemeData.filterIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIconColor.html) and [SfDataGridThemeData.filterIconHoverColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIconHoverColor.html) properties respectively.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1000,7 +996,7 @@ Widget build(BuildContext context) {
 
 ### Change the padding of filter icon
 
-The padding of filter icon can be customized by using `GridColumn.filterIconPadding` property.
+The padding around the filter icon can be changed by using [GridColumn.filterIconPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterIconPadding.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1050,13 +1046,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Setting custom filter icon
+### Set a custom filter icon
 
-The `SfDataGrid` allows you to change the filter icon by using the `SfDataGridThemeData.filterIcon` property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
+The `SfDataGrid` allows you to change the filter icon by using the [SfDataGridThemeData.filterIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIcon.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
 
-By using the [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget, you can change the icon based on each state of the filtering. You have to return the icons for two states even if you want to change the icon for a specific state.
+By using the [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget, you can change the icon based on each state of the filtering i.e., filter and filtered state. You have to return the icons for two states even if you want to change the icon for a specific state.
 
 {% tabs %}
 {% highlight Dart %}

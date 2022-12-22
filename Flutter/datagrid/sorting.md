@@ -349,7 +349,7 @@ Widget build(BuildContext context) {
 
 ## Change sort number and background color
 
-The color of the sort order number and its rounded background color can be customized by using `SfDataGridThemeData.sortOrderNumberColor` and `SfDataGridThemeData.sortOrderNumberBackgroundColor` respectively.
+The color of the sort order number and its rounded background color can be customized by using [SfDataGridThemeData.sortOrderNumberColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberColor.html) and [SfDataGridThemeData.sortOrderNumberBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberBackgroundColor.html) respectively.
 
 {% tabs %}
 {% highlight Dart %} 
