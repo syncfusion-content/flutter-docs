@@ -1052,7 +1052,7 @@ The `SfDataGrid` allows you to change the filter icon by using the [SfDataGridTh
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
 
-By using the [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget, change the icon based on each state of the filtering this is, filter and filtered state. You must return the icons for two states even if you want to change the icon for a specific state.
+By using the [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget, change the icon based on each state of the filtering, that is, the filter and filtered states. You must return the icons for two states even if you want to change the icon for a specific state.
 
 {% tabs %}
 {% highlight Dart %}
