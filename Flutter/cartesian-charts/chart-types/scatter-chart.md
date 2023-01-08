@@ -21,6 +21,15 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 32),
+            ChartData(2011, 40),
+            ChartData(2012, 34),
+            ChartData(2013, 52),
+            ChartData(2014, 42),
+            ChartData(2015, 38),
+            ChartData(2016, 41),
+        ];
          return Scaffold(
             body: Center(
                 child: Container(
@@ -56,6 +65,15 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
     
     @override
     Widget build(BuildContext context) {
+         final List<ChartData> chartData = [
+            ChartData(2010, 32),
+            ChartData(2011, 40),
+            ChartData(2012, 34),
+            ChartData(2013, 52),
+            ChartData(2014, 42),
+            ChartData(2015, 38),
+            ChartData(2016, 41),
+        ];
          return Scaffold(
             body: Center(
                 child: Container(
