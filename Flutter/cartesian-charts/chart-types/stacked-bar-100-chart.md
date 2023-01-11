@@ -24,7 +24,14 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
 
 {% tabs %}
 {% highlight dart %} 
-    
+    List<ChartData> chartData = [
+        ChartData('Jan', 45, 47, 40, 38),
+        ChartData('Feb', 45, 47, 41, 35),
+        ChartData('Mar', 50, 42, 42, 34),
+        ChartData('Apr', 44, 48, 40, 33),
+        ChartData('May', 43, 49, 43, 40),
+        ChartData('June', 44, 48, 42, 41),
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -59,6 +66,14 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
             )
         );
     }
+    class ChartData {
+        final String x;
+        final num y;
+        final num y2;
+        final num y3;
+        final num y4;
+        ChartData(this.x, this.y, this.y2, this.y3, this.y4);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +88,14 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 {% tabs %}
 {% highlight dart hl_lines="13 14 20 21" %}
-    
+    List<ChartData> chartData = [
+        ChartData('Jan', 45, 47),
+        ChartData('Feb', 45, 47),
+        ChartData('Mar', 50, 42),
+        ChartData('Apr', 44, 48),
+        ChartData('May', 43, 49),
+        ChartData('June', 44, 48),
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -102,7 +124,12 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
             )
         );
     }
-
+    class ChartData {
+        final String x;
+        final num y;
+        final num y2;
+        ChartData(this.x, this.y, this.y2);
+    }
 {% endhighlight %}
 {% endtabs %}
 
