@@ -25,12 +25,12 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
 {% tabs %}
 {% highlight dart %} 
     List<ChartData> chartData = [
-        ChartData('Jan', 45, 47, 40, 38),
-        ChartData('Feb', 45, 47, 41, 35),
-        ChartData('Mar', 50, 42, 42, 34),
-        ChartData('Apr', 44, 48, 40, 33),
-        ChartData('May', 43, 49, 43, 40),
-        ChartData('June', 44, 48, 42, 41),
+        ChartData('Jan', 45, 47, 40),
+        ChartData('Feb', 45, 47, 41),
+        ChartData('Mar', 50, 42, 42),
+        ChartData('Apr', 44, 48, 40),
+        ChartData('May', 43, 49, 43),
+        ChartData('June', 44, 48, 42),
     ];
     @override
     Widget build(BuildContext context) {
@@ -54,11 +54,6 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y3
-                            ),
-                            StackedBar100Series<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -71,8 +66,7 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
         final num y;
         final num y2;
         final num y3;
-        final num y4;
-        ChartData(this.x, this.y, this.y2, this.y3, this.y4);
+        ChartData(this.x, this.y, this.y2, this.y3);
     }
 
 {% endhighlight %}
