@@ -26,6 +26,13 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -60,6 +67,13 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -95,6 +109,13 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -132,6 +153,13 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
