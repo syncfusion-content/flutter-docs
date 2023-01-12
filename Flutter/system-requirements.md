@@ -55,4 +55,6 @@ The following Flutter SDK version is required for our widgets:
 
 Our Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. You can find the supported version at the link below.
 
+>**NOTE:** Currently, the PDF viewer control doesn't support in the Linux platform.
+
 [`https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms`](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms)
