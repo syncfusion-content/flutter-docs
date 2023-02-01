@@ -350,7 +350,6 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       allowColumnsResizing: true,
       onColumnResizeStart: (ColumnResizeStartDetails details) {
-        
         // Disable resizing for the `checkbox` column.
        if (details.columnIndex == 0) {
             return false;
