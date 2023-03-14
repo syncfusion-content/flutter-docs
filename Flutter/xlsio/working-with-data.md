@@ -53,7 +53,7 @@ sheet.importList(list, firstRow, firstColumn, isVertical);
 sheet.autoFitColumn(1);
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Importlist.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
@@ -97,7 +97,7 @@ sheet.importList(list, firstRow, firstColumn, isVertical);
 sheet.getRangeByIndex(1, 1, 1, 4).autoFitColumns();
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Importlist.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
@@ -126,7 +126,7 @@ final List<ExcelDataRow> dataRows = _buildReportDataRows();
 sheet.importData(dataRows, 1, 1);
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Importlist.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
@@ -194,7 +194,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.importData(dataRows, 1, 1);
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('ImportDataHyperlinkAndImage.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
@@ -306,7 +306,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.importData(dataRows, 1, 1);
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('ImportDataImageHyperlink.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 

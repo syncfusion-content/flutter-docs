@@ -48,7 +48,7 @@ sheet.getRangeByName('A6').setFormula('=IF(A4 > B3, \"Yes\", \"No\")');
 sheet.getRangeByName('B6').setFormula('=IF(A4 < B3, A1+B1, A1-B1)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('IFFormula.xlsx').writeAsBytes(bytes);
@@ -86,7 +86,7 @@ range = sheet.getRangeByName('B5');
 range.setFormula('=AND(A5>35,A5<75)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('ANDFunc.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -124,7 +124,7 @@ range = sheet.getRangeByName('B5');
 range.setFormula('=OR(A3=\"Green\",A3=\"Red\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('ORFunc.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -162,7 +162,7 @@ range = sheet.getRangeByName('B5');
 range.setFormula('=NOT(A3=\"Red\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('NOTFunc.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

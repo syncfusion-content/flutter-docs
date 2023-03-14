@@ -57,7 +57,7 @@ range = sheet.getRangeByName('C7');
 range.setFormula('=AVERAGEIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('AVERAGEIFSFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -101,7 +101,7 @@ range = sheet.getRangeByName('C7');
 range.setFormula('=MINIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('MINIFSFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -145,7 +145,7 @@ range = sheet.getRangeByName('C7');
 range.setFormula('=MAXIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('MAXIFSFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -192,7 +192,7 @@ range = sheet.getRangeByName('C9');
 range.setFormula('=COUNTIFS(A1:A5,\"Apple\",C1:C5,\">2\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('COUNTIFSFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

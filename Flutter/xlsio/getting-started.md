@@ -81,7 +81,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 // Save the Excel file in the local machine.
@@ -131,7 +131,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 // Get external storage directory
@@ -181,7 +181,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 //Download the output file in web.
@@ -234,7 +234,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello!!');
 
 //Save and launch the excel.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 //Dispose the document.
 workbook.dispose();
 

@@ -27,7 +27,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World');
 
 // Save and dispose workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -52,7 +52,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setNumber(4444);
 
 // Save workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -77,7 +77,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setDateTime(DateTime(2020, 7, 7, 1, 0, 0));
 
 // Save workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -102,7 +102,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setValue(44);
 
 // Save and dispose workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -159,7 +159,7 @@ hyperlink4.screenTip = 'Click Here';
 hyperlink4.textToDisplay = 'Hyperlink to cell A15';
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Hyperlinks.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -184,7 +184,7 @@ final Hyperlink link = sheet.hyperlinks
 link.screenTip = 'About Syncfusion';
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('HyperlinksPicture.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -250,7 +250,7 @@ autofilter.addTextFilter(<String>{'Owner'});
 worksheet.getRangeByName('A1:C10').autoFitColumns();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('TextFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -312,7 +312,7 @@ secondCondition.conditionOperator = ExcelFilterCondition.less;
 secondCondition.numberValue = 15;
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CustomFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -368,7 +368,7 @@ autofilter.addDateFilter(DateTime(2002), DateTimeFilterType.year);
 autofilter.addDateFilter(DateTime(2009, 5), DateTimeFilterType.year);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('DateFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -424,7 +424,7 @@ autofilter.addDynamicFilter(DynamicFilterType.quarter2);
 worksheet.getRangeByName('A1:C10').autoFitColumns();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('DynamicFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -503,7 +503,7 @@ final AutoFilter autofilter = worksheet.autoFilters[2];
 autofilter.addColorFilter('#0000FF', ExcelColorFilterType.fontColor);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('FontColorFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -578,7 +578,7 @@ final AutoFilter autofilter = worksheet.autoFilters[0];
 autofilter.addColorFilter('#FF0000', ExcelColorFilterType.cellColor);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CellColorFilter.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

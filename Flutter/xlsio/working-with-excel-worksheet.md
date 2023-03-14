@@ -33,7 +33,7 @@ final Worksheet sheet1 = workbook.worksheets.addWithName('Sample');
 final Worksheet sheet2 = workbook.worksheets.add();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -62,7 +62,7 @@ final Worksheet sheet = workbook.worksheets[0];
 final Worksheet namedSheet = workbook.worksheets['Sample'];
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -85,7 +85,7 @@ sheet.getRangeByName('A1:M10').setText('TabColor');
 //Applied tab color for worksheet.
 sheet.tabColor = '#0000FF';
 
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -109,7 +109,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.showGridlines = false;
 
 //Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -167,7 +167,7 @@ sheet.pageSetup.showHeadings = true;
 sheet.pageSetup.order = ExcelPageOrder.overThenDown;
 
 //Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 File('Output.xlsx').writeAsBytes(bytes);
 {% endhighlight %}
@@ -188,7 +188,7 @@ sheet.getRangeByName('A1:M10').setText('Visibility');
 //set the visibility for the worksheet.
 sheet.visibility = WorksheetVisibility.hidden;
 
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -217,7 +217,7 @@ sheet.getRangeByName('A1').columnWidth = 20;
 sheet.getRangeByName('A2:A5').columnWidth = 30;
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -241,7 +241,7 @@ sheet.setRowHeightInPixels(2, 30);
 sheet.setColumnWidthInPixels(2, 20);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -269,7 +269,7 @@ workbook.worksheets.moveTo(workbook.worksheets[10], 5);
 workbook.worksheets.moveTo(workbook.worksheets[3], 15);
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
@@ -292,7 +292,7 @@ worksheet.getRangeByName('A1:H10').text = 'FreezePanes';
 worksheet.getRangeByName('A2').freezePanes();
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
@@ -318,7 +318,7 @@ worksheet.getRangeByName('A2').freezePanes();
 worksheet.unfreezePanes();
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
@@ -341,7 +341,7 @@ sheet.isRightToLeft = true;
 sheet.getRangeByName('A1').setText('Hello World');
 
 //Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
@@ -364,7 +364,7 @@ sheet1.getRangeByName('A1').setText('Hello World');
 sheet2.getRangeByName('A1').setText('Hello World');
 
 // Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
@@ -490,7 +490,7 @@ final Range range = worksheet.getRangeByName('A1:C1');
 workbook.names.add('BookName', range);
 
 //Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
@@ -511,7 +511,7 @@ final Range range = worksheet.getRangeByName('A1:C1');
 worksheet.names.add('SheetName', range);
 
 //Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
@@ -542,7 +542,7 @@ worksheet.names.add('SecondRange', range2);
 worksheet.getRangeByName('A3').formula = '=IF(FirstRange<SecondRange, "Yes", "No")';
 
 //Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
@@ -578,7 +578,7 @@ final Name name4 = worksheet.names.add('named4', range4);
 name2.delete();
 
 //Save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('Output.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 {% endhighlight %}
