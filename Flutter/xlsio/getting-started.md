@@ -7,7 +7,7 @@ control: Excel
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Flutter XlsIO
 
 This section explains the steps required to create an Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
 
