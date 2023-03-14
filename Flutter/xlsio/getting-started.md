@@ -7,7 +7,7 @@ control: Excel
 documentation: ug
 ---
 
-# Getting Started for Syncfusion Flutter XlsIO
+# Getting Started
 
 This section explains the steps required to create an Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
 

@@ -258,7 +258,7 @@ workbook.dispose();
 
 ### Custom Filter
 
-Custom filters helps to filter data that satifies either of the given conditions. The following code snippet explains how to apply a custom filter.
+Custom filters helps to filter data that satisfies either of the given conditions. The following code snippet explains how to apply a custom filter.
 
 {% highlight dart %}
 
