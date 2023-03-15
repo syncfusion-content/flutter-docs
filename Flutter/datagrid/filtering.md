@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering is the process of fetching the values from a collection that satisfies a specified condition. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied through the UI and programmatically.
 
-## Programmatical Filtering
+## Programmatic Filtering
 
 The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` defines the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
 
