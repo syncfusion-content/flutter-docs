@@ -741,8 +741,8 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
       RowColumnIndex rowColumnIndex, GridColumn column) async {
       loadingController.add(true);
       await Future<void>.delayed(const Duration(seconds: 2));
-          loadingController.add(false);
-    final dynamic oldValue = dataGridRow
+      loadingController.add(false);
+      final dynamic oldValue = dataGridRow
             .getCells()
             .firstWhereOrNull((DataGridCell dataGridCell) =>
                 dataGridCell.columnName == column.columnName)
@@ -788,3 +788,5 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid begin edit](images/editing/editing-async.gif)

@@ -961,9 +961,11 @@ bool isSuspend =true;
   notifyListeners();
   }
  }
-isSuspend=true;
-}
+ isSuspend=true;
+ }
 }
   
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows customized the perform sorting as async ](images/sorting/flutter-datagrid-customized-perform-sorting-async.gif)
