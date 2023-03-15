@@ -11,7 +11,7 @@ documentation: ug
 
 ## Saving a Excel workbook to file system
 
-You can save the created or manipulated workbook to file system using SaveAsStream() method of Workbook. The workbook is saved in the XLSX format.
+You can save the created or manipulated workbook to file system using saveSync() method of Workbook. The workbook is saved in the XLSX format.
 
 {% highlight dart %}
 
@@ -19,7 +19,22 @@ You can save the created or manipulated workbook to file system using SaveAsStre
 final Workbook workbook = Workbook();
 
 // Save the workbook in file system as XLSX format.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
+workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
+
+{% endhighlight %}
+
+Flutter XlsIO now supports saving an Excel document asynchronously using save() method of Workbook.
+
+{% highlight dart %}
+
+// Creates a new instance for workbook.
+final Workbook workbook = Workbook();
+
+// Save the workbook in file system as XLSX format.
+final List<int> bytes = await workbook.save();
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -36,7 +51,7 @@ Once after the workbook manipulation and save operation are completed, you shoul
 final Workbook workbook = new Workbook();
 
 // Save the workbook in file system as XLSX format.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 
 // Dipose the workbook.
 workbook.dispose();
