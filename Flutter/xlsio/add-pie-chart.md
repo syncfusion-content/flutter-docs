@@ -51,7 +51,7 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('PieChart.xlsx').writeAsBytes(bytes);

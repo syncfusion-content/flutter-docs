@@ -28,7 +28,7 @@ final List<int> imageBytes = File('image.jpeg').readAsBytesSync();
 sheet.pictures.addStream(1, 1, imageBytes);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('AddImage.xlsx').writeAsBytes(bytes);
@@ -65,7 +65,7 @@ picture.rotation = 100;
 picture.horizontalFlip = true;
 
 // save and dispose workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Image.xlsx').writeAsBytes(bytes);

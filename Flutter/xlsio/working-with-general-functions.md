@@ -49,7 +49,7 @@ sheet.getRangeByName('A6').setFormula('=SUM(A1,A2)');
 sheet.getRangeByName('B6').setFormula('=SUM(A1:A4,B1:B4)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('SumFormula.xlsx').writeAsBytes(bytes);
@@ -88,7 +88,7 @@ sheet.getRangeByName('A6').setFormula('=AVERAGE(A1,B1)');
 sheet.getRangeByName('B6').setFormula('=AVERAGE(A1:A4,B1:B4)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('AverageFormula.xlsx').writeAsBytes(bytes);
@@ -127,7 +127,7 @@ sheet.getRangeByName('A6').setFormula('=MAX(A1,B1)');
 sheet.getRangeByName('B6').setFormula('=MAX(A1:A4,B1:B4)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('MaxFormula.xlsx').writeAsBytes(bytes);
@@ -166,7 +166,7 @@ sheet.getRangeByName('A6').setFormula('=MIN(A1,B1)');
 sheet.getRangeByName('B6').setFormula('=MIN(A1:A4,B1:B4)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('MinFormula.xlsx').writeAsBytes(bytes);
@@ -205,7 +205,7 @@ sheet.getRangeByName('A6').setFormula('=COUNT(A1,B1)');
 sheet.getRangeByName('B6').setFormula('=COUNT(A1:A4,B1:B4)');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('CountFormula.xlsx').writeAsBytes(bytes);

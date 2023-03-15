@@ -47,7 +47,7 @@ range = sheet.getRangeByName('A6');
 range.setFormula('=CONCATENATE(B1,B2)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CONCATENATEFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -81,7 +81,7 @@ range = sheet.getRangeByName('A6');
 range.setFormula('=TRIM(A2)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('TRIMFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -115,7 +115,7 @@ range = sheet.getRangeByName('A6');
 range.setFormula('=LOWER(A2)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('LOWERFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -149,7 +149,7 @@ range = sheet.getRangeByName('A6');
 range.setFormula('=UPPER(A2)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('UPPERFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

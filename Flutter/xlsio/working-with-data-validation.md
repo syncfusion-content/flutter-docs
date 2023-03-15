@@ -233,7 +233,7 @@ dataRangeValidation.dataRange = sheet.getRangeByName(‘H4:H5’);
 Sheet.getRangeByName(‘A1:H5’).autoFit();
 
 //Save and dispose the Workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('DataValidation.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
