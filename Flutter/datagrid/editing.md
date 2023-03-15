@@ -788,5 +788,3 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   
 {% endhighlight %}
 {% endtabs %}
-
-![flutter datagrid begin edit](images/editing/editing-async.gif)
