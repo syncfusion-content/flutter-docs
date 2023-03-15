@@ -1131,11 +1131,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>
+
 ## Change the position of filter icon
 
 The position of filter icon can be customized by using `GridColumn.filterIconPosition`.
 
-The following code describes how to change filter icon position by using [GridColumn].
+The following code describes how to change filter icon position by using [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html).
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1194,7 +1196,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the filter icon position](images/filtering/flutter-datagrid-customized-filter-position.jpg)
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
 
 ## Change the textStyle of filter popup menu
 
@@ -1267,6 +1269,5 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the textStyle of filter popup menu](images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.jpg)
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>

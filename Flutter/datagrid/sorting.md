@@ -539,7 +539,7 @@ Widget build(BuildContext context) {
 
 The position of sort icon can be customized by using `GridColumn.sortIconPosition`.
 
-The following code describes how to change sort icon position by using [GridColumn].
+The following code describes how to change sort icon position by using [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html).
 
 {% tabs %}
 {% highlight Dart %} 
@@ -599,7 +599,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sorticon-position.jpg)
+![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sort-icon-position.png)
 
 ## Set a custom sorting icon
 
@@ -866,6 +866,11 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
+
+![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
+
 ## Perfrom sorting asynchronously
 
 * **[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html)** :
@@ -962,8 +967,3 @@ isSuspend=true;
   
 {% endhighlight %}
 {% endtabs %}
-
->**NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
-
-![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
