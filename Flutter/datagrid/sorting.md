@@ -599,7 +599,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sort-icon-position.png)
+![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sorticon-position.png)
 
 ## Set a custom sorting icon
 
