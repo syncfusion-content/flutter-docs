@@ -14,6 +14,7 @@ The content of a document can be zoomed in and out either by pinch to zoom or ch
 ## Change the zoom level factor programmatically
 
 You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set to 1.0 and above. The default value is 1.0. The following code example explains the same.
+
 {% tabs %}
 {% highlight dart hl_lines="21" %}
 
