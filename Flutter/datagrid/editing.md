@@ -725,11 +725,11 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-## Perfrom editing asynchronously
+## Perform editing asynchronously
 
 The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) is called before the cell is ending its editing.The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method is called when the editing is completed.To postpone the completion of editing in a cell, use asynchronous implementation,
 
-The following code shows how to make perfrom editing as asynchronously.
+The following code shows how to make perform editing as asynchronously.
 
 {% tabs %}
 {% highlight Dart %} 

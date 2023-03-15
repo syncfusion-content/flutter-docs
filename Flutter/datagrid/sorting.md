@@ -871,12 +871,12 @@ class EmployeeDataSource extends DataGridSource {
 
 ![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
 
-## Perfrom sorting asynchronously
+## Perform sorting asynchronously
 
 * **[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html)** :
-Called when the sorting is applied to the column.To delay the sorting process, implement asynchronous in perfrom sorting. 
+Called when the sorting is applied to the column.To delay the sorting process, implement asynchronous in perform sorting. 
 
-The following code shows how to make perfrom sorting as asynchronously.
+The following code shows how to make perform sorting as asynchronously.
 
 {% tabs %}
 {% highlight Dart %} 
