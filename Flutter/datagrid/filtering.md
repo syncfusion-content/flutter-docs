@@ -1131,4 +1131,142 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Change the position of filter icon
+
+The position of filter icon can be customized by using `GridColumn.filterIconPosition`.
+
+The following code describes how to change filter icon position by using [GridColumn].
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+      source: _employeeDataSource,
+      allowFiltering: true,
+      gridLinesVisibility: GridLinesVisibility.both,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      columns: [
+        GridColumn(
+            filterIconPosition: ColumnHeaderIconPosition.start,
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'
+                ))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customized the filter icon position](images/filtering/flutter-datagrid-customized-filter-position.jpg)
+
+## Change the textStyle of filter popup menu
+
+The textStyle of filter popup menu can be customized by using `SfDataGridThemeData.filterPopupTextStyle` `SfDataGridThemeData.filterPopupDisabledTextStyle`
+
+The following code describes how to change textStyle of filter popup menu by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGridTheme(
+    data: SfDataGridThemeData(
+      filterPopupTextStyle:GoogleFonts.sacramento(
+        textStyle: const TextStyle(
+              fontSize: 25
+              )),
+          filterPopupDisabledTextStyle: GoogleFonts.abhayaLibre(
+              textStyle: const TextStyle(
+                  fontSize:25
+                  )),),
+    child: SfDataGrid(
+      source: _employeeDataSource,
+      allowFiltering: true,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'
+                ))),
+      ],
+    ),
+  ));
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customized the textStyle of filter popup menu](images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.jpg)
+
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>

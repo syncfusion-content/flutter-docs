@@ -535,6 +535,72 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.jpg)
 
+## Change the position of sort icon
+
+The position of sort icon can be customized by using `GridColumn.sortIconPosition`.
+
+The following code describes how to change sort icon position by using [GridColumn].
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      allowMultiColumnSorting: true,
+      gridLinesVisibility: GridLinesVisibility.both,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      columns: [
+        GridColumn(
+            sortIconPosition: ColumnHeaderIconPosition.start,
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'
+                ))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sorticon-position.jpg)
+
 ## Set a custom sorting icon
 
 `SfDataGrid` allows you to change the sort icon by using the [SfDataGridThemeData.sortIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIcon.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme`. 
@@ -797,6 +863,103 @@ class EmployeeDataSource extends DataGridSource {
   }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+## Perfrom sorting asynchronously
+
+* **[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html)** :
+Called when the sorting is applied to the column.To delay the sorting process, implement asynchronous in perfrom sorting. 
+
+The following code shows how to make perfrom sorting as asynchronously.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employeeData = employeeData
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> _employeeData = [];
+
+  @override
+  List<DataGridRow> get rows => _employeeData;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        alignment: e.columnName == 'id' || e.columnName == 'salary'
+            ? Alignment.centerRight
+            : Alignment.centerLeft,
+        padding: const EdgeInsets.all(8.0),
+        child: Text(e.value.toString()),
+      );
+    }).toList());
+  }
+
+bool isSuspend =true;
+  @override
+  Future<void> performSorting(List<DataGridRow> rows) async {
+    if(!isSuspend)
+    {
+      return;
+    }
+    if (sortedColumns.isEmpty) {
+      return;
+    }
+    loadingController.add(true);
+    await Future<void>.delayed(const Duration(seconds: 2));
+    loadingController.add(false);
+    _employeeData.clear();
+    for (int i = 0; i < sortedColumns.length; i++) {
+      if(sortedColumns[i].sortDirection==DataGridSortDirection.ascending)
+      {
+    var employee2=getEmployeeData();
+   _employeeData = employee2
+       .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  isSuspend=false;     
+  notifyListeners();
+  }
+  else if(sortedColumns[i].sortDirection==DataGridSortDirection.descending)
+  {
+    var employee2=getEmployeeDataDescending();
+   _employeeData = employee2
+       .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  isSuspend=false;     
+  notifyListeners();
+  }
+ }
+isSuspend=true;
+}
+}
+  
 {% endhighlight %}
 {% endtabs %}
 
