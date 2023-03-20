@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering is the process of fetching the values from a collection that satisfies a specified condition. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied through the UI and programmatically.
 
-## Programmatical Filtering
+## Programmatic Filtering
 
 The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` defines the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
 
@@ -1132,3 +1132,138 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>
+
+## Change the position of filter icon
+
+The position of filter icon can be changed by using `GridColumn.filterIconPosition`property.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+      source: _employeeDataSource,
+      allowFiltering: true,
+      gridLinesVisibility: GridLinesVisibility.both,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      columns: [
+        GridColumn(
+            filterIconPosition: ColumnHeaderIconPosition.start,
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'
+                ))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
+
+## Change the text Style of filter popup menu
+
+The text Style of filter popup menu can be customized by using `SfDataGridThemeData.filterPopupTextStyle` `SfDataGridThemeData.filterPopupDisabledTextStyle` properties.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGridTheme(
+    data: SfDataGridThemeData(
+      filterPopupTextStyle:GoogleFonts.sacramento(
+        textStyle: const TextStyle(
+              fontSize: 25
+              )),
+          filterPopupDisabledTextStyle: GoogleFonts.abhayaLibre(
+              textStyle: const TextStyle(
+                  fontSize:25
+                  )),),
+    child: SfDataGrid(
+      source: _employeeDataSource,
+      allowFiltering: true,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'
+                ))),
+      ],
+    ),
+  ));
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
+
