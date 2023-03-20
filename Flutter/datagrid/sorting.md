@@ -537,9 +537,7 @@ Widget build(BuildContext context) {
 
 ## Change the position of sort icon
 
-The position of sort icon can be customized by using `GridColumn.sortIconPosition`.
-
-The following code describes how to change sort icon position by using [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html).
+The position of sort icon can be changed by using `GridColumn.sortIconPosition`property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -873,15 +871,86 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform sorting asynchronously
 
-* **[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html)** :
-Called when the sorting is applied to the column.To delay the sorting process, implement asynchronous in perform sorting. 
+[performSorting] method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
 
-The following code shows how to make perform sorting as asynchronously.
+The below example shows how to apply the sorting asynchronously for underlying model collection instead of built-in sorting and apply Future.delay for specific time,
 
 {% tabs %}
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+StreamController<bool> loadingController = StreamController<bool>();
+
+class _MyHomePageState extends State<MyHomePage> {
+  List<Employee> employees = <Employee>[];
+  late EmployeeDataSource employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeDataAscending();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: StreamBuilder(
+            stream: loadingController.stream,
+            builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+              return Stack(children: [
+                SfDataGrid(
+                  source: employeeDataSource,
+                  columnWidthMode: ColumnWidthMode.fill,
+                  allowSorting: true,
+                  allowMultiColumnSorting: true,
+                  showSortNumbers: true,
+                  gridLinesVisibility: GridLinesVisibility.both,
+                  headerGridLinesVisibility: GridLinesVisibility.both,
+                  columns: <GridColumn>[
+                    GridColumn(
+                        columnName: 'id',
+                        label: Container(
+                            padding: const EdgeInsets.all(16.0),
+                            alignment: Alignment.centerRight,
+                            child: const Text(
+                              'ID',
+                            ))),
+                    GridColumn(
+                        columnName: 'name',
+                        label: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: const Text('Name'))),
+                    GridColumn(
+                        columnName: 'designation',
+                        label: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: const Text(
+                              'Designation',
+                              overflow: TextOverflow.ellipsis,
+                            ))),
+                    GridColumn(
+                        columnName: 'salary',
+                        label: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerRight,
+                            child: const Text('Salary'))),
+                  ],
+                ),
+                if (snapshot.data==true)
+                  const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+              ]);
+            }));
+  }
+}
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -932,7 +1001,7 @@ bool isSuspend =true;
     for (int i = 0; i < sortedColumns.length; i++) {
       if(sortedColumns[i].sortDirection==DataGridSortDirection.ascending)
       {
-    var employee2=getEmployeeData();
+    var employee2=getEmployeeDataAscending();
    _employeeData = employee2
        .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: e.id),
