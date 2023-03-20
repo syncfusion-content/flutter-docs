@@ -1196,9 +1196,9 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
 
-## Change the textStyle of filter popup menu
+## Change the text Style of filter popup menu
 
-The textStyle of filter popup menu can be customized by using `SfDataGridThemeData.filterPopupTextStyle` `SfDataGridThemeData.filterPopupDisabledTextStyle` properties.
+The text Style of filter popup menu can be customized by using `SfDataGridThemeData.filterPopupTextStyle` `SfDataGridThemeData.filterPopupDisabledTextStyle` properties.
 
 {% tabs %}
 {% highlight Dart %} 

@@ -727,7 +727,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform editing asynchronously
 
-The editing can be asynchronously performed by handling the [DataGridSource.canSubmitCell] method which is called before cell ends its editing and [DataGridSource.onCellSubmit] which is called when cell ends its editing.
+The editing can be asynchronously performed by handling the `DataGridSource.canSubmitCell` method which is called before cell ends its editing and `DataGridSource.onCellSubmit` which is called when cell ends its editing.
 
 The below example shows how to show loading indicator for specific amount of time when cell ends its editing and also show loading indicator until cell checks whether entered value is valid.
 

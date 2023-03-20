@@ -871,7 +871,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform sorting asynchronously
 
-[performSorting] method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
+`performSorting` method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
 
 The below example shows how to apply the sorting asynchronously for underlying model collection instead of built-in sorting and apply Future.delay for specific time,
 
@@ -988,12 +988,9 @@ bool isSuspend =true;
   @override
   Future<void> performSorting(List<DataGridRow> rows) async {
     if(!isSuspend)
-    {
       return;
-    }
-    if (sortedColumns.isEmpty) {
+    if (sortedColumns.isEmpty) 
       return;
-    }
     loadingController.add(true);
     await Future<void>.delayed(const Duration(seconds: 2));
     loadingController.add(false);
