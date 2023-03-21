@@ -1135,7 +1135,7 @@ Widget build(BuildContext context) {
 
 ## Change the position of filter icon
 
-The position of filter icon can be changed by using `GridColumn.filterIconPosition`property.
+The position of the filter icon can be changed by using the `GridColumn.filterIconPosition`property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1196,9 +1196,9 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
 
-## Change the text Style of filter popup menu
+## Change the text style of filter popup menu
 
-The text Style of filter popup menu can be customized by using `SfDataGridThemeData.filterPopupTextStyle` `SfDataGridThemeData.filterPopupDisabledTextStyle` properties.
+The text style of filter popup menu can be customized by using the `SfDataGridThemeData.filterPopupTextStyle` and `SfDataGridThemeData.filterPopupDisabledTextStyle` properties.
 
 {% tabs %}
 {% highlight Dart %} 
