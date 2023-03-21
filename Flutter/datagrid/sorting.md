@@ -537,7 +537,7 @@ Widget build(BuildContext context) {
 
 ## Change the position of sort icon
 
-The position of sort icon can be changed by using `GridColumn.sortIconPosition`property.
+The position of the sort icon can be changed by using the `GridColumn.sortIconPosition`property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -873,7 +873,7 @@ class EmployeeDataSource extends DataGridSource {
 
 `performSorting` method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
 
-The below example shows how to apply the sorting asynchronously for underlying model collection instead of built-in sorting and apply Future.delay for specific time,
+The following example shows how to apply the sorting asynchronously for the underlying model collection instead of built-in sorting and apply the Future.delay for a specific time,
 
 {% tabs %}
 {% highlight Dart %} 
