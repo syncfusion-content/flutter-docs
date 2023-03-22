@@ -86,7 +86,7 @@ chart.dataRange = sheet.getRangeByName('A1:B4');
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Chart.xlsx').writeAsBytes(bytes);
@@ -181,7 +181,7 @@ chart.linePatternColor = '#0000FF';
 sheet.charts = charts;
 
 // save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('ChartElement.xlsx').writeAsBytes(bytes);

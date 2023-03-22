@@ -13,7 +13,7 @@ The content of a document can be zoomed in and out either by pinch to zoom or ch
 
 ## Change the zoom level factor programmatically
 
-You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set between 1.0 and 3.0. The default value is 1.0. The following code example explains the same.
+You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set to 1.0 and above. The default value is 1.0. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="21" %}
@@ -53,7 +53,23 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> The maximum allowed zoom level is 3.0 and if any value is set beyond that, then it will be restricted to 3.0.
+## Set and adjust the maximum zoom level
+
+The `SfPdfViewer` allows you to set and adjust the maximum zoom level for the PDF document being displayed using the `maxZoomLevel` property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="6" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
+              maxZoomLevel: 5));
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Enable or disable the double-tap zoom.
 

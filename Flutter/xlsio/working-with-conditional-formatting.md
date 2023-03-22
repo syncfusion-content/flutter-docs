@@ -129,7 +129,7 @@ condition3.bottomBorderStyle = LineStyle.thin;
 condition3.bottomBorderColorRgb = Color.fromARGB(255, 240, 160, 200);
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('ConditionalFormatting.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -175,7 +175,7 @@ condition1.firstFormulaR1C1 = '=R[1]C[0]';
 condition1.secondFormulaR1C1 = '=R[8]C[0]';
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('FormulaR1C1.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -229,7 +229,7 @@ sheet.getRangeByIndex(9, 1).setText('Kani');
 sheet.getRangeByIndex(10, 1).setText('Anu');
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFSpecificText.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -314,7 +314,7 @@ sheet
 sheet.autoFitColumn(1);
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFDateoccurring.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -381,7 +381,7 @@ condition.bottomBorderStyle = LineStyle.medium;
 condition.bottomBorderColor = '#2F2BD3';
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFUniqueDuplicate.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -455,7 +455,7 @@ condition.backColor = '#934ADD';
 condition.isBold = true;
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFTopBottom.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -524,7 +524,7 @@ condition.backColor = '#934ADD';
 condition.isItalic = true;
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFTopBottomPercent.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -596,7 +596,7 @@ condition.isItalic = true;
 condition.isBold = true;
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFAboveBelowAverage.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -662,7 +662,7 @@ condition.isItalic = true;
 condition.isBold = true;
 
 //save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CFAboveBelowAverageStd.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -788,7 +788,7 @@ iconValue3.type = ConditionValueType.percent;
 iconValue3.value = '75';
 iconValue3.operator = ConditionalFormatOperator.greaterThan;
 
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('CustomIconSet.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -969,7 +969,7 @@ dataBar.barColorRgb = Color.fromARGB(255, 244, 180, 10);
 dataBar.showValue = false;
 
 // save and dispose.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('ConditionalFormat.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
