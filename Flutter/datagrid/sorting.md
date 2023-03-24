@@ -537,7 +537,7 @@ Widget build(BuildContext context) {
 
 ## Change the position of sort icon
 
-The position of the sort icon can be changed by using the `GridColumn.sortIconPosition`property.
+The position of the sort icon can be changed by using the [GridColumn.sortIconPosition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/sortIconPosition.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -871,7 +871,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform sorting asynchronously
 
-`performSorting` method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
+[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html) method can be used to perform the sorting asynchronously. This method is called whenever the sorting is applied for each column.
 
 The following example shows how to apply the sorting asynchronously for the underlying model collection instead of built-in sorting and apply the Future.delay for a specific time,
 

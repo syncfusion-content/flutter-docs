@@ -727,7 +727,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform editing asynchronously
 
-The editing can be asynchronously performed by handling the `DataGridSource.canSubmitCell` method, which is called before the cell ends its editing and `DataGridSource.onCellSubmit`, which is called when the cell ends its editing.
+The editing can be asynchronously performed by handling the [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method, which is called before the cell ends its editing and [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html), which is called when the cell ends its editing.
 
 The following example shows how to show the loading indicator for a specific amount of time when the cell ends its editing and also show the loading indicator until the cell checks whether entered value is valid.
 
