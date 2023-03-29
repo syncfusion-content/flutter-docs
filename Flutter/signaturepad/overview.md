@@ -11,7 +11,7 @@ documentation: ug
 
 The SignaturePad is a widget for capturing smooth and realistic signatures. This widget allows you to save signatures as images and sync them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad widget.
 
-### Features
+## Features
 
 * **Signature stroke color customization** - The widget allows you to set the stroke color for the signatures.
 * **Signature stroke width customization** - The widget allows you to set the minimum and maximum stroke widths for the signatures.
