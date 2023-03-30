@@ -99,6 +99,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
+                    onChanged: null,
               )
           )
       )
@@ -126,6 +127,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
+                    onChanged: null,
               )
           )
       )
@@ -181,6 +183,7 @@ Widget build(BuildContext context) {
                      minorTicksPerInterval: 1,
                      showDividers: true,
                      values: _values,
+                     onChanged: null,
                   ),
               )
           )
@@ -225,6 +228,7 @@ Widget build(BuildContext context) {
                      minorTicksPerInterval: 1,
                      showDividers: true,
                      values: _values,
+                     onChanged: null,
                   ),
               )
           )
