@@ -234,6 +234,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**  
+  You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
+
 ## Defining columns
 
 `SfDataGrid` supports to add any widget in a column using the `GridColumn` property. You can add the column collection to the `columns` property.

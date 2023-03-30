@@ -89,6 +89,8 @@ The slider will be in disabled state if [`onChanged`](https://pub.dev/documentat
 {% tabs %}
 {% highlight Dart %}
 
+double _value = 5.0;
+
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -97,7 +99,8 @@ Widget build(BuildContext context) {
               child: SfSlider(
                 min: 0.0,
                 max: 10.0,
-                value: 5.0,
+                value: _value,
+                onChanged: null,
               )
           )
       )
@@ -114,6 +117,8 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
+double _value = 5.0;
+
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -122,7 +127,8 @@ Widget build(BuildContext context) {
               child: SfSlider.vertical(
                 min: 0.0,
                 max: 10.0,
-                value: 5.0,
+                value: _value,
+                onChanged: null,
               )
           )
       )
@@ -179,6 +185,7 @@ Widget build(BuildContext context) {
                   minorTicksPerInterval: 1,
                   showDividers: true,
                   value: _value,
+                  onChanged: null,
                 ),
               )
           )
@@ -223,6 +230,7 @@ Widget build(BuildContext context) {
                   minorTicksPerInterval: 1,
                   showDividers: true,
                   value: _value,
+                  onChanged: null,
                 ),
               )
           )
