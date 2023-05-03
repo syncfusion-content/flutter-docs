@@ -1325,4 +1325,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-filter-icon-when-mouse-hovering.png"/>
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-filter-icon-when-mouse-hovering.gif"/>
