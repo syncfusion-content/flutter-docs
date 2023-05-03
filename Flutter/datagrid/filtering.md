@@ -1267,3 +1267,62 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
 
+## FilterIcon visible when mouse hovering header cell
+
+To show a filter icon when the mouse hovers over a column header in a DataGrid,set the `SfDataGrid.showFilterIconOnHover` property to true.The filter icon will remain visible until the filter popup menu is closed.Note that this feature only works on web and desktop platforms.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      allowFiltering: true,
+      showFilterIconOnHover:true,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      gridLinesVisibility: GridLinesVisibility.both,
+      columnWidthMode: ColumnWidthMode.auto,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-filter-icon-when-mouse-hovering.png"/>
