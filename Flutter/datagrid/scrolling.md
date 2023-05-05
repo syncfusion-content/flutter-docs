@@ -75,6 +75,8 @@ You can control the visibility of horizontal and vertical scrollbars in the Data
 
 N> The default value of `showVerticalScrollbar` and  `showHorizontalScrollbar` is true.
 
+The following code snippets demonstrate how to hide the scrollbars in the DataGrid:
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -84,46 +86,46 @@ Widget build(BuildContext context) {
     appBar: AppBar(
       title: const Text('Syncfusion Flutter DataGrid'),
     ),
-    body:ScrollConfiguration(
-          behavior: const ScrollBehavior().copyWith(scrollbars: false),
-          child: SfDataGrid(
-            source: employeeDataSource,
-            showVerticalScrollbar:false,
-            showHorizontalScrollbar:false,
-            isScrollbarAlwaysShown: true,
-            columns: <GridColumn>[
-              GridColumn(
-                  columnName: 'id',
-                  label: Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'ID',
-                      ))),
-              GridColumn(
-                  columnName: 'name',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text('Name'))),
-              GridColumn(
-                  columnName: 'designation',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Designation',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'salary',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerRight,
-                      child: Text('Salary'))),
-            ],
-          ),
-        ),
+    body: ScrollConfiguration(
+      behavior: const ScrollBehavior().copyWith(scrollbars: false),
+      child: SfDataGrid(
+        source: employeeDataSource,
+        showVerticalScrollbar: false,
+        showHorizontalScrollbar: false,
+        isScrollbarAlwaysShown: true,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text('Salary'))),
+        ],
+      ),
+    ),
   );
 }
 
