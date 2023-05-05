@@ -69,6 +69,67 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Change scrollbars visibility
+
+You can control the visibility of horizontal and vertical scrollbars in the DataGrid by setting the `SfDataGrid.showVerticalScrollbar` and `SfDataGrid.showHorizontalScrollbar` properties. To disable the default scrollbar of the `SingleChildScrollView`, wrap the `ScrollConfiguration` as the parent for the `SfDataGrid` and set the scrollbars to false.
+
+N> The default value of `showVerticalScrollbar` and  `showHorizontalScrollbar` is true.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body:ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(scrollbars: false),
+          child: SfDataGrid(
+            source: employeeDataSource,
+            showVerticalScrollbar:false,
+            showHorizontalScrollbar:false,
+            isScrollbarAlwaysShown: true,
+            columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.all(16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'ID',
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text('Name'))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.centerRight,
+                      child: Text('Salary'))),
+            ],
+          ),
+        ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Setting scroll physics for scroll bars
 
 SfDataGrid allows you to set the [ScrollPhysics](https://api.flutter.dev/flutter/widgets/ScrollPhysics-class.html) for horizontal and vertical scrollbars to control how the scroll view should respond to user input by using [horizontalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollPhysics.html) and [verticalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollPhysics.html) properties respectively.
@@ -821,66 +882,3 @@ late EmployeeDataSource _employeeDataSource;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Hide Scrollbars always
-
-You can hide horizontal and vertical scrollbars always by using the `SfDataGrid.showVerticalScrollbar` and `SfDataGrid.showHorizontalScrollbar` property. By setting these properties to false,the scrollbar will be hide, whereas setting them to true will always make the scrollbar visible.To hide the scrollbar, it is necessary to wrap the ScrollConfiguration as the parent for SfDataGrid and the scrollbars must be set to false.
-
-N> The default value of `showVerticalScrollbar` and  `showHorizontalScrollbar` is true.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body:ScrollConfiguration(
-          behavior: const ScrollBehavior().copyWith(scrollbars: false),
-          child: SfDataGrid(
-            source: employeeDataSource,
-            columnWidthMode: ColumnWidthMode.fill,
-            showVerticalScrollbar:false,
-            showHorizontalScrollbar:false,
-            isScrollbarAlwaysShown: true,
-            columns: <GridColumn>[
-              GridColumn(
-                  columnName: 'id',
-                  label: Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'ID',
-                      ))),
-              GridColumn(
-                  columnName: 'name',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text('Name'))),
-              GridColumn(
-                  columnName: 'designation',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Designation',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'salary',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.centerRight,
-                      child: Text('Salary'))),
-            ],
-          ),
-        ),
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-

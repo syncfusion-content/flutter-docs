@@ -1267,9 +1267,9 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
 
-## FilterIcon visible when mouse hovering header cell
+## Show filter icon when hovering the header cell
 
-To show a filter icon when the mouse hovers over a column header in a DataGrid,set the `SfDataGrid.showFilterIconOnHover` property to true.The filter icon will remain visible until the filter popup menu is closed.Note that this feature only works on web and desktop platforms.
+To show a filter icon when the mouse hovers over a column header in a DataGrid, set the `SfDataGrid.showFilterIconOnHover` property to true. Note that this feature is only available on web and desktop platforms
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1325,4 +1325,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-filter-icon-when-mouse-hovering.gif"/>
+<img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
