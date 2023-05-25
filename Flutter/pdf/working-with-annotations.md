@@ -30,6 +30,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
     Rect.fromLTWH(0, 30, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
+    setAppearance: true,
     modifiedDate: DateTime.now());
 
 //Adds the annotation to the PDF page
@@ -59,6 +60,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
     Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
+    setAppearance: true,
     modifiedDate: DateTime.now());
 
 //Adds the annotation to the loaded page
@@ -95,6 +97,7 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
     border: PdfAnnotationBorder(10),
+    setAppearance: true,
     modifiedDate: DateTime.now());
 
 //Adds annotation to the page
@@ -129,6 +132,7 @@ PdfEllipseAnnotation ellipseAnnotation = PdfEllipseAnnotation(
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(0, 0, 255),
     border: PdfAnnotationBorder(10),
+    setAppearance: true,
     modifiedDate: DateTime.now());
 
 //Adds annotation to the page
@@ -170,6 +174,7 @@ PdfLineAnnotation lineAnnotation = PdfLineAnnotation(
     leaderLineExt: 10,
     leaderLine: 2,
     lineCaption: true,
+    setAppearance: true,
     captionType: PdfLineCaptionType.top,
     modifiedDate: DateTime.now());
 
@@ -204,6 +209,7 @@ PdfPolygonAnnotation polygonAnnotation = PdfPolygonAnnotation(
     author: 'Syncfusion',
     color: PdfColor(255, 0, 0),
     innerColor: PdfColor(255, 0, 255),
+    setAppearance: true,
     modifiedDate: DateTime.now());
 
 //Adds annotation to the page
@@ -234,7 +240,8 @@ PdfPage page = document.pages.add();
 //Creates a new document link annotation
 PdfDocumentLinkAnnotation documentLinkAnnotation =
     PdfDocumentLinkAnnotation(Rect.fromLTWH(10, 40, 30, 30),
-        PdfDestination(document.pages.add(), Offset(10, 0)));
+    setAppearance: true,
+    PdfDestination(document.pages.add(), Offset(10, 0)));
 
 //Adds this annotation the page.
 page.annotations.add(documentLinkAnnotation);
@@ -263,7 +270,8 @@ PdfPage page = document.pages.add();
 
 //Creates a new URI annotation
 PdfUriAnnotation uriAnnotation = PdfUriAnnotation(
-    bounds: Rect.fromLTWH(10, 10, 100, 30), uri: 'http://www.google.com');
+    bounds: Rect.fromLTWH(10, 10, 100, 30), setAppearance: true,
+     uri: 'http://www.google.com');
 
 //Adds this annotation to the page.
 page.annotations.add(uriAnnotation);
@@ -297,6 +305,7 @@ PdfTextWebLink textWebLink = PdfTextWebLink(
     font: PdfStandardFont(PdfFontFamily.helvetica, 10,
         style: PdfFontStyle.bold),
     brush: PdfBrushes.red,
+    setAppearance: true,
     pen: PdfPen(PdfColor(0, 0, 255)));
 
 //Draws the text web link to the page
@@ -406,6 +415,7 @@ annotation.innerColor = PdfColor(0, 255, 0);
 annotation.text = 'Modified Annotation';
 annotation.author = 'Syncfusion';
 annotation.modifiedDate = DateTime.now();
+annotation.setAppearance: true;
 
 //Saves the document
 File('output.pdf').writeAsBytes(await document.save());
