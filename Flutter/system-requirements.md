@@ -30,9 +30,9 @@ The system requirements for using our Syncfusion Flutter platform are as follows
 
 See the links below for the recommended Flutter development environments
 
-* Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://flutter.dev/docs/get-started/install/windows)
-* MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://flutter.dev/docs/get-started/install/macos)
-* Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://flutter.dev/docs/get-started/install/linux)
+* Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
+* MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
+* Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://docs.flutter.dev/get-started/install/linux)
 
 ### SDK Version
 
