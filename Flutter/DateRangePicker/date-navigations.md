@@ -401,12 +401,12 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to change the navigation direction in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12176/how-to-change-the-navigation-direction-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to do programmatic navigation using Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12140/how-to-do-programmatic-navigation-using-flutter-date-range-picker-sfdaterangepicker)
-* [How to programmatically navigate to the adjacent dates in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12137/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-date-range-picker)
-* [How to programmatically navigate to the date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12135/how-to-programmatically-navigate-to-the-date-in-the-flutter-date-range-picker)
-* [How to programmatically select the date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12114/how-to-programmatically-select-the-date-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to navigate to the previous or next views using navigation arrows in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12270/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-date)
-* [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12113/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
-* [How to select previous or next dates based on the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12354/how-to-select-previous-or-next-dates-based-on-the-selected-date-in-the-flutter-date-range)
-* [How to restrict the view navigation in the Flutter Date Range Picker](https://www.syncfusion.com/kb/12500/how-to-restrict-the-view-navigation-in-the-flutter-date-range-picker)
+* [How to change the navigation direction in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10703/how-to-change-the-navigation-direction-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to do programmatic navigation using Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10646/how-to-do-programmatic-navigation-using-flutter-date-range-picker-sfdaterangepicker)
+* [How to programmatically navigate to the adjacent dates in the Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10697/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-date-range-picker)
+* [How to programmatically navigate to the date in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10712/how-to-programmatically-navigate-to-the-date-in-the-flutter-date-range-picker)
+* [How to programmatically select the date in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10508/how-to-programmatically-select-the-date-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to navigate to the previous or next views using navigation arrows in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10690/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-date)
+* [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10509/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
+* [How to select previous or next dates based on the selected date in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10727/how-to-select-previous-or-next-dates-based-on-the-selected-date-in-the-flutter-date-range)
+* [How to restrict the view navigation in the Flutter Date Range Picker](https://support.syncfusion.com/kb/article/10976/how-to-restrict-the-view-navigation-in-the-flutter-date-range-picker)
