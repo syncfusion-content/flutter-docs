@@ -152,6 +152,6 @@ Widget build(BuildContext context) {
 * For recurrence appointment, the long pressed details will always return as `Appointment`, even for the custom business object.
 
 ## See also
-* [How to get visible dates details from the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)
-* [How to get Datetime details while tapping the Flutter event calendar elements](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)
-* [How to handle the long press action on date selection in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12121/how-to-handle-the-long-press-action-on-date-selection-in-the-flutter-event-calendar)
+* [How to get visible dates details from the flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/9574/how-to-get-visible-dates-details-from-the-flutter-calendar)
+* [How to get Datetime details while tapping the Flutter event calendar elements](https://support.syncfusion.com/kb/article/9611/how-to-get-datetime-details-while-tapping-the-flutter-calendar)
+* [How to handle the long press action on date selection in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10497/how-to-handle-the-long-press-action-on-date-selection-in-the-flutter-calendar)

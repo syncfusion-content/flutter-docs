@@ -67,7 +67,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 #### See Also 
 
-* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
+* [Display volume data of financial series](https://support.syncfusion.com/kb/article/11479/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
 
 ## Indication for same values
 

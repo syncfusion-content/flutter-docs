@@ -367,7 +367,7 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 ## See also
 
 
-* [How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12192/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-event-calendar)
-* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12191/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-event-calendar)
-* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://www.syncfusion.com/kb/12210/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
-* [How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://www.syncfusion.com/kb/12306/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-event-calendar)
+* [How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10677/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-calendar)
+* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10679/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-calendar)
+* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10707/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
+* [How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10747/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-calendar)

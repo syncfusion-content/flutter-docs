@@ -355,6 +355,6 @@ Also refer [selection event](https://help.syncfusion.com/flutter/cartesian-chart
 
 #### See Also
 
-* [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
+* [Dynamically selecting the data points in a chart](https://support.syncfusion.com/kb/article/10146/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

@@ -751,7 +751,7 @@ The Flutter Chart supports the following types of interval for date-time axis:
 
 #### See Also
 
-* [Rendering flutter time series chart with hours interval](https://www.syncfusion.com/kb/12289/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart).
+* [Rendering flutter time series chart with hours interval](https://support.syncfusion.com/kb/article/10765/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart).
 
 ### Double range support
 
@@ -1266,6 +1266,6 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 #### See Also
 
-* [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
+* [Applying currency format to axis labels](https://support.syncfusion.com/kb/article/9852/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

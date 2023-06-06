@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfBarcodeGenerator` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfBarcodeGenerator` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following elements.
 * [Bar color](https://help.syncfusion.com/flutter/barcode/barcode-customization)

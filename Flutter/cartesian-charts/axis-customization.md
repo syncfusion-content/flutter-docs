@@ -937,7 +937,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 #### See Also
 
-* [Render a line at a specific axis value in Cartesian charts](https://www.syncfusion.com/kb/12951/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
+* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
 
 ### Plot band padding
 
@@ -1191,7 +1191,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 #### See Also
 
-* [Synchronize on-demand loading in the Cartesian charts](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
+* [Synchronize on-demand loading in the Cartesian charts](https://support.syncfusion.com/kb/article/11533/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 
 ## Axis label width customization
 
@@ -1884,10 +1884,10 @@ The different types of multi-level label's border are mentioned below,
 
 #### See Also
 
-* [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
+* [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 
-* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://www.syncfusion.com/kb/12318/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
 
-* [Changing the visible range of chart using range selector in the Cartesian chart](https://www.syncfusion.com/kb/12053/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
+* [Changing the visible range of chart using range selector in the Cartesian chart](https://support.syncfusion.com/kb/article/10571/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
 
-* [Add vertical line and update it dynamically in the Cartesian charts](https://www.syncfusion.com/kb/13028/how-to-add-a-vertical-line-and-update-it-dynamically-in-the-cartesian-charts).
+* [Add vertical line and update it dynamically in the Cartesian charts](https://support.syncfusion.com/kb/article/11405/how-to-add-a-vertical-line-and-update-it-dynamically-in-the-cartesian-charts).

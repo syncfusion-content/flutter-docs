@@ -114,10 +114,10 @@ You can customize the plot area of the chart using the below properties.
 
 #### See Also
 
-* [Rendering a background image in the plot area of the Cartesian chart](https://www.syncfusion.com/kb/11049/how-to-render-the-cartesian-chart-sfcartesianchart-with-background-image-for-plot-area).
+* [Rendering a background image in the plot area of the Cartesian chart](https://support.syncfusion.com/kb/article/9741/how-to-render-the-cartesian-chart-sfcartesianchart-with-background-image-for-plot-area).
 
-* [Rendering the Cartesian chart in dark theme](https://www.syncfusion.com/kb/11025/how-to-render-the-flutter-cartesian-chart-sfcartesianchart-in-dark-theme).
+* [Rendering the Cartesian chart in dark theme](https://support.syncfusion.com/kb/article/9576/how-to-render-the-flutter-cartesian-chart-sfcartesianchart-in-dark-theme).
 
-* [Hide the plot area border line in the Flutter chart](https://www.syncfusion.com/kb/12573/how-to-hide-the-plot-area-border-line-in-the-flutter-chart-sfcartesianchart).
+* [Hide the plot area border line in the Flutter chart](https://support.syncfusion.com/kb/article/10910/how-to-hide-the-plot-area-border-line-in-the-flutter-chart-sfcartesianchart).
 
-* [Render the Flutter chart with background image](https://www.syncfusion.com/kb/12536/how-to-render-the-flutter-chart-with-background-image-sfcartesianchart).
+* [Render the Flutter chart with background image](https://support.syncfusion.com/kb/article/10888/how-to-render-the-flutter-chart-with-background-image-sfcartesianchart).
