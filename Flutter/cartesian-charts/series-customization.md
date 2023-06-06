@@ -210,11 +210,11 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
 
 #### See Also
 
-* [Create dynamic animated series on addition of data points in the series](https://www.syncfusion.com/kb/12290/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart).
+* [Create dynamic animated series on addition of data points in the series](https://support.syncfusion.com/kb/article/10743/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart).
 
-* [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart).
+* [Dynamically animate chart using public methods](https://support.syncfusion.com/kb/article/10685/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart).
 
-* [Change the series delay duration in Flutter Cartesian charts](https://www.syncfusion.com/kb/12972/change-the-series-delay-duration-in-flutter-cartesian-charts).
+* [Change the series delay duration in Flutter Cartesian charts](https://support.syncfusion.com/kb/article/11360/change-the-series-delay-duration-in-flutter-cartesian-charts).
 
 ## Transpose the series
 
@@ -414,7 +414,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 #### See Also
 
-* [Rotating the gradient applied to a chart in Cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart).
+* [Rotating the gradient applied to a chart in Cartesian charts](https://support.syncfusion.com/kb/article/10445/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart).
 
 >**Note**: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
 
@@ -697,6 +697,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 #### See Also
 
-* [Rendering a chart using JSON data retrieved from a fire base](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).
+* [Rendering a chart using JSON data retrieved from a fire base](https://support.syncfusion.com/kb/article/10589/how-to-render-the-flutter-chart-using-json-data-stored-in-firebase-database).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

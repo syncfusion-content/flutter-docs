@@ -104,7 +104,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 #### See Also
 
-* [Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
+* [Applying dashed pattern for line chart](https://support.syncfusion.com/kb/article/10763/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
 ## Multi-colored line
 

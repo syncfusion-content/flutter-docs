@@ -133,9 +133,9 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 #### See Also
 
-* [Bind data from the list to the Flutter Cartesian chart](https://www.syncfusion.com/kb/12592/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart).
+* [Bind data from the list to the Flutter Cartesian chart](https://support.syncfusion.com/kb/article/10935/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart).
 
-* [Bind data from the array to the Flutter Cartesian chart](https://www.syncfusion.com/kb/12591/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
+* [Bind data from the array to the Flutter Cartesian chart](https://support.syncfusion.com/kb/article/10932/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
 
 ## Add title
 
@@ -352,10 +352,10 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
-You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/cartesian_chart_example1086100980).
+You can find the complete getting started example from this [`link`](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
 
 >**Note**: You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
 
 #### See Also
 
-* [Integrate Syncfusion Flutter charts in Flutter web Application](https://www.syncfusion.com/kb/11551/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
+* [Integrate Syncfusion Flutter charts in Flutter web Application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
