@@ -17,7 +17,7 @@ To get start quickly with Flutter DataGrid, you can check on this video:
 
 ## Add Flutter DataGrid to an application
 
-Create a simple project using the instruction given in the  [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instruction given in the  [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 

@@ -16,7 +16,7 @@ To get start quickly with our Flutter date range picker widget, you can check on
 <iframe id='flutterDateRangePickerVideoTutorial' src='https://www.youtube.com/embed/3TyuUVExuPs'></iframe>
 
 ## Add Flutter Date Range Picker to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
@@ -206,6 +206,6 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
-* [How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12221/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to confirm or cancel the selection in the Flutter Date Range Picker](https://www.syncfusion.com/kb/12546/how-to-confirm-or-cancel-the-selection-in-the-flutter-date-range-picker)
+* [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10342/how-to-apply-theming-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10803/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to confirm or cancel the selection in the Flutter Date Range Picker](https://support.syncfusion.com/kb/article/10924/how-to-confirm-or-cancel-the-selection-in-the-flutter-date-range-picker)

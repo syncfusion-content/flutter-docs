@@ -126,6 +126,6 @@ class MyAppState extends State<MyApp> {
 
 ## See also
 
-* [How to customize the date range picker cells using builder in the Flutter (SfDateRangePicker)](https://www.syncfusion.com/kb/12208/how-to-customize-the-date-range-picker-cells-using-builder-in-the-flutter-sfdaterangepicker)
-* [How to create timeline Date Picker in Flutter](https://www.syncfusion.com/kb/12474/how-to-create-timeline-date-picker-in-flutter)
-* [How to customize the special dates using builder in the Flutter Date Range Picker](https://www.syncfusion.com/kb/12374/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-range-picker)
+* [How to customize the date range picker cells using builder in the Flutter (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10711/how-to-customize-the-date-range-picker-cells-using-builder-in-the-flutter-sfdaterangepicker)
+* [How to create timeline Date Picker in Flutter](https://support.syncfusion.com/kb/article/10992/how-to-create-timeline-date-picker-in-flutter)
+* [How to customize the special dates using builder in the Flutter Date Range Picker](https://support.syncfusion.com/kb/article/10750/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-range-picker)
