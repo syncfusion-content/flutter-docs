@@ -423,6 +423,85 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 ![Legend](images/legend/overflow_wrap.png)
 
+## Scrollbar for Legend
+
+The legend's overFlowMode is scroll, the scrolling will be enabled for the items which exceeds the bounds and now using the legend's [`shouldAlwaysShowScrollbar`]() property enable the scrollbar to make it visible.
+
+{% tabs %}
+{% highlight dart hl_lines="19" %} 
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+      ChartData(2005, 11, 21, 31, 41, 51),
+      ChartData(2006, 13, 23, 33, 43, 53),
+      ChartData(2007, 29, 36, 49, 59, 69),
+      ChartData(2008, 28, 38, 48, 68, 78),
+      ChartData(2009, 35, 54, 64, 74, 84),
+      ChartData(2010, 37, 57, 67, 77, 87),
+      ChartData(2011, 50, 70, 80, 85, 90),
+    ];
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+              legend: Legend(
+                isVisible: true,
+                position: LegendPosition.bottom,
+                // Overflowing legend content will be scrolled
+                overflowMode: LegendItemOverflowMode.scroll,
+                // The scrollbar is make it visible
+                shouldAlwaysShowScrollbar: true,
+              ),
+              series: <CartesianSeries<ChartData, int>>[
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series0
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series1
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series2
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series3
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series4
+                )
+              ]
+            )
+          )
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.series0, this.series1, this.series2, this.series3,
+      this.series4);
+      final int x;
+      final double series0;
+      final double series1;
+      final double series2;
+      final double series3;
+      final double series4;
+    }
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend](images/legend/scrollbar.png)
 
 ## Positioning the legend
 
