@@ -46,7 +46,7 @@ The following Flutter SDK version is required for our widgets:
     <tr>
         <td>Stable</td>
         <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip">v3.7.0</a>
+            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip">v3.10.0</a>
         </td>
     </tr>
 </table>
