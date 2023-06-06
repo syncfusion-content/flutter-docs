@@ -15,7 +15,7 @@ This article describes the most common installation errors, as well as the cause
 * [License has expired](https://help.syncfusion.com/flutter/installation/installation-errors#license-has-expired)
 * [Unable to find a valid license or trial](https://help.syncfusion.com/flutter/installation/installation-errors#unable-to-find-a-valid-license-or-trial)
 * [Unable to install because of another installation](https://help.syncfusion.com/flutter/installation/installation-errors#unable-to-install-because-of-another-installation)
-* [Unable to install due to controlled folder access](http://help.syncfusion.com/flutter/installation/installation-errors#unable-to-install-due-to-controlled-folder-access)
+* [Unable to install due to controlled folder access](https://help.syncfusion.com/flutter/installation/installation-errors#unable-to-install-due-to-controlled-folder-access)
 
 ## Unlocking the license installer using the trial key
 
@@ -31,7 +31,7 @@ You are attempting to use a Trial unlock key to unlock the licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
+Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
 
 
 ## License has expired
