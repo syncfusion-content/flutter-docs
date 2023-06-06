@@ -57,7 +57,7 @@ The tooltip state will be preserved on the device's orientation change and on br
 
 #### See Also
 
-* [Activate chart tooltip after the chart got rendered](https://www.syncfusion.com/kb/12223/how-to-activate-chart-tooltip-initially-after-the-chart-widget-got-rendered).
+* [Activate chart tooltip after the chart got rendered](https://support.syncfusion.com/kb/article/10627/how-to-activate-chart-tooltip-initially-after-the-chart-widget-got-rendered).
 
 ## Customizing the appearance
 

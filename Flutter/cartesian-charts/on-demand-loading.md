@@ -68,4 +68,4 @@ The below example demonstrates the infinite scrolling by showing the ci
 
 #### See Also
 
-* [Lazily load more data to the chart](https://www.syncfusion.com/kb/12535/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart).
+* [Lazily load more data to the chart](https://support.syncfusion.com/kb/article/10855/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart).

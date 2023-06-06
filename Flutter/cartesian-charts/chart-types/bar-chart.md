@@ -190,6 +190,6 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 #### See Also
 
-* [Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
+* [Create vertical bar chart](https://support.syncfusion.com/kb/article/10833/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
 
-* [Create horizontal bar chart](https://www.syncfusion.com/kb/12347/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget).
+* [Create horizontal bar chart](https://support.syncfusion.com/kb/article/10822/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget).
