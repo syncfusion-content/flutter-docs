@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting started with Flutter PDF
 
-This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/flutter-widgets/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
+This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 
 ## Steps to create PDF document in Flutter application
 
-Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
