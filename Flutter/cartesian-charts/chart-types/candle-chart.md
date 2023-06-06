@@ -68,9 +68,9 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 #### See Also 
 
-* [Rendering flutter candlestick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
+* [Rendering flutter candlestick chart](https://support.syncfusion.com/kb/article/10683/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
 
-* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart)
+* [Display volume data of financial series](https://support.syncfusion.com/kb/article/11479/display-volume-data-of-financial-series-in-flutter-cartesian-chart)
 
 ## Indication for same values
 
