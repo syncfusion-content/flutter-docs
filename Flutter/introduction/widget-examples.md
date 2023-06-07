@@ -110,7 +110,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td><p>Viewer</p></td>
-<td><p><a href="http://172.16.0.76/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf_viewer">samples/pdfviewer</a></p>
 </td></tr>
 
