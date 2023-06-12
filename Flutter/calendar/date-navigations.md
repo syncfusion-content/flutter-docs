@@ -195,7 +195,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 ## Show date picker
-You can enable the date picker for the calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property in the calendar, which displays the date picker and `Today` button in the header view. It allows you to quickly navigate to today and different calendar views.
+You can enable the date picker for the calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property in the calendar, which displays the date picker in the header view. It allows you to quickly navigate to the different calendar views.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
@@ -212,6 +212,23 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Show date picker](images/date-navigation/show_date_picker.png)
+
+## Show today button
+You can enable the today button by using the [showTodayButton] property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today view.
+
+{% tabs %}
+{% highlight dart hl_lines="5" %}
+
+@override
+Widget build(BuildContext context) {
+  return SfCalendar(
+      view: CalendarView.month,
+	  showTodayButton: true,
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Allow view navigation
 You can quickly navigate to the day view by a tap on the month cell and view header of the calendar views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowViewNavigation.html) property of the calendar.
