@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
 ![Show date picker](images/date-navigation/show_date_picker.png)
 
 ## Show today button
-You can enable the today button by using the [showTodayButton] property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today view.
+You can enable the today button by using the [showTodayButton] property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today's view.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
