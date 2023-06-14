@@ -16,54 +16,6 @@ The DataGrid provides the rearranged index of the dragged column, indicating its
 {% tabs %}
 {% highlight Dart %} 
 
-class MyHomePageState extends State<MyHomePage> {
-  List<Employee> employees = <Employee>[];
-  late List<GridColumn> columns;
-  late EmployeeDataSource employeeDataSource;
-
-  @override
-  void initState() {
-    super.initState();
-    columns = getColumns;
-    employees = getEmployeeData();
-    employeeDataSource =
-        EmployeeDataSource(employees: employees, columns: columns);
-  }
-
-  List<GridColumn> get getColumns {
-    return <GridColumn>[
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: const EdgeInsets.all(16.0),
-              alignment: Alignment.center,
-              child: const Text(
-                'ID',
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: const EdgeInsets.all(8.0),
-              alignment: Alignment.center,
-              child: const Text('Name'))),
-      GridColumn(
-          columnName: 'designation',
-          label: Container(
-              padding: const EdgeInsets.all(8.0),
-              alignment: Alignment.center,
-              child: const Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'salary',
-          label: Container(
-              padding: const EdgeInsets.all(8.0),
-              alignment: Alignment.center,
-              child: const Text('Salary'))),
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,45 +30,34 @@ class MyHomePageState extends State<MyHomePage> {
             final GridColumn rearrangeColumn = columns[details.from];
             columns.removeAt(details.from);
             columns.insert(details.to!, rearrangeColumn);
-            employeeDataSource.buildDataGridRow();
-            employeeDataSource.updateDtaGrid();
+            employeeDataSource.buildDataGridRows();
+            employeeDataSource.refreshDataGrid();
           }
           return true;
         },
       ),
     );
   }
-}
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required this.employees, required this.columns}) {
-    buildDataGridRow();
+    buildDataGridRows();
   }
 
-  void buildDataGridRow() {
+  void buildDataGridRows() {
     dataGridRows = employees.map<DataGridRow>((employee) {
-      Map<String, dynamic> employeeValues = {
-        'id': employee.id,
-        'name': employee.name,
-        'designation': employee.designation,
-        'salary': employee.salary,
-      };
       return DataGridRow(
           cells: columns.map<DataGridCell>((column) {
-        final columnName = column.columnName;
-        final value = employeeValues[columnName];
         return DataGridCell(
-          columnName: columnName,
-          value: value,
+          columnName: column.columnName,
+          value: employee[column.columnName],
         );
       }).toList());
     }).toList();
   }
 
   List<Employee> employees = [];
-
   List<GridColumn> columns = [];
-
   List<DataGridRow> dataGridRows = [];
 
   @override
@@ -135,7 +76,7 @@ class EmployeeDataSource extends DataGridSource {
     }).toList());
   }
 
-  updateDtaGrid() {
+  refreshDataGrid() {
     notifyListeners();
   }
 }
@@ -143,14 +84,16 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-
 <img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/column-drag-and-drop.gif" width="400"/>
 
 >**NOTE**:  
-To reorder the columns in the DataGrid, you should create an instance to hold the columns and then assign that instance to 
-the SfDataGrid.columns property instead of directly assigning the list of GridColumn. This allows you to reorder the collection within the callback, maintaining the desired column order.
-Additionally, it is important to build the rows based on the columns collection after reordering. This is necessary because
+* To reorder the columns in the DataGrid, you should create an instance to hold the columns and then assign that instance to 
+the `SfDataGrid.columns` property instead of directly assigning the list of GridColumn. This allows you to reorder the collection within the callback, maintaining the desired column order.
+
+* Additionally, it is important to build the rows based on the columns collection after reordering. This is necessary because
 the column index may change after the columns have been rearranged. By rebuilding the rows based on the updated columns collection, you ensure that the row data aligns correctly with the reordered columns.
+ 
+* You can download the demo application from `GitHub`.
 
 ## onColumnDragging callback
 
@@ -251,7 +194,7 @@ The DataGrid allows you to change the drag feedback widget by returning a custom
 
 ## Drag indicator customization
 
-The DataGrid allows you to customize the drag indicator by changing its color and thickness. The DataGrid should be wrapped inside the `SfDataGridTheme`.
+The color and thickness of the drag indicator can be customized by the `SfDataGridThemeData.columnDragIndicatorColor` and `SfDataGridThemeData.columnDragIndicatorStrokeWidth` properties.
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in `syncfusion_flutter_core package`. So, import the following file.
 
@@ -263,32 +206,32 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-### Change the drag indicator color
-
-The color of drag indicator can be customized by using `SfDataGridThemeData.columnDragIndicatorColor` property. 
+The following code describes how to change drag indicator color and thickness by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). 
 
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
       body: SfDataGridTheme(
-        data: SfDataGridThemeData(columnDragIndicatorColor: Colors.pink),
+        data: SfDataGridThemeData(
+            columnDragIndicatorColor: Colors.pink,
+            columnDragIndicatorStrokeWidth: 3),
         child: SfDataGrid(
           source: employeeDataSource,
           allowColumnsDragging: true,
           columns: columns,
           onColumnDragging: (DataGridColumnDragDetails details) {
             if (details.action == DataGridColumnDragAction.dropped &&
-              details.to != null) {
-            final GridColumn rearrangeColumn = columns[details.from];
-            columns.removeAt(details.from);
-            columns.insert(details.to!, rearrangeColumn);
-            employeeDataSource.buildDataGridRow();
-            employeeDataSource.updateDtaGrid();
-          }
+                details.to != null) {
+              final GridColumn rearrangeColumn = columns[details.from];
+              columns.removeAt(details.from);
+              columns.insert(details.to!, rearrangeColumn);
+              employeeDataSource.buildDataGridRows();
+              employeeDataSource.refreshDataGrid();
+            }
             return true;
           },
         ),
@@ -300,39 +243,3 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 <img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/drag-indicator-color.png" width="400"/>
-
-### Change the drag indicator thickness
-
-The thickness of drag indicator can be customized by using `SfDataGridThemeData.columnDragIndicatorStrokeWidth` property. 
-
-{% tabs %}
-{% highlight Dart %}
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-      body: SfDataGridTheme(
-        data: SfDataGridThemeData(columnDragIndicatorStrokeWidth: 5),
-        child: SfDataGrid(
-          source: employeeDataSource,
-          allowColumnsDragging: true,
-          columns: columns,
-          onColumnDragging: (DataGridColumnDragDetails details) {
-            if (details.action == DataGridColumnDragAction.dropped &&
-              details.to != null) {
-            final GridColumn rearrangeColumn = columns[details.from];
-            columns.removeAt(details.from);
-            columns.insert(details.to!, rearrangeColumn);
-            employeeDataSource.buildDataGridRow();
-            employeeDataSource.updateDtaGrid();
-          }
-            return true;
-          },
-        ),
-      ),
-    );
-  }
-
-{% endhighlight %}
-{% endtabs %}
