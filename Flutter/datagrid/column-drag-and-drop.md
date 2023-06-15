@@ -87,13 +87,11 @@ class EmployeeDataSource extends DataGridSource {
 <img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/column-drag-and-drop.gif" width="400"/>
 
 >**NOTE**:  
+* You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-column-drag-and-drop-in-flutter-datatable-sfdatagrid).
 * To reorder the columns in the DataGrid, you should create an instance to hold the columns and then assign that instance to 
 the `SfDataGrid.columns` property instead of directly assigning the list of GridColumn. This allows you to reorder the collection within the callback, maintaining the desired column order.
-
 * Additionally, it is important to build the rows based on the columns collection after reordering. This is necessary because
 the column index may change after the columns have been rearranged. By rebuilding the rows based on the updated columns collection, you ensure that the row data aligns correctly with the reordered columns.
- 
-* You can download the demo application from `GitHub`.
 
 ## onColumnDragging callback
 
