@@ -17,7 +17,7 @@ The system requirements for using our Syncfusion Flutter platform are as follows
 * Windows 7 SP1
 * Windows 8, 8.1
 * Windows 10
-* Android API level 16 & later
+* Android API level 19 & later
 * iOS 8 & later
 
 ### Hardware Environment
