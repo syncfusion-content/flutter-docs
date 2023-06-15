@@ -18,6 +18,8 @@ The Flutter controls from Syncfusion can be used without registering the license
 
 Register the license key in the **main method** of your example and import the ‘syncfusion_flutter_core/core.dart' library.
 
+>**Note**: If you are using Syncfusion controls prior to version 18.3.0.x, please follow these following steps to register your license key.
+
 {% tabs %} 
 {% highlight Dart %}
 
