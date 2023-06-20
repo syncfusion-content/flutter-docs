@@ -274,6 +274,24 @@ Widget build(BuildContext context) {
 
 N> On a desktop or mobile web browser, this `canShowPaginationDialog` property will have no effect since the pagination dialog will not be displayed there.
 
+## Customize the visibility of page loading busy indicator 
+
+By default, the `SfPdfViewer` displays the page loading busy indicator. You can customize the visibility of this using the [canShowPageLoadingIndicator](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPageLoadingIndicator.html) property. The following code example explains the same. 
+
+{% tabs %}
+{% highlight dart hl_lines="6" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
+              canShowPageLoadingIndicator: false));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Callbacks
 
 The `SfPdfViewer` loading supports the [PdfDocumentLoadedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadedCallback.html) and [PdfDocumentLoadFailedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadFailedCallback.html) to notify whether the document has been loaded completely or not.
