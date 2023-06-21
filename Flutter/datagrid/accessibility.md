@@ -11,15 +11,15 @@ documentation: ug
 
 ## Screen reader support
 
-The `SfDataGrid` can be accessed easily by the screen readers in the following ways in Android and iOS platforms:
+The `SfDataGrid` can be accessed easily by the screen readers in the following ways on Android and iOS platforms:
 
 * Cell contents can be read by tapping the required cell.
 * Read the adjacent cell's content by swiping right or left.
-* Scroll the datagrid vertically and horizontally by dragging two fingers.
+* Scroll the Datagrid vertically and horizontally by dragging two fingers.
 
 ## Sufficient contrast
 
-The `SfDataGrid` provides the sufficient color contrast to make the cell content easier. Use the following properties to customize the appearance of the datagrid elements.
+The `SfDataGrid` provides sufficient color contrast to make the cell content easier. Use the following properties to customize the appearance of the datagrid elements.
 
 * [currentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/currentCellStyle.html)
 * [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html)
@@ -32,7 +32,7 @@ The `SfDataGrid` provides the sufficient color contrast to make the cell content
 
 ## Large fonts
 
-As `SfDataGrid` gets the widget from user end for each cell, the font size in that widget will be automatically changed based on OS settings in Android and iOS platforms. To clearly view the cell content, the row heights in the datagrid will be automatically adjusted based on `MediaQueryData.textScaleFactor`.
+As `SfDataGrid` gets the widget from the user end for each cell, the font size in that widget will be automatically changed based on OS settings in Android and iOS platforms. To clearly view the cell content, the row heights in the Datagrid will be automatically adjusted based on `MediaQueryData.textScaleFactor`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 
 ## Keyboard navigation
 
-The `SfDataGrid` provides the keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) and [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) are enabled. Refer this [link](https://help.syncfusion.com/flutter/datagrid/selection#keyboard-behavior) for supported keys and their purpose.
+The `SfDataGrid` provides keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) and [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) are enabled. Refer to this [link](https://help.syncfusion.com/flutter/datagrid/selection#keyboard-behavior) for supported keys and their purpose.
 
 ## Visual density
 

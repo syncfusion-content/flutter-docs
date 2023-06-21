@@ -9,7 +9,7 @@ documentation: ug
 
 # Footer in Flutter DataGrid (SfDataGrid)
 
-Creates an additional row that can be displayed below to the last row. Widgets can be displayed to the additional row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
+Creates an additional row that can be displayed below the last row. Widgets can be displayed in the additional row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 
 {% tabs %}
 {% highlight Dart %}

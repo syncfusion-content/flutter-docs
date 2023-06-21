@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Types in Flutter DataGrid (SfDataGrid)
 
-[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for load any type of widget in each column.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column.
 
 ## GridColumn
 
@@ -17,7 +17,7 @@ GridColumn is a class that provides base functionalities for all the column type
 
 ### Mapping column to a property
 
-Column can be bound to a property in data object using [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header. 
+The column can be bound to a property in a data object using [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header. 
 
 {% tabs %}
 {% highlight Dart %} 
@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Set manual width for column
+### Set manual width for a column
 
 `SfDataGrid` allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.Columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
@@ -184,9 +184,9 @@ Widget build(BuildContext context) {
 
 ## Checkbox column
 
-By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as first column.
+By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as the first column.
 
-The selection is applied to row only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property  other than `none`.
+The selection is applied to rows only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property other than `none`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -243,9 +243,9 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
 
-### Show text in header cell
+### Show text in the header cell
 
-You can display widgets along with the checkbox in the header cell by adding widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
+You can display widgets along with the checkbox in the header cell by adding a widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -365,7 +365,7 @@ Widget build(BuildContext context) {
 
 ![checkbox is disabled in checkbox column header in flutter datagrid](images/column-types/checkbox-is-disabled-in-checkbox-column-header-in-flutter-datagrid.png)
 
-### Change the background color of checkbox column
+### Change the background color of the checkbox column
 
 The background color of the checkbox column can be customized by using the [SfDataGrid.checkboxColumnSettings.backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/backgroundColor.html) property.
 
@@ -428,7 +428,7 @@ Widget build(BuildContext context) {
 
 ### Get checked items
 
-You can get the checked items by using the [DataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property. Because, the selection and checkbox's checked state are the same.
+You can get the checked items by using the [DataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property. Because the selection and checkbox's checked states are the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -560,6 +560,6 @@ Widget build(BuildContext context) {
 
 The following are the limitations of GridCheckboxColumn:
 
-* Checkbox column does not support data operations such as sorting.
-* Checkbox column does not support to add the stacked headers along with other columns.
-* Checkbox column will be excluded in exporting operations.
+* The checkbox column does not support data operations such as sorting.
+* The checkbox column does not support adding the stacked headers along with other columns.
+* The checkbox column will be excluded in exporting operations.

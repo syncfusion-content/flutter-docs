@@ -9,7 +9,7 @@ documentation: ug
 
 # Column drag and drop in Flutter DataGrid (SfDataGrid)
 
-The SfDataGrid allows column header dragging and dropping by setting the `SfDataGrid.allowColumnsDragging` property to `true` and returning `true` from the `SfDataGrid.onColumnDragging` callback. During the column dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` event, you can handle drag and drop operations according to your requirements.
+The SfDataGrid allows column header dragging and dropping by setting the `SfDataGrid.allowColumnsDragging` property to `true` and return `true` from the `SfDataGrid.onColumnDragging` callback. During the column dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` event, you can handle drag and drop operations according to your requirements.
 
 The DataGrid provides the rearranged index of the dragged column, indicating its new position after being dropped. Inside the `onColumnDragging` callback, you can utilize this index to reorder the columns according to the desired position. This allows you to handle the column reordering directly within the callback at the sample level.
 
@@ -95,7 +95,7 @@ the column index may change after the columns have been rearranged. By rebuildin
 
 ## onColumnDragging callback
 
-The `SfDataGrid.onColumnDragging` callback is triggered when the column is dragging. This callback provides provides the following properties in the `DataGridColumnDragDetails`.
+The `SfDataGrid.onColumnDragging` callback is triggered when the column is dragging. This callback provides the following properties in the `DataGridColumnDragDetails`.
 
 * `from`: Returns index of the currently dragging column.
 * `to`: Returns index of the column after being dropped.
@@ -194,7 +194,7 @@ The DataGrid allows you to change the drag feedback widget by returning a custom
 
 The color and thickness of the drag indicator can be customized by the `SfDataGridThemeData.columnDragIndicatorColor` and `SfDataGridThemeData.columnDragIndicatorStrokeWidth` properties.
 
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in `syncfusion_flutter_core package`. So, import the following file.
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the `syncfusion_flutter_core` package. So, import the following file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -204,7 +204,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-The following code describes how to change drag indicator color and thickness by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). 
+The following code describes how to change the drag indicator color and thickness by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). 
 
 {% tabs %}
 {% highlight Dart %} 

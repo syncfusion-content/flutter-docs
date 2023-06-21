@@ -9,11 +9,11 @@ documentation: ug
 
 # Row Height Customization in Flutter DataGrid (SfDataGrid)
 
-This section explains about options to customize the header row height and the row height of all the grid rows or particular row based on your requirements.
+This section explains options to customize the header row height and the row height of all the grid rows or particular rows based on your requirements.
 
-## Set the height for specific row
+## Set the height for a specific row
 
-The row height of particular row can be set by using the [SfDataGrid.onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback.
+The row height of a particular row can be set by using the [SfDataGrid.onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback.
 
 {% tabs %}
 {% highlight dart %} 
@@ -204,7 +204,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellHeight.html) method for header and [computeCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellHeight.html) method for cell and return the super method with the required `TextStyle`.
+By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellHeight.html) method for the header and [computeCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellHeight.html) method for the cell and return the super method with the required `TextStyle`.
 
 {% tabs %}
 {% highlight dart %}
@@ -335,15 +335,15 @@ class CustomColumnSizer extends ColumnSizer {
 {% endtabs %}
 
 **NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
+  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
 
 ![flutter datagrid shows autofit the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
 
-## Fit the row based on formatted value
+## Fit the row based on the formatted value
 
-By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (i.e, DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue`.
+By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (i.e., DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue`.
 
-To use `intl`, add the package as dependency to `pubspec.yaml` file.
+To use `intl`, add the package as a dependency to `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -485,11 +485,11 @@ class CustomColumnSizer extends ColumnSizer {
 {% endtabs %}
 
 **NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
+  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows autofit the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
 
-## Set height for header row
+## Set height for the header row
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the height of the header row by using the [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
 
@@ -548,7 +548,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows header row with custom height ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
 
-## Set height for rows except header row
+## Set height for rows except for header row
 
 You can customize the height of the grid rows in `SfDataGrid` by using the [rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) property.
 
@@ -607,20 +607,19 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows rows except header row with custom height](images/row-height-customization/flutter-datagrid-row-height.jpg)
 
-## Refresh row height for specific row
+## Refresh row height for a specific row
 
-The `SfDataGrid` allows you to update or refresh specific row and it's height when 
-an underlying data is updated.
+The `SfDataGrid` allows you to update or refresh a specific row and its height when underlying data is updated.
 
-You can refresh a specific row and its height by using the [DataGridController.refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) method. This method has following two arguments,
+You can refresh a specific row and its height by using the [DataGridController.refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) method. This method has the following two arguments,
 
 * **rowIndex**- Specify the required row index which is required to refresh. If you specify this, the data alone will be refreshed for a row.
 
 * **recalculateRowHeight** - Decides whether a height of a row should be refreshed along with the data.
 
-If you call `refreshRow` method, `onQueryRowHeight` callback will called for that specific row. So, auto-calculation of height can be recalculated for that row.
+If you call the `refreshRow` method, the `onQueryRowHeight` callback will be called for that specific row. So, auto-calculation of height can be recalculated for that row.
 
-In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `TextButton`.
+In the below example, row data is updated when the `refreshRow` is called in the `onPressed` callback of the `TextButton`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -757,7 +756,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-In the below example, row data is refreshed along with its row height when the `refreshRow` is called in `onPressed` callback of the `TextButton`.
+In the below example, row data is refreshed along with its row height when the `refreshRow` is called in the `onPressed` callback of the `TextButton`.
 
 {% tabs %}
 {% highlight Dart %} 

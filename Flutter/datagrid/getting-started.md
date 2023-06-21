@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with Flutter DataGrid (SfDataGrid)
 
-This section explains the steps required to add the DataGrid widget and its features. This section covers only basic features needed to get started with the Syncfusion Flutter DataGrid widget.
+This section explains the steps required to add the DataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter DataGrid widget.
 
-To get start quickly with Flutter DataGrid, you can check on this video:
+To get start quickly with Flutter DataGrid, you can check out this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
 <iframe id='FlutterDataGridVideoTutorial' src='https://www.youtube.com/embed/-ULsEfjxFuY'></iframe>
 
@@ -21,7 +21,7 @@ Create a simple project using the instruction given in the  [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter DataGrid dependency to your pubspec.yaml file.
+Add the Syncfusion Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% highlight dart %} 
 
@@ -31,7 +31,7 @@ Add the Syncfusion Flutter DataGrid dependency to your pubspec.yaml file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package.
 
 **Get packages**
 
@@ -57,7 +57,7 @@ Import the following package in your Dart code.
 
 ## Initialize DataGrid
 
-Add the SfDataGrid widget as a child of any widget. [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) and [columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) properties. You can find the more details on these properties in further topics.
+Add the SfDataGrid widget as a child of any widget. [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) and [columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) properties. You can find more details on these properties in further topics.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -111,9 +111,9 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
-## Creating Data for an application
+## Creating Data for an Application
 
-The `SfDataGrid` is depending upon the data. Create a simple datasource for `SfDataGrid` as shown in the following code example.
+The `SfDataGrid` is depending upon the data. Create a simple Datasource for `SfDataGrid` as shown in the following code example.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -167,7 +167,7 @@ List<Employee> getEmployeeData() {
 
 [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
-* **`rows`** - Fetches the rows available for data population. Also, it is used to fetch the corresponding data object to process the selection. This contains the collection of `DataGridRow` where each row contains the collection of `DataGridCell`. Each cell should have the cell value in `value` property. `value` is used to perform the sorting for columns.
+* **`rows`** - Fetches the rows available for data population. Also, it is used to fetch the corresponding data object to process the selection. This contains the collection of `DataGridRow` where each row contains the collection of `DataGridCell`. Each cell should have the cell value in the `value` property. `value` is used to perform the sorting for columns.
 
 * **`buildRow`** - Fetches the widget for each cell with `DataGridRowAdapter`.
 
@@ -216,7 +216,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-Create an instance of `DataGridSource` and set this object to `source` property of `SfDataGrid`.
+Create an instance of `DataGridSource` and set this object to the `source` property of `SfDataGrid`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -239,7 +239,7 @@ Widget build(BuildContext context) {
 
 ## Defining columns
 
-`SfDataGrid` supports to add any widget in a column using the `GridColumn` property. You can add the column collection to the `columns` property.
+`SfDataGrid` supports adding any widget in a column using the `GridColumn` property. You can add the column collection to the `columns` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -294,7 +294,7 @@ Widget build(BuildContext context) {
 
 ## Selection
 
-`SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether a user can select single row, or multiple rows. 
+`SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether a user can select a single row or multiple rows. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -351,7 +351,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html), [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) and [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) properties in [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html). You need to initialize the `DataGridController` object to the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property of `SfDataGrid`.
+The information about the rows that are selected can be retrieved using the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html), [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) and [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) properties in [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html). You need to initialize the `DataGridController` object to the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property of `SfDataGrid`.
 
 `DataGridController` objects are expected to be long-lived, not recreated with each build.
 

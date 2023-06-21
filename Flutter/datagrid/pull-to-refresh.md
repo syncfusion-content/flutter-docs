@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pull to Refresh in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about pull to refresh feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about the pull to refresh feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -158,15 +158,15 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-Download demo application from [GitHub](https://github.com/SyncfusionExamples/pull-to-refresh-support-in-flutter-datatable-sfdatagrid).
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/pull-to-refresh-support-in-flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows default view of refresh indicator](images/pull-to-refresh/flutter-datagrid-pull-to-refresh.gif)
 
 ## Customizing the refresh indicator
 
-SfDataGrid displays the [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) for `pull to refresh` action. So, you can set the color and background color of refresh indicator by using [ThemeData.accentColor](https://api.flutter.dev/flutter/material/ThemeData/accentColor.html) and  [ThemeData.canvasColor](https://api.flutter.dev/flutter/material/ThemeData/canvasColor.html) properties.
+SfDataGrid displays the [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) for `pull to refresh` action. So, you can set the color and background color of the refresh indicator by using [ThemeData.accentColor](https://api.flutter.dev/flutter/material/ThemeData/accentColor.html) and  [ThemeData.canvasColor](https://api.flutter.dev/flutter/material/ThemeData/canvasColor.html) properties.
 
-You can also change the stroke width and displacement of refresh indicator by using [SfDataGrid.refreshIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorStrokeWidth.html) and [SfDataGrid.refreshIndicatorDisplacement](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorDisplacement.html) properties.
+You can also change the stroke width and displacement of the refresh indicator by using [SfDataGrid.refreshIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorStrokeWidth.html) and [SfDataGrid.refreshIndicatorDisplacement](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorDisplacement.html) properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -229,13 +229,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-refresh-indicator-appearance-in-flutter-datatable-sfdatagrid).
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-refresh-indicator-appearance-in-flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
 
 ## Programmatic Pull to Refresh
 
-If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of [refresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState/refresh.html) method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
+If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of the [refresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState/refresh.html) method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -300,6 +300,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-pull-to-refresh-programmatically-in-flutter-datatable-sfdatagrid).
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-pull-to-refresh-programmatically-in-flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows programmatic refresh indicator](images/pull-to-refresh/flutter-datagrid-programmatic-pull-to-refresh.gif)

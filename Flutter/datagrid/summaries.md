@@ -123,7 +123,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid displays table summary column in row](images/summaries/flutter-datagrid-summary-column-in-row.png)
+![flutter Datagrid displays table summary column in the row](images/summaries/flutter-datagrid-summary-column-in-row.png)
 
 ### Display table summary for column
 
@@ -151,7 +151,7 @@ Widget build(BuildContext context) {
               GridSummaryColumn(
                   name: 'Sum',
                   columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
+                  summaryType: GridSummaryType.sum),
             ],
             position: GridTableSummaryRowPosition.bottom)
       ],
@@ -236,11 +236,11 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid displays table summary column in column](images/summaries/flutter-datagrid-summary-column-in-column.png)
+![flutter Datagrid displays table summary column in column](images/summaries/flutter-datagrid-summary-column-in-column.png)
 
 ### Positioning table summary row
 
-The table summary row can be shown at either top or bottom position by using the [GridTableSummaryRow.position](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/position.html) property.
+The table summary row can be shown at the either top or bottom position by using the [GridTableSummaryRow.position](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/position.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -355,7 +355,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows positioning of table summary column](images/summaries/flutter-datagrid-position-of-summary-column.png)
+![flutter Datagrid shows the positioning of the table summary column](images/summaries/flutter-datagrid-position-of-summary-column.png)
 
 ### Summary calculation types
 
@@ -369,7 +369,7 @@ The following calculation types are supported for the summary calculation:
 
 ### Display table summary row with title
 
-The SfDataGrid supports to display columns’ summary value along with the title by defining the `GridTableSummaryRow.title` and [GridTableSummaryRow.titleColumnSpan](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/titleColumnSpan.html) properties along with the summary columns. Showing a column summary with the title can be supported, only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnSpan` property defines that how long the title should be spanned in the corresponding summary row.
+The SfDataGrid supports displaying columns’ summary value along with the title by defining the `GridTableSummaryRow.title` and [GridTableSummaryRow.titleColumnSpan](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/titleColumnSpan.html) properties along with the summary columns. Showing a column summary with the title can be supported, only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnSpan` property defines how long the title should be spanned in the corresponding summary row.
 
 {% tabs %}
 {% highlight Dart %}
@@ -480,9 +480,9 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows table summary column along with title](images/summaries/flutter-datagrid-summary-column-with-title.png)
+![flutter Datagrid shows the table summary column along with the title](images/summaries/flutter-datagrid-summary-column-with-title.png)
 
-### Set background color for the table summary row
+### Set the background color for the table summary row
 
 The background color of the table summary row can be customized by using the [GridTableSummaryRow.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/color.html) property.
 
