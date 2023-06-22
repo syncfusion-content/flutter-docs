@@ -9,7 +9,7 @@ documentation: ug
 
 # Column drag and drop in Flutter DataGrid (SfDataGrid)
 
-The SfDataGrid allows column header dragging and dropping by setting the `SfDataGrid.allowColumnsDragging` property to `true` and returning `true` from the `SfDataGrid.onColumnDragging` callback. During the column dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` event, you can handle drag and drop operations according to your requirements.
+The SfDataGrid allows column header dragging and dropping by setting the [SfDataGrid.allowColumnsDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsDragging.html) property to `true` and returning `true` from the [SfDataGrid.onColumnDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnDragging.html) callback. During the column dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` event, you can handle drag and drop operations according to your requirements.
 
 The DataGrid provides the rearranged index of the dragged column, indicating its new position after being dropped. Inside the `onColumnDragging` callback, you can utilize this index to reorder the columns according to the desired position. This allows you to handle the column reordering directly within the callback at the sample level.
 
@@ -89,18 +89,18 @@ class EmployeeDataSource extends DataGridSource {
 >**NOTE**:  
 * You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-column-drag-and-drop-in-flutter-datatable-sfdatagrid).
 * To reorder the columns in the DataGrid, you should create an instance to hold the columns and then assign that instance to 
-the `SfDataGrid.columns` property instead of directly assigning the list of GridColumn. This allows you to reorder the collection within the callback, maintaining the desired column order.
+the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) property instead of directly assigning the list of GridColumn. This allows you to reorder the collection within the callback, maintaining the desired column order.
 * Additionally, it is important to build the rows based on the columns collection after reordering. This is necessary because
 the column index may change after the columns have been rearranged. By rebuilding the rows based on the updated columns collection, you ensure that the row data aligns correctly with the reordered columns.
 
 ## onColumnDragging callback
 
-The `SfDataGrid.onColumnDragging` callback is triggered when the column is dragging. This callback provides provides the following properties in the `DataGridColumnDragDetails`.
+The `SfDataGrid.onColumnDragging` callback is triggered when the column is dragging. This callback provides provides the following properties in the [DataGridColumnDragDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails-class.html).
 
-* `from`: Returns index of the currently dragging column.
-* `to`: Returns index of the column after being dropped.
-* `action`: Returns the column dragging details as the `DataGridColumnDragAction` enum.
-* `offset`: Returns the current offset of the dragging column.
+* [from](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/from.html): Returns index of the currently dragging column.
+* [to](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/to.html): Returns index of the column after being dropped.
+* [action](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/action.html): Returns the column dragging details as the [DataGridColumnDragAction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragAction.html) enum.
+* [offset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/offset.html): Returns the current offset of the dragging column.
 
 ## Cancel the column dropping for a specific column
 
@@ -141,7 +141,7 @@ You can cancel the column dropping at a specific column by returning `false` fro
 
 ## Changing the feedback widget
 
-The DataGrid allows you to change the drag feedback widget by returning a custom widget from the `SfDataGrid.columnDragFeedbackBuilder` builder. This allows you to change the drag feedback widget according to your requirements.
+The DataGrid allows you to change the drag feedback widget by returning a custom widget from the [SfDataGrid.columnDragFeedbackBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnDragFeedbackBuilder.html) builder. This allows you to change the drag feedback widget according to your requirements.
 
 {% tabs %}
 {% highlight Dart %}
@@ -192,7 +192,7 @@ The DataGrid allows you to change the drag feedback widget by returning a custom
 
 ## Drag indicator customization
 
-The color and thickness of the drag indicator can be customized by the `SfDataGridThemeData.columnDragIndicatorColor` and `SfDataGridThemeData.columnDragIndicatorStrokeWidth` properties.
+The color and thickness of the drag indicator can be customized by the [SfDataGridThemeData.columnDragIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnDragIndicatorColor.html) and [SfDataGridThemeData.columnDragIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnDragIndicatorStrokeWidth.html) properties.
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in `syncfusion_flutter_core package`. So, import the following file.
 
