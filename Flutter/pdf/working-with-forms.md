@@ -475,7 +475,6 @@ if (field is PdfTextBoxField) {
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(await document.save());
-
 {% endhighlight %}
 
 Retrieving or Modifying the fore, border, and back color of an existing form field
