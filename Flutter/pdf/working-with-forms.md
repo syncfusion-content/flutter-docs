@@ -451,7 +451,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 
 ## Modifying the existing form field in a PDF document
 
-You can modify an existing form field by getting the field from the PdfFormFieldCollection. You can retrieve a field from the field collection by index or by field name.
+You can modify an existing form field by getting the field from the PdfFormFieldCollection. You can retrieve a field from the field collection by index.
 
 The following code sample explains how to modify an existing form field in a PDF document.
 
