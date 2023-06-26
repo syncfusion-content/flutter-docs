@@ -13,7 +13,7 @@ Filtering is the process of fetching the values from a collection that satisfies
 
 ## Programmatic Filtering
 
-The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` defines the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
+The SfDataGrid allows you to filter the data rows programmatically by adding the filter conditions along with the respective column name to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` define the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
 
 `DataGridSource.filterConditions` is an unmodifiable map collection. So, it doesn't allow us to perform CRUD operations directly in the `DataGridSource.filterConditions` property. However, it can be done by the following public methods:
 
@@ -455,7 +455,7 @@ After filtering, the rows can be retrieved in the same order as displayed in the
 
 ## UI Filtering
 
-The `SfDataGrid` provides an excel-like filtering UI and an advanced filter UI to filter the data easily. UI filtering can be enabled by setting the [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) property to `true`. This allows the filter UI to be opened by clicking on the filter icon in the column header. The filtering UI will be shown as a popup menu on the desktop and web platforms, and it will be shown as a new page on the mobile platforms.
+The `SfDataGrid` provides an Excel-like filtering UI and an advanced filter UI to filter the data easily. UI filtering can be enabled by setting the [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) property to `true.` This allows the filter UI to be opened by clicking on the filter icon in the column header. The filtering UI will be shown as a popup menu on the desktop and web platforms, and it will be shown as a new page on the mobile platforms.
 
 The `SfDataGrid` provides the following types of filter popup modes:
 
@@ -493,7 +493,7 @@ Below are the built-in filter types supported:
 
 * **Text Filters** – Loads various menu options to filter the display text effectively.
 * **Number Filters** – Loads various menu options to filter the numeric data.
-* **Date Filters** – Loads various menu options and [DatePicker](https://api.flutter.dev/flutter/material/showDatePicker.html) to filter DateTime type column.
+* **Date Filters** – Loads various menu options and [DatePicker](https://api.flutter.dev/flutter/material/showDatePicker.html) to filter the DateTime type column.
 
 <table>
 <tr>
@@ -717,11 +717,11 @@ Widget build(BuildContext context) {
 
 ## Customizing the filter popup menu options
 
-The `SfDataGrid` provides the support to customize the menu options in the filter popup menu. Please refer to the following topics for more information.
+The `SfDataGrid` provides support to customize the menu options in the filter popup menu. Please refer to the following topics for more information.
 
 ### Show checkbox or advanced filtering mode
 
-By default, both the checkbox and advanced filtering options are shown in the filter popup menu. Show either checkbox or advanced filtering menu option. Specific columns can be set by using the [FilterPopupMenuOptions.filterMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/filterMode.html) in the [GridColumn.filterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterPopupMenuOptions.html) property.
+By default, both the checkbox and advanced filtering options are shown in the filter popup menu. Show either checkbox or the advanced filtering menu option. Specific columns can be set by using the [FilterPopupMenuOptions.filterMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions/filterMode.html) in the [GridColumn.filterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterPopupMenuOptions.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -936,7 +936,7 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid hiding column name in popup menu" src="images/filtering/flutter-datagrid-hide-column-name.png" width="400"/>
 
-### Change the color of filter Icon
+### Change the color of the filter Icon
 
 The color and hover color of the filter icon can be customized by using the [SfDataGridThemeData.filterIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIconColor.html) and [SfDataGridThemeData.filterIconHoverColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIconHoverColor.html) properties respectively.
 
@@ -994,7 +994,7 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon color" src="images/filtering/flutter-datagrid-filter-icon-color.png" width="400"/>
 
-### Change the padding of filter icon
+### Change the padding of the filter icon
 
 The padding around the filter icon can be changed by using the [GridColumn.filterIconPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterIconPadding.html) property.
 
@@ -1133,7 +1133,7 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>
 
-## Change the position of filter icon
+## Change the position of the filter icon
 
 The position of the filter icon can be changed by using the [GridColumn.filterIconPosition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterIconPosition.html) property.
 
@@ -1196,9 +1196,9 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
 
-## Change the text style of filter popup menu
+## Change the text style of the filter popup menu
 
-The text style of filter popup menu can be customized by using the [SfDataGridThemeData.filterPopupTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupTextStyle.html) and [SfDataGridThemeData.filterPopupDisabledTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupDisabledTextStyle.html) properties.
+The text style of the filter popup menu can be customized by using the [SfDataGridThemeData.filterPopupTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupTextStyle.html) and [SfDataGridThemeData.filterPopupDisabledTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupDisabledTextStyle.html) properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1267,7 +1267,7 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
 
-## Show filter icon when hovering the header cell
+## Show the filter icon when hovering the header cell
 
 To show a filter icon when the mouse hovers over a column header in a DataGrid, set the `SfDataGrid.showFilterIconOnHover` property to true. Note that this feature is only available on web and desktop platforms
 
