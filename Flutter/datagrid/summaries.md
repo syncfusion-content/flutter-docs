@@ -369,7 +369,7 @@ The following calculation types are supported for the summary calculation:
 
 ### Display table summary row with title
 
-The SfDataGrid supports displaying columns’ summary value along with the title by defining the `GridTableSummaryRow.title` and [GridTableSummaryRow.titleColumnSpan](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/titleColumnSpan.html) properties along with the summary columns. Showing a column summary with the title can be supported, only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnSpan` property defines how long the title should be spanned in the corresponding summary row.
+The SfDataGrid supports displaying columns’ summary value along with the title by defining the `GridTableSummaryRow.title` and [GridTableSummaryRow.titleColumnSpan](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/titleColumnSpan.html) properties along with the summary columns. Showing a column summary with the title can be supported only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnSpan` property defines how long the title should be spanned in the corresponding summary row.
 
 {% tabs %}
 {% highlight Dart %}

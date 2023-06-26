@@ -160,9 +160,9 @@ class EmployeeDataSource extends DataGridSource {
 
 The data grid provides the following callbacks to notify the swiping stages:  
 
-* [onSwipeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeStart.html): Called when the swipe offset changes from its initial value. The swipe action can be canceled by returning `false`.
-* [onSwipeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeUpdate.html): Called while swiping a row is in progress. The swipe action can be canceled by returning `false`.
-* [onSwipeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeEnd.html): called when the swipe offset value reaches the `SfDataGrid`.maxSwipeOffset` indicates that the swipe action is completed.
+* [onSwipeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeStart.html): Called when the swipe offset changes from its initial value. The swipe action can be canceled by returning `false.`
+* [onSwipeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeUpdate.html): Called while swiping a row is in progress. The swipe action can be canceled by returning `false.`
+* [onSwipeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeEnd.html): Called when the swipe offset value reaches the `SfDataGrid.maxSwipeOffset` indicates that the swipe action is completed.
 
 The swipe callbacks provide the following properties in their arguments:
 
@@ -170,7 +170,7 @@ The swipe callbacks provide the following properties in their arguments:
 * [SwipeDirection](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeDirection.html): Defines the swipe direction of the swiped row.
 * [SwipeOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeOffset.html): Defines the current swipe offset of the row being swiped.
 
-By handling the swipe callbacks, you can use these property values from the arguments to perform any desired action such as deleting the row, editing the data, etc.
+By handling the swipe callbacks, you can use these property values from the arguments to perform any desired action, such as deleting the row, editing the data, and more.
 
 ## Customized swipes delete functionality
 
@@ -264,7 +264,7 @@ Widget build(BuildContext context) {
 
 ## Set different swipe offsets for right and left swiping 
 
-You can set the different swipe offsets based on swipe direction by using the `onSwipeStart` callback and passing the required swipe offset to the [setSwipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeStartDetails/setSwipeMaxOffset.html) method from the `onSwipeStart` callback argument.  
+Set the different swipe offsets based on swipe direction by using the `onSwipeStart` callback and passing the required swipe offset to the [setSwipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeStartDetails/setSwipeMaxOffset.html) method from the `onSwipeStart` callback argument. 
 
 {% tabs %}
 {% highlight Dart %} 

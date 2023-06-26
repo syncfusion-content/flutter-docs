@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about the scrolling features of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn about the scrolling features of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -272,7 +272,7 @@ Widget build(BuildContext context) {
 
 ### Scroll to row
 
-You can scroll programmatically to a particular row by passing the row index in the `scrollToRow` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in the `scrollToRow` method. 
+Scroll programmatically to a particular row by passing the row index in the `scrollToRow` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in the `scrollToRow` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -343,7 +343,7 @@ Widget build(BuildContext context) {
 
 ### Scroll to column
 
-You can scroll programmatically to a particular column by passing the column index in the `scrollToColumn` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in the `scrollToColumn` method. 
+Scroll programmatically to a particular column by passing the column index in the `scrollToColumn` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in the `scrollToColumn` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -416,7 +416,7 @@ Widget build(BuildContext context) {
 
 ### Scroll to the specific position
 
-`SfDataGrid` allows positioning of the scrolled row or column in view programmatically by passing `DataGridScrollPosition` to `rowPosition` and `columnPosition` arguments respectively in `scrollToCell` and `position` argument of `scrollToRow` and `scrollToColumn` methods. Below are the four types of positions available,
+The `SfDataGrid` allows positioning of the scrolled row or column in view programmatically by passing the `DataGridScrollPosition` to `rowPosition` and `columnPosition` arguments respectively in `scrollToCell` and `position` argument of the `scrollToRow` and `scrollToColumn` methods. The following are the four types of positions available.
 
 `makeVisible`: Scroll to make a specified row/column visible in Datagrid. If the specified row/column is already in view, scrolling will not occur.
 `start`: Scroll to make the row/column positioned at the start of the Datagrid.
@@ -753,7 +753,7 @@ class _EmployeeDataSource extends DataGridSource {
 
 ## Increase row cache limit
 
-By default, rows are generated based on the viewport size and these rows are reused while scrolling. You can set the [SfDataGrid.rowsCacheExtent](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsCacheExtent.html) property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
+By default, rows are generated based on the viewport size, and these rows are reused while scrolling. Set the [SfDataGrid.rowsCacheExtent](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsCacheExtent.html) property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
 
 The `rowsCacheExtent` property will create the additional rows internally with the existing visible rows, which are already allocated based on viewport size. So, the number of rows that will be reused will increase.
 

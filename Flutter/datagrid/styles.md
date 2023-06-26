@@ -249,7 +249,7 @@ To show the vertical and horizontal gridlines, use the following properties.
 * [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): To set the border lines for the cells other than a header and stacked header cells. 
 * [SfDataGrid.headerGridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerGridLinesVisibility.html): To set the border lines only for header and stacked header cells.
 
-The following is the list of options available to customize gridlines,
+The following is the list of options available to customize gridlines.
 
 * Vertical
 * Horizontal

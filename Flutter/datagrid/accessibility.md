@@ -32,7 +32,7 @@ The `SfDataGrid` provides sufficient color contrast to make the cell content eas
 
 ## Large fonts
 
-As `SfDataGrid` gets the widget from the user end for each cell, the font size in that widget will be automatically changed based on OS settings in Android and iOS platforms. To clearly view the cell content, the row heights in the Datagrid will be automatically adjusted based on `MediaQueryData.textScaleFactor`.
+As `SfDataGrid` gets the widget from the user end for each cell, the font size in that widget will be automatically changed based on OS settings in Android and iOS platforms. To view the cell content clearly, the row heights in the Datagrid will be automatically adjusted based on the `MediaQueryData.textScaleFactor`.
 
 {% tabs %}
 {% highlight Dart %}

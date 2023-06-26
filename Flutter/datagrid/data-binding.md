@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to set Datasource for Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn how to set the Data source for Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,12 +9,12 @@ documentation: ug
 
 # Data Binding in Flutter DataGrid (SfDataGrid)
 
-[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. To bind the data source of the SfDataGrid, set an instance of the `DataGridSource` to the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. To bind the data source of the SfDataGrid, set an instance of the `DataGridSource` to the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property. The `source` property must not be null.
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) - The number of rows in a Datagrid and row selection depends on the `rows`. So, set the `DataGridRow` collection required for Datagrid in
-`rows`.
+ * [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) - The number of rows in a Datagrid and row selection depends on the `rows.` So, set the `DataGridRow` collection required for Datagrid in `rows`.
+ 
 * [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildRow.html) - The widget needed for the cells is obtained from `DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
@@ -133,9 +133,9 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
-If the row is added, removed or replaced in an underlying Datasource, you can call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
+If the row is added, removed, or replaced in an underlying Data source, call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
 
-In the following example, the row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`. As the `notifyListeners` is the protected method, we have introduced the `updateDataGridSource` method in EmployeeDataSource class and called the `notifyListeners` method. So, users can call `updateDataGridSource` methods in the widget level to refresh the Datagrid.
+In the following example, the row is added, and `notifyListeners` is called in the `onPressed` callback of the `TextButton`. As the `notifyListeners` is the protected method, the `updateDataGridSource` method the `notifyListeners` method. So, users can call the `updateDataGridSource` methods in the widget level to refresh the Datagrid.
 
 N> `notifyListeners` should be called from inside the `DataGridSource`.
 
@@ -246,10 +246,10 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with the [RowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument which refers to the corresponding row and column index of the cell. 
+If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with the [RowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument, which refers to the corresponding row and column index of the cell. 
 So, DataGrid refreshes the corresponding cell alone.
 
-In the following example, the cell value is updated and `notifyDataSourceListeners` is called in the `onPressed` callback of the `TextButton`.
+In the following example, the cell value is updated, and `notifyDataSourceListeners` is called in the `onPressed` callback of the `TextButton.`
 
 {% tabs %}
 {% highlight Dart %} 

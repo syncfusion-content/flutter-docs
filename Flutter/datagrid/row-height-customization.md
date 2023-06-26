@@ -204,7 +204,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellHeight.html) method for the header and [computeCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellHeight.html) method for the cell and return the super method with the required `TextStyle`.
+By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellHeight.html) method for the header and [computeCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellHeight.html) method for the cell and return the super method with the required `TextStyle.`
 
 {% tabs %}
 {% highlight dart %}
@@ -341,9 +341,9 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Fit the row based on the formatted value
 
-By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (i.e., DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue`.
+By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (this is, DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue.`
 
-To use `intl`, add the package as a dependency to `pubspec.yaml` file.
+To use `intl`, add the package as a dependency to the `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -611,7 +611,7 @@ Widget build(BuildContext context) {
 
 The `SfDataGrid` allows you to update or refresh a specific row and its height when underlying data is updated.
 
-You can refresh a specific row and its height by using the [DataGridController.refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) method. This method has the following two arguments,
+Refresh a specific row and its height by using the [DataGridController.refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) method. This method has the following two arguments:
 
 * **rowIndex**- Specify the required row index which is required to refresh. If you specify this, the data alone will be refreshed for a row.
 
@@ -619,7 +619,7 @@ You can refresh a specific row and its height by using the [DataGridController.r
 
 If you call the `refreshRow` method, the `onQueryRowHeight` callback will be called for that specific row. So, auto-calculation of height can be recalculated for that row.
 
-In the below example, row data is updated when the `refreshRow` is called in the `onPressed` callback of the `TextButton`.
+In the below example, row data is updated when the `refreshRow` is called in the `onPressed` callback of the `TextButton.`
 
 {% tabs %}
 {% highlight Dart %} 
@@ -756,7 +756,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-In the below example, row data is refreshed along with its row height when the `refreshRow` is called in the `onPressed` callback of the `TextButton`.
+In the following example, the row data is refreshed along with its row height when the `refreshRow` is called in the `onPressed` callback of the `TextButton.`
 
 {% tabs %}
 {% highlight Dart %} 

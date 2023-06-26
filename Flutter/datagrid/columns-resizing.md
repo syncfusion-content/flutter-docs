@@ -327,7 +327,7 @@ Widget build(BuildContext context) {
 
 ## Disable resizing for the checkbox column
 
-The checkbox column is always added as the first column i.e. 0th index. To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeEndDetails/columnIndex.html) is 0. 
+The checkbox column is always added as the first column this is the 0th index. To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeEndDetails/columnIndex.html) is 0. 
 
 {% tabs %}
 {% highlight Dart %}

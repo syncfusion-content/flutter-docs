@@ -134,7 +134,7 @@ To save the file as a PDF document, it’s necessary to include [mobile](https:/
 
 ## Export DataGrid to PDF document
 
-You can export the data to [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) by using the `exportToPdfDocument` method from the `key.currentState` of the DataGrid.
+Export the data to the [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) by using the `exportToPdfDocument` method from the `key.currentState` of the DataGrid.
 
 {% tabs %}
 {% highlight Dart %}
@@ -148,7 +148,7 @@ File('DataGrid.pdf').writeAsBytes(bytes);
 
 ## Export DataGrid to PDF Grid
 
-You can export the data to [PdfGrid](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) by using the `exportToPdfGrid` method from the `key.currentState` of the DataGrid.
+Export the data to the [PdfGrid](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) by using the `exportToPdfGrid` method from the `key.currentState` of the DataGrid.
 
 {% tabs %}
 {% highlight Dart %}
@@ -198,7 +198,7 @@ final List<int> bytes = document.saveSync();
 
 ### Export all columns on one page
 
-You can fit all the columns on one page by setting the [fitAllColumnsInOnePage](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/fitAllColumnsInOnePage.html) parameter as `true`.
+Fit all the columns on one page by setting the [fitAllColumnsInOnePage](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/fitAllColumnsInOnePage.html) parameter as `true.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -255,7 +255,7 @@ final List<int> bytes = document.saveSync();
 
 ## Change the orientation of the PDF document
 
-You can change the orientation of a page in a PDF document by using the [PdfDocument.pageSettings.orientation](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) property.
+Change the orientation of a page in a PDF document by using the [PdfDocument.pageSettings.orientation](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) property.
 
 To change the page orientation, you need to export the `SfDataGrid` to `PdfGrid` using the `exportToPdfGrid` method and draw the exported `PdfGrid` into a `PdfDocument`.
 
@@ -276,7 +276,7 @@ final List<int> bytes = document.saveSync();
 
 ## Export the selected rows to PDF
 
-By default, the entire grid is exported to PDF. You can export selected rows only by passing the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToPdfDocument` and `exportToPdfGrid` methods.
+By default, the entire grid is exported to PDF. Export the selected rows only by passing the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToPdfDocument` and `exportToPdfGrid` methods.
 
 {% tabs %}
 {% highlight Dart %}
@@ -342,7 +342,7 @@ final List<int> bytes = document.saveSync();
 
 ### Customize cell values while exporting
 
-The cell value can be customized while exporting to PDF by directly setting the cell value of a cell in `PdfGrid` via the [PdfCell](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellPdfExportDetails/pdfCell.html) property available in the argument of `cellExport` callback.
+The cell value can be customized while exporting to PDF by directly setting the cell value of a cell in the `PdfGrid` via the [PdfCell](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellPdfExportDetails/pdfCell.html) property available in the argument of the `cellExport` callback.
 
 {% tabs %}
 {% highlight Dart %}
@@ -382,7 +382,7 @@ final List<int> bytes = document.saveSync();
 
 ## Customize Exporting Behavior 
 
-You can customize the exporting behavior by overriding the available methods in [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) class and setting the instance of the custom pdf converter to the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
+Customize the exporting behavior by overriding the available methods in the [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) Customize the exporting behavior by overriding the available methods in the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
 
 {% tabs %}
 {% highlight Dart %}
@@ -422,7 +422,7 @@ class CustomDataGridToPdfConverter extends DataGridToPdfConverter {
 {% endhighlight %}
 {% endtabs %}
 
-The following code sample illustrates how to create an instance of `CustomDataGridToPdfConverter` class and set the instance to the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
+The following code sample illustrates how to create an instance of the `CustomDataGridToPdfConverter` class and set the instance to the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
 
 {% tabs %}
 {% highlight Dart %}

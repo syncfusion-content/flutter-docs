@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export Flutter DataGrid to Excel | Flutter DataTable | Syncfusion
-description: Learn here all about how to export the Syncfusion Flutter DataGrid (SfDataGrid) into Excel and more.
+description: Learn how to export the Syncfusion Flutter DataGrid (SfDataGrid) into Excel and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -39,7 +39,7 @@ import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 {% endhighlight %}
 {% endtabs %}
 
-You can export the `SfDataGrid` to Excel by using the following extension methods present in the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class.
+Export the `SfDataGrid` by using the following extension methods present in the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class.
 
 * [exportToExcelWorkbook](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExcelExportExtensions/exportToExcelWorkbook.html)
 * [exportToExcelWorksheet](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExcelExportExtensions/exportToExcelWorksheet.html)
@@ -162,7 +162,7 @@ File('DataGrid.xlsx').writeAsBytes(bytes, flush: true);
 
 ## Export DataGrid to Excel sheet
 
-You can export the data to [Excel Worksheet](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html) by using the `exportToExcelWorksheet` method from the `key.currentState` of the DataGrid.
+Export the data to [Excel Worksheet](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html) by using the `exportToExcelWorksheet` method from the `key.currentState` of the DataGrid.
 
 {% tabs %}
 {% highlight Dart %}
@@ -196,7 +196,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Exclude table summaries when exporting
 
-By default, table summaries in `SfDataGrid` are exported to Excel. You can set the [exportTableSummaries](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/exportTableSummaries.html) parameter as `false` to export the `SfDataGrid` without table summaries.
+By default, table summaries in the `SfDataGrid` are exported to Excel. Set the [exportTableSummaries](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/exportTableSummaries.html) parameter as `false` to export the `SfDataGrid` without table summaries.
 
 {% tabs %}
 {% highlight Dart %}
@@ -210,7 +210,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Exclude stacked headers when exporting
 
-By default, stacked headers in `SfDataGrid` are exported to Excel. You can set the [exportStackedHeaders](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/exportStackedHeaders.html) parameter as `false` to export the `SfDataGrid` without stacked headers.
+By default, stacked headers in the `SfDataGrid` are exported to Excel. Set the [exportStackedHeaders](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/exportStackedHeaders.html) parameter as `false` to export the `SfDataGrid` without stacked headers.
 
 {% tabs %}
 {% highlight Dart %}
@@ -224,7 +224,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Change the start row and column index when exporting
 
-By default, the DataGrid is exported from the (0,0) index in an Excel sheet. You can export the data from specific row and column indexes in an Excel worksheet by setting the [startColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/startColumnIndex.html) and [startRowIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/startRowIndex.html) properties.
+By default, the DataGrid is exported from the (0,0) index in an Excel sheet. Export the data from a specific row and column indexes in an Excel worksheet by setting the [startColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/startColumnIndex.html) and [startRowIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/startRowIndex.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -238,7 +238,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Export the selected rows to Excel
 
-By default, the entire grid is exported to Excel. You can export selected rows only by passing the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToExcelWorksheet` and `exportToExcelWorkbook` methods.
+By default, the entire grid is exported to Excel. Export the selected rows only by passing the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToExcelWorksheet` and `exportToExcelWorkbook` methods.
 
 {% tabs %}
 {% highlight Dart %}
@@ -271,7 +271,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Styling cells based on the cell type in Excel
 
-You can customize the cell styles based on cell type using [cellExport](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/cellExport.html) parameter which is a callback in the `exportToExcelWorkbook` and `exportToExcelWorksheet` methods.
+Customize the cell styles based on cell type using the [cellExport](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter/cellExport.html) parameter, which is a callback in the `exportToExcelWorkbook` and `exportToExcelWorksheet` methods.
 
 {% tabs %}
 {% highlight Dart %}
@@ -337,7 +337,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Customize Exporting Behavior 
 
-You can customize the exporting behavior by overriding the available methods in [DataGridToExcelConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter-class.html) class and setting the instance of the custom Excel converter to the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
+Customize the exporting behavior by overriding the available methods in the [DataGridToExcelConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter-class.html) Customize the exporting behavior by overriding the available methods in the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
 
 {% tabs %}
 {% highlight Dart %}
@@ -407,7 +407,7 @@ class CustomDataGridToExcelConverter extends DataGridToExcelConverter {
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet illustrates how to create an instance of `CustomDataGridToExcelConverter` class and set the instance to the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
+The following code sample illustrates how to create an instance of the `CustomDataGridToExcelConverter` class and set the instance to the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
 
 {% tabs %}
 {% highlight Dart %}

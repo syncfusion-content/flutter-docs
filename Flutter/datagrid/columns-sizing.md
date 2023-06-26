@@ -9,7 +9,7 @@ documentation: ug
 
 # Column sizing in Flutter DataGrid (SfDataGrid)
 
-[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows setting the column widths based on certain logic using [SfDataGrid.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthMode.html) or [GridColumn.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnWidthMode.html) property. Below is the list of predefined column sizing options available.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows setting the column widths based on certain logic using the [SfDataGrid.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthMode.html) or [GridColumn.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnWidthMode.html) property. The following is the list of predefined column sizing options available.
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
@@ -245,7 +245,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Autofit calculation based on different TextStyle
 
-By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellWidth.html) method for the header and [computeCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellWidth.html) method for the cell and return the super method with the required `TextStyle`.
+By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellWidth.html) method for the header and [computeCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellWidth.html) method for the cell and return the super method with the required `TextStyle.`
 
 {% tabs %}
 {% highlight Dart %} 
@@ -366,7 +366,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Autofit calculation based on the formatted value 
 
-By default, the cell width is calculated based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (i.e., DateFormat and NumberFormat), simply override the `computeCellWidth` method and return the super method with the required `cellValue`.
+The cell width is calculated by default based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (This is, DateFormat and NumberFormat), simply override the `computeCellWidth` method and return the super method with the required `cellValue.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -486,7 +486,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Fill the remaining width for any column
 
-While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width is applied to the last column. The remaining width of a specific column can be applied by setting `GridColumn.columnWidthMode` property.
+While setting `SfDataGrid.columnWidthMode` as `lastColumnFill`  the remaining width is applied to the last column. The remaining width of a specific column can be applied by setting the `GridColumn.columnWidthMode` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -600,9 +600,9 @@ Widget build(BuildContext context) {
 
 ## Recalculating column widths when datasource is changed
 
-By default, column widths are calculated based on the `columnWidthMode` property on the initial loading of Datagrid. When the datasource is changed for the same datagrid at run time, Datagrid does not recalculate the column widths. To recalculate the column widths at run time when datasource is changed or data is updated, you can override the [shouldRecalculateColumnWidths](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/shouldRecalculateColumnWidths.html) method and return `true`. 
+By default, column widths are calculated based on the `columnWidthMode` property on the initial loading of the Datagrid. When the data source is changed for the same datagrid at run time, the Datagrid does not recalculate the column widths. To recalculate the column widths at run time when the data source is changed or data is updated, override the [shouldRecalculateColumnWidths](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/shouldRecalculateColumnWidths.html) method and return `true.` 
  
-Returning true may impact performance as the column widths are recalculated again (whenever the notifyListeners is called). If you are aware that column widths are going to be the same whenever underlying data changes, return `false` from this method.
+Returning true may impact performance as the column widths are recalculated again (whenever the notifyListeners is called). If you know that column widths will be the same whenever underlying data changes, return `false` from this method.
 
 {% tabs %}
 {% highlight Dart %} 

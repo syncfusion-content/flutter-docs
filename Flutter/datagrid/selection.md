@@ -10,9 +10,9 @@ documentation: ug
 
 This section explains how to enable selection in the Datagrid; modes, properties, and callbacks involved in selection and customizations available for selection.
 
-The Datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property of SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
+The Datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property of the SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
-N> The [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property must be initialized in the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
+N> The [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property must be initialized in the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). The `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
 
 ## Selection modes 
 
@@ -160,7 +160,7 @@ Widget build(BuildContext context) {
 
 ### Multiple row selection
 
-The SfDataGrid allows you to select multiple rows by setting the `selectionMode` property as `multiple`, where you can select multiple rows by clicking on SfDataGrid and also using the key modifiers.
+The SfDataGrid allows you to select multiple rows by setting the `selectionMode` property as `multiple,` where you can select multiple rows by clicking on SfDataGrid and also using the key modifiers.
 
 While using `multiple`, you can select multiple rows by pressing the key modifiers <kbd>Shift</kbd> + <kbd>Down</kbd> and <kbd>Shift</kbd> + <kbd>Up</kbd>.
 
@@ -218,7 +218,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-multiple-selection.png)
 
-N>  When the `selectionMode` is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selection, pressing the navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
+N>  When the `selectionMode` is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selections, pressing the navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
 
 ### Disable selection
 
@@ -282,7 +282,7 @@ Selection on a particular row can be disabled by handling the [onCurrentCellActi
 
 ## Getting selected rows
 
-You can get the information of selected rows by using the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and set it to controller property. The [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) property returns the selected DataGridRow and the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html) property returns the index of the [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) in SfDataGrid. [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) denotes the last selected row in multiple selection.
+Get the information of the selected rows by using the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and set it to controller property. The [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) property returns the selected DataGridRow and the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html) property returns the index of the [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) in SfDataGrid. The [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) denotes the last selected row in multiple selections.
 
 {% tabs %}
 {% highlight Dart %}
@@ -362,7 +362,7 @@ N> DataGridController objects are expected to be long-lived, not re-created with
 
 ## Programmatic selection
 
-When `selectionMode` is set to a value other than `none`, selected row/rows from the code by setting the `DataGridController.selectedIndex`, `DataGridController.selectedRow`, or `DataGridController.selectedRows` property based on the selection mode.  
+When `selectionMode` is set to a value other than `none`, the selected rows from the code by setting the `DataGridController.selectedIndex`, `DataGridController.selectedRow`, or `DataGridController.selectedRows` property based on the selection mode.  
 
 When the selection mode is `single`, programmatically select a row in two ways either by setting the row index to the `DataGridController.selectedIndex` property, or by setting the `DataGridRow` to be selected to the `DataGridController.selectedRow` property
 
@@ -507,7 +507,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-Multiple rows can be selected by adding a collection of `DataGridRow` to `selectedRows` property.
+Multiple rows can be selected by adding a collection of `DataGridRow` to the `selectedRows` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -590,7 +590,7 @@ Widget build(BuildContext context) {
 
 ### Get the current cell
 
-The current cell information such as row index, and column index can be retrieved using the [currentCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/currentCell.html) property of `DataGridController`. 
+The current cell information such as row index, and column index can be retrieved using the [currentCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/currentCell.html) property of `DataGridController.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -728,9 +728,9 @@ Widget build(BuildContext context) {
 
 ### Clear selection
 
-DataGrid allows you to clear the selection applied in the grid rows by setting the `DataGridController.selectedIndex` to `-1` or `DataGridController.selectedRow` to null when the `selectionMode` property is in `single` or `singleDeselect`. On the selectionMode property is in `multiple` you can clear the selection from grid rows by setting the `DataGridController.selectedRows` to `empty`.
+DataGrid allows you to clear the selection applied in the grid rows by setting the `DataGridController.selectedIndex` to `-1` or `DataGridController.selectedRow` to null when the `selectionMode` property is in `single` or `singleDeselect.` When the selectionMode property is in `multiple,` clear the selection from grid rows by setting the `DataGridController.selectedRows` to `empty.`
 
-The following code example shows how to clear selection when the `selectionMode` property is in `single` or `singleDeselect`,
+The following code example shows how to clear selection when the `selectionMode` property is in `single` or `singleDeselect.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -797,7 +797,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to clear selection when the `selectionMode` property is in `multiple`,
+The following code example shows how to clear selection when the `selectionMode` property is in `multiple.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -880,7 +880,7 @@ Description
 <kbd>DownArrow</kbd>
 </td>
 <td>
-Moves CurrentCell directly below the active current cell. If the CurrentCell is in the last row, pressing <kbd>DownArrow</kbd> does nothing.
+Moves CurrentCell directly under the active current cell. If the CurrentCell is in the last row, pressing <kbd>DownArrow</kbd> does nothing.
 </td>
 </tr>
 <tr>
@@ -1025,7 +1025,7 @@ If the current cell is in edit mode, call the <a href= "https://pub.dev/document
 
 The Datagrid provides the following callbacks for selection:
 
- * `onSelectionChanging` : This callback is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by returning `false`.
+ * `onSelectionChanging` : This callback is raised while selecting a row at the execution time before the row is selected. So, it allows canceling the selection action by returning `false`.
  * `onSelectionChanged` : This callback is raised after the row is selected.
 
 The followings are the parameters of the [onSelectionChanging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSelectionChanging.html) and [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSelectionChanged.html) callbacks,
@@ -1033,7 +1033,7 @@ The followings are the parameters of the [onSelectionChanging](https://pub.dev/d
  * newItems: Gets a collection of the `DataGridRow` added for the selection.
  * oldItems: Gets a collection of the `DataGridRow` removed from the selection.
 
-The following example shows how to cancel the selection when selecting a row that contains the designation of Manager
+The following example shows how to cancel the selection when selecting a row that contains the designation of the Manager.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1112,7 +1112,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-* `onCurrentCellActivating`: This callback is raised before the current cell applies to the corresponding grid cell of the selecting row. So it allows canceling the selection action by returning `false`. If the return is false, the selection will not apply and also `onSelectionChanging`, `onSelectionChanged` and `onCurrentCellActivated` are not called.
+* `onCurrentCellActivating`: This callback is raised before the current cell applies to the corresponding grid cell of the selecting row. So, it allows canceling the selection action by returning  `false.` If the return is false, the selection will not apply, and also, `onSelectionChanging`, `onSelectionChanged` and `onCurrentCellActivated` are not called.
  * `onCurrentCellActivated`: This callback is raised after the current cell is applied in the grid cell on the selecting row.
 
  The followings are the parameters of the [onCurrentCellActivating](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCurrentCellActivating.html) and [onCurrentCellActivated](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCurrentCellActivated.html) callbacks,
@@ -1189,7 +1189,7 @@ Widget build(BuildContext context) {
 
 ## Cell Tap callbacks
 
-The Datagrid provides the following callbacks to handle interactions with the cells,
+The Datagrid provides the following callbacks to handle interactions with the cells.
 
 * [onCellTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellTap.html) : Called when a tap with a cell has occurred.
 * [onCellDoubleTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellDoubleTap.html) : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
@@ -1409,9 +1409,9 @@ class CustomSelectionManager extends RowSelectionManager {
 
 ## Appearance
  
-SfDataGrid allows customizing the appearance of the selected rows and current cell through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
+The SfDataGrid allows customizing the appearance of the selected rows and current cell through the [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
-All the styles such as [selectionColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/selectionColor.html), and [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+All the styles such as [selectionColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/selectionColor.html), and [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the following file in your application.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1422,7 +1422,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endtabs %}
 
 ### Selection
-The selection background can be changed by the `selectionColor` property of `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+The selection background can be changed by the `selectionColor` property of the `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -1548,7 +1548,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Current cell
 
-The current cell border's color and thickness can be changed by the [currentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/currentCellStyle.html) property of `SfDataGridThemeData` in `SfDataGridTheme`.
+The current cell border's color and thickness can be changed by the [currentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/currentCellStyle.html) property of `SfDataGridThemeData` in `SfDataGridTheme.`
 
 {% tabs %}
 {% highlight Dart %}
