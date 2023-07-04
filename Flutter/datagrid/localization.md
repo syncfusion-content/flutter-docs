@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the [SfDataPager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager-class.html) widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
-To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
+To use `flutter_localizations`, add the package as a dependency to the `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 
 Static strings in the data pager can be localized using the [syncfusion_localizations](https://pub.dev/packages/syncfusion_localizations) package and specifying `localizationsDelegates` in `MaterialApp`.
 
-To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
+To use `syncfusion_localizations`, add the package as a dependency to the `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -129,7 +129,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations/delegate-constant.html) in the `localizationsDelegates`, which is used to localize the static string available in data pager and specify the `supportedLocales` as well.
+Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations/delegate-constant.html) in the `localizationsDelegates,` which is used to localize the static string available in the data pager and specify the `supportedLocales` as well.
 
 {% tabs %}
 {% highlight Dart %}

@@ -13,9 +13,9 @@ SfDataGrid supports right-to-left rendering. The columns will be rendered based 
 
 ## RTL rendering ways
 
-Right to left rendering can be switched in the following ways:
+Right-to-left rendering can be switched in the following ways:
 
-### Wrapping the SfDataGrid with Directionality widget
+### Wrapping the SfDataGrid with the Directionality widget
 
 To change the rendering direction from right to left, wrap the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) widget inside the [Directionality](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [textDirection](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
 
@@ -69,9 +69,9 @@ Widget build(BuildContext context) {
 
 ### Changing the locale to RTL languages
 
-To change the datagrid rendering direction from right to left, change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
+To change the Datagrid rendering direction from right to left, change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
-To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
+To use `flutter_localizations`, add the package as a dependency to `pubspec.yaml` file.
 
 {% highlight dart %}
 

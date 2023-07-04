@@ -194,7 +194,7 @@ The DataGrid allows you to change the drag feedback widget by returning a custom
 
 The color and thickness of the drag indicator can be customized by the [SfDataGridThemeData.columnDragIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnDragIndicatorColor.html) and [SfDataGridThemeData.columnDragIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnDragIndicatorStrokeWidth.html) properties.
 
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in `syncfusion_flutter_core package`. So, import the following file.
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the `syncfusion_flutter_core` package. So, import the following file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -204,7 +204,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-The following code describes how to change drag indicator color and thickness by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). 
+The following code describes how to change the drag indicator color and thickness by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). 
 
 {% tabs %}
 {% highlight Dart %} 
