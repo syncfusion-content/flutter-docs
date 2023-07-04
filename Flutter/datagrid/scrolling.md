@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 
 ## Change scrollbars visibility
 
-You can control the visibility of horizontal and vertical scrollbars in the DataGrid by setting the `SfDataGrid.showVerticalScrollbar` and `SfDataGrid.showHorizontalScrollbar` properties. To disable the default scrollbar of the `SingleChildScrollView`, wrap the `ScrollConfiguration` as the parent for the `SfDataGrid` and set the scrollbars to false.
+You can control the visibility of horizontal and vertical scrollbars in the DataGrid by setting the [SfDataGrid.showVerticalScrollbar](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showVerticalScrollbar.html) and [SfDataGrid.showHorizontalScrollbar](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showHorizontalScrollbar.html) properties. To disable the default scrollbar of the `SingleChildScrollView`, wrap the `ScrollConfiguration` as the parent for the `SfDataGrid` and set the scrollbars to false.
 
 N> The default value of `showVerticalScrollbar` and `showHorizontalScrollbar` is true.
 
