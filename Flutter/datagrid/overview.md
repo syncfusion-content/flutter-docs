@@ -22,6 +22,10 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Editing** - Allows users to edit cell values. An editor widget can be loaded based on the column type to edit cell values.
 * **Sorting** - Sort one or more columns in ascending or descending order. 
 * **Selection** - Select one or more rows. Keyboard navigation is supported for web platforms.
+* **Filtering** - Interactive support to filter data as like Excel. Filter data by text, numbers, and date-time values. Also, supports programmatical filtering.
+* **Column Drag and Drop** - Supports reordering columns by dragging and dropping them at the required position.
+* **Column resizing** - Resize columns by dragging the right edge of the column header.
+* **Exporting** - Support to export the data to Excel and PDF.
 * **Styling** - Customize the appearance of cells and headers. Conditional styling is also supported.
 * **Stacked headers** - Show unbound header rows. Unbound header rows span stacked header columns across multiple rows and columns.
 * **Load more** - Display an interactive view when the grid reaches its maximum offset while scrolling down. Tapping the interactive view triggers a callback to add more data from the data source of the grid at run time.
