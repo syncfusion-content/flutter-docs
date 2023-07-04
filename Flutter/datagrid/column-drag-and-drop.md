@@ -95,7 +95,7 @@ the column index may change after the columns have been rearranged. By rebuildin
 
 ## onColumnDragging callback
 
-The `SfDataGrid.onColumnDragging` callback is triggered when the column is drags. This callback provides the following properties in the [DataGridColumnDragDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails-class.html).
+The `SfDataGrid.onColumnDragging` callback is triggered when the column drags. This callback provides the following properties in the [DataGridColumnDragDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails-class.html).
 
 * [from](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/from.html): Returns index of the currently dragging column.
 * [to](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridColumnDragDetails/to.html): Returns index of the column after being dropped.
