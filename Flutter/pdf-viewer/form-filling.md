@@ -20,6 +20,7 @@ You can load and fill in the following form fields in a PDF document using the F
 * Radio button. 
 * Combo box. 
 * Signature. 
+* List box.
 
 ## Save form data 
 
@@ -185,6 +186,455 @@ Widget build(BuildContext context) {
     body: SfPdfViewer.asset( 
       'assets/form_document.pdf', 
       controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Modifying the form field data programmatically
+
+Programmatically modify the form field data in the pdf document using the `formFields` collection. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="13 14" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton(
+          icon: const Icon( 
+            Icons.inbox, 
+            color: Colors.white, 
+          ), 
+          onPressed: () {
+            final List<PdfFormField> formFields = 
+              _pdfViewerController.getFormFields(); 
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify text box data
+
+Programmatically modify the text of text box by changing the `text` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfTextFormField textbox = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'name')
+              as PdfTextFormField;
+            textbox.text = 'John';          
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify checkbox data
+
+Programmatically check or uncheck the checkbox by changing the `isChecked` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfCheckboxFormField checkbox = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'newsletter')
+              as PdfCheckboxFormField;
+            checkbox.isChecked = true;          
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify combo box data
+
+Programmatically select an item from the combo box using the `selectedItem` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfComboBoxFormField combobox = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'state')
+              as PdfComboBoxFormField;
+            combobox.selectedItem = combobox.items[4];         
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify radio button data
+
+Programmatically select an item from the radio buttons using the `selectedItem` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfRadioFormField radiobutton = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'gender')
+              as PdfRadioFormField;
+            radiobutton.selectedItem = radiobutton.items[2];         
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify list box data
+
+Programmatically select an item from the list box using the `selectedItems` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfListBoxFormField listbox = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'list')
+              as PdfListBoxFormField;
+            listbox.selectedItems = listbox.items.sublist(0, 2);          
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Modify signature data
+
+Programmatically add a signature in a signature form field by assigning the image bytes to the `signature` property. Programmatically remove the signature in a signature form field by assigning null to the `signature` property.
+
+{% tabs %}
+{% highlight dart hl_lines="18 19 20 21 22 23" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () async { 
+            final List<PdfFormField> formFields = 
+            _pdfViewerController.getFormFields();
+            
+            final PdfSignatureFormField signature = formfields.singleWhere(
+                  (PdfFormField formField) => formField.name == 'signature')
+              as PdfSignatureFormField;
+            final ByteData bytedata =
+              await rootBundle.load('assets/signature.png');
+            signature.signature = bytedata.buffer.asUint8List();        
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Clear form data
+
+You can clear the form field data by calling the `clearFormData` method. Refer to the following code example.
+The `pageNumber` parameter can be used to clear the form field data in a aparticular page. By default, the `pageNumber` argument is 0 by which all the form fields in the odf document wil be cleared.
+
+{% tabs %}
+{% highlight dart hl_lines="16" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.clear, 
+            color: Colors.white, 
+          ), 
+          onPressed: () async { 
+            // Clears all the form field data in the pdf document.
+            _pdfViewerController.clearFormData();   
+            // Clears all the form field data on the 2nd page.
+            // _pdfViewerController.clearFormData(2);         
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the visibility of built-in Signature pad
+
+By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize the visibility of the built-in signauture pad using the `canShowSignaturePad` property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="15" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'),
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      canShowSignaturePadDialog: false, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Restrict the editing of form fields
+
+To prevent editing the values of the form field in the PDF document, set the `readOnly` property of the `PdfFormField` to true.
+
+{% tabs %}
+{% highlight dart hl_lines="18" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController(); 
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      actions: <Widget>[ 
+        IconButton( 
+          icon: const Icon( 
+            Icons.edit, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            final List<PdfFormField> formFields = 
+              _pdfViewerController.getFormFields();
+            
+            formFields[0].readOnly = true;
+          }, 
+        ), 
+      ], 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      controller: _pdfViewerController, 
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Callbacks
+
+The `SfPdfViewer` supports the `PdfFormFieldFocusChangeCallback` to notify the interaction with the form fields and the `PdfFormFieldValueChangedCallback` to notify the values changes in the form fields.
+
+### PdfFormFieldFocusChangeCallback
+
+The `onFormFieldFocusChange` callback triggers when the user taps on the form field. The `PdfFormFieldFocusChangeDetails` will return the `PdfFormField` instance and `hasFocus` property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="9 10 11" %}
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      onFormFieldFocusChange: (PdfFormFieldFocusChangeDetails details) {
+        print('${details.formField.name} - ${details.hasFocus}');
+      },
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### PdfFormFieldValueChangedCallback
+
+The `onFormFieldValueChanged` callback triggers when the user taps on the form field. The `PdfFormFieldValueChangedDetails` the `PdfFormField` instance, `oldValue` and `newValue` properties. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="9 10 11" %}
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'), 
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      onFormFieldValueChanged:( PdfFormFieldValueChangedDetails details) {
+        // Handle form field value changed here.       
+      },
     ), 
   ); 
 }
