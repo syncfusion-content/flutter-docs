@@ -195,7 +195,7 @@ Widget build(BuildContext context) {
 
 ## Modifying the form field data programmatically
 
-Programmatically modify the form field data in the pdf document using the `formFields` collection. The following code example explains the same.
+Programmatically modify the form field data in the pdf document using the `getFormFields` method. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="15 16" %}
@@ -232,7 +232,7 @@ Widget build(BuildContext context) {
 
 ### Modify text box data
 
-Programmatically modify the text of text box by changing the `text` property.
+Programmatically modify the text of a text box by changing the `text` property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -253,7 +253,7 @@ Widget build(BuildContext context) {
           onPressed: () { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfTextFormField textbox = formfields.singleWhere(
+            final PdfTextFormField textbox = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'name')
               as PdfTextFormField;
             textbox.text = 'John';          
@@ -294,7 +294,7 @@ Widget build(BuildContext context) {
           onPressed: () { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfCheckboxFormField checkbox = formfields.singleWhere(
+            final PdfCheckboxFormField checkbox = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'newsletter')
               as PdfCheckboxFormField;
             checkbox.isChecked = true;          
@@ -335,7 +335,7 @@ Widget build(BuildContext context) {
           onPressed: () { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfComboBoxFormField combobox = formfields.singleWhere(
+            final PdfComboBoxFormField combobox = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'state')
               as PdfComboBoxFormField;
             combobox.selectedItem = combobox.items[4];         
@@ -376,7 +376,7 @@ Widget build(BuildContext context) {
           onPressed: () { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfRadioFormField radiobutton = formfields.singleWhere(
+            final PdfRadioFormField radiobutton = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'gender')
               as PdfRadioFormField;
             radiobutton.selectedItem = radiobutton.items[2];         
@@ -417,7 +417,7 @@ Widget build(BuildContext context) {
           onPressed: () { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfListBoxFormField listbox = formfields.singleWhere(
+            final PdfListBoxFormField listbox = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'list')
               as PdfListBoxFormField;
             listbox.selectedItems = listbox.items.sublist(0, 2);          
@@ -437,7 +437,7 @@ Widget build(BuildContext context) {
 
 ### Modify signature data
 
-Programmatically add a signature in a signature form field by assigning the image bytes to the `signature` property. Programmatically remove the signature in a signature form field by assigning null to the `signature` property.
+Programmatically add or remove the signature in a signature form field by assigning the image bytes or `null` to the `signature` property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20 21 22" %}
@@ -458,7 +458,7 @@ Widget build(BuildContext context) {
           onPressed: () async { 
             final List<PdfFormField> formFields = 
             _pdfViewerController.getFormFields();            
-            final PdfSignatureFormField signature = formfields.singleWhere(
+            final PdfSignatureFormField signature = formFields.singleWhere(
                   (PdfFormField formField) => formField.name == 'signature')
               as PdfSignatureFormField;
             final ByteData bytedata =
@@ -480,11 +480,10 @@ Widget build(BuildContext context) {
 
 ## Clear form data
 
-You can clear the form field data by calling the `clearFormData` method. Refer to the following code example.
-The `pageNumber` parameter can be used to clear the form field data in a aparticular page. By default, the `pageNumber` argument is 0 by which all the form fields in the odf document wil be cleared.
+The `clearFormData` method clears all the form field data in the PDF document. The optional `pageNumber` parameter can be used to clear the form field data in a specific page. By default, the `pageNumber` parameter is 0. Refer to the following code example.
 
 {% tabs %}
-{% highlight dart hl_lines="15 16 17 18" %}
+{% highlight dart hl_lines="16 26" %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController(); 
  
@@ -493,17 +492,25 @@ Widget build(BuildContext context) {
   return Scaffold( 
     appBar: AppBar( 
       title: const Text('Syncfusion Flutter PDF Viewer'), 
-      actions: <Widget>[ 
+      actions: <Widget>[
         IconButton( 
           icon: const Icon( 
             Icons.clear, 
             color: Colors.white, 
           ), 
-          onPressed: () async { 
-            // Clears all the form field data in the pdf document.
-            _pdfViewerController.clearFormData();   
+          onPressed: () {  
             // Clears all the form field data on the 2nd page.
-            // _pdfViewerController.clearFormData(2);         
+            _pdfViewerController.clearFormData(pageNumber: 2);         
+          }, 
+        ),
+        IconButton( 
+          icon: const Icon( 
+            Icons.clear, 
+            color: Colors.white, 
+          ), 
+          onPressed: () { 
+            // Clears all the form field data in the pdf document.
+            _pdfViewerController.clearFormData();        
           }, 
         ), 
       ], 
@@ -543,7 +550,7 @@ Widget build(BuildContext context) {
 
 ## Restrict the editing of form fields
 
-To prevent editing the values of the form field in the PDF document, set the `readOnly` property of the `PdfFormField` to true.
+To prevent editing the values of the form fields in the PDF document, set the `readOnly` property of the `PdfFormField` to true.
 
 {% tabs %}
 {% highlight dart hl_lines="17" %}
@@ -608,6 +615,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+N> The `PdfFormFieldFocusChangeCallback` only triggers for text box and signature form field.
+
 ### PdfFormFieldValueChangedCallback
 
 The `onFormFieldValueChanged` callback triggers when the user taps on the form field. The `PdfFormFieldValueChangedDetails` the `PdfFormField` instance, `oldValue` and `newValue` properties. The following code example explains the same.
@@ -623,8 +632,9 @@ Widget build(BuildContext context) {
     ), 
     body: SfPdfViewer.asset( 
       'assets/form_document.pdf', 
-      onFormFieldValueChanged:( PdfFormFieldValueChangedDetails details) {
-        // Handle form field value changed callback here.       
+      onFormFieldValueChanged:(PdfFormFieldValueChangedDetails details) {
+        print('${details.oldValue}');     
+        print('${details.newValue}');     
       },
     ), 
   ); 

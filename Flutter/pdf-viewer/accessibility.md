@@ -14,7 +14,7 @@ documentation: ug
 The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) can be accessed by the screen readers by wrapping the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
-{% highlight dart hl_lines="4" %}
+{% highlight dart hl_lines="4 5 6 7 8 9" %}
 
 @override
 Widget build(BuildContext context) {

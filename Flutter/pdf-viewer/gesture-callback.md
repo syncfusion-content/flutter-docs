@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gesture callback in Flutter PDF Viewer widget | Syncfusion
-description: Learn here about gesture callbacks provided by Syncfusion Flutter PDF Viewer (SfPdfViewer) widget.
+description: Learn here about gesture callback provided by Syncfusion Flutter PDF Viewer (SfPdfViewer) widget.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
@@ -24,7 +24,7 @@ The `onTap` callback triggers when the user taps on the `SfPdfViewer` widget and
 The following code example illustrates how to use onTap callback. 
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="9 10 11" %}
 
 @override
 Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ Widget build(BuildContext context) {
       title: Text('Syncfusion Flutter PDF Viewer'),
     ),
     body: SfPdfViewer.network(
-      '<https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf>',
+      'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
       onTap: (PdfGestureDetails details) {
-        // Handle the Tap callback here.
+        print('${details.pageNumber}');
       },
     ),
   );
