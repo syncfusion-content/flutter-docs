@@ -68,7 +68,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 The [onHyperlinkClicked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onHyperlinkClicked.html) callback triggers when any hyperlink in the PDF document is clicked. The [PdfHyperlinkClickedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfHyperlinkClickedDetails-class.html) will return the [uri](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfHyperlinkClickedDetails/uri.html) clicked in the PDF document. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="9 10 11" %}
 
   @override
   Widget build(BuildContext context) {
