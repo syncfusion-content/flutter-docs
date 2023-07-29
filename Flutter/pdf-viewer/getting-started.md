@@ -329,7 +329,7 @@ The [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfv
 The [PdfDocumentLoadFailedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadFailedDetails-class.html) will return the `error` title and `description` message for the failure reason. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="25 26" %}
+{% highlight dart hl_lines="26 27 28" %}
 
  /// Displays the error message.
   void showErrorDialog(BuildContext context, String error, String description) {
