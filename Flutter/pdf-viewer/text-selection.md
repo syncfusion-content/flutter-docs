@@ -83,7 +83,7 @@ The `SfPdfViewer` text selection supports the [PdfTextSelectionChangedCallback](
 The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback triggers when the text is selected or deselected in the SfPdfViewer. The [PdfTextSelectionChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails-class.html) will hold the [globalSelectedRegion](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/globalSelectedRegion.html) representing the global bounds information of the selected text region and the [selectedText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/selectedText.html) representing the selected text value. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10 11 12" %}
+{% highlight dart hl_lines="9 10 11 12 13" %}
 
 @override
 Widget build(BuildContext context) {
