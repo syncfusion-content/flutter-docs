@@ -10,7 +10,7 @@ documentation: ug
 
 # Syncfusion Licensing Overview
 
-To use the Syncfusion Flutter Widgets in your application, you will need either a commercial license or community license. 
+Syncfusion Licensing model is determined by two main factors: the count of the developers in your company and your company's annual gross revenue. You need to have either a commercial license or community license to use the Syncfusion Flutter Widgets in your application. 
 
 The Community License provides free access to all the Syncfusion products for individual developers and small businesses. Companies and individuals with less than $1 million USD in annual gross revenue and 5 or fewer developers are eligible for the Community License.
 
