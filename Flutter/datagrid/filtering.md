@@ -1326,3 +1326,67 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 <img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
+
+## Show the column header icons when hovering the header cell
+
+To show a column header icons,such as sort and filter icons when the mouse hovers over a column header in a DataGrid, set the `SfDataGrid.showColumnHeaderIconOnHover` property to true. Note that this feature is only available on web and desktop platforms.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      allowSorting: true,
+      allowFiltering: true,
+      allowTriStateSorting: true,
+      allowMultiColumnSorting: true,
+      showSortNumbers: true,
+      showColumnHeaderIconOnHover: true,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      gridLinesVisibility: GridLinesVisibility.both,
+      columnWidthMode: ColumnWidthMode.auto,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid shows column header icons when hover the header cell" src="images/filtering/flutter-datagrid-show-column-header-icon-on-hover.gif"/>
