@@ -563,3 +563,62 @@ The following are the limitations of GridCheckboxColumn:
 * The checkbox column does not support data operations such as sorting.
 * The checkbox column does not support adding the stacked headers along with other columns.
 * The checkbox column will be excluded in exporting operations.
+
+### Show the column header icons on hover
+
+To display column header icons, such as sort and filter icons, when the mouse hovers over a column header, set the `SfDataGrid.showColumnHeaderIconOnHover` property to true. This feature is available only on web and desktop platforms.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      allowSorting: true,
+      allowFiltering: true,
+      showColumnHeaderIconOnHover: true,
+      columnWidthMode: ColumnWidthMode.fill,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'))),
+      ],
+    ),
+  );
+}
+  
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif"/>
