@@ -599,20 +599,26 @@ Widget build(BuildContext context) {
                 alignment: Alignment.centerLeft,
                 child: Text('Name'))),
         GridColumn(
-            columnName: 'designation',
+            columnName: 'company',
             label: Container(
                 padding: EdgeInsets.all(8.0),
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Text(
-                  'Designation',
+                  'Company',
                   overflow: TextOverflow.ellipsis,
                 ))),
         GridColumn(
-            columnName: 'salary',
+            columnName: 'city',
             label: Container(
                 padding: EdgeInsets.all(8.0),
-                alignment: Alignment.centerRight,
-                child: Text('Salary'))),
+                alignment: Alignment.center,
+                child: Text('City'))),
+        GridColumn(
+            columnName: 'country',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Country'))),
       ],
     ),
   );
@@ -621,4 +627,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif"/>
+<img alt="flutter datagrid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif" width="1177"/>
