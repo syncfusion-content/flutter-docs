@@ -17,7 +17,7 @@ The [onTap](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pd
 
 * `pageNumber` – This property returns the page number on which the tap took place. The value ranges from 1 to the total number of pages in the PDF document. If the tap occurs outside of any PDF page boundaries, the result will be -1.
 
-* `pagePositon` – The property returns the page’s tapped position in the PDF coordinates. The coordinates have their origin at the top-left of the page. The number of the tapped page is identified by the PageNumber property. If the tap occurs outside of any PDF page boundaries, the result will be (-1, -1).
+* `pagePosition` – The property returns the page’s tapped position in the PDF coordinates. The coordinates have their origin at the top-left of the page. The number of the tapped page is identified by the PageNumber property. If the tap occurs outside of any PDF page boundaries, the result will be (-1, -1).
 
 * `position` – This property returns the tapped position on the PDF Viewer widget. The coordinate space starts at the top left of the widget.
 

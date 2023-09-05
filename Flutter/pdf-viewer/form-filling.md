@@ -279,19 +279,84 @@ Widget build(BuildContext context) {
 By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize the visibility of the built-in signature pad using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="8 13" %}
  
-@override 
-Widget build(BuildContext context) { 
-  return Scaffold( 
-    appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'),
-    ), 
-    body: SfPdfViewer.asset( 
-      'assets/form_document.pdf', 
-      canShowSignaturePadDialog: false, 
-    ), 
-  ); 
+final GlobalKey<SfSignaturePadState> _signaturePadKey = GlobalKey();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfPdfViewer.asset(
+      'assets/form_document.pdf',
+      canShowSignaturePadDialog: false,
+      onFormFieldFocusChange: (PdfFormFieldFocusChangeDetails details) {
+        if (details.formField is PdfSignatureFormField && details.hasFocus) {
+          final PdfSignatureFormField signatureFormField =
+              details.formField as PdfSignatureFormField;
+          _showCustomSignaturePadDialog(signatureFormField);
+        }
+      },
+    ),
+  );
+}
+
+Future<void> _showCustomSignaturePadDialog(
+    PdfSignatureFormField formField) async {
+  await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text(
+            'Draw your Signature',
+            textAlign: TextAlign.center,
+          ),
+          titlePadding: const EdgeInsets.all(8),
+          contentPadding: const EdgeInsets.all(12),
+          content: Container(
+            height: 200,
+            width: 300,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+            ),
+            child: SfSignaturePad(
+              key: _signaturePadKey,
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                _signaturePadKey.currentState!.clear();
+              },
+              child: const Text('Clear'),
+            ),
+            TextButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                await _saveSignature(formField);
+              },
+              child: const Text('Save'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Cancel'),
+            ),
+          ],
+        );
+      },
+    );
+}
+
+Future<void> _saveSignature(PdfSignatureFormField formField) async {
+  final ui.Image image =
+      await _signaturePadKey.currentState!.toImage(pixelRatio: 3.0);
+  final ByteData? imageBytes =
+      await image.toByteData(format: ui.ImageByteFormat.png);
+  if (imageBytes != null) {
+    final Uint8List data = imageBytes.buffer.asUint8List();
+    formField.signature = data;
+  }
 }
 
 {% endhighlight %}
@@ -589,7 +654,7 @@ N> The `PdfFormFieldFocusChangeCallback` only triggers for text boxes and signat
 The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) the `formField` instance along with its `oldValue` and `newValue`. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="9 10 11" %}
  
 @override 
 Widget build(BuildContext context) { 
@@ -605,6 +670,201 @@ Widget build(BuildContext context) {
       },
     ), 
   ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## How to
+
+### Get the text form field value for each character input
+
+In SfPdfViewer, we can get the data in the text form field for each character input by using the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="" %}
+
+final TextEditingController _nameController = TextEditingController();
+ 
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      onFormFieldValueChanged:(PdfFormFieldValueChangedDetails details) {
+        final PdfFormField field = details.formField;
+        if (field is PdfTextFormField && field.name == 'name') {
+          _nameController.value = TextEditingValue(text: field.text);
+        }   
+      },
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Get the text form field value after finishing the text input
+
+In SfPdfViewer, we can get the data in the text form field after the text input is finished by using the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="" %}
+
+{% tabs %}
+{% highlight dart hl_lines="" %}
+
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      onFormFieldFocusChange:
+          (PdfFormFieldFocusChangeDetails details) {
+        final PdfFormField field = details.formField;
+        if (field is PdfTextFormField && field.name == 'name') {
+          if (!details.hasFocus) {
+            _nameController.value = TextEditingValue(text: field.text);
+          }
+        }
+      },
+    ), 
+  ); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Validate the form field data
+
+In this example, we have validated the data in each form fields using the value in the [PdfFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormField-class.html) instance. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="" %}
+
+final PdfViewerController _pdfViewerController = PdfViewerController();
+List<PdfFormField>? _formFields;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      actions: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.save),
+          onPressed: _validateAndSaveForm,
+        ),
+      ],
+    ),
+    body: SfPdfViewer.asset(
+      'assets/form_document.pdf',
+      controller: _pdfViewerController,
+      onDocumentLoaded: (PdfDocumentLoadedDetails details) {
+        _formFields = _pdfViewerController.getFormFields();
+      },
+    ),
+  );
+}
+
+Future<void> _validateAndSaveForm() async {
+  if (_formFields == null) {
+    return;
+  } else if (_formFields!.isEmpty) {
+    return;
+  }
+  final List<String> errors = <String>[];
+  for (final PdfFormField formField in _formFields!) {
+    if (formField is PdfTextFormField) {
+      if (formField.name == 'name') {
+        if (formField.text == null || formField.text.isEmpty) {
+          errors.add('Name is required.');
+        } else if (formField.text.length < 3) {
+          errors.add('Name should be atleast 3 characters.');
+        } else if (formField.text.length > 30) {
+          errors.add('Name should not exceed 30 characters.');
+        } else if (formField.text.contains(RegExp(r'[0-9]'))) {
+          errors.add('Name should not contain numbers.');
+        } else if (formField.text
+            .contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
+          errors.add('Name should not contain special characters.');
+        }
+      } else if (formField.name == 'dob') {
+        if (formField.text == null || formField.text.isEmpty) {
+          errors.add('Date of birth is required.');
+        } else if (!RegExp(r'^\d{1,2}\/\d{1,2}\/\d{4}$')
+            .hasMatch(formField.text)) {
+          errors.add('Date of birth should be in dd/mm/yyyy format.');
+        }
+      } else if (formField.name == 'email') {
+        if (formField.text == null || formField.text.isEmpty) {
+          errors.add('Email is required.');
+        } else if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+            .hasMatch(formField.text)) {
+          errors.add('Email should be in correct format.');
+        }
+      }
+    } else if (formField is PdfListBoxFormField) {
+      if (formField.selectedItems == null ||
+          formField.selectedItems!.isEmpty) {
+        errors.add('Please select atleast one course.');
+      }
+    } else if (formField is PdfSignatureFormField) {
+      if (formField.signature == null) {
+        errors.add('Please sign the document.');
+      }
+    }
+  }
+  if (errors.isNotEmpty) {
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Errors'),
+          content: SizedBox(
+            height: 200,
+            width: 100,
+            child: ListView.builder(
+              itemCount: errors.length,
+              itemBuilder: (_, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(errors[index]),
+                );
+              },
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Try Again'),
+            ),
+          ],
+        );
+      },
+    );
+  } else {
+    _pdfViewerController.saveDocument(
+        flattenOption: PdfFlattenOption.formFields);
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Success'),
+          content: const Text('Form submitted successfully.'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
 
 {% endhighlight %}
