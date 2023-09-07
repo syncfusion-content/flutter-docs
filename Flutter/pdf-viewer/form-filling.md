@@ -279,7 +279,7 @@ Widget build(BuildContext context) {
 By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize the visibility of the built-in signature pad using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="8 13" %}
+{% highlight dart hl_lines="8 9 10 11 12 13" %}
  
 final GlobalKey<SfSignaturePadState> _signaturePadKey = GlobalKey();
 
@@ -300,6 +300,7 @@ Widget build(BuildContext context) {
   );
 }
 
+/// Displays the custom signature pad dialog.
 Future<void> _showCustomSignaturePadDialog(
     PdfSignatureFormField formField) async {
   await showDialog(
@@ -348,6 +349,7 @@ Future<void> _showCustomSignaturePadDialog(
     );
 }
 
+/// Saves the image from the signature pad to the form field.
 Future<void> _saveSignature(PdfSignatureFormField formField) async {
   final ui.Image image =
       await _signaturePadKey.currentState!.toImage(pixelRatio: 3.0);
@@ -682,7 +684,7 @@ Widget build(BuildContext context) {
 In SfPdfViewer, we can get the data in the text form field for each character input by using the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="" %}
+{% highlight %}
 
 final TextEditingController _nameController = TextEditingController();
  
@@ -709,10 +711,7 @@ Widget build(BuildContext context) {
 In SfPdfViewer, we can get the data in the text form field after the text input is finished by using the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="" %}
-
-{% tabs %}
-{% highlight dart hl_lines="" %}
+{% highlight dart %}
 
 @override 
 Widget build(BuildContext context) { 
@@ -740,7 +739,7 @@ Widget build(BuildContext context) {
 In this example, we have validated the data in each form fields using the value in the [PdfFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormField-class.html) instance. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="" %}
+{% highlight %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController();
 List<PdfFormField>? _formFields;
@@ -766,6 +765,7 @@ Widget build(BuildContext context) {
   );
 }
 
+/// Validates the form field data.
 Future<void> _validateAndSaveForm() async {
   if (_formFields == null) {
     return;
