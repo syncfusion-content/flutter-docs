@@ -279,31 +279,81 @@ Widget build(BuildContext context) {
 By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize the visibility of the built-in signature pad using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11 12 13" %}
- 
-final GlobalKey<SfSignaturePadState> _signaturePadKey = GlobalKey();
+{% highlight dart hl_lines="9" %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfPdfViewer.asset(
-      'assets/form_document.pdf',
-      canShowSignaturePadDialog: false,
-      onFormFieldFocusChange: (PdfFormFieldFocusChangeDetails details) {
-        if (details.formField is PdfSignatureFormField && details.hasFocus) {
-          final PdfSignatureFormField signatureFormField =
-              details.formField as PdfSignatureFormField;
-          _showCustomSignaturePadDialog(signatureFormField);
-        }
-      },
-    ),
-  );
+@override 
+Widget build(BuildContext context) { 
+  return Scaffold( 
+    appBar: AppBar( 
+      title: const Text('Syncfusion Flutter PDF Viewer'),
+    ), 
+    body: SfPdfViewer.asset( 
+      'assets/form_document.pdf', 
+      canShowSignaturePadDialog: false, 
+    ), 
+  ); 
 }
 
-/// Displays the custom signature pad dialog.
-Future<void> _showCustomSignaturePadDialog(
-    PdfSignatureFormField formField) async {
-  await showDialog(
+{% endhighlight %}
+{% endtabs %}
+
+## How do I create and display a custom signature pad?
+
+With the above option available in the `SfPdfViewer`, you can easily hide the built-in signature pad and create and display a custom signature pad to draw and add personalised signatures to the signature form field. The following code example explains the same.
+
+In this example, the custom signature pad using `SfSignaturePad` will be displayed when tapping on the signature field with the following options:
+
+* **Clear** - To clear all the signature strokes in the `SfSignaturePad`.
+* **Save** - To save the signature strokes in the `SfSignaturePad` to the signature form field as image.
+
+{% tabs %}
+{% highlight dart %}
+
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Syncfusion PDF Viewer Demo',
+    home: HomePage(),
+  ));
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePage createState() => _HomePage();
+}
+
+class _HomePage extends State<HomePage> {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+  final GlobalKey<SfSignaturePadState> _signaturePadKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfPdfViewer.asset(
+        'assets/form_document.pdf',
+        key: _pdfViewerKey,
+        canShowSignaturePadDialog: false,
+        onFormFieldFocusChange: (PdfFormFieldFocusChangeDetails details) {
+          if (details.formField is PdfSignatureFormField && details.hasFocus) {
+            final PdfSignatureFormField signatureFormField =
+                details.formField as PdfSignatureFormField;
+            _showCustomSignaturePadDialog(signatureFormField);
+          }
+        },
+      ),
+    );
+  }
+
+  /// Displays the custom signature pad dialog.
+  Future<void> _showCustomSignaturePadDialog(
+      PdfSignatureFormField formField) async {
+    await showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
@@ -326,6 +376,7 @@ Future<void> _showCustomSignaturePadDialog(
           actions: [
             TextButton(
               onPressed: () {
+                // Clears the strokes in the signature pad.
                 _signaturePadKey.currentState!.clear();
               },
               child: const Text('Clear'),
@@ -337,27 +388,22 @@ Future<void> _showCustomSignaturePadDialog(
               },
               child: const Text('Save'),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('Cancel'),
-            ),
           ],
         );
       },
     );
-}
+  }
 
-/// Saves the image from the signature pad to the form field.
-Future<void> _saveSignature(PdfSignatureFormField formField) async {
-  final ui.Image image =
-      await _signaturePadKey.currentState!.toImage(pixelRatio: 3.0);
-  final ByteData? imageBytes =
-      await image.toByteData(format: ui.ImageByteFormat.png);
-  if (imageBytes != null) {
-    final Uint8List data = imageBytes.buffer.asUint8List();
-    formField.signature = data;
+  /// Saves the image from the signature pad to the form field.
+  Future<void> _saveSignature(PdfSignatureFormField formField) async {
+    final ui.Image image =
+        await _signaturePadKey.currentState!.toImage(pixelRatio: 3.0);
+    final ByteData? imageBytes =
+        await image.toByteData(format: ui.ImageByteFormat.png);
+    if (imageBytes != null) {
+      final Uint8List data = imageBytes.buffer.asUint8List();
+      formField.signature = data;
+    }
   }
 }
 
@@ -629,7 +675,7 @@ The `SfPdfViewer` supports the [PdfFormFieldFocusChangeCallback](https://pub.dev
 The [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback triggers when the focus changes in or out of the form field. The [PdfFormFieldFocusChangeDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldFocusChangeDetails-class.html) will return the `formField` instance and its focus change value in the `hasFocus` property. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="9 10 11" %}
  
 @override 
 Widget build(BuildContext context) { 
@@ -656,7 +702,7 @@ N> The `PdfFormFieldFocusChangeCallback` only triggers for text boxes and signat
 The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) the `formField` instance along with its `oldValue` and `newValue`. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10 11" %}
+{% highlight dart hl_lines="9 10 11 12" %}
  
 @override 
 Widget build(BuildContext context) { 
@@ -677,66 +723,196 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to
+## How to synchronize text form field data with the text entry widget periodically for each character change?
 
-### Get the text form field value for each character input
-
-In SfPdfViewer, we can get the data in the text form field for each character input by using the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback. The following code example explains the same.
+With the help of the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback, we can synchronize text form field data with the text entry widget periodically for each character change. The following code example explains the same.
 
 {% tabs %}
 {% highlight %}
 
-final TextEditingController _nameController = TextEditingController();
- 
-@override 
-Widget build(BuildContext context) { 
-  return Scaffold( 
-    body: SfPdfViewer.asset( 
-      'assets/form_document.pdf', 
-      onFormFieldValueChanged:(PdfFormFieldValueChangedDetails details) {
-        final PdfFormField field = details.formField;
-        if (field is PdfTextFormField && field.name == 'name') {
-          _nameController.value = TextEditingValue(text: field.text);
-        }   
-      },
-    ), 
-  ); 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Syncfusion PDF Viewer Demo',
+    home: HomePage(),
+  ));
+}
+
+/// Represents Homepage for Navigation
+class HomePage extends StatefulWidget {
+  @override
+  _HomePage createState() => _HomePage();
+}
+
+class _HomePage extends State<HomePage> {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+
+  final TextEditingController _nameController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(
+            width: 200,
+            child: TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Name',
+                fillColor: Colors.grey[100],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: SfPdfViewer.asset(
+              'assets/form_document.pdf',
+              key: _pdfViewerKey,
+              onFormFieldValueChanged:
+                  (PdfFormFieldValueChangedDetails details) {
+                final PdfFormField field = details.formField;
+                if (field is PdfTextFormField && field.name == 'name') {
+                  _nameController.value = TextEditingValue(text: field.text);
+                }
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### Get the text form field value after finishing the text input
+## How to synchronize text form field data with the text entry widget after filling it out completely?
 
-In SfPdfViewer, we can get the data in the text form field after the text input is finished by using the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback. The following code example explains the same.
+With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback, we can synchronize text form field data with the text entry widget after filling it out completely. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart %}
 
-@override 
-Widget build(BuildContext context) { 
-  return Scaffold( 
-    body: SfPdfViewer.asset( 
-      'assets/form_document.pdf', 
-      onFormFieldFocusChange:
-          (PdfFormFieldFocusChangeDetails details) {
-        final PdfFormField field = details.formField;
-        if (field is PdfTextFormField && field.name == 'name') {
-          if (!details.hasFocus) {
-            _nameController.value = TextEditingValue(text: field.text);
-          }
-        }
-      },
-    ), 
-  ); 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Syncfusion PDF Viewer Demo',
+    home: HomePage(),
+  ));
+}
+
+/// Represents Homepage for Navigation
+class HomePage extends StatefulWidget {
+  @override
+  _HomePage createState() => _HomePage();
+}
+
+class _HomePage extends State<HomePage> {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+
+  final TextEditingController _nameController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(
+            width: 200,
+            child: TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Name',
+                fillColor: Colors.grey[100],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: SfPdfViewer.asset(
+              'assets/form_document.pdf',
+              key: _pdfViewerKey,
+              onFormFieldFocusChange:
+                  (PdfFormFieldFocusChangeDetails details) async {
+                final PdfFormField field = details.formField;
+                if (field is PdfTextFormField && field.name == 'name') {
+                  if (details.hasFocus) {
+                    _nameController.value = TextEditingValue.empty;
+                  }
+                }
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### Validate the form field data
+### How do I perform validation over the form field data?
 
-In this example, we have validated the data in each form fields using the value in the [PdfFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormField-class.html) instance. The following code example explains the same.
+With the help of the `onFormFieldFocusChange` and ` onFormFieldValueChanged ` callbacks and the form field programmatic options available in `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
+
+In this example, we are validating the form field data in a registration form when saving. The validation includes,
+<table>
+<tr>
+<td>
+Name
+</td>
+<td>
+* Name is required.<br>
+* Name should be atleast 3 characters.<br>
+* Name should not exceed 30 characters.<br>
+* Name should not contain numbers.<br>
+* Name should not contain special characters.<br>
+</td>
+</tr>
+<tr>
+<td>
+Email
+</td>
+<td>
+* Email is required.<br>
+* Email should be in correct format.<br>
+</td>
+</tr>
+<tr>
+<td>
+Date of birth
+</td>
+<td>
+* Date of birth is required.<br>
+* Date of birth should be in dd/mm/yyyy format.<br>
+</td>
+</tr>
+<tr>
+<td>
+Course
+</td>
+<td>
+* Atleast one course should be selected.
+</td>
+</tr>
+<tr>
+<td>
+Signature
+</td>
+<td>
+* Signature is required.
+</td>
+</tr>
+</table>
+
+If the validation fails, the error messages will be displayed in an alert dialog. If the validation succeeds, the form field data will be saved.
+
 
 {% tabs %}
 {% highlight %}
