@@ -865,7 +865,7 @@ In this example, we are validating the form field data in a registration form wh
 <table>
 <tr>
 <td>
-<b>Field Name</b>
+<b>Field name</b>
 </td>
 <td>
 <b>Validation messages</b>
