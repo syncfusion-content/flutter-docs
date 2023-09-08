@@ -20,8 +20,8 @@ The Syncfusion [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/f
 * **Page navigation** - Navigate to the desired pages instantly.
 * **Bookmark navigation** - Bookmarks saved in the document are loaded and made ready for easy navigation. This feature helps navigate the topics bookmarked already within the PDF document.
 * **Document link annotation navigation** - Navigate to the desired topic or position by tapping the document link annotation of the topics in the table of contents in a PDF document.
-* **Hyperlink navigation** - Detects hyperlinks and tapping on the hyperlink will open the URL in a browser.
-* **Form filling** - Add and modify the existing form field content in a PDF document.
+* **Hyperlink navigation** - Detects hyperlinks, and tapping on the hyperlink will open the URL in a default web browser.
+* **Form filling** - Fill, edit, flatten, save, export, and import AcroForm field data in a PDF document.
 * **Themes** - Easily switch between light and dark themes.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
 * **Accessibility** - Easily accessible by screen readers.

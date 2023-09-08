@@ -857,11 +857,12 @@ class _HomePage extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-### How to perform validation over the form field data?
+## How to perform validation over the form field data?
 
 With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
 
 In this example, we are validating the form field data in a registration form when saving. The validation includes,
+
 <table>
 <tr>
 <td>
