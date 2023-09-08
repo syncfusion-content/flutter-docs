@@ -280,7 +280,7 @@ By default, the `SfPdfViewer` displays the signature pad when tapped on the sign
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
-
+ 
 @override 
 Widget build(BuildContext context) { 
   return Scaffold( 
@@ -297,14 +297,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How do I create and display a custom signature pad?
+### How to create and display a custom signature pad?
 
 With the above option available in the `SfPdfViewer`, you can easily hide the built-in signature pad and create and display a custom signature pad to draw and add personalised signatures to the signature form field. The following code example explains the same.
 
 In this example, the custom signature pad using `SfSignaturePad` will be displayed when tapping on the signature field with the following options:
 
-* **Clear** - To clear all the signature strokes in the `SfSignaturePad`.
-* **Save** - To save the signature strokes in the `SfSignaturePad` to the signature form field as image.
+* **Clear** - Clears all the signature strokes in the `SfSignaturePad`.
+* **Save** - Saves the signature strokes in the `SfSignaturePad` to the signature form field as an image.
 
 {% tabs %}
 {% highlight dart %}
@@ -857,19 +857,27 @@ class _HomePage extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-### How do I perform validation over the form field data?
+### How to perform validation over the form field data?
 
-With the help of the `onFormFieldFocusChange` and ` onFormFieldValueChanged ` callbacks and the form field programmatic options available in `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
+With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
 
 In this example, we are validating the form field data in a registration form when saving. The validation includes,
 <table>
+<tr>
+<td>
+<b>Field Name</b>
+</td>
+<td>
+<b>Validation messages</b>
+</td>
+</tr>
 <tr>
 <td>
 Name
 </td>
 <td>
 * Name is required.<br>
-* Name should be atleast 3 characters.<br>
+* Name should have at least 3 characters.<br>
 * Name should not exceed 30 characters.<br>
 * Name should not contain numbers.<br>
 * Name should not contain special characters.<br>
@@ -910,9 +918,6 @@ Signature
 </td>
 </tr>
 </table>
-
-If the validation fails, the error messages will be displayed in an alert dialog. If the validation succeeds, the form field data will be saved.
-
 
 {% tabs %}
 {% highlight %}
@@ -955,7 +960,7 @@ Future<void> _validateAndSaveForm() async {
         if (formField.text == null || formField.text.isEmpty) {
           errors.add('Name is required.');
         } else if (formField.text.length < 3) {
-          errors.add('Name should be atleast 3 characters.');
+          errors.add('Name should have atleast 3 characters.');
         } else if (formField.text.length > 30) {
           errors.add('Name should not exceed 30 characters.');
         } else if (formField.text.contains(RegExp(r'[0-9]'))) {
