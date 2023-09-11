@@ -299,9 +299,9 @@ Widget build(BuildContext context) {
 
 ### How to create and display a custom signature pad?
 
-With the above option available in the `SfPdfViewer`, you can easily hide the built-in signature pad and create and display a custom signature pad to draw and add personalised signatures to the signature form field. The following code example explains the same.
+With the above option in the `SfPdfViewer`, you can easily hide the built-in signature pad and create and display a custom signature pad to draw and add personalized signatures to the signature form field. The following code example explains the same.
 
-In this example, the custom signature pad using `SfSignaturePad` will be displayed when tapping on the signature field with the following options:
+In this example, the custom signature pad using the `SfSignaturePad` will be displayed when tapping on the signature field with the following options:
 
 * **Clear** - Clears all the signature strokes in the `SfSignaturePad`.
 * **Save** - Saves the signature strokes in the `SfSignaturePad` to the signature form field as an image.
@@ -859,7 +859,7 @@ class _HomePage extends State<HomePage> {
 
 ## How to perform validation over the form field data?
 
-With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
+With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in the `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
 
 In this example, we are validating the form field data in a registration form when saving. The validation includes,
 
