@@ -728,7 +728,7 @@ Widget build(BuildContext context) {
 With the help of the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback, we can synchronize text form field data with the text entry widget periodically for each character change. The following code example explains the same.
 
 {% tabs %}
-{% highlight %}
+{% highlight dart %}
 
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -921,7 +921,7 @@ Signature
 </table>
 
 {% tabs %}
-{% highlight %}
+{% highlight dart %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController();
 List<PdfFormField>? _formFields;
