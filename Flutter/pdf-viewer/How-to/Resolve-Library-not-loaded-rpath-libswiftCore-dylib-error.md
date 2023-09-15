@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Library not loaded: @rpath/libswiftCore.dylib error | Syncfusion
-description: Learn here all about how to resolve Library not loaded: @rpath/libswiftCore.dylib error faced when using Syncfusion Flutter PdfViewer (SfPdfViewer) widget.
+title: Library not loaded @rpath/libswiftCore.dylib error | Syncfusion
+description: Learn here all about how to resolve Library not loaded @rpath/libswiftCore.dylib error faced when using Syncfusion Flutter PdfViewer (SfPdfViewer) widget.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
