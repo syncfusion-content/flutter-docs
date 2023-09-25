@@ -566,7 +566,7 @@ The following are the limitations of GridCheckboxColumn:
 
 ### Show the column header icons on hover
 
-To display column header icons, such as sort and filter icons, when the mouse hovers over a column header, set the `SfDataGrid.showColumnHeaderIconOnHover` property to true. This feature is available only on web and desktop platforms.
+To display column header icons, such as sort and filter icons, when the mouse hovers over a column header, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to true. This feature is available only on web and desktop platforms.
 
 {% tabs %}
 {% highlight Dart %} 
