@@ -564,7 +564,7 @@ The following are the limitations of GridCheckboxColumn:
 * The checkbox column does not support adding the stacked headers along with other columns.
 * The checkbox column will be excluded in exporting operations.
 
-### Show the column header icons on hover
+## Show the column header icons on hover
 
 To display column header icons, such as sort and filter icons, when the mouse hovers over a column header, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to true. This feature is available only on web and desktop platforms.
 
