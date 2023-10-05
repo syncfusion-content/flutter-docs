@@ -39,7 +39,7 @@ The following properties can be used to customize the appearance:
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders area chart
                             AreaSeries<ChartData, int>(
                                 dataSource: chartData,
@@ -77,11 +77,11 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 color: Colors.deepOrange[300],
-                                borderMode: AreaBorderMode.excludeBottom,
+                                borderDrawMode: BorderDrawMode.excludeBottom,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -148,8 +148,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(labelFormat: '{value}mm')
-                        series: <ChartSeries>[
+                        primaryYAxis: NumericAxis(labelFormat: '{value}mm'),
+                        series: <CartesianSeries>[
                             // Renders area chart
                             AreaSeries<ChartData, int>(
                                 dataSource: chartData,
@@ -179,33 +179,33 @@ Data points with a null value are considered empty points. Empty data points are
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData(1924, 400),
-            ChartData(1925, 410),
-            ChartData(1926, 405),
-            ChartData(1927, 410),
-            ChartData(1928, 350),
-            ChartData(1929, 370),
-            ChartData(1930, 500),
-            ChartData(1931, 390),
-            ChartData(1932, null),
-            ChartData(1933, null),
-            ChartData(1934, null),
-            ChartData(1935, null),
-            ChartData(1936, null),
-            ChartData(1937, 410),
-            ChartData(1938, 530),
-            ChartData(1939, 520),
-            ChartData(1940, 390),
-            ChartData(1941, 360),
-            ChartData(1942, 405),
-            ChartData(1943, 400),
+            ChartData(DateTime(1924), 400),
+            ChartData(DateTime(1925), 410),
+            ChartData(DateTime(1926), 405),
+            ChartData(DateTime(1927), 410),
+            ChartData(DateTime(1928), 350),
+            ChartData(DateTime(1929), 370),
+            ChartData(DateTime(1930), 500),
+            ChartData(DateTime(1931), 390),
+            ChartData(DateTime(1932), null),
+            ChartData(DateTime(1933), null),
+            ChartData(DateTime(1934), null),
+            ChartData(DateTime(1935), null),
+            ChartData(DateTime(1936), null),
+            ChartData(DateTime(1937), 410),
+            ChartData(DateTime(1938), 530),
+            ChartData(DateTime(1939), 520),
+            ChartData(DateTime(1940), 390),
+            ChartData(DateTime(1941), 360),
+            ChartData(DateTime(1942), 405),
+            ChartData(DateTime(1943), 400),
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -241,7 +241,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                     child: SfCartesianChart(
                         isTransposed: true,
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

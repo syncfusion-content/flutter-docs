@@ -99,7 +99,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
                     child: SfCartesianChart(
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Initialize line series
                             LineSeries<ChartData, String>(
                                 dataSource: [
@@ -154,7 +154,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         title: ChartTitle(text: 'Half yearly sales analysis'),
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Initialize line series
                             LineSeries<ChartData, String>(
                             dataSource: [
@@ -201,7 +201,7 @@ You can add data labels to improve the readability of the chart using the [`data
                         title: ChartTitle(text: 'Half yearly sales analysis'),
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Initialize line series
                             LineSeries<ChartData, String>(
                                 dataSource: [
@@ -256,7 +256,7 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
                         legend: Legend(isVisible: true), 
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Initialize line series
                             LineSeries<ChartData, String>(
                                 dataSource: [
@@ -318,7 +318,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         tooltipBehavior: _tooltipBehavior,
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Initialize line series
                             LineSeries<ChartData, String>(
                                 // Enables the tooltip for individual series
