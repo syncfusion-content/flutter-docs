@@ -21,20 +21,20 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
     @override
     Widget build(BuildContext context) {
          final List<ChartData> chartData = [
-            ChartData(2010, 32),
-            ChartData(2011, 40),
-            ChartData(2012, 34),
-            ChartData(2013, 52),
-            ChartData(2014, 42),
-            ChartData(2015, 38),
-            ChartData(2016, 41),
+            ChartData(DateTime(2010), 32),
+            ChartData(DateTime(2011), 40),
+            ChartData(DateTime(2012), 34),
+            ChartData(DateTime(2013), 52),
+            ChartData(DateTime(2014), 42),
+            ChartData(DateTime(2015), 38),
+            ChartData(DateTime(2016), 41),
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders step line chart
                             StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -63,20 +63,20 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     @override
     Widget build(BuildContext context) {
          final List<ChartData> chartData = [
-            ChartData(2010, 32),
-            ChartData(2011, 40),
-            ChartData(2012, 34),
-            ChartData(2013, 52),
-            ChartData(2014, 42),
-            ChartData(2015, 38),
-            ChartData(2016, 41),
+            ChartData(DateTime(2010), 32),
+            ChartData(DateTime(2011), 40),
+            ChartData(DateTime(2012), 34),
+            ChartData(DateTime(2013), 52),
+            ChartData(DateTime(2014), 42),
+            ChartData(DateTime(2015), 38),
+            ChartData(DateTime(2016), 41),
         ];
          return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 // Dashes for step line

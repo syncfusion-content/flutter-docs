@@ -24,11 +24,11 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
     @override
     Widget build(BuildContext context) {
          final List<ChartData> chartData = [
-            ChartData(2010, 35, 0.32),
-            ChartData(2011, 38, 0.21),
-            ChartData(2012, 34, 0.38),
-            ChartData(2013, 52, 0.29),
-            ChartData(2014, 40, 0.34)
+            ChartData(DateTime(2010), 35, 0.32),
+            ChartData(DateTime(2011), 38, 0.21),
+            ChartData(DateTime(2012), 34, 0.38),
+            ChartData(DateTime(2013), 52, 0.29),
+            ChartData(DateTime(2014), 40, 0.34)
         ];
 
         return Scaffold(
@@ -36,7 +36,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders bubble chart
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -77,7 +77,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData data, _) => data.size,
@@ -116,7 +116,7 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData data, _) => data.size,
@@ -197,7 +197,7 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BubbleSeries<ChartData, num>(
                                   dataSource: northAmerica,
                                   xValueMapper: (ChartData data, _) => data.xValue,
