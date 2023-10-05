@@ -34,7 +34,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
         return Scaffold(
             body: Center(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -95,7 +95,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
@@ -139,7 +139,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],

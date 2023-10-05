@@ -25,7 +25,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StepAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -62,7 +62,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StepAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],

@@ -31,7 +31,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             RangeColumnSeries<ChartData, String>(
                                 dataSource: <ChartData>[
                                     ChartData('Jan', 3, 9),
@@ -77,7 +77,7 @@ In the range column chart when data label is enabled, by default there will be t
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             RangeColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -115,7 +115,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                     child: SfCartesianChart(
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             RangeColumnSeries<ChartData, String>(
                                 dataSource: <ChartData>[
                                     ChartData('Jan', 3, 9),
