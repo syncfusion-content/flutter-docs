@@ -35,8 +35,8 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
-                            // Renders bar chart
+                        series: <CartesianSeries>[
+                            // Renders Hilo chart
                             HiloSeries<ChartData, DateTime>(
                                 dataSource: financialData,
                                 xValueMapper: (ChartData data, _) => data.x,

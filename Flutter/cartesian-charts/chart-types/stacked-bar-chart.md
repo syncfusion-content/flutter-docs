@@ -31,7 +31,7 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -78,7 +78,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
@@ -129,7 +129,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
@@ -138,7 +138,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group B',
+                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -152,7 +152,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group B',
+                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

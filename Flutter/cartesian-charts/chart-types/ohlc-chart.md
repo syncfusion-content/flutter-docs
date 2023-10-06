@@ -42,7 +42,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders hiloOpenCloseSeries 
                             hiloOpenCloseSeries<ChartData, DateTime>(
                                 dataSource: financialData,
@@ -86,7 +86,7 @@ The following are the types of indication when the combination of high, low, ope
         return Scaffold(
             body: Center(
                 child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                           HiloOpenCloseSeries<ChartData, double>(
                             showIndicationForSameValues: true,
                             dataSource: <ChartData>[
@@ -117,9 +117,8 @@ The following are the types of indication when the combination of high, low, ope
                         ]
                     ),
                 )   
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
