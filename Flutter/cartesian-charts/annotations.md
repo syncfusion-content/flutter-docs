@@ -159,7 +159,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
                   y: '50%'
               )
             ],
-            series: <ChartSeries<ChartData, String>>[
+            series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
@@ -422,7 +422,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
                 y: 38,
                 )
               ],
-                series: <ChartSeries<ChartData, String>>[
+                series: <CartesianSeries<ChartData, String>>[
                 LineSeries<ChartData, String>(
                     dataSource: <ChartData>[
                     ChartData('jan', 21),

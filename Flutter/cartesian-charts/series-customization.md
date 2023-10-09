@@ -74,7 +74,7 @@ If you wish to perform the initial rendering animation again in the existing ser
                 minimum: 0,
                 maximum: 7000)
                 ],
-            series: <ChartSeries<_ChartSampleData, String>>[
+            series: <CartesianSeries<_ChartSampleData, String>>[
             ColumnSeries<_ChartSampleData, String>(
                 animationDuration: 2000,
                 onRendererCreated: (ChartSeriesController controller) {
@@ -102,16 +102,14 @@ If you wish to perform the initial rendering animation again in the existing ser
             child: Row(
             children: [
                 Container(
-                    child: RaisedButton(
-                color: Colors.grey[400],
+                    child: ElevatedButton(
                 onPressed: () {
                     _chartSeriesController2?.animate();
                 },
                 child: Text('Line'),
                 )),
                 Container(
-                    child: RaisedButton(
-                color: Colors.grey[400],
+                    child: ElevatedButton(
                 onPressed: () {
                     _chartSeriesController1?.animate();
                 },
@@ -173,7 +171,7 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
                     minimum: 0,
                     maximum: 7000)
                 ],
-                series: <ChartSeries<ChartData, String>>[
+                series: <CartesianSeries<ChartData, String>>[
                   ColumnSeries<ChartData, String>(
                     animationDuration: 2000,
                     dataSource: chartData,
@@ -501,7 +499,7 @@ Defaults to `null`.
         body: Center(
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
-                series: <ChartSeries<ChartData, String>>[
+                series: <CartesianSeries<ChartData, String>>[
                 AreaSeries<ChartData, String>(
                     dataSource: chartData,
                     onCreateShader: (ShaderDetails details) {
@@ -531,7 +529,6 @@ Defaults to `null`.
                 )
             );
         }
-    }
 
     class ChartData {
        const ChartData(this.x, this.y);

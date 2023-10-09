@@ -50,7 +50,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -94,7 +94,7 @@ To render an exponential trendline, use trendline type as Exponential.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -138,7 +138,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -182,7 +182,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -226,7 +226,7 @@ To render a power trendline, use trendline type as Power
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -269,7 +269,7 @@ To render a moving average trendline, use trendline type as MovingAverage
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -317,7 +317,7 @@ The value set for forwardForecast is used to determine the distance moving towar
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -360,7 +360,7 @@ The value set for the backwardForecast is used to determine the past trends.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -403,7 +403,7 @@ Legend for trendline gets rendered together with the series legend when the lege
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -448,7 +448,7 @@ Data markers are used to provide information about the data points in the series
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -502,7 +502,7 @@ Chart will display details about the points through tooltip, when user interacti
                     child: SfCartesianChart(
                         tooltipBehavior: _tooltipBehavior,
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,

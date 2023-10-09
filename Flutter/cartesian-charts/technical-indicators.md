@@ -63,7 +63,7 @@ Refer the following example,
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<ChartData,DateTime>>[AccumulationDistributionIndicator<ChartData, DateTime>(
                   seriesName: 'HiloOpenClose')],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
               dataSource: ChartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -200,7 +200,7 @@ Refer the following example,
         EmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'high',)],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
         HiloOpenCloseSeries<ChartData, DateTime>(
             name: 'HiloOpenClose')
             ]
@@ -291,7 +291,7 @@ Refer the following example,
           MomentumIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose',)],
-           series: <ChartSeries<ChartData, DateTime>>[
+           series: <CartesianSeries<ChartData, DateTime>>[
           HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
@@ -336,7 +336,7 @@ Refer the following example,
             seriesName: 'HiloOpenClose',
             overbought: 70,
             oversold: 30)],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
           HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
@@ -376,7 +376,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
           SmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'close')],
-           series: <ChartSeries<ChartData, DateTime>>[
+           series: <CartesianSeries<ChartData, DateTime>>[
           HiloOpenCloseSeries<ChartData, DateTime>(
             name: 'HiloOpenClose')
             ]
@@ -422,7 +422,7 @@ Refer the following example,
               seriesName: 'HiloOpenClose',,
               kPeriod: 2,
               dPeriod: 3)],
-             series: <ChartSeries<ChartData, DateTime>>[
+             series: <CartesianSeries<ChartData, DateTime>>[
           HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
@@ -464,7 +464,7 @@ Refer the following example,
           TmaIndicator<ChartData, dynamic>(
               seriesName: 'HiloOpenClose',
               valueField: 'low')],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
           HiloOpenCloseSeries<ChartData, DateTime>(
             name: 'HiloOpenClose')
             ]
@@ -507,7 +507,7 @@ The following code example can define the legend.
                   seriesName: 'HiloOpenClose',
                   legendIconType: LegendIconType.diamond,
                   legendItemText: 'Indicator')],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
                   name: 'HiloOpenClose')
                   ]
@@ -560,7 +560,7 @@ The chart will display the segment information through the tooltip. It is used t
                   seriesName: 'HiloOpenClose',
                   )
                 ],
-            series: <ChartSeries<ChartData, DateTime>>[
+            series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
                   enableTooltip: true,
                   name: 'HiloOpenClose')
@@ -609,7 +609,7 @@ Refer the following example below
                 closeValueMapper: (ChartData data, _) => data.close,
               )
             ], 
-            series: <ChartSeries<ChartData, num>>[
+            series: <CartesianSeries<ChartData, num>>[
               LineSeries<ChartData, num>(
                   color: Colors.purple,
                   dataSource: chartData,

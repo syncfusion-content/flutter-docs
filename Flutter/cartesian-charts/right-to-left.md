@@ -100,7 +100,7 @@ Right to left rendering is applicable for the [`legend`](https://pub.dev/documen
             legend: Legend(
               isVisible: true
             ),
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 name: 'Weekly expenses',
                 dataSource: chartData,
@@ -154,7 +154,7 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
             tooltipBehavior = _tooltipBehavior;
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 name: 'Weekly expenses',
                 dataSource: chartData,
@@ -212,7 +212,7 @@ Right-to-left rendering is applicable for trackball tooltip elements.
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
             trackballBehavior = _trackballBehavior;
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -259,7 +259,7 @@ In addition, if you want the chart series and axis to look like it is rendering 
           primaryYAxis: NumericAxis(
             opposedPosition: true,
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,

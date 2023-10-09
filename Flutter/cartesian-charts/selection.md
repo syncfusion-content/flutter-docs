@@ -102,8 +102,7 @@ You can customize the segments using the below properties.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <CartesianSeries>[
-                            series: <ChartSeries<ChartData, String>>[
+                            series: <CartesianSeries<ChartData, String>>[
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
                             selectionBehavior: _selectionBehavior
@@ -161,7 +160,7 @@ The selection features allows you to select segments in following modes using [`
                     child: SfCartesianChart(
         // Mode of selection
         selectionType: SelectionType.cluster,
-        series: <ChartSeries<ChartData, String>>[
+        series: <CartesianSeries<ChartData, String>>[
             ColumnSeries<ChartData, String>(
                 dataSource: chartData,
                 selectionBehavior: _selectionBehavior,
@@ -222,7 +221,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
           child: SfCartesianChart(
             // Enables multiple selection
             enableMultiSelection: true,
-            series: <ChartSeries<ChartData, String>>[
+            series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
                   selectionBehavior: _selectionBehavior,
@@ -270,7 +269,7 @@ You can select a point or series programmatically on a chart using [`initialSele
                     child: SfCartesianChart(
                         // Mode of selection
                         selectionType: SelectionType.cluster,
-                        series: <ChartSeries<ChartData, String>>[
+                        series: <CartesianSeries<ChartData, String>>[
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
                             initialSelectedDataIndexes: <int>[1],

@@ -446,7 +446,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointTap: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -479,7 +479,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointDoubleTap: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -512,7 +512,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointLongPress: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -916,7 +916,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
               onDatalabelTapped: (DataLabelTapArgs args) {
                 print(args.seriesIndex);                 
               },
-              series: <ChartSeries<Sample, DateTime>>[
+              series: <CartesianSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (Sample data, _) => data.x,
@@ -955,7 +955,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
             onPlotAreaSwipe:
               (ChartSwipeDirection direction) =>
                   performSwipe(direction),
-            series: <ChartSeries<ChartData, num>>[
+            series: <CartesianSeries<ChartData, num>>[
                  AreaSeries<ChartData, num>(
                      dataSource: chartData,
                  ),
@@ -1013,7 +1013,7 @@ Triggers when the error bar is being rendered. In this [`onRenderDetailsUpdate`]
 
       return Scaffold(
         body: SfCartesianChart(
-      series: <ChartSeries<ChartData, int>>[
+      series: <CartesianSeries<ChartData, int>>[
         ErrorBarSeries<ChartData, int>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
@@ -1280,7 +1280,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,

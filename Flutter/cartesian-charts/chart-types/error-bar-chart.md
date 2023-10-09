@@ -38,7 +38,7 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
 
       return Scaffold(
         body: SfCartesianChart(
-              series: <ChartSeries<ChartData, int>>[
+              series: <CartesianSeries<ChartData, int>>[
                 ErrorBarSeries<ChartData, int>(
                   width: 3.0,
                   opacity: 0.7,
@@ -51,7 +51,6 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
            )
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);
@@ -90,7 +89,7 @@ You can customize the error bar depending on the error value by setting the valu
 
       return Scaffold(
         body: SfCartesianChart(
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               ErrorBarSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -134,7 +133,7 @@ For [`ErrorBarType.custom`](https://pub.dev/documentation/syncfusion_flutter_cha
 
       return Scaffold(
         body: SfCartesianChart(
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               ErrorBarSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -183,7 +182,7 @@ The default value is [`RenderingMode.vertical`](https://pub.dev/documentation/sy
 
       return Scaffold(
         body: SfCartesianChart(
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               ErrorBarSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -230,7 +229,7 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
 
       return Scaffold(
         body: SfCartesianChart(
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               ErrorBarSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -269,7 +268,7 @@ The [`capLength`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
       return Scaffold(
         body: SfCartesianChart(
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               ErrorBarSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,

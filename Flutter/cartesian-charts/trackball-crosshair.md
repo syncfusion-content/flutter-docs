@@ -552,7 +552,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               trackballBehavior: _trackballBehavior,
-              series: <ChartSeries<ChartData, String>>[
+              series: <CartesianSeries<ChartData, String>>[
                 SplineSeries<ChartData, String>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
