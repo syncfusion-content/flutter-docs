@@ -61,7 +61,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<ChartData,DateTime>>[AccumulationDistributionIndicator<ChartData, DateTime>(
+            indicators: [AccumulationDistributionIndicator<ChartData, DateTime>(
                   seriesName: 'HiloOpenClose')],
             series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
@@ -108,13 +108,18 @@ Refer the following example,
          child: SfCartesianChart(
           primaryXAxis: DateTimeAxis(),
           legend: Legend(isVisible: true),
-          indicators:
-          <TechnicalIndicators<dynamic,   dynamic>>[
+          indicators:[
           AtrIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose')],
     series: <CartesianSeries<ChartData, DateTime>>[
             HiloOpenCloseSeries<ChartData, DateTime>(
+              dataSource: ChartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              lowValueMapper: (ChartData data, _) => data.low,
+              highValueMapper: (ChartData data, _) => data.high,
+              openValueMapper: (ChartData data, _) => data.open,
+              closeValueMapper: (ChartData data, _) => data.close,
               name: 'HiloOpenClose')
               ]
             )
@@ -153,7 +158,7 @@ Refer the following example,
          child: SfCartesianChart(
            primaryXAxis: DateTimeAxis(),
            legend: Legend(isVisible: true),
-           indicators:        <TechnicalIndicators<dynamic, dynamic>[ BollingerBandIndicator<dynamic, dynamic>(
+           indicators: [ BollingerBandIndicator<dynamic, dynamic>(
                   period: 3,
                   seriesName: 'HiloOpenClose')],
            series: <CartesianSeries<ChartData, DateTime>>[
@@ -196,7 +201,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
         EmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'high',)],
@@ -243,7 +248,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
           MacdIndicator<dynamic, dynamic>(
               longPeriod: 5,
               shortPeriod: 2,
@@ -287,7 +292,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
           MomentumIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose',)],
@@ -330,7 +335,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-             indicators: <TechnicalIndicators<dynamic, dynamic>>[
+             indicators: [
           RsiIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose',
@@ -372,7 +377,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
           SmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'close')],
@@ -417,7 +422,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
           StochasticIndicator<dynamic, dynamic>(   
               seriesName: 'HiloOpenClose',,
               kPeriod: 2,
@@ -460,7 +465,7 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
           TmaIndicator<ChartData, dynamic>(
               seriesName: 'HiloOpenClose',
               valueField: 'low')],
@@ -502,7 +507,7 @@ The following code example can define the legend.
         body: Center(
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
               MomentumIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',
                   legendIconType: LegendIconType.diamond,
@@ -555,7 +560,7 @@ The chart will display the segment information through the tooltip. It is used t
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             tooltipBehavior: _tooltipBehavior,
-            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+            indicators: [
               ATRIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',
                   )

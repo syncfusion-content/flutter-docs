@@ -27,11 +27,11 @@ The selection feature in chart let you to select a segment in a series or the se
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData('USA', 6),
-            ChartData('China', 11),
-            ChartData('UK', 9),
-            ChartData('Japan', 14),
-            ChartData('France', 10),
+            ChartData(1, 6),
+            ChartData(2, 11),
+            ChartData(3, 9),
+            ChartData(4, 14),
+            ChartData(5, 10),
         ];
         return Scaffold(
             body: Center(
@@ -160,6 +160,7 @@ The selection features allows you to select segments in following modes using [`
                     child: SfCartesianChart(
         // Mode of selection
         selectionType: SelectionType.cluster,
+        primaryXAxis: CategoryAxis(),
         series: <CartesianSeries<ChartData, String>>[
             ColumnSeries<ChartData, String>(
                 dataSource: chartData,
@@ -221,6 +222,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
           child: SfCartesianChart(
             // Enables multiple selection
             enableMultiSelection: true,
+            primaryXAxis: CategoryAxis(),
             series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
@@ -269,16 +271,17 @@ You can select a point or series programmatically on a chart using [`initialSele
                     child: SfCartesianChart(
                         // Mode of selection
                         selectionType: SelectionType.cluster,
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries<ChartData, String>>[
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
                             initialSelectedDataIndexes: <int>[1],
-                            selectionBehavior: _selectionBehavior
+                            selectionBehavior: _selectionBehavior,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y),
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
-                            selectionBehavior: _selectionBehavior
+                            selectionBehavior: _selectionBehavior,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y1),
                         ],
@@ -308,7 +311,7 @@ Defaults to `true`.
 {% tabs %}
 {% highlight dart %} 
     
-    late selectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
@@ -326,12 +329,13 @@ Defaults to `true`.
             ChartData('USA', 69),
             ChartData('IDN', 68),
             ChartData('JAP', 61),
-            ChartData('BRA', 69),
+            ChartData('BRA', 69), 
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ColumnSeries<ChartData, String>>[
                           ColumnSeries<ChartData, String>(
                            dataSource: chartData1,
