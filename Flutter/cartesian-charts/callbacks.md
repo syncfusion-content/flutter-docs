@@ -1073,7 +1073,7 @@ Defaults to `null`.
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
-              onCreateRenderer: (ChartSeries<ChartData, int> series) {
+              onCreateRenderer: (series) {
                 return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
               }
             ),
@@ -1082,27 +1082,27 @@ Defaults to `null`.
       );
     }
 
-    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
+    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer<ChartData, int> {
       _CustomColumnSeriesRenderer(this.series);
 
       final ColumnSeries<ChartData, int> series;
       @override
-      ChartSegment createSegment() {
+      ColumnSegment<ChartData, int> createSegment() {
         return _ColumnCustomPainter(series);
       }
     }
 
-    class _ColumnCustomPainter extends ColumnSegment {
-      _ColumnCustomPainter(this.series);
+    class _ColumnCustomPainter extends ColumnSegment<ChartData, int> {
+      _ColumnCustomPainter(this._series);
 
-      final ColumnSeries<ChartData, int> series;
+      final ColumnSeries<ChartData, int> _series;
       @override
-      int get currentSegmentIndex => super.currentSegmentIndex!;
+      int get currentSegmentIndex => super.currentSegmentIndex;
 
       @override
       Paint getFillPaint() {
         final Paint customerFillPaint = Paint();
-        customerFillPaint.color = series.dataSource[currentSegmentIndex].y > 30
+        customerFillPaint.color = _series.dataSource![currentSegmentIndex].y > 30
           ? Colors.red
           : Colors.green;
         customerFillPaint.style = PaintingStyle.fill;
@@ -1182,7 +1182,6 @@ the data points and legend. For further reference on this callback, Check the [`
           )
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);

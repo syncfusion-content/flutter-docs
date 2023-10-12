@@ -153,7 +153,7 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
-            tooltipBehavior = _tooltipBehavior;
+            tooltipBehavior: _tooltipBehavior,
             series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 name: 'Weekly expenses',
@@ -211,7 +211,7 @@ Right-to-left rendering is applicable for trackball tooltip elements.
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfCartesianChart(
-            trackballBehavior = _trackballBehavior;
+            trackballBehavior: _trackballBehavior,
             series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 dataSource: chartData,
