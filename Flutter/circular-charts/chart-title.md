@@ -50,7 +50,7 @@ You can align the title text content horizontally to the near, center or far of 
                     fontSize: 14,
                   )
                 ),
-                series: <ChartSeries>[
+                series: <CircularSeries>[
                   // Initialize line series
                   PieSeries<ChartData, String>(
                     dataSource: [
