@@ -129,13 +129,8 @@ The following properties can be used to define and customize the [`title`](https
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w900
                     )
-                  ),
-                series: <CircularSeries>[
-                  PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y
-              ),
+                  )
+                ),
                 series: <CircularSeries>[
                   PieSeries<ChartData, String>(
                     dataSource: chartData,

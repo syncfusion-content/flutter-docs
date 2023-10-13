@@ -99,7 +99,7 @@ Right to left rendering is effective for the legend in the chart. Legend items w
             legend: Legend(
               isVisible: true
             ),
-            series: <ChartSeries<ChartData, String>>[
+            series: <CircularSeries<ChartData, String>>[
               PieSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -150,8 +150,8 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfCircularChart(
-            tooltipBehavior = _tooltipBehavior;
-            series: <ChartSeries<ChartData, String>>[
+            tooltipBehavior: _tooltipBehavior,
+            series: <CircularSeries<ChartData, String>>[
               PieSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,

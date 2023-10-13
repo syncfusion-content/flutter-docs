@@ -39,7 +39,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
           series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+            PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -104,7 +104,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
           series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+            PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -162,7 +162,7 @@ x & y - logical pixel values to position the tooltip.
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
           series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+            PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -217,7 +217,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
-          ColumnSeries<ChartData, double>(
+          PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
