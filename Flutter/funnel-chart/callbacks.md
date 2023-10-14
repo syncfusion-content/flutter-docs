@@ -144,8 +144,9 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
             },
             legend: Legend(isVisible: true)
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -443,8 +444,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
             )
           ]
         );
-      }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);
