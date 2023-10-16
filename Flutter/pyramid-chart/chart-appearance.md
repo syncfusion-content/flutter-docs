@@ -18,7 +18,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
     @override
     Widget build(BuildContext context) {
-      final List<ChartData> data = [
+      final List<ChartData> chartData = [
             ChartData('Jan', 35),
             ChartData('Feb', 28),
             ChartData('Mar', 38),
@@ -38,9 +38,8 @@ Chart renders based on the parent widget size. If you need the chart to be rende
                )
              )
            )
-         )
-       );
-    }
+         );
+        }
     class ChartData {
       ChartData(this.x, this.y);
       final String x;
@@ -100,7 +99,7 @@ You can customize the area of the chart using the below properties.
               width: 350, 
               child: SfPyramidChart(
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: 'images/livechart.png',
+                backgroundImage: AssetImage('images/liveChart.png'),
                 series: PyramidSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
@@ -108,9 +107,8 @@ You can customize the area of the chart using the below properties.
               )
             )
           )
-        )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 {% endtabs %}

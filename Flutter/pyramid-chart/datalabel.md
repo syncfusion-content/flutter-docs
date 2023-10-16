@@ -91,9 +91,8 @@ This feature is used to connect label and data point using a line. It can be ena
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: <PyramidSeries>[
+                        series: 
                             PyramidSeries<ChartData, double>(
-                                enableSmartLabels: true,
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -106,12 +105,11 @@ This feature is used to connect label and data point using a line. It can be ena
                                     )
                                 )
                             )
-                        ]
+                        )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -348,7 +346,6 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
             dataLabelMapper: (ChartData data, _) => data.x,
-            radius: '60%',
             dataLabelSettings: DataLabelSettings(
               isVisible: true,
               // Avoid labels intersection
@@ -358,11 +355,11 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
                 type: ConnectorType.curve, length: '25%')
               )
           )
-        ]);
+        );
     }
 
     class ChartData {
-      ChartData({this.x, this.y});
+      ChartData(this.x, this.y);
       final String? x;
       final num? y;
     }
