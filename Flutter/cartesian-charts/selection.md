@@ -27,18 +27,19 @@ The selection feature in chart let you to select a segment in a series or the se
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData(1, 6),
-            ChartData(2, 11),
-            ChartData(3, 9),
-            ChartData(4, 14),
-            ChartData(5, 10),
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10),
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, double>(
+                            ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -102,18 +103,18 @@ You can customize the segments using the below properties.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                            series: <CartesianSeries<ChartData, String>>[
-                        ColumnSeries<ChartData, String>(
-                            dataSource: chartData,
-                            selectionBehavior: _selectionBehavior
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y)
-                        ]
+                        series: <CartesianSeries<ChartData, String>>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                selectionBehavior: _selectionBehavior
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y)
+                            ]
+                        )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
     class ChartData {
         ChartData(this.x, this.y);
