@@ -528,13 +528,6 @@ Labels in category axis can be placed on the ticks by setting the [`labelPlaceme
                             // Axis labels will be placed on the ticks
                             labelPlacement: LabelPlacement.onTicks
                         ),
-                        series: [
-                            ColumnSeries(
-                                dataSource: chartData,
-                                xValueMapper: (data, _) => data.x,
-                                yValueMapper: (data, _) => data.y,
-                            )
-                        ]
                     )
                 )
             )
@@ -561,13 +554,6 @@ To display the labels after a fixed interval n, set the [`interval`](https://pub
                             labelPlacement: LabelPlacement.betweenTicks,
                             interval: 2
                         ),
-                        series: [
-                            ColumnSeries(
-                                dataSource: chartData,
-                                xValueMapper: (data, _) => data.x,
-                                yValueMapper: (data, _) => data.y,
-                            )
-                        ]
                     )
                 )
             )
