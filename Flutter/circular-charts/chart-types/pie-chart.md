@@ -63,7 +63,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 {% endhighlight %}
 {% endtabs %}
 
-![Pie chart](circular-chart-types-images/pie.jpg)
+![Pie chart in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie.jpg)
 
 ## Changing pie size
 
@@ -96,7 +96,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 {% endhighlight %}
 {% endtabs %}
 
-![Pie size](circular-chart-types-images/pie_sizing.jpg)
+![Pie size in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie-sizing.jpg)
 
 ## Exploding a segment
 
@@ -107,7 +107,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
 * [`explodeGesture`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeGesture.html) - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html), and [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) and the default value is [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html).
 
 {% tabs %}
-{% highlight dart hl_lines="13 15" %}  
+{% highlight dart hl_lines="13 15" %}
 
     @override
     Widget build(BuildContext context) {
@@ -135,7 +135,7 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
 {% endhighlight %}
 {% endtabs %}
 
-![Pie explode](circular-chart-types-images/pie_explode.jpg)
+![Eexploding a segment in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-explode-segment.jpg)
 
 ## Exploding all the segments
 
@@ -169,14 +169,14 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 {% endtabs %}
 
-![Pie explode all](circular-chart-types-images/pie_explodeAll.jpg)
+![Pie explode all in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie_explode-all.jpg)
 
 ## Angle of pie
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) allows you to render all the data points or segments in semi-pie, quarter-pie, or in any sector using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/endAngle.html) properties.
 
 {% tabs %}
-{% highlight dart hl_lines="13 15" %}  
+{% highlight dart hl_lines="13 15" %}
 
     @override
     Widget build(BuildContext context) {
@@ -204,7 +204,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 {% endtabs %}
 
-![Pie angle](circular-chart-types-images/pie_angle.jpg)
+![Pie angle in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie-angle.jpg)
 
 ## Grouping data points
 
@@ -239,7 +239,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 {% endhighlight %}
 {% endtabs %}
 
-![Pie grouping](circular-chart-types-images/pie_grouping.jpg)
+![Pie grouping in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie-grouping.jpg)
 
 ## Various radius for each slice
 
@@ -285,4 +285,4 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
 {% endhighlight %}
 {% endtabs %}
 
-![Pie various radius](circular-chart-types-images/pie_radius.jpg)
+![Pie various radius in Flutter Circular Charts](circular-chart-types-images/flutter-circular-charts-pie-radius.jpg)
