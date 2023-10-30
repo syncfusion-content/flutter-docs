@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Radial Gauge widget | Syncfusion
+title: Getting Started with Flutter Radial Gauge Widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Radial Gauge (SfRadialGauge) control, its elements, and more. 
 platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Getting started with Flutter Radial Gauge (SfRadialGauge)
+# Getting Started with Flutter Radial Gauge (SfRadialGauge)
 
 This section explains the steps required to add the Flutter [Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion radial gauge. 
 
@@ -75,7 +75,7 @@ After the package has been imported, initialize the [SfRadialGauge](https://www.
 
 {% endhighlight %}
 
-![Initialize radial gauge](images/getting-started/default_gauge.png)
+![Initialize Radial Gauge in Flutter](images/getting-started/flutter-radial-gauge-initialize.png)
 
 ## Add title
 
@@ -101,7 +101,7 @@ You can add a title to the radial gauge to provide information to users about th
 
 {% endhighlight %}
 
-![title to radial gauge](images/getting-started/gauge_title.png)
+![Title to Radial Gauge in Flutter](images/getting-started/flutter-radial-gauge-title.png)
 
 ## Add axis
 
@@ -127,7 +127,7 @@ Axes contain a list of axis elements, where you can add any number of radial axe
 
 {% endhighlight %}
 
-![Axis to radial gauge](images/getting-started/gauge_axis.png)
+![Axis to Radial Gauge in Flutter](images/getting-started/flutter-radial-gauge-axis.png)
 
 ## Add range
 
@@ -145,7 +145,7 @@ Ranges contain a list of range elements, where you can add any number of ranges 
 
 {% endhighlight %}
 
-![range support to radial gauge](images/getting-started/gauge_range.png)
+![Range support to Radial Gauge in Flutter](images/getting-started/flutter-radial-gauge-range.png)
 
 ## Add pointer
 
@@ -160,7 +160,7 @@ Pointers contains a list of pointer elements, where you can add any number of ga
 
 {% endhighlight %}
 
-![gauge pointers to radial gauge](images/getting-started/gauge_pointer.png)
+![Pointers to Radial Gauge in Flutter](images/getting-started/flutter-radial-gauge-pointer.png)
 
 ## Add annotation
 
@@ -178,7 +178,7 @@ You can add any number of widgets such as text or image as an annotation inside 
 
 {% endhighlight %}
 
-![annotation support to the radial gauge](images/getting-started/gauge_annotation.png)
+![Annotation support to Radial Gauge in  Flutter](images/getting-started/flutter-radial-gauge-annotation.png)
 
 The following code example gives you the complete code of above configurations.
 
