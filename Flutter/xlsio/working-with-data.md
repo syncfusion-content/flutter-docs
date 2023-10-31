@@ -143,11 +143,11 @@ List<ExcelDataRow> _buildReportDataRows() {
 
   excelDataRows = reports.map<ExcelDataRow>((_Report dataRow) {
     return ExcelDataRow(cells: <ExcelDataCell>[
-      ExcelDataCell(columnName: 'Sales Person', value: dataRow.salesPerson),
+      ExcelDataCell(columnHeader: 'Sales Person', value: dataRow.salesPerson),
       ExcelDataCell(
-          columnName: 'Sales Jan to June', value: dataRow.salesJanJune),
+          columnHeader: 'Sales Jan to June', value: dataRow.salesJanJune),
       ExcelDataCell(
-          columnName: 'Sales July to Dec', value: dataRow.salesJulyDec),
+          columnHeader: 'Sales July to Dec', value: dataRow.salesJulyDec),
     ]);
   }).toList();
 
@@ -211,14 +211,14 @@ List<ExcelDataRow> _buildCustomersDataRows() {
 
   excelDataRows = reports.map<ExcelDataRow>((_Customers dataRow) {
     return ExcelDataRow(cells: <ExcelDataCell>[
-      ExcelDataCell(columnName: 'Sales Person', value: dataRow.salesPerson),
+      ExcelDataCell(columnHeader: 'Sales Person', value: dataRow.salesPerson),
       ExcelDataCell(
-          columnName: 'Sales Jan to June', value: dataRow.salesJanJune),
+          columnHeader: 'Sales Jan to June', value: dataRow.salesJanJune),
       ExcelDataCell(
-          columnName: 'Sales July to Dec', value: dataRow.salesJulyDec),
-      ExcelDataCell(columnName: 'Change', value: dataRow.change),
-      ExcelDataCell(columnName: 'Hyperlinks', value: dataRow.hyperlink),
-      ExcelDataCell(columnName: 'Images', value: dataRow.image)
+          columnHeader: 'Sales July to Dec', value: dataRow.salesJulyDec),
+      ExcelDataCell(columnHeader: 'Change', value: dataRow.change),
+      ExcelDataCell(columnHeader: 'Hyperlinks', value: dataRow.hyperlink),
+      ExcelDataCell(columnHeader: 'Images', value: dataRow.image)
     ]);
   }).toList();
 
@@ -323,14 +323,14 @@ List<ExcelDataRow> _buildCustomersDataRowsIH() {
 
   excelDataRows = reports.map<ExcelDataRow>((_Customers dataRow) {
     return ExcelDataRow(cells: <ExcelDataCell>[
-      ExcelDataCell(columnName: 'Sales Person', value: dataRow.salesPerson),
+      ExcelDataCell(columnHeader: 'Sales Person', value: dataRow.salesPerson),
       ExcelDataCell(
-          columnName: 'Sales Jan to June', value: dataRow.salesJanJune),
+          columnHeader: 'Sales Jan to June', value: dataRow.salesJanJune),
       ExcelDataCell(
-          columnName: 'Sales July to Dec', value: dataRow.salesJulyDec),
-      ExcelDataCell(columnName: 'Change', value: dataRow.change),
-      ExcelDataCell(columnName: 'Hyperlink', value: dataRow.hyperlink),
-      ExcelDataCell(columnName: 'Images Hyperlinks', value: dataRow.image)
+          columnHeader: 'Sales July to Dec', value: dataRow.salesJulyDec),
+      ExcelDataCell(columnHeader: 'Change', value: dataRow.change),
+      ExcelDataCell(columnHeader: 'Hyperlink', value: dataRow.hyperlink),
+      ExcelDataCell(columnHeader: 'Images Hyperlinks', value: dataRow.image)
     ]);
   }).toList();
 
