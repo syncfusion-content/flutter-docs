@@ -110,7 +110,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Localization Calendar](images/localization/localization.jpg)
+![Localization Calendar](images/localization/flutter-calendar-localization.jpg)
 
 ## See also
 
