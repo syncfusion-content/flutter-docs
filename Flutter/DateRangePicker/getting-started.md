@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Flutter Date Range Picker widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget, its elements, and more.
+title: Getting Started with Flutter DateRangePicker Widget | Syncfusion
+description: Learn here all about getting started with Syncfusion Flutter DateRangePicker (SfDateRangePicker) widget, its elements, and more details.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize Date Range Picker](images/getting-started/initialize.png)
+![Initialize Date Range Picker in Flutter.](images/getting-started/flutter-date-range-picker-initialize.png)
 
 ## Multiple picker views
 
@@ -93,7 +93,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple picker views Date Range Picker](images/getting-started/year-view.png)
+![Multiple picker views Date Range Picker in Flutter](images/getting-started/flutter-date-range-picker-year-view.png)
 
 ## Change first day of week
 
@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
+  ![Date selection Date Range Picker in Flutter.](images/getting-started/flutter-date-range-picker-range-selection.png)
   
 ## Action buttons
 
@@ -181,7 +181,7 @@ You can display action buttons at the bottom of the date range picker by using t
 {% endhighlight %}
 {% endtabs %}
 
-![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
+![showActionButtons in Flutter Date Range Picker.](images/getting-started/flutter-date-renge-picker-buttons.png)  
   
 ## Today button
 The today button can be displayed at the bottom of the date range picker by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showTodayButton.html) property of the `DateRangePicker`. It easily moves to the current date of the picker view.
@@ -202,7 +202,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![todayButton](images/getting-started/todayButton.jpg)  
+![todayButton in Flutter Date Range Picker.](images/getting-started/flutter-date-range-picker-today-button.jpg)  
 
 ## See also
 
