@@ -437,7 +437,7 @@ MeetingDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-![Spanned appointments](images/appointments/spanned-appointment.png)
+![Spanned appointments in Flutter Calendar](images/appointments/flutter-calendar-spanned-appointment.png)
 
 ## All day appointment
 
@@ -462,7 +462,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-![All day appointment](images/appointments/all-day-appointment.png)
+![All day appointment in Flutter Calendar](images/appointments/flutter-calendar-all-day-appointment.png)
 
 >**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
@@ -529,7 +529,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Adding recurrence appointment](images/appointments/recurrence-appointment.png)
+![Adding recurrence appointment in Flutter Calendar](images/appointments/flutter-calendar-recurrence-appointment.png)
 
 #### Recurrence appointments on last day of month
 
@@ -570,7 +570,7 @@ class DataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Recurrence appointment on last day of month](images/appointments/lastDayOfMonth.png)
+![Recurrence appointment on last day of month in Flutter Calendar](images/appointments/flutter-calendar-lastdayffmonth.png)
 
 #### Creating custom recurrence appointment
 
@@ -829,7 +829,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Recurrence exceptiondate](images/appointments/recurrence-exception-date.png)
+![Recurrence exceptiondate in Flutter Calendar](images/appointments/flutter-calendar-recurrence-exception-date.png)
 
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
@@ -1029,7 +1029,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Appearance customization](images/appointments/appearance-customization.png)
+![Appearance customization in Flutter Calendar](images/appointments/flutter-calendar-appearance-customization.png)
 
 ## Appointment time format
 You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property of the SfCalendar.
@@ -1051,7 +1051,7 @@ You can customize the displaying time format in the appointment widget in the mo
 {% endhighlight %}
 {% endtabs %}
 
-![Appointment time format](images/appointments/appointment_time_format.png)
+![Appointment time format in Flutter Calendar](images/appointments/flutter-calendar-appointment-time-format.png)
 
 ## Appointment helper
 

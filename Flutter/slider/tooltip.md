@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider tooltip support](images/tooltip/show-tooltip.png)
+![Slider tooltip support](images/tooltip/flutter-slider-show-tooltip.png)
 
 ### Vertical
 
@@ -87,7 +87,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider tooltip support](images/tooltip/vertical-show-tooltip.png)
+![Slider tooltip support](images/tooltip/flutter-slider-vertical-show-tooltip.png)
 
 
 N>
@@ -133,7 +133,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider tooltip shape](images/tooltip/tooltip-shape.png)
+![Slider tooltip shape](images/tooltip/flutter-slider-tooltip-shape.png)
 
 ## Tooltip Position
 
@@ -174,7 +174,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider tooltip shape](images/tooltip/right_tooltip.png)
+![Slider tooltip shape](images/tooltip/flutter-slider-right-tooltip.png)
 
 ## Tooltip text format
 
@@ -224,7 +224,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip formatter support](images/tooltip/tooltip-formatter.png)
+![Tooltip formatter support](images/tooltip/flutter-slider-tooltip-formatter.png)
 
 ### Vertical
 
@@ -265,7 +265,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip formatter support](images/tooltip/vertical-tooltip-formatter.png)
+![Tooltip formatter support](images/tooltip/flutter-slider-vertical-tooltip-formatter.png)
 
 
 ## Tooltip color
@@ -315,7 +315,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip color support](images/tooltip/slider-tooltip-color.png)
+![Tooltip color support](images/tooltip/flutter-slider-tooltip-color.png)
 
 ### Vertical
 
@@ -358,7 +358,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip color support](images/tooltip/vertical-slider-tooltip-color.png)
+![Tooltip color support](images/tooltip/flutter-vertical-slider-tooltip-color.png)
 
 ## Tooltip label style
 
@@ -405,7 +405,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip style support](images/tooltip/slider-tooltip-style.png)
+![Tooltip style support](images/tooltip/flutter-slider-tooltip-style.png)
 
 ### Vertical
 
@@ -446,4 +446,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip style support](images/tooltip/vertical-slider-tooltip-style.png)
+![Tooltip style support](images/tooltip/flutter-vertical-slider-tooltip-style.png)
