@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis customization in Flutter Cartesian Charts | Syncfusion 
-description: Learn here all about Axis customization feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Axis Customization in Flutter Cartesian Charts | Syncfusion 
+description: Learn here all about axis customization feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, it's elements and more details.
 platform: flutter
 control: Cartesian Charts
 documentation: ug
@@ -39,7 +39,7 @@ Axis visibility can be controlled using the [`isVisible`](https://pub.dev/docume
 {% endhighlight %}
 {% endtabs %}
 
-![Axis visibility](images/axis-customization/axis_visible.jpg)
+![Axis visibility in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-axis-visible.jpg)
 
 ### Axis title
 
@@ -83,7 +83,7 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% endhighlight %}
 {% endtabs %}
 
-![Axis title](images/axis-customization/axis_title.jpg)
+![Axis title in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-axis-title.jpg)
 
 ### Axis label rotation
 
@@ -111,7 +111,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 {% endhighlight %}
 {% endtabs %}
 
-![Axis label rotation](images/axis-customization/label_rotation.jpg)
+![Axis label rotation in Flutter Cartesian Chart.](images/axis-customization/flutter-cartesian-chart-label-rotation.jpg)
 
 ### Axis line customization
 
@@ -146,7 +146,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 {% endhighlight %}
 {% endtabs %}
 
-![Axis line](images/axis-customization/axis_line_custom.jpg)
+![Axis line in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-axis-line-custom.jpg)
 
 ### Axis label customization
 
@@ -186,7 +186,7 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% endhighlight %}
 {% endtabs %}
 
-![Axis label](images/axis-customization/label_custom.jpg)
+![Axis label in Flutter Cartesian Chart.](images/axis-customization/flutter-cartesian-chart-label-custom.jpg)
 
 ### Axis border customization
 
@@ -239,7 +239,7 @@ The color and width of the axis border can be customized with [`borderColor`](ht
 {% endhighlight %}
 {% endtabs %}
 
-![Axis border customization](images/axis-customization/axis_border_customization.jpg)
+![Axis border customization in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-border-customization.jpg)
 
 ### Axis animation
 
@@ -261,7 +261,7 @@ On setting the [`enableAxisAnimation`](https://pub.dev/documentation/syncfusion_
 {% endhighlight %}
 {% endtabs %}
 
-![Axis label](images/axis-customization/animatedAxis.gif)
+![Axis label animation in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-animated-axis.gif)
 
 ### Formatting axis label content
 
@@ -349,7 +349,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
 {% endhighlight %}
 {% endtabs %}
 
-![Edge label placement](images/axis-customization/edge_label_placement.jpg)
+![Edge label placement in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-edge-label-placement.jpg)
 
 ### Grid lines customization
 
@@ -386,7 +386,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% endhighlight %}
 {% endtabs %}
 
-![Grid lines customization](images/axis-customization/gridLine.jpg)
+![Grid lines customization in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-grid-lines.jpg)
 
 ### Tick lines customization
 
@@ -423,7 +423,7 @@ The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 {% endhighlight %}
 {% endtabs %}
 
-![Tick lines customization](images/axis-customization/tickLine.jpg)
+![Tick lines customization in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-tick-line.jpg)
 
 ### Inversing axis
 
@@ -451,7 +451,7 @@ Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/sync
 {% endhighlight %}
 {% endtabs %}
 
-![Inversing axis](images/axis-customization/inverse.jpg)
+![Inversing axis in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-inverse.jpg)
 
 ### Placing axes at the opposite side
 
@@ -479,7 +479,7 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 {% endtabs %}
 
-![Opposed axis](images/axis-customization/opposite.jpg)
+![Opposed axis in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-opposite.jpg)
 
 ### Offset the rendering
 
@@ -507,7 +507,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% endhighlight %}
 {% endtabs %}
 
-![Plot Offset](images/axis-customization/plot_offset.jpg)
+![Plot Offset in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-plot-offset.jpg)
 
 ### Maximum number of labels per 100 logical pixels
 
@@ -612,7 +612,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
 {% endhighlight %}
 {% endtabs %}
 
-![Label intesect action](images/axis-customization/smartLabels.jpg)
+![Label intesect action in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-smart-labels.jpg)
 
 ## Axis crossing
 
@@ -642,7 +642,7 @@ Axis can be positioned anywhere in the plot area using the [`crossesAt`](https:/
 {% endhighlight %}
 {% endtabs %}
 
-![Axis crossing](images/axis-customization/axis_crossing.jpg)
+![Axis crossing in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-axis-crossing.jpg)
 
 ### Crossing in category axis
 
@@ -670,7 +670,7 @@ For crossing in horizontal category axis, index value should be provided for the
 {% endhighlight %}
 {% endtabs %}
 
-![Category crossing](images/axis-customization/category_crossing.jpg)
+![Category crossing in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-category-crossing.jpg)
 
 ### Crossing in date-time axis
 
@@ -698,7 +698,7 @@ For crossing in horizontal date-time axis, date value should be provided for the
 {% endhighlight %}
 {% endtabs %}  
 
-![Datetime crossing](images/axis-customization/datetime_crossing.jpg)
+![Datetime crossing in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-datetime-crossing.jpg)
 
 ### Positioning the axis labels when crossing
 
@@ -728,7 +728,7 @@ The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter
 {% endhighlight %}
 {% endtabs %}
 
-![Datetime crossing](images/axis-customization/axis_crossing_labels.jpg)
+![Positioning datetime crossing label in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-axis-crossing-labels.jpg)
 
 ## Plot bands
 
@@ -754,7 +754,7 @@ The following properties are used to configure the plot bands:
 * [`isRepeatable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isRepeatable.html) - specifies the plot band need to be repeated in specified interval.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - customizes the text style of plot band.
 
-![Plotband](images/axis-customization/plotband.jpg)
+![Plotband in Flutter- Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-plotband.jpg)
 
 ### Add plot band for category axis
 
@@ -785,7 +785,7 @@ Plot band can be added to the category axis by specifying index values to the [`
 {% endhighlight %}
 {% endtabs %}    
 
-![Category plotband](images/axis-customization/category_plotband.jpg)
+![Category plotband in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-category-plotband.jpg)
 
 ### Add plot band for date-time axis
 
@@ -818,7 +818,7 @@ Plot band can be added to the date-time axis by specifying date values to the [`
 {% endhighlight %}
 {% endtabs %}
 
-![DateTime plotband](images/axis-customization/datetime_plotband.jpg)
+![DateTime plotband in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-datetime-plotband.jpg)
 
 ### Recursive plot band
 
@@ -859,7 +859,7 @@ The following code snippet and screenshot demonstrate this feature by highlighti
 {% endhighlight %}
 {% endtabs %}
 
-![Recursive plotband](images/axis-customization/recursive_plotband.jpg)
+![Recursive plotband in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-recursive-plotband.jpg)
 
 ### Segmented plot band
 
@@ -898,7 +898,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 {% endhighlight %}
 {% endtabs %}
 
-![Segement plotband](images/axis-customization/segment_plotband.jpg)
+![Segement plotband in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-segment-plotband.jpg)
 
 ### Plot line
 
@@ -933,7 +933,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 {% endhighlight %}
 {% endtabs %}
 
-![plotband_line](images/axis-customization/plotband_line.png)
+![plotband line  in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-plotband-line.png)
 
 #### See Also
 
@@ -978,7 +978,7 @@ If [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_
 {% endhighlight %}
 {% endtabs %}
 
-![plotband padding](images/axis-customization/plotband_padding.png)
+![plotband padding in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-plotband-padding.png)
 
 ## Multiple axes
 
@@ -1062,7 +1062,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple axes](images/axis-customization/multiple_axis.jpg)
+![Multiple axes in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-multiple-axes.jpg)
 
 ## Axis label alignment
 
@@ -1102,7 +1102,7 @@ Aligns the axis label to the center of the gridlines.
 {% endhighlight %}
 {% endtabs %}
 
-![center](images/axis-customization/center.png)
+![Center alignment in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-center.png)
 
 ### Start
 
@@ -1130,7 +1130,7 @@ If it is a horizontal axis, aligns the labels before the gridline and if it is a
 {% endhighlight %}
 {% endtabs %}
 
-![start](images/axis-customization/start.png)
+![Start axis alignment in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-start.png)
 
 ### End
 
@@ -1159,7 +1159,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 {% endhighlight %}
 {% endtabs %}
 
-![end](images/axis-customization/end.png)
+![end axis alignment in Flutter Cartesian Charts.](images/axis-customization/flutter-cartesian-chart-end.png)
 
 ## Auto range calculation
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
@@ -1457,7 +1457,7 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
 {% endhighlight %}
 {% endtabs %}
 
-![Multi-level labels](images/axis-customization/numeric_multi_level_label.jpg)
+![Multi-level labels in Flutter Cartesian charts.](images/axis-customization/flutter-cartesian-chart-numeric-multi-level.jpg)
 
 ### Multi-level labels in category axis
 

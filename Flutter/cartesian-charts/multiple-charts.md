@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Charts in Flutter Cartesian Charts | Syncfusion 
-description: Learn here all about Combinational Charts of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about combinational charts of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, it's elements and more details.
 platform: flutter
 control: Chart
 documentation: ug
@@ -64,7 +64,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple series](images/cartesian-customization/multipleSeriess.jpg)
+![Multiple series in Flutter Cartesian Charts.](images/cartesian-customization/flutter-multiple-series.jpg)
 
 Also refer [multiple axes](./axis-customization#multiple-axes) for customizing the axis further.
 
@@ -117,7 +117,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 {% endhighlight %}
 {% endtabs %}
 
-![Combination series](images/cartesian-customization/combinationseries.jpg)
+![Combination seriesof Flutter Cartesian Chart.](images/cartesian-customization/flutter-combination-series.jpg)
 
 **Limitation of combination chart**
 

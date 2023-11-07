@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic features in Flutter Slider widget | Syncfusion
-description: Learn here all about adding the Basic feature of Syncfusion Flutter Slider (SfSlider) widget and more.
+title: Basic features in Flutter Slider Widget | Syncfusion
+description: Learn here all about adding the basic feature of Syncfusion Flutter Slider (SfSlider) widget, it's elements and more details.
 platform: Flutter
 control: SfSlider
 documentation: ug
@@ -60,7 +60,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/basic-features/numeric-labels.png)
+![Horizontal numeric Slider in Flutter.](images/basic-features/flutter-slider-numeric-labels.png)
 
 ### Vertical
 
@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/basic-features/vertical_numeric_labels.png)
+![Vertical numeric Slider in Flutter.](images/basic-features/flutter-slider-vertical-numeric-labels.png)
 
 **Date slider**
 
@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date slider](images/basic-features/date-labels.png)
+![Horizontal date Slider in Flutter.](images/basic-features/flutter-slider-date-labels.png)
 
 ### Vertical
 
@@ -172,7 +172,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date slider](images/basic-features/vertical_date_labels.png)
+![Vertical date Slider in Flutter.](images/basic-features/flutter-slider-vertical-date-labels.png)
 
 ## Handle onChangeStart, onChanged, and onChangeEnd callbacks
 
@@ -276,7 +276,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Enable slider](images/basic-features/enabled-state.png)
+![Enable horizontal Slider in Flutter.](images/basic-features/flutter-slider-enabled-state.png)
 
 ### Vertical
 
@@ -308,7 +308,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Enable slider](images/basic-features/vertical_enabled_state.png)
+![Enable vertical Slider in Flutter.](images/basic-features/flutter-slider-vertical-enabled-state.png)
 
 ## Active color
 
@@ -349,7 +349,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Active color support](images/basic-features/active-color.png)
+![Active color supportin Flutter Slider.](images/basic-features/flutter-slider-active-color.png)
 
 ### Vertical
 
@@ -386,7 +386,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Active color support](images/basic-features/vertical_active_color.png)
+![Active color support vertically in Flutter Slider.](images/basic-features/flutter-slider-vertical-active-color.png)
 
 ## Inactive color
 
@@ -430,7 +430,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Inactive color support](images/basic-features/inactive-color.png)
+![Inactive color support in Flutter Slider](images/basic-features/flutter-slider-inactive-color.png)
 
 ### Horizontal
 
@@ -468,7 +468,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Inactive color support](images/basic-features/vertical_inactive_color.png)
+![Inactive color support vartically in Flutter Slider.](images/basic-features/flutter-slider-vertical-inactive-color.png)
 
 ### For customizing individual items
 
