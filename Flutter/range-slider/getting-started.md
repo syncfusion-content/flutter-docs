@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Flutter Range Slider widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Range Slider (SfRangeSlider) widget, its elements, and more.
+title: Getting Started with Flutter Range Slider widget | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential Flutter Range Slider (SfRangeSlider) widget, its elements, and more.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
