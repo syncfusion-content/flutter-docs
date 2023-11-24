@@ -131,28 +131,24 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedBarSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

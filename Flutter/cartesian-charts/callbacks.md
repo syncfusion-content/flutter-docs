@@ -1074,7 +1074,7 @@ Defaults to `null`.
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
               onCreateRenderer: (series) {
-                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
+                return _CustomColumnSeriesRenderer();
               }
             ),
           ],
@@ -1083,26 +1083,24 @@ Defaults to `null`.
     }
 
     class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer<ChartData, int> {
-      _CustomColumnSeriesRenderer(this.series);
+      _CustomColumnSeriesRenderer();
 
-      final ColumnSeries<ChartData, int> series;
       @override
       ColumnSegment<ChartData, int> createSegment() {
-        return _ColumnCustomPainter(series);
+        return _ColumnCustomPainter();
       }
     }
 
     class _ColumnCustomPainter extends ColumnSegment<ChartData, int> {
-      _ColumnCustomPainter(this._series);
+      _ColumnCustomPainter();
 
-      final ColumnSeries<ChartData, int> _series;
       @override
       int get currentSegmentIndex => super.currentSegmentIndex;
 
       @override
       Paint getFillPaint() {
         final Paint customerFillPaint = Paint();
-        customerFillPaint.color = _series.dataSource![currentSegmentIndex].y > 30
+        customerFillPaint.color = series.dataSource![currentSegmentIndex].y > 30
           ? Colors.red
           : Colors.green;
         customerFillPaint.style = PaintingStyle.fill;

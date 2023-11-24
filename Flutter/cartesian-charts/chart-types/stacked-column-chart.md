@@ -157,7 +157,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -167,7 +166,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -177,7 +175,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -187,7 +184,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
