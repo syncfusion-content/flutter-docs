@@ -131,7 +131,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-        static List<ChartData> chartData = <ChartData>[
+        List<ChartData> chartData = <ChartData>[
             ChartData('Rent', 1000,Colors.teal),
             ChartData('Food', 2500,Colors.lightBlue),
             ChartData('Savings', 760,Colors.brown),
@@ -142,7 +142,6 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <PieSeries<ChartData, String>>[
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -207,7 +206,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     PieSeries<_ChartData, String>(
                         dataSource: chartData,
                         xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        yValueMapper: (_ChartData data, _) => data.y,
                     )
                 ]
             ));
@@ -242,7 +241,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     RadialBarSeries<_ChartData, String>(
                         dataSource: chartData,
                         xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        yValueMapper: (_ChartData data, _) => data.y,
                     )
                 ]
             )
@@ -284,7 +283,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     DoughnutSeries<_ChartData, String>(
                         dataSource: chartData,
                         xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        yValueMapper: (_ChartData data, _) => data.y,
                     )
                 ]
             ));
@@ -336,7 +335,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
                     PieSeries<_ChartData, String>(
                         dataSource: chartData,
                         xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        yValueMapper: (_ChartData data, _) => data.y,
                     )
                 ]
             ));
@@ -525,7 +524,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         // Sweep gradient will be formed with default palette colors.
                         pointRenderMode: PointRenderMode.gradient,
                         xValueMapper: (_ChartData data, _) => data.x,
-                        xValueMapper: (_ChartData data, _) => data.x,
+                        yValueMapper: (_ChartData data, _) => data.y,
                     )
                 ]
             )
