@@ -82,9 +82,8 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,9 +119,8 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,9 +155,8 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -198,9 +195,8 @@ Also, the segments can be exploded by tapping the segment.
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}

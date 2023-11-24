@@ -239,9 +239,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title: Text(widget.title),
-            ),
             body: Center(
                 child: Container(
                     child: SfPyramidChart(

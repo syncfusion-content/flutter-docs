@@ -29,7 +29,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         child: SfFunnelChart(
           onChartTouchInteractionDown: (ChartTouchInteractionArgs args) {
             final Offset value = Offset(args.position.dx, args.position.dy);
-            final PointInfo<dynamic>? chartpoint = seriesController?.pixelToPoint(value);
+            final PointInfo<dynamic>? chartPoint = seriesController?.pixelToPoint(value);
             },
           series: FunnelSeries<ChartData, String>(
             dataSource: data,

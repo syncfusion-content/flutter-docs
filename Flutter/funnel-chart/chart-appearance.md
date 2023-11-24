@@ -60,8 +60,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
                   borderColor: Colors.red,
                   borderWidth: 2,
                   // Sets 15 logical pixels as margin for all the 4 sides.
-                  margin: EdgeInsets.all(15)
-                  ),
+                  margin: EdgeInsets.all(15),
                   series: FunnelSeries<ChartData, String>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
@@ -70,6 +69,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
                 )
               )
             )
+          )
         );
       }
 
@@ -111,8 +111,9 @@ You can customize the area of the chart using the below properties.
             )
           )
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
