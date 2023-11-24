@@ -418,12 +418,14 @@ Triggers when the series renderer is created. This callback can be used to obtai
 {% tabs %}
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      //Initialize the series controller
-      CircularSeriesController? circularSeriesController;
+    //Initialize the series controller
+    CircularSeriesController? circularSeriesController;
 
-      final List<ChartData> chartData = <ChartData>[
+    late List<ChartData> chartData;
+
+    @override
+    void initState() {
+      chartData = <ChartData>[
         ChartData(1, 24),
         ChartData(2, 20),
         ChartData(3, 23),
@@ -431,7 +433,11 @@ Triggers when the series renderer is created. This callback can be used to obtai
         ChartData(5, 30),
         ChartData(6, 41),
       ];
+      super.initState();
+    }
 
+    @override
+    Widget build(BuildContext context) {
       return Column(children: <Widget>[
         Container(
             child: SfCircularChart(
