@@ -64,7 +64,7 @@ You can use the following properties to customize the appearance of trackball to
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -114,7 +114,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
                 trackballBehavior: _trackballBehavior, 
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -165,7 +165,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -214,7 +214,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -266,7 +266,7 @@ The ActivationMode enum contains the following values:
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -299,29 +299,29 @@ The ActivationMode enum contains the following values:
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-          child: Center(
+          body: Center(
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y1),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y2),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y3)
@@ -455,17 +455,17 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<ChartData, DateTime>>[
+                series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => data.x,
-                          yValueMapper: (ChartData data, _) => data.y)
-                      LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData1,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData2,
+                          dataSource: chartData1,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: chartData2,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                 ]
@@ -552,7 +552,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               trackballBehavior: _trackballBehavior,
-              series: <ChartSeries<ChartData, String>>[
+              series: <CartesianSeries<ChartData, String>>[
                 SplineSeries<ChartData, String>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,

@@ -27,7 +27,7 @@ The below example demonstrates the infinite scrolling by showing the ci
              loadMoreIndicatorBuilder:
                (BuildContext context, ChartSwipeDirection direction) =>
                    getLoadMoreViewBuilder(context, direction),
-             series: <ChartSeries<ChartData, num>>[
+             series: <CartesianSeries<ChartData, num>>[
                   LineSeries<ChartData, num>(
                       dataSource: chartData,
                   ),

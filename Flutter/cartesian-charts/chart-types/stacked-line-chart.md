@@ -31,7 +31,7 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -78,7 +78,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
@@ -135,7 +135,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(

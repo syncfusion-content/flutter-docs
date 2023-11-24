@@ -30,7 +30,7 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -77,7 +77,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],

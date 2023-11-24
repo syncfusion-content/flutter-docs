@@ -37,7 +37,7 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders bar chart
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -78,7 +78,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -120,7 +120,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

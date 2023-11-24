@@ -25,7 +25,7 @@ documentation: ug
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders fast line chart
                             FastLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,

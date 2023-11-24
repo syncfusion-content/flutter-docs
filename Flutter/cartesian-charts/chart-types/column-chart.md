@@ -32,7 +32,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<ChartData, int>>[
+                        series: <CartesianSeries<ChartData, int>>[
                             // Renders column chart
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
@@ -46,7 +46,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
         );
     }
     class ChartData {
-        ChartData(this.x, this.y, this.y1);
+        ChartData(this.x, this.y);
         final int x;
         final double y;
     }
@@ -79,13 +79,13 @@ By default, all the column series that have the same x and y-axes are placed sid
                     child: SfCartesianChart(
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
-                        series: <ChartSeries<ChartData, int>>[
+                        series: <CartesianSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             ),
-                            ColumnSeries<ChartData, DateTime>(
+                            ColumnSeries<ChartData, int>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
@@ -132,7 +132,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<ChartData, int>>[
+                        series: <CartesianSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -174,7 +174,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<ChartData, int>>[
+                        series: <CartesianSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -227,8 +227,8 @@ Renders column with track. Track is a rectangular bar rendered from the start to
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<ChartData, int>>[
-                            ColumnSeries<ChartData, double>(
+                        series: <CartesianSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,

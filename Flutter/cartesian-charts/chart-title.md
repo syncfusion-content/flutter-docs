@@ -52,7 +52,7 @@ You can align the title text content horizontally to the near, center or far of 
                 ),
                 // Initialize category axis
                 primaryXAxis: CategoryAxis(),
-                series: <ChartSeries>[
+                series: <CartesianSeries>[
                   // Initialize line series
                   LineSeries<ChartData, String>(
                     dataSource: [

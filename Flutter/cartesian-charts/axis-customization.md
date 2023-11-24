@@ -219,7 +219,7 @@ The color and width of the axis border can be customized with [`borderColor`](ht
             borderWidth: 1.0, 
             borderColor: Colors.blue
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1021,7 +1021,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                 )
                             )
                         ],
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             LineSeries<ChartData, String>(
                                 dataSource: [
                                     ChartData('Jan', 35),
@@ -1208,7 +1208,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
             primaryXAxis: CategoryAxis(
                 maximumLabelWidth: 80,
             ),
-            series: <ChartSeries<ChartData, String>>[
+            series: <CartesianSeries<ChartData, String>>[
                     BarSeries<ChartData, String>(
                         dataSource: <ChartData>[
                             ChartData('Goldin Finance 117', 597),
@@ -1437,7 +1437,7 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1502,7 +1502,7 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
               )
             ]
           ),
-          series: <ChartSeries<ChartData, String>>[
+          series: <CartesianSeries<ChartData, String>>[
             LineSeries<ChartData, String>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1570,7 +1570,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, DateTime>>[
+          series: <CartesianSeries<ChartData, DateTime>>[
             LineSeries<ChartData, DateTime>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1635,7 +1635,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, DateTime>>[
+          series: <CartesianSeries<ChartData, DateTime>>[
             LineSeries<ChartData, DateTime>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1703,7 +1703,7 @@ The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1780,7 +1780,7 @@ The text style of the multi-level label like color, font size, font-weight, etc 
               )
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1860,7 +1860,7 @@ The different types of multi-level label's border are mentioned below,
               )
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,

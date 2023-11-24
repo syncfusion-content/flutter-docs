@@ -140,7 +140,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart(series: <ChartSeries>[
+                    child: SfCartesianChart(series: <CartesianSeries>[
                     HistogramSeries<ChartData1, double>(
                     dataSource: histogramData,
                     showNormalDistributionCurve: true,
@@ -152,7 +152,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
                )
            );
        }
-    }
+
     class ChartData1 {
         ChartData1(this.y);
         final double y;
