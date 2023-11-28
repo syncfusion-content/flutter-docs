@@ -507,9 +507,9 @@ Below are the built-in filter types supported:
 <td> When the DateTime type value is loaded to the <code>GridColumn</code>, then <code>DateFilters</code> options are loaded in <code>advanced filter view</code>. </td>
 </tr>
 <tr>
-<td> <img src="images/filtering/flutter-datagrid-advanced-text-filter.png"/> </td>
-<td> <img src="images/filtering/flutter-datagrid-advanced-number-filter.png"/> </td>
-<td> <img src="images/filtering/flutter-datagrid-advanced-date-filter.png"/> </td>
+<td> <img alt="Advanced text filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-text-filter.png"/> </td>
+<td> <img alt="Advanced number filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-number-filter.png"/> </td>
+<td> <img alt="Advanced date filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-date-filter.png"/> </td>
 </tr>
 <tr>
 <td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Begins With</li> <li>Does Not Begin With</li> <li>Ends With</li> <li>Does Not End With</li> <li>Contains</li> <li>Does Not Contain</li> <li>Empty</li> <li>Not Empty</li> <li>Null</li> <li>Not Null</li></ul> </td>
