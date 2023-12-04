@@ -82,7 +82,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize chart](images/getting-started/default.jpg)
+![Initialize Charts in Flutter.](images/getting-started/flutter-charts-initialize.jpg)
 
 ## Bind data source
 
@@ -129,7 +129,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 {% endhighlight %}
 {% endtabs %}
 
-![Bind data source](images/getting-started/data_source.jpg)
+![Bind data source in Flutter Charts.](images/getting-started/flutter-charts-data-source.jpg)
 
 #### See Also
 
@@ -183,7 +183,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 {% endtabs %}
 
-![Title to chart](images/getting-started/title_chart.jpg)
+![Title in Flutter Charts.](images/getting-started/flutter-charts-title.jpg)
 
 ## Enable data labels
 
@@ -233,7 +233,7 @@ You can add data labels to improve the readability of the chart using the [`data
 {% endhighlight %}
 {% endtabs %}
 
-![DataLabel to chart](images/getting-started/datalabel.jpg)
+![Data label in Flutter Charts.](images/getting-started/flutter-charts-data-label.jpg)
 
 ## Enable legend
 
@@ -286,7 +286,7 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
 {% endhighlight %}
 {% endtabs %}
 
-![Legend in chart](images/getting-started/legend.png)
+![Legend in Flutter Charts.](images/getting-started/flutter-charts-legend.png)
 
 ## Enable tooltip
 
@@ -350,7 +350,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip in chart](images/getting-started/tooltip.png)
+![Tooltip in Flutter Charts.](images/getting-started/flutter-charts-tooltip.png)
 
 You can find the complete getting started example from this [`link`](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
 
