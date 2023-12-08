@@ -27,18 +27,20 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 
 N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter PDF Viewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
 
-For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
+For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
 On your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
 
 ```html
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 <script type="text/javascript">
-   pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js";
+   pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
 </script>
 
 ```
+
+N> Version **2.11.338** is recommended for using annotation support. As this will not flatten the unsupported annotations while rendering the pages. 
 
 **Get packages** 
 

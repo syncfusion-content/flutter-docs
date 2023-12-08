@@ -15,6 +15,8 @@ Navigate to the desired bookmark topics using the default bookmark view or the c
 
 The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBookmarkView](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/openBookmarkView.html) method and it can be closed either by tapping the close icon or device's back button. Also, we can close the bookmark programmatically by using the Navigator’s pop method. 
 
+* You can use [isBookmarkViewOpen](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/isBookmarkViewOpen.html) property of the `SfPdfViewerState` class, to know whether the built-in bookmark view is open or not.
+
 ![Bookmark view](images/bookmark-navigation/bookmark_view.png)
 
 The following code example explains the opening of built-in bookmark view programmatically.
@@ -30,6 +32,16 @@ Widget build(BuildContext context) {
     appBar: AppBar(
       title: Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
+        IconButton(
+          onPressed: () {
+            if (_pdfViewerKey.currentState?.isBookmarkViewOpen ?? false) {
+              print('Bookmark view is opened');
+            } else {
+              print('Bookmark view is closed');
+            }
+          },
+          icon: const Icon(Icons.help_outline),
+        ),
         IconButton(
           icon: Icon(
             Icons. bookmark,
