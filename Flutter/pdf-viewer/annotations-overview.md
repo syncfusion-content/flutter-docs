@@ -15,6 +15,6 @@ The `SfPdfViewer` allows you to add, remove and modify annotations in the PDF do
 
 The `SfPdfViewer` supports the following annotation types.
 1.	Highlight
-2.	Strikethrough
-3.	Squiggly
+2.	Squiggly
+3.	Strikethrough
 4.	Underline
