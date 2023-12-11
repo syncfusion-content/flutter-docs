@@ -85,7 +85,7 @@ class EmployeeDataSource extends DataGridSource {
   TextEditingController editingController = TextEditingController();
 
   @override
-  void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+  Future<void> onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
     final dynamic oldValue = dataGridRow
             .getCells()
@@ -342,7 +342,7 @@ The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flut
 
 class EmployeeDataSource extends DataGridSource {
   @override
-  bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+  Future<bool> canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
     if (column.columnName == 'id' && newCellValue == null) {
       // Return false, to retain in edit mode.
@@ -369,7 +369,7 @@ The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutt
 
 class EmployeeDataSource extends DataGridSource {
   @override
-  void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+  Future<void> onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
     final dynamic oldValue = dataGridRow
             .getCells()
@@ -709,7 +709,7 @@ If you return a false from the `canSubmitCell` method, the Datagrid doesn't allo
 
 class EmployeeDataSource extends DataGridSource {
   @override
-  bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+  Future<bool> canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
     if (newCellValue == null || newCellValue == '') {
       // Editing widget will retain in view.
