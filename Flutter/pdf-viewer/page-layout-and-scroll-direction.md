@@ -63,7 +63,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 * Vertical scrolling
 * Horizontal scrolling
 
-If scroll direction is not specified, continuous page layout mode defaults to vertical scrolling and single page layout mode defaults to horizontal scrolling.
+If the scroll direction is not specified, continuous page layout mode defaults to vertical scrolling, and single page layout mode defaults to horizontal scrolling.
 
 ### Vertical scrolling
 

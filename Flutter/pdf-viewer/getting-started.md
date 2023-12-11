@@ -40,7 +40,7 @@ On your `web/index.html` file, add the following `script` tags, somewhere in the
 
 ```
 
-N> Version **2.11.338** is recommended for using annotation support. As this will not flatten the unsupported annotations while rendering the pages. 
+N> Version **2.11.338** is recommended for using annotation support. This will not flatten the unsupported annotations while rendering the pages.
 
 **Get packages** 
 

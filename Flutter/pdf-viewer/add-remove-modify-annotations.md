@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add, Remove and Edit Annotations in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about adding, removing and editing annotations in a PDF document using the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Add, Remove, and Edit Annotations in Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about adding, removing, and editing annotations in a PDF document using the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add, Remove, Edit Annotations in Flutter PDF Viewer widget (Syncfusion)
 
-This section will go through the various functions available in the `SfPdfViewer` for adding, removing and editing annotations in a PDF document.
+This section will go through the various functions available in the `SfPdfViewer` for adding, removing, and editing annotations in a PDF document.
 
 ## Add annotations to a PDF document
 
@@ -17,7 +17,7 @@ This section will go through how to add annotations to a PDF document programmat
 
 ### Add annotations programmatically
 
-You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the `addAnnotation` method of the `PdfViewerController` class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
+You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the `addAnnotation` method of the `PdfViewerController` class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
@@ -41,7 +41,7 @@ void addHighlightAnnotation() {
 
 ### Annotation added callback
 
-The callback provided to `onAnnotationAdded` property is triggered when an annotation is successfully added to the PDF document. The following example shows how to use this callback.
+The callback provided to the `onAnnotationAdded` property is triggered when an annotation is successfully added to the PDF document. The following example shows how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9" %}
@@ -69,7 +69,7 @@ This section will go through different methods of removing annotations from a PD
 
 ### Remove a specific annotation programmatically
 
-You can remove an annotation from the document programmatically by providing the specific annotation instance as the parameter to `removeAnnotation` method of `PdfViewerController`. The following example shows how to remove the first annotation in the annotation collection from a PDF document.
+You can programmatically remove an annotation from the document by providing the specific annotation instance as the parameter to the `removeAnnotation` method of `PdfViewerController`. The following example shows how to remove the first annotation in the annotation collection from a PDF document.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -90,7 +90,7 @@ void removeFirstAnnotation() {
 
 ### Remove all the annotations
 
-You can remove all the annotations from a document programmatically by calling `removeAllAnnotations` method. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the pageNumber parameter is 0. Refer to the following code example. 
+You can programmatically remove all the annotations from a document by calling the `removeAllAnnotations` method. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the pageNumber parameter is 0. Refer to the following code example. 
 
 {% tabs %}
 {% highlight dart hl_lines="3 8" %}
@@ -110,7 +110,7 @@ void removeAllAnnotationsInFirstPage() {
 
 ### Annotation removed callback
 
-The callback provided to `onAnnotationRemoved` property is triggered when an annotation is removed successfully from the PDF document. The following example shows how to use this callback.
+The callback provided to the `onAnnotationRemoved` property is triggered when an annotation is removed successfully from the PDF document. The following example shows how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9" %}
@@ -161,7 +161,7 @@ void editAnnotation() {
 
 ### Annotation edited callback
 
-The callback provided to `onAnnotationEdited` property is triggered when an annotation is edited in the PDF document. The following code snippet explains how to use this callback.
+The callback provided to the   property is triggered when an annotation is edited in the PDF document. The following code sample explains how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9 10" %}

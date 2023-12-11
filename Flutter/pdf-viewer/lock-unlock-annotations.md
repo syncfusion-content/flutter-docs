@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Locking and Unlocking annotations in Flutter PDF Viewer widget | Syncfusion
+title: Locking and Unlocking Annotations in Flutter PDF Viewer Widget | Syncfusion
 description: Learn here all about locking and unlocking annotations in PDF documents using the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
@@ -73,7 +73,7 @@ void lockUnderlineAnnotations() {
 
 ## Lock the selected annotation
 
-To lock the selected annotation, access the selected annotation instance and set the `isLocked` property of the annotation to true. The selected annotation instance may be obtained from the onAnnotationSelected callback. The following example explains how to lock the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the `isLocked` property to true. The selected annotation instance may be obtained from the `onAnnotationSelected` callback. The following example explains locking the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight dart %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotations in Flutter PDF Viewer (SfPdfViewer)
 
-The `SfPdfViewer` allows you to add, remove and modify annotations in the PDF documents. This section will go through the various types and functionalities available in PDF Viewer for working with annotations.
+The `SfPdfViewer` allows you to add, remove, and modify annotations in PDF documents. This section will go through the various types and functionalities available in PDF Viewer for working with annotations.
 
 ## Supported annotation types
 

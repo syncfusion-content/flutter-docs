@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
 
 ## How to get the seleted text lines in the PDF viewer?
 
-Using [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method, you can get the selected text lines in the PDF viewer. The following code example explains the same.
+Using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method, you can get the selected text lines in the PDF viewer. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="10 11" %}
