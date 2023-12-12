@@ -104,6 +104,49 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## How to get the seleted text lines in the PDF viewer?
+
+Using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method, you can get the selected text lines in the PDF viewer. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="10 11" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter PDF Viewer'),
+      actions: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.add),
+          onPressed: () async {
+            final List<PdfTextLine>? selectedTextLines =
+                _pdfViewerKey.currentState?.getSelectedTextLines();
+
+            if (selectedTextLines != null && selectedTextLines.isNotEmpty) {
+              // Creates a highlight annotation with the selected text lines.
+              final HighlightAnnotation highlightAnnotation =
+                  HighlightAnnotation(
+                textBoundsCollection: selectedTextLines,
+              );
+              // Adds the highlight annotation to the PDF document.
+              _pdfViewerController.addAnnotation(highlightAnnotation);
+            }
+          },
+        ),
+      ],
+    ),
+    body: SfPdfViewer.asset(
+      'assets/sample.pdf',
+      key: _pdfViewerKey,
+      controller: _pdfViewerController,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## How to create and display a customized text selection context menu with a Copy option to retrieve the selected text?
 
 With the options available in the `SfPdfViewer` text selection, you can easily create and display a customized text selection context menu with the **Copy** option and perform an operation for the same. The following code example explains the same.
@@ -117,15 +160,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       title: 'Syncfusion PDF Viewer Demo',
       home: HomePage(),
     ));
 
 /// Represents Homepage for Navigation
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -139,35 +184,38 @@ class _HomePageState extends State<HomePage> {
 
   void _showContextMenu(
       BuildContext context, PdfTextSelectionChangedDetails details) {
-    final OverlayState _overlayState = Overlay.of(context)!;
+    final OverlayState overlayState = Overlay.of(context);
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
         top: details.globalSelectedRegion!.center.dy - 55,
         left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
-            Clipboard.setData(ClipboardData(text: details.selectedText));
-            print(
-                'Text copied to clipboard: ' + details.selectedText.toString());
-            _pdfViewerController.clearSelection();
+            if (details.selectedText != null) {
+              Clipboard.setData(ClipboardData(text: details.selectedText!));
+              print('Text copied to clipboard: ${details.selectedText}');
+              _pdfViewerController.clearSelection();
+            }
           },
-          color: Colors.white,
-          elevation: 10,
-          child: Text('Copy', style: TextStyle(fontSize: 17)),
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(2),
+            )),
+          ),
+          child: const Text('Copy', style: TextStyle(fontSize: 17)),
         ),
       ),
     );
-    _overlayState.insert(_overlayEntry!);
+    overlayState.insert(_overlayEntry!);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Syncfusion Flutter PDF Viewer'),
         ),
-        body: Container(
-            child: SfPdfViewer.network(
+        body: SfPdfViewer.network(
           'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
           onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
             if (details.selectedText == null && _overlayEntry != null) {
@@ -178,8 +226,9 @@ class _HomePageState extends State<HomePage> {
             }
           },
           controller: _pdfViewerController,
-        )));
+        ));
   }
 }
+
 {% endhighlight %}
 {% endtabs %}

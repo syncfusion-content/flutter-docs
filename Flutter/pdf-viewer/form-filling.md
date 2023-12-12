@@ -532,7 +532,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> When the `saveDocument` method is called, the document will be automatically reloaded after the save in the viewer. Also, the signature field will be flattened on save irrespective of the `PdfFlattenOption` provided.   
+N> When the `saveDocument` method is called, the document will be automatically reloaded after the save in the viewer if any signature field in the PDF document is signed using the `SfPdfViewer`. Also, the signature field will be flattened on save irrespective of the `PdfFlattenOption` provided. 
 
 ### Flattening the form data on save 
 
@@ -629,7 +629,9 @@ N> When exporting, the signature form field data will not be exported.
  
 ### Importing form data 
 
-The [importFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/importFormData.html) method imports the data from a file of a specified type and fills the saved data into the form fields. 
+The [importFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/importFormData.html) method imports the data from a file of a specified type and fills the saved data into the form fields.
+
+* To continue the import, if any field generates an error, set the optional parameter `continueImportOnError` to true. This will ignore the error and continue with the next field.
 
 {% tabs %}
 {% highlight dart hl_lines="15 16 17 18" %}
