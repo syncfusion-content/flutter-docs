@@ -728,7 +728,7 @@ Triggers when the trendline gets rendered. The [`onRenderDetailsUpdate`](https:/
 
 ## onRendererCreated
 
-Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series. [Note: initialIsVisible property work's at initial time only. For dynamic update, ChartSeriesController APIs should be used]
 
 {% tabs %}
 {% highlight dart %}
@@ -755,6 +755,8 @@ Triggers when the series renderer is created. This callback can be used to obtai
                 series: <LineSeries<ChartData, num>>[
                     LineSeries<ChartData, num>(
                       dataSource: chartData,
+                      //Initialize the initialIsVisible
+                      initialIsVisible: true,
                       //Initialize the onRendererCreated event and store the controller for the respective series
                       onRendererCreated: (ChartSeriesController controller) {
                           _chartSeriesController = controller;
@@ -766,6 +768,8 @@ Triggers when the series renderer is created. This callback can be used to obtai
           Container(
             child: ElevatedButton(
               onPressed: () {
+                //Update the initialIsVisible
+                _chartSeriesController?.isVisible = false;
                 //Removed a point from data source
                 chartData.removeAt(0);
                 //Added a point to the data source

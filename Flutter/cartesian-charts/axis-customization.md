@@ -593,8 +593,8 @@ Triggers when the axis renderer is created. This callback can be used to obtain 
 {% tabs %}
 {% highlight dart %}
 
-    //Initialize the series controller
-    ChartSeriesController? _chartSeriesController;
+    //Initialize the axis controller
+    NumericAxisController? _xAxisController;
     
     final List<ChartData> chartData = <ChartData>[
       ChartData(1, 24),
@@ -613,12 +613,15 @@ Triggers when the axis renderer is created. This callback can be used to obtain 
           Container(
           child: SfCartesianChart(
                 primaryXAxis: NumericAxis(
+                    //Initialize the onRendererCreated
                     onRendererCreated: (NumericAxisController controller) {
-                        xAxisController = controller;
-                    },
-                ),
+                        _xAxisController = controller;
+                    },                
+                    //Initialize the initialVisibleMaximum
                     initialVisibleMaximum: 5,
+                    //Initialize the initialVisibleMaximum
                     initialVisibleMinimum: 3,
+                ),
                 series: <LineSeries<ChartData, num>>[
                     LineSeries<ChartData, num>(
                       dataSource: chartData,
@@ -631,8 +634,10 @@ Triggers when the axis renderer is created. This callback can be used to obtain 
           Container(
             child: ElevatedButton(
               onPressed: () {
-                xAxisController!.visibleMaximum = 1;
-                xAxisController!.visibleMinimum = 6;
+                //Update the initialVisibleMaximum
+                _xAxisController?.visibleMaximum = 1;
+                //Update the initialVisibleMinimum
+                _xAxisController?.visibleMinimum = 6;
               },
               child: Container(child: Text('Update Visible Range'),
               )
