@@ -765,7 +765,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
           ),
           Container(
             child: ElevatedButton(
-              onPressed: () {                
+              onPressed: () {
                 //Removed a point from data source
                 chartData.removeAt(0);
                 //Added a point to the data source
