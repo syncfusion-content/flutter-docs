@@ -755,8 +755,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
                 series: <LineSeries<ChartData, num>>[
                     LineSeries<ChartData, num>(
                       dataSource: chartData,
-                      //Initialize the initialIsVisible
-                      initialIsVisible: true,
                       //Initialize the onRendererCreated event and store the controller for the respective series
                       onRendererCreated: (ChartSeriesController controller) {
                           _chartSeriesController = controller;
@@ -767,9 +765,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
           ),
           Container(
             child: ElevatedButton(
-              onPressed: () {
-                //Update the initialIsVisible
-                _chartSeriesController?.isVisible = false;
+              onPressed: () {                
                 //Removed a point from data source
                 chartData.removeAt(0);
                 //Added a point to the data source
