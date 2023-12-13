@@ -536,7 +536,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
 
 ### Initial visible minimum
 
-The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property work's at initial time only. For dynamic update, controller APIs should be used.
+The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property work's at initial time only. For dynamic update, AxisController APIs should be used.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -563,7 +563,7 @@ Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an a
 
 ### Initial visible maximum
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property work's at initial time only. For dynamic update, controller APIs should be used.
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property work's at initial time only. For dynamic update, AxisController APIs should be used. [Note: Properties like, initialVisibleMinimum, initialVisibleMaximum, initialZoomFactor and initialZoomPosition work's at initial time only. For dynamic update, AxisController APIs should be used]
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -581,6 +581,71 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 )
             )
         );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## onRendererCreated
+
+Triggers when the axis renderer is created. This callback can be used to obtain the [`AxisController`] instance, which is used to access the the public methods in the axis.
+
+{% tabs %}
+{% highlight dart %}
+
+    //Initialize the series controller
+    ChartSeriesController? _chartSeriesController;
+    
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
+    @override
+    Widget build(BuildContext context) {
+
+      return Column(
+        children: <Widget>[
+          Container(
+          child: SfCartesianChart(
+                primaryXAxis: NumericAxis(
+                    onRendererCreated: (NumericAxisController controller) {
+                        xAxisController = controller;
+                    },
+                ),
+                    initialVisibleMaximum: 5,
+                    initialVisibleMinimum: 3,
+                series: <LineSeries<ChartData, num>>[
+                    LineSeries<ChartData, num>(
+                      dataSource: chartData,
+                      xValueMapper: (ChartData chartData, _) => chartData.x,
+                      yValueMapper: (ChartData chartData, _) => chartData.y,
+                    ),
+                  ],
+            )
+          ),
+          Container(
+            child: ElevatedButton(
+              onPressed: () {
+                xAxisController!.visibleMaximum = 1;
+                xAxisController!.visibleMinimum = 6;
+              },
+              child: Container(child: Text('Update Visible Range'),
+              )
+            )
+          )
+        ]
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
     }
 
 {% endhighlight %}
