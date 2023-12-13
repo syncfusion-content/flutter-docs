@@ -619,7 +619,7 @@ Triggers when the axis renderer is created. This callback can be used to obtain 
                     },                
                     //Initialize the initialVisibleMaximum
                     initialVisibleMaximum: 5,
-                    //Initialize the initialVisibleMaximum
+                    //Initialize the initialVisibleMinimum
                     initialVisibleMinimum: 3,
                 ),
                 series: <LineSeries<ChartData, num>>[
