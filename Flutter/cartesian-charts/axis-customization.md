@@ -563,7 +563,7 @@ Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an a
 
 ### Initial visible maximum
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property work's at initial time only. For dynamic update, AxisController APIs should be used. [Note: Properties like, initialVisibleMinimum, initialVisibleMaximum, initialZoomFactor and initialZoomPosition work's at initial time only. For dynamic update, AxisController APIs should be used]
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property work's at initial time only.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -588,7 +588,7 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ## onRendererCreated
 
-Triggers when the axis renderer is created. This callback can be used to obtain the [`AxisController`] instance, which is used to access the the public methods in the axis.
+Triggers when the axis renderer is created. This callback can be used to obtain the [`AxisController`] instance, which is used to access the the public methods in the axis. [Note: Properties like, initialVisibleMinimum, initialVisibleMaximum, initialZoomFactor and initialZoomPosition work's at initial time only. For dynamic update, AxisController APIs should be used]
 
 {% tabs %}
 {% highlight dart %}
