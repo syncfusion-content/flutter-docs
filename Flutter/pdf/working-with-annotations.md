@@ -321,7 +321,7 @@ document.dispose();
 
 ### Text Markup Annotation
 
-You can highlight the Markup Text using the PdfTextMarkupAnnotationType enum of the TextMarkupAnnotation class. This is explained in the following code example.
+The PdfTextMarkupAnnotation class is used to annotate the text in a PDF document with various formats, including highlight, squiggly, strikeout, and underline. The following code demonstrates how to highlight text in a PDF document.
 
 {% highlight dart %}
 
