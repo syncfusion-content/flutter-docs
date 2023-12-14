@@ -777,27 +777,22 @@ Expanding and collapsing groups programmatically can be achieved using the follo
 <tr>
 <th>Method </th>
 <th>Description </th>
-<th>Code Snippet </th>
 </tr>
 <tr>
 <td><code>DataGridController.expandAllGroup</code> </td>
 <td>Expands all the groups in the SfDataGrid </td>
-<td><code>dataGridController.expandAllGroup();</code>. </td>
 </tr>
 <tr>
 <td><code>DataGridController.collapseAllGroup</code>. </td>
 <td>Collapses all the groups in the SfDataGrid </td>
-<td><code>dataGridController.collapseAllGroup();</code>. </td>
 </tr>
 <tr>
 <td><code>DataGridController.expandGroupsAtLevel</code>. </td>
 <td>Expands the group based on the group level </td>
-<td><code>dataGridController.expandGroupsAtLevel(1);</code>. </td>  
 </tr>
 <tr>
 <td><code>DataGridController.collapseGroupsAtLevel</code>. </td>
 <td>Collapses the group based on the group level </td>
-<td><code>dataGridController.collapseGroupsAtLevel(2);</code>. </td>
 </tr>
 </table>
 
