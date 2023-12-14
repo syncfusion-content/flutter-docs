@@ -321,7 +321,7 @@ document.dispose();
 
 ### Text Markup Annotation
 
-The PdfTextMarkupAnnotation class is used to annotate the text in a PDF document with various formats, including highlight, squiggly, strikeout, and underline. The following code demonstrates how to highlight text in a PDF document.
+The PdfTextMarkupAnnotation class is used to annotate the text in a PDF document with various formats, including highlight, squiggly, strikeout, and underline. The following code demonstrates how to highlight text in a PDF document. 
 
 {% highlight dart %}
 
