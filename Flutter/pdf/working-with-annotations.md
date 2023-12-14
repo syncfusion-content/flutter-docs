@@ -319,6 +319,74 @@ document.dispose();
 
 {% endhighlight %}
 
+### Text Markup Annotation
+
+You can highlight the Markup Text using the PdfTextMarkupAnnotationType enum of the TextMarkupAnnotation class. This is explained in the following code example.
+
+{% highlight dart %}
+
+//Create a new PDF document.
+PdfDocument document = PdfDocument();
+//Create a new page.
+PdfPage page = document.pages.add();
+//Create PDF font with font style.
+PdfFont font = PdfStandardFont(PdfFontFamily.courier, 14, style: PdfFontStyle.bold);
+String markupText = 'Text Markup';
+//Measure the text size.
+Size textSize = font.measureString(markupText);
+//Draw the text.
+page.graphics.drawString(markupText, font,
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(175, 40, 0, 0));
+//Create a text markup annotation.
+PdfTextMarkupAnnotation markupAnnotation = PdfTextMarkupAnnotation(
+    Rect.fromLTWH(175, 40, textSize.width, textSize.height),
+    'Markup annotation',
+    PdfColor(128, 43, 226),
+    author: 'Syncfusion',
+    subject: 'Text Markup Annotation',
+    textMarkupAnnotationType: PdfTextMarkupAnnotationType.highlight,
+    modifiedDate: DateTime.now(),
+    setAppearance: true);
+//Add the annotation to the page.
+page.annotations.add(markupAnnotation);
+//Save the document.
+File('output.pdf').writeAsBytes(await document.save());
+//Dispose of the document.
+document.dispose();
+
+{% endhighlight %}
+
+### Pop-up Annotation
+
+Pop-up annotation displays text in a pop-up window for entry and editing.
+
+It typically does not appear alone but is associated with markup annotation, its parent annotation.
+
+PdfPopupAnnotation is used to add pop-up annotation in a PDF document.
+
+{% highlight dart %}
+
+//Create a new PDF document.
+PdfDocument document = PdfDocument();
+//Create a new page.
+PdfPage page = document.pages.add();
+//Create a new popup annotation.
+PdfPopupAnnotation popup = PdfPopupAnnotation(
+    Rect.fromLTWH(10, 40, 30, 30), 'Popup Annotation',
+    author: 'Syncfusion',
+    subject: 'Popup Annotation',
+    open: true,
+    icon: PdfPopupIcon.comment,
+    setAppearance: true);
+//Add the popup annotation to the page.
+page.annotations.add(popup);
+//Save the document.
+File('output.pdf').writeAsBytes(await document.save());
+//Dispose of the document.
+document.dispose();
+
+{% endhighlight %}
+
 ## Flatten annotation
 
 Annotations can be flattened by removing the existing annotation and replacing it with the graphics objects that would resemble the annotation and it cannot be edited.
@@ -448,6 +516,90 @@ collection.remove(collection[0]);
 File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
+document.dispose();
+
+{% endhighlight %}
+
+## Annotation Flags
+
+Annotation flags are elements added to annotations to provide additional information or interactivity. Flags associated with annotations help specify their appearance, behavior, and other properties. We can set the annotation flag using the annotationFlags property.
+
+The following table explains annotation flags.
+
+<table>
+<thead>
+<tr>
+<th>
+Member<br/><br/></th><th>
+Meaning<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+invisible<br/><br/></td><td>
+If set, do not display the annotation if it does not belong to one of the standard annotation types and no annotation handler is available.<br/><br/></td></tr>
+<tr>
+<td>
+hidden<br/><br/></td><td>
+If set, do not display or print the annotation, or allow the user to interact with the annotation, regardless of annotation type or annotation handler.<br/><br/></td></tr>
+<tr>
+<td>
+print<br/><br/></td><td>
+If set, print the annotation when the page is printed.<br/><br/></td></tr>
+<tr>
+<td>
+noZoom<br/><br/></td><td>
+If set, do not scale the annotation’s appearance to match the magnification of the page.<br/><br/></td></tr>
+<tr>
+<td>
+noRotate<br/><br/></td><td>
+If set, do not rotate the annotation’s appearance to match the rotation of the page.<br/><br/></td></tr>
+<tr>
+<td>
+noView<br/><br/></td><td>
+If set, do not display the annotation on the screens or allow the user to interact with the annotation.<br/><br/></td></tr>
+<tr>
+<td>
+readOnly<br/><br/></td><td>
+If set, do not allow the user to interact with annotation.<br/><br/></td></tr>
+<tr>
+<td>
+locked<br/><br/></td><td>
+If set, do not allow the annotation to be deleted or its properties to be modified by the user.<br/><br/></td></tr>
+<tr>
+<td>
+toggleNoView<br/><br/></td><td>
+If set, invert the interpretation of the noView flat for certain events.<br/><br/></td></tr>
+</tbody>
+</table>
+
+The following code example illustrates how to set annotation flags in the PDF document.
+
+{% highlight dart %}
+
+//Create a new PDF document.
+PdfDocument document = PdfDocument();
+//Add new PDF page.
+PdfPage page = document.pages.add();
+//Create an annotation with annotation flags.
+PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
+    Rect.fromLTWH(40, 70, 80, 80), 'Rectangle Annotation',
+    flags: <PdfAnnotationFlags>[
+      PdfAnnotationFlags.print,
+      PdfAnnotationFlags.readOnly
+    ],
+    author: 'Syncfusion',
+    subject: 'Rectangle Annotation',
+    color: PdfColor(255, 0, 0),
+    innerColor: PdfColor(0, 0, 255),
+    border: PdfAnnotationBorder(10),
+    setAppearance: true,
+    modifiedDate: DateTime.now());
+//Add annotation to the page.
+page.annotations.add(rectangleAnnotation);
+//Save the document.
+File('output.pdf').writeAsBytes(await document.save());
+//Dispose of the document.
 document.dispose();
 
 {% endhighlight %}
