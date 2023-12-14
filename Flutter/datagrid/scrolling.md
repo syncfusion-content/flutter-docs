@@ -885,7 +885,7 @@ late EmployeeDataSource _employeeDataSource;
 {% endhighlight %}
 {% endtabs %}
 
-## Get the visible rows and columns index
+## Retrieve the indices of visible rows and columns
 
 In the SfDataGrid, you can obtain the starting and ending indices of the visible rows using the `DataGridController.getVisibleRowStartIndex` and `DataGridController.getVisibleRowEndIndex` methods, respectively, by specifying the needed `RowRegion`. Similarly, for the visible columns, you can retrieve the starting and ending indices using the `DataGridController.getVisibleColumnStartIndex` and `DataGridController.getVisibleColumnEndIndex` methods, respectively.
 
@@ -951,5 +951,6 @@ In the SfDataGrid, you can obtain the starting and ending indices of the visible
       ]),
     );
   }
+
 {% endhighlight %}
 {% endtabs %}
