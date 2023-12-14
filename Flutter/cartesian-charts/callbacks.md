@@ -726,9 +726,10 @@ Triggers when the trendline gets rendered. The [`onRenderDetailsUpdate`](https:/
 >**Note**
 * The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
 
-## onRendererCreated
+## onRendererCreated (Series)
 
-Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series. [Note: initialIsVisible property work's at initial time only. For dynamic update, ChartSeriesController APIs should be used]
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
+initialIsVisible property work's only at the load time, use series onRendererCreated callback to dynamically update this property.
 
 {% tabs %}
 {% highlight dart %}
