@@ -884,3 +884,72 @@ late EmployeeDataSource _employeeDataSource;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Get the visible rows and columns index
+
+In the SfDataGrid, you can obtain the starting and ending indices of the visible rows using the `DataGridController.getVisibleRowStartIndex` and `DataGridController.getVisibleRowEndIndex` methods, respectively, by specifying the needed `RowRegion`. Similarly, for the visible columns, you can retrieve the starting and ending indices using the `DataGridController.getVisibleColumnStartIndex` and `DataGridController.getVisibleColumnEndIndex` methods, respectively.
+
+{% tabs %}
+{% highlight Dart %}
+
+  DataGridController dataGridController = DataGridController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: Column(children: [
+        ElevatedButton(
+            onPressed: () {
+              int? startRowIndex =
+                  dataGridController.getVisibleRowStartIndex(RowRegion.body);
+              int? endRowIndex =
+                  dataGridController.getVisibleRowEndIndex(RowRegion.body);
+              int? startColumnIndex =
+                  dataGridController.getVisibleColumnStartIndex(RowRegion.body);
+              int? endColumnIndex =
+                  dataGridController.getVisibleColumnEndIndex(RowRegion.body);
+                  
+              print('Start Row Index ${startRowIndex}');
+              print('End Row Index ${endRowIndex}');
+              print('Start Column Index ${startColumnIndex}');
+              print('End Column Index ${endColumnIndex}');
+            },
+            child: Text('Get Visible Row and Column Index')),
+        Expanded(
+          child: SfDataGrid(
+              source: employeeDataSource,
+              controller: dataGridController,
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'ID',
+                    label: Container(
+                        padding: EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        child: Text('ID'))),
+                GridColumn(
+                    columnName: 'Name',
+                    label: Container(
+                        padding: EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        child: Text('Name'))),
+                GridColumn(
+                    columnName: 'Designation',
+                    label: Container(
+                        padding: EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        child: Text('Designation',
+                            overflow: TextOverflow.ellipsis))),
+                GridColumn(
+                    columnName: 'Salary',
+                    label: Container(
+                        padding: EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        child: Text('Salary'))),
+              ]),
+        ),
+      ]),
+    );
+  }
+{% endhighlight %}
+{% endtabs %}
