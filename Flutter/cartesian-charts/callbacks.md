@@ -728,8 +728,10 @@ Triggers when the trendline gets rendered. The [`onRenderDetailsUpdate`](https:/
 
 ## onRendererCreated (Series)
 
-Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
-initialIsVisible property work's only at the load time, use series onRendererCreated callback to dynamically update this property.
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to:
+* Add, remove, or replace the data points programmatically.
+* pixelToPoint and pointToPixel conversions.
+* Restart the loading animation.
 
 {% tabs %}
 {% highlight dart %}
@@ -781,6 +783,77 @@ initialIsVisible property work's only at the load time, use series onRendererCre
             )
           )
         ]
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## onRendererCreated (Axis)
+
+Triggers when the axis renderer is created and attached to its parent. It can be used to obtain the axis-wise [AxisController] which has the current visible range details and provides an option to change the visible range programmatically. Here, you can customize the following properties.
+
+* [`visibleMinimum`] - to gets and sets the visible minimum of the axis.
+* [`visibleMaximum`] - to gets and sets the visible maximum of the axis.
+* [`zoomFactor`] - to gets and sets the zoom factor of the axis.
+* [`zoomPosition`] - to gets and sets the zoom position of the axis.
+* [`previousZoomFactor`] - to gets the previous zoom factor of the axis.
+* [`previousZoomPosition`] - to gets the previous zoom position of the axis.
+
+{% tabs %}
+{% highlight dart %}
+
+    NumericAxisController? _xAxisController;
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
+    @override
+    Widget build(BuildContext context) {
+
+      return Column(
+        children: <Widget>[
+          SfCartesianChart(
+            primaryXAxis: NumericAxis(
+              // Initialize the onRendererCreated.
+              onRendererCreated: (NumericAxisController controller) {
+                _xAxisController = controller;
+              },
+              // Sets the initialVisibleMinimum.
+              initialVisibleMinimum: 3,
+              // Sets the initialVisibleMaximum.
+              initialVisibleMaximum: 5,
+            ),
+            series: <LineSeries<ChartData, num>>[
+              LineSeries<ChartData, num>(
+                dataSource: chartData,
+                xValueMapper: (ChartData chartData, _) => chartData.x,
+                yValueMapper: (ChartData chartData, _) => chartData.y,
+              ),
+            ],
+          ),
+          ElevatedButton(
+            onPressed: () {
+              // Update the initialVisibleMaximum.
+              _xAxisController?.visibleMaximum = 1;
+              // Update the initialVisibleMinimum.
+              _xAxisController?.visibleMinimum = 6;
+            },
+            child: Text('Update Visible Range'),
+          )
+        ],
       );
     }
 

@@ -536,7 +536,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
 
 ### Initial visible minimum
 
-The [`initialVisibleMinimum`] property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property work's only at the load time, use axis onRendererCreated callback to dynamically update this property.
+The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initiaVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -563,7 +563,7 @@ Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an a
 
 ### Initial visible maximum
 
-The [`visibleMaximum`] property is used to set the initial minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property work's only at the load time, use axis onRendererCreated callback to dynamically update this property.
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) property defines the highest data point finally displayed on an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property only works at load time. Use the controller to programmatically change the visible maximum.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -581,81 +581,6 @@ The [`visibleMaximum`] property is used to set the initial minimum visible range
                 )
             )
         );
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## onRendererCreated
-
-Triggers when the axis renderer is created. This callback can be used to obtain the [`AxisController`] instance, which is used to access the the public properties in the axis. Here, you can customize the following properties.
-
-* [`initialVisibleMinimum`] - to get and set the visible minimum of the axis.
-* [`initialVisibleMaximum`] - to get and set the visible maximum of the axis.
-* [`initialZoomFactor`] - to get and set the zoom factor of the axis.
-* [`initialZoomPosition`] - to get and set the zoom position of the axis.
-
-{% tabs %}
-{% highlight dart %}
-
-    //Initialize the axis controller
-    NumericAxisController? _xAxisController;
-    
-    final List<ChartData> chartData = <ChartData>[
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 23),
-      ChartData(4, 57),
-      ChartData(5, 30),
-      ChartData(6, 41),
-    ];
-
-    @override
-    Widget build(BuildContext context) {
-
-      return Column(
-        children: <Widget>[
-          Container(
-          child: SfCartesianChart(
-                primaryXAxis: NumericAxis(
-                    //Initialize the onRendererCreated
-                    onRendererCreated: (NumericAxisController controller) {
-                        _xAxisController = controller;
-                    },                
-                    //Initialize the initialVisibleMaximum
-                    initialVisibleMaximum: 5,
-                    //Initialize the initialVisibleMinimum
-                    initialVisibleMinimum: 3,
-                ),
-                series: <LineSeries<ChartData, num>>[
-                    LineSeries<ChartData, num>(
-                      dataSource: chartData,
-                      xValueMapper: (ChartData chartData, _) => chartData.x,
-                      yValueMapper: (ChartData chartData, _) => chartData.y,
-                    ),
-                  ],
-            )
-          ),
-          Container(
-            child: ElevatedButton(
-              onPressed: () {
-                //Update the initialVisibleMaximum
-                _xAxisController?.visibleMaximum = 1;
-                //Update the initialVisibleMinimum
-                _xAxisController?.visibleMinimum = 6;
-              },
-              child: Container(child: Text('Update Visible Range'),
-              )
-            )
-          )
-        ]
-      );
-    }
-
-    class ChartData {
-      ChartData(this.x, this.y);
-      final num x;
-      final double? y;
     }
 
 {% endhighlight %}
@@ -1239,7 +1164,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 ## Auto range calculation
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
-By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`initialVisibleMinimum`] and [`initialVisibleMaximum`] values.
+By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) values.
   
 To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
@@ -1377,9 +1302,10 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## RangeController
 
-The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property is used to set the maximum and minimum values for the chart in the viewport. In the minimum and maximum properties of the axis, you can specify the minimum and maximum values with respect to the entire data source. In the initialVisibleMinimum and initialVisibleMaximum properties, you can specify the values to be viewed in the viewed port i.e. range controller's start and end values respectively.
+The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property defines the lowest and highest data points that are displayed on an axis.
+If the same [RangeController] instance is used in both the chart axis and the [RangeSelector], the chart's visible range will be updated based on the range selected in the [RangeSelector].
 
-Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`initialVisibleMinimum`], and [`initialVisibleMaximum`] properties to the axis and the axis values will be visible with respect to initialVisibleMinimum and initialVisibleMaximum properties.
+Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMinimum.html), and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initiaVisibleMaximum.html) properties to the axis and the axis values will be visible with respect to initialVisibleMinimum and initialVisibleMaximum properties.
 
 {% tabs %}
 {% highlight dart %}
@@ -1410,8 +1336,6 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               primaryXAxis: DateTimeAxis(
                   maximum: DateTime(2020, 1, 1),
                   minimum: DateTime(2020, 3, 30),
-                  // set maximum value from the range controller
-                  initialVisibleMaximum: rangeController.end,
                   // set minimum value from the range controller
                   initialVisibleMinimum: rangeController.start,
                   rangeController: rangeController),
@@ -1440,8 +1364,6 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               onChanged: (SfRangeValues value) {
                 // set the start value to rangeController from this callback
                 rangeController.start = value.start;
-                // set the end value to rangeController from this callback
-                rangeController.end = value.end;
                 setState(() {});
               },
               child: Container(
@@ -1959,7 +1881,7 @@ The different types of multi-level label's border are mentioned below,
 
 #### See Also
 
-* [Rendering a particular part of a data using initial visible minimum and initial visible maximum in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
+* [Rendering a particular part of a data in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 
 * [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
 
