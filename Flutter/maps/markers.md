@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Flutter Maps widget | Syncfusion
-description: Learn here all about the Markers feature of Syncfusion Flutter Maps (SfMaps) widget to customize its appearance including text, icon and more.
+description: Learn here all about the markers support in Syncfusion Flutter Maps (SfMaps) widget, it's elements and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -998,4 +998,4 @@ class _TouristPlaceDetails {
 
 ![Zoom markers to fit bounds](images/markers/fit_bounds.jpg)
 
-N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Markers example](https://flutter.syncfusion.com/#/maps/shape-layer/marker) that shows how to configure a Maps in Flutter.
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Markers example](https://flutter.syncfusion.com/#/maps/shape-layer/marker) that shows you how to configure a Maps in Flutter.
