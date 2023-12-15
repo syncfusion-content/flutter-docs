@@ -12,7 +12,7 @@ documentation: ug
 The annotations in the PDF document can be accessed by the `getAnnotations` method of the `PdfViewerController`. The return value of the function will have Annotation collection as soon as the document is loaded in the PDF viewer. The following code example shows how the annotation collection can be accessed.
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="9 10" %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController();
 

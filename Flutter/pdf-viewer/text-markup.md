@@ -65,5 +65,5 @@ void disableAnnotationMode() {
 
 Text markups can be added to a PDF document using the text selection without enabling the `annotationMode`. Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any text markup options to add annotation to a text in the PDF document.
 
-![Text markup context menu](/images/annotations/text-markup-context-menu.png)
+![Text selection context menu](images/annotations/text_selection_context_menu.png)
 
