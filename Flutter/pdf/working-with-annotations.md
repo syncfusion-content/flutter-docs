@@ -356,6 +356,37 @@ document.dispose();
 
 {% endhighlight %}
 
+To add text markup annotation to an existing PDF document, use the following code example.
+
+{% highlight dart %}
+
+//Load the PDF document.
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+//Create a text markup annotation.
+final PdfTextMarkupAnnotation textMarkupAnnotation = PdfTextMarkupAnnotation(
+    const Rect.fromLTWH(60, 165, 495, 45),
+    'Text Markup Highlight',
+    PdfColor(255, 255, 0),
+    author: 'Syncfusion',
+    subject: 'Text Markup Annotation',
+    textMarkupAnnotationType: PdfTextMarkupAnnotationType.highlight,
+    modifiedDate: DateTime.now());
+//Add the bounds collection to highlight the text on more than one line.
+textMarkupAnnotation.boundsCollection = <Rect>[
+    const Rect.fromLTWH(251, 165, 304, 15),
+    const Rect.fromLTWH(60, 180, 495, 15),
+    const Rect.fromLTWH(60, 195, 100, 15)
+];
+//Add the text markup annotation to the page.
+document.pages[0].annotations.add(textMarkupAnnotation);
+//Save the document.
+File('output.pdf').writeAsBytesSync(await document.save());
+//Dispose of the document.
+document.dispose();
+
+{% endhighlight %}
+
 ### Pop-up Annotation
 
 Pop-up annotation displays text in a pop-up window for entry and editing.
@@ -382,6 +413,31 @@ PdfPopupAnnotation popup = PdfPopupAnnotation(
 page.annotations.add(popup);
 //Save the document.
 File('output.pdf').writeAsBytes(await document.save());
+//Dispose of the document.
+document.dispose();
+
+{% endhighlight %}
+
+To add popup annotation to an existing PDF document, use the following code example.
+
+{% highlight dart %}
+
+//Load the PDF document.
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+//Create a popup annotation.
+final PdfPopupAnnotation popupAnnotation = PdfPopupAnnotation(
+    const Rect.fromLTWH(225, 371, 20, 20), 'Popup Annotation',
+    author: 'Syncfusion',
+    subject: 'Popup Annotation Comment',
+    color: PdfColor(255, 255, 0),
+    icon: PdfPopupIcon.comment,
+    open: true,
+    setAppearance: true);
+//Add the popup annotation to the page.
+document.pages[0].annotations.add(popupAnnotation);
+//Save the document.
+File('output.pdf').writeAsBytesSync(await document.save());
 //Dispose of the document.
 document.dispose();
 
@@ -599,6 +655,27 @@ PdfRectangleAnnotation rectangleAnnotation = PdfRectangleAnnotation(
 page.annotations.add(rectangleAnnotation);
 //Save the document.
 File('output.pdf').writeAsBytes(await document.save());
+//Dispose of the document.
+document.dispose();
+
+{% endhighlight %}
+
+To add annotation flags to an existing annotation, use the following code example.
+
+{% highlight dart %}
+
+//Load the PDF document.
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+//Get the first page.
+PdfPage page = document.pages[0];
+//Add annotation flags to existing annotation.
+page.annotations[0].annotationFlags.addAll(<PdfAnnotationFlags>[
+    PdfAnnotationFlags.print,
+    PdfAnnotationFlags.readOnly
+]);
+//Save the document.
+File('output.pdf').writeAsBytesSync(await document.save());
 //Dispose of the document.
 document.dispose();
 
