@@ -421,31 +421,39 @@ Triggers when the series renderer is created. This callback can be used to obtai
     //Initialize the series controller
     CircularSeriesController? circularSeriesController;
 
-    final List<ChartData> chartData = <ChartData>[
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 23),
-      ChartData(4, 57),
-      ChartData(5, 30),
-      ChartData(6, 41),
-    ];
+    late List<ChartData> chartData;
 
-    return Column(children: <Widget>[
-      Container(
-          child: SfCircularChart(
-        series: <CircularSeries<ChartData, dynamic>>[
-          DoughnutSeries<ChartData, dynamic>(
-            dataSource: chartData,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-            onRendererCreated: (CircularSeriesController controller) {
-              circularSeriesController = controller;
-              },
-            ),
-          ],
-        )
-      ),
-      Container(
+    @override
+    void initState() {
+      chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 23),
+        ChartData(4, 57),
+        ChartData(5, 30),
+        ChartData(6, 41),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Column(children: <Widget>[
+        Container(
+            child: SfCircularChart(
+          series: <CircularSeries<ChartData, dynamic>>[
+            DoughnutSeries<ChartData, dynamic>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              onRendererCreated: (CircularSeriesController controller) {
+                circularSeriesController = controller;
+                },
+              ),
+            ],
+          )
+        ),
+        Container(
           child: ElevatedButton(
               onPressed: () {
                 //Removed a point from data source
@@ -466,7 +474,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
           ]
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);
@@ -533,7 +540,6 @@ the data points and legend. For further reference on this callback, check the [`
           )
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);

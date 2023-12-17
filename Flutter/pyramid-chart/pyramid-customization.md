@@ -81,9 +81,8 @@ You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/docu
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,9 +118,8 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,9 +154,8 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}
@@ -197,9 +194,8 @@ Also, the segments can be exploded by tapping the segment.
                         )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}

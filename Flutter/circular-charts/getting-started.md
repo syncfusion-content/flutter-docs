@@ -181,7 +181,7 @@ You can add data labels to improve the readability of the chart using the [`data
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 dataSource: [
@@ -226,7 +226,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                     child: SfCircularChart(
                         // Enables the legend
                         legend: Legend(isVisible: true), 
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 dataSource: [
@@ -281,7 +281,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                     child: SfCircularChart(
                         // Enables the tooltip for all the series in chart
                         tooltipBehavior: _tooltipBehavior,
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 // Enables the tooltip for individual series

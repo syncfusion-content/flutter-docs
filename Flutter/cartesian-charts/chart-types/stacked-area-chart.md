@@ -32,7 +32,7 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -74,7 +74,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
@@ -131,7 +131,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(

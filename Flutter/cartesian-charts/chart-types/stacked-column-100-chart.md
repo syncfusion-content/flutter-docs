@@ -32,7 +32,7 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -81,7 +81,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

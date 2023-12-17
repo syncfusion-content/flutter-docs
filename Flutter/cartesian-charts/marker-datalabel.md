@@ -29,7 +29,7 @@ Markers are used to provide information about the exact point location. You can 
             ChartData('China', 11),
             ChartData('UK', 9),
             ChartData('Japan', 14),
-            ChartData('France', 10,
+            ChartData('France', 10),
         ];
         return Scaffold(
             body: Center(

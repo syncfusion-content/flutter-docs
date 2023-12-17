@@ -146,7 +146,7 @@ Right-to-left rendering is applicable for [`tooltip`](https://pub.dev/documentat
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfFunnelChart(
-            tooltipBehavior = _tooltipBehavior;
+            tooltipBehavior: _tooltipBehavior,
             series: FunnelSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,

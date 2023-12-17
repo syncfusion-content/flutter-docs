@@ -130,7 +130,7 @@ Then, declare the [`SfGlobalLocalizations.delegate`](https://pub.dev/documentati
             legend: Legend(isVisible: true),
             tooltipBehavior: _tooltipBehavior,
             primaryAxis: CategoryAxis(),
-            series: <ChartSeries<ChartData, int>>[
+            series: <CartesianSeries<ChartData, int>>[
               LineSeries<ChartData, int>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,

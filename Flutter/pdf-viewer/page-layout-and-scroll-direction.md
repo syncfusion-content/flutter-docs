@@ -18,8 +18,6 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 * Continuous page layout mode
 * Single page layout mode
 
-N> For now, only `Horizontal` scrolling is supported in `Single page layout mode`.
-
 ### Continuous page layout mode
 
 By default, the `continuous` page layout mode is enabled, which scrolls the PDF pages vertically and horizontally. To enable the `continuous` page layout mode in `SfPdfViewer`, use the following code sample.
@@ -64,6 +62,8 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 * Vertical scrolling
 * Horizontal scrolling
+
+If the scroll direction is not specified, continuous page layout mode defaults to vertical scrolling, and single page layout mode defaults to horizontal scrolling.
 
 ### Vertical scrolling
 

@@ -31,7 +31,7 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -71,15 +71,16 @@ The borders of the range area chart can be customized using the [`borderDrawMode
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                color: Color.fromRGB(224, 242, 241,1),
+                                color: Color.fromARGB(224, 242, 241,1),
                                 borderDrawMode: RangeAreaBorderMode.excludeSides,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                             )
                         ]
                     )

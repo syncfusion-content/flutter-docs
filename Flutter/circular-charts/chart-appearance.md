@@ -88,7 +88,7 @@ You can customize the area of the chart using the below properties.
               width: 350, 
               child: SfCircularChart(
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: 'images/livechart.png',
+                backgroundImage: AssetImage('images/apple.png'),
               )
             )
           )

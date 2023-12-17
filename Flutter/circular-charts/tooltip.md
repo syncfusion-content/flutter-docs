@@ -196,7 +196,7 @@ You can customize the appearance of the tooltip with your own widget by using th
                 int pointIndex, int seriesIndex) {
                   return Container(
                     child: Text(
-                      'PointIndex : ${SeriesIndex.toString()}'
+                      'PointIndex : ${pointIndex.toString()}'
                     )
                   );
                 }

@@ -39,7 +39,7 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -97,7 +97,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

@@ -151,7 +151,7 @@ Defaults to `true`.
           child: Container(
             child: SfPyramidChart(
               series: PyramidSeries<ChartData, String>(
-                dataSource: chartData1,
+                dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
                 selectionBehavior: _selectionBehavior)
@@ -177,7 +177,9 @@ You can select a point or series programmatically on a chart using [`initialSele
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
+                      series: PyramidSeries<ChartData, String>(
                         initialSelectedDataIndexes: [2, 0]
+                      )
                     )
                 )
             )
@@ -222,8 +224,6 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
         ChartData(20, 34)
         // Add the required data
       ];
-
-      selection = ;
       
       chart = SfPyramidChart(
         series: PyramidSeries<ChartData, double>(
@@ -238,7 +238,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
         body: Center(
           child: Column(
             children: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('Select'),
                 onPressed: select
               ),

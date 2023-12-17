@@ -48,8 +48,10 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
                         data.highValue,),
                     ]
                 )
-            );
-        }
+            )
+        );
+    }
+
     class ChartData {
       ChartData(this.xValue, this.lowValue, this.highValue);
       final num xValue;

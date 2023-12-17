@@ -1284,6 +1284,7 @@ Widget build(BuildContext context) {
         ]
       );
     }
+  }
 
      class ChartData {
         ChartData(this.x, this.y);

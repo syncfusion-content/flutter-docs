@@ -39,7 +39,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -70,10 +70,10 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
     class ChartData{
         ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
         final String x;
-        final String y1;
-        final String y2;
-        final String y3;
-        final String y4;
+        final double y1;
+        final double y2;
+        final double y3;
+        final double y4;
     }
 
 {% endhighlight %}
@@ -95,7 +95,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
@@ -130,10 +130,10 @@ You can group and stack the similar stacked series types using the [`groupName`]
     class ChartData{
         ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
         final String x;
-        final String y1;
-        final String y2;
-        final String y3;
-        final String y4;
+        final double y1;
+        final double y2;
+        final double y3;
+        final double y4;
     }
 
 {% endhighlight %}
@@ -155,9 +155,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -167,7 +166,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -177,7 +175,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -187,7 +184,6 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedColumnSeries<ChartData, String>(
-                                groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                 isVisible:true, 
                                 showCumulativeValues: true
@@ -206,10 +202,10 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
     class ChartData{
         ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
         final String x;
-        final String y1;
-        final String y2;
-        final String y3;
-        final String y4;
+        final double y1;
+        final double y2;
+        final double y3;
+        final double y4;
     }
 
 {% endhighlight %}

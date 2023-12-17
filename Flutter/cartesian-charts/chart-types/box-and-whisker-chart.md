@@ -30,7 +30,7 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<ChartData, double>>[
+                        series: <CartesianSeries<ChartData, double>>[
                            BoxAndWhiskerSeries<ChartData, double>(
                                 dataSource: data,
                                 boxPlotMode: BoxPlotMode.exclusive,

@@ -80,7 +80,6 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
               primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
-                name:legend,
                 // Border color and border width of legend
                 borderColor: Colors.black,
                 borderWidth: 2
@@ -233,11 +232,11 @@ You can control the visibility of the series by tapping the legend item. You can
               primaryXAxis: CategoryAxis(),
               legend: Legend(
                 isVisible: true,
-                // Toogles the series visibility on tapping the legend item
+                // Toggles the series visibility on tapping the legend item
                 toggleSeriesVisibility: true
               ),
               series: <CartesianSeries>[
-                LineeSeries<ChartData, String>(
+                LineSeries<ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y

@@ -92,10 +92,10 @@ To export the pyramid chart as a PNG image, we can get the image by calling [`to
       }
 
       Future<void> _renderPyramidImage() async {
-        final ui.Image data =
+        final ui.Image? data =
           await _pyramidChartKey.currentState!.toImage(pixelRatio: 3.0);
         final ByteData? bytes =
-          await data.toByteData(format: ui.ImageByteFormat.png);
+          await data!.toByteData(format: ui.ImageByteFormat.png);
         final Uint8List imageBytes =
           bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
         if (!mounted) return;

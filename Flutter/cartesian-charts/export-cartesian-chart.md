@@ -81,10 +81,10 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
       }
 
       Future<void> _renderChartAsImage() async {
-        final ui.Image data =
+        final ui.Image? data =
             await _cartesianChartKey.currentState!.toImage(pixelRatio: 3.0);
         final ByteData? bytes =
-            await data.toByteData(format: ui.ImageByteFormat.png);
+            await data!.toByteData(format: ui.ImageByteFormat.png);
         final Uint8List imageBytes =
             bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
         await Navigator.of(context).push<dynamic>(

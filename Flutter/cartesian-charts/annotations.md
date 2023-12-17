@@ -159,7 +159,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
                   y: '50%'
               )
             ],
-            series: <ChartSeries<ChartData, String>>[
+            series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
@@ -303,7 +303,6 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
                   )
                 );
               }
-            }
 
             class ChartData {
               ChartData(this.x, this.y);
@@ -338,7 +337,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
+                primaryXAxis: NumericAxis(),
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
                     widget: Container(child: const Text('Low')),
@@ -422,7 +421,7 @@ Chart supports watermark which allows you to mark the specific area of interest 
                 y: 38,
                 )
               ],
-                series: <ChartSeries<ChartData, String>>[
+                series: <CartesianSeries<ChartData, String>>[
                 LineSeries<ChartData, String>(
                     dataSource: <ChartData>[
                     ChartData('jan', 21),
@@ -442,7 +441,6 @@ Chart supports watermark which allows you to mark the specific area of interest 
           )
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);

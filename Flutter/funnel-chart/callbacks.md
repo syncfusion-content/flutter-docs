@@ -144,8 +144,9 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
             },
             legend: Legend(isVisible: true)
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -217,7 +218,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     Widget build(BuildContext context) {
       return Container(
         child: SfFunnelChart(
-          onDatalabelTapped: (DataLabelTapArgs args) {
+          onDataLabelTapped: (DataLabelTapDetails args) {
             print(args.seriesIndex);                 
           },
           series: FunnelSeries<Sample, DateTime>(
@@ -411,18 +412,21 @@ Triggers when the series renderer is created. This callback can be used to obtai
       ChartData(6, 41),
     ];
 
-    return Column(children: <Widget>[
-      Container(
+    @override
+    Widget build(BuildContext context) {
+      return Column(children: <Widget>[
+        Container(
           child: SfFunnelChart(
-        series: FunnelSeries<ChartData, dynamic>(
-          dataSource: chartData,
-          xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
-          onRendererCreated: (FunnelSeriesController controller) {
-            funnelSeriesController = controller;
-          },
-        ),
-      )),
+            series: FunnelSeries<ChartData, dynamic>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            onRendererCreated: (FunnelSeriesController controller) {
+              funnelSeriesController = controller;
+            },
+          ),
+        ), 
+      ),
       Container(
           child: ElevatedButton(
               onPressed: () {
@@ -444,7 +448,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
           ]
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);

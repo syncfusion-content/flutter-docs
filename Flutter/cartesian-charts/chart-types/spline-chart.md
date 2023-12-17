@@ -31,7 +31,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, int>(
                                 dataSource: chartData,
@@ -44,7 +44,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
                 )
             );
         }
-    }
+
     class ChartData {
         ChartData(this.x, this.y);
         final int x;
@@ -85,7 +85,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Type of spline
@@ -100,7 +100,6 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                 )
             );
         }
-    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +126,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Dash values for spline
@@ -141,7 +140,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                 )
             );
         }
-    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -177,7 +175,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                     child: SfCartesianChart(
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             SplineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -189,7 +187,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 )
             );
         }
-    }
+
     class ChartData {
         ChartData(this.x, this.y);
         final String x;

@@ -43,7 +43,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
                                 dataSource: financialData,
@@ -90,7 +90,7 @@ The following are the types of indication when the combination of high, low, ope
         return Scaffold(
             body: Center(
                 child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                           CandleSeries<ChartData, double>(
                             showIndicationForSameValues: true,
                             dataSource: <ChartData>[
