@@ -822,7 +822,6 @@ Triggers when the axis renderer is created and attached to its parent. It can be
 
     @override
     Widget build(BuildContext context) {
-
       return Column(
         children: <Widget>[
           SfCartesianChart(
