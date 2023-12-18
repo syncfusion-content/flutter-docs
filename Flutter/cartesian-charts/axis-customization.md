@@ -1364,6 +1364,8 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               onChanged: (SfRangeValues value) {
                 // set the start value to rangeController from this callback
                 rangeController.start = value.start;
+                // set the end value to rangeController from this callback
+                rangeController.end = value.end;
                 setState(() {});
               },
               child: Container(

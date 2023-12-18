@@ -810,7 +810,6 @@ Triggers when the axis renderer is created and attached to its parent. It can be
 {% highlight dart %}
 
     NumericAxisController? _xAxisController;
-
     final List<ChartData> chartData = <ChartData>[
       ChartData(1, 24),
       ChartData(2, 20),
@@ -819,7 +818,6 @@ Triggers when the axis renderer is created and attached to its parent. It can be
       ChartData(5, 30),
       ChartData(6, 41),
     ];
-
     @override
     Widget build(BuildContext context) {
       return Column(
