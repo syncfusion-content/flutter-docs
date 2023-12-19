@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Installing Syncfusion Flutter Linux installer - Syncfusion
-description: Learn here about how to install Syncfusion Flutter Linux installer after downloading from our Syncfusion website.
-platform: common
-control: Flutter
+description: Learn here about how to install Syncfusion Flutter linux installer after downloading from our Syncfusion website.
+platform: flutter
+control: Installation and Deployment
 documentation: ug
+
 ---
 
 # Installing Syncfusion Flutter Linux installer
@@ -37,7 +38,7 @@ The steps below show how to install Flutter Linux installer.
 
    ![License Agreement](images/Linux_Installer2.png)   
    
-   N> The Unlock key is not required to install the Linux installer. The Syncfusion Linux installer can be used for development purposes without registering the Unlock key.
+   N> The Unlock key is not required to install the Linux installer.
 
 
 4. You can launch the demo source and use the NuGet packages included in the Linux installer.
