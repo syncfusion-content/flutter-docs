@@ -11,13 +11,13 @@ documentation: ug
 
 Grouping in a DataGrid involves organizing and categorizing data based on specific criteria or field values. This feature enables the grouping of related records together, forming a hierarchical structure within the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html). Each group is represented by the `CaptionSummaryRow `that displays at the top of each group and holds the caption summary value of that group.
 
-By default, the DataGrid doesn't show the group's caption summary value. To showcase the caption summary value, it is necessary to override the `DataGridSource.buildGroupCaptionCellWidget` method. This method receives the caption summary value as a parameter. Consequently, you will be required to return the necessary widget containing the summary value.
+By default, the DataGrid doesn't show the group's caption summary value. To showcase the caption summary value, it is necessary to override the [DataGridSource.buildGroupCaptionCellWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildGroupCaptionCellWidget.html) method. This method receives the caption summary value as a parameter. Consequently, you will be required to return the necessary widget containing the summary value.
 
 ## Programmatic grouping
 
 ### Add column group
 
-To enable column grouping, add the `ColumnGroup` instance through the `DataGridSource.addColumnGroup` method.
+To enable column grouping, add the `ColumnGroup` instance through the `[DataGridSource.addColumnGroup](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/addColumnGroup.html) method.
 
 The `ColumnGroup` object consists of the following properties:
 
@@ -200,7 +200,7 @@ To disable column grouping for a particular column, remove that `ColumnGroup` in
 
 ### Clear all column groups
 
-To clear all the column groups, simply call the `DataGridSource.clearColumnGroups` method.
+To clear all the column groups, simply call the [DataGridSource.clearColumnGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/clearColumnGroups.html) method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -256,7 +256,7 @@ To clear all the column groups, simply call the `DataGridSource.clearColumnGroup
 
 ## Multi-level grouping
 
-The `SfDataGrid` allows grouping of data against one or more columns by adding multiple columns to the `DataGridSource.addColumnGroup` property. This feature organizes data into a hierarchical tree structure based on identical values within those columns.
+The `SfDataGrid` allows grouping of data against one or more columns by adding multiple columns to the [DataGridSource.addColumnGroup](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/addColumnGroup.html) property. This feature organizes data into a hierarchical tree structure based on identical values within those columns.
 
 Initially, data is grouped according to the first column added to the `DataGridSource.addColumnGroup` property. Subsequently, when additional columns are included in `DataGridSource.addColumnGroup,` each new column is grouped in consideration of the existing group(s). This process creates a tree-like hierarchy. To enable multi-grouping, please refer to the following code snippet:
     
@@ -323,7 +323,7 @@ The `SfDataGrid` provides the following callbacks to notify the grouping stages:
 
 ### GroupExpanding
 
-The `SfDataGrid.groupExpanding` callback is invoked when the group is being expanded. You can return false from this callback to restrict the group from being expanded.
+The [SfDataGrid.groupExpanding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupExpanding.html) callback is invoked when the group is being expanded. You can return false from this callback to restrict the group from being expanded.
 
 {% tabs %}
 {% highlight Dart %}
@@ -384,7 +384,7 @@ The `SfDataGrid.groupExpanding` callback is invoked when the group is being expa
 
 ### GroupExpanded
 
-The `SfDataGrid.groupExpanded` callback is invoked when the group is expanded.
+The [SfDataGrid.groupExpanded](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupExpanded.html) callback is invoked when the group is expanded.
 
 {% tabs %}
 {% highlight Dart %}
@@ -435,7 +435,7 @@ The `SfDataGrid.groupExpanded` callback is invoked when the group is expanded.
 
 ### GroupCollapsing
 
-The `SfDataGrid.groupCollapsing` callback is invoked when the group is being collapsed. You can return false from this callback to restrict the group from being collapsed.
+The [SfDataGrid.groupCollapsing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupCollapsing.html) callback is invoked when the group is being collapsed. You can return false from this callback to restrict the group from being collapsed.
 
 {% tabs %}
 {% highlight Dart %}
@@ -487,7 +487,7 @@ The `SfDataGrid.groupCollapsing` callback is invoked when the group is being col
 
 ### GroupCollapsed
 
-The `SfDataGrid.groupCollapsed` callback is invoked when the group is collapsed.
+The [SfDataGrid.groupCollapsed](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupCollapsed.html) callback is invoked when the group is collapsed.
 
 {% tabs %}
 {% highlight Dart %}
@@ -538,7 +538,7 @@ The `SfDataGrid.groupCollapsed` callback is invoked when the group is collapsed.
 
 ## Custom grouping
 
-The `SfDataGrid` provides support to group a column using custom logic when standard grouping techniques aren't sufficient for specific requirements. This can be accomplished by overriding the `DataGridSource.performGrouping` method. 
+The `SfDataGrid` provides support to group a column using custom logic when standard grouping techniques aren't sufficient for specific requirements. This can be accomplished by overriding the [DataGridSource.performGrouping](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performGrouping.html) method. 
 
 The `DataGridSource.performGrouping` method is invoked when grouping is applied to the `SfDataGrid`. Within this method, you can implement custom logic to return a `String` based on your specific requirements.
 
@@ -667,7 +667,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Enable group expand and collapse 
 
-The group expand and collapse functionality can be enabled by setting the `SfDataGrid.allowExpandCollapseGroup` property to `true`. The default value of this property is `false.`
+The group expand and collapse functionality can be enabled by setting the [SfDataGrid.allowExpandCollapseGroup](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowExpandCollapseGroup.html) property to `true`. The default value of this property is `false.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -723,7 +723,7 @@ The group expand and collapse functionality can be enabled by setting the `SfDat
 
 ## Disable group expanding on the initial loading
 
-By default, the SfDataGrid always expands all the groups. All the groups can be collapsed intially by setting the `SfDataGrid.autoExpandGroups` property to false.
+By default, the SfDataGrid always expands all the groups. All the groups can be collapsed intially by setting the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property to false.
 
 {% tabs %}
 {% highlight Dart %}
@@ -800,7 +800,7 @@ Expanding and collapsing groups programmatically can be achieved using the follo
 
 The caption summary value is displayed in a caption summary row by the default format `'{ColumnName} : {Key} - {ItemsCount} Items'.` The `{ColumnName}` defines the name of the grouped column, {Key} defines the identical cell value of the group, and `{ItemsCount}` defines the length of the rows in the group.
 
-The format can be customized by using the `SfDataGrid.groupCaptionTitleFormat` property.
+The format can be customized by using the [SfDataGrid.groupCaptionTitleFormat](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupCaptionTitleFormat.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -850,7 +850,7 @@ The format can be customized by using the `SfDataGrid.groupCaptionTitleFormat` p
 
 ## Customize the indent column appearance
 
-The width and color of the indent column can be personalized using the `SfDataGridThemeData.indentColumnWidth` and `SfDataGridThemeData.indentColumnColor` properties. The default values for these properties are `40.0` and `null,` respectively.
+The width and color of the indent column can be personalized using the [SfDataGridThemeData.indentColumnWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/indentColumnWidth.html) and [SfDataGridThemeData.indentColumnColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/indentColumnColor.html) properties. The default values for these properties are `40.0` and `null,` respectively.
 
 {% tabs %}
 {% highlight Dart %}
@@ -904,9 +904,9 @@ The width and color of the indent column can be personalized using the `SfDataGr
 
 ## Customize the group expander icon
 
-The group expander icon is used to indicate the state of a group. It is displayed only when the `SfDataGrid.allowExpandCollapseGroup` option is enabled. The icon can be customized by using the `SfDataGridThemeData.groupExpandIconData` property.
+The group expander icon is used to indicate the state of a group. It is displayed only when the [SfDataGrid.allowExpandCollapseGroup](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowExpandCollapseGroup.html) option is enabled. The icon can be customized by using the [SfDataGridThemeData.groupExpanderIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/groupExpanderIcon.html) property.
 
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the `syncfusion_flutter_core` package.
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
 
 {% tabs %}
 {% highlight Dart %}
@@ -960,5 +960,5 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the `sy
 
 ## Limitations
 
-* The grouping will be refreshed when performing CRUD operations on the `DataGridSource.rows` and the `SfDataGrid.columns.` Consequently, this action resets the expand and collapse states of the groups based on the `SfDataGrid.autoExpandGroups` property.
+* The grouping will be refreshed when performing CRUD operations on the [DataGridSource.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) and the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html).` Consequently, this action resets the expand and collapse states of the groups based on the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property.
 * To prevent unnecessary grouping refresh, ensure that the `SfDataGrid.columns` property is set as an instance.
