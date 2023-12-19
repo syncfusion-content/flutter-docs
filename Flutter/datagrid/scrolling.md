@@ -887,7 +887,7 @@ late EmployeeDataSource _employeeDataSource;
 
 ## Retrieve the indices of visible rows and columns
 
-In the SfDataGrid, you can obtain the starting and ending indices of the visible rows using the `DataGridController.getVisibleRowStartIndex` and `DataGridController.getVisibleRowEndIndex` methods, respectively, by specifying the needed `RowRegion`. Similarly, for the visible columns, you can retrieve the starting and ending indices using the `DataGridController.getVisibleColumnStartIndex` and `DataGridController.getVisibleColumnEndIndex` methods, respectively.
+In the SfDataGrid, you can obtain the starting and ending indices of the visible rows using the [DataGridController.getVisibleRowStartIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/getVisibleRowStartIndex.html) and [DataGridController.getVisibleRowEndIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/getVisibleRowEndIndex.html) methods, respectively, by specifying the needed `RowRegion`. Similarly, for the visible columns, you can retrieve the starting and ending indices using the [DataGridController.getVisibleColumnStartIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/getVisibleColumnStartIndex.html) and [DataGridController.getVisibleColumnEndIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/getVisibleColumnEndIndex.html) methods, respectively.
 
 {% tabs %}
 {% highlight Dart %}
