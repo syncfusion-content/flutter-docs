@@ -17,6 +17,7 @@ The system requirements for using our Syncfusion Flutter platform are as follows
 * Windows 7 SP1
 * Windows 8, 8.1
 * Windows 10
+* Windows 11
 * Android API level 19 & later
 * iOS 8 & later
 
@@ -40,15 +41,48 @@ The following Flutter SDK version is required for our widgets:
 
 <table>
     <tr>
-        <th>Channel</th>
-        <th>Version</th>
+        <th>Stable Version</th>
+        <th>Compatible Version</th>
     </tr>
     <tr>
-        <td>Stable</td>
         <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip">v3.16.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip">3.16.0</a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5">23.2.5</a>
         </td>
     </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.13.0-stable.zip">3.13.0</a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.11">22.2.11</a>
+        </td>
+    </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip">3.10.0</a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.8">21.2.8</a>
+        </td>
+    </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip">3.7.0</a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.50">20.4.50</a>
+        </td>
+    </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.0-stable.zip">3.3.0</a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47">20.3.47</a>
+        </td>
 </table>
 
 ### Supported Platforms
