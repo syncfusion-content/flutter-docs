@@ -83,6 +83,7 @@ The following Flutter SDK version is required for our widgets:
         <td style="text-align:center">
             <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47">20.3.47</a>
         </td>
+    </tr>
 </table>
 
 ### Supported Platforms
