@@ -43,6 +43,35 @@ document.dispose();
 
 {% endhighlight %}
 
+## Creating templates from existing PDF document
+
+Essential PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
+
+The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
+
+{% highlight dart %}
+
+    //Load the PDF document.
+    PdfDocument loadedDocument =
+      PdfDocument(inputBytes: File('Input.pdf').readAsBytesSync());
+    //Get the first page from the document.
+    PdfPage loadedPage = loadedDocument.pages[0];
+    //Create a PDF Template.
+    PdfTemplate template = loadedPage.createTemplate();
+    //Create a new PDF document.
+    PdfDocument document = PdfDocument();
+    //Add the page.
+    PdfPage page = document.pages.add();
+    //Create the graphics.
+    PdfGraphics graphics = page.graphics;
+    //Draw the template.
+    graphics.drawPdfTemplate(template, Offset(0, 0));
+    //Save and dispose of the PDF document.
+    File('Output.pdf').writeAsBytes(await document.save());
+    document.dispose();
+
+{% endhighlight %}
+
 ## Working with PdfPageTemplateElement
 
 The [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) is a template element that can be added to any part of the PDF page such as header, footer, and more.
