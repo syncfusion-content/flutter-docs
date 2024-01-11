@@ -45,7 +45,7 @@ document.dispose();
 
 ## Creating templates from existing PDF document
 
-Essential PDF supports creating the templates using [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method from an existing PDF document page and draw it in on a new PDF document.
+Essential PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
 
 The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
 
@@ -60,8 +60,6 @@ The below code illustrates how to create the template from an existing page and 
     PdfTemplate template = loadedPage.createTemplate();
     //Create a new PDF document.
     PdfDocument document = PdfDocument();
-    //Set the document margin.
-    document.pageSettings.setMargins(2);
     //Add the page.
     PdfPage page = document.pages.add();
     //Create the graphics.
