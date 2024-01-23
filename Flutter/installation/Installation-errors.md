@@ -53,7 +53,7 @@ This error message will appear if your license has expired.
 You can choose from the options listed below. 
 
 1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals). 
-2. You can get a new license [here](https://www.syncfusion.com/sales/products). 
+2. You can get a new license [here](https://www.syncfusion.com/sales/teamlicense). 
 3. You can reach out to our sales team by emailing <sales@syncfusion.com>. 
 4. You can also extend the 30-day trial period after your trial license has expired.
 
@@ -85,7 +85,7 @@ The following are possible causes of this error:
 
 You can choose from the options listed below. 
 
-1. You can get a new license [here](https://www.syncfusion.com/sales/products). 
+1. You can get a new license [here](https://www.syncfusion.com/sales/teamlicense). 
 2. Contact your account administrator. 
 3. Send an email to  <clientrelations@syncfusion.com> to request a license. 
 4. You can reach out to our sales team by emailing  <sales@syncfusion.com>.
