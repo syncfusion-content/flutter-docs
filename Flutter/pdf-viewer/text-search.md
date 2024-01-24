@@ -616,8 +616,8 @@ class _HomePage extends State<HomePage> {
 
   void _showTextSearchMenu() {
     if (_textSearchOverlayEntry == null) {
-      final RenderBox searchRenderBox =
-          (_searchKey.currentContext?.findRenderObject())! as RenderBox;
+      final RenderBox? searchRenderBox =
+          (_searchKey.currentContext?.findRenderObject()) as RenderBox?;
       if (searchRenderBox != null) {
         final Offset position = searchRenderBox.localToGlobal(Offset.zero);
         final OverlayState overlayState =
@@ -625,9 +625,8 @@ class _HomePage extends State<HomePage> {
         overlayState.insert(_textSearchOverlayEntry = OverlayEntry(
           builder: (BuildContext context) {
             return Positioned(
-              top: position.dy + 40.0, // y position of search menu
-              left: (MediaQuery.of(context).size.width - 8) -
-                  412, // x position of search menu
+              top: position.dy + 40.0,
+              left: (MediaQuery.of(context).size.width - 8) - 412,
               child: TextSearchOverlay(
                 key: _textSearchOverlayKey,
                 controller: _pdfViewerController,
@@ -1052,10 +1051,7 @@ class TextSearchOverlayState extends State<TextSearchOverlay> {
                   // Search label for overlay
                   Padding(
                     padding: widget.textDirection == TextDirection.rtl
-                        ? const EdgeInsets.only(
-                            right: 16,
-                            top: 15,
-                          )
+                        ? const EdgeInsets.only(right: 16, top: 15)
                         : const EdgeInsets.only(
                             left: 16,
                             top: 15,
@@ -1079,17 +1075,11 @@ class TextSearchOverlayState extends State<TextSearchOverlay> {
                   // Close button for search overlay
                   Padding(
                     padding: widget.textDirection == TextDirection.rtl
-                        ? const EdgeInsets.only(
-                            right: 8,
-                            top: 8,
-                          )
-                        : const EdgeInsets.only(
-                            left: 8,
-                            top: 8,
-                          ),
+                        ? const EdgeInsets.only(right: 8, top: 8)
+                        : const EdgeInsets.only(left: 8, top: 8),
                     child: SizedBox(
-                      height: 36, // height of close search menu button
-                      width: 36, // width of close search menu button
+                      height: 36,
+                      width: 36,
                       child: RawMaterialButton(
                         onPressed: () {
                           _closeSearchMenu();
@@ -1112,14 +1102,8 @@ class TextSearchOverlayState extends State<TextSearchOverlay> {
                   Flexible(
                     child: Padding(
                       padding: widget.textDirection == TextDirection.rtl
-                          ? const EdgeInsets.only(
-                              right:
-                                  16, // y position of text field in search menu
-                            )
-                          : const EdgeInsets.only(
-                              left:
-                                  16, // y position of text field in search menu
-                            ),
+                          ? const EdgeInsets.only(right: 16)
+                          : const EdgeInsets.only(left: 16),
                       child: TextFormField(
                         focusNode: _focusNode,
                         controller: _editingController,
@@ -1151,10 +1135,8 @@ class TextSearchOverlayState extends State<TextSearchOverlay> {
                                   padding: const EdgeInsets.only(
                                       left: 8, right: 8, bottom: 6, top: 15),
                                   child: SizedBox(
-                                    height:
-                                        14.57, // height of search button in search menu
-                                    width:
-                                        14.57, // width of search button in search menu
+                                    height: 14.57,
+                                    width: 14.57,
                                     child: RawMaterialButton(
                                       onPressed: () {
                                         if (_editingController
@@ -1176,10 +1158,8 @@ class TextSearchOverlayState extends State<TextSearchOverlay> {
                                   padding: const EdgeInsets.only(
                                       left: 8, right: 8, bottom: 6, top: 18),
                                   child: SizedBox(
-                                    height:
-                                        14.57, // height of clear search button
-                                    width:
-                                        14.57, // width of clear search button
+                                    height: 14.57,
+                                    width: 14.57,
                                     child: RawMaterialButton(
                                       onPressed: () {
                                         setState(() {
