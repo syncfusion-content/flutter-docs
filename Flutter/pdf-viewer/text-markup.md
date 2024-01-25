@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Markup Annotations in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about Text Markup Annotations in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Text Markup Annotations in Flutter PDF Viewer Widget | Syncfusion
+description: Learn here all about text markup annotations in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Text Markup Annotations in Flutter PDF Viewer widget (Syncfusion)
+# Text Markup Annotations in Flutter PDF Viewer Widget (Syncfusion)
 
 The text markup annotations feature of `SfPdfViewer` allows you to add, remove, and modify text markups in the PDF document. This is useful for making corrections or emphasizing important texts in the document. This section will go through the various types and functions available in PDF Viewer for working with text markup annotations.
 
@@ -65,5 +65,5 @@ void disableAnnotationMode() {
 
 Text markups can be added to a PDF document using the text selection without enabling the `annotationMode`. Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any text markup options to add annotation to a text in the PDF document.
 
-![Text selection context menu](images/annotations/text_selection_context_menu.png)
+![Text selection context menu in Flutter PDF Viewer.](images/annotations/flutter-pdf-viewer-text-selection-context-menu.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page layout and Scrolling options in Flutter PDF Viewer | Syncfusion
-description: Learn here all about Page layout and Scrolling options feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about page layout and scrolling options feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
@@ -54,7 +54,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Single page layout mode](images/page-layout-and-scroll-direction/page-by-page.gif)
+![Single page layout mode in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-page-by-page.gif)
 
 ## Scrolling options
 
@@ -101,4 +101,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Horizontal scrolling](images/page-layout-and-scroll-direction/horizontal-scrolling.gif)
+![Horizontal scrolling in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-horizontal-scrolling.gif)
