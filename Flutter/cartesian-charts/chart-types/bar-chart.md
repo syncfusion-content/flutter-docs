@@ -164,7 +164,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
