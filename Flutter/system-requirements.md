@@ -39,8 +39,8 @@ See the links below for the recommended Flutter development environments
 
 <table>
     <tr>
-        <th style="text-align:center;">Flutter SDK Stable Version</th>
-        <th style="text-align:center;">Syncfusion Compatible Package Version</th>
+        <th style="text-align:center">Flutter SDK Stable Version</th>
+        <th style="text-align:center">Syncfusion Compatible Package Version</th>
     </tr>
     <tr>
         <td style="text-align:center">
