@@ -35,53 +35,51 @@ See the links below for the recommended Flutter development environments
 * MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
 * Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://docs.flutter.dev/get-started/install/linux)
 
-### SDK Version
-
-The following Flutter SDK version is required for our widgets:
+### SDK Version Compatibility
 
 <table>
     <tr>
-        <th>Flutter SDK Stable Version</th>
-        <th>Syncfusion Compatible Package Version</th>
+        <th style="text-align:center;">Flutter SDK Stable Version</th>
+        <th style="text-align:center;">Syncfusion Compatible Package Version</th>
     </tr>
     <tr>
-        <td style="text-align:center">
+        <td style="text-align:center;">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip">3.16.0</a>
         </td>
-        <td style="text-align:center">
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5">23.2.5</a> to latest version
+        <td style="text-align:center;">>=
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5"> 23.2.5</a> < 24.2.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
         </td>
     </tr>
      <tr>
-        <td style="text-align:center">
+        <td style="text-align:center;">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.13.0-stable.zip">3.13.0</a>
         </td>
-        <td style="text-align:center">
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.11">22.2.11</a> to <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.4">23.2.4</a>
+        <td style="text-align:center;">>=
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.11"> 22.2.11</a> < <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.4">23.2.4</a>
         </td>
     </tr>
      <tr>
-        <td style="text-align:center">
+        <td style="text-align:center;">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip">3.10.0</a>
         </td>
-        <td style="text-align:center">
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9">21.2.9</a> to <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10">22.2.10</a>
+        <td style="text-align:center;"> >=
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9"> 21.2.9</a> < <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10">22.2.10</a>
         </td>
     </tr>
      <tr>
-        <td style="text-align:center">
+        <td style="text-align:center;">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip">3.7.0</a>
         </td>
-        <td style="text-align:center">
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.50">20.4.50</a> to <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.8">21.2.8</a>
+        <td style="text-align:center;">>=
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.50"> 20.4.50</a> < <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.8">21.2.8</a>
         </td>
     </tr>
      <tr>
-        <td style="text-align:center">
+        <td style="text-align:center;">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.0-stable.zip">3.3.0</a>
         </td>
-        <td style="text-align:center">
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47">20.3.47</a> to <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.49">20.4.49</a>
+        <td style="text-align:center;">>=
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47"> 20.3.47</a> < <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.49">20.4.49</a>
         </td>
     </tr>
 </table>
