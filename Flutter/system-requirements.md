@@ -47,7 +47,7 @@ See the links below for the recommended Flutter development environments
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip">3.16.0</a>
         </td>
         <td style="text-align:center;">>=
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5"> 23.2.5</a> < 24.2.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5"> 23.2.5</a>  < 24.2.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
         </td>
     </tr>
      <tr>
@@ -63,7 +63,7 @@ See the links below for the recommended Flutter development environments
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip">3.10.0</a>
         </td>
         <td style="text-align:center;"> >=
-            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9"> 21.2.9</a> < <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10">22.2.10</a>
+            <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9"> 21.2.9</a> <  <a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10">22.2.10</a>
         </td>
     </tr>
      <tr>
