@@ -13,11 +13,23 @@ documentation: ug
 
 Flutter Flow is a visual programming tool designed to simplify the development process of Flutter applications, particularly for those who may not have extensive experience with traditional coding. It allows users to create Flutter apps through a drag-and-drop interface, reducing the need for manual coding and speeding up the development cycle.
 
-Steps to how to create flutter widget in [`Flutter Flow`](https://app.flutterflow.io/) for RadialGauge
+Steps to how to create flutter widget in [`Flutter Flow`](https://app.flutterflow.io/) for custom widget:
 
-## Step1 How to create custom widget in flutter flow
+## Integrating a Custom Widget:
+To integrate the RadialGauge example into the Flutter flow control, we aim to streamline the process for creating custom widgets, such as the RadialGauge, within the Flutter framework.
 
-To create the custom widget follow the following steps:
+-> need to add screenshot.
+
+Steps/Guidelines for Creating the Custom Widget:
+
+1. Creating Your Own Widget
+2. Requirements for including a dependency
+3. Importing Packages from the Dependency
+4. Add the widget code snippet in code editor
+5. Compile code
+6. Utilizing the Custom Widget within a Page
+
+## Step 1: Creating Your Own Widget
 
 1. Select custom widget option in navigation bar.
 2. After clicking on custom widget, you can see "+ Add" button at left side after custom code, click on it to add new custom widget, initially name shows as 'NewCustomWidget' for custom widget.
@@ -29,77 +41,38 @@ Small demo for custom widget creation:
 
 -> need to add demo
 
-## Step2 How to add dependencies to your custom widget:
+## Step 2: Requirements for including a dependency
 
-To add dependencies to custom widget follow the following steps:
+ To include dependency in flutter flow follow steps as mentioned [here](dependency.md)
 
-1. Go to [`pub.dev`](https://pub.dev/), serach for required dependency.
+## Step 3: Importing Packages from the Dependency:
 
--> need to add screenshot.
+Importing Dependencies' Packages. Follow steps mentioned [here](package-import.md)
 
-2. To use of dependency code in your code editor, copy its name with the version do it as shown in below snapshot.
 
--> need to add screenshot.
+## Step 4: Add the widget code snippet in code editor
 
-3. Add the dependancy at the right side with 'add dependency' button, after adding dependency save the process.
+Follow steps mentioned [here](code-snippet.md)
 
-Small demo for add dependencies:
-
--> need to add demo
-
-## Step3 How to import the packages from the dependency:
-
-To import the packages from the dependency follow the following steps:
-
-1. Get the package header from the [`installing`](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on the [`pub.dev`](https://pub.dev/), follow below snapshot.
-
--> need to add screenshot
-
-2. Add the header in code editor as shown in below demo,
-
--> need to add demo.
-
-3. Save the process.
-
-Small demo for add dependencies:
-
--> need to add demo
-
-## Step4 How to add the code snippet in code editor:
-
-To add the code snippet in code editor follow the following steps:
-
-1. Go to [`example`](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [`pub.dev`](https://pub.dev/).
-
--> need to add screenshot
-
-2. Don't copy the entire code snippet, select only widget snippet and copy it as shown in below picture,
-
--> need to add screenshot
-
-3. Add the copied code snippet and save the process as showin demo.
-
-Small demo for add dependencies:
-
--> need to add demo
-
-## Step5 How to compile the code:
+## Step 5: Compile code:
 
 To compile the code:
 
 1. Once add your code, now you can compile and check for errors. To compile the code, click on compile button at right side as shown in demo and save the process.
 
+Check with snapshot as show below:
+
 Small demo for add dependencies:
 
 -> need to add demo
 
-## Step6 How to use this custom widget on page:
+## Step 6: Utilizing the Custom Widget within a Page
 
 To use this custom widget on page follow the following steps:
 
 1. In navigation bar click on widget palette.
 2. Now, you can see diamond symbol click on that icon.
-3. When you click on it below to that you can see the custo code widget with your widget file.
+3. When you click on it below to that you can see the custom code widget with your widget file.
 4. To get on to page just drag and drop it on page.
 5. Adjust the width and height of the widget by utilizing the custom widget properties available in the right-side.
 
