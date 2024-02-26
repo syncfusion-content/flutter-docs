@@ -68,7 +68,7 @@ Copy the package as shown in snapshot
 
 2. Add the header in the code editor as shown in the below snapshot,
 
-![Import](images/how-to/import-package.png)
+![Import](images/how-to/import-package-flutterflow.png)
 
 3. Save the process.
 
