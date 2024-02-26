@@ -90,7 +90,7 @@ To add the code snippet in the code editor follow the following steps:
 
 3. Add the copied code snippet and save the process as shown in the demo.
 
-Small demo for adding dependencies:
+Small demo for adding Code Snippet in Code Editor:
 
 -> need to add demo
 
@@ -100,7 +100,7 @@ To compile the code:
 
 1. Once you add your code, now you can compile and check for errors. To compile the code, click on the compile button on the right side as shown in the demo and save the process.
 
-Small demo for adding dependencies:
+Small demo for Compiling Code:
 
 -> need to add demo
 
@@ -114,6 +114,6 @@ To use this custom widget on the page follow the following steps:
 4. To get onto the page just drag and drop it on the page.
 5. Adjust the width and height of the widget by utilizing the custom widget properties available on the right side.
 
-Small demo for adding dependencies:
+Small demo for Utilizing the Custom Widget within a Page:
 
 -> need to add demo
