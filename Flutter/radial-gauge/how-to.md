@@ -81,12 +81,8 @@ To add the code snippet in the code editor follow the following steps:
 2. Don't copy the entire code snippet, select only widget snippet and copy it as shown in the below picture,
 
 ![Code](images/how-to/code-snippet.png)
-
-{% highlight dart %} 
     
-    Note: Don't copy the entire code, copy the only widget code as shown in above snapshot.
-
-{% endhighlight %}
+N> Don't copy the entire code, copy the only widget code as shown in above snapshot.
 
 3. Add the copied code snippet and save the process as shown in the demo.
 
