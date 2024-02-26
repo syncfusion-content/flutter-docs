@@ -7,20 +7,13 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion Flutter Widgets in FlutterFlow framework?
+# How to add Syncfusion Radial Gauge Widgets in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 
 [FlutterFlow](https://app.flutterflow.io/) is a visual programming tool designed to simplify the development process of Flutter applications, particularly for those who may not have extensive experience with traditional coding. It allows users to create Flutter apps through a drag-and-drop interface, reducing the need for manual coding and speeding up the development cycle.
 
-### Steps/Guidelines for creating the custom widget:
-
-1. [Creating the custom widget](#step-1-creating-the-custom-widget)
-2. [Requirements for including a dependency](#step-2-requirements-for-including-a-dependency)
-3. [Importing packages from the dependency](#step-3-importing-packages-from-the-dependency)
-4. [Adding the widget code snippet in code editor](#step-4-adding-the-widget-code-snippet-in-code-editor)
-5. [Compiling code](#step-5-compiling-code)
-6. [Utilizing the custom widget on a page](#step-6-utilizing-the-custom-widget-on-a-page)
+### Steps for creating the custom widget:
 
 ## Step 1: Creating the custom widget
 
