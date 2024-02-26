@@ -19,8 +19,6 @@ Steps on how to create a Flutter widget in [Flutter Flow](https://app.flutterflo
 
 To integrate the RadialGauge example into the Flutter Flow control, we aim to streamline the process for creating custom widgets, such as the RadialGauge, within the Flutter framework.
 
-![Radial Gauge](images/getting-started/gauge_annotation.png)
-
 ### Steps/Guidelines for Creating the Custom Widget:
 
 1. [Creating Your Own Widget](#step-1-creating-your-own-widget)
@@ -46,9 +44,7 @@ Small demo for custom widget creation:
 
 To add dependencies to the custom widget, follow the following steps:
 
-1. Go to [pub.dev](https://pub.dev/), search for the required dependency.
-
-![Pub dev](images/how-to/pubdev.png)
+1. Go to [pub.dev](https://pub.dev/), search for the required dependency in search bar.
 
 2. To use the dependency code in your code editor, copy its name with the version, do it as shown in the below snapshot.
 
@@ -64,9 +60,7 @@ Small demo for adding dependencies:
 
 To import the packages from the dependency, follow the following steps:
 
-1. Get the package header from the [installing](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on [pub.dev](https://pub.dev/), follow the below snapshot.
-
-![Installing](images/how-to/installing-tab-on-pubdev.png)
+1. Get the package header from the [installing](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on [pub.dev](https://pub.dev/) and scroll down to get package to copy.
 
 Copy the package as shown in snapshot
 
@@ -78,18 +72,11 @@ Copy the package as shown in snapshot
 
 3. Save the process.
 
-Small demo for importing Packages:
-
--> need to add demo
-
-
 ## Step 4: Adding the Widget Code Snippet in Code Editor
 
 To add the code snippet in the code editor follow the following steps:
 
-1. Go to [example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [pub.dev](https://pub.dev/).
-
-![Example](images/how-to/example-tab-on-pubdev.png)
+1. Go to [example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [pub.dev](https://pub.dev/) and scroll down to see widget code.
 
 2. Don't copy the entire code snippet, select only widget snippet and copy it as shown in the below picture,
 
@@ -112,8 +99,6 @@ Small demo for adding dependencies:
 To compile the code:
 
 1. Once you add your code, now you can compile and check for errors. To compile the code, click on the compile button on the right side as shown in the demo and save the process.
-
-Check with the snapshot as shown below:
 
 Small demo for adding dependencies:
 
