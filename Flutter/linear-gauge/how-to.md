@@ -34,7 +34,7 @@ To create a custom widget, follow the steps below:
 
 To add dependencies to the custom widget, follow these steps:
 
-1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion flutter Gauge](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
+1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Gauge](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
 
 2. After finding the dependency, copy its name and version as shown in the snapshot.
 
