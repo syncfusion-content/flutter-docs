@@ -68,9 +68,13 @@ To insert the code snippet into the code editor, follow these steps:
     
 N> Do not copy the entire code; copy only the widget code.
 
-3. Add the copied code snippet to the code editor, save the process, follow the steps shown in the video.
+3. Add the copied code snippet to the code editor, and save the process by following the steps below:
 
--> need to add video.
+    1. Paste the copied code snippet into the selected portion as shown in the snapshot (Replace container() with code snippet).
+    2. Format the code using the **Format Code** button in the code editor.
+    3. Save the process.
+
+![Code snippet](images/how-to/Adding-code-snippent.png)
 
 ## Step 5: Compiling code
 
