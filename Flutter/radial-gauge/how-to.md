@@ -34,7 +34,7 @@ To create a custom widget, follow the steps below:
 
 To add dependencies to the custom widget, follow these steps:
 
-1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Radial Gauge](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
+1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Gauge](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
 
 2. After finding the dependency, copy its name and version as shown in the snapshot.
 
@@ -70,7 +70,7 @@ N> Do not copy the entire code; copy only the widget code.
 
 3. Add the copied code snippet to the code editor, and save the process by following the steps below:
 
-    1. Paste the copied code snippet into the selected portion as shown in the snapshot (Replace container() with code snippet).
+    1. Paste the copied code snippet into the selected portion as shown in the snapshot (Replace container() with copied code snippet).
     2. Format the code using the **Format Code** button in the code editor.
     3. Save the process.
 
