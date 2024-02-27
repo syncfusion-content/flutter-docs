@@ -15,20 +15,18 @@ documentation: ug
 
 ### Steps for creating the custom widget:
 
-Before proceeding with the steps, please visit [FlutterFlow](https://app.flutterflow.io/) and sign up or sign in. Once logged in, on the start page of FlutterFlow, locate the **+ create new** button and click on it. A popup for creating a new project will appear. Firstly, provide a name for your project and then select **create blank** below the project name. After that, you can choose to **skip** or **enable web** in the project page setup, and click on **next**. This will navigate you to the project's homepage. Now, follow the steps below to create a custom widget.
+Before proceeding with the steps, please visit [FlutterFlow](https://app.flutterflow.io/) and sign up or sign in. Once logged in, on the start page of FlutterFlow, locate the **+ Create New** button and click on it. A popup for creating a new project will appear. Firstly, provide a name for your project and then select **Create Blank** below the project name. After that, you can choose to **Skip** or **Enable Web** in the project page setup, and click on **Next**. This will navigate you to the project's homepage. Now, follow the steps below to create a custom widget.
 
 ## Step 1: Creating the custom widget
 
-1. Navigate to [FlutterFlow](https://app.flutterflow.io/) and select the **custom code** option from the left side of the navigation menu.
+1. Navigate to [FlutterFlow](https://app.flutterflow.io/) and select the **Custom Code** option from the left side of the navigation menu.
 2. Click on the **+ Add** button. You will be presented with three options: Function, Widget, and Action. Choose **Widget**.
 3. Initially, the widget name shows as **NewCustomWidget**. Rename the widget name.
 4. Go to widget settings on the right side, and click on the **View Boilerplate Code** button, represented by this icon **[</>]**.
-5. A popup will appear; scroll down to find the button labeled **[</>] copy to editor**, and click on it.
+5. A popup will appear; scroll down to find the button labeled **[</>] Copy to Editor**, and click on it.
 6. Save the widget.
 
 ![Custom Widget](images/how-to/custom-widget.png)
-
--> need to add video
 
 ## Step 2: Requirements for including a dependency
 
@@ -40,7 +38,7 @@ To add dependencies to the custom widget, follow these steps:
 
 ![Version](images/how-to/copy-version.png)
 
-3. Click on the **+ add dependency** button located on the right side to add the dependency. Once added, save the process.
+3. Click on the **+ Add Dependency** button located on the right side of the navigation menu to add the dependency. Once added, save the process.
 
 ![Dependency](images/how-to/demo2.png)
 
@@ -76,18 +74,18 @@ N> Don't copy the entire code, copy only the widget code.
 
 To compile the code:
 
-1. To compile the code, click on the compile button located on the right side, as demonstrated in the video, and then save the process.
+1. To compile the code, click on the **Compile Code** button located on the right side, as demonstrated in the snapshot, and then save the process.
 
--> need to add video.
+![Compile code](images/how-to/compile-code.png)
 
 ## Step 6: Utilizing the custom widget on a page
 
 To use this custom widget on the page, follow these steps:
 
-1. On the left navigation menu, click on the widget palette.
-2. You will see a diamond symbol; click on that icon.
+1. On the left navigation menu, click on the **Widget Palette** option.
+2. You will see a **Diamond** symbol; click on that icon.
 3. Once clicked, you will find the custom code widget with your widget file name listed below it.
 4. To add it to the page, simply drag and drop it on the page.
-5. Adjust the width and height of the widget using the custom widget properties available on the right side navigation menu in [FlutterFlow](https://app.flutterflow.io/).
+5. Adjust the width and height of the widget using the **Custom Widget Properties** available on the right side in [FlutterFlow](https://app.flutterflow.io/).
 
 ![Page](images/how-to/page.png)
