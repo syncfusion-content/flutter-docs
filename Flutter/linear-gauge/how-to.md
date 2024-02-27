@@ -7,102 +7,91 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Flutter widgets in Flutter Flow framework?
+# How to add Syncfusion Linear Gauge Widget in FlutterFlow framework?
 
-## Overview of Flutter Flow
+## Overview of FlutterFlow
 
-Flutter Flow is a visual programming tool designed to simplify the development process of Flutter applications, particularly for those who may not have extensive experience with traditional coding. It allows users to create Flutter apps through a drag-and-drop interface, reducing the need for manual coding and speeding up the development cycle.
+[FlutterFlow](https://app.flutterflow.io/) is a visual programming tool designed to simplify the development process of Flutter applications, particularly for those who may not have extensive experience with traditional coding. It allows users to create Flutter apps through a drag-and-drop interface, reducing the need for manual coding and speeding up the development cycle.
 
-Steps to how to create flutter widget in [`Flutter Flow`](https://app.flutterflow.io/) for LinearGauge
+### Steps for creating the custom widget:
 
-## Step1 How to create custom widget in flutter flow
+Before proceeding with the steps, please visit [FlutterFlow](https://app.flutterflow.io/) and sign up or sign in. Once you are logged in, go to the start page of FlutterFlow and find the **+ Create New** button. Click on it to open a popup for creating a new project. Start by giving your project a name and then select **Create Blank** below the project name. Next, you can decide whether to **Skip** or **Enable Web** in the project page setup and click on **Next**. This will take you to the project's homepage. Follow the steps below to create a custom widget efficiently.
 
-To create the custom widget follow the following steps:
+## Step 1: Creating the custom widget
 
-1. Select custom widget option in navigation bar.
-2. After clicking on custom widget, you can see "+ Add" button at left side after custom code, click on it to add new custom widget, initially name shows as 'NewCustomWidget' for custom widget.
-3. Rename the custom widget as required custom name.
-4. Go to 'view boilerplate code' at right-side [</>] like this symbol, click on it and a popup will be displayed scroll down you can see the button with [</>] 'copy to editor' click on it.
-5. After this save the process.
+To create a custom widget, follow the steps below:
 
-Small demo for custom widget creation:
+1. Navigate to [FlutterFlow](https://app.flutterflow.io/) and choose the **Custom Code** option from the left side of the navigation menu.
+2. Click on the **+ Add** button and select **Widget** from the three options: Function, Widget, and Action.
+3. Initially, the widget name starts as **NewCustomWidget**. Rename the widget name.
+4. Go to widget settings on the right side and click on the **View Boilerplate Code** button, represented by this icon **[</>]**.
+5. A popup will appear; scroll down to locate the button labeled **[</>] Copy to Editor**, and click on it.
+6. Save the widget.
 
--> need to add demo
+![Custom Widget](images/how-to/custom-widget.png)
 
-## Step2 How to add dependencies to your custom widget:
+## Step 2: Requirements for including a dependency
 
-To add dependencies to custom widget follow the following steps:
+To add dependencies to the custom widget, follow these steps:
 
-1. Go to [`pub.dev`](https://pub.dev/), serach for required dependency.
+1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion flutter Gauge](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
 
--> need to add screenshot.
+2. After finding the dependency, copy its name and version as shown in the snapshot.
 
-2. To use of dependency code in your code editor, copy its name with the version do it as shown in below snapshot.
+![Version](images/how-to/copy-version.png)
 
--> need to add screenshot.
+3. To paste the dependency, click on the **+ Add Dependency** button on the right side of the navigation menu. Remember to save the process after adding it.
 
-3. Add the dependancy at the right side with 'add dependency' button, after adding dependency save the process.
+![Dependency](images/how-to/demo2.png)
 
-Small demo for add dependencies:
+## Step 3: Importing packages from the dependency
 
--> need to add demo
+To import the package required by the dependency, follow these steps:
 
-## Step3 How to import the packages from the dependency:
+1. To find the package to copy, scroll down from the [installing](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on [pub.dev](https://pub.dev/) as shown in the snapshot.
 
-To import the packages from the dependency follow the following steps:
+![Package](images/how-to/copy-package.png)
 
-1. Get the package header from the [`installing`](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on the [`pub.dev`](https://pub.dev/), follow below snapshot.
+2. Insert the header into the code editor as shown in the snapshot below, and then save the process.
 
--> need to add screenshot
+![Import](images/how-to/import-package-flutterflow.png)
 
-2. Add the header in code editor as shown in below demo,
+## Step 4: Adding the widget code snippet in code editor
 
--> need to add demo.
+To insert the code snippet into the code editor, follow these steps:
 
-3. Save the process.
+1. Navigate to the [example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab on [pub.dev](https://pub.dev/), and scroll down to find the widget code.
 
-Small demo for add dependencies:
+2. Instead of copying the entire code, select only the widget snippet, and copy it as illustrated in the picture below.
 
--> need to add demo
+![Code](images/how-to/code-snippet.png)
+    
+N> Do not copy the entire code; copy only the widget code.
 
-## Step4 How to add the code snippet in code editor:
+3. Add the copied code snippet to the code editor, and save the process by following the steps below:
 
-To add the code snippet in code editor follow the following steps:
+    1. Paste the copied code snippet into the selected portion as shown in the snapshot (Replace container() with copied code snippet).
+    2. Format the code using the **Format Code** button in the code editor.
+    3. Save the process.
 
-1. Go to [`example`](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [`pub.dev`](https://pub.dev/).
+![Code snippet](images/how-to/Adding-code-snippent.png)
 
--> need to add screenshot
+## Step 5: Compiling code
 
-2. Don't copy the entire code snippet, select only widget snippet and copy it as shown in below picture,
+To compile the code, follow the instructions:
 
--> need to add screenshot
+1. To compile the code, click on the **Compile Code** button located on the right side, as demonstrated in the snapshot, and then save the process.
 
-3. Add the copied code snippet and save the process as showin demo.
+![Compile code](images/how-to/compile-code.png)
 
-Small demo for add dependencies:
+## Step 6: Utilizing the custom widget on a page
 
--> need to add demo
+To use this custom widget on the page, follow these steps:
 
-## Step5 How to compile the code:
+1. Click on the **Widget Palette** option in the left navigation menu.
+2. You will see a **Diamond** symbol; click on that icon.
+3. Once click on it, you will find the custom code widget with your widget file name listed below it.
+4. To add it to the page, simply drag and drop it onto the page.
+5. Adjust the width and height of the widget using the **Custom Widget Properties** available on the right side in [FlutterFlow](https://app.flutterflow.io/).
 
-To compile the code:
-
-1. Once add your code, now you can compile and check for errors. To compile the code, click on compile button at right side as shown in demo and save the process.
-
-Small demo for add dependencies:
-
--> need to add demo
-
-## Step6 How to use this custom widget on page:
-
-To use this custom widget on page follow the following steps:
-
-1. In navigation bar click on widget palette.
-2. Now, you can see diamond symbol click on that icon.
-3. When you click on it below to that you can see the custo code widget with your widget file.
-4. To get on to page just drag and drop it on page.
-5. Adjust the width and height of the widget by utilizing the custom widget properties available in the right-side.
-
-Small demo for add dependencies:
-
--> need to add demo
+![Page](images/how-to/page.png)
