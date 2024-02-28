@@ -15,7 +15,7 @@ documentation: ug
 
 ### Steps for creating the custom widget:
 
-Before proceeding with the steps, please visit [FlutterFlow](https://app.flutterflow.io/) and sign up or sign in. Once you are logged in, go to the start page of FlutterFlow and find the **+ Create New** button. Click on it to open a popup for creating a new project. Start by giving your project a name and then select **Create Blank** below the project name. Next, you can decide whether to **Skip** or **Enable Web** in the project page setup and click on **Next**. This will take you to the project's homepage. Follow the steps below to create a custom widget efficiently.
+Before proceeding with the steps, please visit [FlutterFlow](https://app.flutterflow.io/) and sign up or sign in. Once you are logged in, go to the start page of FlutterFlow and find the **+ Create New** button. Click on it to open a popup for creating a new project. Start by giving your project a name and then select **Create Blank** below the project name. Next, you can decide whether to **Skip** or **Enable Web** in the project page setup and click on **Next**. This will take you to the project's homepage. Follow the steps below to create a custom widget effectively.
 
 ## Step 1: Creating the custom widget
 
@@ -42,7 +42,7 @@ To add dependencies to the custom widget, follow these steps:
 
 3. To paste the dependency, click on the **+ Add Dependency** button on the right side of the navigation menu. Remember to save the process after adding it.
 
-![Dependency](images/how-to/demo2.png)
+![Dependency](images/how-to/dependency.png)
 
 ## Step 3: Importing packages from the dependency
 
