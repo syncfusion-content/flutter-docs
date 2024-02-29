@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion Linear Gauge Widget in FlutterFlow framework?
+# How to add Syncfusion SparkCharts Widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 
@@ -34,7 +34,7 @@ To create a custom widget, follow the steps below:
 
 To add dependencies to the custom widget, follow these steps:
 
-1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) dependency using the search bar.
+1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) dependency using the search bar.
 
 2. After finding the dependency, copy its name and version as shown in the snapshot.
 
@@ -48,7 +48,7 @@ To add dependencies to the custom widget, follow these steps:
 
 To import the package required by the dependency, follow these steps:
 
-1. To find the package to copy, scroll down from the [installing](https://pub.dev/packages/syncfusion_flutter_gauges/install) tab on [pub.dev](https://pub.dev/) as shown in the snapshot.
+1. To find the package to copy, scroll down from the [installing](https://pub.dev/packages/syncfusion_flutter_charts/install) tab on [pub.dev](https://pub.dev/) as shown in the snapshot.
 
 ![Package](images/how-to/copy-package.png)
 
@@ -60,7 +60,7 @@ To import the package required by the dependency, follow these steps:
 
 To insert the code snippet into the code editor, follow these steps:
 
-1. Navigate to the [example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab on [pub.dev](https://pub.dev/), and scroll down to find the widget code.
+1. Navigate to the **Syncfusion SparkCharts Documentation** at [help.syncfusion.com](https://help.syncfusion.com/flutter/sparkcharts/getting-started) and scroll down to find the widget codes.
 
 2. Instead of copying the entire code, select only the widget snippet, and copy it as illustrated in the picture below.
 
