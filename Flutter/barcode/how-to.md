@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion Barcode Generator Widget in FlutterFlow framework?
+# How to add Syncfusion Barcode Widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

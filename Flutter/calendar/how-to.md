@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
-control: SfRadialGauge
+title: Headers in Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about headers feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+platform: flutter
+control: SfCalendar
 documentation: ug
 ---
 
-# How to add Syncfusion Flutter Calendar Widget in FlutterFlow framework?
+# How to add Syncfusion Calendar Widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

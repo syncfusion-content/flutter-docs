@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
-control: SfRadialGauge
+title: Chart title in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Chart title feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+platform: flutter
+control: Chart
 documentation: ug
 ---
 

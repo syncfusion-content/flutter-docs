@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
-control: SfRadialGauge
+title: Exporting in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Exporting feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+platform: flutter
+control: Chart
 documentation: ug
 ---
 
