@@ -44,7 +44,7 @@ To add dependencies to the custom widget, follow these steps:
 
 ![Dependency](images/how-to/dependency.png)
 
-N> If you're using an older version, there's no need to use the **Caret Symbol (^)** before the version number. For the latest version, you would use **syncfusion_flutter_sliders: ^24.2.8**, whereas for an older version, you would use **syncfusion_flutter_sliders: 23.2.4**.
+N> If you're using an older version, there's no need to use the **Caret Symbol (^)** before the version number. For the latest version, you would use **syncfusion_flutter_widget: ^xx.x.xx**, whereas for an older version, you would use **syncfusion_flutter_widget: xx.x.xx**.
 
 ## Step 3: Importing packages from the dependency
 

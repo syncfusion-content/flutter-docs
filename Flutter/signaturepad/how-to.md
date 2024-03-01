@@ -44,6 +44,8 @@ To add dependencies to the custom widget, follow these steps:
 
 ![Dependency](images/how-to/dependency.png)
 
+N> If you're using an older version, there's no need to use the **Caret Symbol (^)** before the version number. For the latest version, you would use **syncfusion_flutter_widget: ^xx.x.xx**, whereas for an older version, you would use **syncfusion_flutter_widget: xx.x.xx**.
+
 ## Step 3: Importing packages from the dependency
 
 To import the package required by the dependency, follow these steps:
@@ -60,7 +62,7 @@ To import the package required by the dependency, follow these steps:
 
 To insert the code snippet into the code editor, follow these steps:
 
-1. Navigate to the [example](https://pub.dev/packages/syncfusion_flutter_signaturepad/example) tab on [pub.dev](https://pub.dev/), and scroll down to find the widget code.
+1. Navigate to the **Syncfusion SignaturePad Documentation** at [help.syncfusion.com](https://help.syncfusion.com/flutter/signaturepad/getting-started) and scroll down to find the widget codes.
 
 2. Instead of copying the entire code, select only the widget snippet, and copy it as illustrated in the picture below.
 

@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion Barcode Generator Widget in FlutterFlow framework?
+# How to add Syncfusion Flutter RangeSelector Widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 
@@ -34,7 +34,7 @@ To create a custom widget, follow the steps below:
 
 To add dependencies to the custom widget, follow these steps:
 
-1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes) dependency using the search bar.
+1. Visit [pub.dev](https://pub.dev/) and search for the [Syncfusion Flutter Slider](https://pub.dev/packages/syncfusion_flutter_sliders) dependency using the search bar.
 
 2. After finding the dependency, copy its name and version as shown in the snapshot.
 
@@ -50,7 +50,7 @@ N> If you're using an older version, there's no need to use the **Caret Symbol (
 
 To import the package required by the dependency, follow these steps:
 
-1. To find the package to copy, scroll down from the [installing](https://pub.dev/packages/syncfusion_flutter_barcodes/install) tab on [pub.dev](https://pub.dev/) as shown in the snapshot.
+1. To find the package to copy, scroll down from the [installing](https://pub.dev/packages/syncfusion_flutter_sliders/install) tab on [pub.dev](https://pub.dev/) as shown in the snapshot.
 
 ![Package](images/how-to/copy-package.png)
 
@@ -62,7 +62,7 @@ To import the package required by the dependency, follow these steps:
 
 To insert the code snippet into the code editor, follow these steps:
 
-1. Navigate to the [example](https://pub.dev/packages/syncfusion_flutter_barcodes/example) tab on [pub.dev](https://pub.dev/), and scroll down to find the widget code.
+1. Navigate to the **Syncfusion RangeSelector Documentation** at [help.syncfusion.com](https://help.syncfusion.com/flutter/range-selector/getting-started) and scroll down to find the widget codes.
 
 2. Instead of copying the entire code, select only the widget snippet, and copy it as illustrated in the picture below.
 
