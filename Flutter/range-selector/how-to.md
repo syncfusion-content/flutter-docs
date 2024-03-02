@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title:  RangeSelector widget in FlutterFlow framework | Syncfusion
+description: Learn here all about adding Syncfusion RangeSelector widget in 
+FlutterFlow framework.
 platform: Flutter
-control: SfRadialGauge
+control: SfRangeSelector
 documentation: ug
 ---
 
-# How to add Syncfusion Flutter RangeSelector Widget in FlutterFlow framework?
+# How to add Syncfusion Flutter RangeSelector widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

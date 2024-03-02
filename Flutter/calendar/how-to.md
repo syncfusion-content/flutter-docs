@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Headers in Flutter Event Calendar widget | Syncfusion | Scheduler
-description: Learn here all about headers feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Calendar widget in FlutterFlow framework | Syncfusion
+description: Learn here all about adding Syncfusion Calendar widget in 
+FlutterFlow framework.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# How to add Syncfusion Calendar Widget in FlutterFlow framework?
+# How to add Syncfusion Calendar widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

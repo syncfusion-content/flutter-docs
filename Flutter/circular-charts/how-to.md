@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Exporting in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Exporting feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: CircularCharts widget in FlutterFlow framework | Syncfusion 
+description: Learn here all about adding Syncfusion CircularCharts widget in 
+FlutterFlow framework.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# How to add Syncfusion CircularCharts Widget in FlutterFlow framework?
+# How to add Syncfusion CircularCharts widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

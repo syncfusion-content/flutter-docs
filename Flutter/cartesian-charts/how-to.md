@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Chart title in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Chart title feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: CartesianCharts widget in FlutterFlow framework | Syncfusion 
+description: Learn here all about adding Syncfusion CartesianCharts widget in 
+FlutterFlow framework.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# How to add Syncfusion CartesianCharts Widget in FlutterFlow framework?
+# How to add Syncfusion CartesianCharts widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 

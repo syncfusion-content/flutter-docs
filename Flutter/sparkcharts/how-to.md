@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
-control: SfRadialGauge
+title: SparkCharts widget in FlutterFlow framework | Sparkline | Syncfusion
+description: Learn here all about adding Syncfusion SparkCharts widget in 
+FlutterFlow framework.
+platform: flutter
+control: Sparkline
 documentation: ug
 ---
 
-# How to add Syncfusion SparkCharts Widget in FlutterFlow framework?
+# How to add Syncfusion SparkCharts widget in FlutterFlow framework?
 
 ## Overview of FlutterFlow
 
