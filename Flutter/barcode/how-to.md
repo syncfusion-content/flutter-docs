@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Barcode widget in FlutterFlow framework | Syncfusion
-description: Learn here all about adding Syncfusion Barcode widget in FlutterFlow framework.
+description: Learn adding Syncfusion Barcode widget in FlutterFlow framework.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
