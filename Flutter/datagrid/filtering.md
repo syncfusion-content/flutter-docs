@@ -1326,3 +1326,85 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 <img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
+
+## Set a StrongDataType for filter behavior
+The [FilterBehavior](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterBehavior.html) property specifies whether filtering should consider a cell's value as a string or as a data type.When using the StrongDataType option,the comparison is made directly to their data types.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: Column(
+        children: [
+          MaterialButton(
+              child: Text('Filter rows with a range'),
+              onPressed: () {
+                employeeDataSource.addFilter(
+                  'group',
+                  FilterCondition(
+                    value: Group(10001, 'James'),
+                    filterBehavior: FilterBehavior.strongDataType,
+                    type: FilterType.equals,
+                  ),
+                );
+              }),
+          Padding(padding: EdgeInsets.all(5)),
+          Expanded(
+            child: SfDataGrid(
+              allowFiltering: true,
+              source: employeeDataSource,
+              columnWidthMode: ColumnWidthMode.fill,
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'group',
+                    label: Container(
+                        padding: EdgeInsets.all(16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Group',
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Name'))),
+                GridColumn(
+                    columnName: 'designation',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'shippedDate',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'shippedDate',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'salary',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Salary'))),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  
+{% endhighlight %}
+{% endtabs %}
