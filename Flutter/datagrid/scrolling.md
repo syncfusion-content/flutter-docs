@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Scrolling in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about the scrolling features of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn about the scrolling features of the Syncfusion Flutter 
+DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
