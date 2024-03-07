@@ -162,14 +162,14 @@ You can compute the signed message digest by using the x509 package with a corre
 {% highlight dart %}
 
 //Class for singing a PDF document externally.
-class PdfExternalSigner implements IPdfExternalSigner {
+class PdfExternalSigner extends IPdfExternalSigner {
   //Hash algorithm.
   @override
-  String get hashAlgorithm => 'SHA-256';
+  DigestAlgorithm get hashAlgorithm => DigestAlgorithm.sha256;
 
   //Sign message digest.
   @override
-  SignerResult sign(List<int> message) {
+  SignerResult signSync(List<int> message) {
     final pem = File('privatekey.pem').readAsBytesSync();
     final x509.KeyPair keyPair =
         x509.parsePem(String.fromCharCodes(pem)).single;
@@ -179,6 +179,33 @@ class PdfExternalSigner implements IPdfExternalSigner {
     return SignerResult(signed.data.toList());
   }
 }
+
+{% endhighlight %}
+
+You can use the sign method in IPdfExternalSigner for asynchronous signing.
+
+N> Asynchronous signing will only work when saving the PDF document asynchronously. signSync works with synchronous and asynchronous save methods.
+
+{% highlight dart %}
+
+    //Class for singing a PDF document externally.
+    class PdfExternalSigner extends IPdfExternalSigner {
+    //Hash algorithm.
+    @override
+    DigestAlgorithm get hashAlgorithm => DigestAlgorithm.sha256;
+
+    //Sign message digest.
+    @override
+    Future<SignerResult> sign(List<int> message) async {
+        final pem = File('privatekey.pem').readAsBytesSync();
+        final x509.KeyPair keyPair =
+            x509.parsePem(String.fromCharCodes(pem)).single;
+        final privateKey = keyPair.privateKey as x509.RsaPrivateKey;
+        final signer = privateKey.createSigner(x509.algorithms.signing.rsa.sha256);
+        final x509.Signature signed = signer.sign(message);
+        return SignerResult(signed.data.toList());
+    }
+    }
 
 {% endhighlight %}
 
