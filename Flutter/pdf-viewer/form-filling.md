@@ -9,7 +9,7 @@ documentation: ug
 
 # Form filling in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to fill, edit, save, export, and import the AcroForm fields in a PDF document.
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to fill, edit, save, export, and import the AcroForm fields in a PDF document. The `SfPdfViewer` supports undoing and redoing the undesired actions made to a form field.
 
 ## Supported form fields
 

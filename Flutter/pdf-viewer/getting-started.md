@@ -160,6 +160,24 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Load document with the specified page
+
+The `SfPdfViewer` allows you to load the document with the specified page using the [initialPageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialPageNumber.html) property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="6" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              initialPageNumber: 5));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Load document with the specified scroll offset position or zoom level 
 
 The `SfPdfViewer` allows you to load the document with the specified scroll offset position or zoom level using the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html) and [initialZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialZoomLevel.html) properties. The following code example explains the same.

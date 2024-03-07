@@ -9,7 +9,7 @@ documentation: ug
 
 # Magnification in Flutter PDF Viewer (SfPdfViewer)
 
-The content of a document can be zoomed in and out either by pinch to zoom or changing the zoom level factor programmatically.
+The content of a document can be zoomed in and out either by pinch to zoom or changing the zoom level factor programmatically. At a higher zoom level, `SfPdfViewer` renders only the part of the PDF document that is visible on the screen, ignoring the parts that are outside the viewport.
 
 ## Change the zoom level factor programmatically
 
