@@ -26,18 +26,18 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 5. A popup will appear with startup code; locate the button labeled `</> Copy to Editor` and click on it.
 6. Save the widget.
 
-![Custom Widget](images/how-to/custom-widget.png)
+![Custom Widget](how-to-section-images/custom-widget.png)
 
 ### Add Cartesian Chart widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
 2. Navigate to [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
-![Version](images/how-to/copy-version.png)
+![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
-Note> The live version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) has been migrated to the latest version of Flutter SDK. To ensure compatibility, please check [FlutterFlow's](https://app.flutterflow.io/dashboard) current Flutter version and obtain the corresponding version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+N> The live version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) has been migrated to the latest version of Flutter SDK. To ensure compatibility, please check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
-![Dependency](images/how-to/dependency.png)
+![Dependency](how-to-section-images/dependency.png)
 
 N> If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
 N> Since [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
@@ -46,28 +46,28 @@ N> Since [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter
 
 1. Navigate to the `Installing` tab on the [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) page. Under the `Import it` section, copy the package import statement.
 
-![Package](images/how-to/copy-package.png)
+![Package](how-to-section-images/copy-package.png)
 
 2. Paste the copied import statement into the code editor and then `Save` it.
 
-![Import](images/how-to/import-package-flutterflow.png)
+![Import](how-to-section-images/import-package-flutterflow.png)
 
 ### Add widget code snippet in code editor
 
 1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_charts/example) tab in [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) and copy the widget specific codes.
 
-![Code](images/how-to/code-snippet.png)
+![Code](how-to-section-images/code-snippet.png)
 
 3. Paste the copied code snippet into the code editor, click `Format Code`, and `Save` it.
 
-![Code snippet](images/how-to/Adding-code-snippent.png)
+![Code snippet](how-to-section-images/Adding-code-snippent.png)
 
 ### Compiling the codes
 
 1. Click on the 'Compile Code' button located in the top right corner.
 2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
 
-![Compile code](images/how-to/compile-code.png)
+![Compile code](how-to-section-images/compile-code.png)
 
 N> The compilation progress takes 2 to 3 minutes to complete.
 
@@ -77,4 +77,4 @@ N> The compilation progress takes 2 to 3 minutes to complete.
 2. Click on the `Componenets` tab.
 3. Under `Custom Code Widgets`, your custom widget will be there. Now, the custom widget can be added to your page by drag-and-drop.
 
-![Page](images/how-to/page.png)
+![Page](how-to-section-images/page.png)
