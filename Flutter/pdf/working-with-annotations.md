@@ -681,3 +681,113 @@ document.dispose();
 
 {% endhighlight %}
  
+## Importing annotations from FDF file
+
+FDF stands for Forms Data Format. FDF is a file format for representing annotations present in a PDF document. You can import annotation data from the FDF file to PDF using the importAnnotation method in the PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Import the annotations to FDF file format.
+    document.importAnnotation(
+        File('import.fdf').readAsBytesSync(), PdfAnnotationDataFormat.fdf);
+    //Save the PDF document.
+    File('output.pdf').writeAsBytesSync(await document.save());
+    //Dispose the document.
+  document.dispose();
+
+{% endhighlight %}
+
+## Importing annotations from XFDF file
+
+XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for representing annotations that are contained in a PDF document. You can import annotation data from the XFDF file to PDF using the importAnnotation method in PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Import the annotations to XFDF file format.
+    document.importAnnotation(
+        File('import.xfdf').readAsBytesSync(), PdfAnnotationDataFormat.xfdf);
+    //Save the PDF document.
+    File('output.pdf').writeAsBytesSync(await document.save());
+    //Dispose the document.
+    document.dispose();
+
+{% endhighlight %}
+
+## Importing annotations from JSON file
+
+JSON stands for JavaScript Object Notation. It is a collection of key or value pairs, and it is used for serializing and transmitting the structured data over a network connection. You can import the annotation data from the JSON file to PDF using the importAnnotation method in PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Import the annotations to JSON file format.
+    document.importAnnotation(
+        File('import.json').readAsBytesSync(), PdfAnnotationDataFormat.json);
+    //Save the PDF document.
+    File('output.pdf').writeAsBytesSync(await document.save());
+    //Dispose the document.
+    document.dispose();
+
+{% endhighlight %}
+
+## Exporting annotations to FDF file
+
+To export annotation data to the FDF file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Export the annotations to FDF file format
+    List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.fdf);
+    //Save the FDF file.
+    File('export.fdf').writeAsBytesSync(bytes);
+    //Dispose the document
+    document.dispose();
+
+{% endhighlight %}
+
+## Exporting annotations to XFDF file
+
+To export annotation data to the XFDF file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Export the annotations to XFDF file format.
+    List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.xfdf);
+    //Save the FDF file.
+    File('export.xfdf').writeAsBytesSync(bytes);
+    //Dispose the document.
+    document.dispose();
+
+{% endhighlight %}
+
+## Exporting annotations to JSON file
+
+To export annotation data to the JSON file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
+
+{% highlight dart %}
+
+    //Load an existing PDF document.
+    PdfDocument document =
+        PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    //Export the annotations to JSON file format.
+    List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.json);
+    //Save the FDF file.
+    File('export.json').writeAsBytesSync(bytes);
+    //Dispose the document.
+    document.dispose();
+
+{% endhighlight %}
