@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calendar widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Calendar (SfCalendar) widget in FlutterFlow.
+description: You can learn here all about how to adding Syncfusion Flutter Calendar (SfCalendar) widget in FlutterFlow.
 platform: flutter
 control: SfCalendar
 documentation: ug
