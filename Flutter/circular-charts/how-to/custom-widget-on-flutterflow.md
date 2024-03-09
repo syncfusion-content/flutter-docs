@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Cartesian Charts widget in FlutterFlow | Syncfusion 
-description: Learn here all about adding Syncfusion Cartesian Charts widget in FlutterFlow.
+title: Circular Chart widget in FlutterFlow | Syncfusion 
+description: Learn here all about adding Syncfusion Circular Chart widget in FlutterFlow.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# How to add Syncfusion Cartesian Chart widget in FlutterFlow?
+# How to add Syncfusion Circular Chart widget in FlutterFlow?
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfCartesianChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfCircularChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 ### Create a new project
 
@@ -28,7 +28,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add Cartesian Chart widget as a dependency
+### Add Circular Chart widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
 2. Navigate to [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.

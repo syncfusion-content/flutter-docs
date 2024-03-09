@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Cartesian Charts widget in FlutterFlow | Syncfusion 
-description: Learn here all about adding Syncfusion Cartesian Charts widget in FlutterFlow.
-platform: flutter
-control: Chart
+title: SignaturePad widget in FlutterFlow | Syncfusion
+description: Learn here all about adding Syncfusion SignaturePad widget in FlutterFlow.
+platform: Flutter
+control: SfSignaturePad
 documentation: ug
 ---
 
-# How to add Syncfusion Cartesian Chart widget in FlutterFlow?
+# How to add Syncfusion SignaturePad widget in FlutterFlow?
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfCartesianChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfSignaturePad widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 ### Create a new project
 
@@ -28,23 +28,23 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add Cartesian Chart widget as a dependency
+### Add SignaturePad widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) has been migrated to the latest version of Flutter SDK. To ensure compatibility, please check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The live version of [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) has been migrated to the latest version of Flutter SDK. To ensure compatibility, please check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
 >**Note**: If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
->**Note**: Since [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
+>**Note**: Since [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
 
 ### Import the package
 
-1. Navigate to the `Installing` tab on the [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) page. Under the `Import it` section, copy the package import statement.
+1. Navigate to the `Installing` tab on the [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) page. Under the `Import it` section, copy the package import statement.
 
 ![Package](how-to-section-images/copy-package.png)
 
@@ -54,7 +54,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_charts/example) tab in [Syncfusion Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_signaturepad/example) tab in [Syncfusion Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) and copy the widget specific codes.
 
 ![Code](how-to-section-images/code-snippet.png)
 
