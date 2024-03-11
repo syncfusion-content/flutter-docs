@@ -696,7 +696,7 @@ FDF stands for Forms Data Format. FDF is a file format for representing annotati
     //Save the PDF document.
     File('output.pdf').writeAsBytesSync(await document.save());
     //Dispose the document.
-  document.dispose();
+    document.dispose();
 
 {% endhighlight %}
 
@@ -752,7 +752,6 @@ To export annotation data to the FDF file from the PDF document, you can use the
     //Save the FDF file.
     File('export.fdf').writeAsBytesSync(bytes);
     //Dispose the document
-Sri-hari-haran-g marked this conversation as resolved.
     document.dispose();
 
 {% endhighlight %}
