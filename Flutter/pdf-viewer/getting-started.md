@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter PDF Viewer widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter PDF Viewer (SfPdfViewer) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -159,6 +159,26 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Load the document with the specified page
+
+The `SfPdfViewer` allows you to load the document with the specified page using the `initialPageNumber` property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="6" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              initialPageNumber: 5));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> It is recommended not to use both the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html) and `initialPageNumber` properties at the same time. If both properties are defined, then the `initialPageNumber` will be prioritized over the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html)
 
 ## Load document with the specified scroll offset position or zoom level 
 

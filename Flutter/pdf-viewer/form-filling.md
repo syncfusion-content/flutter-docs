@@ -2,7 +2,7 @@
 layout: post
 title: Form filling in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about form filling feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -667,6 +667,74 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Undo and redo actions on form fields
+
+If you performed any undesired actions when editing the form fields, you can undo and redo the action to restore the previous state.
+
+The undo and redo operations are performed by assigning the `UndoHistoryController` instance to the `undoController` property of the `SfPdfViewer`. The UndoHistoryController class contains the `undo` and `redo` methods to perform the same, respectively. The `canUndo` and `canRedo` properties are used to check whether the undo and redo operations can be performed or not, respectively. The following code example illustrates how to perform the form filling undo and redo operations programmatically with the `SfPdfViewer`.
+
+{% tabs %}
+{% highlight dart hl_lines="12 13 21 22 29" %}
+
+final UndoHistoryController _undoController = UndoHistoryController();
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(actions: [
+        ValueListenableBuilder(
+            valueListenable: _undoController,
+            builder: (context, value, child) {
+              return IconButton(
+                onPressed:
+                    _undoController.value.canUndo ? _undoController.undo : null,
+                icon: const Icon(Icons.undo),
+              );
+            }),
+        ValueListenableBuilder(
+            valueListenable: _undoController,
+            builder: (context, value, child) {
+              return IconButton(
+                onPressed:
+                    _undoController.value.canRedo ? _undoController.redo : null,
+                icon: const Icon(Icons.redo),
+              );
+            }),
+      ]),
+      body: SfPdfViewer.asset( 
+        'assets/form_document.pdf',
+        undoController: _undoController,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+For desktop platforms such as Windows, macOS, and desktop web, you can use the following shortcut keys to perform the actions.
+
+<table>
+<tr>
+<th>Action & Shortcut keys</th>
+<th>Windows</th>
+<th>macOS</th>
+</tr>
+<tr>
+<th>Undo</th>
+<td><code>Ctrl</code> + <code>z</code></td>
+<td><code>Command</code> + <code>z</code></td>
+</tr>
+<tr>
+<th>Redo</th>
+<td><code>Ctrl</code> + <code>y</code></td>
+<td><code>Command</code> + <code>y</code></td>
+</tr>
+</table>
+
+N> This `undoController` is common for both annotations and form fields. You do not need to create separate instances for both.
 
 ## Callbacks
 
