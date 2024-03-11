@@ -2,7 +2,7 @@
 layout: post
 title: Magnification in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about magnification feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -70,6 +70,10 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+### Active view port rendering at higher zoom percentages
+
+From the 25.1 version, the [maxZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/maxZoomLevel.html) of the PDF Viewer can be extended with the support of active view port rendering at higher zoom percentages. It renders only the part of the PDF file that is visible on-screen and ignoring the parts that are outside the viewport. The mode is automatically enabled when the page size or zoom increased beyond a specified limit on the zooming. This approach will be helpful to open the large-size pages containing PDF documents at higher zoom levels.
 
 ## Enable or disable the double-tap zoom.
 
