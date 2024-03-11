@@ -459,6 +459,171 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% endhighlight %}
 {% endtabs %}
 
+### Events in trackballBehavior
+
+Integrated the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+
+* `handleEvent` - Specifies to customize the necessary pointer events.
+* `handleLongPressStart` - Specifies to customize the pointer when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer when the pointer stops contacting the screen after a long-press.
+* `handleTapDown` - Specifies to customize the pointer when a tap has contacted the screen once.
+* `handleTapUp` - Specifies to customize the pointer when it has stopped contacting the screen after a tap.
+* `handleDoubleTap` - Specifies to customize the pointer when a tap has contacted the screen twice.
+* `handlePointerEnter` -Specifies to customize the pointer when the mouse enter on the screen.
+* `handlePointerExit` - Specifies to customize the pointer when the mouse exit on the screen.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomTrackballEvent extends TrackballBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => super.activationMode;
+
+      // Stops the behavior of mouse pointer move, cancel, hover and up events.
+      @override
+      void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
+
+      // Stops the behavior of mouse enter on the screen.
+      @override
+      void handlePointerEnter(PointerEnterEvent details) {}
+
+      // Stops the behavior of mouse exit on the screen.
+      @override
+      void handlePointerExit(PointerExitEvent details) {}
+      
+      // Customize the pointer when a tap has contacted the screen once.
+      @override
+      void handleTapDown(TapDownDetails details) {
+        if (activationMode == ActivationMode.singleTap) {
+          Offset localPosition = parentBox!.globalToLocal(details. globalPosition);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+
+      // customize the pointer when a tap has contacted the screen twice.
+      @override
+      void handleDoubleTap(Offset position) {
+        if (activationMode == ActivationMode.doubleTap) {
+          Offset localPosition = parentBox!.globalToLocal(position);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### onPaint in trackballBehavior
+
+This method allows to customize the tooltip label, position, and style for trackball.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomTrackball extends TrackballBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void onPaint(PaintingContext context, Offset offset,
+      SfChartThemeData chartThemeData, ThemeData themeData) {
+        _drawCustomTrackballLine(context, offset, chartThemeData, themeData);
+        TextStyle style = TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+          background: Paint()
+            ..color = Colors.blueGrey
+            ..strokeWidth = 17
+            ..strokeJoin = StrokeJoin.round
+            ..strokeCap = StrokeCap.round
+            ..style = PaintingStyle.stroke,
+          );
+
+        if (chartPointInfo.isNotEmpty) {
+          _drawText(
+            context.canvas,
+            chartPointInfo[0].label!,
+            Offset(chartPointInfo[0].xPosition!, chartPointInfo[0].yPosition!),
+            style);
+        }
+      }
+
+      void _drawCustomTrackballLine(PaintingContext context, Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
+        if (chartPointInfo.isNotEmpty && lineType != TrackballLineType.none) {
+          final Rect plotAreaBounds = parentBox!.paintBounds;
+          final double x = chartPointInfo[0].xPosition!;
+          final Offset end = Offset(x, plotAreaBounds.bottom);
+          final Offset start = Offset(x, chartPointInfo[0].yPosition!);
+          final Paint paint = Paint()
+            ..isAntiAlias = true
+            ..color = Colors.red
+            ..strokeWidth = 2
+            ..style = PaintingStyle.stroke
+            ..shader = ui.Gradient.linear(
+              Offset(start.dx, start.dy),
+              Offset(end.dx, end.dy),
+              <Color>[Colors.blueGrey, Colors.white],
+              <double>[0.75, 1],
+            );
+
+          context.canvas.drawLine(end, start, paint);
+          context.canvas.drawCircle(
+              Offset(start.dx, start.dy),
+              5,
+              Paint()
+                ..color = Colors.blueGrey
+                ..style = PaintingStyle.fill);
+          context.canvas.drawCircle(
+              Offset(start.dx, start.dy),
+              5,
+              Paint()
+                ..color = Colors.blueGrey
+                ..strokeWidth = 2.0
+                ..style = PaintingStyle.stroke
+                ..isAntiAlias = true);
+        }
+      }
+
+      void _drawText(Canvas canvas, String text, Offset point,  TextStyle style) {
+        final TextPainter tp = TextPainter(
+          text: TextSpan(text: text, style: style),
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          maxLines: getMaxLinesContent(text),
+        );
+
+        tp.layout();
+        canvas.save();
+        canvas.translate(point.dx - tp.width / 2, point.dy - (tp.height * 2));
+        Offset labelOffset = Offset.zero;
+        tp.paint(canvas, labelOffset);
+        canvas.restore();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized trackball](images\trackball-crosshair/customized_trackball.gif)
+
 ## Methods in crosshairBehavior
 
 ### Show method in crosshairBehavior
@@ -652,6 +817,369 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% endhighlight %}
 {% endtabs %}
+
+### Events in crosshairBehavior
+
+Integrated the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+
+* `handleEvent` - Specifies to customize the necessary pointer events.
+* `handleLongPressStart` - Specifies to customize the pointer when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer when the pointer stops contacting the screen after a long-press.
+* `handleTapDown` - Specifies to customize the pointer when a tap has contacted the screen once.
+* `handleTapUp` - Specifies to customize the pointer when it has stopped contacting the screen after a tap.
+* `handleDoubleTap` - Specifies to customize the pointer when a tap has contacted the screen twice.
+* `handlePointerEnter` -Specifies to customize the pointer when the mouse enter on the screen.
+* `handlePointerExit` - Specifies to customize the pointer when the mouse exit on the screen.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshairEvent extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => super.activationMode;
+
+      // Stops the behavior of mouse pointer move, cancel, hover and up events.
+      @override
+      void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
+
+      // Stops the behavior of mouse enter on the screen.
+      @override
+      void handlePointerEnter(PointerEnterEvent details) {}
+
+      // Stops the behavior of mouse exit on the screen.
+      @override
+      void handlePointerExit(PointerExitEvent details) {}
+  
+      // Customize the pointer when a tap has contacted the screen once.
+      @override
+      void handleTapDown(TapDownDetails details) {
+        if (activationMode == ActivationMode.singleTap) {
+          Offset localPosition = parentBox!.globalToLocal(details. globalPosition);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+
+      // customize the pointer when a tap has contacted the screen twice.
+      @override
+      void handleDoubleTap(Offset position) {
+        if (activationMode == ActivationMode.doubleTap) {
+          Offset localPosition = parentBox!.globalToLocal(position);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### DrawVerticalAxisLine method in crosshairBehavior
+
+To customize the stroke drawing and styling of vertical crosshair line.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      @override
+      void drawVerticalAxisLine(PaintingContext context, Offset offset,
+        List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..color = Colors.green
+          ..strokeWidth = 1;
+        dashArray = [5, 10, 5];
+        super.drawVerticalAxisLine(context, offset, dashArray, strokePaint);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Crosshair Vertical Line](images\trackball-crosshair/custom_crosshair_vertical_line.gif)
+
+### DrawHorizontalAxisLine method in crosshairBehavior
+
+To customize the stroke drawing and styling of horizontal crosshair line.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      @override
+      void drawHorizontalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.red
+          ..strokeWidth = 2;
+        dashArray = [10, 15, 10];
+        super.drawHorizontalAxisLine(context, offset, dashArray, strokePaint);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Crosshair Horizontal Line](images\trackball-crosshair/custom_crosshair_horizontal_line.gif)
+
+### DrawVerticalAxisTooltip method in crosshairBehavior
+
+This method allows you to customize the tooltip label, position, and style for vertical axis tooltip.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void drawVerticalAxisTooltip(PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        TextStyle style = TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        background: Paint()
+          ..color = Colors.blueGrey
+          ..strokeWidth = 16
+          ..strokeJoin = StrokeJoin.round
+          ..style = dart_ui.PaintingStyle.stroke,
+        );
+
+        if (parentBox != null) {
+          final Rect bounds = parentBox!.paintBounds;
+          final String finalText = 'X : ${horizontalText}';
+          final Offset verticalPosition =
+            Offset(customPosition!.dx, bounds.bottomCenter.dy)
+                .translate(-80, -20);
+          _drawText(context.canvas, finalText, verticalPosition, style);
+        }
+      }
+
+      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
+        final TextPainter textPainter = TextPainter(
+          text: TextSpan(
+            text: text,
+            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
+        textDirection: dart_ui.TextDirection.ltr,
+        textAlign: TextAlign.center,
+        maxLines: getMaxLinesContent(text),
+        );
+        
+        textPainter
+        ..layout()
+        ..paint(canvas, point);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.gif)
+
+### DrawHorizontalAxisTooltip method in crosshairBehavior
+
+This method allows you to customize the tooltip label, position, and style for horizontal axis tooltip.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void drawHorizontalAxisTooltip(PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        TextStyle style = TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        background: Paint()
+          ..color = Colors.blueGrey
+          ..strokeWidth = 16
+          ..strokeJoin = StrokeJoin.round
+          ..style = dart_ui.PaintingStyle.stroke,
+        );
+
+        if (parentBox != null) {
+        final Rect bounds = parentBox!.paintBounds;
+        final String finalText = 'Y : ${verticalValue.toStringAsFixed(2)}';
+        final Offset horizontalPosition =
+            Offset(bounds.right, customPosition!.dy).translate(-50, -20);
+        _drawText(context.canvas, finalText, horizontalPosition, style);
+      }
+    }
+
+      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
+        final TextPainter textPainter = TextPainter(
+          text: TextSpan(
+            text: text,
+            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
+        textDirection: dart_ui.TextDirection.ltr,
+        textAlign: TextAlign.center,
+        maxLines: getMaxLinesContent(text),
+        );
+        
+        textPainter
+        ..layout()
+        ..paint(canvas, point);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Crosshair Horizonatl Axis Tooltip](images\trackball-crosshair/custom_crosshair_horizontal_tooltip.gif)
+
+
+### onPaint in trackballBehavior
+
+This method allows you to customize the tooltip label, position, and style of crosshair.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void drawHorizontalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.red
+          ..strokeWidth = 1;
+        dashArray = [10, 15, 10];
+        super.drawHorizontalAxisLine(context, offset, dashArray, strokePaint);
+      }
+
+      @override
+      void drawVerticalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..color = Colors.green
+          ..strokeWidth = 1;
+        dashArray = [5, 10, 5];
+        super.drawVerticalAxisLine(context, offset, dashArray, strokePaint);
+      }
+
+      @override
+      void drawVerticalAxisTooltip(
+      PaintingContext context, Offset position, String text, TextStyle style,
+      [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        TextStyle style = TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          background: Paint()
+            ..color = Colors.blueGrey
+            ..strokeWidth = 16
+            ..strokeJoin = StrokeJoin.round
+            ..style = dart_ui.PaintingStyle.stroke,
+          );
+
+          if (parentBox != null) {
+            final Rect bounds = parentBox!.paintBounds;
+            final String finalText = 'X : ${horizontalText}';
+            final Offset verticalPosition = Offset(customPosition!.dx, bounds.bottomCenter.dy).translate(-80, -20);
+            _drawText(context.canvas, finalText, verticalPosition, style);
+          }
+      }
+
+      @override
+      void drawHorizontalAxisTooltip(
+      PaintingContext context, Offset position, String text, TextStyle style,
+      [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        TextStyle style = TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          background: Paint()
+            ..color = Colors.blueGrey
+            ..strokeWidth = 16
+            ..strokeJoin = StrokeJoin.round
+            ..style = dart_ui.PaintingStyle.stroke,
+          );
+
+          if (parentBox != null) {
+            final Rect bounds = parentBox!.paintBounds;
+            final String finalText = 'Y : ${verticalValue.toStringAsFixed(2)}';
+            final Offset verticalPosition = Offset(bounds.right, customPosition!.dy).translate(-50, -20);
+            _drawText(context.canvas, finalText, verticalPosition, style);
+          }
+        }
+
+      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
+        final TextPainter textPainter = TextPainter(
+          text: TextSpan(
+            text: text,
+            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
+          textDirection: dart_ui.TextDirection.ltr,
+          textAlign: TextAlign.center,
+          maxLines: getMaxLinesContent(text),
+        );
+        textPainter
+          ..layout()
+          ..paint(canvas, point);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized crosshair](images\trackball-crosshair/customized_crosshair.gif)
 
 ## Methods in selectionBehavior
 
