@@ -71,9 +71,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Active view port rendering at higher zoom percentages
+### Active viewport rendering at higher zoom levels
 
-From the 25.1 version, the [maxZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/maxZoomLevel.html) of the PDF Viewer can be extended with the support of active view port rendering at higher zoom percentages. It renders only the part of the PDF file that is visible on-screen and ignoring the parts that are outside the viewport. The mode is automatically enabled when the page size or zoom increased beyond a specified limit on the zooming. This approach will be helpful to open the large-size pages containing PDF documents at higher zoom levels.
+With the support of active viewport rendering, at higher zoom levels, only the parts of the PDF file that are visible on-screen are rendered, ignoring the parts that are outside the viewport. The mode is automatically enabled when the page size or zoom increases beyond the zoom level of 2. This approach will be helpful to open large-size pages containing PDF documents at higher zoom levels.
 
 ## Enable or disable the double-tap zoom.
 

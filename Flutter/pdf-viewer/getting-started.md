@@ -160,7 +160,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Load document with the specified page
+## Load the document with the specified page
 
 The `SfPdfViewer` allows you to load the document with the specified page using the `initialPageNumber` property. The following code example explains the same.
 
