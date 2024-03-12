@@ -1327,11 +1327,45 @@ Widget build(BuildContext context) {
 
 <img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
 
-## Set a StrongDataType for filter behavior
-The [FilterBehavior](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterBehavior.html) property specifies whether filtering should consider a cell's value as a string or as a data type.When using the StrongDataType option,the comparison is made directly to their data types.
+## Perform filtering to the user-defined type
+By default, the `FilterBehavior.strongDataType` applies to the num, string, and DateTime types. Now, it also applies to the user-defined types also. It can be enabled by extending the user-defined type with the [Comparable](https://api.dart.dev/stable/3.3.1/dart-core/Comparable-class.html) class.
 
 {% tabs %}
 {% highlight Dart %} 
+
+class Group implements Comparable {
+  final int id;
+  final String name;
+
+  Group(this.id, this.name);
+
+  @override
+  int compareTo(other) {
+    if (other is! Group) {
+      return -1;
+    } else {
+      return other.id.compareTo(id);
+    }
+  }
+
+  @override
+  String toString() {
+    return id.toString();
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Group && other.id == id;
+  }
+
+  @override
+  int get hashCode => id.hashCode;
+}
+
+
+The following example shows how to set the FilterBehavior in SfDataGrid.
 
 @override
 Widget build(BuildContext context) {
