@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about the scrolling features of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about how to show scrollbars always and programmatic scrolling in the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -949,6 +949,81 @@ In the SfDataGrid, you can obtain the starting and ending indices of the visible
               ]),
         ),
       ]),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set the scroll offset on initial loading
+SfDataGrid allows you to set the scroll offset upon initial loading for both horizontal and vertical scroll bars. This can be achieved by assigning the offset value to the [initialScrollOffset](https://api.flutter.dev/flutter/widgets/ScrollController/initialScrollOffset.html) property of the [ScrollController](https://api.flutter.dev/flutter/widgets/ScrollController-class.html) for the needed vertical or horizontal controller.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+late EmployeeDataSource _employeeDataSource;
+late ScrollController _verticalScrollController;
+late ScrollController _horizontalScrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeData();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+    _verticalScrollController = ScrollController(
+      initialScrollOffset: 500,
+    );
+    _horizontalScrollController = ScrollController(
+      initialScrollOffset: 600,
+    );
+  }
+
+@override
+Widget build(BuildContext context) {
+    return SfDataGrid(
+      verticalScrollController: _verticalScrollController,
+      horizontalScrollController: _horizontalScrollController,
+      source: _employeeDataSource,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
     );
   }
 

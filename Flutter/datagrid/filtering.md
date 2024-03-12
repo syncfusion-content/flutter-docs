@@ -1326,3 +1326,87 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 <img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
+
+## Perform filtering to the user-defined type
+By default, the `FilterBehavior.strongDataType` applies to the num, string, and DateTime types. Now, it also applies to the user-defined types also. It can be enabled by extending the user-defined type with the [Comparable](https://api.dart.dev/stable/3.3.1/dart-core/Comparable-class.html) class.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: Column(
+        children: [
+          MaterialButton(
+              child: Text('Filter rows with a range'),
+              onPressed: () {
+                employeeDataSource.addFilter(
+                  'worker',
+                  FilterCondition(
+                    value: Worker(10001, 'James'),
+                    filterBehavior: FilterBehavior.strongDataType,
+                    type: FilterType.equals,
+                  ),
+                );
+              }),
+          Padding(padding: EdgeInsets.all(5)),
+          Expanded(
+            child: SfDataGrid(
+              allowFiltering: true,
+              source: employeeDataSource,
+              columnWidthMode: ColumnWidthMode.fill,
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'worker',
+                    label: Container(
+                        padding: EdgeInsets.all(16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Worker',
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Name'))),
+                GridColumn(
+                    columnName: 'designation',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'shippedDate',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'shippedDate',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'salary',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Salary'))),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-perform-filtering-to-the-user-defined-type-in-Flutter-DataGrid).
+  
+{% endhighlight %}
+{% endtabs %}
