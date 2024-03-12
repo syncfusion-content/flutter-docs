@@ -461,53 +461,49 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### Events in trackballBehavior
 
-Integrated the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
 
 * `handleEvent` - Specifies to customize the necessary pointer events.
-* `handleLongPressStart` - Specifies to customize the pointer when a long-press begins.
-* `handleLongPressMoveUpdate` - Specifies to customize the pointer during movement after a long-press.
-* `handleLongPressEnd` - Specifies to customize the pointer when the pointer stops contacting the screen after a long-press.
-* `handleTapDown` - Specifies to customize the pointer when a tap has contacted the screen once.
-* `handleTapUp` - Specifies to customize the pointer when it has stopped contacting the screen after a tap.
-* `handleDoubleTap` - Specifies to customize the pointer when a tap has contacted the screen twice.
-* `handlePointerEnter` -Specifies to customize the pointer when the mouse enter on the screen.
-* `handlePointerExit` - Specifies to customize the pointer when the mouse exit on the screen.
+* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* `handleTapDown` - Specifies to customize the pointer event when a tap has contacted the screen once.
+* `handleTapUp` - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
+* `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
+
+This following code snippet defines a custom event behavior class named `CustomTrackballEvent`. It overrides various methods to enable/disable specific pointer events and customize the behavior of `double taps`.
 
 {% tabs %}
 {% highlight dart %} 
 
+    SfCartesianChart(
+      trackballBehavior: CustomTrackballEvent(),
+      // Add series.
+    );
+    
     class CustomTrackballEvent extends TrackballBehavior {
       @override
       bool get enable => true;
 
-      @override
-      ActivationMode get activationMode => super.activationMode;
-
-      // Stops the behavior of mouse pointer move, cancel, hover and up events.
+      // Disable the behavior of pointer events(move, cancel, hover and up).
       @override
       void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
 
-      // Stops the behavior of mouse enter on the screen.
+      // Disable the behavior of the pointer enter on the screen.
       @override
       void handlePointerEnter(PointerEnterEvent details) {}
 
-      // Stops the behavior of mouse exit on the screen.
+      // Disable the behavior of the pointer exit on the screen.
       @override
       void handlePointerExit(PointerExitEvent details) {}
-      
-      // Customize the pointer when a tap has contacted the screen once.
-      @override
-      void handleTapDown(TapDownDetails details) {
-        if (activationMode == ActivationMode.singleTap) {
-          Offset localPosition = parentBox!.globalToLocal(details. globalPosition);
-          show(localPosition.dx, localPosition.dy, 'pixel');
-        }
-      }
 
-      // customize the pointer when a tap has contacted the screen twice.
+      // By default, the handleDoubleTap method is triggered when the pointer contacts the screen twice.
+      // Now, it can be customized to trigger on a single tap event instead.
       @override
       void handleDoubleTap(Offset position) {
-        if (activationMode == ActivationMode.doubleTap) {
+        if (activationMode == ActivationMode.singleTap) {
           Offset localPosition = parentBox!.globalToLocal(position);
           show(localPosition.dx, localPosition.dy, 'pixel');
         }
@@ -523,6 +519,11 @@ This method allows to customize the tooltip label, position, and style for track
 
 {% tabs %}
 {% highlight dart %} 
+
+    SfCartesianChart(
+      trackballBehavior: CustomTrackball(),
+      // Add series.
+    );
 
     class CustomTrackball extends TrackballBehavior {
       @override
@@ -816,53 +817,49 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### Events in crosshairBehavior
 
-Integrated the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
 
 * `handleEvent` - Specifies to customize the necessary pointer events.
-* `handleLongPressStart` - Specifies to customize the pointer when a long-press begins.
-* `handleLongPressMoveUpdate` - Specifies to customize the pointer during movement after a long-press.
-* `handleLongPressEnd` - Specifies to customize the pointer when the pointer stops contacting the screen after a long-press.
-* `handleTapDown` - Specifies to customize the pointer when a tap has contacted the screen once.
-* `handleTapUp` - Specifies to customize the pointer when it has stopped contacting the screen after a tap.
-* `handleDoubleTap` - Specifies to customize the pointer when a tap has contacted the screen twice.
-* `handlePointerEnter` -Specifies to customize the pointer when the mouse enter on the screen.
-* `handlePointerExit` - Specifies to customize the pointer when the mouse exit on the screen.
+* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* `handleTapDown` - Specifies to customize the pointer event when a tap has contacted the screen once.
+* `handleTapUp` - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
+* `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
+
+This following code snippet defines a custom event behavior class named `CustomCrosshairEvent`. It overrides various methods to enable/disable specific pointer events and customize the behavior of `double taps`.
 
 {% tabs %}
 {% highlight dart %} 
 
+    SfCartesianChart(
+      crosshairBehavior: CustomCrosshairEvent(),
+      // Add series.
+    );
+    
     class CustomCrosshairEvent extends CrosshairBehavior {
       @override
       bool get enable => true;
 
-      @override
-      ActivationMode get activationMode => super.activationMode;
-
-      // Stops the behavior of mouse pointer move, cancel, hover and up events.
+      // Disable the behavior of pointer events(move, cancel, hover and up).
       @override
       void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
 
-      // Stops the behavior of mouse enter on the screen.
+      // Disable the behavior of the pointer enter on the screen.
       @override
       void handlePointerEnter(PointerEnterEvent details) {}
 
-      // Stops the behavior of mouse exit on the screen.
+      // Disable the behavior of the pointer exit on the screen.
       @override
       void handlePointerExit(PointerExitEvent details) {}
-  
-      // Customize the pointer when a tap has contacted the screen once.
-      @override
-      void handleTapDown(TapDownDetails details) {
-        if (activationMode == ActivationMode.singleTap) {
-          Offset localPosition = parentBox!.globalToLocal(details. globalPosition);
-          show(localPosition.dx, localPosition.dy, 'pixel');
-        }
-      }
 
-      // customize the pointer when a tap has contacted the screen twice.
+      // By default, the handleDoubleTap method is triggered when the pointer contacts the screen twice.
+      // Now, it can be customized to trigger on a single tap event instead.
       @override
       void handleDoubleTap(Offset position) {
-        if (activationMode == ActivationMode.doubleTap) {
+        if (activationMode == ActivationMode.singleTap) {
           Offset localPosition = parentBox!.globalToLocal(position);
           show(localPosition.dx, localPosition.dy, 'pixel');
         }
@@ -875,6 +872,11 @@ Integrated the following methods for handling pointer and gesture events and all
 ### DrawVerticalAxisLine method in crosshairBehavior
 
 To customize the stroke drawing and styling of vertical crosshair line.
+
+* `context` - Holds the painting context details necessary for drawing on the canvas.
+* `offset` - It specifies the crosshair position.
+* `dashArray` - By default, the dashArray is applied based on the [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html) property which is available in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html) class. 
+* `strokePaint` - Specifies the paint used for rendering the stroke of the vertical line.
 
 {% tabs %}
 {% highlight dart %} 
@@ -918,70 +920,17 @@ To customize the stroke drawing and styling of horizontal crosshair line.
 {% endhighlight %}
 {% endtabs %}
 
-### DrawVerticalAxisTooltip method in crosshairBehavior
-
-This method allows you to customize the tooltip label, position, and style for vertical axis tooltip.
-
-{% tabs %}
-{% highlight dart %} 
-
-    class CustomCrosshair extends CrosshairBehavior {
-      Offset? customPosition;
-
-      @override
-      void show(x, double y, [String coordinateUnit = 'point']) {
-        if (coordinateUnit == 'pixel') {
-          customPosition = Offset(x.toDouble(), y);
-        }
-        super.show(x, y, 'pixel');
-      }
-
-      @override
-      void drawVerticalAxisTooltip(PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
-        TextStyle style = TextStyle(
-        color: Colors.white,
-        fontSize: 12,
-        background: Paint()
-          ..color = Colors.blueGrey
-          ..strokeWidth = 16
-          ..strokeJoin = StrokeJoin.round
-          ..style = dart_ui.PaintingStyle.stroke,
-        );
-
-        if (parentBox != null) {
-          final Rect bounds = parentBox!.paintBounds;
-          final String finalText = 'X : ${horizontalText}';
-          final Offset verticalPosition =
-            Offset(customPosition!.dx, bounds.bottomCenter.dy)
-                .translate(-80, -20);
-          _drawText(context.canvas, finalText, verticalPosition, style);
-        }
-      }
-
-      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
-        final TextPainter textPainter = TextPainter(
-          text: TextSpan(
-            text: text,
-            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
-        textDirection: dart_ui.TextDirection.ltr,
-        textAlign: TextAlign.center,
-        maxLines: getMaxLinesContent(text),
-        );
-        
-        textPainter
-        ..layout()
-        ..paint(canvas, point);
-      }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
-
 ### DrawHorizontalAxisTooltip method in crosshairBehavior
 
 This method allows you to customize the tooltip label, position, and style for horizontal axis tooltip.
+
+* `context` - Holds the painting context details necessary for drawing on the canvas.
+* `position` - Represents the default position of the axis tooltip text.
+* `text` - Contains the default text displayed in the tooltip.
+* `style` - Specifies the default text style applied to the tooltip text.
+* `path` - A reference to the default path of the tooltip rectangle.
+* `fillPaint` - Specifies the fill paint applied to the default tooltip rectangle.
+* `strokePaint` - Specifies the stroke paint applied to the default tooltip rectangle.
 
 {% tabs %}
 {% highlight dart %} 
@@ -1039,6 +988,13 @@ This method allows you to customize the tooltip label, position, and style for h
 
 ![Crosshair Horizonatl Axis Tooltip](images\trackball-crosshair/custom_crosshair_horizontal_tooltip.png)
 
+### DrawVerticalAxisTooltip method in crosshairBehavior
+
+This method allows you to customize the tooltip label, position, and style for vertical axis tooltip.
+
+For further reference, please consult the drawHorizontalAxisTooltip code snippet and its corresponding demo.
+
+![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
 
 ### onPaint in crosshairBehavior
 
@@ -1062,7 +1018,7 @@ This method allows you to customize the tooltip label, position, and style of cr
       final List<_SalesData> dateTimeData = [
         _SalesData(DateTime(2015, 2, 0), 31),
         _SalesData(DateTime(2015, 2, 1), 21),
-        // Add the required data
+        // Add data points.
       ];
       return Scaffold(
         body: SfCartesianChart(
@@ -1099,9 +1055,6 @@ This method allows you to customize the tooltip label, position, and style of cr
     class CustomCrosshair extends CrosshairBehavior {
       @override
       bool get enable => true;
-
-      @override
-      ActivationMode get activationMode => ActivationMode.singleTap;
 
       Offset? customPosition;
 
@@ -1148,7 +1101,7 @@ This method allows you to customize the tooltip label, position, and style of cr
       }
 
       @override
-      void onPaint(PaintingContext context, dart_ui.Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
+      void onPaint(PaintingContext context, Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
         super.onPaint(context, offset, chartThemeData, themeData);
         // Custom tooltip.
         TextStyle style = TextStyle(
