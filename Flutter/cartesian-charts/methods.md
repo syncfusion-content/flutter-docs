@@ -570,30 +570,26 @@ This method allows to customize the tooltip label, position, and style for track
         if (chartPointInfo.isNotEmpty && lineType != TrackballLineType.none) {
           final Rect plotAreaBounds = parentBox!.paintBounds;
           final double x = chartPointInfo[0].xPosition!;
-          final Offset end = Offset(x, plotAreaBounds.bottom);
           final Offset start = Offset(x, chartPointInfo[0].yPosition!);
+          final Offset end = Offset(x, plotAreaBounds.bottom);
           final Paint paint = Paint()
             ..isAntiAlias = true
             ..color = Colors.red
             ..strokeWidth = 2
             ..style = PaintingStyle.stroke
             ..shader = ui.Gradient.linear(
-              Offset(start.dx, start.dy),
-              Offset(end.dx, end.dy),
+              start,
+              end,
               <Color>[Colors.blueGrey, Colors.white],
               <double>[0.75, 1],
             );
 
           context.canvas.drawLine(end, start, paint);
-          context.canvas.drawCircle(
-              Offset(start.dx, start.dy),
-              5,
+          context.canvas.drawCircle(start, 5,
               Paint()
                 ..color = Colors.blueGrey
                 ..style = PaintingStyle.fill);
-          context.canvas.drawCircle(
-              Offset(start.dx, start.dy),
-              5,
+          context.canvas.drawCircle(start, 5,
               Paint()
                 ..color = Colors.blueGrey
                 ..strokeWidth = 2.0
@@ -885,12 +881,6 @@ To customize the stroke drawing and styling of vertical crosshair line.
 
     class CustomCrosshair extends CrosshairBehavior {
       @override
-      bool get enable => true;
-
-      @override
-      ActivationMode get activationMode => ActivationMode.singleTap;
-
-      @override
       void drawVerticalAxisLine(PaintingContext context, Offset offset,
         List<double>? dashArray, Paint strokePaint) {
         strokePaint
@@ -905,8 +895,6 @@ To customize the stroke drawing and styling of vertical crosshair line.
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair Vertical Line](images\trackball-crosshair/custom_crosshair_vertical_line.gif)
-
 ### DrawHorizontalAxisLine method in crosshairBehavior
 
 To customize the stroke drawing and styling of horizontal crosshair line.
@@ -915,12 +903,6 @@ To customize the stroke drawing and styling of horizontal crosshair line.
 {% highlight dart %} 
 
     class CustomCrosshair extends CrosshairBehavior {
-      @override
-      bool get enable => true;
-
-      @override
-      ActivationMode get activationMode => ActivationMode.singleTap;
-
       @override
       void drawHorizontalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
         strokePaint
@@ -936,8 +918,6 @@ To customize the stroke drawing and styling of horizontal crosshair line.
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair Horizontal Line](images\trackball-crosshair/custom_crosshair_horizontal_line.gif)
-
 ### DrawVerticalAxisTooltip method in crosshairBehavior
 
 This method allows you to customize the tooltip label, position, and style for vertical axis tooltip.
@@ -946,12 +926,6 @@ This method allows you to customize the tooltip label, position, and style for v
 {% highlight dart %} 
 
     class CustomCrosshair extends CrosshairBehavior {
-      @override
-      bool get enable => true;
-
-      @override
-      ActivationMode get activationMode => ActivationMode.singleTap;
-
       Offset? customPosition;
 
       @override
@@ -1003,7 +977,7 @@ This method allows you to customize the tooltip label, position, and style for v
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.gif)
+![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
 
 ### DrawHorizontalAxisTooltip method in crosshairBehavior
 
@@ -1013,12 +987,6 @@ This method allows you to customize the tooltip label, position, and style for h
 {% highlight dart %} 
 
     class CustomCrosshair extends CrosshairBehavior {
-      @override
-      bool get enable => true;
-
-      @override
-      ActivationMode get activationMode => ActivationMode.singleTap;
-
       Offset? customPosition;
 
       @override
@@ -1069,15 +1037,64 @@ This method allows you to customize the tooltip label, position, and style for h
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair Horizonatl Axis Tooltip](images\trackball-crosshair/custom_crosshair_horizontal_tooltip.gif)
+![Crosshair Horizonatl Axis Tooltip](images\trackball-crosshair/custom_crosshair_horizontal_tooltip.png)
 
 
-### onPaint in trackballBehavior
+### onPaint in crosshairBehavior
 
 This method allows you to customize the tooltip label, position, and style of crosshair.
 
 {% tabs %}
 {% highlight dart %} 
+
+    dynamic verticalValue;
+    late String horizontalText;
+
+    @override
+    void initState() {
+      verticalValue = null;
+      horizontalText = '';
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      final List<_SalesData> dateTimeData = [
+        _SalesData(DateTime(2015, 2, 0), 31),
+        _SalesData(DateTime(2015, 2, 1), 21),
+        // Add the required data
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          crosshairBehavior: CustomCrosshair(),
+          onCrosshairPositionChanging: (CrosshairRenderArgs args) {
+            if (args.orientation != null) {
+              if (args.orientation == AxisOrientation.horizontal) {
+                horizontalText = args.text;
+              }
+              if (args.orientation == AxisOrientation.vertical) {
+                verticalValue = args.value;
+              }
+            }
+          },
+          series: <CartesianSeries<_SalesData, DateTime>>[
+            SplineSeries(
+              dataSource: dateTimeData,
+              xValueMapper: (_SalesData sales, _) => sales.x,
+              yValueMapper: (_SalesData sales, _) => sales.y,
+              markerSettings: MarkerSettings(isVisible: true),
+            ),
+          ],
+        ),
+      );
+    }
+    
+
+    class _SalesData {
+      _SalesData(this.x, this.y);
+      final dynamic x;
+      final double y;
+    }
 
     class CustomCrosshair extends CrosshairBehavior {
       @override
@@ -1102,7 +1119,7 @@ This method allows you to customize the tooltip label, position, and style of cr
           ..isAntiAlias = true
           ..strokeCap = StrokeCap.round
           ..color = Colors.red
-          ..strokeWidth = 1;
+          ..strokeWidth = 2;
         dashArray = [10, 15, 10];
         super.drawHorizontalAxisLine(context, offset, dashArray, strokePaint);
       }
@@ -1111,38 +1128,29 @@ This method allows you to customize the tooltip label, position, and style of cr
       void drawVerticalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
         strokePaint
           ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
           ..color = Colors.green
-          ..strokeWidth = 1;
+          ..strokeWidth = 2;
         dashArray = [5, 10, 5];
         super.drawVerticalAxisLine(context, offset, dashArray, strokePaint);
       }
 
       @override
       void drawVerticalAxisTooltip(
-      PaintingContext context, Offset position, String text, TextStyle style,
-      [Path? path, Paint? fillPaint, Paint? strokePaint]) {
-        TextStyle style = TextStyle(
-          color: Colors.white,
-          fontSize: 12,
-          background: Paint()
-            ..color = Colors.blueGrey
-            ..strokeWidth = 16
-            ..strokeJoin = StrokeJoin.round
-            ..style = dart_ui.PaintingStyle.stroke,
-          );
-
-          if (parentBox != null) {
-            final Rect bounds = parentBox!.paintBounds;
-            final String finalText = 'X : ${horizontalText}';
-            final Offset verticalPosition = Offset(customPosition!.dx, bounds.bottomCenter.dy).translate(-80, -20);
-            _drawText(context.canvas, finalText, verticalPosition, style);
-          }
+      PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        // Don't invoke default tooltip.
       }
 
       @override
       void drawHorizontalAxisTooltip(
-      PaintingContext context, Offset position, String text, TextStyle style,
-      [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+      PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        // Don't invoke default tooltip.
+      }
+
+      @override
+      void onPaint(PaintingContext context, dart_ui.Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
+        super.onPaint(context, offset, chartThemeData, themeData);
+        // Custom tooltip.
         TextStyle style = TextStyle(
           color: Colors.white,
           fontSize: 12,
@@ -1151,28 +1159,33 @@ This method allows you to customize the tooltip label, position, and style of cr
             ..strokeWidth = 16
             ..strokeJoin = StrokeJoin.round
             ..style = dart_ui.PaintingStyle.stroke,
-          );
+        );
 
-          if (parentBox != null) {
-            final Rect bounds = parentBox!.paintBounds;
-            final String finalText = 'Y : ${verticalValue.toStringAsFixed(2)}';
-            final Offset verticalPosition = Offset(bounds.right, customPosition!.dy).translate(-50, -20);
-            _drawText(context.canvas, finalText, verticalPosition, style);
-          }
+        if (customPosition != null && horizontalText != '' && verticalValue != null) {
+          final String finalText = 'X : ${horizontalText}  Y : ${verticalValue.toStringAsFixed(2)}';
+          _drawText( context.canvas, finalText, customPosition!.translate(20, 20), style);
         }
+      }
 
       void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
         final TextPainter textPainter = TextPainter(
           text: TextSpan(
             text: text,
             style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
-          textDirection: dart_ui.TextDirection.ltr,
           textAlign: TextAlign.center,
-          maxLines: getMaxLinesContent(text),
+          textDirection: dart_ui.TextDirection.ltr,
         );
         textPainter
           ..layout()
           ..paint(canvas, point);
+      }
+
+      @override
+      void hide() {
+        customPosition = null;
+        horizontalText = '';
+        verticalValue = null;
+        super.hide();
       }
     }
 
