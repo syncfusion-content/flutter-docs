@@ -473,17 +473,17 @@ Provided the following methods for handling pointer and gesture events and allow
 * `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
 * `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
 
-This following code snippet defines a custom event behavior class named `CustomTrackballEvent`. It overrides various methods to enable/disable specific pointer events and customize the behavior of `double taps`.
+This following code snippet defines how to enable/disable specific pointer events and customize to show trackball in double tap and disabled trackball showing in pointer enter and exit.
 
 {% tabs %}
 {% highlight dart %} 
 
     SfCartesianChart(
-      trackballBehavior: CustomTrackballEvent(),
+      trackballBehavior: CustomTrackball(),
       // Add series.
     );
     
-    class CustomTrackballEvent extends TrackballBehavior {
+    class CustomTrackball extends TrackballBehavior {
       @override
       bool get enable => true;
 
@@ -499,11 +499,9 @@ This following code snippet defines a custom event behavior class named `CustomT
       @override
       void handlePointerExit(PointerExitEvent details) {}
 
-      // By default, the handleDoubleTap method is triggered when the pointer contacts the screen twice.
-      // Now, it can be customized to trigger on a single tap event instead.
       @override
       void handleDoubleTap(Offset position) {
-        if (activationMode == ActivationMode.singleTap) {
+        if (activationMode == ActivationMode.doubleTap) {
           Offset localPosition = parentBox!.globalToLocal(position);
           show(localPosition.dx, localPosition.dy, 'pixel');
         }
@@ -515,7 +513,7 @@ This following code snippet defines a custom event behavior class named `CustomT
 
 ### onPaint in trackballBehavior
 
-This method allows to customize the tooltip label, position, and style for trackball.
+To customize the tooltip label, position, and style of trackball.
 
 {% tabs %}
 {% highlight dart %} 
@@ -829,17 +827,17 @@ Provided the following methods for handling pointer and gesture events and allow
 * `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
 * `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
 
-This following code snippet defines a custom event behavior class named `CustomCrosshairEvent`. It overrides various methods to enable/disable specific pointer events and customize the behavior of `double taps`.
+This following code snippet defines how to enable/disable specific pointer events and customize to show crosshair in double tap and disabled crosshair showing in pointer enter and exit.
 
 {% tabs %}
 {% highlight dart %} 
 
     SfCartesianChart(
-      crosshairBehavior: CustomCrosshairEvent(),
+      crosshairBehavior: CustomCrosshair(),
       // Add series.
     );
     
-    class CustomCrosshairEvent extends CrosshairBehavior {
+    class CustomCrosshair extends crosshairBehavior {
       @override
       bool get enable => true;
 
@@ -855,11 +853,9 @@ This following code snippet defines a custom event behavior class named `CustomC
       @override
       void handlePointerExit(PointerExitEvent details) {}
 
-      // By default, the handleDoubleTap method is triggered when the pointer contacts the screen twice.
-      // Now, it can be customized to trigger on a single tap event instead.
       @override
       void handleDoubleTap(Offset position) {
-        if (activationMode == ActivationMode.singleTap) {
+        if (activationMode == ActivationMode.doubleTap) {
           Offset localPosition = parentBox!.globalToLocal(position);
           show(localPosition.dx, localPosition.dy, 'pixel');
         }
@@ -873,10 +869,10 @@ This following code snippet defines a custom event behavior class named `CustomC
 
 To customize the stroke drawing and styling of vertical crosshair line.
 
-* `context` - Holds the painting context details necessary for drawing on the canvas.
-* `offset` - It specifies the crosshair position.
-* `dashArray` - By default, the dashArray is applied based on the [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html) property which is available in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html) class. 
-* `strokePaint` - Specifies the paint used for rendering the stroke of the vertical line.
+* `context` - Specifies the painting context.
+* `offset` - Specifies the crosshair position.
+* `dashArray` - Specifies the crosshair [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html).
+* `strokePaint` - Specifies the crosshair line stroke paint.
 
 {% tabs %}
 {% highlight dart %} 
@@ -922,13 +918,13 @@ To customize the stroke drawing and styling of horizontal crosshair line.
 
 ### DrawHorizontalAxisTooltip method in crosshairBehavior
 
-This method allows you to customize the tooltip label, position, and style for horizontal axis tooltip.
+To customize the tooltip label, position, and style for horizontal axis tooltip.
 
-* `context` - Holds the painting context details necessary for drawing on the canvas.
-* `position` - Represents the default position of the axis tooltip text.
-* `text` - Contains the default text displayed in the tooltip.
-* `style` - Specifies the default text style applied to the tooltip text.
-* `path` - A reference to the default path of the tooltip rectangle.
+* `context` - Specifies the painting context.
+* `position` - Specifies the position of the tooltip label.
+* `text` - Specifies the tooltip label.
+* `style` - Specifies the style of the tooltip text.
+* `path` - Specifies path reference of the tooltip rectangle.
 * `fillPaint` - Specifies the fill paint applied to the default tooltip rectangle.
 * `strokePaint` - Specifies the stroke paint applied to the default tooltip rectangle.
 
@@ -990,15 +986,15 @@ This method allows you to customize the tooltip label, position, and style for h
 
 ### DrawVerticalAxisTooltip method in crosshairBehavior
 
-This method allows you to customize the tooltip label, position, and style for vertical axis tooltip.
+To customize the tooltip label, position, and style for vertical axis tooltip.
 
-For further reference, please consult the drawHorizontalAxisTooltip code snippet and its corresponding demo.
+For further reference, please consult the drawHorizontalAxisTooltip code snippet.
 
 ![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
 
 ### onPaint in crosshairBehavior
 
-This method allows you to customize the tooltip label, position, and style of crosshair.
+To customize the tooltip label, position, and style of crosshair.
 
 {% tabs %}
 {% highlight dart %} 
