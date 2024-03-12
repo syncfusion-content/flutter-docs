@@ -178,7 +178,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> It is recommended not to use both the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html) and `initialPageNumber` properties at the same time. If both properties are defined, then the `initialPageNumber` will be prioritized over the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html)
+N> It is recommended not to use both the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html) and `initialPageNumber` properties at the same time. If both properties are defined, the `initialPageNumber` will be prioritized over the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html)
 
 ## Load document with the specified scroll offset position or zoom level 
 

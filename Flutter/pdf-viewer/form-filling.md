@@ -670,7 +670,7 @@ Widget build(BuildContext context) {
 
 ## Undo and redo actions on form fields
 
-If you performed any undesired actions when editing the form fields, you can undo and redo the action to restore the previous state.
+If you performed undesired actions when editing the form fields, you can undo and redo the action to restore the previous state.
 
 The undo and redo operations are performed by assigning the `UndoHistoryController` instance to the `undoController` property of the `SfPdfViewer`. The UndoHistoryController class contains the `undo` and `redo` methods to perform the same, respectively. The `canUndo` and `canRedo` properties are used to check whether the undo and redo operations can be performed or not, respectively. The following code example illustrates how to perform the form filling undo and redo operations programmatically with the `SfPdfViewer`.
 
@@ -714,7 +714,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-For desktop platforms such as Windows, macOS, and desktop web, you can use the following shortcut keys to perform the actions.
+For desktop platforms such as Windows, macOS, and desktop web, use the following shortcut keys to perform the actions.
 
 <table>
 <tr>
@@ -734,7 +734,7 @@ For desktop platforms such as Windows, macOS, and desktop web, you can use the f
 </tr>
 </table>
 
-N> This `undoController` is common for both annotations and form fields. You do not need to create separate instances for both.
+N> This `undoController` is common for annotations and form fields. You do not need to create separate instances for both.
 
 ## Callbacks
 
