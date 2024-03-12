@@ -1333,40 +1333,6 @@ By default, the `FilterBehavior.strongDataType` applies to the num, string, and 
 {% tabs %}
 {% highlight Dart %} 
 
-class Group implements Comparable {
-  final int id;
-  final String name;
-
-  Group(this.id, this.name);
-
-  @override
-  int compareTo(other) {
-    if (other is! Group) {
-      return -1;
-    } else {
-      return other.id.compareTo(id);
-    }
-  }
-
-  @override
-  String toString() {
-    return id.toString();
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Group && other.id == id;
-  }
-
-  @override
-  int get hashCode => id.hashCode;
-}
-
-
-The following example shows how to set the FilterBehavior in SfDataGrid.
-
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -1379,9 +1345,9 @@ Widget build(BuildContext context) {
               child: Text('Filter rows with a range'),
               onPressed: () {
                 employeeDataSource.addFilter(
-                  'group',
+                  'worker',
                   FilterCondition(
-                    value: Group(10001, 'James'),
+                    value: Worker(10001, 'James'),
                     filterBehavior: FilterBehavior.strongDataType,
                     type: FilterType.equals,
                   ),
@@ -1395,12 +1361,12 @@ Widget build(BuildContext context) {
               columnWidthMode: ColumnWidthMode.fill,
               columns: <GridColumn>[
                 GridColumn(
-                    columnName: 'group',
+                    columnName: 'worker',
                     label: Container(
                         padding: EdgeInsets.all(16.0),
                         alignment: Alignment.center,
                         child: Text(
-                          'Group',
+                          'Worker',
                         ))),
                 GridColumn(
                     columnName: 'name',
@@ -1439,6 +1405,8 @@ Widget build(BuildContext context) {
       ),
     );
   }
+
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-perform-filtering-to-the-user-defined-type-in-Flutter-DataGrid).
   
 {% endhighlight %}
 {% endtabs %}
