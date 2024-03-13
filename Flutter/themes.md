@@ -114,6 +114,17 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
     </tr>
     <tr>
         <td>
+            <a href="">SfSparkChartThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html">SfSparkLineChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html">SfSparkBarChart</a> <br/>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html">SfSparkAreaChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html">SfSparkWinLossChart</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
          <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html">SfDataGridThemeData</a>
         </td>
         <td>
@@ -276,7 +287,18 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
     <tr>
         <td>
-         <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html">SfDataGridThemeData</a>
+            <a href="">SfSparkChartTheme</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html">SfSparkLineChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html">SfSparkBarChart</a> <br/>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html">SfSparkAreaChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html">SfSparkWinLossChart</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html">SfDataGridTheme</a>
         </td>
         <td>
              <a href="https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html">SfDataGrid</a>
