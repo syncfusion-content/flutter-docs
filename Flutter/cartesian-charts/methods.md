@@ -79,9 +79,9 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
 
-[`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipValue/seriesIndex.html) - index of the series for which the pointIndex is specified.
+* `seriesIndex` - index of the series for which the pointIndex is specified.
 
-[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipValue/pointIndex.html)  - index of the point for which the tooltip should be shown.
+* `pointIndex` - index of the point for which the tooltip should be shown.
 
 
 {% tabs %}
@@ -473,7 +473,7 @@ Provided the following methods for handling pointer and gesture events and allow
 * `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
 * `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
 
-This following code snippet defines how to enable/disable specific pointer events and customize to show trackball in double tap and disabled trackball showing in pointer enter and exit.
+This following code sample defines how to enable or disable specific pointer events and customize to show trackball in double tap and disabled trackball showing in pointer enter and exit.
 
 {% tabs %}
 {% highlight dart %} 
@@ -827,7 +827,7 @@ Provided the following methods for handling pointer and gesture events and allow
 * `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
 * `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
 
-This following code snippet defines how to enable/disable specific pointer events and customize to show crosshair in double tap and disabled crosshair showing in pointer enter and exit.
+This following code sample defines how to enable or disable specific pointer events and customize to show crosshair in double tap and disabled crosshair showing in pointer enter and exit.
 
 {% tabs %}
 {% highlight dart %} 
@@ -988,7 +988,7 @@ To customize the tooltip label, position, and style for horizontal axis tooltip.
 
 To customize the tooltip label, position, and style for vertical axis tooltip.
 
-For further reference, please consult the drawHorizontalAxisTooltip code snippet.
+For further reference, please consult the drawHorizontalAxisTooltip code sample.
 
 ![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
 
