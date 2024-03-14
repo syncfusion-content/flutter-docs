@@ -1405,8 +1405,6 @@ Widget build(BuildContext context) {
       ),
     );
   }
-
-Download the demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-perform-filtering-to-the-user-defined-type-in-Flutter-DataGrid).
-  
+ 
 {% endhighlight %}
 {% endtabs %}
