@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pyramid Chart Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion Pyramid Chart widget in FlutterFlow.
+description: Learn here all about adding Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget in FlutterFlow.
 platform: flutter
 control: Chart
 documentation: ug

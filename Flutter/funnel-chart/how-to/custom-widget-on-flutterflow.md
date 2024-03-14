@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funnel Chart Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion Funnel Chart widget in FlutterFlow .
+description: Learn here all about adding Syncfusion Flutter Funnel Chart (SfFunnelChart) widget in FlutterFlow .
 platform: flutter
 control: Chart
 documentation: ug

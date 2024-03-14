@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Circular Chart Widget in FlutterFlow | Syncfusion 
-description: Learn here all about adding Syncfusion Circular Chart widget in FlutterFlow.
+description: Learn here all about adding Syncfusion Flutter Circular Chart (SfCircularChart) widget in FlutterFlow.
 platform: flutter
 control: Chart
 documentation: ug

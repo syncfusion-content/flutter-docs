@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RangeSlider Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion RangeSlider widget in FlutterFlow.
+description: Learn here all about adding Syncfusion Flutter Range Slider (SfRangeSlider) widget in FlutterFlow.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
