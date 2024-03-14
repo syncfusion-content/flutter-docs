@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Slider Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion Flutter Slider (SfSlider Widget ) widget in FlutterFlow.
+description: Learn here all about adding Syncfusion Flutter Slider ( SfSlider Widget ) widget in FlutterFlow Framework.
 platform: flutter
 control: SfSlider
 documentation: ug

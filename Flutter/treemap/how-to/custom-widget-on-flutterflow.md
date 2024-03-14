@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Treemap Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion Flutter Treemap ( SfTreemap Widget ) widget in FlutterFlow.
+description: Learn here all about adding Syncfusion Flutter Treemap ( SfTreemap Widget ) widget in FlutterFlow Framework.
 platform: flutter
 control: SfTreemap
 documentation: ug
