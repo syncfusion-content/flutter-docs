@@ -6,10 +6,11 @@ platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
+# Localization in Flutter DataGrid and DataPager
 
-# Localization in Flutter DataGrid (SfDataGrid)
+## Localization in Flutter DataGrid (SfDataGrid)
 
-## Localization in filter pop-up menu
+### Localization in filter pop-up menu
 By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) filter popup menu supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and [syncfusion_localizations](https://pub.dev/packages/syncfusion_localizations) package to your application.
 
 To use `flutter_localizations` and `syncfusion_localizations`, add the package as a dependency to the `pubspec.yaml` file.
@@ -101,8 +102,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datapager with localization](images/localization/flutter-datagrid-localization.png)
-
+<img alt="flutter datagrid localization" src="images/localization/flutter-datagrid-localization.jpg" width="480"/>
 
 ## Localization in Flutter DataPager (SfDataPager)
 
@@ -312,4 +312,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datapager with localization](images/localization/flutter-datapager-localization.png)
+<img alt="flutter datagrid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
