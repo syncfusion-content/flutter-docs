@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo Actions on the Annotations in Flutter PDF Viewer Widget | Syncfusion
+title: Undo and redo annotations in the Flutter PDF Viewer | Syncfusion
 description: Learn here all about Undo and Redo actions on the annotations in Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and Redo actions on the annotations in Flutter PDF Viewer widget (Syncfusion)
+# Undo and redo annotations in the Flutter PDF Viewer (Syncfusion)
 
 If you performed any undesired actions when adding, removing, or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to undo and redo the changes made to the annotations.
 
@@ -31,7 +31,7 @@ For desktop platforms such as Windows, macOS, and desktop web, you can use the f
 </tr>
 </table>
 
-You can perform the undo and redo operations in the `SfPdfViewer` by assigning the `UndoHisotyController` instance to the `undoController` property of the `SfPdfViewer`. The UndoHistoryController class contains the `undo` and `redo` methods to perform the undo and redo operations, respectively. The `canUndo` and `canRedo` properties are used to check whether the undo and redo operations can be performed, respectively. The following code example illustrates how to perform the undo and redo operations programmatically in the `SfPdfViewer` with the help of the UndoHistoryController class.
+You can perform the undo and redo operations in the `SfPdfViewer` by assigning the `UndoHistoryController` instance to the `undoController` property of the `SfPdfViewer`. The UndoHistoryController class contains the `undo` and `redo` methods to perform the undo and redo operations, respectively. The `canUndo` and `canRedo` properties check whether the undo and redo operations can be performed, respectively. The following code example illustrates how to perform the undo and redo operations programmatically in the `SfPdfViewer` with the help of the UndoHistoryController class.
 
 {% tabs %}
 {% highlight dart hl_lines="12 13 21 22 29" %}
@@ -72,3 +72,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+N> This `undoController` is common for annotations and form fields. You do not need to create separate instances for both.

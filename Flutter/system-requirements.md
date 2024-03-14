@@ -46,7 +46,7 @@ See the links below for the recommended Flutter development environments
         <td style="text-align:center">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.19.0-stable.zip">3.19.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.7">24.2.7</a> <24.2.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.7">24.2.7</a> <25.1.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
         </td>
     </tr>
       <tr>
