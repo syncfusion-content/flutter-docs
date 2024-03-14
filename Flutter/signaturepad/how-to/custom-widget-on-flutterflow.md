@@ -2,7 +2,7 @@
 layout: post
 title: SignaturePad Widget in FlutterFlow | Syncfusion
 description: Learn here all about adding Syncfusion Flutter Signature Pad (SfSignaturePad) widget in FlutterFlow.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
