@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel(XlsIO) Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Excel(XlsIO) widget in FlutterFlow.
+description: You can learn here all about adding Syncfusion Flutter Excel(XlsIO) (SfXlsIO) widget in FlutterFlow Framework.
 platform: flutter
 control: Excel
 documentation: ug

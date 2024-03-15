@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter PDF ( SfPDF Widget ) widget in FlutterFlow.
+description: You can learn here all about adding Syncfusion Flutter PDF ( SfPDF Widget ) widget in FlutterFlow Framework.
 platform: flutter
 control: PDF
 documentation: ug
