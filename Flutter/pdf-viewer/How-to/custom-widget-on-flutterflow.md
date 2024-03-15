@@ -2,7 +2,7 @@
 layout: post
 title: PdfViewer Widget in FlutterFlow | Syncfusion
 description: You can learn here all about adding Syncfusion Flutter Pdf Viewer ( SfPdfViewer Widget ) widget in FlutterFlow.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -37,6 +37,8 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: The live version of [Syncfusion Flutter PdfViewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter PdfViewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
+![Dependency](images/dependency.png)
+
 >**Note**: If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
 
 >**Note**: Since [Syncfusion Flutter PdfViewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
@@ -46,16 +48,21 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to the `Installing` tab on the [Syncfusion Flutter PdfViewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) page. Under the `Import it` section, copy the package import statement.
 ![Package](images/copy-package.png)
 2. Paste the copied import statement into the code editor and then `Save` it.
+![Import](images/import-package-flutterflow.png)
 
 ### Add widget code snippet in code editor
 
 1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_PdfViewer/example) tab in [Syncfusion Flutter PdfViewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) and copy the widget specific codes.
+![Code](images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
+![Code snippet](images/Adding-code-snippent.png)
 
 ### Compiling the codes
 
 1. Click the 'Compile Code' button located in the top right corner.
 2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
+
+![Compile code](images/compile-code.png)
 
 >**Note**: The compilation progress takes 2 to 3 minutes to complete.
 
@@ -64,3 +71,5 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to `Widget Palette` located in the left side navigation menu.
 2. Click on the `Componenets` tab.
 3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+
+![Page](images/page.png)
