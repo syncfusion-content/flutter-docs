@@ -1318,9 +1318,9 @@ Widget build(BuildContext context) {
 
 class CustomSelectionManager extends RowSelectionManager {
   @override
-  void handleKeyEvent(RawKeyEvent keyEvent) {
+  void handleKeyEvent(KeyEvent keyEvent) {
     if (keyEvent.logicalKey == LogicalKeyboardKey.keyA) {
-      if (keyEvent.isControlPressed) {
+      if (HardwareKeyboard.instance.isControlPressed) {
         //apply your logic
         return;
       }
@@ -1394,7 +1394,7 @@ Widget build(BuildContext context) {
 
 class CustomSelectionManager extends RowSelectionManager {
   @override
-  void handleKeyEvent(RawKeyEvent keyEvent) {
+  void handleKeyEvent(KeyEvent keyEvent) {
     if (keyEvent.logicalKey == LogicalKeyboardKey.enter) {
       //apply your logic
       return;
