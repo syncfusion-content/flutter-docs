@@ -6,8 +6,105 @@ platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
+# Localization in Flutter DataGrid and DataPager
 
-# Localization in Flutter DataPager (SfDataPager)
+## Localization in Flutter DataGrid (SfDataGrid)
+
+### Localization in filter pop-up menu
+By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) filter popup menu supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and [syncfusion_localizations](https://pub.dev/packages/syncfusion_localizations) package to your application.
+
+To use `flutter_localizations` and `syncfusion_localizations`, add the package as a dependency to the `pubspec.yaml` file.
+
+{% highlight dart %}
+
+dependencies:
+flutter_localizations:
+  sdk: flutter
+syncfusion_localizations: ^24.2.7
+
+{% endhighlight %}
+
+Next, import the `flutter_localizations` and `syncfusion_localizations` library.
+
+{% highlight dart %}
+
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_localizations/syncfusion_localizations.dart';
+
+{% endhighlight %}
+
+Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations/delegate-constant.html) in the `localizationsDelegates,` which is used to localize the static string available in the data pager and specify the `supportedLocales` as well.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        SfGlobalLocalizations.delegate
+      ],
+      supportedLocales: const [
+        Locale('zh'),
+        Locale('ar'),
+        Locale('ja'),
+      ],
+      locale: const Locale('ar'),
+      home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataGrid(
+          source: employeeDataSource,
+          columnWidthMode: ColumnWidthMode.fill,
+          gridLinesVisibility: GridLinesVisibility.both,
+          headerGridLinesVisibility: GridLinesVisibility.both,
+          allowFiltering: true,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Name'))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Salary'))),
+          ],
+        ),
+      ),
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid localization" src="images/localization/flutter-datagrid-localization.jpg" width="480"/>
+
+## Localization in Flutter DataPager (SfDataPager)
 
 By default, the [SfDataPager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager-class.html) widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
@@ -215,4 +312,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datapager with localization](images/localization/flutter-datapager-localization.png)
+<img alt="flutter datagrid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
