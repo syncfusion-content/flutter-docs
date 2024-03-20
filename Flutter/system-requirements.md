@@ -31,9 +31,9 @@ The system requirements for using our Syncfusion Flutter platform are as follows
 
 See the links below for the recommended Flutter development environments
 
-* Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
-* MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
-* Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://docs.flutter.dev/get-started/install/linux)
+* Windows - [`https://docs.flutter.dev/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
+* MacOS - [`https://docs.flutter.dev/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
+* Linux - [`https://docs.flutter.dev/get-started/install/linux`](https://docs.flutter.dev/get-started/install/linux)
 
 ### SDK Version Compatibility
 
@@ -90,6 +90,6 @@ See the links below for the recommended Flutter development environments
 
 Our Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. You can find the supported version at the link below.
 
-[`https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms`](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms)
+[`https://docs.flutter.dev/reference/supported-platforms#supported-platforms`](https://docs.flutter.dev/reference/supported-platforms#supported-platforms)
 
 >**Note**: Currently, the PDF viewer control is not supported on the Linux platform.
