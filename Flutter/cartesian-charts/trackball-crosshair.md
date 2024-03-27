@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trackball and Crosshair in Flutter Cartesian Charts | Syncfusion 
-description: Learn here all about Trackball and Crosshair feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Trackball and Crosshair in Flutter Cartesian | Syncfusion 
+description: Learn here all about trackball and crosshair feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
@@ -78,7 +78,7 @@ You can use the following properties to customize the appearance of trackball to
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball](images/trackball-crosshair/default_trackball.jpg)
+![Trackball in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-default-trackball.jpg)
 
 ### Label display mode
 
@@ -128,7 +128,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 {% endhighlight %}
 {% endtabs %}
 
-![Label display mode](images/trackball-crosshair/label_display_mode.jpg)
+![Label display mode in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-display-mode.jpg)
 
 ### Label alignment
 
@@ -179,7 +179,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 {% endhighlight %}
 {% endtabs %}
 
-![Label alignment](images/trackball-crosshair/label_alignment.jpg)
+![Label alignment in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-alignment.jpg)
 
 >**Note**: This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
 
@@ -227,7 +227,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
 {% endhighlight %}
 {% endtabs %}
 
-![Label format](images/trackball-crosshair/label_format.jpg)
+![Label format in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-format.jpg)
 
 ###	Activation mode
 
@@ -341,7 +341,7 @@ The ActivationMode enum contains the following values:
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
+![Trackball tooltip overlap in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-overlap.png)
 
 And moreover, the trackball tooltip will render on the right side of the trackball line if adequate space is available else will be moved to the left by default. The trackball tooltip is smartly positioned above the trackball line if there is no space on the right and left sides of the trackball line. However, the trackball tooltip size must be smaller than the chart's plot area size.
 
@@ -421,7 +421,7 @@ And moreover, the trackball tooltip will render on the right side of the trackba
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip smart positioning](images/trackball-crosshair/trackball_smart_positioning.gif)
+![Trackball tooltip smart positioning in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-smart-positioning.gif)
 
 ### Trackball marker settings
 
@@ -485,7 +485,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball marker](images/trackball-crosshair/trackball_marker.png)
+![Trackball marker in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-marker.png)
 
 #### See Also
 
@@ -573,7 +573,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball template](images/trackball-crosshair/trackball_template.jpg)
+![Trackball template in Flutter Cartesian Chaers.](images/trackball-crosshair/flutter-cartesian-charts-trackball-template.jpg)
 
 ### Trackball grouping mode info
 [TrackballGroupingModeInfo](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo-class.html) is store the group mode details of trackball template.
@@ -652,7 +652,7 @@ Defaults to `true`.
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip marker](images/trackball-crosshair/trackball_tooltip_marker.png)
+![Trackball tooltip marker in Flutter Cartesian Charts.](images/trackball-crosshair/trackball_tooltip_marker.png)
 
 #### See Also
 
@@ -708,7 +708,7 @@ The crosshair state will be preserved on the device's orientation change and on 
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
+![Crosshair in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-chart-default-crosshair.jpg)
 
 ### Track line customization
 
@@ -755,7 +755,7 @@ The appearance of the track line in crosshair can be customized using the follow
 {% endhighlight %}
 {% endtabs %}
 
-![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
+![Customized trackline in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-customized-trackline.jpg)
 
 ### Show axis tooltip
 
@@ -773,14 +773,14 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 
 ### Activation mode
 
-The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html).
+The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress).
 
 The ActivationMode enum contains the following values:
 
-* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing the long press action.
-* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing single tap action.
-* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing double tap action.
-* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
+* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates crosshair only when performing the long press action.
+* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap) - activates crosshair only when performing single tap action.
+* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#doubleTap) - activates crosshair only when performing double tap action.
+* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
 
 {% tabs %}
 {% highlight dart %} 
