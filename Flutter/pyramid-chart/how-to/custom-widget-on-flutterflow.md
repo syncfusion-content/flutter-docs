@@ -69,7 +69,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ### Utilizing the custom widget
 
 1. Navigate to `Widget Palette` located in the left side navigation menu.
-2. Click on the `Componenets` tab.
+2. Click on the `Components` tab.
 3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
 
 ![Page](how-to-section-images/page.png)
