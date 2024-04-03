@@ -1077,7 +1077,7 @@ Vladivostok Standard Time
 Asia/Vladivostok
 </td>
 <td>
-UTC + 11:00
+UTC + 10:00
 </td>
 </tr>
 <tr>
