@@ -1781,7 +1781,7 @@ This following code sample defines how to perform zoom in and out behavior in do
 {% endhighlight %}
 {% endtabs %}
 
-![Customized double tap](images\zooming-panning\custom_double_tap_zooming.gif)
+![Customized double tap](images\zooming-panning\custom_double_tap_zoom.gif)
 
 ### onPaint in ZoomPanBehavior
 
@@ -1946,7 +1946,7 @@ This following code sample defines how to perform selection zooming and customiz
 {% endhighlight %}
 {% endtabs %}
 
-![Customized selection zooming](images\zooming-panning\custom_single_tap_selection_zooming.gif)
+![Customized selection zooming](images\zooming-panning\custom_selection_zooming.png)
 
 ## UpdateDataSource
 
