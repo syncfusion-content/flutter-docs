@@ -1715,7 +1715,7 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ### Events in zoomPanBehavior
 
-Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as double-tap, scale and long-press.
 
 * `handleEvent` - Specifies to customize the necessary pointer events.
 * `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
@@ -1739,7 +1739,10 @@ This following code sample defines how to perform zoom in and out behavior in do
       primaryXAxis: xAxis,
       primaryYAxis: yAxis,
       zoomPanBehavior: CustomDoubleTapZoomPanBehavior(xAxis, yAxis),
-      // Add series.
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
     );
 
     class CustomDoubleTapZoomPanBehavior extends ZoomPanBehavior {
@@ -1751,28 +1754,19 @@ This following code sample defines how to perform zoom in and out behavior in do
       @override
       bool get enableDoubleTapZooming => true;
 
-      RRect? customRect;
-      Rect? zoomRect;
-      Offset? customRectStartPosition;
-      Offset? circlePosition;
-      Color? circleColor;
-
-      bool isZoomIn = true;
+      bool _isZoomIn = true;
 
       @override
       void handleDoubleTap(Offset position) {
         if (parentBox == null && !enableDoubleTapZooming) {
           return;
         }
-
-        // calculate zoomFactor and zoomPosition value based on zoomLevel.
         const double origin = 0.5;
-        final double cumulativeZoomLevel = isZoomIn ? 1.4 : 1.0;
+        final double cumulativeZoomLevel = _isZoomIn ? 1.4 : 1.0;
         double zoomFactor = 1 / cumulativeZoomLevel;
         double zoomPosition = (1 - zoomFactor) * origin;
-        isZoomIn = !isZoomIn;
 
-        // update zoomFactor and zoomPosition here for both axis.
+        _isZoomIn = !_isZoomIn;
         zoomToSingleAxis(xAxis, zoomPosition, zoomFactor);
         zoomToSingleAxis(yAxis, zoomPosition, zoomFactor);
       }
@@ -1794,21 +1788,24 @@ This following code sample defines how to perform selection zooming and customiz
 
     SfCartesianChart(
       zoomPanBehavior: CustomScaleZoomPanBehavior(),
-      // Add series.
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
     );
 
     class CustomScaleZoomPanBehavior extends ZoomPanBehavior {
       @override
       bool get enableSelectionZooming => true;
 
-      RRect? customRect;
-      Rect? zoomRect;
-      Offset? customRectStartPosition;
-      Offset? textPosition;
+      RRect? _customRect;
+      Rect? _zoomRect;
+      Offset? _customRectStartPosition;
+      Offset? _textPosition;
 
       @override
       void handleScaleStart(ScaleStartDetails details) {
-        customRectStartPosition = parentBox!.globalToLocal(details.focalPoint);
+        _customRectStartPosition = parentBox!.globalToLocal(details.focalPoint);
       }
 
       @override
@@ -1822,11 +1819,11 @@ This following code sample defines how to perform selection zooming and customiz
 
       @override
       void handleScaleEnd(ScaleEndDetails details) {
-        customRectStartPosition = null;
-        textPosition = null;
-        zoomByRect(zoomRect!);
-        customRect = RRect.zero;
-        zoomRect = Rect.zero;
+        _customRectStartPosition = null;
+        _textPosition = null;
+        zoomByRect(_zoomRect!);
+        _customRect = RRect.zero;
+        _zoomRect = Rect.zero;
         parentBox?.markNeedsPaint();
       }
 
@@ -1845,23 +1842,22 @@ This following code sample defines how to perform selection zooming and customiz
       @override
       void onPaint(PaintingContext context, Offset offset,
           SfChartThemeData chartThemeData, ThemeData themeData) {
-        if (zoomRect == null || textPosition == null) {
+        if (_zoomRect == null || _textPosition == null) {
           return;
         }
         _drawCustomRect(context, chartThemeData, themeData);
         _drawText(context.canvas);
       }
 
-      // calculate rect for selection zooming
       void _calculateCustomRect(Offset position) {
         if (parentBox == null) {
           return;
         }
-        if (customRectStartPosition != null) {
+        if (_customRectStartPosition != null) {
           final Rect clipRect = parentBox!.paintBounds;
           final Offset startPosition = Offset(
-            max(customRectStartPosition!.dx, clipRect.left),
-            max(customRectStartPosition!.dy, clipRect.top),
+            max(_customRectStartPosition!.dx, clipRect.left),
+            max(_customRectStartPosition!.dy, clipRect.top),
           );
           Offset currentPosition = position;
           final double currentX =
@@ -1881,9 +1877,9 @@ This following code sample defines how to perform selection zooming and customiz
           double bottom = startPosition.dy < currentPosition.dy
               ? currentPosition.dy
               : startPosition.dy;
-          zoomRect = Rect.fromLTRB(left, top, right, bottom);
-          customRect = RRect.fromRectAndRadius(zoomRect!, Radius.circular(20));
-          textPosition = currentPosition;
+          _zoomRect = Rect.fromLTRB(left, top, right, bottom);
+          _customRect = RRect.fromRectAndRadius(_zoomRect!, Radius.circular(20));
+          _textPosition = currentPosition;
         }
       }
 
@@ -1894,8 +1890,8 @@ This following code sample defines how to perform selection zooming and customiz
           ..color = Colors.teal.withOpacity(0.7)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 2;
-        context.canvas.drawRRect(customRect!, customRectPaint);
-        context.canvas.drawRRect(customRect!, customStrokeRectPaint);
+        context.canvas.drawRRect(_customRect!, customRectPaint);
+        context.canvas.drawRRect(_customRect!, customStrokeRectPaint);
       }
 
       double _minMax(double value, double min, double max) {
@@ -1903,10 +1899,10 @@ This following code sample defines how to perform selection zooming and customiz
       }
 
       void _drawText(Canvas canvas) {
-        String left = zoomRect!.left.toStringAsFixed(2);
-        String top = zoomRect!.top.toStringAsFixed(2);
-        String right = zoomRect!.right.toStringAsFixed(2);
-        String bottom = zoomRect!.bottom.toStringAsFixed(2);
+        String left = _zoomRect!.left.toStringAsFixed(2);
+        String top = _zoomRect!.top.toStringAsFixed(2);
+        String right = _zoomRect!.right.toStringAsFixed(2);
+        String bottom = _zoomRect!.bottom.toStringAsFixed(2);
         String text =
             'left: $left \n top: $top \n right: $right \n bottom: $bottom';
         final TextSpan span = TextSpan(
@@ -1917,25 +1913,24 @@ This following code sample defines how to perform selection zooming and customiz
           textDirection: TextDirection.ltr,
         );
         textPainter.layout();
-        if (zoomRect!.width < textPainter.width ||
-            zoomRect!.height < textPainter.height) {
+        if (_zoomRect!.width < textPainter.width ||
+            _zoomRect!.height < textPainter.height) {
           return;
         }
-        // Added padding for text.
         double leftX = 0;
         double topY = 0;
-        if (zoomRect!.left == textPosition!.dx) {
+        if (_zoomRect!.left == _textPosition!.dx) {
           leftX = 80;
         } else {
           leftX = -10;
         }
-        if (zoomRect!.top == textPosition!.dy) {
+        if (_zoomRect!.top == _textPosition!.dy) {
           topY = 60;
         } else {
           topY = -10;
         }
         canvas.save();
-        canvas.translate(textPosition!.dx, textPosition!.dy);
+        canvas.translate(_textPosition!.dx, _textPosition!.dy);
         final Offset labelOffset =
             Offset(-textPainter.width + leftX, -textPainter.height + topY);
         textPainter.paint(canvas, labelOffset);
