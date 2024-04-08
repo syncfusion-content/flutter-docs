@@ -1731,7 +1731,6 @@ This following code sample defines how to perform zoom in and out behavior in do
 {% endhighlight %}
 {% endtabs %}
 
-    // initialize x and y axis based on the axis used in sample.
     CategoryAxis xAxis = CategoryAxis();
     NumericAxis yAxis = NumericAxis();
 
