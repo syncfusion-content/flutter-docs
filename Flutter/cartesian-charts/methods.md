@@ -1713,6 +1713,235 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% endhighlight %}
 {% endtabs %}
 
+### Events in zoomPanBehavior
+
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as double-tap, scale and long-press.
+
+* `handleEvent` - Specifies to customize the necessary pointer events.
+* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* `handleScaleStart` - Specifies to customize the pointer event when the pointers begins to move.
+* `handleScaleUpdate` - Specifies to customize the pointer event when the pointers in the moving state.
+* `handleScaleEnd` - Specifies to customize the pointer event when the pointers stops moving and contacting on the screen.
+* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+
+This following code sample defines how to perform zoom in and out behavior in double tap zooming.
+
+{% endhighlight %}
+{% endtabs %}
+
+    CategoryAxis xAxis = CategoryAxis();
+    NumericAxis yAxis = NumericAxis();
+
+    SfCartesianChart(
+      primaryXAxis: xAxis,
+      primaryYAxis: yAxis,
+      zoomPanBehavior: CustomDoubleTapZoomPanBehavior(xAxis, yAxis),
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
+    );
+
+    class CustomDoubleTapZoomPanBehavior extends ZoomPanBehavior {
+      CustomDoubleTapZoomPanBehavior(this.xAxis, this.yAxis);
+
+      CategoryAxis xAxis;
+      NumericAxis yAxis;
+
+      @override
+      bool get enableDoubleTapZooming => true;
+
+      bool _isZoomIn = true;
+
+      @override
+      void handleDoubleTap(Offset position) {
+        if (parentBox == null && !enableDoubleTapZooming) {
+          return;
+        }
+        const double origin = 0.5;
+        final double cumulativeZoomLevel = _isZoomIn ? 1.4 : 1.0;
+        double zoomFactor = 1 / cumulativeZoomLevel;
+        double zoomPosition = (1 - zoomFactor) * origin;
+
+        _isZoomIn = !_isZoomIn;
+        zoomToSingleAxis(xAxis, zoomPosition, zoomFactor);
+        zoomToSingleAxis(yAxis, zoomPosition, zoomFactor);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized double tap](images\zooming-panning\custom_double_tap_zoom.gif)
+
+### onPaint in ZoomPanBehavior
+
+To customize the tooltip label, position, and selection rect of the zooming.
+
+This following code sample defines how to perform selection zooming and customize the selection zooming rect in single tap using scale methods.
+
+{% endhighlight %}
+{% endtabs %}
+
+    SfCartesianChart(
+      zoomPanBehavior: CustomScaleZoomPanBehavior(),
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
+    );
+
+    class CustomScaleZoomPanBehavior extends ZoomPanBehavior {
+      @override
+      bool get enableSelectionZooming => true;
+
+      RRect? _customRect;
+      Rect? _zoomRect;
+      Offset? _customRectStartPosition;
+      Offset? _textPosition;
+
+      @override
+      void handleScaleStart(ScaleStartDetails details) {
+        _customRectStartPosition = parentBox!.globalToLocal(details.focalPoint);
+      }
+
+      @override
+      void handleScaleUpdate(ScaleUpdateDetails details) {
+        if (details.pointerCount != 1 || !enableSelectionZooming) {
+          return;
+        }
+        _calculateCustomRect(parentBox!.globalToLocal(details.focalPoint));
+        parentBox!.markNeedsPaint();
+      }
+
+      @override
+      void handleScaleEnd(ScaleEndDetails details) {
+        _customRectStartPosition = null;
+        _textPosition = null;
+        zoomByRect(_zoomRect!);
+        _customRect = RRect.zero;
+        _zoomRect = Rect.zero;
+        parentBox?.markNeedsPaint();
+      }
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressStart(LongPressStartDetails details) {}
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressMoveUpdate(LongPressMoveUpdateDetails details) {}
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressEnd(LongPressEndDetails details) {}
+
+      @override
+      void onPaint(PaintingContext context, Offset offset,
+          SfChartThemeData chartThemeData, ThemeData themeData) {
+        if (_zoomRect == null || _textPosition == null) {
+          return;
+        }
+        _drawCustomRect(context, chartThemeData, themeData);
+        _drawText(context.canvas);
+      }
+
+      void _calculateCustomRect(Offset position) {
+        if (parentBox == null) {
+          return;
+        }
+        if (_customRectStartPosition != null) {
+          final Rect clipRect = parentBox!.paintBounds;
+          final Offset startPosition = Offset(
+            max(_customRectStartPosition!.dx, clipRect.left),
+            max(_customRectStartPosition!.dy, clipRect.top),
+          );
+          Offset currentPosition = position;
+          final double currentX =
+              _minMax(currentPosition.dx, clipRect.left, clipRect.right);
+          final double currentY =
+              _minMax(currentPosition.dy, clipRect.top, clipRect.bottom);
+          currentPosition = Offset(currentX, currentY);
+          double left = startPosition.dx > currentPosition.dx
+              ? currentPosition.dx
+              : startPosition.dx;
+          double top = startPosition.dy > currentPosition.dy
+              ? currentPosition.dy
+              : startPosition.dy;
+          double right = startPosition.dx < currentPosition.dx
+              ? currentPosition.dx
+              : startPosition.dx;
+          double bottom = startPosition.dy < currentPosition.dy
+              ? currentPosition.dy
+              : startPosition.dy;
+          _zoomRect = Rect.fromLTRB(left, top, right, bottom);
+          _customRect = RRect.fromRectAndRadius(_zoomRect!, Radius.circular(20));
+          _textPosition = currentPosition;
+        }
+      }
+
+      void _drawCustomRect(PaintingContext context, SfChartThemeData chartThemeData,
+          ThemeData themeData) {
+        final Paint customRectPaint = Paint()..color = Colors.teal.withOpacity(0.1);
+        final Paint customStrokeRectPaint = Paint()
+          ..color = Colors.teal.withOpacity(0.7)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2;
+        context.canvas.drawRRect(_customRect!, customRectPaint);
+        context.canvas.drawRRect(_customRect!, customStrokeRectPaint);
+      }
+
+      double _minMax(double value, double min, double max) {
+        return value > max ? max : (value < min ? min : value);
+      }
+
+      void _drawText(Canvas canvas) {
+        String left = _zoomRect!.left.toStringAsFixed(2);
+        String top = _zoomRect!.top.toStringAsFixed(2);
+        String right = _zoomRect!.right.toStringAsFixed(2);
+        String bottom = _zoomRect!.bottom.toStringAsFixed(2);
+        String text =
+            'left: $left \n top: $top \n right: $right \n bottom: $bottom';
+        final TextSpan span = TextSpan(
+            text: text, style: TextStyle(fontSize: 10, color: Colors.black));
+        final TextPainter textPainter = TextPainter(
+          text: span,
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.ltr,
+        );
+        textPainter.layout();
+        if (_zoomRect!.width < textPainter.width ||
+            _zoomRect!.height < textPainter.height) {
+          return;
+        }
+        double leftX = 0;
+        double topY = 0;
+        if (_zoomRect!.left == _textPosition!.dx) {
+          leftX = 80;
+        } else {
+          leftX = -10;
+        }
+        if (_zoomRect!.top == _textPosition!.dy) {
+          topY = 60;
+        } else {
+          topY = -10;
+        }
+        canvas.save();
+        canvas.translate(_textPosition!.dx, _textPosition!.dy);
+        final Offset labelOffset =
+            Offset(-textPainter.width + leftX, -textPainter.height + topY);
+        textPainter.paint(canvas, labelOffset);
+        canvas.restore();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized selection zooming](images\zooming-panning\custom_selection_zooming.png)
+
 ## UpdateDataSource
 
 Used to process only the newly added, updated, and removed data points in a series, instead of processing all the data points.
