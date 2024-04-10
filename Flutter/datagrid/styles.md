@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styling feature in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to customize the appearance of DataGrid in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about how to customize the appearance of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

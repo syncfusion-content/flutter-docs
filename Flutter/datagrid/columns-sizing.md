@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns sizing in Flutter DataGrid | Syncfusion | DataTable
+title: Columns sizing in Flutter DataGrid | Data Table | Syncfusion
 description: Learn here all about how to set the width for columns in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
@@ -89,7 +89,7 @@ Widget build(BuildContext context) {
 > **NOTE**  
     The `GridColumn.columnWidthMode` takes higher priority than the `SfDataGrid.columnWidthMode`.
 
-![columns filled based on view port size in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-columns.png)
+![columns filled based on view port size in Flutter Datagrid](images/autofit-columns/flutter-datagrid-fill-columns.png)
 
 ## Consider all the rows to calculate the autofit size
 
@@ -241,7 +241,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of padding in autofit calculation](images/autofit-columns/flutter-datagrid-autofitpadding-customization.png)
+![Flutter Datagrid shows customization of padding in autofit calculation](images/autofit-columns/flutter-datagrid-autofitpadding-customization.png)
 
 ## Autofit calculation based on different TextStyle
 
@@ -362,7 +362,7 @@ class CustomColumnSizer extends ColumnSizer {
 **NOTE**  
   Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-column-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
 
-![flutter datagrid shows autofit the columns based on different text style](images/autofit-columns/flutter-datagrid-textstyle-customization.png)
+![Flutter Datagrid shows autofit the columns based on different text style](images/autofit-columns/flutter-datagrid-textstyle-customization.png)
 
 ## Autofit calculation based on the formatted value 
 
@@ -482,7 +482,7 @@ class CustomColumnSizer extends ColumnSizer {
 **NOTE**  
   Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-columns-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
-![flutter datagrid shows autofit the columns based on formatted cell value](images/autofit-columns/flutter-datagrid-formatted-cellvalue.png)
+![Flutter Datagrid shows autofit the columns based on formatted cell value](images/autofit-columns/flutter-datagrid-formatted-cellvalue.png)
 
 ## Fill the remaining width for any column
 
@@ -540,7 +540,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![The last column is filled in view in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-lastcolumn.png)
+![The last column is filled in view in Flutter Datagrid](images/autofit-columns/flutter-datagrid-fill-lastcolumn.png)
 
 The below example shows Name column is set as `lastColumnFill` mode.
 
@@ -596,7 +596,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Name column is filled with remaining available space in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-anycolumn.png)
+![Name column is filled with remaining available space in Flutter Datagrid](images/autofit-columns/flutter-datagrid-fill-anycolumn.png)
 
 ## Recalculating column widths when datasource is changed
 
