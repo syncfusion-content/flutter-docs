@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in Flutter DataGrid | Flutter DataTable | Syncfusion
-description: Learn here all about how to perform editing in Syncfusion Flutter Datagrid (SfDataGrid) widget and more.
+description: Learn here all about how to perform editing in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
