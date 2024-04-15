@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Styling feature in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to customize the appearance of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about how to customize the appearance of Syncfusion Flutter Datagrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Styling in Flutter DataGrid (SfDataGrid)
+# Styling in Flutter Datagrid (SfDataGrid)
 
 The DataGrid supports to change the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid header background color](images/styles/flutter-datagrid-column-header-styling.png)
+![Flutter DataGrid header background color](images/styles/flutter-datagrid-column-header-styling.png)
 
 ## Change the header hover color
 
@@ -131,7 +131,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
+![Flutter DataGrid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
 
 ## Change the row background color
 
@@ -182,7 +182,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid row background color](images/styles/flutter-datagrid-rows-styling.png)
+![Flutter DataGrid row background color](images/styles/flutter-datagrid-rows-styling.png)
 
 ## Styling grid lines
 
@@ -240,7 +240,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
+![Flutter DataGrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
 
 ## Show vertical and horizontal grid lines
 
@@ -312,7 +312,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
+![Flutter DataGrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
 
 ## Disable the row highlighting
 
@@ -415,7 +415,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
+![Flutter DataGrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
 
 ## Change the cell value color
 
@@ -471,4 +471,4 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)
+![Flutter DataGrid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)
