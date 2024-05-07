@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Cartesian Charts widget | Syncfusion
+title: Getting Started with Flutter Cartesian Charts widget | Syncfusion
 description:  Learn here about getting started with Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, its elements, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting started with Flutter Cartesian Charts (SfCartesianChart)
+# Getting Started with Flutter Cartesian Charts (SfCartesianChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
