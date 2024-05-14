@@ -474,7 +474,7 @@ Essential Flutter PDF supports Built-in table styles. This will help you  apply 
 * Header row
 * Last row
 
-We have various built-in styles for [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) and  some of the styles have no changes to the background color property. For example, the below listed styles do not have a background color. As the default background color is white, it is directly applied to each row in the grid. 
+We have various built-in styles for PdfGrid and  some of the styles have no changes to the background color property. For example, the below listed styles do not have a background color. As the default background color is white, it is directly applied to each row in the grid. 
 * PdfGridBuiltInStyle.gridTable1Light
 * PdfGridBuiltInStyle.gridTable1LightAccent1
 * PdfGridBuiltInStyle.gridTable1LightAccent2
