@@ -466,7 +466,7 @@ document.dispose();
 
 ## Apply built-in grid style
 
-Essential Flutter PDF supports Built-in table styles. This will help you  apply background colors and styles to your grid. This is applicable to the ['PdfGrid']('https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html') model, and the appearance is identical to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
+Essential Flutter PDF supports Built-in table styles. This will help you  apply background colors and styles to your grid. This is applicable to the [PdfGrid](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) model, and the appearance is identical to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
 * Banded columns
 * Banded rows
 * First column
