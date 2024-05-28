@@ -523,6 +523,11 @@ Refer the following example,
             ],
             series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
+                xValueMapper: (ChartData data, _) => data.x,
+                highValueMapper: (ChartData data, _) => data.high,
+                lowValueMapper: (ChartData data, _) => data.low,
+                openValueMapper: (ChartData data, _) => data.open,
+                closeValueMapper: (ChartData data, _) => data.close,  
                 name: 'HiloOpenClose',
               ),
             ],
@@ -572,6 +577,11 @@ Refer the following example,
             ],
             series: <CartesianSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
+                xValueMapper: (ChartData data, _) => data.x,
+                highValueMapper: (ChartData data, _) => data.high,
+                lowValueMapper: (ChartData data, _) => data.low,
+                openValueMapper: (ChartData data, _) => data.open,
+                closeValueMapper: (ChartData data, _) => data.close,  
                 name: 'HiloOpenClose',
               ),
             ],
@@ -779,6 +789,6 @@ Refer the following example below
 
 *	[`Rate Of Change indicator`]() (ROC) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/closeValueMapper.html)).
 
-*	[`Weighted moving average indicator`]() (SMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/closeValueMapper.html)).
+*	[`Weighted moving average indicator`]() (WMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/closeValueMapper.html)).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
