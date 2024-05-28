@@ -516,7 +516,7 @@ Refer the following example,
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: [
-              ROcIndicator<dynamic, dynamic>(
+              RocIndicator<dynamic, dynamic>(
                 period: 3,
                 seriesName: 'HiloOpenClose',
               ),
