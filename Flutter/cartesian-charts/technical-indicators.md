@@ -22,6 +22,8 @@ The different types of technical indicators available in chart are follows:
 *	[`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) - SMA 
 *	[`Stochastic indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator-class.html)
 *	[`Triangular moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TmaIndicator-class.html) - TMA 
+*	[`Rate Of Change indicator`]() - ROC 
+*	[`Weighted Moving Average indicator`]() - WMA 
 
 ## Adding Technical indicator into Chart
  
@@ -491,6 +493,107 @@ Refer the following example,
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
 
+### Rate of Change Indicator (ROC)
+
+The ROC Indicator (Rate of Change) is a momentum oscillator used in technical analysis to measure the percentage change in price over a specified period of time.
+
+  * Positive values indicate an upward momentum, suggesting price increases over the specified period.
+
+  * Negative values indicate a downward momentum, suggesting price decreases over the specified period.
+
+This indicator also has a centerline. The [`centerLineColor`]() and [`centerLineWidth`]() properties are used to define center line.
+
+Refer the following example,
+
+{% tabs %}
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
+            legend: Legend(isVisible: true),
+            indicators: [
+              ROcIndicator<dynamic, dynamic>(
+                period: 3,
+                seriesName: 'HiloOpenClose',
+              ),
+            ],
+            series: <CartesianSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(
+                name: 'HiloOpenClose',
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RocIndicator](images/technical-indicators/roc.jpg)
+
+### Weighted moving average indicator (WMA)
+
+The [`Weighted moving average indicator`]() is unlike a [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html), where each data point has an equal weight, the WMA assigns different weights to each data point.
+
+This means that recent data points are given more weight in the calculation, making the WMA more responsive to recent price changes.
+
+Refer the following example,
+
+{% tabs %}
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
+            legend: Legend(isVisible: true),
+            indicators: [
+              WmaIndicator<dynamic, dynamic>(
+                seriesName: 'HiloOpenClose',
+                valueField: 'close',
+              ),
+            ],
+            series: <CartesianSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(
+                name: 'HiloOpenClose',
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
+
+{% endhighlight %}
+{% endtabs %}
+
+![WmaIndicator](images/technical-indicators/wma.jpg)
+
 ## Legend for technical indicators
 
 
@@ -673,5 +776,9 @@ Refer the following example below
 *	[`Stochastic indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator-class.html) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
 
 *	[`Triangular moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TmaIndicator-class.html) (TMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
+
+*	[`Rate Of Change indicator`]() (ROC) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
+
+*	[`Weighted moving average indicator`]() (SMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
