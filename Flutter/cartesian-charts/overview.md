@@ -37,7 +37,7 @@ To get start quickly with our Flutter chart widget, you can check on this video.
 
 * **Dynamic update** - Updates the chart dynamically or lazily with live data that changes over seconds or minutes like stock prices, temperature, speed, etc. 
 
-  ![Dynamic updates in Flutter Cartesian Charts.](images/overview/flutter-cartesian-charts-live-updates.gif)
+  ![Dynamic updates in Flutter Cartesian Charts.](images/overview/flutter-cartesian-charts-dynamic-updates.gif)
 
 >**Note**: You can refer to our [Flutter Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
 
