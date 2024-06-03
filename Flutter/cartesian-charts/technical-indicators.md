@@ -549,7 +549,7 @@ Refer the following example,
 {% endhighlight %}
 {% endtabs %}
 
-![RocIndicator](images/technical-indicators/roc.jpg)
+![RocIndicator](images/technical-indicators/rocc.jpg)
 
 ### Weighted moving average indicator (WMA)
 
