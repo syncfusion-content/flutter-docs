@@ -2,7 +2,7 @@
 layout: post
 title: Text selection in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about text selection feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -126,7 +126,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to get the seleted text lines in the PDF viewer?
+## How to get the selected text lines in the PDF viewer?
 
 Using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method, you can get the selected text lines in the PDF viewer. The following code example explains the same.
 
