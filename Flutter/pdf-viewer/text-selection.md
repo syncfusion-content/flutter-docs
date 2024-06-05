@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
 
 ## Customize the visibility of the text selection context menu
 
-The `canShowTextSelectionMenu` property allows the user to customize the visibility of the built-in text selection context menu. The following code example explains this.
+The `canShowTextSelectionMenu` property allows the user to customize the visibility of the built-in text selection context menu. You can assign `false` to this property to disable the text selection context menu. The following code example explains how to disable the built-in text selection context menu in the PDF viewer.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -169,13 +169,16 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a customized text selection context menu with a Copy and Text markup options to retrieve the selected text?
+## How to create and display a customized text selection context menu with copy and text markup options to retrieve the selected text?
 
 With the options available in `SfPdfViewer` text selection, you can easily create and display a customized text selection context menu with various options such as **Copy, Highlight, Underline, Strikethrough, and Squiggly**, and perform operations with them. The following code example explains how to implement this functionality.
 
-In this example, we use the [OverlayEntry](https://api.flutter.dev/flutter/widgets/OverlayEntry-class.html) widget to create the customized context menu and add buttons for various options, such as Copy, Highlight, Underline, Strikethrough, and Squiggly. Whenever one of these options is pressed, the corresponding action is performed on the selected text. The selected text value is retrieved from the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details, and we call the context menu display method within this callback implementation.
+In this example, we use the [OverlayEntry](https://api.flutter.dev/flutter/widgets/OverlayEntry-class.html) widget to create the customized context menu and add buttons for various options, such as Copy, Highlight, Underline, Strikethrough, and Squiggly. We are calling the method to display the customized context menu in the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback. Whenever one of these options is pressed, the corresponding action is performed on the selected text.
 
-The text selection is cleared after the Copy operation by calling the [clearSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearSelection.html) controller method. For the annotation options, we retrieve the selected text lines using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method and add the respective annotations using the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method on the controller.
+* For the copy operation, the selected text value is retrieved from the'selectedText` property of the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details. We then copy the text to the clipboard using the [Clipboard.setData](https://api.flutter.dev/flutter/services/Clipboard/setData.html) method.
+The text selection is cleared after the Copy operation by calling the [clearSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearSelection.html) controller method.
+
+* For the text markup options, we retrieve the selected text lines using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method and add the respective annotations using the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method on the `PdfViewerController`.
 
 {% tabs %}
 {% highlight Dart %}
