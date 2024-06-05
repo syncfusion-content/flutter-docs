@@ -74,6 +74,28 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
+## Customize the visibility of the text selection context menu
+
+The `canShowTextSelectionMenu` property allows the user to customize the visibility of the built-in text selection context menu. The following code example explains this.
+
+{% tabs %}
+{% highlight dart hl_lines="7" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Container(
+      child: SfPdfViewer.network(
+        'https://cdn.syncfusion.com/content/PDFViewer/encrypted.pdf',
+        canShowTextSelectionMenu: false,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Callbacks
 
 The `SfPdfViewer` text selection supports the [PdfTextSelectionChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedCallback.html) to notify the text selection changes.
@@ -147,11 +169,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a customized text selection context menu with a Copy option to retrieve the selected text?
+## How to create and display a customized text selection context menu with a Copy and Text markup options to retrieve the selected text?
 
-With the options available in the `SfPdfViewer` text selection, you can easily create and display a customized text selection context menu with the **Copy** option and perform an operation for the same. The following code example explains the same.
+With the options available in `SfPdfViewer` text selection, you can easily create and display a customized text selection context menu with various options such as **Copy, Highlight, Underline, Strikethrough, and Squiggly**, and perform operations with them. The following code example explains how to implement this functionality.
 
-In this example, we have used the [OverlayEntry](https://api.flutter.dev/flutter/widgets/OverlayEntry-class.html) widget to create the customized context menu and have added a simple button (for the Copy option) as a child to it. Whenever this Copy option is pressed, the selected text will be copied to the clipboard and the selection will be cleared. The selected text value is retrieved from the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details and we have called the context menu displaying method within this callback implementation. The text selection gets cleared after the Copy operation by calling the [clearSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearSelection.html) controller method.
+In this example, we use the [OverlayEntry](https://api.flutter.dev/flutter/widgets/OverlayEntry-class.html) widget to create the customized context menu and add buttons for various options, such as Copy, Highlight, Underline, Strikethrough, and Squiggly. Whenever one of these options is pressed, the corresponding action is performed on the selected text. The selected text value is retrieved from the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details, and we call the context menu display method within this callback implementation.
+
+The text selection is cleared after the Copy operation by calling the [clearSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearSelection.html) controller method. For the annotation options, we retrieve the selected text lines using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method and add the respective annotations using the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method on the controller.
 
 {% tabs %}
 {% highlight Dart %}
@@ -176,57 +200,150 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late PdfViewerController _pdfViewerController;
   OverlayEntry? _overlayEntry;
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+
   @override
   void initState() {
     _pdfViewerController = PdfViewerController();
     super.initState();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter PDF Viewer'),
+      ),
+      body: SfPdfViewer.network(
+        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+        onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
+          if (details.selectedText == null && _overlayEntry != null) {
+            _overlayEntry!.remove();
+            _overlayEntry = null;
+          } else if (details.selectedText != null && _overlayEntry == null) {
+            _showContextMenu(context, details);
+          }
+        },
+        controller: _pdfViewerController,
+        canShowTextSelectionMenu: false,
+      ),
+    );
+  }
+
   void _showContextMenu(
       BuildContext context, PdfTextSelectionChangedDetails details) {
+    const double height = 250;
+    const double width = 150;
     final OverlayState overlayState = Overlay.of(context);
+    final Size screenSize = MediaQuery.of(context).size;
+
+    double top = details.globalSelectedRegion!.top >= screenSize.height / 2
+        ? details.globalSelectedRegion!.top - height - 10
+        : details.globalSelectedRegion!.bottom + 20;
+    top = top < 0 ? 20 : top;
+    top = top + height > screenSize.height
+        ? screenSize.height - height - 10
+        : top;
+
+    double left = details.globalSelectedRegion!.bottomLeft.dx;
+    left = left < 0 ? 10 : left;
+    left =
+        left + width > screenSize.width ? screenSize.width - width - 10 : left;
     _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
-        top: details.globalSelectedRegion!.center.dy - 55,
-        left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: ElevatedButton(
-          onPressed: () {
-            if (details.selectedText != null) {
-              Clipboard.setData(ClipboardData(text: details.selectedText!));
-              print('Text copied to clipboard: ${details.selectedText}');
-              _pdfViewerController.clearSelection();
-            }
-          },
-          style: ButtonStyle(
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(2),
-            )),
+      builder: (BuildContext context) => Positioned(
+        top: top,
+        left: left,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(4),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 4,
+                offset: Offset(2, 2),
+              ),
+            ],
           ),
-          child: const Text('Copy', style: TextStyle(fontSize: 17)),
+          constraints:
+              const BoxConstraints.tightFor(width: width, height: height),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              TextButton(
+                onPressed: () {
+                  if (details.selectedText != null) {
+                    Clipboard.setData(
+                        ClipboardData(text: details.selectedText!));
+                    print('Text copied to clipboard: ${details.selectedText}');
+                    _pdfViewerController.clearSelection();
+                  }
+                },
+                child: const Text('Copy', style: TextStyle(fontSize: 15)),
+              ),
+              TextButton(
+                onPressed: () {
+                  final List<PdfTextLine>? textLines =
+                      _pdfViewerKey.currentState?.getSelectedTextLines();
+                  if (textLines != null && textLines.isNotEmpty) {
+                    final HighlightAnnotation highlightAnnotation =
+                        HighlightAnnotation(
+                      textBoundsCollection: textLines,
+                    );
+                    _pdfViewerController.addAnnotation(highlightAnnotation);
+                  }
+                },
+                child: const Text('Highlight', style: TextStyle(fontSize: 15)),
+              ),
+              TextButton(
+                onPressed: () {
+                  final List<PdfTextLine>? textLines =
+                      _pdfViewerKey.currentState?.getSelectedTextLines();
+                  if (textLines != null && textLines.isNotEmpty) {
+                    final UnderlineAnnotation underLineAnnotation =
+                        UnderlineAnnotation(
+                      textBoundsCollection: textLines,
+                    );
+                    _pdfViewerController.addAnnotation(underLineAnnotation);
+                  }
+                },
+                child: const Text('Underline', style: TextStyle(fontSize: 15)),
+              ),
+              TextButton(
+                onPressed: () {
+                  final List<PdfTextLine>? textLines =
+                      _pdfViewerKey.currentState?.getSelectedTextLines();
+                  if (textLines != null && textLines.isNotEmpty) {
+                    final StrikethroughAnnotation strikethroughAnnotation =
+                        StrikethroughAnnotation(
+                      textBoundsCollection: textLines,
+                    );
+                    _pdfViewerController.addAnnotation(strikethroughAnnotation);
+                  }
+                },
+                child:
+                    const Text('Strikethrough', style: TextStyle(fontSize: 15)),
+              ),
+              TextButton(
+                onPressed: () {
+                  final List<PdfTextLine>? textLines =
+                      _pdfViewerKey.currentState?.getSelectedTextLines();
+                  if (textLines != null && textLines.isNotEmpty) {
+                    final SquigglyAnnotation squigglyAnnotation =
+                        SquigglyAnnotation(
+                      textBoundsCollection: textLines,
+                    );
+                    _pdfViewerController.addAnnotation(squigglyAnnotation);
+                  }
+                },
+                child: const Text('Squiggly', style: TextStyle(fontSize: 15)),
+              ),
+            ],
+          ),
         ),
       ),
     );
     overlayState.insert(_overlayEntry!);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('Syncfusion Flutter PDF Viewer'),
-        ),
-        body: SfPdfViewer.network(
-          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-          onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-            if (details.selectedText == null && _overlayEntry != null) {
-              _overlayEntry!.remove();
-              _overlayEntry = null;
-            } else if (details.selectedText != null && _overlayEntry == null) {
-              _showContextMenu(context, details);
-            }
-          },
-          controller: _pdfViewerController,
-        ));
   }
 }
 
