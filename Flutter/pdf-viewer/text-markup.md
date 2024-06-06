@@ -25,7 +25,7 @@ This section will go through how to add text markup annotations to a PDF documen
 
 ### Add text markups from annotation mode
 
-You can add text markup annotations to a PDF document by touching (or mouse down) and dragging using the `annotationMode` property of the PdfViewerController. The following steps explain how to add text markup annotation on a text in a PDF.
+You can add text markup annotations to a PDF document by touching (or mouse down) and dragging using the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html) property of the PdfViewerController. The following steps explain how to add text markup annotation on a text in a PDF.
 
 1.	Set the AnnotationMode property of the SfPdfViewer to any text markups (say Highlight). It activates the highlight annotation mode on the control.
 2.	Place your finger (or mouse) on the text in the PDF document where you want to start adding the text markup.
@@ -63,7 +63,7 @@ void disableAnnotationMode() {
 
 ### Add text markups from text selection
 
-Text markups can be added to a PDF document using the text selection without enabling the `annotationMode`. Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any text markup options to add annotation to a text in the PDF document.
+Text markups can be added to a PDF document using the text selection without enabling the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html). Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any text markup options to add annotation to a text in the PDF document.
 
 ![Text selection context menu in Flutter PDF Viewer.](images/annotations/flutter-pdf-viewer-text-selection-context-menu.png)
 

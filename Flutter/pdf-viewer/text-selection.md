@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
             }
           },
           style: ButtonStyle(
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+            shape: WidgetStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(2),
             )),
           ),

@@ -13,7 +13,7 @@ You can lock an annotation to prevent it from being edited. The annotation that 
 
 ## Lock all annotations in a document
 
-To lock all annotations in a document, set the `isLocked` property of the `annotationSettings` to true. The following example explains how to lock all annotations in a document.
+To lock all annotations in a document, set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property of the [annotationSettings](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationSettings.html) to true. The following example explains how to lock all annotations in a document.
 
 {% tabs %}
 {% highlight dart hl_lines="3" %}
@@ -26,11 +26,11 @@ void lockAllAnnotations() {
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock all the annotations, set the `isLocked` property value to false.
+* Similarly, to unlock all the annotations, set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property value to false.
 
 ## Lock a specific annotation
 
-To lock a specific annotation in a document, access the annotation instance and set the `isLocked` property of the annotation to true. The following example explains how to lock the first annotation in a PDF document.
+To lock a specific annotation in a document, access the annotation instance and set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property of the annotation to true. The following example explains how to lock the first annotation in a PDF document.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -49,11 +49,11 @@ void lockFirstAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the annotation, set the `isLocked` property value to false.
+* Similarly, to unlock the annotation, set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property value to false.
 
 ## Lock specific annotation types
 
-You can also use the `annotationSettings` property to lock a specific annotation type in a document. The following example explains how to lock all the underline annotations in a document by accessing the underline annotation settings. Similarly, you can lock other types of annotation.
+You can also use the [annotationSettings](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationSettings.html) property to lock a specific annotation type in a document. The following example explains how to lock all the underline annotations in a document by accessing the underline annotation settings. Similarly, you can lock other types of annotation.
 
 {% tabs %}
 {% highlight dart %}
@@ -69,11 +69,11 @@ void lockUnderlineAnnotations() {
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the specific annotation types, set the `isLocked` property value to false.
+* Similarly, to unlock the specific annotation types, set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property value to false.
 
 ## Lock the selected annotation
 
-To lock the selected annotation, access the selected annotation instance and set the `isLocked` property to true. The selected annotation instance may be obtained from the `onAnnotationSelected` callback. The following example explains locking the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property to true. The selected annotation instance may be obtained from the [onAnnotationSelected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationSelected.html) callback. The following example explains locking the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight dart %}
@@ -86,4 +86,4 @@ void lockSelectedAnnotation(Annotation selectedAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the selected annotation, set the `isLocked` property value to false.
+* Similarly, to unlock the selected annotation, set the [isLocked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfBaseAnnotationSettings/isLocked.html) property value to false.

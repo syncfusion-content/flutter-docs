@@ -214,7 +214,7 @@ The [onPageChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/l
 * When scrolling is performed programmatically using the [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method.
 * When bookmark navigation is performed programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method.
 
-The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails-class.html) will return the `oldPageNumber`, `newPageNumber`, `isFirstPage` and `isLastPage` values. The following code example explains the same.
+The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails-class.html) will return the [oldPageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails/oldPageNumber.html), [newPageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails/newPageNumber.html), [isFirstPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/search.html?q=isFirstPage) and [isLastPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails/isLastPage.html) values. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8 9" %}

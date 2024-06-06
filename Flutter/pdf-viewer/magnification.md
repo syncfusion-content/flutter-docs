@@ -55,7 +55,7 @@ Widget build(BuildContext context) {
 
 ## Set and adjust the maximum zoom level
 
-The `SfPdfViewer` allows you to set and adjust the maximum zoom level for the PDF document being displayed using the `maxZoomLevel` property. The following code example explains the same.
+The `SfPdfViewer` allows you to set and adjust the maximum zoom level for the PDF document being displayed using the [maxZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/maxZoomLevel.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -107,7 +107,7 @@ The [onZoomLevelChanged](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 •	When the double-tap zoom is performed.
 •	When the `zoomLevel` property is changed.
 
-The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the `oldZoomLevel` title and `newZoomLevel` values. The following code example explains the same.
+The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the [oldZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails/oldZoomLevel.html) title and [newZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails/newZoomLevel.html) values. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8" %}

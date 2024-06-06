@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation Collection in Flutter PDF Viewer widget (Syncfusion)
 
-The annotations in the PDF document can be accessed by the `getAnnotations` method of the `PdfViewerController`. The return value of the function will have Annotation collection as soon as the document is loaded in the PDF viewer. The following code example shows how the annotation collection can be accessed.
+The annotations in the PDF document can be accessed by the [getAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getAnnotations.html) method of the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html). The return value of the function will have Annotation collection as soon as the document is loaded in the PDF viewer. The following code example shows how the annotation collection can be accessed.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10" %}

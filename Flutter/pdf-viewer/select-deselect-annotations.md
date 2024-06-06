@@ -9,7 +9,7 @@ documentation: ug
 
 # Select and Deselect Annotations in Flutter PDF Viewer widget (Syncfusion)
 
-This section will go through the various functions available in the `SfPdfViewer` for selecting and deselecting annotations in a PDF document.
+This section will go through the various functions available in the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) for selecting and deselecting annotations in a PDF document.
 
 ## Select an annotation
 
@@ -17,7 +17,7 @@ You can select an annotation by simply tapping on the annotation using touch or 
 
 ### Select an annotation programmatically
 
-You can select an annotation programmatically by providing the annotation instance as the parameter to the `selectAnnotation` method of the PdfViewerController. The annotation instance can be found in the `getAnnotations` method of the PdfViewerController. The following example explains how to select the first annotation in the annotation collection.
+You can select an annotation programmatically by providing the annotation instance as the parameter to the [selectAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/selectAnnotation.html) method of the PdfViewerController. The annotation instance can be found in the [getAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getAnnotations.html) method of the PdfViewerController. The following example explains how to select the first annotation in the annotation collection.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -38,7 +38,7 @@ void selectFirstAnnotation() {
 
 ### Annotation selected callback
 
-The callback provided to the `onAnnotationSelected` property is triggered when an annotation is selected interactively or programmatically. The selected annotation instance can be obtained from the callback details. The following code sample explains how to use this callback.
+The callback provided to the [onAnnotationSelected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationSelected.html) property is triggered when an annotation is selected interactively or programmatically. The selected annotation instance can be obtained from the callback details. The following code sample explains how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9 10" %}
@@ -63,7 +63,7 @@ Widget build(BuildContext context) {
 
 ### Customizing selector appearance
 
-The `annotationSettings` property of `PdfViewerController` allows you to customize the default selector color. The following example explains how to customize the selector color for locked and unlocked annotations.
+The [annotationSettings](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationSettings.html) property of [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html) allows you to customize the default selector color. The following example explains how to customize the selector color for locked and unlocked annotations.
 
 {% tabs %}
 {% highlight dart %}
@@ -87,7 +87,7 @@ You can deselect an annotation by tapping outside its bounds using a touch or mo
 
 ### Deselect an annotation programmatically
 
-You can deselect the annotation programmatically by providing the selected annotation instance as the parameter to the `deselectAnnotation` method. The selected annotation instance may be obtained from the `onAnnotationSelected` callback. The following example shows how to deselect the selected annotation.
+You can deselect the annotation programmatically by providing the selected annotation instance as the parameter to the [deselectAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/deselectAnnotation.html) method. The selected annotation instance may be obtained from the [onAnnotationSelected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationSelected.html) callback. The following example shows how to deselect the selected annotation.
 
 {% tabs %}
 {% highlight dart hl_lines="3" %}
@@ -102,7 +102,7 @@ void deselectAnnotation(Annotation selectedAnnotation) {
 
 ### Annotation deselected callback
 
-The callback provided to the `onAnnotationDeselected` property is triggered when an annotation is deselected interactively or programmatically. The following code sample explains how to use this callback.
+The callback provided to the [onAnnotationDeselected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationDeselected.html) property is triggered when an annotation is deselected interactively or programmatically. The following code sample explains how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9 10" %}

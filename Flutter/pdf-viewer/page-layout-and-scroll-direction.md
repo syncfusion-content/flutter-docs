@@ -54,6 +54,23 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+Similarly, the PDF can be displayed in vertical direction in `Single` page layout mode. To enable this feature, assign the value for [scrollDirection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/scrollDirection.html) property in `SfPdfViewer`as `PdfScrollDirection.vertical`. Use the following code sample to achieve the same:
+
+{% tabs %}
+{% highlight dart hl_lines="6 7" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body:SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              pageLayoutMode: PdfPageLayoutMode.single
+              scrollDirection: PdfScrollDirection.vertical));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Single page layout mode in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-page-by-page.gif)
 
 ## Scrolling options
