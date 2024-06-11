@@ -1728,8 +1728,8 @@ Provided the following methods for handling pointer and gesture events and allow
 
 This following code sample defines how to perform zoom in and out behavior in double tap zooming.
 
-{% endhighlight %}
-{% endtabs %}
+{% tabs %}
+{% highlight dart %}
 
     CategoryAxis xAxis = CategoryAxis();
     NumericAxis yAxis = NumericAxis();
@@ -1782,8 +1782,8 @@ To customize the tooltip label, position, and selection rect of the zooming.
 
 This following code sample defines how to perform selection zooming and customize the selection zooming rect in single tap using scale methods.
 
-{% endhighlight %}
-{% endtabs %}
+{% tabs %}
+{% highlight dart %}
 
     SfCartesianChart(
       zoomPanBehavior: CustomScaleZoomPanBehavior(),
