@@ -463,15 +463,15 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
 
-* `handleEvent` - Specifies to customize the necessary pointer events.
-* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
-* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
-* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
-* `handleTapDown` - Specifies to customize the pointer event when a tap has contacted the screen once.
-* `handleTapUp` - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
-* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
-* `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
-* `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
+* [`handleEvent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleEvent.html) - Specifies to customize the necessary pointer events.
+* [`handleLongPressStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressStart.html) - Specifies to customize the pointer event when a long-press begins.
+* [`handleLongPressMoveUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressMoveUpdate.html) - Specifies to customize the pointer event during movement after a long-press.
+* [`handleLongPressEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressEnd.html) - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* [`handleTapDown`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleTapDown.html) - Specifies to customize the pointer event when a tap has contacted the screen once.
+* [`handleTapUp`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleTapUp.html) - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* [`handleDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleDoubleTap.html) - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* [`handlePointerEnter`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handlePointerEnter.html) -Specifies to customize the pointer event when the mouse enter on the screen.
+* [`handlePointerExit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handlePointerExit.html) - Specifies to customize the pointer event when the mouse exit on the screen.
 
 This following code sample defines how to enable or disable specific pointer events and customize to show trackball in double tap and disabled trackball showing in pointer enter and exit.
 
@@ -513,7 +513,7 @@ This following code sample defines how to enable or disable specific pointer eve
 
 ### onPaint in trackballBehavior
 
-To customize the tooltip label, position, and style of trackball.
+The [`onPaint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/onPaint.html) method is used to customize the label, position, and style of trackball tooltip.
 
 {% tabs %}
 {% highlight dart %} 
@@ -817,15 +817,15 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
 
-* `handleEvent` - Specifies to customize the necessary pointer events.
-* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
-* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
-* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
-* `handleTapDown` - Specifies to customize the pointer event when a tap has contacted the screen once.
-* `handleTapUp` - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
-* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
-* `handlePointerEnter` -Specifies to customize the pointer event when the mouse enter on the screen.
-* `handlePointerExit` - Specifies to customize the pointer event when the mouse exit on the screen.
+* [`handleEvent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleEvent.html) - Specifies to customize the necessary pointer events.
+* [`handleLongPressStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressStart.html) - Specifies to customize the pointer event when a long-press begins.
+* [`handleLongPressMoveUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressMoveUpdate.html) - Specifies to customize the pointer event during movement after a long-press.
+* [`handleLongPressEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressEnd.html) - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* [`handleTapDown`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleTapDown.html) - Specifies to customize the pointer event when a tap has contacted the screen once.
+* [`handleTapUp`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleTapUp.html) - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* [`handleDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleDoubleTap.html) - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* [`handlePointerEnter`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handlePointerEnter.html) -Specifies to customize the pointer event when the mouse enter on the screen.
+* [`handlePointerExit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handlePointerExit.html) - Specifies to customize the pointer event when the mouse exit on the screen.
 
 This following code sample defines how to enable or disable specific pointer events and customize to show crosshair in double tap and disabled crosshair showing in pointer enter and exit.
 
@@ -867,7 +867,7 @@ This following code sample defines how to enable or disable specific pointer eve
 
 ### DrawVerticalAxisLine method in crosshairBehavior
 
-To customize the stroke drawing and styling of vertical crosshair line.
+The [`drawVerticalAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawVerticalAxisLine.html) method is used to customize the stroke drawing and styling of vertical crosshair line.
 
 * `context` - Specifies the painting context.
 * `offset` - Specifies the crosshair position.
@@ -895,7 +895,7 @@ To customize the stroke drawing and styling of vertical crosshair line.
 
 ### DrawHorizontalAxisLine method in crosshairBehavior
 
-To customize the stroke drawing and styling of horizontal crosshair line.
+The [`drawHorizontalAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawHorizontalAxisLine.html) method is used to customize the stroke drawing and styling of horizontal crosshair line.
 
 {% tabs %}
 {% highlight dart %} 
@@ -918,7 +918,7 @@ To customize the stroke drawing and styling of horizontal crosshair line.
 
 ### DrawHorizontalAxisTooltip method in crosshairBehavior
 
-To customize the tooltip label, position, and style for horizontal axis tooltip.
+The [`drawHorizontalAxisTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawHorizontalAxisTooltip.html) method is used to customize the tooltip label, position, and style for horizontal axis tooltip.
 
 * `context` - Specifies the painting context.
 * `position` - Specifies the position of the tooltip label.
@@ -986,15 +986,15 @@ To customize the tooltip label, position, and style for horizontal axis tooltip.
 
 ### DrawVerticalAxisTooltip method in crosshairBehavior
 
-To customize the tooltip label, position, and style for vertical axis tooltip.
+The [`drawVerticalAxisTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawVerticalAxisTooltip.html) method is used to customize the tooltip label, position, and style for vertical axis tooltip.
 
-For further reference, please consult the drawHorizontalAxisTooltip code sample.
+For further reference, please consult the [`drawHorizontalAxisTooltip`](https://help.syncfusion.com/flutter/cartesian-charts/methods#drawhorizontalaxistooltip-method-in-crosshairbehavior) code sample.
 
 ![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
 
 ### onPaint in crosshairBehavior
 
-To customize the tooltip label, position, and style of crosshair.
+The [`onPaint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/onPaint.html) method is used to customize the label, position, and style of crosshair tooltip.
 
 {% tabs %}
 {% highlight dart %} 
