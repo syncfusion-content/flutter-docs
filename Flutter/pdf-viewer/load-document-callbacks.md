@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Load Callbacks in Flutter PDF Viewer (SfPdfViewer) | Syncfusion
-description: Learn here all about events that notifies whether the document has been loaded or failed to get loaded in the Syncfusion Flutter PDF Viewer (SfPdfViewer).
+description: Learn here all about callbacks that notifies whether the document has been loaded or failed to get loaded in the Syncfusion Flutter PDF Viewer (SfPdfViewer).
 platform: flutter
 control: SfPdfViewer
 documentation: ug

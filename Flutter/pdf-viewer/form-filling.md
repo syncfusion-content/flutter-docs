@@ -450,7 +450,7 @@ Widget build(BuildContext context) {
 
 ## Clear form data
 
-The [clearFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearFormData.html) method clears all the form field data in the PDF document. The optional [pageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageNumber.html) parameter can be used to clear the form field data on a specific page. By default, the [pageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageNumber.html) parameter is 0. Refer to the following code example.
+The [clearFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearFormData.html) method clears all the form field data in the PDF document. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the `pageNumber` parameter is 0. Refer to the following code example.
 
 {% tabs %}
 {% highlight dart hl_lines="16 26" %}
@@ -672,7 +672,7 @@ Widget build(BuildContext context) {
 
 If you performed undesired actions when editing the form fields, you can undo and redo the action to restore the previous state.
 
-The undo and redo operations are performed by assigning the `UndoHistoryController` instance to the [undoController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/undoController.html) property of the `SfPdfViewer`. The UndoHistoryController class contains the `undo` and `redo` methods to perform the same, respectively. The `canUndo` and `canRedo` properties are used to check whether the undo and redo operations can be performed or not, respectively. The following code example illustrates how to perform the form filling undo and redo operations programmatically with the `SfPdfViewer`.
+The undo and redo operations are performed by assigning the `UndoHistoryController` instance to the [undoController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/undoController.html) property of the `SfPdfViewer`. The UndoHistoryController class contains the [undo](https://api.flutter.dev/flutter/widgets/UndoHistoryController/undo.html) and [redo](https://api.flutter.dev/flutter/widgets/UndoHistoryController/redo.html) methods to perform the same, respectively. The [canUndo](https://api.flutter.dev/flutter/widgets/UndoHistoryValue/canUndo.html) and [canRedo](https://api.flutter.dev/flutter/widgets/UndoHistoryValue/canRedo.html) properties are used to check whether the undo and redo operations can be performed or not, respectively. The following code example illustrates how to perform the form filling undo and redo operations programmatically with the `SfPdfViewer`.
 
 {% tabs %}
 {% highlight dart hl_lines="12 13 21 22 29" %}

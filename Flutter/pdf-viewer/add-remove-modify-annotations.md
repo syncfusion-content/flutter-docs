@@ -17,7 +17,7 @@ This section will go through how to add annotations to a PDF document programmat
 
 ### Add annotations programmatically
 
-You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/search.html?q=addAnnotation) method of the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html) class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
+You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method of the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html) class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
@@ -90,7 +90,7 @@ void removeFirstAnnotation() {
 
 ### Remove all the annotations
 
-You can programmatically remove all the annotations from a document by calling the [removeAllAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAllAnnotations.html) method. The optional [pageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageNumber.html) parameter can be used to clear the form field data on a specific page. By default, the pageNumber parameter is 0. Refer to the following code example. 
+You can programmatically remove all the annotations from a document by calling the [removeAllAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAllAnnotations.html) method. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the `pageNumber` parameter is 0. Refer to the following code example. 
 
 {% tabs %}
 {% highlight dart hl_lines="3 8" %}
