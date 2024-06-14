@@ -241,7 +241,7 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
                     coordinateUnit: CoordinateUnit.logicalPixel,
                     x: 150,
                     y: 200,
-                    HorizontalAlignment: HorizontalAlignment.near,
+                    HorizontalAlignment: ChartAlignment.near,
                   )
                 ]
               )
