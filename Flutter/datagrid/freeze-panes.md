@@ -243,6 +243,8 @@ Widget build(BuildContext context) {
 
 * `frozenColumnsCount` or `footerFrozenColumnsCount` should be lesser than the number of columns displayed in the view. For example, If you have 5 columns in the view, set `frozenColumnsCount` to a maximum value of 4.
 
+* SfDataGrid has support to freeze the number of columns from the left or right. There is no support to freeze a specific column.
+
 ## Freeze rows
 
 The rows can be frozen in view at the top and bottom like in Excel by setting the [frozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/frozenRowsCount.html) and [footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) properties.
@@ -434,6 +436,8 @@ Widget build(BuildContext context) {
 ### Limitation
 
 * `frozenRowsCount` or `footerFrozenRowsCount` should be lesser than the number of rows displayed in the view. For example, If you have 10 rows in view, then you set `frozenRowsCount` to a maximum value of 9.
+
+* SfDataGrid has support to freeze the number of rows from top or bottom. There is no support to freeze a specific row.
 
 N> Header row is frozen by default and works regardless of the `frozenRowsCount` property.
 
