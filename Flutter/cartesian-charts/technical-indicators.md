@@ -553,7 +553,7 @@ Refer the following example,
 
 ### Weighted moving average indicator (WMA)
 
-The [`Weighted moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WmaIndicator-class.html) is unlike a [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html), where each data point has an equal weight, the WMA assigns different weights to each data point.
+The [`Weighted moving average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WmaIndicator-class.html) indicator is unlike a [`Simple moving average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) indicator, where each data point has an equal weight, the WMA assigns different weights to each data point.
 
 This means that recent data points are given more weight in the calculation, making the WMA more responsive to recent price changes.
 
