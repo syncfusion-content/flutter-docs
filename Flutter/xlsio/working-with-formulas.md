@@ -67,7 +67,7 @@ File('Formula.xlsx').writeAsBytes(bytes);
 
 ## Accessing a Calculated value
 
-To evaluate formula, it is must to [enable sheet calculation](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas#enable-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using **calculatedValue** of **Range**, which returns a string value.
+To evaluate formula, it is must to [enable sheet calculation](https://help.syncfusion.com/flutter/xlsio/working-with-formulas#enable-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using **calculatedValue** of **Range**, which returns a string value.
 
 The following code shows how to access a calculated value.
 
