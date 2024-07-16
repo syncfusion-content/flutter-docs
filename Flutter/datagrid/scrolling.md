@@ -841,8 +841,8 @@ class MyMaterialScrollBehavior extends MaterialScrollBehavior {
 }
 
 late EmployeeDataSource _employeeDataSource;
-final verticalController = ScrollController(),
-      horizontalController = ScrollController();
+final verticalController = ScrollController();
+final horizontalController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
