@@ -367,12 +367,14 @@ Widget build(BuildContext context) {
     TextButton(
         child: Text('Get Selection Information'),
         onPressed: () {
-          int selectedIndex = _controller.selectedIndex;
-          DataGridRow selectedRow = _controller.selectedRow!;
-          List<DataGridRow> selectedRows = _controller.selectedRows;
-          print(selectedIndex);
-          print(selectedRow);
-          print(selectedRows);
+            if (_controller.selectedRows.isNotEmpty) {
+              int selectedIndex = _controller.selectedIndex;
+              DataGridRow selectedRow = _controller.selectedRow!;
+              List<DataGridRow> selectedRows = _controller.selectedRows;
+              print(selectedIndex);
+              print(selectedRow);
+              print(selectedRows);
+            }
         }),
     Expanded(
         child: SfDataGrid(

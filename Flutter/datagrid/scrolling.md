@@ -829,57 +829,78 @@ If the height or width of the DataGrid is infinity, then DataGrid sets its heigh
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
+class DataGridScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Widget buildScrollbar(
+      BuildContext context, Widget child, ScrollableDetails details) {
+    return Scrollbar(
+      controller: details.controller,
+      child: child,
+    );
+  }
+}
+
 late EmployeeDataSource _employeeDataSource;
 
- @override
+  @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      return SingleChildScrollView(
-        child: SfDataGrid(
-          shrinkWrapColumns: true,
-          shrinkWrapRows: true,
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-            GridColumn(
-                columnName: 'id',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'ID',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
-            GridColumn(
-                columnName: 'name',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Name',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
-            GridColumn(
-                columnName: 'designation',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Designation',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
-            GridColumn(
-                columnName: 'salary',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Salary',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: ScrollConfiguration(
+        behavior: DataGridScrollBehavior(),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: SfDataGrid(
+              source: employeeDataSource,
+              shrinkWrapColumns: true,
+              shrinkWrapRows: true,
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'id',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.centerRight,
+                        child: const Text(
+                          'ID',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Name',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'designation',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'salary',
+                    label: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.centerRight,
+                        child: const Text(
+                          'Salary',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+              ],
+            ),
+          ),
         ),
-      );
-    });
+      ),
+    );
   }
 
 {% endhighlight %}
