@@ -829,7 +829,7 @@ If the height or width of the DataGrid is infinity, then DataGrid sets its heigh
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-class MyMaterialScrollBehavior extends MaterialScrollBehavior {
+class DataGridScrollBehavior extends MaterialScrollBehavior {
   @override
   Widget buildScrollbar(
       BuildContext context, Widget child, ScrollableDetails details) {
@@ -841,8 +841,6 @@ class MyMaterialScrollBehavior extends MaterialScrollBehavior {
 }
 
 late EmployeeDataSource _employeeDataSource;
-final verticalController = ScrollController();
-final horizontalController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -851,12 +849,10 @@ final horizontalController = ScrollController();
         title: const Text('Syncfusion Flutter DataGrid'),
       ),
       body: ScrollConfiguration(
-        behavior: MyMaterialScrollBehavior(),
+        behavior: DataGridScrollBehavior(),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          controller: horizontalController,
           child: SingleChildScrollView(
-            controller: verticalController,
             scrollDirection: Axis.vertical,
             child: SfDataGrid(
               source: employeeDataSource,
