@@ -18,3 +18,4 @@ The `SfPdfViewer` supports the following annotation types.
 2.	Squiggly
 3.	Strikethrough
 4.	Underline
+5.  Sticky note
