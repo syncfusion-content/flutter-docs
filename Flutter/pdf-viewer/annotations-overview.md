@@ -2,7 +2,7 @@
 layout: post
 title: Annotations in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about annotations feature of the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -18,3 +18,4 @@ The `SfPdfViewer` supports the following annotation types.
 2.	Squiggly
 3.	Strikethrough
 4.	Underline
+5.  Sticky note
