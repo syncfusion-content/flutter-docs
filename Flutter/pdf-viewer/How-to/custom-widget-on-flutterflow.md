@@ -66,6 +66,48 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: The compilation progress takes 2 to 3 minutes to complete.
 
+### Create Custom Action to import pdf.js script
+
+1. Click the `+ Add` button to open a dropdown menu, then select `Action`.
+2. Update the action name as desired, say `importPdfjsScript`.
+3. Add the below action code to import the pdf.js script.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:flutter/foundation.dart';
+import 'package:web/web.dart' as web;
+
+Future importPdfjsScript() async {
+  // Check if the platform is web
+  if (!kIsWeb) return;
+  // Create a script element to import pdf.js library
+  final script = web.document.createElement('script') as web.HTMLScriptElement
+    ..type = 'text/javascript'
+    ..charset = 'utf-8'
+    ..async = true
+    ..src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js';
+  // Add the script to the head tag
+  web.document.querySelector('head')!.appendChild(script);
+  await script.onLoad.first.timeout(const Duration(seconds: 10));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+4. Save the action.
+5. Compile the code.
+
+![Custom Action](images/custom-action.png)
+
+### Utilizing the custom action
+
+1. Click on main.dart file under Custom Files section.
+2. Add the `importPdfjsScript` action as Initial Action.
+3. Save the file.
+
+![main.dart](images/add-custom-action.png)
+
 ### Utilizing the custom widget
 
 1. Navigate to `Widget Palette` located in the left side navigation menu.
@@ -73,3 +115,5 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
 
 ![Page](images/page.png)
+
+>**Note**: Since, the SfPdfViewer depends on the pdf.js library on the web platform, the preview of the widget will not be displayed in the FlutterFlow editor. To view the widget, run the application on a web platform.
