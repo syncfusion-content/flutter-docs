@@ -160,6 +160,61 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+### How to load document from base64 string?
+
+To load a document from a base64 string, you can convert the base64 string to a [`Uint8List`](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html) using the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method and pass it to the [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html) constructor. The following code example explains the same.
+
+* Import the `dart:convert` package to use the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method.
+
+{% tabs %}
+{% highlight dart %}
+
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+void main() {
+  runApp(const MaterialApp(
+    home: MainApp(),
+  ));
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Pass the base64 string of the PDF document to the SyncfusionPDFViewer widget.
+    return const SyncfusionPDFViewer(base64: base64);
+  }
+}
+
+class SyncfusionPDFViewer extends StatefulWidget {
+  const SyncfusionPDFViewer({super.key, required this.base64});
+
+  /// Base64 string of the PDF document.
+  final String base64;
+
+  @override
+  State<SyncfusionPDFViewer> createState() => _SyncfusionPDFViewerState();
+}
+
+class _SyncfusionPDFViewerState extends State<SyncfusionPDFViewer> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfPdfViewer.memory(
+        // Decoding the base64 string to Uint8List.
+        base64Decode(widget.base64),
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Load the document with the specified page
 
 The `SfPdfViewer` allows you to load the document with the specified page using the `initialPageNumber` property. The following code example explains the same.
