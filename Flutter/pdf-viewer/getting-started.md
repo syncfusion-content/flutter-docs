@@ -162,7 +162,7 @@ Widget build(BuildContext context) {
 
 ### How to load document from base64 string?
 
-To load a document from a base64 string, you can convert the base64 string to a [`Uint8List`](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html) using the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method and pass it to the [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html) constructor. The following code example explains the same.
+To load a document from a base64 string, you can convert the base64 string to a [Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html) using the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method and pass it to the [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html) constructor. The following code example explains the same.
 
 * Import the `dart:convert` package to use the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method.
 
