@@ -1593,7 +1593,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
 
 ### Multi-level labels in date time category axis
 
-The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryMultiLevelLabel/end.html) properties need to be date-time values.
+The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% tabs %}
 {% highlight dart %}
