@@ -536,7 +536,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
 
 ### Initial visible minimum
 
-The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initiaVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
+The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
