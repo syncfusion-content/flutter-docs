@@ -536,7 +536,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
 
 ### Initial visible minimum
 
-The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initiaVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
+The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -1305,7 +1305,7 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property defines the lowest and highest data points that are displayed on an axis.
 If the same [RangeController] instance is used in both the chart axis and the [RangeSelector], the chart's visible range will be updated based on the range selected in the [RangeSelector].
 
-Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMinimum.html), and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initiaVisibleMaximum.html) properties to the axis and the axis values will be visible with respect to initialVisibleMinimum and initialVisibleMaximum properties.
+Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMinimum.html), and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMaximum.html) properties to the axis and the axis values will be visible with respect to initialVisibleMinimum and initialVisibleMaximum properties.
 
 {% tabs %}
 {% highlight dart %}
@@ -1383,7 +1383,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
 
 ## Multi-level labels
 
-The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
+The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
 
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) - Represents the start value of an multi-level label.
 * [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html)   - Represents the end value of an multi-level label.
@@ -1593,7 +1593,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
 
 ### Multi-level labels in date time category axis
 
-The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/end.html) properties need to be date-time values.
+The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% tabs %}
 {% highlight dart %}
@@ -1658,7 +1658,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
 
 ### Multi-level labels in logarithmic axis
 
-The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/end.html) properties need to be double values.
+The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) properties need to be double values.
 
 {% tabs %}
 {% highlight dart %}
