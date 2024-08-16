@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about introduction of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -22,6 +22,7 @@ The Syncfusion [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/f
 * **Document link annotation navigation** - Navigate to the desired topic or position by tapping the document link annotation of the topics in the table of contents in a PDF document.
 * **Hyperlink navigation** - Detects hyperlinks, and tapping on the hyperlink will open the URL in a default web browser.
 * **Text markup annotations** - Add, remove, and modify text markup annotations in PDF files. The available text markups are highlight, underline, strikethrough and squiggly. This feature will help mark important passages, emphasize specific words or phrases, indicate that certain content should be removed or indicate that text contains possible errors.
+* **Sticky note annotations** - Add, remove, and modify sticky note annotations in PDF files. This feature will help add comments or notes to a specific part a document to clarify complex concepts, terms, or ideas.
 * **Form filling** - Fill, edit, flatten, save, export, and import AcroForm field data in a PDF document.
 * **Themes** - Easily switch between light and dark themes.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
