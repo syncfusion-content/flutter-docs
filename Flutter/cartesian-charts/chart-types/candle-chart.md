@@ -51,8 +51,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                                 lowValueMapper: (ChartData data, _) => data.low,
                                 highValueMapper: (ChartData data, _) => data.high, 
                                 openValueMapper: (ChartData data, _) => data.open,
-                          closeValueMapper: (ChartData data, _) => data.close,
-
+                                closeValueMapper: (ChartData data, _) => data.close,
                             )
                         ]
                     )
@@ -65,6 +64,118 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 {% endtabs %}
 
 ![candle chart](cartesian-chart-types-images/candle.png)
+
+## Candle width and spacing
+
+The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/spacing.html) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+
+The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+
+{% tabs %}
+{% highlight dart hl_lines="20 22" %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(
+                x: 5,
+                open: 86.3593,
+                high: 88.1435,
+                low: 84.3914,
+                close: 86.3593),
+            ChartData( 
+                x: 10,
+                open: 85.4425,
+                high: 86.4885,
+                low: 86.4885,
+                close: 87.001),
+            ChartData(
+                x: 15,
+                open: 86.4885,
+                high: 86.4885,
+                low: 86.4885,
+                close: 86.4885),
+        ];
+        return Scaffold(
+            body: Center(
+                child: SfCartesianChart(
+                    series: <CartesianSeries<ChartData, int>>[
+                        CandleSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            highValueMapper: (ChartData data, _) => data.high,
+                            lowValueMapper: (ChartData data, _) => data.low,
+                            openValueMapper: (ChartData data, _) => data.open,
+                            closeValueMapper: (ChartData data, _) => data.close,
+                            // Width of the candle
+                            width: 0.8, 
+                            // Spacing between the candles
+                            spacing: 0.2 
+                        )
+                    ]
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Candle width and spacing]()
+
+## Rounded corners
+
+The [`borderRadius`]() property is used to add the rounded corners to the candle.
+
+{% tabs %}
+{% highlight dart hl_lines="20" %}
+
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(
+                x: 5,
+                open: 86.3593,
+                high: 88.1435,
+                low: 84.3914,
+                close: 86.3593),
+            ChartData( 
+                x: 10,
+                open: 85.4425,
+                high: 86.4885,
+                low: 86.4885,
+                close: 87.001),
+            ChartData(
+                x: 15,
+                open: 86.4885,
+                high: 86.4885,
+                low: 86.4885,
+                close: 86.4885),
+        ];
+        return Scaffold(
+            body: Center(
+                child: SfCartesianChart(
+                    series: <CartesianSeries<ChartData, int>>[
+                        CandleSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            highValueMapper: (ChartData data, _) => data.high,
+                            lowValueMapper: (ChartData data, _) => data.low,
+                            openValueMapper: (ChartData data, _) => data.open,
+                            closeValueMapper: (ChartData data, _) => data.close,
+                            // Sets the corner radius
+                            borderRadius: BorderRadius.all(Radius.circular(15))
+                        )
+                    ]
+                )   
+            )
+        );
+    }
+    
+{% endhighlight %}
+{% endtabs %}
+
+![Rounded corners]()
 
 #### See Also 
 
