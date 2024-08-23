@@ -18,18 +18,17 @@ To create a Flutter candle chart quickly, you can check this video.
 
 To render a Candle chart, create an instance of [` CandleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
-* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be `false`.
-* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- used to enable/disable the solid candles. By default is set to be `false`. The fill color of the candle will be defined by its opening and closing values.
-* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
-* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
-* [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/openValueMapper.html) - used to get the open values from the series.
-* [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/closeValueMapper.html) - used to get the close values from the series.
-* [`bearFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
-* [`bullFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - changes the stroke width of the series.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/showIndicationForSameValues.html)- used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be `false`.
+* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/enableSolidCandles.html)- used to enable/disable the solid candles. By default is set to be `false`. The fill color of the candle will be defined by its opening and closing values.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/lowValueMapper.html) - used to get the low values from the series.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/highValueMapper.html) - used to get the high values from the series.
+* [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/openValueMapper.html) - used to get the open values from the series.
+* [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/closeValueMapper.html) - used to get the close values from the series.
+* [`bearFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
 
 
 
@@ -121,7 +120,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% endhighlight %}
 {% endtabs %}
 
-![Candle width and spacing]()
+![Candle width and spacing](cartesian-chart-types-images\candle_width_spacing.png)
 
 ## Rounded corners
 
@@ -175,7 +174,7 @@ The [`borderRadius`]() property is used to add the rounded corners to the candle
 {% endhighlight %}
 {% endtabs %}
 
-![Rounded corners]()
+![Rounded corners](cartesian-chart-types-images\candle_round_corner.png)
 
 #### See Also 
 
@@ -185,12 +184,12 @@ The [`borderRadius`]() property is used to add the rounded corners to the candle
 
 ## Indication for same values
 
-In the Candle series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property can be set to `true`.
+In the Candle series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/showIndicationForSameValues.html) property can be set to `true`.
 
 The following are the types of indication when the combination of high, low, open and close values are same for a datapoint.
 
 * In the Candle chart, if the open and close values are same then a horizontal line will be drawn at that value by default.
-* If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
+* If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
 
 
 {% tabs %}

@@ -614,7 +614,7 @@ The [`plotOffsetStart`]() property is used to offset the rendering of the axis a
 {% endhighlight %}
 {% endtabs %}
 
-![Plot Offset Start]()
+![Plot Offset Start](images\axis-customization\plot_offset_start.png)
 
 ### Plot offset end
 
@@ -642,7 +642,7 @@ The [`plotOffsetEnd`]() property is used to offset the rendering of the axis at 
 {% endhighlight %}
 {% endtabs %}
 
-![Plot Offset End]()
+![Plot Offset End](images\axis-customization\plot_offset_end.png)
 
 ## Smart axis labels
 

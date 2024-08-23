@@ -277,7 +277,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding additional start]()
+![RangePadding additional start](images\axis-types\numeric_additional_start.png)
 
 **additionalEnd**
 
@@ -311,7 +311,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding additional end]()
+![RangePadding additional end](images\axis-types\numeric_additional_end.png)
 
 **auto**
 
@@ -474,7 +474,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding round start]()
+![RangePadding round start](images\axis-types\numeric_round_start.png)
 
 **roundEnd**
 
@@ -507,7 +507,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding round end]()
+![RangePadding round end](images\axis-types\numeric_round_end.png)
 
 ### Formatting the labels
 
@@ -1041,7 +1041,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding round start]()
+![RangePadding round start](images\axis-types\datetime_round_start.png)
 
 **roundEnd**
 
@@ -1068,7 +1068,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding round end]()
+![RangePadding round end](images\axis-types\datetime_round_end.png)
 
 **additional**
 
@@ -1122,7 +1122,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding additional start]()
+![RangePadding additional start](images\axis-types\datetime_additional_start.png)
 
 **additionalEnd**
 
@@ -1149,7 +1149,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![RangePadding additional end]()
+![RangePadding additional end](images\axis-types\datetime_additional_end.png)
 
 **normal**
 
