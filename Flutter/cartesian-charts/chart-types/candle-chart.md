@@ -52,7 +52,6 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                                 highValueMapper: (ChartData data, _) => data.high, 
                                 openValueMapper: (ChartData data, _) => data.open,
                                 closeValueMapper: (ChartData data, _) => data.close,
-                                
                             )
                         ]
                     )
