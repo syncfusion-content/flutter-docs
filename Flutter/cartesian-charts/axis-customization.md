@@ -481,34 +481,6 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Opposed axis](images/axis-customization/opposite.jpg)
 
-### Offset the rendering
-
-The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffset.html) property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates how to apply the plot offset of an axis.
-
-{% tabs %}
-{% highlight dart hl_lines="9" %}
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(
-                            // 20 logical pixels gap will be left at the start and end of the x axis
-                            plotOffset: 20
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-![Plot Offset](images/axis-customization/plot_offset.jpg)
-
 ### Maximum number of labels per 100 logical pixels
 
 By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for `interval` property of an axis.
@@ -585,6 +557,92 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 {% endtabs %}
+
+## Offset the rendering
+
+### Plot offset
+
+The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffset.html) property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates how to apply the plot offset of an axis.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            // 20 logical pixels gap will be left at the start and end of the x axis
+                            plotOffset: 20
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Plot Offset](images/axis-customization/plot_offset.jpg)
+
+### Plot offset start
+
+The [`plotOffsetStart`]() property is used to offset the rendering of the axis at start position. The following code snippet demonstrates how to apply the plot offset start of an axis.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            // 20 logical pixels gap will be left at the start of the x axis
+                            plotOffsetStart: 20
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Plot Offset Start](images\axis-customization\plot_offset_start.png)
+
+### Plot offset end
+
+The [`plotOffsetEnd`]() property is used to offset the rendering of the axis at end position. The following code snippet demonstrates how to apply the plot offset end of an axis.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            // 20 logical pixels gap will be left at the end of the x axis
+                            plotOffsetEnd: 20
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Plot Offset End](images\axis-customization\plot_offset_end.png)
 
 ## Smart axis labels
 
