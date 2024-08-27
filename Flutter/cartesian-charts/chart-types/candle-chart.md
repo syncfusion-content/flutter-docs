@@ -46,11 +46,11 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
                                 dataSource: financialData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                lowValueMapper: (ChartData data, _) => data.low,
-                                highValueMapper: (ChartData data, _) => data.high, 
-                                openValueMapper: (ChartData data, _) => data.open,
-                                closeValueMapper: (ChartData data, _) => data.close,
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                lowValueMapper: (ChartData data, int index) => data.low,
+                                highValueMapper: (ChartData data, int index) => data.high, 
+                                openValueMapper: (ChartData data, int index) => data.open,
+                                closeValueMapper: (ChartData data, int index) => data.close,
                             )
                         ]
                     )
@@ -101,11 +101,11 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                     series: <CartesianSeries<ChartData, int>>[
                         CandleSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            highValueMapper: (ChartData data, _) => data.high,
-                            lowValueMapper: (ChartData data, _) => data.low,
-                            openValueMapper: (ChartData data, _) => data.open,
-                            closeValueMapper: (ChartData data, _) => data.close,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            highValueMapper: (ChartData data, int index) => data.high,
+                            lowValueMapper: (ChartData data, int index) => data.low,
+                            openValueMapper: (ChartData data, int index) => data.open,
+                            closeValueMapper: (ChartData data, int index) => data.close,
                             // Width of the candle
                             width: 0.8, 
                             // Spacing between the candles
@@ -157,11 +157,11 @@ The [`borderRadius`]() property is used to add the rounded corners to the candle
                     series: <CartesianSeries<ChartData, int>>[
                         CandleSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            highValueMapper: (ChartData data, _) => data.high,
-                            lowValueMapper: (ChartData data, _) => data.low,
-                            openValueMapper: (ChartData data, _) => data.open,
-                            closeValueMapper: (ChartData data, _) => data.close,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            highValueMapper: (ChartData data, int index) => data.high,
+                            lowValueMapper: (ChartData data, int index) => data.low,
+                            openValueMapper: (ChartData data, int index) => data.open,
+                            closeValueMapper: (ChartData data, int index) => data.close,
                             // Sets the corner radius
                             borderRadius: BorderRadius.all(Radius.circular(15))
                         )
@@ -223,11 +223,11 @@ The following are the types of indication when the combination of high, low, ope
                                     low: 86.4885,
                                     close: 86.4885),
                             ],
-                            xValueMapper: (ChartData data, _) => data.x,
-                            highValueMapper: (ChartData data, _) => data.high,
-                            lowValueMapper: (ChartData data, _) => data.low,
-                            openValueMapper: (ChartData data, _) => data.open,
-                            closeValueMapper: (ChartData data, _) => data.close)
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            highValueMapper: (ChartData data, int index) => data.high,
+                            lowValueMapper: (ChartData data, int index) => data.low,
+                            openValueMapper: (ChartData data, int index) => data.open,
+                            closeValueMapper: (ChartData data, int index) => data.close)
                         ]
                     ),
                 )   

@@ -45,13 +45,13 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
                             // Renders column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y
                             ),
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y1
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y1
                             ),
                         ]
                     )
@@ -102,8 +102,8 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
                         LineSeries<ChartData, int>(
                             dataSource: chartData,
                             markerSettings: MarkerSettings(isVisible: true),
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -148,8 +148,8 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ], 
                     )
                 )
@@ -182,8 +182,8 @@ Axis interval can be customized using the [`interval`](https://pub.dev/documenta
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ], 
                     )
                 )
@@ -231,8 +231,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -259,14 +259,14 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
-                            // Additional range padding is applied to y axis
+                            // Additional range padding is applied to start of the y axis
                             rangePadding: ChartRangePadding.additionalStart
                         ),
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -293,14 +293,14 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
-                            // Additional range padding is applied to y axis
+                            // Additional range padding is applied to end of the y axis
                             rangePadding: ChartRangePadding.additionalEnd
                         ),
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -332,8 +332,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -365,8 +365,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -396,8 +396,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],    
                     )
                 )
@@ -429,8 +429,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -462,8 +462,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -495,8 +495,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],   
                     )
                 )
@@ -531,8 +531,8 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <CartesianSeries<ChartData, int>>[
                         ColumnSeries<ChartData, int>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ], 
                     )
                 )
@@ -586,8 +586,8 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                             LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 markerSettings: MarkerSettings(isVisible: true),
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y),
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -629,8 +629,8 @@ Category axis displays text labels instead of numbers. When the string values ar
                             // Renders column chart
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y
                             )
                         ]
                     )
@@ -736,13 +736,13 @@ Category axis can also be rendered based on the index values of data source by s
                         series: <CartesianSeries<ChartData, String>>[
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y,
                             ),
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData2,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y,
                             )
                         ]
                     )
@@ -787,8 +787,8 @@ The date-time axis uses date-time scale and displays date-time values as axis la
                             // Renders line chart
                             LineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y
                             )
                         ]
                     )
@@ -828,8 +828,8 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
                         series: <CartesianSeries<ChartData, DateTime>>[
                         LineSeries<ChartData, DateTime>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -874,8 +874,8 @@ The Flutter Chart supports the following types of interval for date-time axis:
                         series: <CartesianSeries<ChartData, DateTime>>[
                         LineSeries<ChartData, DateTime>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -922,8 +922,8 @@ For example, if you are rendering a series with months in x-axis with an interva
                         series: <CartesianSeries<ChartData, DateTime>>[
                         SplineSeries<ChartData, DateTime>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -975,8 +975,8 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         series: <CartesianSeries<ChartData, DateTime>>[
                         LineSeries<ChartData, DateTime>(
                             dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y),
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
                         ],
                     )
                 )
@@ -1237,8 +1237,8 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
                             // Renders Column chart
                             ColumnSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y
                             )
                         ] 
                     )
@@ -1387,8 +1387,8 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                             // Renders Column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
+                                xValueMapper: (ChartData data, int index) => data.x,
+                                yValueMapper: (ChartData data, int index) => data.y
                             )
                         ] 
                     )
@@ -1493,8 +1493,8 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
                         series : <StepLineSeries<ChartData, String>>[
                         StepLineSeries<ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y,
+                        xValueMapper: (ChartData data, int index) => data.x,
+                        yValueMapper: (ChartData data, int index) => data.y,
                         animationDuration: 0),
                         ]
                     )
