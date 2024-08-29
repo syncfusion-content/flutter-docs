@@ -71,7 +71,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
 {% tabs %}
-{% highlight dart hl_lines="20 22" %} 
+{% highlight dart hl_lines="35 37" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -127,7 +127,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 The [`borderRadius`]() property is used to add the rounded corners to the candle.
 
 {% tabs %}
-{% highlight dart hl_lines="20" %}
+{% highlight dart hl_lines="35" %}
 
     @override
     Widget build(BuildContext context) {
