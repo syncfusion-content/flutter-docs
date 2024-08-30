@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# How to resolve "Library not loaded: @rpath/libswiftCore.dylib" error?
+# How to resolve `Library not loaded: @rpath/libswiftCore.dylib` error?
 
 The Syncfusion Flutter PDF Viewer is a [FFI plugin](https://docs.flutter.dev/packages-and-plugins/developing-packages#types) that uses native code to render the PDF pages. **Java** code is used for **Android**, and **Swift** code is used for **iOS and macOS**. To run the Swift code, the runtime requires the essential Swift standard libraries present in the Runpath **“usr/lib/swift.”** If this path is missing from the **Runpath Search Paths** of the project build settings, you will face the error **"Library not loaded: @rpath/libswiftCore.dylib."** 
  
