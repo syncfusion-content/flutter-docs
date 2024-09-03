@@ -2,7 +2,7 @@
 layout: post
 title: Outgoing Chat Bubble Settings in Flutter Chat widget | Syncfusion
 description: Learn here all about Outgoing Chat Bubble Settings feature of Syncfusion Flutter Chat (SfChat) widget and more.
-platform: Flutter
+platform: flutter
 control: SfChat
 documentation: ug
 ---

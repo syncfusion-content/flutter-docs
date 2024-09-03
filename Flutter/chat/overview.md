@@ -2,14 +2,15 @@
 layout: post
 title: About Flutter Chat widget | Syncfusion 
 description: Learn here all about the introduction of Syncfusion Flutter Chat (SfChat) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfChat
 documentation: ug
 ---
 
 # Flutter Slider (SfChat) Overview
 
-The Syncfusion Flutter Chat widget displays conversations between two or more users in a fully customizable layout. It presents messages in a chat user interface and allows you to customize various aspects such as message composition, action buttons, and bubble appearance.
+The Syncfusion Flutter Chat widget displays conversations between two or more users in a fully customizable layout. It presents messages 
+in a chat user interface and allows you to customize various aspects such as message composition, action buttons, and bubble appearance.
 
 ![Chat overview](images/overview/chat-overview.png)
 

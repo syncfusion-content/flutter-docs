@@ -2,13 +2,14 @@
 layout: post
 title: Composer in Flutter Chat widget | Syncfusion
 description: Learn here all about Composer feature of Syncfusion Flutter Chat (SfChat) widget and more.
-platform: Flutter
+platform: flutter
 control: SfChat
 documentation: ug
 ---
 
 # Composer in Flutter Chat (SfChat)
-This section explains how to integrate and customize the composer in the SfChat widget. You can use the following properties to customize the composer.
+This section explains how to integrate and customize the composer in the SfChat widget. You can use the following properties to 
+customize the composer.
 
 * [`textStyle`] - Used to customize the appearance of the text in the message input field, including color, font size, and style.
 * [`minLines`] - Used to set the minimum number of lines that the message input field should display, determining its initial height.

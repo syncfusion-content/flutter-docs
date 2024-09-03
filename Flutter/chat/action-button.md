@@ -2,13 +2,14 @@
 layout: post
 title: Action Button in Flutter Chat widget | Syncfusion
 description: Learn here all about Action Button feature of Syncfusion Flutter Chat (SfChat) widget and more.
-platform: Flutter
+platform: flutter
 control: SfChat
 documentation: ug
 ---
 
 # Action Button in Flutter Chat (SfChat)
-This section explains how to integrate and customize the Action Button in the SfChat widget. You can use the following properties to customize the actionButton.
+This section explains how to integrate and customize the Action Button in the SfChat widget. You can use the following properties 
+to customize the actionButton.
 
 * [`child`] - Used to define the content of the button, such as an icon or text.
 * [`tooltip`] - Used to provide a hint or description when the user hovers over the button.

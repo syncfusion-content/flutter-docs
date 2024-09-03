@@ -2,13 +2,14 @@
 layout: post
 title: Getting started with Flutter Chat widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Chat (SfChat) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfChat
 documentation: ug
 ---
 
 # Getting started with Flutter Chat (Chat)
-This section explains the steps required to add the chat widget and its elements such as message display, user profiles, message bubbles, and customization options. This section covers only the basic features needed to get started with the Syncfusion chat widget.
+This section explains the steps required to add the chat widget and its elements such as message display, user profiles, message bubbles, 
+and customization options. This section covers only the basic features needed to get started with the Syncfusion chat widget.
 
 To get start quickly with our Flutter Chat widget, you can check on this video.
 
