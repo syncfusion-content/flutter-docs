@@ -10,6 +10,8 @@ documentation: ug
 # Incoming Chat Bubble Settings in Flutter Chat (SfChat)
 This section explains how to integrate and customize the Incoming Chat Bubble Settings in the SfChat widget. 
 
+N> You must import the [`intl`] package for handling [`timestampFormat`] in your chat application.
+
 * [`showUserName`] - Used to determine whether the username is displayed in the incoming chat bubble.
 * [`showTimestamp`] - Used to specify if the timestamp is shown in the incoming chat bubble.
 * [`showUserAvatar`] - Used to indicate whether the user's avatar is displayed in the incoming chat bubble.
@@ -25,6 +27,10 @@ This section explains how to integrate and customize the Incoming Chat Bubble Se
 * [`avatarPadding`] - Used to specify the padding around the user's avatar within the incoming chat bubble.
 * [`headerPadding`] - Used to define the padding around the header section of the incoming chat bubble, including the username and timestamp.
 * [`footerPadding`] - Used to set the padding around the footer section of the incoming chat bubble.
+
+#### See Also
+
+* You can also customize the bubble shapes and colors properties using [`SfChatTheme`] by wrapping with [`SfChat`].
 
 {% tabs %}
 {% highlight Dart %}
