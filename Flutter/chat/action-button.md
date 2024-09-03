@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action Button in Flutter Chat widget | Syncfusion
-description: Learn here all about Action Button feature of Syncfusion Flutter Chat (SfChat) widget and more.
+description: Learn here all about Action Button feature of Syncfusion Flutter Chat (SfChat) widget.
 platform: flutter
 control: SfChat
 documentation: ug
