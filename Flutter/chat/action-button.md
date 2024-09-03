@@ -27,6 +27,10 @@ This section explains how to integrate and customize the Action Button in the Sf
 * [`size`] - Used to specify the width and height of the button.
 * [`onPressed`] - Used to specify a callback function triggered when the button is pressed.
 
+#### See Also
+
+* You can also customize the above properties using [`SfChatTheme`] by wrapping with [`SfChat`].
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -60,27 +64,40 @@ Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SfChat(
-            messages: _messages,
-            outgoingUser: '123-001',
-            actionButton: ChatActionButton(
-              onPressed: (String newMessage) {
-                setState(() {
-                  _messages.add(
-                    ChatMessage(
-                      text: newMessage,
-                      time: DateTime.now(),
-                      author: ChatAuthor(
-                        id: '123-001',
-                        name: 'Chat A',
-                      ),
+        child: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+          actionButton: ChatActionButton(
+            child: Icon(Icons.send, color: Colors.grey[300]),
+            tooltip: 'Send Message',
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.blue,
+            focusColor: Colors.lightBlueAccent,
+            hoverColor: Colors.blueAccent,
+            splashColor: Colors.white.withOpacity(0.3),
+            elevation: 4.0,
+            focusElevation: 6.0,
+            hoverElevation: 4.0,
+            highlightElevation: 8.0,
+            mouseCursor: SystemMouseCursors.click,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25.0)),
+            padding: const EdgeInsetsDirectional.only(start: 8.0),
+            size: const Size.square(40.0),
+            onPressed: (String newMessage) {
+              setState(() {
+                _messages.add(
+                  ChatMessage(
+                    text: newMessage,
+                    time: DateTime.now(),
+                    author: ChatAuthor(
+                      id: '123-001',
+                      name: 'Chat A',
                     ),
-                  );
-                });
-              },
-            ),
+                  ),
+                );
+              });
+            },
           ),
         ),
       ),

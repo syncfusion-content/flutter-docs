@@ -59,24 +59,31 @@ Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SfChat(
-            messages: _messages,
-            outgoingUser: '123-001',
-            outgoingBubbleSettings: ChatBubbleSettings(
-              showUserName: true,
-              showTimestamp: true,
-              showUserAvatar: true,
-              widthFactor: 0.8,
-              avatarSize: const Size.square(32.0),
-              padding: const EdgeInsets.all(2.0),
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              headerPadding:
-                  const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
-              footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
+        child: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+          outgoingBubbleSettings: ChatBubbleSettings(
+            showUserName: true,
+            showTimestamp: true,
+            showUserAvatar: true,
+            timestampFormat: DateFormat('EEEE h:mm a'),
+            textStyle:
+                const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            headerTextStyle:
+                const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+            contentBackgroundColor: const Color.fromARGB(255, 186, 239, 255),
+            contentShape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
+            widthFactor: 0.8,
+            avatarSize: const Size.square(32.0),
+            padding: const EdgeInsets.all(2.0),
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            avatarPadding: const EdgeInsets.only(left: 4),
+            headerPadding:
+                const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
+            footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
           ),
         ),
       ),

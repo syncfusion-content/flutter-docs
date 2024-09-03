@@ -61,3 +61,4 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Messages and User Support](images/message-and-usersupport/default-message-chat.png)
+![Messages and User Support](images/message-and-usersupport/avatar-message-chat.png)
