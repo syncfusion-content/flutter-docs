@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Getting started with Flutter Chat widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Chat (SfChat)
-widget, its elements, and more.
+description: Learn here about getting started with Syncfusion Flutter Chat (SfChat) widget, its elements, and more.
 platform: flutter
 control: SfChat
 documentation: ug

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Incoming Chat Bubble Settings in Flutter Chat widget | Syncfusion
-description: Learn here all about Incoming Chat Bubble Settings feature of Syncfusion Flutter Chat (SfChat)
-widget and more.
+description: Learn here all about Incoming Chat Bubble Settings feature of Syncfusion Flutter Chat (SfChat) widget and more.
 platform: flutter
 control: SfChat
 documentation: ug

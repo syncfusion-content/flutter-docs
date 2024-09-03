@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Messages and User Support in Flutter Chat widget | Syncfusion
-description: Learn here all about Messages and User Support feature of Syncfusion Flutter Chat (SfChat)
-widget and more.
+description: Learn here all about Messages and User Support feature of Syncfusion Flutter Chat (SfChat) widget and more.
 platform: flutter
 control: SfChat
 documentation: ug
