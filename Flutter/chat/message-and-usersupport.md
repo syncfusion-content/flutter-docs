@@ -21,6 +21,7 @@ properties to customize the composer.
 
 * [`id`] - Used to uniquely identify the author of the message. This is a required field for distinguishing between different users.
 * [`name`] - Used to specify the name of the author of the message. This helps in displaying the author's name in the chat interface.
+* [`avatar`] - Used to specify the image or visual representation of the message author. It typically takes an ImageProvider, such as NetworkImage, AssetImage, or FileImage, to display the author’s profile picture in the chat interface.
 
 {% tabs %}
 {% highlight Dart %}
