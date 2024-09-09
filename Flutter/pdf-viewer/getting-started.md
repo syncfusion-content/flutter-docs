@@ -141,7 +141,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> The file path mentioned in the above code example is just for the Android platform. On Android, this may require the `android.permission.READ_EXTERNAL_STORAGE`.
+N> On Android, this may require the `android.permission.READ_EXTERNAL_STORAGE`.
+
+N> Since the file system is not accessible from the browser, [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) is not supported on Flutter Web.
 
 ### Load document from the Memory
 

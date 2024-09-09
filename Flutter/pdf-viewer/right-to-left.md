@@ -121,3 +121,5 @@ Then, import the `flutter_localizations` library, specify [localizationsDelegate
 
 {% endhighlight %}
 {% endtabs %}
+
+N> RTL scrolling is not supported in Single Page Layout mode when using horizontal scroll direction.
