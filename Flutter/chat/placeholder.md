@@ -36,4 +36,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer support](images/composer/composer-actionbutton-chat.png)
+![Chat composer support](images/placeholder/placeholder-chat.png)

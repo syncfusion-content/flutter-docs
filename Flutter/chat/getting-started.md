@@ -108,6 +108,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Default chat](images/getting-started/placeholder.png)
 
 ## Add Action Button
 
@@ -142,7 +143,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default chat](images/getting-started/composer-actionbutton-chat.png)
+![Default chat](images/getting-started/actionbutton-chat.png)
 
 ## Add Placeholder to Composer
 
@@ -175,4 +176,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default chat](images/getting-started/bubblesettings-chat.png)
+![Default chat](images/getting-started/composer-placeholder.png)

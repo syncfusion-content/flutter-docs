@@ -33,21 +33,19 @@ Widget build(BuildContext context) {
   return SfChat(
     messages: <ChatMessage>[
       ChatMessage(
-        text: 'Hi',
+        text: 'Hi Jane have you seen the new movie yet?',
         time: DateTime(2024, 08, 07, 9, 0),
         author: ChatAuthor(
           id: '123-001',
           name: 'John Doe',
-          avatar: NetworkImage('https://randomuser.me/api/portraits/men/1.jpg'),
         ),
       ),
       ChatMessage(
-        text: 'Hello',
+        text: 'Yes, I did! It was good but the ending was a bit off.',
         time: DateTime(2024, 08, 07, 9, 5),
         author: ChatAuthor(
           id: '123-002',
           name: 'Jane Smith',
-          avatar: NetworkImage('https://randomuser.me/api/portraits/women/1.jpg'),
         ),
       ),
     ],
@@ -58,7 +56,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Messages and User Support](images/message-and-usersupport/avatar-message-chat.png)
+![Messages](images/message-content/default-message.png)
 
 ## Outgoing User (ChatAuthor)
 In the chat widget, the outgoingUser property represents the user who is sending messages. It is an instance of the 
@@ -82,7 +80,7 @@ Widget build(BuildContext context) {
   return SfChat(
     messages: <ChatMessage>[
       ChatMessage(
-        text: 'Hi',
+        text: 'Hi Jane have you seen the new movie yet?',
         time: DateTime(2024, 08, 07, 9, 0),
         author: ChatAuthor(
           id: '123-001',
@@ -91,7 +89,7 @@ Widget build(BuildContext context) {
         ),
       ),
       ChatMessage(
-        text: 'Hello',
+        text: 'Yes, I did! It was good but the ending was a bit off.',
         time: DateTime(2024, 08, 07, 9, 5),
         author: ChatAuthor(
           id: '123-002',
@@ -107,7 +105,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Messages and User Support](images/message-and-usersupport/default-message-chat.png)
+![Outgoing User](images/message-content/default-outgoinguser.png)
 
 ## Incoming Bubble Settings (ChatBubbleSettings)
 In the chat widget, the Incoming Bubble Settings allow you to customize the appearance and behavior of incoming chat 
@@ -178,7 +176,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat incomingBubbleSettings support](images/incoming-bubble-settings/incomingbubblesettings-chat.png)
+![Chat incomingBubbleSettings support](images/message-content/incomingbubble-chat.png)
 
 ## Outgoing Bubble Settings (ChatBubbleSettings)
 In the chat widget, the Outgoing Bubble Settings allow you to customize the appearance and behavior of outgoing chat 
@@ -248,7 +246,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat outgoingBubbleSettings support](images/outgoing-bubble-settings/outgoingbubblesettings-chat.png)
+![Chat outgoingBubbleSettings support](images/message-content/outgoingbubble-chat.png)
 
 #### See Also
 

@@ -44,6 +44,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Chat actionButton support](images/action-button/actionbutton-disabled.png)
+![Chat actionButton support](images/action-button/actionbutton-background.png)
 
 ## Customize Action Button using Properties
 Customizing the action button using properties allows you to tailor its appearance and functionality to meet your app's 
@@ -114,7 +115,7 @@ Widget build(BuildContext context) {
       focusColor: Colors.lightBlueAccent,
       hoverColor: Colors.blueAccent,
       splashColor: Colors.white.withOpacity(0.3),
-      elevation: 4.0,
+      elevation: 2.0,
       focusElevation: 6.0,
       hoverElevation: 4.0,
       highlightElevation: 8.0,
@@ -139,7 +140,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat actionButton support](images/action-button/actionbutton-background.png)
+![Chat actionButton support](images/action-button/customize-actionbutton.png)
+![Chat actionButton support](images/action-button/customized-actionbutton-chat.png)
 
 #### See Also
 

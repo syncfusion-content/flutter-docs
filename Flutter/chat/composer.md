@@ -59,7 +59,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer support](images/composer/composer-actionbutton-chat.png)
+![Chat composer support](images/composer/default-composer.png)
 
 ## Custom Composer using composer.builder
 The composer.builder property in the SfChat widget allows for advanced customization of the chat input area. By using 
@@ -93,4 +93,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer support](images/composer/composer-actionbutton-chat.png)
+![Chat composer support](images/composer/composer-builder.png)

@@ -13,7 +13,7 @@ The Syncfusion Flutter Chat widget displays conversations between two or more us
 It presents messages in a chat user interface and allows you to customize various aspects such as message composition, 
 action buttons, and bubble appearance.
 
-![Chat overview](images/overview/chat-overview.png)
+![Chat overview](images/overview/chat-overview.gif)
 
 ## Features
 
