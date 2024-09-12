@@ -7,31 +7,30 @@ control: SfChat
 documentation: ug
 ---
 
-# Getting started with Flutter Chat (Chat)
-This section explains the steps required to add the chat widget and its elements such as message display, user profiles, message bubbles, 
-and customization options. This section covers only the basic features needed to get started with the Syncfusion chat widget.
+# Getting started with Flutter Chat (SfChat)
+This section explains how to add the Flutter Chat widget to your application and how to use its basic features.
 
 To get start quickly with our Flutter Chat widget, you can check on this video.
 
 <!-- <style>#FlutterChatVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterChatVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe> -->
 
-## Add Flutter chat to an application
+## Add Flutter Chat to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter chat dependency to your pubspec.yaml file.
+Add the Syncfusion Flutter Chat dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
 dependencies:
 
-syncfusion_flutter_chat: ^xx.x.xx
+syncfusion_flutter_chat: ^x.x.x
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Chat`] package.
+N> Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`] package.
 
 **Get packages** 
 
@@ -55,51 +54,23 @@ import 'package:syncfusion_flutter_chat/chat.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize chat
+## Initialize Chat widget 
 
-After importing the package, initialize the Chat widget as a child of any widget, such as Center. In the initState method, ensure the messages property is set with a list of ChatMessage objects and the outgoingUser is provided with the ID of the current user. This setup ensures proper message display and user differentiation in the chat interface.
+Add a chat widget with the required properties, such as messages and outgoingUser.
 
-N> The Chat widget updates its display based on the messages list and outgoingUser properties. Changes to the messages list or outgoingUser will not be reflected until the widget's state is rebuilt with the updated data.
+N> The chat interface updates based on changes to messages and outgoingUser. Ensure the widget's state is rebuilt to 
+reflect any updates.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<ChatMessage> _messages;
-
-@override
-void initState() {
-  _messages = <ChatMessage>[
-    ChatMessage(
-      text: 'Hi',
-      time: DateTime(2024, 08, 07, 9, 0),
-      author: ChatAuthor(
-        id: '123-001',
-        name: 'Chat A',
-      ),
-    ),
-    ChatMessage(
-      text: 'Hello',
-      time: DateTime(2024, 08, 07, 9, 5),
-      author: ChatAuthor(
-        id: '123-002',
-        name: 'Chat B',
-      ),
-    ),
-  ];
-  super.initState();
-}
+List<ChatMessage> _messages = []; // Load if there are existing messages.
 
 @override
 Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-001',
-        ),
-      ),
-    ),
+  return SfChat(
+    messages: _messages,
+    outgoingUser: _currentUser.id,
   );
 }
 	
@@ -108,72 +79,62 @@ Widget build(BuildContext context) {
 
 ![Default chat](images/getting-started/default-chat.png)
 
-### Set composer and action Button
+## Add Placeholder
 
-To customize the SfChat widget with a composer and an action button, you can use the composer and actionButton properties. The composer property allows you to define a widget that will serve as the text input area where users can type their messages. The actionButton property lets you specify a button widget that users can press to send the composed message.
+To display a placeholder message in the chat widget when there are no messages, you can use the placeholderBuilder 
+property. This property allows you to specify a custom widget that will be shown when the messages list is empty.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<ChatMessage> _messages;
-
-@override
-void initState() {
-  _messages = <ChatMessage>[
-    ChatMessage(
-      text: 'Hi',
-      time: DateTime(2024, 08, 07, 9, 0),
-      author: ChatAuthor(
-        id: '123-001',
-        name: 'Chat A',
-      ),
-    ),
-    ChatMessage(
-      text: 'Hello',
-      time: DateTime(2024, 08, 07, 9, 5),
-      author: ChatAuthor(
-        id: '123-002',
-        name: 'Chat B',
-      ),
-    ),
-  ];
-  super.initState();
-}
+List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
 
 @override
 Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-001',
-          composer: ChatComposer(
-            minLines: 1,
-            maxLines: 6,
-            decoration: InputDecoration(
-              hintText: 'Type Message Here ....'
-            ),
-            padding: EdgeInsets.only(top: 16.0),
-          ),
-          actionButton: ChatActionButton(
-            onPressed: (String newMessage) {
-              setState(() {
-                _messages.add(
-                  ChatMessage(
-                    text: newMessage,
-                    time: DateTime.now(),
-                    author: ChatAuthor(
-                      id: '123-001',
-                      name: 'Chat A',
-                    ),
-                  ),
-                );
-              });
-            },
-          ),
+  return SfChat(
+    messages: _messages,
+    outgoingUser: _currentUser.id,
+    placeholderBuilder: (BuildContext context) {
+      return Center(
+        child: Text(
+          'No messages yet!',
+          style: TextStyle(fontSize: 16, color: Colors.black),
         ),
-      ),
+      );
+    },
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default chat](images/getting-started/placeholder.png)
+
+## Add Action Button
+
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to 
+create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the `ChatActionButton`, and then rebuild the widget using the `setState` function.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+
+@override
+Widget build(BuildContext context) {
+  return SfChat(
+    messages: _messages,
+    outgoingUser: _currentUser.id,
+    actionButton: ChatActionButton(
+      onPressed: (String newMessage) {
+        setState(() {
+          _messages.add(ChatMessage(
+            text: newMessage,
+            time: DateTime.now(),
+            author: _currentUser,
+          ));
+        });
+      },
     ),
   );
 }
@@ -181,101 +142,32 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default chat](images/getting-started/composer-actionbutton-chat.png)
+![Default chat](images/getting-started/actionbutton-chat.png)
 
-### Set Incoming and Outgoing chat bubble settings
+## Add Placeholder to Composer
 
-To customize the appearance of chat bubbles in the SfChat widget, you can use the incomingBubbleSettings and outgoingBubbleSettings properties.
-The `[incomingBubbleSettings]` property allows you to customize the appearance of incoming chat bubbles, including the display of the sender's username, timestamp, avatar, and various padding options. The [`outgoingBubbleSettings`] property allows you to customize the appearance of outgoing chat bubbles, including the display of the sender's username, timestamp, avatar, and various padding options.
+To add a placeholder to the ChatComposer in the chat widget, configure the composer property with a ChatComposer widget 
+that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<ChatMessage> _messages;
-
-@override
-void initState() {
-  _messages = <ChatMessage>[
-    ChatMessage(
-      text: 'Hi',
-      time: DateTime(2024, 08, 07, 9, 0),
-      author: ChatAuthor(
-        id: '123-001',
-        name: 'Chat A',
-      ),
-    ),
-    ChatMessage(
-      text: 'Hello',
-      time: DateTime(2024, 08, 07, 9, 5),
-      author: ChatAuthor(
-        id: '123-002',
-        name: 'Chat B',
-      ),
-    ),
-  ];
-  super.initState();
-}
+List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
 
 @override
 Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-001',
-          composer: ChatComposer(
-            minLines: 1,
-            maxLines: 6,
-            decoration: InputDecoration(hintText: 'Type Message Here ....'),
-            padding: EdgeInsets.only(top: 16.0),
-          ),
-          actionButton: ChatActionButton(
-            onPressed: (String newMessage) {
-              setState(() {
-                _messages.add(
-                  ChatMessage(
-                    text: newMessage,
-                    time: DateTime.now(),
-                    author: ChatAuthor(
-                      id: '123-001',
-                      name: 'Chat A',
-                    ),
-                  ),
-                );
-              });
-            },
-          ),
-          incomingBubbleSettings: ChatBubbleSettings(
-            showUserName: true,
-            showTimestamp: true,
-            showUserAvatar: true,
-            contentBackgroundColor: const Color.fromARGB(255, 114, 220, 230),
-            widthFactor: 0.8,
-            avatarSize: const Size.square(32.0),
-            padding: const EdgeInsets.all(2.0),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            headerPadding:
-                const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
-            footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
-          ),
-          outgoingBubbleSettings: ChatBubbleSettings(
-            showUserName: true,
-            showTimestamp: true,
-            showUserAvatar: true,
-            contentBackgroundColor: const Color.fromARGB(255, 186, 239, 255),
-            widthFactor: 0.8,
-            avatarSize: const Size.square(32.0),
-            padding: const EdgeInsets.all(2.0),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            headerPadding:
-                const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
-            footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
-          ),
-        ),
+  return SfChat(
+    messages: _messages,
+    outgoingUser: _currentUser.id,
+    composer: const ChatComposer(
+      decoration: InputDecoration(
+        hintText: 'Message',
       ),
+    ),
+    actionButton: ChatActionButton(
+      onPressed: (String newMessage) {
+        // Handle the send button click action.
+      },
     ),
   );
 }
@@ -283,4 +175,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default chat](images/getting-started/bubblesettings-chat.png)
+![Default chat](images/getting-started/composer-placeholder.png)
