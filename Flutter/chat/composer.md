@@ -13,7 +13,7 @@ with the composerBuilder.
 
 ## Default Composer
 By default, the chat widget provides a basic composer that includes a text input field for users to type their messages.
-The composer is customizable using several properties to fit the design and functionality requirements of your chat 
+The composer is customizable with several properties to meet the design and functionality requirements of your chat 
 application.
 
 ### TextStyle

@@ -14,8 +14,8 @@ as well as differentiate between outgoing and incoming messages.
 
 ## Messages (ChatMessage)
 In the chat widget, messages are represented by instances of the [`ChatMessage`] class. This class encapsulates the 
-details of each message within the chat interface. The [`ChatMessage`] properties allow you to define various aspects
-of the message, including its content, timing, and sender. 
+details of each message within the chat interface. The properties of the [`ChatMessage`] class allow you to define 
+various aspects of the message, including its content, timing, and sender.
 
 * The [`text`] property is used to define the text content of the chat message.
 * The [`time`] property is used to specify the timestamp of when the message was sent, typically represented as a 
