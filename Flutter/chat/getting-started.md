@@ -34,7 +34,7 @@ Add the Syncfusion Flutter Chat dependency to your pubspec.yaml file.
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`](https://pub.dev/packages/syncfusion_flutter_chat/versions) package.
+>**Note**: Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages** 
 
