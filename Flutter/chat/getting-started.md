@@ -120,7 +120,7 @@ To display a placeholder message in the chat widget when there are no messages, 
 
 ![Default chat](images/getting-started/placeholder.png)
 
-## Add Action Button
+## Enable Action Button
 
 By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the `ChatActionButton`, and then rebuild the widget using the `setState` function.
 
@@ -154,7 +154,7 @@ By default, the chat widget does not rebuild itself when the send button is clic
 
 ![Default chat](images/getting-started/actionbutton-chat.png)
 
-## Add Placeholder to Composer
+## Enable Composer
 
 To add a placeholder to the ChatComposer in the chat widget, configure the composer property with a ChatComposer widget that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
 
