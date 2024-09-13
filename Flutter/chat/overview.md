@@ -9,20 +9,30 @@ documentation: ug
 
 # Flutter Chat (SfChat) Overview
 
-The Syncfusion Flutter Chat widget displays conversations between two or more users in a fully customizable layout. It presents messages in a chat user interface and allows you to customize various aspects, such as message composition, action buttons, and the appearance of message bubbles.
+The Syncfusion Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message bubbles (header, footer, content, and avatar).
 
 ![Chat overview](images/overview/chat-overview.gif)
 
 ## Features
 
-* **Placeholder** - You can use the [`placeholderBuilder`] to create a custom widget that appears when the conversation is idle. This feature is particularly useful for presenting users with a relevant or visually appealing message indicating that the conversation is currently empty.
+* **Placeholder** - The [`placeholderBuilder`] can be used to create a custom widget that appears when conversations are empty. This feature is especially useful for displaying a relevant or visually appealing message, indicating that the conversation currently has no messages.
 
-* **Message** -  This feature displays [messages] with text, timestamps, and author details, and it allows profile customization. The [isOutgoingUser] property helps differentiate between incoming and outgoing messages, enabling distinct styling for messages sent by the current user.
+* **Composer** - The primary text editor where new chat messages can be composed. You can also integrate custom composer widgets.
 
-* **Composer** - The [`composer`] property allows you to add a message entry field to the chat interface. This widget includes a customizable text input area for users to compose and send new messages.You can use a predefined widget or provide a custom builder for complete flexibility in the presentation and styling of the message input field.
+* **Action Button** - Represents the send button. Pressing this action button invokes the [`onPressed`] callback with the text entered in the default [`ChatComposer`].
 
-* **Action Button** - This represents a customizable [`actionButton`] for sending new messages in the chat conversation. It supports customization of focus, hover, and splash colors, as well as elevation and more, allowing you to align it with your app’s design and functionality requirements.
+* **Message Bubble** -  A list of [`ChatMessage`] objects that will be displayed in the chat interface as either incoming or outgoing messages based on the [`outgoingUser`]. Each [`ChatMessage`] includes details such as the message text, timestamp, and author information.
 
-* **Builder** - The [`bubbleHeaderBuilder`] allows you to specify a custom widget that will be displayed as a header within each chat bubble. The [`bubbleAvatarBuilder`] enables you to specify a custom widget that will be shown as an avatar within each chat bubble. The [`bubbleContentBuilder`] allows you to define a custom widget to display as the content within each chat bubble. The [`bubbleFooterBuilder`] permits you to specify a custom widget that will be presented as a footer within each chat bubble.
+* **Bubble Header** - Displays the sender's name and the timestamp associated with each message. Using the [`bubbleHeaderBuilder`], a custom widget can be specified to display as a header for each chat bubble with required details about the respective message.
 
-* **Message Bubble** - The [`incomingBubbleSettings`] property allows you to customize the appearance of incoming chat bubbles, including the display of the sender's username, timestamp, avatar, and various padding options.Similarly, the [`outgoingBubbleSettings`] property enables you to customize the appearance of outgoing chat bubbles, which also includes options for displaying the sender's username, timestamp, avatar, and various padding settings.
+* **Bubble Footer** - By default, no footer is added to the message bubble. Using the [`bubbleFooterBuilder`], a custom widget can be specified to display as a footer for each chat bubble with required details about the respective message.
+
+* **Bubble Content** - The actual message content. Using the [`bubbleContentBuilder`], a custom widget can be specified to display as the content for each chat message with a customized layout.
+
+* **Bubble Avatar** - Displays user avatars or profile pictures of the respective message. Using the [`bubbleAvatarBuilder`], a custom widget can be specified to display the chat message avatar with relevant details.
+
+>**Note**: You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+
+#### See Also
+
+* [Integrating syncfusion flutter chat in a flutter web application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-chat-in-flutter).

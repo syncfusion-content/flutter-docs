@@ -8,9 +8,11 @@ documentation: ug
 ---
 
 # Messages Content in Flutter Chat (SfChat)
+
 This section explains how to integrate and customize the messages, outgoing user settings, and the appearance of message bubbles in the chat widget. You can use various properties to manage the content and styling of messages, as well as differentiate between outgoing and incoming messages.
 
-## Messages (ChatMessage)
+## Messages
+
 In the chat widget, messages are represented by instances of the [`ChatMessage`] class. This class encapsulates the details of each message within the chat interface. The properties of the [`ChatMessage`] class allow you to define various aspects of the message, including its content, timing, and sender.
 
 * The [`text`] property is used to define the text content of the chat message.
@@ -18,9 +20,7 @@ In the chat widget, messages are represented by instances of the [`ChatMessage`]
 * The [`author`] property is used to specify the author of the message, represented by a ChatAuthor object which includes details about the message sender.
 
 {% tabs %}
-{% highlight Dart %}
-
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -52,7 +52,8 @@ Widget build(BuildContext context) {
 
 ![Messages](images/message-content/default-message.png)
 
-## Outgoing User (ChatAuthor)
+## Outgoing User
+
 In the chat widget, the outgoingUser property represents the user who is sending messages. It is an instance of the [`ChatAuthor`] class and plays a crucial role in identifying and distinguishing messages from different users.
 
 * The [`id`] property is used to uniquely identify the author of the message. This is a required field for distinguishing between different users.
@@ -60,9 +61,7 @@ In the chat widget, the outgoingUser property represents the user who is sending
 * The [`avatar`] property is used to specify the image or visual representation of the message author. It typically takes an ImageProvider, such as NetworkImage, AssetImage, or FileImage, to display the author’s profile picture in the chat interface.
 
 {% tabs %}
-{% highlight Dart %}
-
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -96,8 +95,9 @@ Widget build(BuildContext context) {
 
 ![Outgoing User](images/message-content/default-outgoinguser.png)
 
-## Incoming Bubble Settings (ChatBubbleSettings)
-In the chat widget, the Incoming Bubble Settings allow you to customize the appearance and behavior of incoming chat bubbles. These settings control various aspects of how incoming messages are displayed, including user information, timestamps, and visual styling. 
+## Incoming Bubble Settings
+
+The [`incomingBubbleSettings`] property allows you to customize the appearance and behavior of incoming chat bubbles through the [`ChatBubbleSettings`] class, which controls various aspects such as user information, timestamps, and visual styling.
 
 >**Note**: You must import the [`intl`] package for handling [`timestampFormat`] in your chat application.
 
@@ -118,28 +118,30 @@ In the chat widget, the Incoming Bubble Settings allow you to customize the appe
 * The [`footerPadding`] property is used to set the padding around the footer section of the incoming chat bubble.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: currentUser.id,
+    outgoingUser: _outgoingUserId,
     incomingBubbleSettings: ChatBubbleSettings(
       showUserName: true,
       showTimestamp: true,
       showUserAvatar: true,
       timestampFormat: DateFormat('EEEE h:mm a'),
       textStyle:
-          const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          const TextStyle(fontSize: 14),
       headerTextStyle:
           const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
       contentBackgroundColor:
-          const Color.fromARGB(255, 114, 220, 230),
+          const Color.fromARGB(255, 230, 230, 250),
       contentShape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(25)),
       ),
       widthFactor: 0.8,
       avatarSize: const Size.square(32.0),
@@ -159,8 +161,9 @@ Widget build(BuildContext context) {
 
 ![Chat incomingBubbleSettings support](images/message-content/incomingbubble-chat.png)
 
-## Outgoing Bubble Settings (ChatBubbleSettings)
-In the chat widget, the Outgoing Bubble Settings allow you to customize the appearance and behavior of outgoing chat bubbles. These settings control various aspects of how outgoing messages are displayed, including user information, timestamps, and visual styling.
+## Outgoing Bubble Settings
+
+The [`outgoingBubbleSettings`] property allows you to customize the appearance and behavior of outgoing chat bubbles through the [`ChatBubbleSettings`] class, which controls various aspects such as user information, timestamps, and visual styling.
 
 >**Note**: You must import the [`intl`] package for handling [`timestampFormat`] in your chat application.
 
@@ -181,25 +184,28 @@ In the chat widget, the Outgoing Bubble Settings allow you to customize the appe
 * The [`footerPadding`] property is used to set the padding around the footer section of the incoming chat bubble.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: currentUser.id,
+    outgoingUser: _outgoingUserId,
     outgoingBubbleSettings: ChatBubbleSettings(
       showUserName: true,
       showTimestamp: true,
       showUserAvatar: true,
       timestampFormat: DateFormat('EEEE h:mm a'),
       textStyle:
-          const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          const TextStyle(fontSize: 14),
       headerTextStyle:
           const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-      contentBackgroundColor: const Color.fromARGB(255, 186, 239, 255),
+      contentBackgroundColor:
+          const Color.fromARGB(255, 230, 230, 250),
       contentShape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),

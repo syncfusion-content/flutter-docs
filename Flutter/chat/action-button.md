@@ -8,30 +8,28 @@ documentation: ug
 ---
 
 # Action Button in Flutter Chat (SfChat)
-This section explains how to integrate and customize the Action Button in the SfChat widget. You can use the following properties to customize the actionButton.
 
-## Default Action Button
+This section explains how to integrate and customize the Action Button in the Chat widget. You can use the following properties to customize the actionButton.
+
+## Action Button
+
 By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`]. After that, you should rebuild the widget using the `setState` function.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: _currentUser.id,
+    outgoingUser: _outgoingUserId,
     actionButton: ChatActionButton(
       onPressed: (String newMessage) {
-        setState(() {
-          _messages.add(ChatMessage(
-            text: newMessage,
-            time: DateTime.now(),
-            author: _currentUser,
-          ));
-        });
+        // Handle the send button click action.
       },
     ),
   );
@@ -43,10 +41,11 @@ Widget build(BuildContext context) {
 ![Chat actionButton support](images/action-button/actionbutton-disabled.png)
 ![Chat actionButton support](images/action-button/actionbutton-background.png)
 
-## Customize Action Button using Properties
-Customizing the action button using properties allows you to tailor its appearance and functionality to meet your app's design needs. You can adjust various aspects, including the button’s content (like text or icons), colors for different states (such as hover or press), and the button's shape and size. Additionally, you can control the button's elevation to manage its shadow and depth, specify the type of cursor that appears on hover, and define padding for spacing around the button’s content. These customizations help ensure that the button fits seamlessly into your app's design and enhances the overall user experience.
+## Custom Action Button
 
-### Add child support
+Customize the action button to match your app’s design by adjusting properties like content (text or icons), colors for different states (hover, press), shape, size, elevation, cursor type, and padding. This ensures the button integrates seamlessly into your app and enhances the user experience.
+
+### Child
 
 * The [`child`] property is used to define the content of the button, such as an icon or text.
 
@@ -85,20 +84,22 @@ Customizing the action button using properties allows you to tailor its appearan
 
 * The [`size`] property is used to specify the width and height of the button.
 
-### Button Behavior
+### Handle onPressed
 
 * The [`onPressed`] property is used to specify a callback function triggered when the button is pressed.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: currentUser.id,
+    outgoingUser: _outgoingUserId,
     actionButton: ChatActionButton(
       child: Icon(Icons.send, color: Colors.grey[300]),
       tooltip: 'Send Message',
@@ -117,13 +118,7 @@ Widget build(BuildContext context) {
       padding: const EdgeInsetsDirectional.only(start: 8.0),
       size: const Size.square(40.0),
       onPressed: (String newMessage) {
-        setState(() {
-          _messages.add(ChatMessage(
-            text: newMessage,
-            time: DateTime.now(),
-            author: _currentUser,
-          ));
-        });
+        // Handle the send button click action.
       },
     ),
   );
