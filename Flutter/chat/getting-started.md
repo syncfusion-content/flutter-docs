@@ -29,7 +29,7 @@ Add the Syncfusion Flutter Chat dependency to your pubspec.yaml file.
 
     dependencies:
 
-    syncfusion_flutter_chat: ^xx.x.xx
+    syncfusion_flutter_chat: ^x.x.x
 
 {% endhighlight %}
 {% endtabs %}
