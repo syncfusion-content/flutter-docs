@@ -30,7 +30,7 @@ syncfusion_flutter_chat: ^x.x.x
 
 {% endhighlight %}
 
-N> Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`] package.
+>**Note**: Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`] package.
 
 **Get packages** 
 
@@ -58,8 +58,7 @@ import 'package:syncfusion_flutter_chat/chat.dart';
 
 Add a chat widget with the required properties, such as messages and outgoingUser.
 
-N> The chat interface updates based on changes to messages and outgoingUser. Ensure the widget's state is rebuilt to 
-reflect any updates.
+>**Note**: The chat interface updates based on changes to messages and outgoingUser. Ensure the widget's state is rebuilt to reflect any updates.
 
 {% tabs %}
 {% highlight Dart %}
@@ -81,8 +80,7 @@ Widget build(BuildContext context) {
 
 ## Add Placeholder
 
-To display a placeholder message in the chat widget when there are no messages, you can use the placeholderBuilder 
-property. This property allows you to specify a custom widget that will be shown when the messages list is empty.
+To display a placeholder message in the chat widget when there are no messages, you can use the placeholderBuilder property. This property allows you to specify a custom widget that will be shown when the messages list is empty.
 
 {% tabs %}
 {% highlight Dart %}
@@ -112,8 +110,7 @@ Widget build(BuildContext context) {
 
 ## Add Action Button
 
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to 
-create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the `ChatActionButton`, and then rebuild the widget using the `setState` function.
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the `ChatActionButton`, and then rebuild the widget using the `setState` function.
 
 {% tabs %}
 {% highlight Dart %}
@@ -146,8 +143,7 @@ Widget build(BuildContext context) {
 
 ## Add Placeholder to Composer
 
-To add a placeholder to the ChatComposer in the chat widget, configure the composer property with a ChatComposer widget 
-that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
+To add a placeholder to the ChatComposer in the chat widget, configure the composer property with a ChatComposer widget that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
 
 {% tabs %}
 {% highlight Dart %}

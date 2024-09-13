@@ -8,9 +8,7 @@ documentation: ug
 ---
 
 # Placeholder in Flutter Chat (SfChat)
-By default, the chat widget does not display any content when there are no messages. To provide a custom message or 
-visual indication in place of an empty chat, you can use the placeholderBuilder property.  This property allows you to 
-specify a custom widget that will be displayed when the list of chat messages is empty.
+By default, the chat widget does not display any content when there are no messages. To provide a custom message or visual indication in place of an empty chat, you can use the placeholderBuilder property.  This property allows you to specify a custom widget that will be displayed when the list of chat messages is empty.
 
 {% tabs %}
 {% highlight Dart %}

@@ -8,12 +8,10 @@ documentation: ug
 ---
 
 # Action Button in Flutter Chat (SfChat)
-This section explains how to integrate and customize the Action Button in the SfChat widget. You can use the following
-properties to customize the actionButton.
+This section explains how to integrate and customize the Action Button in the SfChat widget. You can use the following properties to customize the actionButton.
 
 ## Default Action Button
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to 
-create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`]. After that, you should rebuild the widget using the `setState` function.
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`]. After that, you should rebuild the widget using the `setState` function.
 
 {% tabs %}
 {% highlight Dart %}
@@ -46,12 +44,7 @@ Widget build(BuildContext context) {
 ![Chat actionButton support](images/action-button/actionbutton-background.png)
 
 ## Customize Action Button using Properties
-Customizing the action button using properties allows you to tailor its appearance and functionality to meet your app's 
-design needs. You can adjust various aspects, including the button’s content (like text or icons), colors for different 
-states (such as hover or press), and the button's shape and size. Additionally, you can control the button's elevation 
-to manage its shadow and depth, specify the type of cursor that appears on hover, and define padding for spacing around 
-the button’s content. These customizations help ensure that the button fits seamlessly into your app's design and 
-enhances the overall user experience.
+Customizing the action button using properties allows you to tailor its appearance and functionality to meet your app's design needs. You can adjust various aspects, including the button’s content (like text or icons), colors for different states (such as hover or press), and the button's shape and size. Additionally, you can control the button's elevation to manage its shadow and depth, specify the type of cursor that appears on hover, and define padding for spacing around the button’s content. These customizations help ensure that the button fits seamlessly into your app's design and enhances the overall user experience.
 
 ### Add child support
 
