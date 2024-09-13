@@ -8,10 +8,9 @@ documentation: ug
 ---
 
 # Theme in Flutter Chat (SfChatTheme)
-This section explains how to integrate and customize the Theme in the [`SfChatTheme`] widget. You can use the following 
-properties.
+This section explains how to integrate and customize the Theme in the [`SfChatTheme`] widget. You can use the following properties.
 
-N> You must import the [`theme.dart`] library from the [`Core`] package to use [`SfChatTheme`].
+>**Note**: You must import the [`theme.dart`] library from the [`Core`] package to use [`SfChatTheme`].
 
 ## Action Button Foreground Color
 
@@ -166,8 +165,7 @@ Widget build(BuildContext context) {
 
 ## Action Button Disabled Background Color
 
-The [`actionButtonDisabledBackgroundColor`] property is used to define the color of the action button’s background when it is 
-disabled.
+The [`actionButtonDisabledBackgroundColor`] property is used to define the color of the action button’s background when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -267,8 +265,7 @@ Widget build(BuildContext context) {
 
 ## Action Button Highlight Elevation
 
-The [`actionButtonHighlightElevation`] property is used to specify the elevation of the action button when it is 
-highlighted.
+The [`actionButtonHighlightElevation`] property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
 {% highlight Dart %}
@@ -565,8 +562,7 @@ Widget build(BuildContext context) {
 
 ## Outgoing Secondary Header Text Style
 
-The [`outgoingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in outgoing message 
-bubbles.
+The [`outgoingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -595,8 +591,7 @@ Widget build(BuildContext context) {
 
 ## Incoming Secondary Header Text Style
 
-The [`incomingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in incoming message 
-bubbles.
+The [`incomingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
