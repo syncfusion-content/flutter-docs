@@ -19,7 +19,9 @@ The [`actionButtonForegroundColor`] property is used to customize the color of t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -44,7 +46,9 @@ The [`actionButtonBackgroundColor`] property is used to set the color of the act
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -69,7 +73,9 @@ The [`actionButtonFocusColor`] property is used to define the color of the actio
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -94,7 +100,9 @@ The [`actionButtonHoverColor`] property is used to adjust the color of the actio
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -119,7 +127,9 @@ The [`actionButtonSplashColor`] property is used to specify the color of the rip
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -145,7 +155,9 @@ disabled.
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -170,7 +182,9 @@ The [`actionButtonDisabledBackgroundColor`] property is used to define the color
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -195,7 +209,9 @@ The [`actionButtonElevation`] property is used to set the elevation of the actio
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -220,7 +236,9 @@ The [`actionButtonFocusElevation`] property is used to adjust the elevation of t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -245,7 +263,9 @@ The [`actionButtonHoverElevation`] property is used to define the elevation of t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -270,7 +290,9 @@ The [`actionButtonHighlightElevation`] property is used to specify the elevation
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -295,7 +317,9 @@ The [`actionButtonDisabledElevation`] property is used to set the elevation of t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -320,7 +344,9 @@ The [`actionButtonMouseCursor`] property is used to define the type of cursor di
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -345,7 +371,9 @@ The [`actionButtonShape`] property is used to customize the shape and border rad
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -372,7 +400,9 @@ The [`outgoingBubbleContentBackgroundColor`] property is used to set the backgro
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -397,7 +427,9 @@ The [`incomingBubbleContentBackgroundColor`] property is used to set the backgro
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -422,7 +454,9 @@ The [`editorTextStyle`] property is used to define the style for text in the mes
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -451,7 +485,9 @@ The [`outgoingContentTextStyle`] property is used to customize the style for tex
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -480,7 +516,9 @@ The [`incomingContentTextStyle`] property is used to set the style for text in i
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -509,7 +547,9 @@ The [`outgoingPrimaryHeaderTextStyle`] property is used to set the style for the
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -538,7 +578,9 @@ The [`incomingPrimaryHeaderTextStyle`] property is used to set the style for the
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -567,7 +609,9 @@ The [`outgoingSecondaryHeaderTextStyle`] property is used to set the style for t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -596,7 +640,9 @@ The [`incomingSecondaryHeaderTextStyle`] property is used to set the style for t
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -625,7 +671,9 @@ The [`outgoingBubbleContentShape`] property is used to customize the shape and b
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
@@ -652,7 +700,9 @@ The [`incomingBubbleContentShape`] property is used to define the shape and bord
 {% tabs %}
 {% highlight Dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+final List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {

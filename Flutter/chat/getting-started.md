@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Getting started with Flutter Chat (SfChat)
+
 This section explains how to add the Flutter Chat widget to your application and how to use its basic features.
 
 To get start quickly with our Flutter Chat widget, you can check on this video.
@@ -16,60 +17,67 @@ To get start quickly with our Flutter Chat widget, you can check on this video.
 <iframe id='FlutterChatVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe> -->
 
 ## Add Flutter Chat to an application
+
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
 Add the Syncfusion Flutter Chat dependency to your pubspec.yaml file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart %} 
 
-dependencies:
+    dependencies:
 
-syncfusion_flutter_chat: ^x.x.x
+    syncfusion_flutter_chat: ^x.x.x
 
 {% endhighlight %}
+{% endtabs %}
 
->**Note**: Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`] package.
+>**Note**: Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages** 
 
 Run the following command to get the required packages.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart %} 
 
-$ flutter pub get
+    $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-import 'package:syncfusion_flutter_chat/chat.dart';
+    import 'package:syncfusion_flutter_chat/chat.dart';
 
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize Chat widget 
+## Initialize Chat widget
 
-Add a chat widget with the required properties, such as messages and outgoingUser.
+Once the package has been imported, add a chat widget with the required properties, such as messages and outgoingUser.
 
 >**Note**: The chat interface updates based on changes to messages and outgoingUser. Ensure the widget's state is rebuilt to reflect any updates.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = []; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: _currentUser.id,
+    outgoingUser: _outgoingUserId,
   );
 }
 	
@@ -80,18 +88,20 @@ Widget build(BuildContext context) {
 
 ## Add Placeholder
 
-To display a placeholder message in the chat widget when there are no messages, you can use the placeholderBuilder property. This property allows you to specify a custom widget that will be shown when the messages list is empty.
+To display a placeholder message in the chat widget when there are no messages, you can use the [`placeholderBuilder`] property. This property allows you to specify a custom widget that will be shown when the messages list is empty.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: _currentUser.id,
+    outgoingUser: _outgoingUserId,
     placeholderBuilder: (BuildContext context) {
       return Center(
         child: Text(
@@ -108,29 +118,25 @@ Widget build(BuildContext context) {
 
 ![Default chat](images/getting-started/placeholder.png)
 
-## Add Action Button
+## Enable Action Button
 
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the `ChatActionButton`, and then rebuild the widget using the `setState` function.
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`], and then rebuild the widget using the `setState` function.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: _currentUser.id,
+    outgoingUser: _outgoingUserId,
     actionButton: ChatActionButton(
       onPressed: (String newMessage) {
-        setState(() {
-          _messages.add(ChatMessage(
-            text: newMessage,
-            time: DateTime.now(),
-            author: _currentUser,
-          ));
-        });
+        // Handle the send button click action.
       },
     ),
   );
@@ -141,23 +147,25 @@ Widget build(BuildContext context) {
 
 ![Default chat](images/getting-started/actionbutton-chat.png)
 
-## Add Placeholder to Composer
+## Enable Composer
 
-To add a placeholder to the ChatComposer in the chat widget, configure the composer property with a ChatComposer widget that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
+To add a placeholder to the [`ChatComposer`] in the chat widget, configure the composer property with a [`ChatComposer`] widget that includes an InputDecoration with a hintText. This will display a placeholder text inside the message input field.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-List<ChatMessage> _messages = <ChatMessage>[]; // Load if there are existing messages.
+// Load if there are existing messages.
+List<ChatMessage> _messages = <ChatMessage>[];
+final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
   return SfChat(
     messages: _messages,
-    outgoingUser: _currentUser.id,
+    outgoingUser: _outgoingUserId,
     composer: const ChatComposer(
       decoration: InputDecoration(
-        hintText: 'Message',
+        hintText: 'Type a message',
       ),
     ),
     actionButton: ChatActionButton(
@@ -172,3 +180,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Default chat](images/getting-started/composer-placeholder.png)
+
+>**Note**: You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+
+#### See Also
+
+* [Integrating syncfusion flutter chat in a flutter web application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-chat-in-flutter).
