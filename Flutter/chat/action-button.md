@@ -19,7 +19,7 @@ By default, the chat widget does not rebuild itself when the send button is clic
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
@@ -92,7 +92,7 @@ Customize the action button to match your app’s design by adjusting properties
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override

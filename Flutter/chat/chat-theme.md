@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Theme in Flutter Chat (SfChatTheme)
-This section explains how to integrate and customize the Theme in the [`SfChatTheme`] widget. You can use the following properties.
+This section explains how to integrate and customize the Theme in the [`SfChatTheme`] widget.
 
 >**Note**: You must import the [`theme.dart`] library from the [`Core`] package to use [`SfChatTheme`].
 
@@ -26,12 +26,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonForegroundColor: Colors.white,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -53,12 +55,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonBackgroundColor: Colors.blueAccent,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -80,12 +84,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonFocusColor: Colors.blue,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -107,12 +113,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonHoverColor: Colors.blueGrey,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -134,12 +142,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonSplashColor: Colors.lightBlueAccent,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -162,12 +172,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonDisabledForegroundColor: Colors.grey,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -189,12 +201,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonDisabledBackgroundColor: Colors.grey[300],
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -216,12 +230,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonElevation: 4.0,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -243,12 +259,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonFocusElevation: 6.0,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -270,12 +288,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonHoverElevation: 8.0,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -297,12 +317,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonHighlightElevation: 12.0,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -324,12 +346,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonDisabledElevation: 0.0,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -351,12 +375,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonMouseCursor: SystemMouseCursors.click,
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -378,14 +404,16 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       actionButtonShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(40.0),
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -407,12 +435,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       outgoingBubbleContentBackgroundColor: Colors.green[100],
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -434,12 +464,14 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       incomingBubbleContentBackgroundColor: Colors.blue[100],
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -461,16 +493,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       editorTextStyle: const TextStyle(
         color: Colors.black,
         fontSize: 16.0,
         fontWeight: FontWeight.normal,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -492,16 +526,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       outgoingContentTextStyle: const TextStyle(
         color: Colors.black87,
         fontSize: 14.0,
         fontWeight: FontWeight.bold,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -523,16 +559,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       incomingContentTextStyle: const TextStyle(
         color: Colors.black,
         fontSize: 14.0,
         fontWeight: FontWeight.bold,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -554,16 +592,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       outgoingPrimaryHeaderTextStyle: const TextStyle(
         color: Colors.black,
         fontSize: 12.0,
         fontWeight: FontWeight.bold,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -585,16 +625,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       incomingPrimaryHeaderTextStyle: const TextStyle(
         color: Colors.black,
         fontSize: 12.0,
         fontWeight: FontWeight.bold,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -616,16 +658,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       outgoingSecondaryHeaderTextStyle: const TextStyle(
         color: Colors.grey,
         fontSize: 12.0,
         fontStyle: FontStyle.italic,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -647,16 +691,18 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       incomingSecondaryHeaderTextStyle: const TextStyle(
         color: Colors.grey,
         fontSize: 12.0,
         fontStyle: FontStyle.normal,
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -678,14 +724,16 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       outgoingBubbleContentShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
@@ -707,14 +755,16 @@ final String _outgoingUserId = '';
 @override
 Widget build(BuildContext context) {
   return SfChatTheme(
-    data: SfChatThemeData(
+    data: const SfChatThemeData(
       incomingBubbleContentShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
     ),
-    child: SfChat(
-      messages: _messages,
-      outgoingUser: _currentUser.id,,
+    child: Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+      ),
     ),
   );
 }
