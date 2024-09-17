@@ -9,30 +9,32 @@ documentation: ug
 
 # Composer in Flutter Chat (SfChat)
 
-This section explains how to integrate and customize the composer in the Chat widget and how to use a custom composer with the composerBuilder.
+This section explains how to integrate and customize the composer in the chat widget.
 
 ## Composer
 
-The composer property in the chat widget can be customized using the [`ChatComposer`] widget. This widget allows you to define various aspects of the chat input area, such as text style, input field dimensions, and decoration. By default, the chat widget provides a basic composer that includes a text input field for users to type their messages.
+The [`composer`] property in the chat widget defines the chat input area where users can type and send messages. By default, this property uses the [`ChatComposer`] widget, which provides a standard text input field for message entry. The default [`ChatComposer`] offers a basic setup but can be customized with properties such as [`minLines`], [`maxLines`], [`padding`], [`decorations`], and [`textStyle`] to adjust the appearance and functionality of the text input field according to your needs.
 
 ### TextStyle
 
-* The [`textStyle`] property is used to customize the appearance of the text in the message input field, including color, font size, and style.
+* The [`textStyle`] property customizes the appearance of the text in the message input field, including color, font size, and style.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: ChatComposer(
-      textStyle: TextStyle(fontSize: 16.0, color: Colors.black),
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: const ChatComposer(
+        textStyle: TextStyle(fontSize: 16.0, color: Colors.black),
+      ),
     ),
   );
 }
@@ -42,24 +44,26 @@ Widget build(BuildContext context) {
 
 ### Lines
 
-* The [`minLines`] property is used to set the minimum number of lines that the message input field should display, determining its initial height.
-* The [`maxLines`] property is used to define the maximum number of lines the message input field can expand to before becoming scrollable.
+* The [`minLines`] property sets the minimum number of lines that the message input field should display, determining its initial height.
+* The [`maxLines`] property defines the maximum number of lines the message input field can expand to before becoming scrollable.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: ChatComposer(
-      minLines: 1,
-      maxLines: 6,
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: const ChatComposer(
+        minLines: 1,
+        maxLines: 6,
+      ),
     ),
   );
 }
@@ -69,23 +73,25 @@ Widget build(BuildContext context) {
 
 ### Decoration
 
-* The [`decoration`] property is used to customize the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
+* The [`decoration`] property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: ChatComposer(
-      decoration: InputDecoration(
-        hintText: 'Type a message',
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: const ChatComposer(
+        decoration: InputDecoration(
+          hintText: 'Type a message',
+        ),
       ),
     ),
   );
@@ -96,22 +102,24 @@ Widget build(BuildContext context) {
 
 ### Padding
 
-* The [`padding`] property is used to adjust the space around the input field, controlling its distance from the parent widget.
+* The [`padding`] property adjusts the space around the input field, controlling its distance from the parent widget.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: ChatComposer(
-      padding: const EdgeInsets.only(top: 16.0),
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: const ChatComposer(
+        padding: EdgeInsets.only(top: 16.0),
+      ),
     ),
   );
 }
@@ -123,36 +131,38 @@ Widget build(BuildContext context) {
 
 ## Custom Composer
 
-The composer property in the chat widget can be customized using [`ChatComposer.builder`]. This property enables advanced customization of the chat input area, allowing you to create a custom composer widget tailored to your specific design and functional requirements.
+The [`composer`] property in the chat widget can be customized using [`ChatComposer.builder`]. This approach provides advanced customization options for the chat input area, allowing you to create a fully tailored composer widget that meets your specific design and functional requirements. With [`ChatComposer.builder`], you can define the structure and appearance of the input area beyond the default settings, giving you complete control over the chat input experience.
 
-When implementing a custom composer through the `builder` property, the padding around the input field is automatically adjusted to fit your custom design. By default, the padding is set to ensure appropriate spacing between the input area and its parent widget. This padding can be fine-tuned as needed within your custom widget to achieve the desired look and feel.
+When implementing a custom composer through the [`builder`] property, the padding around the input field is automatically adjusted to fit your custom design. By default, the [`padding`] is set to ensure appropriate spacing between the input area and its parent widget.
 
 ### Builder
 
-* The [`builder`] property lets you specify a custom widget, like CustomChatInputWidget, for the chat composer. This customizes how the message input area looks and works.
+* The [`builder`] property allows you to specify a custom widget for the chat composer. This lets you customize both the appearance and functionality of the message input area. In the provided example, a TextField widget is used directly to define the chat input area.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: ChatComposer.builder(
-      builder: (context) {
-        return TextField(
-          decoration: InputDecoration(
-            hintText: 'Type a message...',
-            border: OutlineInputBorder(),
-          ),
-        );
-      },
-      padding: const EdgeInsets.only(top: 16.0),
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: ChatComposer.builder(
+        builder: (context) {
+          return const TextField(
+            decoration: InputDecoration(
+              hintText: 'Type a message...',
+              border: OutlineInputBorder(),
+            ),
+          );
+        },
+        padding: const EdgeInsets.only(top: 16.0),
+      ),
     ),
   );
 }

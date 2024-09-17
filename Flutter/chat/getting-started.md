@@ -70,14 +70,16 @@ Once the package has been imported, add a chat widget with the required properti
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+    ),
   );
 }
 	
@@ -94,22 +96,24 @@ To display a placeholder message in the chat widget when there are no messages, 
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    placeholderBuilder: (BuildContext context) {
-      return Center(
-        child: Text(
-          'No messages yet!',
-          style: TextStyle(fontSize: 16, color: Colors.black),
-        ),
-      );
-    },
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      placeholderBuilder: (BuildContext context) {
+        return const Center(
+          child: Text(
+            'No messages yet!',
+            style: TextStyle(fontSize: 16, color: Colors.black),
+          ),
+        );
+      },
+    ),
   );
 }
 
@@ -120,24 +124,37 @@ Widget build(BuildContext context) {
 
 ## Enable Action Button
 
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`], and then rebuild the widget using the `setState` function.
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the [`onPressed`] callback of the [`ChatActionButton`], and then rebuild the widget using the [`setState`] function.
 
 {% tabs %}
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    actionButton: ChatActionButton(
-      onPressed: (String newMessage) {
-        // Handle the send button click action.
-      },
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      actionButton: ChatActionButton(
+        onPressed: (String newMessage) {
+          setState(() {
+            _messages.add(
+              ChatMessage(
+                text: newMessage,
+                time: DateTime.now(),
+                author: ChatAuthor(
+                  id: _outgoingUserId,
+                  name: 'John Doe',
+                ),
+              ),
+            );
+          });
+        },
+      ),
     ),
   );
 }
@@ -155,23 +172,25 @@ To add a placeholder to the [`ChatComposer`] in the chat widget, configure the c
 {% highlight dart %}
 
 // Load if there are existing messages.
-List<ChatMessage> _messages = <ChatMessage>[];
+final List<ChatMessage> _messages = <ChatMessage>[];
 final String _outgoingUserId = '';
 
 @override
 Widget build(BuildContext context) {
-  return SfChat(
-    messages: _messages,
-    outgoingUser: _outgoingUserId,
-    composer: const ChatComposer(
-      decoration: InputDecoration(
-        hintText: 'Type a message',
+  return Scaffold(
+    body: SfChat(
+      messages: _messages,
+      outgoingUser: _outgoingUserId,
+      composer: const ChatComposer(
+        decoration: InputDecoration(
+          hintText: 'Type a message',
+        ),
       ),
-    ),
-    actionButton: ChatActionButton(
-      onPressed: (String newMessage) {
-        // Handle the send button click action.
-      },
+      actionButton: ChatActionButton(
+        onPressed: (String newMessage) {
+          // Handle the send button click action here.
+        },
+      ),
     ),
   );
 }
