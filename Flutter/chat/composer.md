@@ -9,7 +9,7 @@ documentation: ug
 
 # Composer in Flutter Chat (SfChat)
 
-This section explains how to integrate and customize the composer in the Chat widget.
+This section explains how to integrate and customize the composer in the chat widget.
 
 ## Composer
 

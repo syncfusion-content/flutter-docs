@@ -124,7 +124,7 @@ Widget build(BuildContext context) {
 
 ## Enable Action Button
 
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the `onPressed` callback of the [`ChatActionButton`], and then rebuild the widget using the `setState` function.
+By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the [`onPressed`] callback of the [`ChatActionButton`], and then rebuild the widget using the [`setState`] function.
 
 {% tabs %}
 {% highlight dart %}
