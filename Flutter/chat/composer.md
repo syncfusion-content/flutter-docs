@@ -242,8 +242,6 @@ By default, the top padding is set to 16.
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer support](images/composer/default-composer.png)
-
 ### Text style
 
 The ['textStyle'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
@@ -284,53 +282,85 @@ If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_cha
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: '123-001',
-        composer: ChatComposer.builder(
-          builder: (context) {
-            return Container(
-              padding: const EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(24.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  const Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Type a message...',
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.send, color: Colors.blue),
-                    onPressed: () {
-                      // Handle send message
-                    },
-                  ),
-                ],
-              ),
-            );
-          },
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+          composer: builderComposer(),
         ),
       ),
+    );
+  }
+
+  ChatComposer builderComposer() {
+    return ChatComposer.builder(
+      builder: (context) {
+        return Row(
+          children: [
+            const SizedBox(width: 3),
+            const Icon(
+              Icons.add,
+              size: 26,
+              color: Colors.blue,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: TextField(
+                  minLines: 1,
+                  maxLines: 6,
+                  controller: _controller,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 18,
+                    ),
+                    hintText: 'Messages...',
+                    hintStyle: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    suffixIcon: const Padding(
+                      padding: EdgeInsets.only(right: 5.0),
+                      child: Icon(
+                        Icons.emoji_emotions_outlined,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            const Icon(
+              Icons.camera_alt_outlined,
+              color: Colors.blue,
+            ),
+            const SizedBox(width: 7),
+            FloatingActionButton(
+              shape: const CircleBorder(),
+              elevation: 0,
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+              onPressed: () {},
+              child: const Icon(Icons.send),
+            ),
+          ],
+        );
+      },
     );
   }
 
