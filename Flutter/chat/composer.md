@@ -9,165 +9,334 @@ documentation: ug
 
 # Composer in Flutter Chat (SfChat)
 
-This section explains how to integrate and customize the composer in the chat widget.
+This section explains the customization options available in ['ChatComposer'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html), including the option to add any type of widget as a composer.
 
 ## Composer
 
-The [`composer`] property in the chat widget defines the chat input area where users can type and send messages. By default, this property uses the [`ChatComposer`] widget, which provides a standard text input field for message entry. The default [`ChatComposer`] offers a basic setup but can be customized with properties such as [`minLines`], [`maxLines`], [`padding`], [`decorations`], and [`textStyle`] to adjust the appearance and functionality of the text input field according to your needs.
+The ['composer'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
 
-### TextStyle
+When the composer is null, no default text field is added to the chat widget.
 
-* The [`textStyle`] property customizes the appearance of the text in the message input field, including color, font size, and style.
+### Minimum and maximum lines
 
-{% tabs %}
-{% highlight dart %}
+* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
+* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      composer: const ChatComposer(
-        textStyle: TextStyle(fontSize: 16.0, color: Colors.black),
-      ),
-    ),
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Lines
-
-* The [`minLines`] property sets the minimum number of lines that the message input field should display, determining its initial height.
-* The [`maxLines`] property defines the maximum number of lines the message input field can expand to before becoming scrollable.
+The default value for minLines is 1, and the default value for maxLines is 6.
 
 {% tabs %}
 {% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      composer: const ChatComposer(
-        minLines: 1,
-        maxLines: 6,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          minLines: 3,
+          maxLines: 7,
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Decoration
 
-* The [`decoration`] property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
+The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
+
+The ['InputDecoration'](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
+
+The following are the major features available in InputDecoration for decorating the composer:
+* [enabled](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html)
+* [border](https://api.flutter.dev/flutter/material/InputDecoration/border.html)
+* [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html)
+* [hintText](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html)
+* [hintStyle](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html)
+* [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [suffixIcon](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html)
+
+#### Enabled
+
+The ['enabled'](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html) property defines whether the compose feature is in an enabled or disabled state. By default, it is set to true. If set to false, the compose feature will be disabled, and the default action button will also be disabled.
+
+#### Border
+
+The ['border'](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`] is used.
 
 {% tabs %}
 {% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      composer: const ChatComposer(
-        decoration: InputDecoration(
-          hintText: 'Type a message',
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10.0),
+              ),
+            ),
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Content padding
+
+The ['contentPadding'](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
+
+{% tabs %}
+{% highlight dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+            contentPadding: EdgeInsets.all(20),
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Hint text
+
+The ['hintText'](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to null.
+
+{% tabs %}
+{% highlight dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Hint text style
+
+The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
+
+{% tabs %}
+{% highlight dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+            hintStyle: TextStyle(
+              color: Colors.blue,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Prefix and suffix icons
+
+The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and ['suffixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
+
+{% tabs %}
+{% highlight dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            prefixIcon: Icon(Icons.person),
+            suffixIcon: Icon(Icons.send),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Padding
 
-* The [`padding`] property adjusts the space around the input field, controlling its distance from the parent widget.
+The ['padding'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+
+By default, the top padding is set to 16.
 
 {% tabs %}
 {% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      composer: const ChatComposer(
-        padding: EdgeInsets.only(top: 16.0),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          padding: EdgeInsets.only(top: 20.0),
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Chat composer support](images/composer/default-composer.png)
 
-## Custom Composer
+### Text style
 
-The [`composer`] property in the chat widget can be customized using [`ChatComposer.builder`]. This approach provides advanced customization options for the chat input area, allowing you to create a fully tailored composer widget that meets your specific design and functional requirements. With [`ChatComposer.builder`], you can define the structure and appearance of the input area beyond the default settings, giving you complete control over the chat input experience.
+The ['textStyle'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
 
-When implementing a custom composer through the [`builder`] property, the padding around the input field is automatically adjusted to fit your custom design. By default, the [`padding`] is set to ensure appropriate spacing between the input area and its parent widget.
-
-### Builder
-
-* The [`builder`] property allows you to specify a custom widget for the chat composer. This lets you customize both the appearance and functionality of the message input area. In the provided example, a TextField widget is used directly to define the chat input area.
+The specified text style will be merged with the ['bodyMedium'] and ['editorTextStyle'] text styles.
 
 {% tabs %}
 {% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      composer: ChatComposer.builder(
-        builder: (context) {
-          return const TextField(
-            decoration: InputDecoration(
-              hintText: 'Type a message...',
-              border: OutlineInputBorder(),
-            ),
-          );
-        },
-        padding: const EdgeInsets.only(top: 16.0),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: const ChatComposer(
+          textStyle: TextStyle(
+            fontSize: 16.0,
+            color: Colors.black,
+          ),
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Builder
+
+The ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
+
+If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
+
+{% tabs %}
+{% highlight dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: ChatComposer.builder(
+          builder: (context) {
+            return Container(
+              padding: const EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(24.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Type a message...',
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.send, color: Colors.blue),
+                    onPressed: () {
+                      // Handle send message
+                    },
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Chat composer support](images/composer/composer-builder.png)
+
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
