@@ -68,3 +68,5 @@ It will be displayed when there are no messages in the conversions and will be r
 {% endtabs %}
 
 ![Chat composer support](images/placeholder/placeholder-chat.png)
+
+>**Note**: You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
