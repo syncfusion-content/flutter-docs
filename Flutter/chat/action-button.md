@@ -9,153 +9,126 @@ documentation: ug
 
 # Action Button in Flutter Chat (SfChat)
 
-This section explains how to integrate and customize the action button in the chat widget.
+This section explains how to add and customize the action button using the various available options.
 
 ## Action Button
 
-The [`actionButton`] property in the chat widget is used to send messages or trigger other interactions within the action button UI. This property uses the [`ChatActionButton`] widget, which provides a standard button for sending new messages.
+The [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/actionButton.html) represents the send button and is not included in the chat by default. To add it, create an instance of [`ChatActionButton`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) and assign it to the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/actionButton.html) property.
 
-By default, the chat widget does not rebuild itself when the send button is clicked. Therefore, it is necessary to create a new message object using the newly composed message passed as a parameter in the [`onPressed`] callback of the [`ChatActionButton`]. After that, you should rebuild the widget using the [`setState`] function.
+When the send button is clicked, it invokes the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/onPressed.html) callback with the text composed in the default composer (text field), which rebuilds the Chat widget to add the new message to the conversation area.
 
-{% tabs %}
-{% highlight dart %}
+If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/builder.html) is used, the parameter of onPressed will always be an empty string.
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+If [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/onPressed.html) is null, the action button will always be disabled.
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      actionButton: ChatActionButton(
-        onPressed: (String newMessage) {
-          setState(() {
-            _messages.add(
-              ChatMessage(
-                text: newMessage,
-                time: DateTime.now(),
-                author: ChatAuthor(
-                  id: _outgoingUserId,
-                  name: 'John Doe',
-                ),
-              ),
-            );
-          });
-        },
-      ),
-    ),
-  );
-}
+If the default composer is disabled, the action button will also be disabled.
 
-{% endhighlight %}
-{% endtabs %}
-
-![Chat actionButton support](images/action-button/actionbutton-background.png)
-
-## Custom Action Button
-
-The [`actionButton`] property in the chat widget can be customized using [`ChatActionButton`]. This allows you to adjust the button’s appearance and behavior to match your app’s design. You can change the button’s content, colors, shape, size, shadow, cursor, and padding to make sure it fits well with your app’s look and feels.
+If no composer is added (by specifying the composer as null), the action button will always be enabled.
 
 ### Child
 
-* The [`child`] property defines the content of the button, such as an icon or text.
-
-### Tooltip
-
-* The [`tooltip`] property provides a hint or description when the user hovers over the button.
-
-### Colors
-
-* The [`foregroundColor`] property sets the color of the button's text and icons.
-* The [`backgroundColor`] property defines the button's background color.
-* The [`focusColor`] property sets the color displayed when the button gains focus.
-* The [`hoverColor`] property defines the color displayed when the button is hovered over.
-* The [`splashColor`] property specifies the color of the ripple effect when the button is pressed.
-
-### Elevation
-
-* The [`elevation`] property sets the z-coordinate of the button, determining its shadow and elevation.
-* The [`focusElevation`] property defines the elevation of the button when it has focus.
-* The [`hoverElevation`] property sets the elevation of the button when it is hovered over.
-* The [`highlightElevation`] property determines the elevation when the button is pressed.
-
-### Mouse Cursor
-
-* The [`mouseCursor`] property defines the type of cursor that appears when hovering over the button.
-
-### Shape
-
-* The [`shape`] property sets the shape of the button's border, such as rounded or circular.
-
-### Padding
-
-* The [`padding`] property defines the space inside the button between its border and the content.
-
-### Size
-
-* The [`size`] property specifies the width and height of the button.
+The [`child`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/child.html) property allows you to specify one or more interactive widgets as the content of an action button. This is useful for adding a microphone icon for voice input, attaching files to share documents or images, and more.
 
 ### onPressed callback
 
-* The [`onPressed`] property specifies a callback function triggered when the button is pressed.
+It is a callback that is invoked whenever the action button is pressed. Since the chat widget does not rebuild itself to update the newly composed message, it provides the default text from the composer as a parameter. The user can create a message object and include it in the existing [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/messages.html) list by rebuilding the chat widget to add the newly composed message to the conversational area.
+
+### Tooltip
+
+The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/tooltip.html) text describes the button's action when pressed. It is displayed when the user long-presses on touch devices or hovers the mouse over it on desktop devices. By default, it is set to null, so no tooltip is shown.
+
+### Colors
+
+The [`foregroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/foregroundColor.html) property is the color of the default send button icon. The default color is set to `colorScheme.onPrimary`.
+
+The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/backgroundColor.html) property is the color of the button's background. The default color is set to `colorScheme.primary`.
+
+The [`focusColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/focusColor.html) property will replace the background color when the button is in a focused state. The default color is set to `colorScheme.primary.withOpacity(0.86)`.
+
+The [`hoverColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/hoverColor.html) property color will replace the background color when a pointer is hovering over the button. The default color is set to `colorScheme.primary.withOpacity(0.91)`.
+
+The [`splashColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/splashColor.html) property is the splash color of the button's InkWell. The default color is set to `colorScheme.primary.withOpacity(0.86)`.
+
+### Elevation
+
+The [`elevation`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/elevation.html) property is the size of the shadow below the action button in normal state. Defaults to `0.0`.
+
+The [`focusElevation`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/focusElevation.html) property defines the elevation of the button when it has focus. Defaults to `0.0`.
+
+The [`hoverElevation`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/hoverElevation.html) property sets the elevation of the button when it is hovered over. Defaults to `0.0`.
+
+The [`highlightElevation`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/highlightElevation.html) property determines the elevation when the button is pressed. Defaults to `0.0`.
+
+### Mouse Cursor
+
+The [`mouseCursor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/mouseCursor.html) property defines the type of cursor that appears when hovering over the button. It can be set to different values to customize the cursor shape (e.g., [`SystemMouseCursors.click`](https://api.flutter.dev/flutter/services/SystemMouseCursors/click-constant.html), [`SystemMouseCursors.forbidden`](https://api.flutter.dev/flutter/services/SystemMouseCursors/forbidden-constant.html), etc.). If not specified, the default cursor will be used.
+
+### Shape
+
+The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/shape.html) property sets the shape of the button's border, such as rounded or circular. By default, it is set to `RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0)))`.
+
+### Padding
+
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
+
+### Size
+
+The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/size.html) property specifies the width and height of the button. By default, it is set to `Size.square(40.0)`.
 
 {% tabs %}
 {% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfChat(
-      messages: _messages,
-      outgoingUser: _outgoingUserId,
-      actionButton: ChatActionButton(
-        child: Icon(Icons.send, color: Colors.grey[300]),
-        tooltip: 'Send Message',
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
-        focusColor: Colors.lightBlueAccent,
-        hoverColor: Colors.blueAccent,
-        splashColor: Colors.white.withOpacity(0.3),
-        elevation: 2.0,
-        focusElevation: 6.0,
-        hoverElevation: 4.0,
-        highlightElevation: 8.0,
-        mouseCursor: SystemMouseCursors.click,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0)),
-        padding: const EdgeInsetsDirectional.only(start: 8.0),
-        size: const Size.square(40.0),
-        onPressed: (String newMessage) {
-          setState(() {
-            _messages.add(
-              ChatMessage(
-                text: newMessage,
-                time: DateTime.now(),
-                author: ChatAuthor(
-                  id: _outgoingUserId,
-                  name: 'John Doe',
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: _outgoingUserId,
+        actionButton: ChatActionButton(
+          child: Icon(Icons.send, color: Colors.grey[300]),
+          tooltip: 'Send Message',
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.blue,
+          focusColor: Colors.lightBlueAccent,
+          hoverColor: Colors.blueAccent,
+          splashColor: Colors.white.withOpacity(0.3),
+          elevation: 2.0,
+          focusElevation: 6.0,
+          hoverElevation: 4.0,
+          highlightElevation: 8.0,
+          mouseCursor: SystemMouseCursors.click,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25.0)),
+          padding: const EdgeInsetsDirectional.only(start: 8.0),
+          size: const Size.square(40.0),
+          onPressed: (String newMessage) {
+            setState(() {
+              _messages.add(
+                ChatMessage(
+                  text: newMessage,
+                  time: DateTime.now(),
+                  author: ChatAuthor(
+                    id: '123-001',
+                    name: 'John Doe',
+                  ),
                 ),
-              ),
-            );
-          });
-        },
+              );
+            });
+          },
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Chat actionButton support](images/action-button/customized-actionbutton-chat.png)
+<!-- ![Chat actionButton support](images/action-button/customized-actionbutton-chat.png)
+![Chat actionButton support](images/action-button/actionbutton-background.png) -->
 
 #### See Also
 
-* You can also customize the above properties using [`SfChatTheme`] by wrapping with [`SfChat`].
+* You can also customize the above properties using [`SfChatTheme`] by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/SfChat.html).
