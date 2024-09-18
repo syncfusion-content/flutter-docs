@@ -245,6 +245,74 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ![RangePadding additional](images/axis-types/numeric_additional.jpg)
 
+**additionalStart**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additionalStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the axis range will be rounded and an interval of the axis will be added as padding to the minimum value of the range.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(
+                            // Additional range padding is applied to start of the y axis
+                            rangePadding: ChartRangePadding.additionalStart
+                        ),
+                        series: <CartesianSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
+                        ],   
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding additional start](images\axis-types\numeric_additional_start.png)
+
+**additionalEnd**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additionalEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the axis range will be rounded and an interval of the axis will be added as padding to the maximum value of the range.
+
+{% tabs %}
+{% highlight dart hl_lines="9" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(
+                            // Additional range padding is applied to end of the y axis
+                            rangePadding: ChartRangePadding.additionalEnd
+                        ),
+                        series: <CartesianSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
+                        ],   
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding additional end](images\axis-types\numeric_additional_end.png)
+
 **auto**
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the horizontal numeric axis takes none for padding calculation, whereas the vertical numeric axis takes normal for padding calculation. This is also the default value of rangePadding.
@@ -374,6 +442,72 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endtabs %}
 
 ![RangePadding round](images/axis-types/numeric_round.jpg)
+
+**roundStart**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.roundStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible numeric value at the start position of the axis.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(
+                            rangePadding: ChartRangePadding.roundStart
+                        ),
+                        series: <CartesianSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
+                        ],   
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding round start](images\axis-types\numeric_round_start.png)
+
+**roundEnd**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.roundEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible numeric value at the end position of the axis.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(
+                            rangePadding: ChartRangePadding.roundEnd
+                        ),
+                        series: <CartesianSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, int index) => data.x,
+                            yValueMapper: (ChartData data, int index) => data.y),
+                        ],   
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding round end](images\axis-types\numeric_round_end.png)
 
 ### Formatting the labels
 
@@ -882,6 +1016,60 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ![RangePadding round](images/axis-types/datetime_rangePadding_round.png)
 
+**roundStart**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.roundStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible date-time value at the start position of the axis.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                            rangePadding: ChartRangePadding.roundStart
+                        ) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding round start](images\axis-types\datetime_round_start.png)
+
+**roundEnd**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.roundEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible date-time value at the end position of the axis.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                            rangePadding: ChartRangePadding.roundEnd
+                        ) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding round end](images\axis-types\datetime_round_end.png)
+
 **additional**
 
 When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additional`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), range will be rounded and date-time interval of the axis will be added as padding to the minimum and maximum extremes of a range.
@@ -908,6 +1096,60 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 {% endtabs %}
 
 ![RangePadding additional](images/axis-types/datetime_rangePadding_add.jpg)
+
+**additionalStart**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additionalStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), range will be rounded and date-time interval of the axis will be added as padding to the minimum extreme of a range.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                            rangePadding: ChartRangePadding.additionalStart
+                        ) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding additional start](images\axis-types\datetime_additional_start.png)
+
+**additionalEnd**
+
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additionalEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), range will be rounded and date-time interval of the axis will be added as padding to the maximum extreme of a range.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                            rangePadding: ChartRangePadding.additionalEnd
+                        ) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![RangePadding additional end](images\axis-types\datetime_additional_end.png)
 
 **normal**
 
