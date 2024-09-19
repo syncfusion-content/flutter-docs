@@ -9,7 +9,7 @@ documentation: ug
 
 # Theme in Flutter Chat (SfChatTheme)
 
-This section explains the customization properties available in [`SfChatThemeData`].
+This section explains the customization properties available in [`ChatThemeData`].
 
 **Import the Chat library** 
 

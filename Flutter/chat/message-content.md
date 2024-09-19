@@ -197,15 +197,15 @@ The name may be repeated within the group, but the ID is unique to each user.
 
 Based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/outgoingUser.html) property, the messages are distinguished as either incoming or outgoing. The following options are available to customize the display settings of the message bubble.
 
->You must import the [`intl`] package for handling [`timestampFormat`] in your chat application.
+>You must import the [`intl`](https://pub.dev/documentation/intl/latest/intl/intl-library.html) package for handling [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/timestampFormat.html) in your chat application.
 
 ### User Name
 
-The [`showUserName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showUserName.html) property is used to show or hide the author's name for the message.
+The [`showUserName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showUserName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
 
 ### Time Stamp
 
-The [`showTimestamp`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showTimestamp.html) property is used to show or hide the time the message was sent. The time format can be customized using [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/timestampFormat.html).
+The [`showTimestamp`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showTimestamp.html) property is used to show or hide the time the message was sent. The time format can be customized using [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/timestampFormat.html). Defaults to `true`.
 
 ### Time Stamp Format
 
@@ -213,7 +213,7 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ### User Avatar
 
-The [`showUserAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showUserAvatar.html) property is used to show or hide the author's image for the message.
+The [`showUserAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/showUserAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
 
 ### Text Styles
 
@@ -233,19 +233,19 @@ The [`contentShape`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 
 ### Width Factor
 
-The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/widthFactor.html) property is used to define the width factor of the message relative to available width. The width value should be between 0 and 1. Default value is 0.8.
+The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/widthFactor.html) property is used to define the width factor of the message relative to available width. The width value should be between 0 and 1. Default value is `0.8`.
 
 ### Avatar Size
 
-The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message.
+The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `const Size.square(32.0)`.
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `const EdgeInsets.all(2.0)`.
 
 ### Content Padding
 
-The [`contentPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/contentPadding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text.
+The [`contentPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/contentPadding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
 
 ### Avatar Padding
 
@@ -253,11 +253,11 @@ The [`avatarPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 ### Header Padding
 
-The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp.
+The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp. Defaults to `const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0)`.
 
 ### Footer Padding
 
-The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message.
+The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `const EdgeInsetsDirectional.only(top: 4.0)`.
 
 {% tabs %}
 {% highlight dart %}
@@ -331,4 +331,4 @@ The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 #### See Also
 
-* You can also customize the bubble shapes and colors properties of both [`incomingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/incomingBubbleSettings.html) and [`outgoingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/outgoingBubbleSettings.html)using [`SfChatTheme`]() by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/SfChat.html).
+* You can also customize the bubble shapes and colors properties of both [`incomingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/incomingBubbleSettings.html) and [`outgoingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/outgoingBubbleSettings.html)using [`SfChatTheme`] by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/SfChat.html).
