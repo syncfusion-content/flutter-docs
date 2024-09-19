@@ -223,7 +223,7 @@ The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/s
 
 The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/headerTextStyle.html) property is used to define the text style for the header of the message, including the username and timestamp.
 
-### Content Backgorund Color
+### Content Background Color
 
 The [`contentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/contentBackgroundColor.html) property is used to specify the background color of the content area within the message.
 
