@@ -203,8 +203,14 @@ The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/pref
         outgoingUser: '123-001',
         composer: const ChatComposer(
           decoration: InputDecoration(
-            prefixIcon: Icon(Icons.person),
-            suffixIcon: Icon(Icons.send),
+            prefixIcon: Icon(
+              Icons.attachment,
+              color: Colors.blue,
+            ),
+            suffixIcon: Icon(
+              Icons.send,
+              color: Colors.blue,
+            ),
           ),
         ),
       ),
