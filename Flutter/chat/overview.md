@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message bubbles (header, footer, content, and avatar).
 
-<!-- ![Chat overview](images/overview/chat-overview.gif) -->
+![Chat overview](images/overview/chat-overview.gif)
 
 ## Features
 
@@ -31,4 +31,4 @@ The Syncfusion Flutter Chat widget displays conversations between two or more us
 
 * **Bubble Avatar** - Displays user avatars or profile pictures of the respective message. Using the [`bubbleAvatarBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/bubbleAvatarBuilder.html), a custom widget can be specified to display the chat message avatar with relevant details.
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
