@@ -9,7 +9,7 @@ documentation: ug
 
 # Theme in Flutter Chat (SfChatTheme)
 
-This section explains the customization properties available in [`ChatThemeData`].
+This section explains the customization properties available in [`ChatThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/chatThemeData.html).
 
 **Import the Chat library** 
 
@@ -23,9 +23,9 @@ Import the following library to use the chat theme data:
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Foreground Color
+## Action button foreground color
 
-The [`actionButtonForegroundColor`] property is used to specify the color for the default action button icon.
+The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonForegroundColor.html) property is used to specify the color for the default action button icon.
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,9 +51,9 @@ The [`actionButtonForegroundColor`] property is used to specify the color for th
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Background Color
+## Action button background color
 
-The [`actionButtonBackgroundColor`] property is used to specify the background color for the action button in its default state.
+The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonBackgroundColor.html) property is used to specify the background color for the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -79,9 +79,9 @@ The [`actionButtonBackgroundColor`] property is used to specify the background c
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Focus Color
+## Action button focus color
 
-The [`actionButtonFocusColor`] property is used to specify the background color for the action button when it is in the focused state.
+The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusColor.html) property is used to specify the background color for the action button when it is in the focused state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -107,9 +107,9 @@ The [`actionButtonFocusColor`] property is used to specify the background color 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Hover Color
+## Action button hover color
 
-The [`actionButtonHoverColor`] property is used to specify the background color for the action button when it is hovered over.
+The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverColor.html) property is used to specify the background color for the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
@@ -135,9 +135,9 @@ The [`actionButtonHoverColor`] property is used to specify the background color 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Splash Color
+## Action button splash color
 
-The [`actionButtonSplashColor`] property is used to specify the color of the ripple effect when the action button is tapped.
+The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonSplashColor.html) property is used to specify the color of the ripple effect when the action button is tapped.
 
 {% tabs %}
 {% highlight Dart %}
@@ -163,9 +163,9 @@ The [`actionButtonSplashColor`] property is used to specify the color of the rip
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Foreground Color
+## Action button disabled foreground color
 
-The [`actionButtonDisabledForegroundColor`] property is used to specify the color of the text or icon on the action button when it is disabled.
+The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledForegroundColor.html) property is used to specify the color of the text or icon on the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -191,9 +191,9 @@ The [`actionButtonDisabledForegroundColor`] property is used to specify the colo
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Background Color
+## Action button disabled background color
 
-The [`actionButtonDisabledBackgroundColor`] property is used to specify the background color of the action button when it is disabled.
+The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledBackgroundColor.html) property is used to specify the background color of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -219,9 +219,9 @@ The [`actionButtonDisabledBackgroundColor`] property is used to specify the back
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Elevation
+## Action button elevation
 
-The [`actionButtonElevation`] property is used to specify the elevation of the action button in its default state.
+The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonElevation.html) property is used to specify the elevation of the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -247,9 +247,9 @@ The [`actionButtonElevation`] property is used to specify the elevation of the a
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Focus Elevation
+## Action button focus elevation
 
-The [`actionButtonFocusElevation`] property is used to specify the elevation of the action button when it is focused.
+The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusElevation.html) property is used to specify the elevation of the action button when it is focused.
 
 {% tabs %}
 {% highlight Dart %}
@@ -275,9 +275,9 @@ The [`actionButtonFocusElevation`] property is used to specify the elevation of 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Hover Elevation
+## Action button hover elevation
 
-The [`actionButtonHoverElevation`] property is used to specify the elevation of the action button when it is hovered over.
+The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverElevation.html) property is used to specify the elevation of the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
@@ -303,9 +303,9 @@ The [`actionButtonHoverElevation`] property is used to specify the elevation of 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Highlight Elevation
+## Action button highlight elevation
 
-The [`actionButtonHighlightElevation`] property is used to specify the elevation of the action button when it is highlighted.
+The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
 {% highlight Dart %}
@@ -331,9 +331,9 @@ The [`actionButtonHighlightElevation`] property is used to specify the elevation
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Elevation
+## Action button disabled elevation
 
-The [`actionButtonDisabledElevation`] property is used to specify the elevation of the action button when it is disabled.
+The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledElevation.html) property is used to specify the elevation of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -359,9 +359,9 @@ The [`actionButtonDisabledElevation`] property is used to specify the elevation 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Mouse Cursor
+## Action button mouse cursor
 
-The [`actionButtonMouseCursor`] property is used to specify the type of cursor displayed when hovering over the action button.
+The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonMouseCursor.html) property is used to specify the type of cursor displayed when hovering over the action button.
 
 {% tabs %}
 {% highlight Dart %}
@@ -387,9 +387,9 @@ The [`actionButtonMouseCursor`] property is used to specify the type of cursor d
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Shape
+## Action button shape
 
-The [`actionButtonShape`] property is used to specify the shape and border radius of the action button.
+The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonShape.html) property is used to specify the shape and border radius of the action button.
 
 {% tabs %}
 {% highlight Dart %}
@@ -417,9 +417,9 @@ The [`actionButtonShape`] property is used to specify the shape and border radiu
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Bubble Content Background Color
+## Outgoing bubble content background color
 
-The [`outgoingBubbleContentBackgroundColor`] property is used to specify the background color of bubbles containing outgoing messages.
+The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -445,9 +445,9 @@ The [`outgoingBubbleContentBackgroundColor`] property is used to specify the bac
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Bubble Content Background Color
+## Incoming bubble content background color
 
-The [`incomingBubbleContentBackgroundColor`] property is used to specify the background color of bubbles containing incoming messages.
+The [`incomingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -473,9 +473,9 @@ The [`incomingBubbleContentBackgroundColor`] property is used to specify the bac
 {% endhighlight %}
 {% endtabs %}
 
-## Editor Text Style
+## Editor text style
 
-The [`editorTextStyle`] property is used to specify the style for text in the message editor.
+The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/editorTextStyle.html) property is used to specify the style for text in the message editor.
 
 {% tabs %}
 {% highlight Dart %}
@@ -505,9 +505,9 @@ The [`editorTextStyle`] property is used to specify the style for text in the me
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Content Text Style
+## Outgoing content text style
 
-The [`outgoingContentTextStyle`] property is used to specify the style for text in outgoing message bubbles.
+The [`outgoingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingContentTextStyle.html) property is used to specify the style for text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -537,9 +537,9 @@ The [`outgoingContentTextStyle`] property is used to specify the style for text 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Content Text Style
+## Incoming content text style
 
-The [`incomingContentTextStyle`] property is used to specify the style for text in incoming message bubbles
+The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingContentTextStyle.html) property is used to specify the style for text in incoming message bubbles
 
 {% tabs %}
 {% highlight Dart %}
@@ -569,9 +569,9 @@ The [`incomingContentTextStyle`] property is used to specify the style for text 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Primary Header Text Style
+## Outgoing primary header text style
 
-The [`outgoingPrimaryHeaderTextStyle`] property is used to specify the style for the primary header text in outgoing message bubbles.
+The [`outgoingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -601,9 +601,9 @@ The [`outgoingPrimaryHeaderTextStyle`] property is used to specify the style for
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Primary Header Text Style
+## Incoming primary header text style
 
-The [`incomingPrimaryHeaderTextStyle`] property is used to specify the style for the primary header text in incoming message bubbles.
+The [`incomingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -633,9 +633,9 @@ The [`incomingPrimaryHeaderTextStyle`] property is used to specify the style for
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Secondary Header Text Style
+## Outgoing secondary header text style
 
-The [`outgoingSecondaryHeaderTextStyle`] property is used to specify the style for the secondary header text in outgoing message bubbles.
+The [`outgoingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -665,9 +665,9 @@ The [`outgoingSecondaryHeaderTextStyle`] property is used to specify the style f
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Secondary Header Text Style
+## Incoming secondary header text style
 
-The [`incomingSecondaryHeaderTextStyle`] property is used to specify the style for the secondary header text in incoming message bubbles.
+The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -697,9 +697,9 @@ The [`incomingSecondaryHeaderTextStyle`] property is used to specify the style f
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Bubble Content Shape
+## Outgoing bubble content shape
 
-The [`outgoingBubbleContentShape`] property is used to specify the shape and border radius of outgoing message bubbles.
+The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -727,9 +727,9 @@ The [`outgoingBubbleContentShape`] property is used to specify the shape and bor
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Bubble Content Shape
+## Incoming bubble content shape
 
-The [`incomingBubbleContentShape`] property is used to specify the shape and border radius of incoming message bubbles.
+The [`incomingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentShape.html) property is used to specify the shape and border radius of incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}

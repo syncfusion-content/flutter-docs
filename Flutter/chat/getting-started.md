@@ -54,22 +54,43 @@ Import the library using the code provided below.
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize Chat widget
+## Initialize chat widget
 
 Add a chat widget with the necessary properties, such as [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/messages.html) and [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/outgoingUser.html).
 
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfChat(
-        messages: _messages,
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
         outgoingUser: '123-001',
       ),
     );
@@ -78,7 +99,7 @@ Add a chat widget with the necessary properties, such as [`messages`](https://pu
 {% endhighlight %}
 {% endtabs %}
 
-<!-- ![Default chat](images/getting-started/default-chat.png) -->
+![Default chat](images/getting-started/initialize-chat.png)
 
 ## Add placeholder to composer
 
@@ -87,24 +108,41 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfChat(
-        messages: _messages,
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          )
+        ],
         outgoingUser: '123-001',
         composer: const ChatComposer(
           decoration: InputDecoration(
             hintText: 'Type a message',
           ),
-        ),
-        actionButton: ChatActionButton(
-          onPressed: (String newMessage) {
-            // Handle the send button click action here.
-          },
         ),
       ),
     );
@@ -113,7 +151,7 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-<!-- ![Default chat](images/getting-started/composer-placeholder.png) -->
+![Placeholder to composer](images/getting-started/add-placeholder-to-composer.png)
 
 ## Add placeholder to conversation area
 
@@ -135,7 +173,10 @@ By default, conversation messages are empty. It’s a good idea to show a messag
           return const Center(
             child: Text(
               'No messages yet!',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold),
             ),
           );
         },
@@ -146,7 +187,7 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 {% endhighlight %}
 {% endtabs %}
 
-<!-- ![Default chat](images/getting-started/placeholder.png) -->
+![Placeholder](images/getting-started/placeholder.png)
 
 ## Add action button
 
@@ -157,30 +198,60 @@ When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  @override
+  void initState() {
+    super.initState();
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hi! How’s your day?',
+        time: DateTime(2024, 08, 07, 9, 0),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'John Doe',
+        ),
+      ),
+      ChatMessage(
+        text: 'Good! Just relaxing.',
+        time: DateTime(2024, 08, 07, 9, 5),
+        author: const ChatAuthor(
+          id: '123-002',
+          name: 'Jane Smith',
+        ),
+      ),
+      ChatMessage(
+        text: 'Any plans later?',
+        time: DateTime(2024, 08, 07, 9, 10),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'John Doe',
+        ),
+      ),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: '123-001',
-        actionButton: ChatActionButton(
-          onPressed: (String newMessage) {
-            setState(() {
-              _messages.add(
-                ChatMessage(
-                  text: newMessage,
-                  time: DateTime.now(),
-                  author: ChatAuthor(
-                    id: '123-001',
-                    name: 'John Doe',
+    return MaterialApp(
+      home: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+          actionButton: ChatActionButton(
+            onPressed: (String newMessage) {
+              setState(() {
+                _messages.add(
+                  ChatMessage(
+                    text: newMessage,
+                    time: DateTime.now(),
+                    author: const ChatAuthor(
+                      id: '123-001',
+                      name: 'John Doe',
+                    ),
                   ),
-                ),
-              );
-            });
-          },
+                );
+              });
+            },
+          ),
         ),
       ),
     );
@@ -189,6 +260,6 @@ When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.
 {% endhighlight %}
 {% endtabs %}
 
-<!-- ![Default chat](images/getting-started/actionbutton-chat.png) -->
+![Action button chat](images/getting-started/actionbutton-chat.png)
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
