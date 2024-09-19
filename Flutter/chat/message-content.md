@@ -257,7 +257,7 @@ The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 ### Footer Padding
 
-The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `dgeInsetsDirectional.only(top: 4.0)`.
+The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `EdgeInsetsDirectional.only(top: 4.0)`.
 
 {% tabs %}
 {% highlight dart %}
