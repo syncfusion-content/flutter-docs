@@ -72,20 +72,43 @@ The ['border'](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hi, how was your day?',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'Anita',
+        ),
+      ),
+      ChatMessage(
+        text: 'It was great. How about you.',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-005',
+          name: 'Clara',
+        ),
+      ),
+    ];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: '123-001',
-        composer: const ChatComposer(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10.0),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SfChat(
+          messages: _messages,
+          outgoingUser: '123-005',
+          composer: ChatComposer(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
               ),
             ),
           ),
@@ -96,6 +119,8 @@ The ['border'](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 
 {% endhighlight %}
 {% endtabs %}
+
+![Chat composer border](images/composer/composer-border.png)
 
 #### Content padding
 
@@ -154,6 +179,8 @@ The ['hintText'](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 {% endhighlight %}
 {% endtabs %}
 
+![Chat composer hintText](images/composer/composer-hintText.png)
+
 #### Hint text style
 
 The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
@@ -175,6 +202,8 @@ The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintS
             hintText: 'Type a message',
             hintStyle: TextStyle(
               color: Colors.blue,
+              fontSize: 16,
+              fontStyle: FontStyle.italic,
             ),
           ),
         ),
@@ -185,6 +214,8 @@ The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 {% endhighlight %}
 {% endtabs %}
 
+![Chat composer hintTextStyle](images/composer/composer-hintTextStyle.png)
+
 #### Prefix and suffix icons
 
 The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and ['suffixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
@@ -192,30 +223,57 @@ The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/pref
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hello, how can I help you today?',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'Sheila',
+        ),
+      ),
+      ChatMessage(
+        text: 'I need help with my current order.',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-005',
+          name: 'Alex',
+        ),
+      ),
+    ];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: '123-001',
-        composer: const ChatComposer(
-          decoration: InputDecoration(
-            prefixIcon: Icon(
-              Icons.attachment,
-              color: Colors.blue,
-            ),
-            suffixIcon: Icon(
-              Icons.send,
-              color: Colors.blue,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SfChat(
+          messages: _messages,
+          outgoingUser: '123-005',
+          composer: const ChatComposer(
+            decoration: InputDecoration(
+              prefixIcon: Icon(
+                Icons.attachment,
+                color: Colors.blue,
+              ),
+              suffixIcon: Icon(
+                Icons.camera_alt,
+                color: Colors.blue,
+              ),
             ),
           ),
         ),
       ),
     );
   }
+
+![Chat composer icon](images/composer/composer-icon.png)
 
 {% endhighlight %}
 {% endtabs %}
@@ -229,17 +287,39 @@ By default, the top padding is set to 16.
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hi, did you get my order?',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'Honey',
+        ),
+      ),
+      ChatMessage(
+        text: 'Yes, I got it.',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-005',
+          name: 'Kenny',
+        ),
+      ),
+    ];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfChat(
         messages: _messages,
-        outgoingUser: '123-001',
+        outgoingUser: '123-005',
         composer: const ChatComposer(
-          padding: EdgeInsets.only(top: 20.0),
+          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
         ),
       ),
     );
@@ -247,6 +327,8 @@ By default, the top padding is set to 16.
 
 {% endhighlight %}
 {% endtabs %}
+
+![Chat composer padding](images/composer/composer-padding.png)
 
 ### Text style
 
@@ -279,6 +361,8 @@ The specified text style will be merged with the ['bodyMedium'] and ['editorText
 {% endhighlight %}
 {% endtabs %}
 
+![Chat composer text style](images/composer/composer-text-style.png)
+
 ### Builder
 
 The ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
@@ -288,6 +372,7 @@ If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_cha
 {% tabs %}
 {% highlight dart %}
 
+  // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
   final TextEditingController _controller = TextEditingController();
 
@@ -298,7 +383,7 @@ If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_cha
         padding: const EdgeInsets.all(10.0),
         child: SfChat(
           messages: _messages,
-          outgoingUser: '123-001',
+          outgoingUser: '123-001',        
           composer: builderComposer(),
         ),
       ),
@@ -310,13 +395,12 @@ If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_cha
       builder: (context) {
         return Row(
           children: [
-            const SizedBox(width: 3),
             const Icon(
               Icons.add,
-              size: 26,
+              size: 35,
               color: Colors.blue,
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 5),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -350,19 +434,10 @@ If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_cha
                 ),
               ),
             ),
-            const SizedBox(width: 10),
-            const Icon(
-              Icons.camera_alt_outlined,
-              color: Colors.blue,
-            ),
             const SizedBox(width: 7),
-            FloatingActionButton(
-              shape: const CircleBorder(),
-              elevation: 0,
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
-              onPressed: () {},
-              child: const Icon(Icons.send),
+            const Icon(
+              Icons.send,
+              color: Colors.blue,
             ),
           ],
         );
