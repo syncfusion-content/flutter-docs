@@ -237,15 +237,15 @@ The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 
 ### Avatar Size
 
-The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `const Size.square(32.0)`.
+The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `Size.square(32.0)`.
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `const EdgeInsets.all(2.0)`.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
 
 ### Content Padding
 
-The [`contentPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/contentPadding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
+The [`contentPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/contentPadding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
 
 ### Avatar Padding
 
@@ -253,11 +253,11 @@ The [`avatarPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 ### Header Padding
 
-The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp. Defaults to `const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0)`.
+The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp. Defaults to `EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0)`.
 
 ### Footer Padding
 
-The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `const EdgeInsetsDirectional.only(top: 4.0)`.
+The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatBubbleSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `dgeInsetsDirectional.only(top: 4.0)`.
 
 {% tabs %}
 {% highlight dart %}

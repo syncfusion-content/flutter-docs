@@ -69,11 +69,11 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncf
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `const EdgeInsetsDirectional.only(start: 8.0)`.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 ### Size
 
-The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/size.html) property specifies the width and height of the button. By default, it is set to `const Size.square(40.0)`.
+The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatActionButton/size.html) property specifies the width and height of the button. By default, it is set to `Size.square(40.0)`.
 
 {% tabs %}
 {% highlight dart %}
