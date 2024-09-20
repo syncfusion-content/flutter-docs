@@ -9,18 +9,18 @@ documentation: ug
 
 # Composer in Flutter Chat (SfChat)
 
-This section explains the customization options available in ['ChatComposer'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html), including the option to add any type of widget as a composer.
+This section explains the customization options available in [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html), including the option to add any type of widget as a composer.
 
 ## Composer
 
-The ['composer'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
+The [composer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
 
 When the composer is null, no default text field is added to the chat widget.
 
 ### Minimum and maximum lines
 
-* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
-* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
+* [minLines](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
+* [maxLines](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
 The default value for minLines is 1, and the default value for maxLines is 6.
 
@@ -49,9 +49,9 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 ### Decoration
 
-The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
+The [decoration](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
 
-The ['InputDecoration'](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
+The [InputDecoration](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
 The following are the major features available in InputDecoration for decorating the composer:
 * [enabled](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html)
@@ -63,11 +63,11 @@ The following are the major features available in InputDecoration for decorating
 
 #### Enabled
 
-The ['enabled'](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html) property defines whether the compose feature is in an enabled or disabled state. By default, it is set to true. If set to false, the compose feature will be disabled, and the default action button will also be disabled.
+The [enabled](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html) property defines whether the compose feature is in an enabled or disabled state. By default, it is set to true. If set to false, the compose feature will be disabled, and the default action button will also be disabled.
 
 #### Border
 
-The ['border'](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`] is used.
+The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [OutlineInputBorder] is used.
 
 {% tabs %}
 {% highlight dart %}
@@ -124,7 +124,7 @@ The ['border'](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 
 #### Content padding
 
-The ['contentPadding'](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
+The [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
 
 {% tabs %}
 {% highlight dart %}
@@ -153,7 +153,7 @@ The ['contentPadding'](https://api.flutter.dev/flutter/material/InputDecoration/
 
 #### Hint text
 
-The ['hintText'](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to null.
+The [hintText](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to null.
 
 {% tabs %}
 {% highlight dart %}
@@ -183,7 +183,7 @@ The ['hintText'](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 
 #### Hint text style
 
-The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
+The [hintStyle](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
 
 {% tabs %}
 {% highlight dart %}
@@ -218,7 +218,7 @@ The ['hintStyle'](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 
 #### Prefix and suffix icons
 
-The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and ['suffixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
+The [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [suffixIcon](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
 
 {% tabs %}
 {% highlight dart %}
@@ -280,7 +280,7 @@ The ['prefixIcon'](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ### Padding
 
-The ['padding'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [padding](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
 By default, the top padding is set to 16.
 
@@ -332,7 +332,7 @@ By default, the top padding is set to 16.
 
 ### Text style
 
-The ['textStyle'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
+The [textStyle](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
 
 The specified text style will be merged with the ['bodyMedium'] and ['editorTextStyle'] text styles.
 
@@ -361,13 +361,13 @@ The specified text style will be merged with the ['bodyMedium'] and ['editorText
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer text style](images/composer/composer-text-style.png)
+![Chat composer text style](images/composer/composer-text-style.gif)
 
 ### Builder
 
-The ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
+The [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
 
-If ['ChatComposer.builder'](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
+If [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
 
 {% tabs %}
 {% highlight dart %}
