@@ -8,766 +8,753 @@ documentation: ug
 ---
 
 # Theme in Flutter Chat (SfChatTheme)
-This section explains how to integrate and customize the Theme in the [`SfChatTheme`] widget.
 
->**Note**: You must import the [`theme.dart`] library from the [`Core`] package to use [`SfChatTheme`].
+This section explains the customization properties available in [`ChatThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/chatThemeData.html).
 
-## Action Button Foreground Color
+**Import the Chat library** 
 
-The [`actionButtonForegroundColor`] property is used to customize the color of the text or icon on the action button.
+Import the following library to use the chat theme data:
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
-
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonForegroundColor: Colors.white,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
-      ),
-    ),
-  );
-}
+    import 'package:syncfusion_flutter_core/theme.dart';
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Background Color
+## Action button foreground color
 
-The [`actionButtonBackgroundColor`] property is used to set the color of the action button’s background.
-
-{% tabs %}
-{% highlight Dart %}
-
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
-
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonBackgroundColor: Colors.blueAccent,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
-      ),
-    ),
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Action Button Focus Color
-
-The [`actionButtonFocusColor`] property is used to define the color of the action button when it is focused.
+The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonForegroundColor.html) property is used to specify the color for the default action button icon.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonFocusColor: Colors.blue,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonForegroundColor: Colors.white,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Hover Color
+## Action button background color
 
-The [`actionButtonHoverColor`] property is used to adjust the color of the action button when hovered over.
+The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonBackgroundColor.html) property is used to specify the background color for the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonHoverColor: Colors.blueGrey,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonBackgroundColor: Colors.blueAccent,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Splash Color
+## Action button focus color
 
-The [`actionButtonSplashColor`] property is used to specify the color of the ripple effect when the action button is tapped.
+The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusColor.html) property is used to specify the background color for the action button when it is in the focused state.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonSplashColor: Colors.lightBlueAccent,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonFocusColor: Colors.blue,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Foreground Color
+## Action button hover color
 
-The [`actionButtonDisabledForegroundColor`] property is used to set the color of the text or icon on the action button when it is 
-disabled.
+The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverColor.html) property is used to specify the background color for the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonDisabledForegroundColor: Colors.grey,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonHoverColor: Colors.blueGrey,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Background Color
+## Action button splash color
 
-The [`actionButtonDisabledBackgroundColor`] property is used to define the color of the action button’s background when it is disabled.
+The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonSplashColor.html) property is used to specify the color of the ripple effect when the action button is tapped.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonDisabledBackgroundColor: Colors.grey[300],
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonSplashColor: Colors.lightBlueAccent,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Elevation
+## Action button disabled foreground color
 
-The [`actionButtonElevation`] property is used to set the elevation of the action button in its default state.
+The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledForegroundColor.html) property is used to specify the color of the text or icon on the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonElevation: 4.0,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonDisabledForegroundColor: Colors.grey,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Focus Elevation
+## Action button disabled background color
 
-The [`actionButtonFocusElevation`] property is used to adjust the elevation of the action button when it is focused.
+The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledBackgroundColor.html) property is used to specify the background color of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonFocusElevation: 6.0,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonDisabledBackgroundColor: Colors.grey[300],
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Hover Elevation
+## Action button elevation
 
-The [`actionButtonHoverElevation`] property is used to define the elevation of the action button when hovered over.
+The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonElevation.html) property is used to specify the elevation of the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonHoverElevation: 8.0,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonElevation: 4.0,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Highlight Elevation
+## Action button focus elevation
 
-The [`actionButtonHighlightElevation`] property is used to specify the elevation of the action button when it is highlighted.
+The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusElevation.html) property is used to specify the elevation of the action button when it is focused.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonHighlightElevation: 12.0,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonFocusElevation: 6.0,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Disabled Elevation
+## Action button hover elevation
 
-The [`actionButtonDisabledElevation`] property is used to set the elevation of the action button when it is disabled.
+The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverElevation.html) property is used to specify the elevation of the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonDisabledElevation: 0.0,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonHoverElevation: 8.0,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Mouse Cursor
+## Action button highlight elevation
 
-The [`actionButtonMouseCursor`] property is used to define the type of cursor displayed when hovering over the action button.
+The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonMouseCursor: SystemMouseCursors.click,
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonHighlightElevation: 12.0,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Action Button Shape
+## Action button disabled elevation
 
-The [`actionButtonShape`] property is used to customize the shape and border radius of the action button.
+The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledElevation.html) property is used to specify the elevation of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      actionButtonShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(40.0),
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonDisabledElevation: 0.0,
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Bubble Content Background Color
+## Action button mouse cursor
 
-The [`outgoingBubbleContentBackgroundColor`] property is used to set the background color of bubbles containing outgoing messages.
+The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonMouseCursor.html) property is used to specify the type of cursor displayed when hovering over the action button.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      outgoingBubbleContentBackgroundColor: Colors.green[100],
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonMouseCursor: SystemMouseCursors.click,
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Bubble Content Background Color
+## Action button shape
 
-The [`incomingBubbleContentBackgroundColor`] property is used to set the background color of bubbles containing incoming messages.
+The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonShape.html) property is used to specify the shape and border radius of the action button.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      incomingBubbleContentBackgroundColor: Colors.blue[100],
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        actionButtonShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40.0),
+        ),
       ),
-    ),
-  );
-}
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Editor Text Style
+## Outgoing bubble content background color
 
-The [`editorTextStyle`] property is used to define the style for text in the message editor.
+The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      editorTextStyle: const TextStyle(
-        color: Colors.black,
-        fontSize: 16.0,
-        fontWeight: FontWeight.normal,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingBubbleContentBackgroundColor: Colors.green[100],
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Content Text Style
+## Incoming bubble content background color
 
-The [`outgoingContentTextStyle`] property is used to customize the style for text in outgoing message bubbles.
+The [`incomingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      outgoingContentTextStyle: const TextStyle(
-        color: Colors.black87,
-        fontSize: 14.0,
-        fontWeight: FontWeight.bold,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingBubbleContentBackgroundColor: Colors.blue[100],
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Content Text Style
+## Editor text style
 
-The [`incomingContentTextStyle`] property is used to set the style for text in incoming message bubbles.
+The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/editorTextStyle.html) property is used to specify the style for text in the message editor.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      incomingContentTextStyle: const TextStyle(
-        color: Colors.black,
-        fontSize: 14.0,
-        fontWeight: FontWeight.bold,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        editorTextStyle: const TextStyle(
+          color: Colors.black,
+          fontSize: 16.0,
+          fontWeight: FontWeight.normal,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Primary Header Text Style
+## Outgoing content text style
 
-The [`outgoingPrimaryHeaderTextStyle`] property is used to set the style for the primary header text in outgoing message bubbles.
+The [`outgoingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingContentTextStyle.html) property is used to specify the style for text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      outgoingPrimaryHeaderTextStyle: const TextStyle(
-        color: Colors.black,
-        fontSize: 12.0,
-        fontWeight: FontWeight.bold,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingContentTextStyle: const TextStyle(
+          color: Colors.black87,
+          fontSize: 14.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Primary Header Text Style
+## Incoming content text style
 
-The [`incomingPrimaryHeaderTextStyle`] property is used to set the style for the primary header text in incoming message bubbles.
+The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingContentTextStyle.html) property is used to specify the style for text in incoming message bubbles
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      incomingPrimaryHeaderTextStyle: const TextStyle(
-        color: Colors.black,
-        fontSize: 12.0,
-        fontWeight: FontWeight.bold,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingContentTextStyle: const TextStyle(
+          color: Colors.black,
+          fontSize: 14.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Secondary Header Text Style
+## Outgoing primary header text style
 
-The [`outgoingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in outgoing message bubbles.
+The [`outgoingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      outgoingSecondaryHeaderTextStyle: const TextStyle(
-        color: Colors.grey,
-        fontSize: 12.0,
-        fontStyle: FontStyle.italic,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingPrimaryHeaderTextStyle: const TextStyle(
+          color: Colors.black,
+          fontSize: 12.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Secondary Header Text Style
+## Incoming primary header text style
 
-The [`incomingSecondaryHeaderTextStyle`] property is used to set the style for the secondary header text in incoming message bubbles.
+The [`incomingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      incomingSecondaryHeaderTextStyle: const TextStyle(
-        color: Colors.grey,
-        fontSize: 12.0,
-        fontStyle: FontStyle.normal,
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingPrimaryHeaderTextStyle: const TextStyle(
+          color: Colors.black,
+          fontSize: 12.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing Bubble Content Shape
+## Outgoing secondary header text style
 
-The [`outgoingBubbleContentShape`] property is used to customize the shape and border radius of outgoing message bubbles.
+The [`outgoingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      outgoingBubbleContentShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16.0),
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingSecondaryHeaderTextStyle: const TextStyle(
+          color: Colors.grey,
+          fontSize: 12.0,
+          fontStyle: FontStyle.italic,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming Bubble Content Shape
+## Incoming secondary header text style
 
-The [`incomingBubbleContentShape`] property is used to define the shape and border radius of incoming message bubbles.
+The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
 
-// Load if there are existing messages.
-final List<ChatMessage> _messages = <ChatMessage>[];
-final String _outgoingUserId = '';
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
 
-@override
-Widget build(BuildContext context) {
-  return SfChatTheme(
-    data: const SfChatThemeData(
-      incomingBubbleContentShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16.0),
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingSecondaryHeaderTextStyle: const TextStyle(
+          color: Colors.grey,
+          fontSize: 12.0,
+          fontStyle: FontStyle.normal,
+        ),
       ),
-    ),
-    child: Scaffold(
-      body: SfChat(
-        messages: _messages,
-        outgoingUser: _outgoingUserId,
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
+
+## Outgoing bubble content shape
+
+The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingBubbleContentShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Incoming bubble content shape
+
+The [`incomingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentShape.html) property is used to specify the shape and border radius of incoming message bubbles.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingBubbleContentShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+          outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
