@@ -273,10 +273,10 @@ The [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefix
     );
   }
 
-![Chat composer icon](images/composer/composer-icon.png)
-
 {% endhighlight %}
 {% endtabs %}
+
+![Chat composer icon](images/composer/composer-icon.png)
 
 ### Padding
 
