@@ -43,5 +43,6 @@ The following is the minimum Flutter SDK version required for our widgets:
 
 ### Supported Platforms
 
-Our [Flutter packages](https://pub.dev/publishers/syncfusion.com/packages) support iOS, Android, Web, Windows, macOS, and Linux. For the supported version, you can check the link ['here'](https://docs.flutter.dev/reference/supported-platforms#supported-platforms).
+Our [Flutter packages](https://pub.dev/publishers/syncfusion.com/packages) support iOS, Android, Web, Windows, macOS, and Linux. For the supported version, you can check the below link,
 
+[`https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms`](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms)
