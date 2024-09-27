@@ -28,27 +28,26 @@ It will be displayed when there are no messages in the conversions and will be r
         placeholderBuilder: (BuildContext context) {
           return const Center(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.chat_bubble_outline,
-                    size: 100,
-                    color: Colors.blueAccent,
+                    size: 35,
+                    color: Color(0xFF433D8B),
                   ),
-                  SizedBox(height: 20),
                   Text(
                     'Start a conversation!',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
+                      color: Color(0xFF433D8B),
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'You haven\'t sent any messages yet. \nTap the button below to send your first message.',
+                    'You haven\'t sent any messages yet.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
