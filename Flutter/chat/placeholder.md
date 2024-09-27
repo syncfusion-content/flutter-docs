@@ -9,7 +9,7 @@ documentation: ug
 
 # Placeholder in Flutter Chat (SfChat)
 
-The [placeholderBuilder](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversion area.
+The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversion area.
 
 It will be displayed when there are no messages in the conversions and will be removed when messages start being added.
 
@@ -28,27 +28,26 @@ It will be displayed when there are no messages in the conversions and will be r
         placeholderBuilder: (BuildContext context) {
           return const Center(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.chat_bubble_outline,
-                    size: 100,
-                    color: Colors.blueAccent,
+                    size: 35,
+                    color: Color(0xFF433D8B),
                   ),
-                  SizedBox(height: 20),
                   Text(
                     'Start a conversation!',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
+                      color: Color(0xFF433D8B),
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'You haven\'t sent any messages yet. \nTap the button below to send your first message.',
+                    'You haven\'t sent any messages yet.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
@@ -69,4 +68,4 @@ It will be displayed when there are no messages in the conversions and will be r
 
 ![Chat composer support](images/placeholder/placeholder-chat.gif)
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter Chat`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Chat example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
