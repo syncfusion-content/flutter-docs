@@ -27,7 +27,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
+   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
 
   @override
@@ -37,8 +37,8 @@ The default value for minLines is 1, and the default value for maxLines is 6.
         messages: _messages,
         outgoingUser: '123-001',
         composer: const ChatComposer(
-          minLines: 3,
-          maxLines: 7,
+          minLines: 2,
+          maxLines: 3,
         ),
       ),
     );
@@ -47,13 +47,15 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 {% endhighlight %}
 {% endtabs %}
 
+![Chat composer support](images/composer/composer-minLines-maxLines.gif)
+
 ### Decoration
 
-The [decoration](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an InputDecoration object.
+The [decoration](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [InputDecoration](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
 The [InputDecoration](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
-The following are the major features available in InputDecoration for decorating the composer:
+The following are the major features available in [InputDecoration](https://api.flutter.dev/flutter/material/InputDecoration-class.html) for decorating the composer:
 * [enabled](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html)
 * [border](https://api.flutter.dev/flutter/material/InputDecoration/border.html)
 * [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html)
@@ -67,7 +69,7 @@ The [enabled](https://api.flutter.dev/flutter/material/InputDecoration/enabled.h
 
 #### Border
 
-The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [OutlineInputBorder] is used.
+The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [OutlineInputBorder](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
 
 {% tabs %}
 {% highlight dart %}
@@ -78,7 +80,7 @@ The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.htm
   void initState() {
     _messages = <ChatMessage>[
       ChatMessage(
-        text: 'Hi, how was your day?',
+        text: 'Hi! How’s your day?',
         time: DateTime.now(),
         author: const ChatAuthor(
           id: '123-001',
@@ -86,7 +88,7 @@ The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.htm
         ),
       ),
       ChatMessage(
-        text: 'It was great. How about you.',
+        text: 'It was great.',
         time: DateTime.now(),
         author: const ChatAuthor(
           id: '123-005',
@@ -100,16 +102,13 @@ The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.htm
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-005',
-          composer: ChatComposer(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-005',
+        composer: ChatComposer(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
         ),
@@ -127,10 +126,24 @@ The [border](https://api.flutter.dev/flutter/material/InputDecoration/border.htm
 The [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="28" %} 
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hi! How’s your day?',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'Anita',
+        ),
+      ),
+    ];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,7 +154,7 @@ The [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/co
         composer: const ChatComposer(
           decoration: InputDecoration(
             hintText: 'Type a message',
-            contentPadding: EdgeInsets.all(20),
+            contentPadding: EdgeInsets.all(30),
           ),
         ),
       ),
@@ -150,6 +163,8 @@ The [contentPadding](https://api.flutter.dev/flutter/material/InputDecoration/co
 
 {% endhighlight %}
 {% endtabs %}
+
+![Chat composer border](images/composer/composer-contentPadding.png)
 
 #### Hint text
 
@@ -229,7 +244,7 @@ The [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefix
   void initState() {
     _messages = <ChatMessage>[
       ChatMessage(
-        text: 'Hello, how can I help you today?',
+        text: 'Hi! How’s your day?',
         time: DateTime.now(),
         author: const ChatAuthor(
           id: '123-001',
@@ -237,7 +252,7 @@ The [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefix
         ),
       ),
       ChatMessage(
-        text: 'I need help with my current order.',
+        text: 'Good! Just relaxing.',
         time: DateTime.now(),
         author: const ChatAuthor(
           id: '123-005',
@@ -251,21 +266,18 @@ The [prefixIcon](https://api.flutter.dev/flutter/material/InputDecoration/prefix
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-005',
-          composer: const ChatComposer(
-            decoration: InputDecoration(
-              prefixIcon: Icon(
-                Icons.attachment,
-                color: Colors.blue,
-              ),
-              suffixIcon: Icon(
-                Icons.camera_alt,
-                color: Colors.blue,
-              ),
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-005',
+        composer: const ChatComposer(
+          decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.attachment,
+              color: Color(0xFF433D8B),
+            ),
+            suffixIcon: Icon(
+              Icons.camera_alt,
+              color: Color(0xFF433D8B),
             ),
           ),
         ),
@@ -334,24 +346,45 @@ By default, the top padding is set to 16.
 
 The [textStyle](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [ChatComposer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
 
-The specified text style will be merged with the ['bodyMedium'] and ['editorTextStyle'] text styles.
+The specified text style will be merged with the [bodyMedium](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
 
 {% tabs %}
 {% highlight dart %}
 
-  // Load if there are existing messages.
-  final List<ChatMessage> _messages = <ChatMessage>[];
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    _messages = <ChatMessage>[
+      ChatMessage(
+        text: 'Hi, you are looking good',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-001',
+          name: 'Peter',
+        ),
+      ),
+      ChatMessage(
+        text: 'Thank you',
+        time: DateTime.now(),
+        author: const ChatAuthor(
+          id: '123-002',
+          name: 'Master',
+        ),
+      ),
+    ];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfChat(
         messages: _messages,
-        outgoingUser: '123-001',
+        outgoingUser: '123-002',
         composer: const ChatComposer(
           textStyle: TextStyle(
-            fontSize: 16.0,
-            color: Colors.black,
+            color: Color(0xFF433D8B),
           ),
         ),
       ),
@@ -379,13 +412,10 @@ If [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SfChat(
-          messages: _messages,
-          outgoingUser: '123-001',        
-          composer: builderComposer(),
-        ),
+      body: SfChat(
+        messages: _messages,
+        outgoingUser: '123-001',
+        composer: builderComposer(),
       ),
     );
   }
@@ -398,13 +428,13 @@ If [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/
             const Icon(
               Icons.add,
               size: 35,
-              color: Colors.blue,
+              color: Color(0xFF433D8B),
             ),
             const SizedBox(width: 5),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.blue.withOpacity(0.2),
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: TextField(
@@ -426,7 +456,7 @@ If [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/
                       padding: EdgeInsets.only(right: 5.0),
                       child: Icon(
                         Icons.emoji_emotions_outlined,
-                        color: Colors.blue,
+                        color: Color(0xFF433D8B),
                       ),
                     ),
                     border: InputBorder.none,
@@ -437,7 +467,7 @@ If [ChatComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/
             const SizedBox(width: 7),
             const Icon(
               Icons.send,
-              color: Colors.blue,
+              color: Color(0xFF433D8B),
             ),
           ],
         );
