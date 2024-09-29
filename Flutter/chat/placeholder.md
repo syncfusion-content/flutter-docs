@@ -9,7 +9,7 @@ documentation: ug
 
 # Placeholder in Flutter Chat (SfChat)
 
-The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversion area.
+The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversion area.
 
 It will be displayed when there are no messages in the conversions and will be removed when messages start being added.
 
