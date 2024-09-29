@@ -9,18 +9,18 @@ documentation: ug
 
 # Composer in Flutter Chat (SfChat)
 
-This section explains the customization options available in [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html), including the option to add any type of widget as a composer.
+This section explains the customization options available in [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer-class.html), including the option to add any type of widget as a composer.
 
 ## Composer
 
-The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
+The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
 
 When the composer is null, no default text field is added to the chat widget.
 
 ### Minimum and maximum lines
 
-* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
-* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
+* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
+* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
 The default value for minLines is 1, and the default value for maxLines is 6.
 
@@ -51,7 +51,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 ### Decoration
 
-The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
+The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
 The [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
@@ -292,7 +292,7 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
 By default, the top padding is set to 16.
 
@@ -344,7 +344,7 @@ By default, the top padding is set to 16.
 
 ### Text style
 
-The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/textStyle.html) property is used to set the style for the default [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer-class.html) text.
+The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/textStyle.html) property is used to set the style for the default [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer-class.html) text.
 
 The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
 
@@ -398,9 +398,9 @@ The specified text style will be merged with the [`bodyMedium`](https://api.flut
 
 ### Builder
 
-The [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
+The [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) enables the option to specify any type of widget as a primary composer, which is useful for integrating additional options alongside the text field, such as a microphone button, file attachment button, and so on.
 
-If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
+If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
 
 {% tabs %}
 {% highlight dart %}
