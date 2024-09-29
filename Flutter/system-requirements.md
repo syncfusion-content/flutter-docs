@@ -18,7 +18,7 @@ The system requirements for using our Syncfusion Flutter platform are as follows
 * Windows 8, 8.1
 * Windows 10
 * Windows 11
-* Android API level 19 & later
+* Android API level 20 & later
 * iOS 8 & later
 
 ### Hardware Environment
@@ -102,8 +102,6 @@ See the links below for the recommended Flutter development environments
 
 ### Supported Platforms
 
-Our Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. You can find the supported version at the link below.
-
-[`https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms`](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms)
+Our Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. You can find the supported version at the link ['here'](https://docs.flutter.dev/reference/supported-platforms#supported-platforms).
 
 >**Note**: Currently, the PDF viewer control is not supported on the Linux platform.
