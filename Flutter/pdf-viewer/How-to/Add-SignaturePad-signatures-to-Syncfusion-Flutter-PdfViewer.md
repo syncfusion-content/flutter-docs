@@ -2,7 +2,7 @@
 layout: post
 title: Add digital signature in SfPdfViewer using SfSignaturePad | Syncfusion
 description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -16,7 +16,6 @@ In the `_handleSigningProcess()` method, the signature in SfSignaturePad is save
 {% tabs %}
 {% highlight Dart %}
 
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +28,7 @@ void main() {
 }
 
 class SignaturePadApp extends StatelessWidget {
-  const SignaturePadApp({Key? key}) : super(key: key);
+  const SignaturePadApp({super.key});
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -40,7 +39,7 @@ class SignaturePadApp extends StatelessWidget {
 
 @immutable
 class _MyHomePage extends StatefulWidget {
-  const _MyHomePage({Key? key}) : super(key: key);
+  const _MyHomePage({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -53,11 +52,17 @@ class _MyHomePageState extends State<_MyHomePage> {
   @override
   void initState() {
     super.initState();
+    _loadDocument();
+  }
+
+  Future<void> _loadDocument() async {
+    final ByteData docBytes = await rootBundle.load("assets/sample.pdf");
+    _documentBytes = docBytes.buffer.asUint8List();
+    setState(() {});
   }
 
   //Add the signature in the PDF document.
   void _handleSigningProcess() async {
-  
     //Save the signature as PNG image.
     final data =
         await _signaturePadGlobalKey.currentState!.toImage(pixelRatio: 3.0);
@@ -74,7 +79,7 @@ class _MyHomePageState extends State<_MyHomePage> {
     PdfPage page = document.pages[0];
 
     //Create a digital signature and set the signature information.
-    PdfSignatureField _signatureField = PdfSignatureField(page, 'signature',
+    PdfSignatureField signatureField = PdfSignatureField(page, 'signature',
         bounds: const Rect.fromLTRB(300, 500, 550, 700),
         signature: PdfSignature(
             //Create a certificate instance from the PFX file with a private key.
@@ -86,19 +91,16 @@ class _MyHomePageState extends State<_MyHomePage> {
             cryptographicStandard: CryptographicStandard.cms));
 
     //Get the signature field appearance graphics.
-    PdfGraphics? graphics = _signatureField.appearance.normal.graphics;
+    PdfGraphics? graphics = signatureField.appearance.normal.graphics;
 
     //Draw the signature image in the PDF page.
     graphics?.drawImage(PdfBitmap(bytes!.buffer.asUint8List()),
         const Rect.fromLTWH(0, 0, 250, 200));
 
     //Add a signature field to the form.
-    document.form.fields.add(_signatureField);
+    document.form.fields.add(signatureField);
 
-    //Flatten the PDF form field annotation
-    document.form.flattenAllFields();
-
-    _documentBytes = Uint8List.fromList(document.save());
+    _documentBytes = Uint8List.fromList(document.saveSync());
     document.dispose();
     setState(() {});
   }
@@ -127,6 +129,7 @@ class _MyHomePageState extends State<_MyHomePage> {
               height: 170,
               decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -144,24 +147,23 @@ class _MyHomePageState extends State<_MyHomePage> {
                     ),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
                         child: ElevatedButton(
+                          onPressed: _handleSigningProcess,
                           child:
                               const Text('Add signature and load the document'),
-                          onPressed: _handleSigningProcess,
                         ),
                       ),
                       ElevatedButton(
-                        child: const Text('Clear'),
                         onPressed: _handleClearButtonPressed,
+                        child: const Text('Clear'),
                       ),
                     ],
-                    mainAxisAlignment: MainAxisAlignment.center,
                   )
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
               ),
             )
           ],
