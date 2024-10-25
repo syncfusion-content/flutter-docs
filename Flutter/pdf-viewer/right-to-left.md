@@ -122,4 +122,4 @@ Then, import the `flutter_localizations` library, specify [localizationsDelegate
 {% endhighlight %}
 {% endtabs %}
 
-N> RTL scrolling is not supported in Single Page Layout mode when using horizontal scroll direction.
+N> RTL scrolling is not supported in single page layout mode when the [scrollDirection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/scrollDirection.html) property is set to [https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfScrollDirection.html](PdfScrollDirection).horizontal.
