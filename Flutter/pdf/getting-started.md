@@ -182,6 +182,46 @@ By executing the above code sample, you will get the PDF document as follows.
 
 ![Getting started PDF](images/getting-started/default.jpg)
 
+## Save and download a PDF document in WASM
+
+step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
+
+step 2:	Create a new Dart file called **save_file_wasm.dart**.
+
+step 3:	Add the following code:
+
+**Import package**
+
+{% highlight dart %}
+
+import 'dart:convert';
+import 'package:web/web.dart' as web;
+
+{% endhighlight %}
+
+To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
+
+{% highlight dart %}
+
+// Function to save and launch a file for download in a web environment
+Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
+  final web.HTMLAnchorElement anchor =
+      web.document.createElement('a') as web.HTMLAnchorElement
+        ..href = "data:application/octet-stream;base64,${base64Encode(bytes)}"
+        ..style.display = 'none'
+        ..download = fileName;
+
+// Insert the new element into the DOM
+web.document.body!.appendChild(anchor);
+
+// Initiate the download
+anchor.click();
+// Clean up the DOM by removing the anchor element
+web.document.body!.removeChild(anchor);
+}
+
+{% endhighlight %}
+
 ## Creating a PDF document with image
 
 The following code example shows how to create a PDF document with an image.
@@ -497,45 +537,3 @@ The following screenshot shows the invoice PDF document created by the Syncfusio
 ![Invoice PDF](images/getting-started/invoice.jpg)
 
 N> You can also explore our [Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf) demo that shows how to create and modify PDF files from C# with just five lines of code.
-
-## Steps to Download a File in Flutter WASM
-
-step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
-
-step 2:	Create a new Dart file called **save_file_wasm.dart**.
-
-step 3:	Add the following code:
-
-**Import package**
-
-{% highlight dart %}
-
-import 'dart:convert';
-import 'package:web/web.dart' as web;
-
-{% endhighlight %}
-
-To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
-
-{% highlight dart %}
-
-// Function to save and launch a file for download in a web environment
-Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
-  final web.HTMLAnchorElement anchor =
-      web.document.createElement('a') as web.HTMLAnchorElement
-        ..href = "data:application/octet-stream;base64,${base64Encode(bytes)}"
-        ..style.display = 'none'
-        ..download = fileName;
-
-// Insert the new element into the DOM
-web.document.body!.appendChild(anchor);
-
-// Initiate the download
-anchor.click();
-// Clean up the DOM by removing the anchor element
-web.document.body!.removeChild(anchor);
-}
-
-{% endhighlight %}
-
-A complete working sample can be downloaded from [Flutter WASM](https://www.syncfusion.com/downloads/support/directtrac/general/ze/sample_pdf-1012859280).
