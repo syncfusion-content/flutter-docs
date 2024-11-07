@@ -19,7 +19,7 @@ Create a simple project using the instructions given in the [`Getting Started wi
 
 Add the Syncfusion Flutter PDF dependency to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 dependencies:
   syncfusion_flutter_pdf: ^xx.x.xx
@@ -32,7 +32,7 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](ht
 
 Run the following command to get the required packages.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 $ flutter pub get
 
@@ -42,7 +42,7 @@ $ flutter pub get
 
 Import the following package in your Dart code.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
@@ -50,7 +50,7 @@ import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 Add a new button widget as a child of your container widget.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ You can save and open a PDF document in mobile by using the following steps:
 
 Add the following packages to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 path_provider: ^2.0.7
 open_file: ^3.2.1
