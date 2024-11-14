@@ -227,6 +227,7 @@ class _HomePageState extends State<HomePage> {
             _showContextMenu(context, details);
           }
         },
+        key: _pdfViewerKey,
         controller: _pdfViewerController,
         canShowTextSelectionMenu: false,
       ),
