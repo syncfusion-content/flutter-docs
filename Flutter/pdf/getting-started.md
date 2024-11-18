@@ -178,10 +178,6 @@ Add the following code in the header section of index.html file under the web fo
 
 {% endhighlight %}
 
-By executing the above code sample, you will get the PDF document as follows.
-
-![Getting started PDF](images/getting-started/default.jpg)
-
 ## Save and download a PDF document in WASM
 
 step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
@@ -221,6 +217,10 @@ web.document.body!.removeChild(anchor);
 }
 
 {% endhighlight %}
+
+By executing the above code sample, you will get the PDF document as follows.
+
+![Getting started PDF](images/getting-started/default.jpg)
 
 ## Creating a PDF document with image
 
