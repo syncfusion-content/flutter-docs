@@ -19,7 +19,7 @@ Create a simple project using the instructions given in the [`Getting Started wi
 
 Add the Syncfusion Flutter PDF dependency to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 dependencies:
   syncfusion_flutter_pdf: ^xx.x.xx
@@ -32,7 +32,7 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](ht
 
 Run the following command to get the required packages.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 $ flutter pub get
 
@@ -42,7 +42,7 @@ $ flutter pub get
 
 Import the following package in your Dart code.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
@@ -50,7 +50,7 @@ import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 Add a new button widget as a child of your container widget.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ You can save and open a PDF document in mobile by using the following steps:
 
 Add the following packages to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 path_provider: ^2.0.7
 open_file: ^3.2.1
@@ -181,6 +181,46 @@ Add the following code in the header section of index.html file under the web fo
 By executing the above code sample, you will get the PDF document as follows.
 
 ![Getting started PDF](images/getting-started/default.jpg)
+
+## Save and download a PDF document in WASM
+
+step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
+
+step 2:	Create a new Dart file called **save_file_wasm.dart**.
+
+step 3:	Add the following code:
+
+**Import package**
+
+{% highlight dart %}
+
+import 'dart:convert';
+import 'package:web/web.dart' as web;
+
+{% endhighlight %}
+
+To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
+
+{% highlight dart %}
+
+// Function to save and launch a file for download in a web environment
+Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
+  final web.HTMLAnchorElement anchor =
+      web.document.createElement('a') as web.HTMLAnchorElement
+        ..href = "data:application/octet-stream;base64,${base64Encode(bytes)}"
+        ..style.display = 'none'
+        ..download = fileName;
+
+// Insert the new element into the DOM
+web.document.body!.appendChild(anchor);
+
+// Initiate the download
+anchor.click();
+// Clean up the DOM by removing the anchor element
+web.document.body!.removeChild(anchor);
+}
+
+{% endhighlight %}
 
 ## Creating a PDF document with image
 
