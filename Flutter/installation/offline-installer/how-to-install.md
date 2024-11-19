@@ -13,7 +13,7 @@ documentation: ug
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio Flutter product.
+The steps below show how to install the Essential Studio&reg; Flutter product.
 
 1.	Open the Syncfusion Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
@@ -95,11 +95,11 @@ The steps below show how to install the Essential Studio Flutter product.
 7.  After installing, click the **Launch Control Panel** link to open the Syncfusion Control Panel.
 
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio Flutter platform.
+8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio&reg; Flutter platform.
 
 ## Installing in silent mode
 
-The Syncfusion Essential Studio Flutter Installer supports installation and uninstallation via the command line.
+The Syncfusion Essential Studio&reg; Flutter Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
@@ -121,9 +121,9 @@ To install through the Command Line in Silent mode, follow the steps below.
     **Example:** “D:\Temp\syncfusionessentialflutter_x.x.x.x.exe” /Install silent /PIDKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /CreateStartMenuShortcut:true
 
 	
-7.  Essential Studio for Flutter is installed.
+7.  Essential Studio&reg; for Flutter is installed.
 
-    N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+    N> x.x.x.x should be replaced with the Essential Studio&reg; version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
@@ -143,4 +143,4 @@ Syncfusion Essential Flutter can be uninstalled silently using the Command Line.
     **Example:** “D:\Temp\syncfusionessentialflutter_x.x.x.x.exe" /uninstall silent
 
 
-7.  Essential Studio for Flutter is uninstalled.
+7.  Essential Studio&reg; for Flutter is uninstalled.
