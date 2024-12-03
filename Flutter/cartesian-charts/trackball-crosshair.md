@@ -723,8 +723,8 @@ Chart provides trackball support for all the series. It is used to show informat
       final num? y;
     }
 
-  {% endhighlight %}
-  {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ![Enable trackball in Flutter Cartesian Charts.](images/trackball-crosshair/enable_trackball.png)
 
