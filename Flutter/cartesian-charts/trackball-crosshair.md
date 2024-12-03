@@ -669,11 +669,11 @@ Chart provides trackball support for all the series. It is used to show informat
       _trackballBehavior = TrackballBehavior(
           enable: true, activationMode: ActivationMode.singleTap);
       chartData = <ChartData>[
-        ChartData(x: 'Food', y: 55),
-        ChartData(x: 'Transport', y: 33),
-        ChartData(x: 'Medical', y: 43),
-        ChartData(x: 'Clothes', y: 32),
-        ChartData(x: 'Books', y: 56),
+        ChartData(x: 'USA', y: 55),
+        ChartData(x: 'China', y: 33),
+        ChartData(x: 'UK', y: 43),
+        ChartData(x: 'Japan', y: 32),
+        ChartData(x: 'France', y: 56),
       ];
       super.initState();
     }
