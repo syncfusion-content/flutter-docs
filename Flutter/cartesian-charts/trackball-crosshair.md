@@ -654,6 +654,80 @@ Defaults to `true`.
 
 ![Trackball tooltip marker in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball_tooltip_marker.png)
 
+### Enable trackball
+
+Chart provides trackball support for all the series. It is used to show information about the segment, when you tap and drag on the chart. To enable the trackball, you need to set [`enableTrackball`]() property as *true*.
+
+{% tabs %}
+{% highlight dart %} 
+
+    late TrackballBehavior _trackballBehavior;
+    late List<ChartData> chartData;
+
+    @override
+    void initState() {
+      _trackballBehavior = TrackballBehavior(
+          enable: true, activationMode: ActivationMode.singleTap);
+      chartData = <ChartData>[
+        ChartData(x: 'Food', y: 55),
+        ChartData(x: 'Transport', y: 33),
+        ChartData(x: 'Medical', y: 43),
+        ChartData(x: 'Clothes', y: 32),
+        ChartData(x: 'Books', y: 56),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: SfCartesianChart(
+            title: ChartTitle(
+              text: 'Enable and disable the trackball for specific series',
+              textStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            legend: Legend(isVisible: true, position: LegendPosition.bottom),
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'John',
+                enableTrackball: false,
+              ),
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'Mary',
+                enableTrackball: true,
+              ),
+            ],
+            trackballBehavior: _trackballBehavior,
+          ),
+        ),
+      );
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y});
+
+      final String? x;
+      final num? y;
+    }
+
+  {% endhighlight %}
+  {% endtabs %}
+
+![Enable trackball in Flutter Cartesian Charts.](images/trackball-crosshair/enable_trackball.png)
+
 #### See Also
 
 * [Synchronize trackball with multiple charts in Cartesian charts](https://support.syncfusion.com/kb/article/10568/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
