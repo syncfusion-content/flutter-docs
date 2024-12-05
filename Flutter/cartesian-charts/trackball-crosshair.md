@@ -656,7 +656,7 @@ Defaults to `true`.
 
 ### Enable trackball
 
-The [`enableTrackball`]() is used to enables or disables the trackball feature for cartesian series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the data point area.
+The [`enableTrackball`]() is used to enables or disables the trackball feature for specific series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the data point area.
 
 Defaults to `true`.
 
