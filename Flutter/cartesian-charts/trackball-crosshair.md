@@ -656,7 +656,9 @@ Defaults to `true`.
 
 ### Enable trackball
 
-Chart provides trackball support for all the series. It is used to show information about the segment, when you tap and drag on the chart. To enable the trackball, you need to set [`enableTrackball`]() property as *true*.
+The [`enableTrackball`]() is used to enables or disables the trackball feature for cartesian series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the data point area.
+
+Defaults to `true`.
 
 {% tabs %}
 {% highlight dart %}
