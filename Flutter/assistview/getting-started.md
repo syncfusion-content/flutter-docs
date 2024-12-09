@@ -20,7 +20,7 @@ Create a simple Flutter project by following the instructions provided in the [G
 Add the [`Syncfusion Flutter Chat`] dependency to your pubspec.yaml file.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
 
     dependencies:
       syncfusion_flutter_chat: ^x.x.x
@@ -35,7 +35,7 @@ Add the [`Syncfusion Flutter Chat`] dependency to your pubspec.yaml file.
 Run the following command to get the required packages.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
 
     flutter pub get
 
@@ -54,9 +54,9 @@ Import the library using the code provided below.
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize assistview widget
+## Initialize assist widget
 
-Add an assistview widget with the required property, [messages].
+Add an assist widget with the required property, [messages].
 
 ## Add placeholder to composer
 
@@ -70,6 +70,6 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`] for the actionButton.
 
-When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the assistview widget with the newly composed message.
+When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the assist widget with the newly composed message.
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
