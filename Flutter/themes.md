@@ -276,6 +276,14 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
     <tr>
         <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistViewThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfBarcodeTheme-class.html">SfBarcodeTheme</a>
         </td>
         <td>
