@@ -417,6 +417,60 @@ The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/
 {% endhighlight %}
 {% endtabs %}
 
+## Outgoing avatar background color
+
+The [`outgoingAvatarBackgroundColor`] property is used to specify the background color of outgoing message avatar.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        outgoingAvatarBackgroundColor: Colors.green[200],
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Incoming avatar background color
+
+The [`incomingAvatarBackgroundColor`] property is used to specify the background color of incoming message avatar.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        incomingAvatarBackgroundColor: Colors.blue[200],
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Outgoing bubble content background color
 
 The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
@@ -697,6 +751,61 @@ The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusio
 {% endhighlight %}
 {% endtabs %}
 
+## Suggestion item text style
+
+The [`suggestionItemTextStyle`] property is used to specify the text style for both outgoing and incoming message suggestion items.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        suggestionItemTextStyle: WidgetStateProperty.resolveWith(
+          (Set<WidgetState> state) {
+            if (state.contains(WidgetState.selected)) {
+              return const TextStyle(
+                  color: Colors.blue,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold);
+            } else if (state.contains(WidgetState.focused)) {
+              return const TextStyle(
+                  color: Colors.blueGrey,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold);
+            } else if (state.contains(WidgetState.hovered)) {
+              return const TextStyle(
+                  color: Colors.lightBlueAccent,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold);
+            } else if (state.contains(WidgetState.disabled)) {
+              return const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold);
+            }
+            return const TextStyle(
+                color: Colors.black,
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold);
+          },
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Outgoing bubble content shape
 
 The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
@@ -749,6 +858,152 @@ The [`incomingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flut
         body: SfChat(
           messages: _messages,
           outgoingUser: '123-001',
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Suggestion background color
+
+The [`suggestionBackgroundColor`] property is used to specify the background color of both outgoing and incoming message suggestion bubble.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        suggestionBackgroundColor: Colors.lightBlue[50],
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Suggestion background shape
+
+The [`suggestionBackgroundShape`] property is used to specify the background shape of both outgoing and incoming message suggestion bubble.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        suggestionBackgroundShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Suggestion item background color
+
+The [`suggestionItemBackgroundColor`] property is used to specify the background color for both outgoing and incoming message suggestion items.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        suggestionItemBackgroundColor: WidgetStateProperty.resolveWith(
+          (Set<WidgetState> state) {
+            if (state.contains(WidgetState.selected)) {
+              return Colors.blue;
+            } else if (state.contains(WidgetState.focused)) {
+              return Colors.blueGrey;
+            } else if (state.contains(WidgetState.hovered)) {
+              return Colors.lightBlueAccent;
+            } else if (state.contains(WidgetState.disabled)) {
+              return Colors.grey[300];
+            }
+            return Colors.white;
+          },
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Suggestion item shape
+
+The [`suggestionItemShape`] property is used to specify the shape for both outgoing and incoming message suggestion items.
+
+{% tabs %}
+{% highlight Dart %}
+
+  // Load if there are existing messages.
+  final List<ChatMessage> _messages = <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return SfChatTheme(
+      data: const SfChatThemeData(
+        suggestionItemShape: WidgetStateProperty.resolveWith(
+          (Set<WidgetState> state) {
+            if (state.contains(WidgetState.selected)) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              );
+            } else if (state.contains(WidgetState.focused)) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              );
+            } else if (state.contains(WidgetState.hovered)) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6.0),
+              );
+            } else if (state.contains(WidgetState.disabled)) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4.0),
+              );
+            }
+            return RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            );
+          },
+        ),
+      ),
+      child: Scaffold(
+        body: SfChat(
+          messages: _messages,
         ),
       ),
     );
