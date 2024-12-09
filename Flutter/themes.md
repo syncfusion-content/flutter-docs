@@ -87,6 +87,14 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
     </tr>
     <tr>
         <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistViewThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfBarcodeThemeData-class.html">SfBarcodeThemeData</a>
         </td>
         <td>
