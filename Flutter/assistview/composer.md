@@ -63,7 +63,7 @@ The [`border`] property defines shape of the border that is drawn around the tex
 The [`contentPadding`] property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
 
 {% tabs %}
-{% highlight dart hl_lines="28" %} 
+{% highlight dart hl_lines="28" %}
 
 {% endhighlight %}
 {% endtabs %}
