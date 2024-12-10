@@ -58,18 +58,42 @@ Import the library using the code provided below.
 
 Add an assist widget with the required property, [messages].
 
+{% tabs %}
+{% highlight dart %}
+	
+{% endhighlight %}
+{% endtabs %}
+
 ## Add placeholder to composer
 
 To add a placeholder to the [`AssistComposer`], use the [`decoration`] property, which is of type InputDecoration. The placeholder can be added using the [`hintText`] property.
 
+{% tabs %}
+{% highlight dart %}
+	
+{% endhighlight %}
+{% endtabs %}
+
 ## Add placeholder to conversation area
 
 By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`] property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+
+{% tabs %}
+{% highlight dart %}
+	
+{% endhighlight %}
+{% endtabs %}
 
 ## Add action button
 
 It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`] for the actionButton.
 
 When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the assist widget with the newly composed message.
+
+{% tabs %}
+{% highlight dart %}
+	
+{% endhighlight %}
+{% endtabs %}
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
