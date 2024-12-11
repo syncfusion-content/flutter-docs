@@ -2,7 +2,7 @@
 layout: post
 title: Hyperlink navigation in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
 description: Learn here all about the hyperlink navigation feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---

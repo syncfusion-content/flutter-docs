@@ -2,7 +2,7 @@
 layout: post
 title: Locking and Unlocking Annotations in Flutter PDF Viewer Widget | Syncfusion<sup>&reg;</sup>
 description: Learn here all about locking and unlocking annotations in PDF documents using the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Document link annotation in Flutter PDF Viewer | Syncfusion<sup>&reg;</sup>
 description: Learn here all about document link annotation feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---

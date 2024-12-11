@@ -2,7 +2,7 @@
 layout: post
 title: Text Markup Annotations in Flutter PDF Viewer Widget | Syncfusion<sup>&reg;</sup>
 description: Learn here all about text markup annotations in the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
