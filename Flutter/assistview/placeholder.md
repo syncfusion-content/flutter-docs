@@ -51,9 +51,10 @@ Configure the placeholder to become visible when there are no messages in the AI
             child: Text(
               'What can I help you with today?',
               style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold),
+                fontSize: 18,
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           );
         },
@@ -105,9 +106,10 @@ The placeholder can scroll along with messages.
             child: Text(
               'What can I help you with today?',
               style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold),
+                fontSize: 18,
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           );
         },
