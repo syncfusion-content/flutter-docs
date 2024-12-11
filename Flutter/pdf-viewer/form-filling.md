@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form filling in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+title: Form filling in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about form filling feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer

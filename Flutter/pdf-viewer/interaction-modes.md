@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction modes in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+title: Interaction modes in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about interaction modes feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer

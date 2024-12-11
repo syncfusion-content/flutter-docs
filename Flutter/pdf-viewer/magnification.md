@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magnification in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+title: Magnification in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about magnification feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer

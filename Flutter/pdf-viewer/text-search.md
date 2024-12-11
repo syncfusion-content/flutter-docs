@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text search in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+title: Text search in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about text search feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer

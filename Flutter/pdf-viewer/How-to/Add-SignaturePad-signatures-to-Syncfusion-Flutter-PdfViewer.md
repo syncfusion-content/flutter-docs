@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add digital signature in SfPdfViewer using SfSignaturePad | Syncfusion<sup>&reg;</sup>
+title: Add digital signature in SfPdfViewer using SfSignaturePad | Syncfusion
 description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
