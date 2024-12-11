@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text selection in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about text selection feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Text selection in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+description: Learn here all about text selection feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Viewing password-protected PDFs in Flutter PDF Viewer | Syncfusion
-description: Learn here all about loading password-protected PDF feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Viewing password-protected PDFs in Flutter PDF Viewer | Syncfusion<sup>&reg;</sup>
+description: Learn here all about loading password-protected PDF feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

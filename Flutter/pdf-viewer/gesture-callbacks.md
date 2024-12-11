@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gesture callbacks in Flutter PDF Viewer widget | Syncfusion
-description: Learn here about gesture callbacks in Syncfusion Flutter PDF Viewer (SfPdfViewer) widget.
+title: Gesture callbacks in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+description: Learn here about gesture callbacks in Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about localization feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Localization in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+description: Learn here all about localization feature of Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Getting started with Flutter PDF Viewer widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter PDF Viewer (SfPdfViewer) widget, its elements, and more.
+title: Getting started with Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup>
+description: Learn here about getting started with Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget, its elements, and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
 # Getting started with Flutter PDF Viewer (SfPdfViewer)
-This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter PDF Viewer plugin.
+This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget and its features. This section covers only the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer plugin.
 
 ## Add the Flutter PDF Viewer to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter PDF Viewer dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -25,7 +25,7 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter PDF Viewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [`Syncfusion<sup>&reg;</sup> Flutter PDF Viewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
 
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RTL support in Flutter PDF Viewer widget | Syncfusion 
-description: Learn here all about the Right to Left (RTL) support in Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: RTL support in Flutter PDF Viewer widget | Syncfusion<sup>&reg;</sup> 
+description: Learn here all about the Right to Left (RTL) support in Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
