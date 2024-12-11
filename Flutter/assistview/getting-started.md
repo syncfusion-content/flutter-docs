@@ -60,9 +60,43 @@ Add an assist widget with the required property, [messages].
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Default chat](images/getting-started/initialize-assist.gif)
 
 ## Add placeholder to composer
 
@@ -70,9 +104,40 @@ To add a placeholder to the [`AssistComposer`], use the [`decoration`] property,
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+          ),
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Placeholder to composer](images/getting-started/add-placeholder-to-composer.png)
 
 ## Add placeholder to conversation area
 
@@ -80,9 +145,46 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        placeholderBuilder: (BuildContext context) {
+          return const Center(
+            child: Text(
+              'Ask AI Anything!',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold),
+            ),
+          );
+        },
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Placeholder](images/getting-started/placeholder.png)
 
 ## Add action button
 
@@ -92,8 +194,42 @@ When the send button is clicked, the [`AssistActionButton.onPressed`] callback i
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Action button chat](images/getting-started/actionbutton-chat.png)
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.

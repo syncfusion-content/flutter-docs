@@ -27,6 +27,42 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          minLines: 2,
+          maxLines: 3,
+        ),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,6 +91,45 @@ The [`border`] property defines shape of the border that is drawn around the tex
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: AssistComposer(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,6 +139,44 @@ The [`contentPadding`] property defines the padding surrounding the text added i
 
 {% tabs %}
 {% highlight dart hl_lines="28" %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+            contentPadding: EdgeInsets.all(30),
+          ),
+        ),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,6 +188,43 @@ The [`hintText`] property sets the placeholder text for the text field. By defau
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+          ),
+        ),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,6 +235,48 @@ The [`hintStyle`] property refers to the text style of the hint text.
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Type a message',
+            hintStyle: TextStyle(
+              color: Colors.blue,
+              fontSize: 16,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,6 +286,42 @@ The [`prefixIcon`] and [`suffixIcon`] properties are used to add icons at the be
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.attachment,
+              color: Color(0xFF433D8B),
+            ),
+            suffixIcon: Icon(
+              Icons.camera_alt,
+              color: Color(0xFF433D8B),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,6 +335,33 @@ By default, the top padding is set to 16.
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,6 +374,35 @@ The specified text style will be merged with the [`bodyMedium`] and `editorTextS
 {% tabs %}
 {% highlight dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          textStyle: TextStyle(
+            color: Color(0xFF433D8B),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,6 +414,87 @@ If [`AssistComposer.builder`] is used, the action button will always be enabled.
 
 {% tabs %}
 {% highlight dart %}
+
+  late List<AssistMessage> _messages;
+  final TextEditingController _controller = TextEditingController();
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: builderComposer(),
+      ),
+    );
+  }
+
+  AssistComposer builderComposer() {
+    return AssistComposer.builder(
+      builder: (context) {
+        return Row(
+          children: [
+            const Icon(
+              Icons.add,
+              size: 35,
+              color: Color(0xFF433D8B),
+            ),
+            const SizedBox(width: 5),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: TextField(
+                  minLines: 1,
+                  maxLines: 6,
+                  controller: _controller,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 18,
+                    ),
+                    hintText: 'Messages...',
+                    hintStyle: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    suffixIcon: const Padding(
+                      padding: EdgeInsets.only(right: 5.0),
+                      child: Icon(
+                        Icons.emoji_emotions_outlined,
+                        color: Color(0xFF433D8B),
+                      ),
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 7),
+            const Icon(
+              Icons.send,
+              color: Color(0xFF433D8B),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}

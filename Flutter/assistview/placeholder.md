@@ -18,6 +18,50 @@ Configure the placeholder to become visible when there are no messages in the AI
 {% tabs %}
 {% highlight Dart %}
 
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+        placeholderBuilder: (BuildContext context) {
+          return const Center(
+            child: Text(
+              'Ask AI Anything!',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold),
+            ),
+          );
+        },
+        placeholderBehavior: AssistPlaceholderBehavior.hideOnMessage,
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -27,6 +71,50 @@ The placeholder can scroll along with messages.
 
 {% tabs %}
 {% highlight Dart %}
+
+  late List<AssistMessage> _messages;
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+            });
+            _generativeResponse(data);
+          },
+        ),
+        placeholderBuilder: (BuildContext context) {
+          return const Center(
+            child: Text(
+              'Ask AI Anything!',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold),
+            ),
+          );
+        },
+        placeholderBehavior: AssistPlaceholderBehavior.scrollWithMessage,
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
