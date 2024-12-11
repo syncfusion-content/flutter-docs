@@ -17,7 +17,7 @@ The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/the
 
 The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget is available in the [`syncfusion_flutter_core`](https://pub.dev/packages/syncfusion_flutter_core) package. Since all our widgets are core dependent, you don't need to include the core as a separate package. For example, here we have included the [`syncfusion_flutter_charts`](https://pub.dev/packages/syncfusion_flutter_charts) package in the pub spec file for the purpose of depicting the working model of the theme widget.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     dependencies:
     syncfusion_flutter_charts: ^xx.x.xx
@@ -28,7 +28,7 @@ The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/the
 
 To use the theme widgets, import the following library in your Dart code.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     import 'package:syncfusion_flutter_core/theme.dart';
 
@@ -36,7 +36,7 @@ To use the theme widgets, import the following library in your Dart code.
 
 Once the required package has been imported, initialize [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget and then add any widget as a child. The theme data applied in this [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget is applied to all the Syncfusion widgets that are descendant of this [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget. For demonstration purposes, [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) has been added as a child of [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget in the below code snippet.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -83,6 +83,14 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
         </td>
         <td>
            <b>Applicable widgets</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
         </td>
     </tr>
     <tr>
@@ -204,7 +212,7 @@ Syncfusion Flutter widgets provide support for light and dark themes. As the nam
 
 By default, the light theme will be applied. You can apply a dark theme using the [`brightness`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/brightness.html) property.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -232,7 +240,7 @@ Using the [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/late
 
 Initialize the specialized theme widget and then add respective widget as a child. For example, [`SfChartTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartTheme-class.html) (specialized) widget in case of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html), [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) widgets.The theme data applied in this specialized widget is applied to all its applicable widgets that are descendant of this widget. For demonstration purpose, [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) has been added as child of [`SfChartTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartTheme-class.html) widget in the below code snippet.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -264,6 +272,14 @@ Similarly, refer the following table to know about the other specialized theme w
         </td>
         <td>
            <b>Applicable widgets</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
         </td>
     </tr>
     <tr>
