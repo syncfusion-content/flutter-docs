@@ -9,57 +9,11 @@ documentation: ug
 
 # Conversation area in Flutter AI AssistView (SfAIAssistView)
 
-This section explains the customization options available for modifying the request and response messages in the assist widget.
+This section explains the customization options available for modifying the request and response messages in the AI AssistView widget.
 
 ## Conversation area
 
 The AI AssistView displays the content of user requests and AI responses. Each message includes details like the message's text, sending time stamp, and author. The response message contains additional information, including suggestions and toolbar items.
-
-{% tabs %}
-{% highlight dart %}
-
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(
-        data: response,
-        time: DateTime.now(),
-        author: const AssistMessageAuthor(id: '123-002', name: 'AI Bot'),
-      ));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfAIAssistView(
-        messages: _messages,
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(
-                data: data,
-                time: DateTime.now(),
-                author: const AssistMessageAuthor(id: '123-001', name: 'User'),
-              ));
-            });
-            _generativeResponse(data);
-          },
-        ),
-      ),
-    );
-  }
-
-{% endhighlight %}
-{% endtabs %}
 
 ### Request message
 
@@ -68,7 +22,7 @@ Customize the content of request messages by changing the background color, back
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -92,8 +46,8 @@ Customize the content of request messages by changing the background color, back
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
         requestBubbleSettings: const AssistBubbleSettings(
@@ -116,7 +70,7 @@ Customize the content of response messages by changing the background color, bac
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -140,8 +94,8 @@ Customize the content of response messages by changing the background color, bac
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
         responseBubbleSettings: const AssistBubbleSettings(
@@ -164,7 +118,7 @@ The header displays the username of the message's author along with the time sta
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -172,7 +126,7 @@ The header displays the username of the message's author along with the time sta
       _messages.add(AssistMessage.response(
         data: response,
         time: DateTime.now(),
-        author: const AssistMessageAuthor(id: '123-002', name: 'AI Bot'),
+        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
       ));
     });
   }
@@ -194,21 +148,19 @@ The header displays the username of the message's author along with the time sta
               _messages.add(AssistMessage.request(
                 data: data,
                 time: DateTime.now(),
-                author: const AssistMessageAuthor(id: '123-001', name: 'User'),
+                author: const AssistMessageAuthor(id: 'User ID', name: 'User name'),
               ));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
         requestBubbleSettings: const AssistBubbleSettings(
           showUserName: true,
           showTimestamp: true,
-          showUserAvatar: true,
         ),
         responseBubbleSettings: const AssistBubbleSettings(
           showUserName: true,
           showTimestamp: true,
-          showUserAvatar: true,
         ),
       ),
     );
@@ -221,6 +173,55 @@ The header displays the username of the message's author along with the time sta
 
 Showcases additional functionalities and information, including feedback options, AI model details, and more.
 
+{% tabs %}
+{% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        time: DateTime.now(),
+        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(
+                data: data,
+                time: DateTime.now(),
+                author: const AssistMessageAuthor(id: 'User ID', name: 'User name'),
+              ));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        bubbleFooterBuilder: (context, index, message) {
+          return const Text('GPT-4');
+        },
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Avatar
 
 The message author's avatar displays either an image or the initials of their name. By default, if the avatar image source is not defined, the user's initials will be displayed. Additionally, you can create a custom widget that shows more information about the user.
@@ -228,7 +229,7 @@ The message author's avatar displays either an image or the initials of their na
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -238,8 +239,8 @@ The message author's avatar displays either an image or the initials of their na
         time: DateTime.now(),
         author: const AssistMessageAuthor(
             id: '123-002', 
-            name: 'AI Bot',
-            avatar: NetworkImage('https://example.com/path/to/bot-avatar.jpg'),
+            name: 'AI',
+            avatar: AssetImage('asset/images/AI.png'),
         ),
       ));
     });
@@ -263,13 +264,13 @@ The message author's avatar displays either an image or the initials of their na
                 data: data,
                 time: DateTime.now(),
                 author: const AssistMessageAuthor(
-                    id: '123-001', 
-                    name: 'User',
-                    avatar: NetworkImage('https://example.com/path/to/men-avatar.jpg'),
+                    id: 'User ID', 
+                    name: 'User name',
+                    avatar: AssetImage('asset/images/Username.png'),
                 ),
               ));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
       ),
@@ -286,7 +287,7 @@ Customize the area where message content is displayed by changing its background
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -310,8 +311,8 @@ Customize the area where message content is displayed by changing its background
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
         requestBubbleSettings: const AssistBubbleSettings(
@@ -340,7 +341,7 @@ Provide a list response suggestions. When the user selects one, it is considered
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -350,15 +351,12 @@ Provide a list response suggestions. When the user selects one, it is considered
         suggestions: [
           const AssistMessageSuggestion(
             data: 'Time to relax!',
-            selected: false,
           ),
           const AssistMessageSuggestion(
             data: 'Let’s get creative!',
-            selected: false,
           ),
           const AssistMessageSuggestion(
             data: 'Try something new!',
-            selected: false,
           ),
         ],
         suggestionSettings: AssistSuggestionSettings(
@@ -391,12 +389,12 @@ Provide a list response suggestions. When the user selects one, it is considered
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
-        onSuggestionItemSelected:
-            (selected, messageIndex, suggestion, suggestionIndex) {
+        onSuggestionItemSelected: (bool selected, int messageIndex,
+            AssistMessageSuggestion suggestion, int suggestionIndex) {
           setState(() {
             _messages[messageIndex].suggestions![suggestionIndex] =
                 suggestion.copyWith(selected: selected);
@@ -404,9 +402,9 @@ Provide a list response suggestions. When the user selects one, it is considered
                 data: suggestion.data!,
                 time: DateTime.now(),
                 author:
-                    const AssistMessageAuthor(id: '123-001', name: 'User')));
+                    const AssistMessageAuthor(id: 'User ID', name: 'User name')));
             _generativeResponse(suggestion.data!);
-          });
+          });              
         },
       ),
     );
@@ -422,7 +420,7 @@ Indicates that the AI service's response is in progress after a request has been
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -446,85 +444,16 @@ Indicates that the AI service's response is in progress after a request has been
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
-        responseLoadingBuilder: _buildResponseLoadingBuilder,
+        responseLoadingBuilder: (context, index, message) {
+          return const Text('Loading...');
+        },
       ),
     );
   }
-
-Widget _buildResponseLoadingBuilder(
-    BuildContext context, int index, AssistMessage message) {
-  return SizedBox(
-    width: 80.0,
-    height: 24.0,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(3, (dotIndex) {
-        return AnimatedDot(dotIndex: dotIndex);
-      }),
-    ),
-  );
-}
-
-class AnimatedDot extends StatefulWidget {
-  final int dotIndex;
-
-  const AnimatedDot({super.key, required this.dotIndex});
-
-  @override
-  AnimatedDotState createState() => AnimatedDotState();
-}
-
-class AnimatedDotState extends State<AnimatedDot>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 600),
-      vsync: this,
-    )..repeat(reverse: true);
-
-    _animation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Interval(
-          (widget.dotIndex) * 0.2,
-          (widget.dotIndex + 1) * 0.2,
-          curve: Curves.easeInOut,
-        ),
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FadeTransition(
-      opacity: _animation,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.0),
-        child: Text(
-          '•',
-          style: TextStyle(
-            fontSize: 24.0,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -536,7 +465,7 @@ Append a toolbar to response messages that provides options to perform various a
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -580,18 +509,13 @@ Append a toolbar to response messages that provides options to perform various a
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
-        onBubbleToolbarItemSelected:
-            (selected, messageIndex, toolbarItem, toolbarItemIndex) {
-          setState(() {
-            _messages[messageIndex].toolbarItems![toolbarItemIndex] =
-                toolbarItem.copyWith(
-              isSelected: selected,
-            );
-          });
+        onBubbleToolbarItemSelected: (bool selected, int messageIndex,
+            AssistMessageToolbarItem item, int toolbarItemIndex) {
+          // Handle the toolbar item selection
         },
         responseToolbarSettings: AssistMessageToolbarSettings(
           itemBackgroundColor: WidgetStateProperty.resolveWith(

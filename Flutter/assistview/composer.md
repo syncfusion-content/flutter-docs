@@ -15,7 +15,7 @@ This section explains the customization options available in [`AssistComposer`],
 
 The default [`composer`] is a rounded rectangular text editor that allows users to compose request messages. You can customize its appearance by adding hint text, borders, prefix icons, suffix icons, and more.
 
-When the composer is null, no default text field is added to the assist widget.
+When the composer is null, no default text field is added to the AI AssistView widget.
 
 ### Minimum and maximum lines
 
@@ -27,20 +27,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -50,14 +37,6 @@ The default value for minLines is 1, and the default value for maxLines is 6.
         composer: const AssistComposer(
           minLines: 2,
           maxLines: 3,
-        ),
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
-          },
         ),
       ),
     );
@@ -91,20 +70,7 @@ The [`border`] property defines shape of the border that is drawn around the tex
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -117,14 +83,6 @@ The [`border`] property defines shape of the border that is drawn around the tex
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-        ),
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
-          },
         ),
       ),
     );
@@ -140,20 +98,7 @@ The [`contentPadding`] property defines the padding surrounding the text added i
 {% tabs %}
 {% highlight dart hl_lines="28" %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -162,17 +107,8 @@ The [`contentPadding`] property defines the padding surrounding the text added i
         messages: _messages,
         composer: const AssistComposer(
           decoration: InputDecoration(
-            hintText: 'Type a message',
             contentPadding: EdgeInsets.all(30),
           ),
-        ),
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
-          },
         ),
       ),
     );
@@ -188,20 +124,7 @@ The [`hintText`] property sets the placeholder text for the text field. By defau
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -210,16 +133,8 @@ The [`hintText`] property sets the placeholder text for the text field. By defau
         messages: _messages,
         composer: const AssistComposer(
           decoration: InputDecoration(
-            hintText: 'Type a message',
+            hintText: 'Ask here',
           ),
-        ),
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
-          },
         ),
       ),
     );
@@ -235,20 +150,7 @@ The [`hintStyle`] property refers to the text style of the hint text.
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -257,21 +159,13 @@ The [`hintStyle`] property refers to the text style of the hint text.
         messages: _messages,
         composer: const AssistComposer(
           decoration: InputDecoration(
-            hintText: 'Type a message',
+            hintText: 'Ask here',
             hintStyle: TextStyle(
               color: Colors.blue,
               fontSize: 16,
               fontStyle: FontStyle.italic,
             ),
           ),
-        ),
-        actionButton: AssistActionButton(
-          onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
-          },
         ),
       ),
     );
@@ -287,20 +181,7 @@ The [`prefixIcon`] and [`suffixIcon`] properties are used to add icons at the be
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -335,20 +216,7 @@ By default, the top padding is set to 16.
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -374,20 +242,7 @@ The specified text style will be merged with the [`bodyMedium`] and `editorTextS
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -415,20 +270,13 @@ If [`AssistComposer.builder`] is used, the action button will always be enabled.
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-  final TextEditingController _controller = TextEditingController();
+  final List<AssistMessage> _messages = <AssistMessage>[];
+  late TextEditingController _controller;
 
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
+  @override
+  void initState() {
+    _controller = TextEditingController();
+    super.initState();
   }
 
   @override
@@ -439,6 +287,12 @@ If [`AssistComposer.builder`] is used, the action button will always be enabled.
         composer: builderComposer(),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   AssistComposer builderComposer() {
@@ -467,7 +321,7 @@ If [`AssistComposer.builder`] is used, the action button will always be enabled.
                       vertical: 10,
                       horizontal: 18,
                     ),
-                    hintText: 'Messages...',
+                    hintText: 'Ask here',
                     hintStyle: TextStyle(
                       color: Colors.grey.shade800,
                       fontSize: 14,

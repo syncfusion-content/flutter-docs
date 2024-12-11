@@ -28,20 +28,7 @@ If no composer is added (by specifying the composer as null), the action button 
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -50,10 +37,7 @@ If no composer is added (by specifying the composer as null), the action button 
         messages: _messages,
         actionButton: AssistActionButton(
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -70,20 +54,7 @@ The [child] property allows you to define a custom widget consisting of one or m
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -91,12 +62,9 @@ The [child] property allows you to define a custom widget consisting of one or m
       body: SfAIAssistView(
         messages: _messages,
         actionButton: AssistActionButton(
-          child: const Icon(Icons.chat, color: Colors.grey, size: 25),
+          child: const Icon(Icons.chat),
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -113,7 +81,7 @@ It is a callback that is invoked whenever the action button is pressed. Since th
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -137,8 +105,8 @@ It is a callback that is invoked whenever the action button is pressed. Since th
           onPressed: (String data) {
             setState(() {
               _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
             });
-            _generativeResponse(data);
           },
         ),
       ),
@@ -155,20 +123,7 @@ The [`tooltip`] text describes the button's action when pressed. It is displayed
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -178,10 +133,7 @@ The [`tooltip`] text describes the button's action when pressed. It is displayed
         actionButton: AssistActionButton(
           tooltip: 'Send Message',
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -206,20 +158,7 @@ The [`splashColor`] property is the splash color of the button's InkWell. The de
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -233,10 +172,7 @@ The [`splashColor`] property is the splash color of the button's InkWell. The de
           hoverColor: Colors.blueAccent,
           splashColor: Colors.white.withOpacity(0.3),
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -259,20 +195,7 @@ The [`highlightElevation`] property determines the elevation when the button is 
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -285,10 +208,7 @@ The [`highlightElevation`] property determines the elevation when the button is 
           hoverElevation: 4.0,
           highlightElevation: 8.0,
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -305,20 +225,7 @@ The [`mouseCursor`] property defines the type of cursor that appears when hoveri
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -326,12 +233,9 @@ The [`mouseCursor`] property defines the type of cursor that appears when hoveri
       body: SfAIAssistView(
         messages: _messages,
         actionButton: AssistActionButton(
-          mouseCursor: SystemMouseCursors.click,
+          mouseCursor: SystemMouseCursors.forbidden,
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -348,20 +252,7 @@ The [`shape`] property sets the shape of the button's border, such as rounded or
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -378,10 +269,7 @@ The [`shape`] property sets the shape of the button's border, such as rounded or
             ),
           ),
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -398,20 +286,7 @@ The [`padding`] property defines the space inside the button between its border 
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -421,10 +296,7 @@ The [`padding`] property defines the space inside the button between its border 
         actionButton: AssistActionButton(
           padding: const EdgeInsetsDirectional.only(start: 8.0),
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),
@@ -441,20 +313,7 @@ The [`size`] property specifies the width and height of the button. By default, 
 {% tabs %}
 {% highlight dart %}
 
-  late List<AssistMessage> _messages;
-
-  void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
-    setState(() {
-      _messages.add(AssistMessage.response(data: response));
-    });
-  }
-
-  Future<String> _getAIResponse(String data) async {
-    String response = '';
-    // Connect with your preferred AI to generate a response to the request.
-    return response;
-  }
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -464,10 +323,7 @@ The [`size`] property specifies the width and height of the button. By default, 
         actionButton: AssistActionButton(
           size: const Size.square(40.0),
           onPressed: (String data) {
-            setState(() {
-              _messages.add(AssistMessage.request(data: data));
-            });
-            _generativeResponse(data);
+            // Handle the send button click action here.
           },
         ),
       ),

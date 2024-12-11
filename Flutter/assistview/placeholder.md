@@ -18,7 +18,7 @@ Configure the placeholder to become visible when there are no messages in the AI
 {% tabs %}
 {% highlight Dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -49,7 +49,7 @@ Configure the placeholder to become visible when there are no messages in the AI
         placeholderBuilder: (BuildContext context) {
           return const Center(
             child: Text(
-              'Ask AI Anything!',
+              'What can I help you with today?',
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.black54,
@@ -72,7 +72,7 @@ The placeholder can scroll along with messages.
 {% tabs %}
 {% highlight Dart %}
 
-  late List<AssistMessage> _messages;
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
     final String response = await _getAIResponse(data);
@@ -103,7 +103,7 @@ The placeholder can scroll along with messages.
         placeholderBuilder: (BuildContext context) {
           return const Center(
             child: Text(
-              'Ask AI Anything!',
+              'What can I help you with today?',
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.black54,
