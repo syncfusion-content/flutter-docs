@@ -126,7 +126,7 @@ The header displays the username of the message's author along with the time sta
       _messages.add(AssistMessage.response(
         data: response,
         time: DateTime.now(),
-        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
+        author: const AssistMessageAuthor(id: 'AI AssistView ID', name: 'AI'),
       ));
     });
   }
@@ -184,7 +184,7 @@ Showcases additional functionalities and information, including feedback options
       _messages.add(AssistMessage.response(
         data: response,
         time: DateTime.now(),
-        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
+        author: const AssistMessageAuthor(id: 'AI AssistView ID', name: 'AI'),
       ));
     });
   }
@@ -238,7 +238,7 @@ The message author's avatar displays either an image or the initials of their na
         data: response,
         time: DateTime.now(),
         author: const AssistMessageAuthor(
-            id: '123-002', 
+            id: 'AI AssistView ID', 
             name: 'AI',
             avatar: AssetImage('asset/images/AI.png'),
         ),
@@ -546,7 +546,7 @@ Append a toolbar to response messages that provides options to perform various a
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
 
 #### See Also
 

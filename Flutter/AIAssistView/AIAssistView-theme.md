@@ -1134,4 +1134,4 @@ The [`responseToolbarItemShape`] property is used to specify the shape of respon
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [Flutter AssistView](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AssistView example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the assist view with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the assist view with built-in support for creating stunning visual effects.
