@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme in Flutter AssistView widget | Syncfusion
-description: Learn here all about the Theme feature of Syncfusion Flutter Chat (SfAIAssistViewTheme) widget and how it enhances user interaction and customization.
+description: Learn here all about Theme feature of Syncfusion Flutter AI AssistView (SfAIAssistViewTheme) widget and how it enhances user interaction and customization.
 platform: flutter
 control: SfAIAssistViewTheme
 documentation: ug
@@ -1134,4 +1134,4 @@ The [`responseToolbarItemShape`] property is used to specify the shape of respon
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [Flutter AssistView](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AssistView example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the assist view with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the assist view with built-in support for creating stunning visual effects.

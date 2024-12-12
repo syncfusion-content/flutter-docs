@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Flutter AI AssistView widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
 
-![AI AssistView overview](images/overview/assist-overview.gif)
+![AI AssistView overview](images/overview/AIAssistView-overview.gif)
 
 ## Features
 
@@ -35,4 +35,4 @@ The Syncfusion Flutter AI AssistView widget is a powerful and customizable tool 
 
 * **Bubble Footer Builder** - The [`SfAIAssistView.bubbleFooterBuilder`] allows you to specify a custom widget that will be displayed as a footer within each chat bubble. This is particularly useful for displaying timestamps or other additional information related to the message.
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
