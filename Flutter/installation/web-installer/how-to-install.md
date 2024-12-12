@@ -14,6 +14,7 @@ documentation: ug
 ## Overview
 
 For the Essential Studio<sup>&reg;</sup> Flutter product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads).
+
  
 ## Installation
 
@@ -98,6 +99,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
     ![Installation Summary](images/Step-by-Step-Installation_img11.png)
 	
 	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
+
 
 12. After installation, there will be two Syncfusion<sup>&reg;</sup> control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup> products installed in the same version, while the product entry will only uninstall the specific product setup.
 

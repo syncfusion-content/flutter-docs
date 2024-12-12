@@ -29,7 +29,7 @@ Syncfusion<sup>&reg;</sup> provides Flutter Mac installer for both evaluation an
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio<sup>&reg;</sup>  Flutter Offline trial installer which is available in DMG format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio<sup>&reg;</sup> Flutter Offline trial installer which is available in DMG format.
 
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)
    

@@ -10,6 +10,7 @@ documentation: ug
 
 # Installing Syncfusion<sup>&reg;</sup> Flutter Mac Installer
 
+
 The Essential Studio<sup>&reg;</sup> Flutter Mac installer allows you to create the Flutter application in Visual Studio for Mac with the Syncfusion<sup>&reg;</sup> Flutter components.
 
 
