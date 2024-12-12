@@ -9,17 +9,11 @@ documentation: ug
 
 # Conversation area in Flutter AI AssistView (SfAIAssistView)
 
-This section explains the customization options available for modifying the request and response messages in the assist widget.
+This section explains the customization options available for modifying the request and response messages in the AI AssistView widget.
 
 ## Conversation area
 
 The AI AssistView displays the content of user requests and AI responses. Each message includes details like the message's text, sending time stamp, and author. The response message contains additional information, including suggestions and toolbar items.
-
-{% tabs %}
-{% highlight dart %}
-
-{% endhighlight %}
-{% endtabs %}
 
 ### Request message
 
@@ -27,6 +21,44 @@ Customize the content of request messages by changing the background color, back
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        requestBubbleSettings: const AssistBubbleSettings(
+          contentBackgroundColor: Color(0xFFF1F8E9),
+          contentShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,6 +70,44 @@ Customize the content of response messages by changing the background color, bac
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        responseBubbleSettings: const AssistBubbleSettings(
+          contentBackgroundColor: Color(0xFFE1F5FE),
+          contentShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,6 +117,54 @@ The header displays the username of the message's author along with the time sta
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        time: DateTime.now(),
+        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(
+                data: data,
+                time: DateTime.now(),
+                author: const AssistMessageAuthor(id: 'User ID', name: 'User name'),
+              ));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        requestBubbleSettings: const AssistBubbleSettings(
+          showUserName: true,
+          showTimestamp: true,
+        ),
+        responseBubbleSettings: const AssistBubbleSettings(
+          showUserName: true,
+          showTimestamp: true,
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,6 +176,49 @@ Showcases additional functionalities and information, including feedback options
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        time: DateTime.now(),
+        author: const AssistMessageAuthor(id: '123-002', name: 'AI'),
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(
+                data: data,
+                time: DateTime.now(),
+                author: const AssistMessageAuthor(id: 'User ID', name: 'User name'),
+              ));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        bubbleFooterBuilder: (context, index, message) {
+          return const Text('GPT-4');
+        },
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,6 +228,54 @@ The message author's avatar displays either an image or the initials of their na
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        time: DateTime.now(),
+        author: const AssistMessageAuthor(
+            id: '123-002', 
+            name: 'AI',
+            avatar: AssetImage('asset/images/AI.png'),
+        ),
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(
+                data: data,
+                time: DateTime.now(),
+                author: const AssistMessageAuthor(
+                    id: 'User ID', 
+                    name: 'User name',
+                    avatar: AssetImage('asset/images/Username.png'),
+                ),
+              ));
+              _generativeResponse(data);
+            });
+          },
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,6 +287,50 @@ Customize the area where message content is displayed by changing its background
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        requestBubbleSettings: const AssistBubbleSettings(
+          contentBackgroundColor: Color(0xFFF1F8E9),
+          contentShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+          ),
+        ),
+        responseBubbleSettings: const AssistBubbleSettings(
+          contentBackgroundColor: Color(0xFFE1F5FE),
+          contentShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,6 +340,75 @@ Provide a list response suggestions. When the user selects one, it is considered
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        suggestions: [
+          const AssistMessageSuggestion(
+            data: 'Time to relax!',
+          ),
+          const AssistMessageSuggestion(
+            data: 'Let’s get creative!',
+          ),
+          const AssistMessageSuggestion(
+            data: 'Try something new!',
+          ),
+        ],
+        suggestionSettings: AssistSuggestionSettings(
+          itemBackgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
+            if (states.contains(WidgetState.hovered)) {
+              return Colors.green.shade200;
+            }
+            return Colors.red.shade300;
+          }),
+          orientation: Axis.horizontal,
+          itemOverflow: AssistSuggestionOverflow.wrap,
+          selectionType: AssistSuggestionSelectionType.single,
+        ),
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        onSuggestionItemSelected: (bool selected, int messageIndex,
+            AssistMessageSuggestion suggestion, int suggestionIndex) {
+          setState(() {
+            _messages[messageIndex].suggestions![suggestionIndex] =
+                suggestion.copyWith(selected: selected);
+            _messages.add(AssistMessage.request(
+                data: suggestion.data!,
+                time: DateTime.now(),
+                author:
+                    const AssistMessageAuthor(id: 'User ID', name: 'User name')));
+            _generativeResponse(suggestion.data!);
+          });              
+        },
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,6 +420,41 @@ Indicates that the AI service's response is in progress after a request has been
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        responseLoadingBuilder: (context, index, message) {
+          return const Text('Loading...');
+        },
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -107,6 +464,84 @@ Append a toolbar to response messages that provides options to perform various a
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(
+        data: response,
+        toolbarItems: [
+          const AssistMessageToolbarItem(
+            content: Icon(Icons.thumb_up_outlined),
+            tooltip: 'Like',
+          ),
+          const AssistMessageToolbarItem(
+            content: Icon(Icons.thumb_down_outlined),
+            tooltip: 'DisLike',
+          ),
+          const AssistMessageToolbarItem(
+            content: Icon(Icons.copy_all),
+            tooltip: 'Copy',
+          ),
+          const AssistMessageToolbarItem(
+            content: Icon(Icons.restart_alt),
+            tooltip: 'Restart',
+          ),
+        ],
+      ));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+        onBubbleToolbarItemSelected: (bool selected, int messageIndex,
+            AssistMessageToolbarItem item, int toolbarItemIndex) {
+          // Handle the toolbar item selection
+        },
+        responseToolbarSettings: AssistMessageToolbarSettings(
+          itemBackgroundColor: WidgetStateProperty.resolveWith(
+            (Set<WidgetState> state) {
+              if (state.contains(WidgetState.hovered)) {
+                return Colors.lightBlueAccent;
+              }
+              return Colors.lightBlue;
+            },
+          ),
+          itemShape: WidgetStateProperty.resolveWith(
+            (Set<WidgetState> state) {
+              if (state.contains(WidgetState.hovered)) {
+                return RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                );
+              }
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}

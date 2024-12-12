@@ -15,7 +15,7 @@ This section explains the customization options available in [`AssistComposer`],
 
 The default [`composer`] is a rounded rectangular text editor that allows users to compose request messages. You can customize its appearance by adding hint text, borders, prefix icons, suffix icons, and more.
 
-When the composer is null, no default text field is added to the assist widget.
+When the composer is null, no default text field is added to the AI AssistView widget.
 
 ### Minimum and maximum lines
 
@@ -26,6 +26,21 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          minLines: 2,
+          maxLines: 3,
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,6 +70,24 @@ The [`border`] property defines shape of the border that is drawn around the tex
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: AssistComposer(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,6 +97,22 @@ The [`contentPadding`] property defines the padding surrounding the text added i
 
 {% tabs %}
 {% highlight dart hl_lines="28" %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            contentPadding: EdgeInsets.all(30),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,6 +124,22 @@ The [`hintText`] property sets the placeholder text for the text field. By defau
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Ask here',
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,6 +150,27 @@ The [`hintStyle`] property refers to the text style of the hint text.
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Ask here',
+            hintStyle: TextStyle(
+              color: Colors.blue,
+              fontSize: 16,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,6 +180,29 @@ The [`prefixIcon`] and [`suffixIcon`] properties are used to add icons at the be
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.attachment,
+              color: Color(0xFF433D8B),
+            ),
+            suffixIcon: Icon(
+              Icons.camera_alt,
+              color: Color(0xFF433D8B),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,6 +216,20 @@ By default, the top padding is set to 16.
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,6 +242,22 @@ The specified text style will be merged with the [`bodyMedium`] and `editorTextS
 {% tabs %}
 {% highlight dart %}
 
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          textStyle: TextStyle(
+            color: Color(0xFF433D8B),
+          ),
+        ),
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,6 +269,86 @@ If [`AssistComposer.builder`] is used, the action button will always be enabled.
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    _controller = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: builderComposer(),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  AssistComposer builderComposer() {
+    return AssistComposer.builder(
+      builder: (context) {
+        return Row(
+          children: [
+            const Icon(
+              Icons.add,
+              size: 35,
+              color: Color(0xFF433D8B),
+            ),
+            const SizedBox(width: 5),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: TextField(
+                  minLines: 1,
+                  maxLines: 6,
+                  controller: _controller,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 18,
+                    ),
+                    hintText: 'Ask here',
+                    hintStyle: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    suffixIcon: const Padding(
+                      padding: EdgeInsets.only(right: 5.0),
+                      child: Icon(
+                        Icons.emoji_emotions_outlined,
+                        color: Color(0xFF433D8B),
+                      ),
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 7),
+            const Icon(
+              Icons.send,
+              color: Color(0xFF433D8B),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
