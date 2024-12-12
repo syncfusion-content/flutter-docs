@@ -4,7 +4,7 @@ title: Action Button in Flutter AI AssistView widget | Syncfusion
 description: Learn here all about Action Button feature of Syncfusion Flutter AI AssistView (SfAIAssistView) widget and how it enhances user interaction and customization.
 platform: flutter
 control: SfAIAssistView
-documentation: ug 
+documentation: ug
 ---
 
 # Action Button in Flutter AI AssistView (SfAIAssistView)
@@ -333,7 +333,7 @@ The [`size`] property specifies the width and height of the button. By default, 
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [Flutter Chat] feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example] which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`] feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`] which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
 
 #### See Also
 
