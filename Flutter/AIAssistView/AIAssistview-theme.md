@@ -9,7 +9,7 @@ documentation: ug
 
 # Theme in Flutter AssistView (SfAIAssistViewTheme)
 
-This section explains the customization properties available in [`AssistThemeData`].
+This section explains the customization properties available in [`AssistThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/assistThemeData.html).
 
 **Import the Chat library** 
 
@@ -25,7 +25,7 @@ Import the following library to use the assist theme data:
 
 ## Action button foreground color
 
-The [`actionButtonForegroundColor`] property is used to specify the color for the default action button icon.
+The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonForegroundColor.html) property is used to specify the color for the default action button icon.
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,7 +52,7 @@ The [`actionButtonForegroundColor`] property is used to specify the color for th
 
 ## Action button background color
 
-The [`actionButtonBackgroundColor`] property is used to specify the background color for the action button in its default state.
+The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonBackgroundColor.html) property is used to specify the background color for the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -79,7 +79,7 @@ The [`actionButtonBackgroundColor`] property is used to specify the background c
 
 ## Action button focus color
 
-The [`actionButtonFocusColor`] property is used to specify the background color for the action button when it is in the focused state.
+The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonFocusColor.html) property is used to specify the background color for the action button when it is in the focused state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -106,7 +106,7 @@ The [`actionButtonFocusColor`] property is used to specify the background color 
 
 ## Action button hover color
 
-The [`actionButtonHoverColor`] property is used to specify the background color for the action button when it is hovered over.
+The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHoverColor.html) property is used to specify the background color for the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
@@ -133,7 +133,7 @@ The [`actionButtonHoverColor`] property is used to specify the background color 
 
 ## Action button splash color
 
-The [`actionButtonSplashColor`] property is used to specify the color of the ripple effect when the action button is tapped.
+The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonSplashColor.html) property is used to specify the color of the ripple effect when the action button is tapped.
 
 {% tabs %}
 {% highlight Dart %}
@@ -160,7 +160,7 @@ The [`actionButtonSplashColor`] property is used to specify the color of the rip
 
 ## Action button disabled foreground color
 
-The [`actionButtonDisabledForegroundColor`] property is used to specify the color of the text or icon on the action button when it is disabled.
+The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledForegroundColor.html) property is used to specify the color of the text or icon on the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -187,7 +187,7 @@ The [`actionButtonDisabledForegroundColor`] property is used to specify the colo
 
 ## Action button disabled background color
 
-The [`actionButtonDisabledBackgroundColor`] property is used to specify the background color of the action button when it is disabled.
+The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledBackgroundColor.html) property is used to specify the background color of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -214,7 +214,7 @@ The [`actionButtonDisabledBackgroundColor`] property is used to specify the back
 
 ## Action button elevation
 
-The [`actionButtonElevation`] property is used to specify the elevation of the action button in its default state.
+The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonElevation.html) property is used to specify the elevation of the action button in its default state.
 
 {% tabs %}
 {% highlight Dart %}
@@ -241,7 +241,7 @@ The [`actionButtonElevation`] property is used to specify the elevation of the a
 
 ## Action button focus elevation
 
-The [`actionButtonFocusElevation`] property is used to specify the elevation of the action button when it is focused.
+The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonFocusElevation.html) property is used to specify the elevation of the action button when it is focused.
 
 {% tabs %}
 {% highlight Dart %}
@@ -268,7 +268,7 @@ The [`actionButtonFocusElevation`] property is used to specify the elevation of 
 
 ## Action button hover elevation
 
-The [`actionButtonHoverElevation`] property is used to specify the elevation of the action button when it is hovered over.
+The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHoverElevation.html) property is used to specify the elevation of the action button when it is hovered over.
 
 {% tabs %}
 {% highlight Dart %}
@@ -295,7 +295,7 @@ The [`actionButtonHoverElevation`] property is used to specify the elevation of 
 
 ## Action button highlight elevation
 
-The [`actionButtonHighlightElevation`] property is used to specify the elevation of the action button when it is highlighted.
+The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
 {% highlight Dart %}
@@ -322,7 +322,7 @@ The [`actionButtonHighlightElevation`] property is used to specify the elevation
 
 ## Action button disabled elevation
 
-The [`actionButtonDisabledElevation`] property is used to specify the elevation of the action button when it is disabled.
+The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledElevation.html) property is used to specify the elevation of the action button when it is disabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -349,7 +349,7 @@ The [`actionButtonDisabledElevation`] property is used to specify the elevation 
 
 ## Action button mouse cursor
 
-The [`actionButtonMouseCursor`] property is used to specify the type of cursor displayed when hovering over the action button.
+The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonMouseCursor.html) property is used to specify the type of cursor displayed when hovering over the action button.
 
 {% tabs %}
 {% highlight Dart %}
@@ -376,7 +376,7 @@ The [`actionButtonMouseCursor`] property is used to specify the type of cursor d
 
 ## Action button shape
 
-The [`actionButtonShape`] property is used to specify the shape and border radius of the action button.
+The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonShape.html) property is used to specify the shape and border radius of the action button.
 
 {% tabs %}
 {% highlight Dart %}
@@ -405,7 +405,7 @@ The [`actionButtonShape`] property is used to specify the shape and border radiu
 
 ## Request avatar background color
 
-The [`requestAvatarBackgroundColor`] property is used to specify the background color of request message avatar.
+The [`requestAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestAvatarBackgroundColor.html) property is used to specify the background color of request message avatar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -432,7 +432,7 @@ The [`requestAvatarBackgroundColor`] property is used to specify the background 
 
 ## Response avatar background color
 
-The [`responseAvatarBackgroundColor`] property is used to specify the background color of response message avatar.
+The [`responseAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseAvatarBackgroundColor.html) property is used to specify the background color of response message avatar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -459,7 +459,7 @@ The [`responseAvatarBackgroundColor`] property is used to specify the background
 
 ## Request bubble content background color
 
-The [`requestBubbleContentBackgroundColor`] property is used to specify the background color of bubbles containing request messages.
+The [`requestBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing request messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -486,7 +486,7 @@ The [`requestBubbleContentBackgroundColor`] property is used to specify the back
 
 ## Response bubble content background color
 
-The [`responseBubbleContentBackgroundColor`] property is used to specify the background color of bubbles containing response messages.
+The [`responseBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing response messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -513,7 +513,7 @@ The [`responseBubbleContentBackgroundColor`] property is used to specify the bac
 
 ## Editor text style
 
-The [`editorTextStyle`] property is used to specify the style for text in the message editor.
+The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/editorTextStyle.html) property is used to specify the style for text in the message editor.
 
 {% tabs %}
 {% highlight Dart %}
@@ -544,7 +544,7 @@ The [`editorTextStyle`] property is used to specify the style for text in the me
 
 ## Request content text style
 
-The [`requestContentTextStyle`] property is used to specify the style for text in request message bubbles.
+The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -575,7 +575,7 @@ The [`requestContentTextStyle`] property is used to specify the style for text i
 
 ## Response content text style
 
-The [`responseContentTextStyle`] property is used to specify the style for text in response message bubbles
+The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message bubbles
 
 {% tabs %}
 {% highlight Dart %}
@@ -606,7 +606,7 @@ The [`responseContentTextStyle`] property is used to specify the style for text 
 
 ## Request primary header text style
 
-The [`requestPrimaryHeaderTextStyle`] property is used to specify the style for the primary header text in request message bubbles.
+The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in request message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -637,7 +637,7 @@ The [`requestPrimaryHeaderTextStyle`] property is used to specify the style for 
 
 ## Response primary header text style
 
-The [`responsePrimaryHeaderTextStyle`] property is used to specify the style for the primary header text in response message bubbles.
+The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responsePrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in response message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -668,7 +668,7 @@ The [`responsePrimaryHeaderTextStyle`] property is used to specify the style for
 
 ## Request secondary header text style
 
-The [`requestSecondaryHeaderTextStyle`] property is used to specify the style for the secondary header text in request message bubbles.
+The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in request message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -699,7 +699,7 @@ The [`requestSecondaryHeaderTextStyle`] property is used to specify the style fo
 
 ## Response secondary header text style
 
-The [`responseSecondaryHeaderTextStyle`] property is used to specify the style for the secondary header text in response message bubbles.
+The [`responseSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in response message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -730,7 +730,7 @@ The [`responseSecondaryHeaderTextStyle`] property is used to specify the style f
 
 ## Suggestion item text style
 
-The [`suggestionItemTextStyle`] property is used to specify the text style for response message suggestion items.
+The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemTextStyle.html) property is used to specify the text style for response message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -785,7 +785,7 @@ The [`suggestionItemTextStyle`] property is used to specify the text style for r
 
 ## Request bubble content shape
 
-The [`requestBubbleContentShape`] property is used to specify the shape and border radius of request message bubbles.
+The [`requestBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentShape.html) property is used to specify the shape and border radius of request message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -814,7 +814,7 @@ The [`requestBubbleContentShape`] property is used to specify the shape and bord
 
 ## Response bubble content shape
 
-The [`responseBubbleContentShape`] property is used to specify the shape and border radius of response message bubbles.
+The [`responseBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentShape.html) property is used to specify the shape and border radius of response message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -843,7 +843,7 @@ The [`responseBubbleContentShape`] property is used to specify the shape and bor
 
 ## Suggestion background color
 
-The [`suggestionBackgroundColor`] property is used to specify the background color of response message suggestion bubble.
+The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundColor.html) property is used to specify the background color of response message suggestion bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -870,7 +870,7 @@ The [`suggestionBackgroundColor`] property is used to specify the background col
 
 ## Suggestion background shape
 
-The [`suggestionBackgroundShape`] property is used to specify the background shape of response message suggestion bubble.
+The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of response message suggestion bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -899,7 +899,7 @@ The [`suggestionBackgroundShape`] property is used to specify the background sha
 
 ## Suggestion item background color
 
-The [`suggestionItemBackgroundColor`] property is used to specify the background color for response message suggestion items.
+The [`suggestionItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemBackgroundColor.html) property is used to specify the background color for response message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -939,7 +939,7 @@ The [`suggestionItemBackgroundColor`] property is used to specify the background
 
 ## Suggestion item shape
 
-The [`suggestionItemShape`] property is used to specify the shape for response message suggestion items.
+The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemShape.html) property is used to specify the shape for response message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -989,7 +989,7 @@ The [`suggestionItemShape`] property is used to specify the shape for response m
 
 ## Response toolbar background color
 
-The [`responseToolbarBackgroundColor`] property is used to specify the background color of response message toolbar bubble.
+The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundColor.html) property is used to specify the background color of response message toolbar bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1016,7 +1016,7 @@ The [`responseToolbarBackgroundColor`] property is used to specify the backgroun
 
 ## Response toolbar background shape
 
-The [`responseToolbarBackgroundShape`] property is used to specify the background shape of response message toolbar bubble.
+The [`responseToolbarBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundShape.html) property is used to specify the background shape of response message toolbar bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1045,7 +1045,7 @@ The [`responseToolbarBackgroundShape`] property is used to specify the backgroun
 
 ## Response toolbar item background color
 
-The [`responseToolbarItemBackgroundColor`] property is used to specify the background color of response message toolbar items.
+The [`responseToolbarItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarItemBackgroundColor.html) property is used to specify the background color of response message toolbar items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1086,7 +1086,7 @@ The [`responseToolbarItemBackgroundColor`] property is used to specify the backg
 
 ## Response toolbar item shape
 
-The [`responseToolbarItemShape`] property is used to specify the shape of response message toolbar items.
+The [`responseToolbarItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarItemShape.html) property is used to specify the shape of response message toolbar items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1134,4 +1134,4 @@ The [`responseToolbarItemShape`] property is used to specify the shape of respon
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the assist view with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.

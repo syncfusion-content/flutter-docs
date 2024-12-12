@@ -419,7 +419,7 @@ The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/
 
 ## Outgoing avatar background color
 
-The [`outgoingAvatarBackgroundColor`] property is used to specify the background color of outgoing message avatar.
+The [`outgoingAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingAvatarBackgroundColor.html) property is used to specify the background color of outgoing message avatar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -446,7 +446,7 @@ The [`outgoingAvatarBackgroundColor`] property is used to specify the background
 
 ## Incoming avatar background color
 
-The [`incomingAvatarBackgroundColor`] property is used to specify the background color of incoming message avatar.
+The [`incomingAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingAvatarBackgroundColor.html) property is used to specify the background color of incoming message avatar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -753,7 +753,7 @@ The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusio
 
 ## Suggestion item text style
 
-The [`suggestionItemTextStyle`] property is used to specify the text style for both outgoing and incoming message suggestion items.
+The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemTextStyle.html) property is used to specify the text style for both outgoing and incoming message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -868,7 +868,7 @@ The [`incomingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flut
 
 ## Suggestion background color
 
-The [`suggestionBackgroundColor`] property is used to specify the background color of both outgoing and incoming message suggestion bubble.
+The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionBackgroundColor.html) property is used to specify the background color of both outgoing and incoming message suggestion bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -895,7 +895,7 @@ The [`suggestionBackgroundColor`] property is used to specify the background col
 
 ## Suggestion background shape
 
-The [`suggestionBackgroundShape`] property is used to specify the background shape of both outgoing and incoming message suggestion bubble.
+The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of both outgoing and incoming message suggestion bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -924,7 +924,7 @@ The [`suggestionBackgroundShape`] property is used to specify the background sha
 
 ## Suggestion item background color
 
-The [`suggestionItemBackgroundColor`] property is used to specify the background color for both outgoing and incoming message suggestion items.
+The [`suggestionItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemBackgroundColor.html) property is used to specify the background color for both outgoing and incoming message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -964,7 +964,7 @@ The [`suggestionItemBackgroundColor`] property is used to specify the background
 
 ## Suggestion item shape
 
-The [`suggestionItemShape`] property is used to specify the shape for both outgoing and incoming message suggestion items.
+The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemShape.html) property is used to specify the shape for both outgoing and incoming message suggestion items.
 
 {% tabs %}
 {% highlight Dart %}
