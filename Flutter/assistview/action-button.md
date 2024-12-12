@@ -4,7 +4,7 @@ title: Action Button in Flutter AI AssistView widget | Syncfusion
 description: Learn here all about Action Button feature of Syncfusion Flutter AI AssistView (SfAIAssistView) widget and how it enhances user interaction and customization.
 platform: flutter
 control: SfAIAssistView
-documentation: ug
+documentation: ug 
 ---
 
 # Action Button in Flutter AI AssistView (SfAIAssistView)
