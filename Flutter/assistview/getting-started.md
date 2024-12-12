@@ -54,12 +54,23 @@ Import the library using the code provided below.
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize assist widget
+## Initialize AI AssistView widget
 
-Add an assist widget with the required property, [messages].
+Add an AI AssistView widget with the required property, [messages].
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -70,6 +81,22 @@ To add a placeholder to the [`AssistComposer`], use the [`decoration`] property,
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Ask here',
+          ),
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -80,20 +107,207 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        placeholderBuilder: (BuildContext context) {
+          return const Center(
+            child: Text(
+              'What can I help you with today?',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          );
+        },
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+
 
 ## Add action button
 
 It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`] for the actionButton.
 
-When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the assist widget with the newly composed message.
+When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
 
 {% tabs %}
 {% highlight dart %}
+
+  final List<AssistMessage> _messages = <AssistMessage>[];
+
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(AssistMessage.response(data: response));
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfAIAssistView(
+        messages: _messages,
+        composer: const AssistComposer(
+          decoration: InputDecoration(
+            hintText: 'Ask here',
+          ),
+        ),
+        placeholderBuilder: (BuildContext context) {
+          return Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'What can I help you with today?',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DecoratedBox(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Travel Tips',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    DecoratedBox(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Recipe Ideas',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    DecoratedBox(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Fun Fact',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    DecoratedBox(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Life Hacks',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            setState(() {
+              _messages.add(AssistMessage.request(data: data));
+              _generativeResponse(data);
+            });
+          },
+        ),
+      ),
+    );
+  }
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Action button chat](images/getting-started/actionbutton-chat.gif)
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
