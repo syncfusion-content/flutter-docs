@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Flutter AI AssistView widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Chat (SfAIAssistView) widget, its elements, and more.
+description: Learn here about getting started with Syncfusion Flutter AI AssistView (SfAIAssistView) widget, its elements, and more.
 platform: flutter
 control: SfAIAssistView
 documentation: ug

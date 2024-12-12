@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme in Flutter AssistView widget | Syncfusion
-description: Learn here all about the Theme feature of Syncfusion Flutter Chat (SfAIAssistViewTheme) widget and how it enhances user interaction and customization.
+description: Learn here all about Theme feature of Syncfusion Flutter AI AssistView (SfAIAssistViewTheme) widget and how it enhances user interaction and customization.
 platform: flutter
 control: SfAIAssistViewTheme
 documentation: ug
