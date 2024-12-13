@@ -47,7 +47,7 @@ The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Easily tappable targets
 
-The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides callback support to notify when tapping on the essential<sup>&reg;</sup> elements in the chart.
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onaxislabeltapped)
 * [Data points](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onpointtapped)
 * [Data label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#ondatalabeltapped)
