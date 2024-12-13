@@ -149,6 +149,50 @@ In the following example, included the user's display name additionally in the e
 
 ![Messages](images/message-content/customized-messages.png)
 
+## Suggestions 
+
+The[`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
+
+{% tabs %}
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing. How are you?',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+            suggestions: <ChatMessageSuggestion>[
+              const ChatMessageSuggestion(data: 'All good!'),
+              const ChatMessageSuggestion(data: 'Doing well!'),
+              const ChatMessageSuggestion(data: 'I\'m Fine'),
+            ],
+          ),
+        ],
+        outgoingUser: '123-001',
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Suggestions](images/message-content/suggestion-message.gif)
+
 ## Outgoing user
 
 The [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html) property represents the user who is sending messages. It should be set to the unique ID of the user, which corresponds to the [`id`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatAuthor/id.html) property of the [`ChatAuthor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatAuthor-class.html). This property plays a crucial role in identifying and distinguishing messages sent by different users.

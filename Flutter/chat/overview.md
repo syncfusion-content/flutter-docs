@@ -23,6 +23,8 @@ The Syncfusion Flutter Chat widget displays conversations between two or more us
 
 * **Message Bubble** -  A list of [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) objects that will be displayed in the chat interface as either incoming or outgoing messages based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html). Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) includes details such as the message text, timestamp, and author information.
 
+* **Suggestions** - The list of suggestion items can be added for a message in the message list. The selected suggestion item can be displayed in the chat interface as either incoming or outgoing messages based on the user who selected the suggestion item.
+
 * **Bubble Header** - Displays the sender's name and the timestamp associated with each message. Using the [`bubbleHeaderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/bubbleHeaderBuilder.html), a custom widget can be specified to display as a header for each chat bubble with required details about the respective message.
 
 * **Bubble Footer** - By default, no footer is added to the message bubble. Using the [`bubbleFooterBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/bubbleFooterBuilder.html), a custom widget can be specified to display as a footer for each chat bubble with required details about the respective message.
