@@ -8,13 +8,13 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup>  Flutter Linux installer
+# Installing Syncfusion<sup>&reg;</sup> Flutter Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install Flutter Linux installer.
 
-1. Extract the Syncfusion<sup>&reg;</sup>  Flutter Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion<sup>&reg;</sup> Flutter Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -37,6 +37,6 @@ The steps below show how to install Flutter Linux installer.
 
 After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the Flutter Linux installer, please refer to this.
 
-If you are using Syncfusion<sup>&reg;</sup>  controls prior to version 18.3.0.x, please follow the following steps to register your license key.
+If you are using Syncfusion<sup>&reg;</sup> controls prior to version 18.3.0.x, please follow the following steps to register your license key.
 
 Register the license key in the [main method](https://help.syncfusion.com/flutter/licensing/overview) of your example and import the ‘syncfusion_flutter_core/core.dart’ library.

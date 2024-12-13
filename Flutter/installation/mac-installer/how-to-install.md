@@ -8,9 +8,9 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup>  Flutter Mac Installer
+# Installing Syncfusion<sup>&reg;</sup> Flutter Mac Installer
 
-The Essential Studio<sup>&reg;</sup> Flutter Mac installer allows you to create the Flutter application in Visual Studio for Mac with the Syncfusion<sup>&reg;</sup>  Flutter components.
+The Essential Studio<sup>&reg;</sup> Flutter Mac installer allows you to create the Flutter application in Visual Studio for Mac with the Syncfusion<sup>&reg;</sup> Flutter components.
 
 
 ## Steps to resolve the warning message in Catalina OS or later
@@ -68,6 +68,6 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
 After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the Flutter Mac installer, please refer to this.
 
-If you are using Syncfusion<sup>&reg;</sup>  controls prior to version 18.3.0.x, please follow the following steps to register your license key.
+If you are using Syncfusion<sup>&reg;</sup> controls prior to version 18.3.0.x, please follow the following steps to register your license key.
 
 Register the license key in the [main method](https://help.syncfusion.com/flutter/licensing/overview) of your example and import the ‘syncfusion_flutter_core/core.dart’ library.

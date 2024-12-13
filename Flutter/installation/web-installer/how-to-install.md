@@ -8,12 +8,12 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup>  Flutter Web Installer
+# Installing Syncfusion<sup>&reg;</sup> Flutter Web Installer
 
 
 ## Overview
 
-For the Essential Studio<sup>&reg;</sup> Flutter product, Syncfusion<sup>&reg;</sup>  offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads).
+For the Essential Studio<sup>&reg;</sup> Flutter product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads).
  
 ## Installation
 
@@ -26,7 +26,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
     
     N> The installer wizard extracts the syncfusionessentialflutterwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
-2. 	The Syncfusion<sup>&reg;</sup>  Flutter Web Installer's welcome wizard will be displayed. Click the Next button.
+2. 	The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button.
 
     ![Welcome wizard](images/Step-by-Step-Installation_img2.png)
 
@@ -54,7 +54,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup>  has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
 5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -75,15 +75,15 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 	
 	**Additional settings**
 	
-    * Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup>  samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup>  samples.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup>  Control Panel.
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup>  Control Panel.
+    * Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup> samples.
+    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup> Control Panel.
+    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup> Control Panel.
 
 
 
 8.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-9.  The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup>  email address and password. If you do not already have a Syncfusion<sup>&reg;</sup>  account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
+9.  The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
 
     ![Login wizard install](images/Step-by-Step-Installation_img9.png)
 	
@@ -97,9 +97,9 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
     ![Installation Summary](images/Step-by-Step-Installation_img11.png)
 	
-	* To open the Syncfusion<sup>&reg;</sup>  Control Panel, click **Launch Control Panel**.
+	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two Syncfusion<sup>&reg;</sup>  control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup>  products installed in the same version, while the product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup>&reg;</sup> control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup> products installed in the same version, while the product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -107,16 +107,16 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 	
 ## Uninstallation
 
-Syncfusion<sup>&reg;</sup>  Flutter installer can be uninstalled in two ways.
+Syncfusion<sup>&reg;</sup> Flutter installer can be uninstalled in two ways.
 
-   * Uninstall the Flutter using the Syncfusion<sup>&reg;</sup>  Flutter web installer
+   * Uninstall the Flutter using the Syncfusion<sup>&reg;</sup> Flutter web installer
    * Uninstall the Flutter from Windows Control Panel
 
 Follow either one of the option below to uninstall Syncfusion Essential Studio<sup>&reg;</sup> Flutter installer.
   
-**Option 1: Uninstall the Flutter using the Syncfusion<sup>&reg;</sup>  Flutter web installer**
+**Option 1: Uninstall the Flutter using the Syncfusion<sup>&reg;</sup> Flutter web installer**
 
-Syncfusion<sup>&reg;</sup>  provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 	
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
@@ -129,7 +129,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 	
 N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio<sup>&reg;</sup> Flutter alone will be removed and the below default MSI uninstallation window will be displayed.	
 
-1.  The Syncfusion<sup>&reg;</sup>  Flutter Web Installer's welcome wizard will be displayed. Click the Next button
+1.  The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 
@@ -165,11 +165,11 @@ N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** 
 	
 7.	After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-8.	The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup>  email address and password. If you do not already have a Syncfusion<sup>&reg;</sup>  account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
+8.	The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
     ![Login wizard install/uninstall](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup>  License (Trial or Licensed).
+	I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
 9.	The download, installation, and uninstallation progresses will be shown.
 
@@ -179,5 +179,5 @@ N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** 
 
     ![Summary install/uninstall](images/Step-by-Step-Installation_img18.png)
 	
-	* To open the Syncfusion<sup>&reg;</sup>  Control Panel, click **Launch Control Panel**.	
+	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.	
 	
