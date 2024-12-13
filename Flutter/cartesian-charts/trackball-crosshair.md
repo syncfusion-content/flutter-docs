@@ -37,7 +37,7 @@ You can use the following properties to customize the appearance of trackball to
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -285,7 +285,7 @@ The ActivationMode enum contains the following values:
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -496,7 +496,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). 
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -573,7 +573,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball template in Flutter Cartesian Chaers.](images/trackball-crosshair/flutter-cartesian-charts-trackball-template.jpg)
+![Trackball template in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-template.jpg)
 
 ### Trackball grouping mode info
 [TrackballGroupingModeInfo](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo-class.html) is store the group mode details of trackball template.
@@ -596,7 +596,7 @@ Trackball tooltip marker uses the same shape specified for the series marker. Bu
 Defaults to `true`.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
 
     late TrackballBehavior _trackballBehavior;
 
@@ -654,6 +654,82 @@ Defaults to `true`.
 
 ![Trackball tooltip marker in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball_tooltip_marker.png)
 
+### Enable trackball
+
+The [`enableTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTrackball.html) is used to enable or disable the trackball feature for specific series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the chart area.
+
+Defaults to `true`.
+
+{% tabs %}
+{% highlight dart %}
+
+    late TrackballBehavior _trackballBehavior;
+    late List<ChartData> chartData;
+
+    @override
+    void initState() {
+      _trackballBehavior = TrackballBehavior(
+          enable: true, activationMode: ActivationMode.singleTap);
+      chartData = <ChartData>[
+        ChartData(x: 'USA', y: 55),
+        ChartData(x: 'China', y: 33),
+        ChartData(x: 'UK', y: 43),
+        ChartData(x: 'Japan', y: 32),
+        ChartData(x: 'France', y: 56),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: SfCartesianChart(
+            title: ChartTitle(
+              text: 'Enable and disable the trackball for specific series',
+              textStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            legend: Legend(isVisible: true, position: LegendPosition.bottom),
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'John',
+                enableTrackball: false,
+              ),
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'Mary',
+                enableTrackball: true,
+              ),
+            ],
+            trackballBehavior: _trackballBehavior,
+          ),
+        ),
+      );
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y});
+
+      final String? x;
+      final num? y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enable trackball in Flutter Cartesian Charts.](images/trackball-crosshair/enable_trackball.png)
+
 #### See Also
 
 * [Synchronize trackball with multiple charts in Cartesian charts](https://support.syncfusion.com/kb/article/10568/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
@@ -671,7 +747,7 @@ The crosshair state will be preserved on the device's orientation change and on 
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -721,7 +797,7 @@ The appearance of the track line in crosshair can be customized using the follow
 * [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/shouldAlwaysShow.html) - enables or disables the crosshair. Defaults to `false`.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -783,7 +859,7 @@ The ActivationMode enum contains the following values:
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
