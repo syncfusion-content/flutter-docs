@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter AI AssistView (SfAIAssistView) Overview
 
-The Syncfusion Flutter AI AssistView widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
+The Syncfusion<sup>&reg;</sup> Flutter AI AssistView widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
 
 ![AI AssistView overview](images/overview/assist-overview.gif)
 
