@@ -151,7 +151,7 @@ In the following example, included the user's display name additionally in the e
 
 ## Suggestions 
 
-The[`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/chat/ChatMessage/suggestions.html) property add the list of suggestion items for a message in the message list. The selected suggestion item can be displayed in the chat interface as either incoming or outgoing messages based on the user who selected the suggestion item. The suggestion layout, background color, and more can be customized.
+The[`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
 
 {% tabs %}
 {% highlight dart %}
