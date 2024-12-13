@@ -336,7 +336,7 @@ Customize the area where message content is displayed by changing its background
 
 ### Suggestions
 
-Provide a list response suggestions. When the user selects one, it is considered a new request message. The suggestions' layout, background, colors, and more can be customized.
+Provide a list of response suggestions. When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
 
 {% tabs %}
 {% highlight dart %}
