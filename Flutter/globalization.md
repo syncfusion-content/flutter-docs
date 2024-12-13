@@ -7,11 +7,11 @@ control: General
 documentation: ug
 ---
 
-# Globalization for Syncfusion widgets
+# Globalization for Syncfusion<sup>&reg;</sup> widgets
 
 ## Date and number formats
 
-Syncfusion Flutter widgets support formatting dates and numbers based on culture. For more details, you can refer to the following links.
+Syncfusion<sup>&reg;</sup> Flutter widgets support formatting dates and numbers based on culture. For more details, you can refer to the following links.
 
 <table>
     <tr>
@@ -69,7 +69,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
 
 ## Localizations
 
-By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations). As of now, this package supports 76 languages which are listed below.
+By default, the Syncfusion<sup>&reg;</sup> widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations). As of now, this package supports 76 languages which are listed below.
 
 *  af - Afrikaans 
 *  am - Amharic 
@@ -149,7 +149,7 @@ By default, the Syncfusion widgets are implemented with English localization (en
 *  zu - Zulu
 
 
-### How to localize the Syncfusion Flutter widgets?
+### How to localize the Syncfusion<sup>&reg;</sup> Flutter widgets?
 
 Here, lets see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 
