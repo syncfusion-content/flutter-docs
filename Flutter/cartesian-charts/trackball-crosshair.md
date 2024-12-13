@@ -656,7 +656,7 @@ Defaults to `true`.
 
 ### Enable trackball
 
-The [`enableTrackball`]() is used to enables or disables the trackball feature for specific series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the data point area.
+The [`enableTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTrackball.html) is used to enable or disable the trackball feature for specific series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the chart area.
 
 Defaults to `true`.
 
