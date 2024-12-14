@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapes Drawing in Flutter PDF
 
-Syncfusion Flutter PDF has support for adding the following shapes:
+Syncfusion<sup>&reg;</sup> Flutter PDF has support for adding the following shapes:
 
 * Polygon
 * Line

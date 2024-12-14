@@ -17,7 +17,8 @@ Create a simple project using the instructions given in the [`Getting Started wi
 
 **Add dependency**
 
-Add the Syncfusion Flutter PDF dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup>
+  Flutter PDF dependency to your pub spec file.
 
 {% highlight dart %}
 
@@ -313,7 +314,8 @@ PdfGraphics graphics = page.graphics;
 
 * All the units are measured in point instead of pixel.
 * In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced.
-* Syncfusion PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
+* Syncfusion<sup>&reg;</sup>
+  PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from base64 string to a PDF document, by providing the rectangle coordinates.
 
@@ -532,7 +534,8 @@ document.dispose();
 
 {% endhighlight %}
 
-The following screenshot shows the invoice PDF document created by the Syncfusion Flutter PDF.
+The following screenshot shows the invoice PDF document created by the Syncfusion<sup>&reg;</sup>
+  Flutter PDF.
 
 ![Invoice PDF](images/getting-started/invoice.jpg)
 

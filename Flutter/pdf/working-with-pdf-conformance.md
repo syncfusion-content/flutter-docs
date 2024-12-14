@@ -9,7 +9,7 @@ documentation: ug
 
 # Conformance in Flutter PDF
 
-The Syncfusion Flutter PDF currently supports the following PDF conformances:
+The Syncfusion<sup>&reg;</sup> Flutter PDF currently supports the following PDF conformances:
 
 * PDF/A-1b conformance
 * PDF/A-2b conformance

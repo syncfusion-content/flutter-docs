@@ -9,7 +9,7 @@ documentation: ug
 
 # Text Extraction in Flutter PDF
 
-The Syncfusion Flutter PDF allows you to extract or find the text from a particular page or the entire PDF document.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to extract or find the text from a particular page or the entire PDF document.
 
 ## Working with the basic text extraction
 
