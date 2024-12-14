@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Gauge dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
