@@ -87,10 +87,10 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
     </tr>
     <tr>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistViewThemeData</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData-class.html">SfAIAssistViewThemeData</a>
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html">SfAIAssistView</a>
         </td>
     </tr>
     <tr>
@@ -109,6 +109,15 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
         </td>
     </tr>
+    </tr>
+        <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfChat</a>
+        </td>
+    </tr>
     <tr>
         <td>
          <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html">SfChartThemeData</a>
@@ -119,15 +128,6 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html">SfPyramidChart</a><br>
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html">SfFunnelChart</a>
         </td>
-    </tr>
-        <tr>
-        <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
-        </td>
-        <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfChat</a>
-        </td>
-    </tr>
     <tr>
         <td>
             <a href="">SfSparkChartThemeData</a>
@@ -276,10 +276,10 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
     <tr>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfAIAssistViewThemeData</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData-class.html">SfAIAssistViewThemeData</a>
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfAIAssistView</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/SfAIAssistView.html">SfAIAssistView</a>
         </td>
     </tr>
     <tr>
@@ -296,6 +296,15 @@ Similarly, refer the following table to know about the other specialized theme w
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
+        </td>
+    </tr>
+    </tr>
+        <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfChat</a>
         </td>
     </tr>
     <tr>

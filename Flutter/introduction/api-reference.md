@@ -14,6 +14,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
 <table>
     <tr>
         <td>
+            AI AssistView
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             Barcode Generator
         </td>
         <td>
@@ -26,6 +34,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/calendar-library.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Chat
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/chat-library.html">Link</a>
         </td>
     </tr>
     <tr>

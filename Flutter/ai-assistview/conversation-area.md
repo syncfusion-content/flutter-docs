@@ -126,7 +126,7 @@ The header displays the username of the message's author along with the time sta
       _messages.add(AssistMessage.response(
         data: response,
         time: DateTime.now(),
-        author: const AssistMessageAuthor(id: 'AI AssistView ID', name: 'AI'),
+        author: const AssistMessageAuthor(id: 'ID', name: 'AI'),
       ));
     });
   }
@@ -184,7 +184,7 @@ Showcases additional functionalities and information, including feedback options
       _messages.add(AssistMessage.response(
         data: response,
         time: DateTime.now(),
-        author: const AssistMessageAuthor(id: 'AI AssistView ID', name: 'AI'),
+        author: const AssistMessageAuthor(id: 'ID', name: 'AI'),
       ));
     });
   }
@@ -238,7 +238,7 @@ The message author's avatar displays either an image or the initials of their na
         data: response,
         time: DateTime.now(),
         author: const AssistMessageAuthor(
-            id: 'AI AssistView ID', 
+            id: 'ID', 
             name: 'AI',
             avatar: AssetImage('asset/images/AI.png'),
         ),
