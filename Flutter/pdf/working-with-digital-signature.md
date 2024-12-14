@@ -258,7 +258,8 @@ document.dispose();
 
 ## Long Term Validation (LTV) PDF signature
 
-The Syncfusion Flutter PDF supports creating long term signature validation for the signed PDF document. The LTV signature allows you to check the validity of a signature long after the document has been signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF supports creating long term signature validation for the signed PDF document. The LTV signature allows you to check the validity of a signature long after the document has been signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
 
 N> The resulting PDF document size will be substantial because all the necessary signature information, Certificate Revocation List (CRL), and Online Certificate Status Protocol (OCSP) are embedded.
 
@@ -309,7 +310,8 @@ The following code example shows how to create an LTV for a signed PDF document 
 
 ## Adding a timestamp in digital signature
 
-The Syncfusion Flutter PDF allows you to add timestamp in the digital signature of the PDF document using timestampServer property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF allows you to add timestamp in the digital signature of the PDF document using timestampServer property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
 
 N> Signing using TimestampServer only works when the document is saved using asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
 

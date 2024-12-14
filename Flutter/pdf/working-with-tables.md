@@ -9,7 +9,7 @@ documentation: ug
 
 # Tables in Flutter PDF
 
-The Syncfusion Flutter PDF provides support for creating customizable tables in a PDF document by using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) table model. It is designed with advanced customization, styling, and formatting.
+The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for creating customizable tables in a PDF document by using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) table model. It is designed with advanced customization, styling, and formatting.
 
 ## Creating a table
 

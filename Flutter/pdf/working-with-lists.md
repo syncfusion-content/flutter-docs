@@ -9,11 +9,11 @@ documentation: ug
 
 # Bullets and Lists in Flutter PDF
 
-The Syncfusion Flutter PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
 
 ## Adding an ordered list
 
-The Syncfusion Flutter PDF allows you to create an ordered list in the document. An ordered list is represented by the [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) class. The following code snippet explains the same.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to create an ordered list in the document. An ordered list is represented by the [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) class. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -45,7 +45,7 @@ document.dispose();
 
 ## Adding an unordered list
 
-The Syncfusion Flutter PDF also provides support to create an unordered list that is represented by the [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html) class. The following code snippet explains the same.
+The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create an unordered list that is represented by the [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html) class. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -72,7 +72,7 @@ document.dispose();
 
 ## Adding a sub list
 
-The Syncfusion Flutter PDF also provides support to create a sub list to a [`PdfList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfList-class.html). A sub list can be created under both [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) and [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html). The following code snippet explains the same.
+The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create a sub list to a [`PdfList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfList-class.html). A sub list can be created under both [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) and [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html). The following code snippet explains the same.
 
 {% highlight dart %}
 

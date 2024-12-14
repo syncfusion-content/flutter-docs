@@ -9,7 +9,7 @@ documentation: ug
 
 # Flow layout in Flutter PDF
 
-The Syncfusion Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
+The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
 
 ## Flow model using PdfLayoutResult
 

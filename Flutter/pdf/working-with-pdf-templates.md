@@ -45,7 +45,7 @@ document.dispose();
 
 ## Creating templates from existing PDF document
 
-Essential PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
+Essential<sup>&reg;</sup> PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
 
 The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
 
@@ -133,7 +133,7 @@ document.dispose();
 
 ## Adding stamp to the PDF document
 
-The Syncfusion Flutter PDF allows you add stamp to the PDF document using PDF templates.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you add stamp to the PDF document using PDF templates.
 
 The following code example explains how to draw text as a stamp to the PDF document.
 
