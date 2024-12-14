@@ -9,7 +9,8 @@ documentation: ug
 
 # Annotations in Flutter PDF
 
-The Syncfusion Flutter PDF provides support for interactive annotations.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF provides support for interactive annotations.
 
 You can [`add`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfAnnotationCollection/add.html), remove, and modify the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/annotations.html) from the PDF documents.
 
@@ -518,7 +519,8 @@ document.dispose();
 
 ## Modifying the annotations
 
-The Syncfusion Flutter PDF allows you to modify the annotation of an existing document. The following code explains this.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF allows you to modify the annotation of an existing document. The following code explains this.
 
 {% highlight dart %}
 

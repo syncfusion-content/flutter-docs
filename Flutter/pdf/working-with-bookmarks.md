@@ -9,7 +9,8 @@ documentation: ug
 
 # Bookmarks in Flutter PDF
 
-The Syncfusion Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. It also provides support to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html), [`remove`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/remove.html), and modify the bookmarks in an existing PDF Document.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. It also provides support to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html), [`remove`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/remove.html), and modify the bookmarks in an existing PDF Document.
 
 ## Adding bookmarks to a PDF
 
@@ -113,7 +114,8 @@ document.dispose();
 
 ## Inserting bookmarks in an existing PDF
 
-When loading an existing document, the Syncfusion Flutter PDF loads all bookmarks of the document.
+When loading an existing document, the Syncfusion<sup>&reg;</sup>
+  Flutter PDF loads all bookmarks of the document.
 
 Each loaded bookmark is represented by the [`PdfBookmark`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmark-class.html) object. The following code example explains how to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html) new bookmarks in the existing PDF document.
 
@@ -166,7 +168,8 @@ document.dispose();
 
 ## Modifying bookmarks in an existing PDF
 
-The Syncfusion Flutter PDF allows you to modify the [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) in the existing PDF document. The following modifications can be done to bookmarks in an existing document.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF allows you to modify the [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) in the existing PDF document. The following modifications can be done to bookmarks in an existing document.
 
 * Modify the bookmark style, color, title, and destination.
 * Add or insert new bookmarks into the root collection.

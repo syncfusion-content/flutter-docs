@@ -11,7 +11,7 @@ documentation: ug
 
 Layers also known as Option content, refer to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers.
 
-Syncfusion Flutter PDF provides support to create, add, update, and remove the layers from the PDF document.
+Syncfusion<sup>&reg;</sup> Flutter PDF provides support to create, add, update, and remove the layers from the PDF document.
 
 ## Adding Layers in a PDF document
 
@@ -146,7 +146,7 @@ File('output.pdf').writeAsBytes(await document.save());
 
 ## Nested Layers
 
-Syncfusion Flutter PDF allows users to add nested layers in the PDF document. Refer to the following code sample.
+Syncfusion<sup>&reg;</sup> Flutter PDF allows users to add nested layers in the PDF document. Refer to the following code sample.
 
 {% highlight dart %}
 
