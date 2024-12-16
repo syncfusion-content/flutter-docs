@@ -19,8 +19,22 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
+<td>AI AssistView</td>
+<td><a href ="https://help.syncfusion.com/flutter/ai-assistview/overview">AIAssistView</a></td>
+<td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/ai_assist_view">samples/ai_assist_view</a></td>
+</tr>
+<tr>
+
+<tr>
+<td>Chat</td>
+<td><a href ="https://help.syncfusion.com/flutter/chat/overview">Chat</a></td>
+<td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chat">samples/chat</a></td>
+</tr>
+<tr>
+
+<tr>
 <td>Grid</td>
-<td><a href = "https://help.syncfusion.com/flutter/datagrid/overview">DataGrid</a></td>
+<td><a href ="https://help.syncfusion.com/flutter/datagrid/overview">DataGrid</a></td>
 <td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/datagrid">samples/datagrid</a></td>
 </tr>
 <tr>
