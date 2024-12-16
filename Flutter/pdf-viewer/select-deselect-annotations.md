@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select and Deselect Annotations in Flutter PDF Viewer widget | Syncfusion
+title: Select and Deselect Annotations in Flutter PDF Viewer | Syncfusion
 description: Learn here all about select and deselect annotations in PDF documents using the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Select and Deselect Annotations in Flutter PDF Viewer (Syncfusion)
+# Select and Deselect Annotations in Flutter PDF Viewer widget (SfPdfViewer)
 
 This section will go through the various functions available in the `SfPdfViewer` for selecting and deselecting annotations in a PDF document.
 
