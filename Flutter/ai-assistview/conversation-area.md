@@ -530,6 +530,8 @@ Append a toolbar to response messages that provides options to perform various a
 {% endhighlight %}
 {% endtabs %}
 
+![Conversation Area](images/conversation-area/toolbarItem-support.png)
+
 >You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
 
 #### See Also
