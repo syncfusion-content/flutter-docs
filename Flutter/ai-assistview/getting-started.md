@@ -1,23 +1,23 @@
 ---
 layout: post
 title: Getting started with Flutter AI AssistView widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Chat (SfAIAssistView) widget, its elements, and more.
+description: Learn here about getting started with Syncfusion Flutter AI AssistView (SfAIAssistView) widget, its elements, and more.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Getting started with Flutter Chat (SfAIAssistView)
+# Getting started with Flutter AI AssistView (SfAIAssistView)
 
 This section explains how to add the Flutter AI AssistView widget to a single Flutter application and how to use its basic features.
 
 ## Add Flutter AI AssistView to an application
 
-Create a simple Flutter project by following the instructions provided in the [Getting Started with your first Flutter app] documentation.
+Create a simple Flutter project by following the instructions provided in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the [`Syncfusion Flutter Chat`] dependency to your pubspec.yaml file.
+Add the [`Syncfusion Flutter Chat`](https://pub.dev/packages/syncfusion_flutter_chat/versions) dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %}
@@ -28,7 +28,7 @@ Add the [`Syncfusion Flutter Chat`] dependency to your pubspec.yaml file.
 {% endhighlight %}
 {% endtabs %}
 
->Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`] package. It is recommended to use the latest available version from pub.dev for the best features and updates.
+>Here **x.x.x** denotes the current version of [`Syncfusion Flutter Chat`](https://pub.dev/packages/syncfusion_flutter_chat/versions) package. It is recommended to use the latest available version from pub.dev for the best features and updates.
 
 **Get packages** 
 
@@ -42,7 +42,7 @@ Run the following command to get the required packages.
 {% endhighlight %}
 {% endtabs %}
 
-**Import the Chat library**
+**Import the AI AssistView library**
 
 Import the library using the code provided below.
 
@@ -56,7 +56,7 @@ Import the library using the code provided below.
 
 ## Initialize AI AssistView widget
 
-Add an AI AssistView widget with the required property, [messages].
+Add an AI AssistView widget with the required property, [messages](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/messages.html).
 
 {% tabs %}
 {% highlight dart %}
@@ -77,7 +77,7 @@ Add an AI AssistView widget with the required property, [messages].
 
 ## Add placeholder to composer
 
-To add a placeholder to the [`AssistComposer`], use the [`decoration`] property, which is of type InputDecoration. The placeholder can be added using the [`hintText`] property.
+To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/decoration.html) property, which is of type InputDecoration. The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
 
 {% tabs %}
 {% highlight dart %}
@@ -103,7 +103,7 @@ To add a placeholder to the [`AssistComposer`], use the [`decoration`] property,
 
 ## Add placeholder to conversation area
 
-By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`] property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`] (https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
 {% highlight dart %}
@@ -155,13 +155,11 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Add action button
 
-It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`] for the actionButton.
+It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistActionButton-class.html) for the actionButton.
 
-When the send button is clicked, the [`AssistActionButton.onPressed`] callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
+When the send button is clicked, the [`AssistActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistActionButton/onPressed.html) callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
 
 {% tabs %}
 {% highlight dart %}
@@ -310,4 +308,4 @@ When the send button is clicked, the [`AssistActionButton.onPressed`] callback i
 
 ![Action button chat](images/getting-started/actionbutton-chat.gif)
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
