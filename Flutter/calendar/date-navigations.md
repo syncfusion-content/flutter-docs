@@ -213,6 +213,11 @@ Widget build(BuildContext context) {
 
 ![Show date picker](images/date-navigation/show_date_picker.png)
 
+To know more about how to customize the Date Picker's ppearance in the Flutter Calendar, you can check on this video.
+
+<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/f16Mvv6_88g'></iframe>
+
 ## Show today button
 You can enable the today button by using the [showTodayButton] property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today's view.
 
