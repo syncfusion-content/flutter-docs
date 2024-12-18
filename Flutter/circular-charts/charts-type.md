@@ -9,7 +9,7 @@ documentation: ug
 
 # Chart Types in Flutter Circular Charts (SfCircularChart)
 
-This page helps to navigate to the Chart types available in the Syncfusion Flutter Circular Charts widgets.
+This page helps to navigate to the Chart types available in the Syncfusion<sup>&reg;</sup> Flutter Circular Charts widgets.
 
 <table>
 	<tr>
