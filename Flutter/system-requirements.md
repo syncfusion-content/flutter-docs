@@ -10,7 +10,7 @@ documentation: ug
 
 # System Requirements for Flutter
 
-The system requirements for using our Syncfusion Flutter platform are as follows
+The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows
 
 ### Operating Systems
 
@@ -40,7 +40,7 @@ See the links below for the recommended Flutter development environments
 <table>
     <tr>
         <th style="text-align:center">Flutter SDK Stable Version</th>
-        <th style="text-align:center">Syncfusion Compatible Package Version</th>
+        <th style="text-align:center">Syncfusion<sup>&reg;</sup> Compatible Package Version</th>
     </tr>
       <tr>
         <td style="text-align:center">
