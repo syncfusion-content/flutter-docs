@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Funnel Chart (SfFunnelChart) Overview
 
-Syncfusion Flutter Funnel Chart (SfFunnelChart) widget is written natively in Dart for creating beautiful and high-performance Funnel chart, which are used to craft high-quality applications using Flutter.
+Syncfusion<sup>&reg;</sup> Flutter Funnel Chart (SfFunnelChart) widget is written natively in Dart for creating beautiful and high-performance Funnel chart, which are used to craft high-quality applications using Flutter.
 
   ![Overview Flutter chart](images/overview/overview.png)
 
