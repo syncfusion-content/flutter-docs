@@ -2,7 +2,7 @@
 layout: post
 title:  Getting started with Flutter Maps widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Maps (SfMaps) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
