@@ -7,9 +7,9 @@ control: API
 documentation: ug
 ---
 
-# Syncfusion Flutter Widgets - API reference
+# Syncfusion<sup>&reg;</sup> Flutter Widgets - API reference
 
-This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
+This page helps to navigate to the public API's available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
 
 <table>
     <tr>
