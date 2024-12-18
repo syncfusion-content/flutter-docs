@@ -2,14 +2,14 @@
 layout: post
 title: About Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about introduction of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
 # Flutter Radial Gauge (SfRadialGauge) Overview
 
-Syncfusion Flutter Radial Gauge is a data visualization widget, which is written in dart, to create modern, interactive, and animated gauge that is used to craft high-quality mobile app user interfaces using Flutter.
+Syncfusion<sup>&reg;</sup> Flutter Radial Gauge is a data visualization widget, which is written in dart, to create modern, interactive, and animated gauge that is used to craft high-quality mobile app user interfaces using Flutter.
 
 ![Overview flutter radial gauge](images/overview/gauge_overview.png)
 
