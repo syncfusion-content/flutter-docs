@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter Range Selector widget | Syncfusion
 description: Learn here all about the introduction of Syncfusion Flutter Range Selector (SfRangeSelector) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
