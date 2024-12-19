@@ -137,7 +137,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 * [Bind data from the array to the Flutter Cartesian chart](https://support.syncfusion.com/kb/article/10932/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
 
-To know more about how to create Flutter Charts from JSON data, you can check on this video.
+To know more about how to create Flutter Charts from JSON data, you can watch this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/eUyp_-MHLYg'></iframe>

@@ -1168,10 +1168,10 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 
 ## See also
 
-To know more about how to display more appointments in the Flutter Calendar, you can check on this video.
+To know more about how to display more appointments in the Flutter Calendar, you can watch this video.
 
-<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/I7B_XUuQNwo'></iframe>
+<style>#flutterCalendarVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterCalendarVideoTutorial' src='https://www.youtube.com/embed/I7B_XUuQNwo'></iframe>
 
 * [How to design and configure your appointment editor in event calendar widget Flutter](https://support.syncfusion.com/kb/article/9667/how-to-design-and-configure-your-appointment-editor-in-flutter-calendar)
 * [How to get appointment details from the OnTap event of the Flutter event calendar](https://support.syncfusion.com/kb/article/9615/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-calendar)
