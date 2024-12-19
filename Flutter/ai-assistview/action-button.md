@@ -47,6 +47,8 @@ If no composer is added (by specifying the composer as null), the action button 
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView actionButton support](images/action-button/default-actionbutton.gif)
+
 ### Child
 
 The [child](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistActionButton/child.html) property allows you to define a custom widget consisting of one or more interactive elements to serve as action buttons, such as a send button, microphone icon for voice input, file attachment button, or other interactive widgets.
@@ -73,6 +75,8 @@ The [child](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/a
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton child](images/action-button/actionbutton-child-property.png)
 
 ### onPressed callback
 
@@ -142,6 +146,8 @@ The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-be
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton tooltip](images/action-button/actionbutton-tooltip-property.gif)
 
 ### Colors
 
@@ -245,6 +251,8 @@ The [`mouseCursor`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.3
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView actionButton mousecursor](images/action-button/actionbutton-mousecursor-property.gif)
+
 ### Shape
 
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistActionButton/shape.html) property sets the shape of the button's border, such as rounded or circular. By default, it is set to `RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0)))`.
@@ -278,6 +286,8 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton shape](images/action-button/actionbutton-shape-property.png)
 
 ### Padding
 
