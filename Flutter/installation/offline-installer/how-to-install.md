@@ -8,20 +8,20 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion Flutter Offline Installer
+# Installing Syncfusion<sup>&reg;</sup> Flutter Offline Installer
 
 
 ## Installing with UI   
 
 The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter product.
 
-1.	Open the Syncfusion Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Open the Syncfusion<sup>&reg;</sup> Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
     N> The Installer wizard extracts the syncfusionessentialflutter_(version).exe dialog, which displays the package's unzip operation.
 
-2.	To unlock the Syncfusion offline installer, you have two options:
+2.	To unlock the Syncfusion<sup>&reg;</sup> offline installer, you have two options:
 
    
     * *Login To Install*
@@ -32,14 +32,14 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
    
     **Login To Install**
    
-    You must enter your Syncfusion email address and password. If you don't already have a Syncfusion account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion email and password, click Next.
+    You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>&reg;</sup> email and password, click Next.
 
     ![Login credentials](images/Step-by-Step-Installation_img2.png)   
 
 
     **Use Unlock Key**
    
-    Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either Syncfusion licensed or trial Unlock key to unlock Syncfusion Flutter installer.
+    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup>&reg;</sup> Flutter installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
@@ -58,9 +58,9 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
     **Additional Settings**
     
-	* Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install Syncfusion samples.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion Control Panel.
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion Control Panel.
+	* Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup> samples.
+    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup> Control Panel.
+    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup> Control Panel.
 
 
 
@@ -71,7 +71,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
 	
 	
-	N> From the 2021 Volume 1 release, Syncfusion has added the option to uninstall previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
 	
 	
 	N> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
@@ -92,7 +92,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	
-7.  After installing, click the **Launch Control Panel** link to open the Syncfusion Control Panel.
+7.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
 
 8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio<sup>&reg;</sup> Flutter platform.
@@ -105,7 +105,7 @@ The Syncfusion Essential Studio<sup>&reg;</sup> Flutter Installer supports insta
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1.	Run the Syncfusion Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion<sup>&reg;</sup> Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialflutter_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialflutter_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialflutter_(version).exe file in local drive.
@@ -128,9 +128,9 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ### Command Line Uninstallation
 
-Syncfusion Essential Flutter can be uninstalled silently using the Command Line.
+Syncfusion Essential<sup>&reg;</sup> Flutter can be uninstalled silently using the Command Line.
 
-1.	Run the Syncfusion Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion<sup>&reg;</sup> Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialflutter_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialflutter_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialflutter_(version).exe file in local drive.
