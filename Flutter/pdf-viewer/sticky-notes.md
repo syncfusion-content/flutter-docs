@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sticky Note Annotations in Flutter PDF Viewer Widget | Syncfusion
-description: Learn here all about sticky note annotations in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about sticky note annotations in the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Viewer Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Pdf Viewer (SfPdfViewer Widget) widget in FlutterFlow.
+description: You can learn here all about adding Syncfusion® Flutter Pdf Viewer (SfPdfViewer) widget in FlutterFlow.
 platform: flutter
 control: SfPdfViewer
 documentation: ug

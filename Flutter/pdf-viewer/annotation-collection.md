@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Collection in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about annotation collection in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about annotation collection in the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
