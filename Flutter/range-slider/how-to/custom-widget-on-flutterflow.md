@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# How to add Syncfusion RangeSlider widget in FlutterFlow?
+# How to add Syncfusion<sup>&reg;</sup> RangeSlider widget in FlutterFlow?
 
 ## Overview
 
@@ -31,28 +31,28 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ### Add RangeSlider widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
 >**Note**: If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
 
->**Note**: Since [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
+>**Note**: Since [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) depends on the [Syncfusion<sup>&reg;</sup> Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
 
 ### Import the package
 
-1. Navigate to the `Installing` tab on the [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) page. Under the `Import it` section, copy the package import statement.
+1. Navigate to the `Installing` tab on the [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) page. Under the `Import it` section, copy the package import statement.
 ![Package](how-to-section-images/copy-package.png)
 2. Paste the copied import statement into the code editor and then `Save` it.
 ![Import](how-to-section-images/import-package-flutterflow.png)
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_sliders/example) tab in [Syncfusion Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_sliders/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Sliders](https://pub.dev/packages/syncfusion_flutter_sliders) and copy the widget specific codes.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
 ![Code snippet](how-to-section-images/Adding-code-snippent.png)
