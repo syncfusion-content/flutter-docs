@@ -30,7 +30,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Syncfusion Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
