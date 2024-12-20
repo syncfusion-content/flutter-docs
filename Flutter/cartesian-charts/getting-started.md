@@ -137,6 +137,11 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 * [Bind data from the array to the Flutter Cartesian chart](https://support.syncfusion.com/kb/article/10932/how-to-bind-data-from-the-array-to-the-flutter-cartesian-chart-sfcartesianchart).
 
+To know more about how to create Flutter Charts from JSON data, you can watch this video.
+
+<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/eUyp_-MHLYg'></iframe>
+
 ## Add title
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
@@ -187,7 +192,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) property.
+You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property.
 
 {% tabs %}
 {% highlight dart %} 

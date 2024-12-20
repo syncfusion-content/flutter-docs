@@ -75,6 +75,8 @@ Add an AI AssistView widget with the required property, [messages](https://pub.d
 {% endhighlight %}
 {% endtabs %}
 
+![Default ai-assistview](images/getting-started/initialize-ai-assistview.png)
+
 ## Add placeholder to composer
 
 To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/decoration.html) property, which is of type InputDecoration. The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
@@ -100,6 +102,8 @@ To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syn
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Placeholder to composer](images/getting-started/add-placeholder-to-composer.png)
 
 ## Add placeholder to conversation area
 
@@ -133,9 +137,8 @@ By default, conversation messages are empty. It’s a good idea to show a messag
             child: Text(
               'What can I help you with today?',
               style: TextStyle(
-                fontSize: 18,
-                color: Colors.black54,
-                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
               ),
             ),
           );
@@ -154,6 +157,8 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 	
 {% endhighlight %}
 {% endtabs %}
+
+![Placeholder](images/getting-started/add-placeholder-to-conversationarea.png)
 
 ## Add action button
 
@@ -196,21 +201,16 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
               children: [
                 const Text(
                   'What can I help you with today?',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.black54,
-                    fontWeight: FontWeight.bold,
-                  ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     DecoratedBox(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey,
-                          width: 2.0,
+                          color: Colors.black,
+                          width: 1.5,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -218,10 +218,6 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           'Travel Tips',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black54,
-                          ),
                         ),
                       ),
                     ),
@@ -229,8 +225,8 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                     DecoratedBox(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey,
-                          width: 2.0,
+                          color: Colors.black,
+                          width: 1.5,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -238,10 +234,6 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           'Recipe Ideas',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black54,
-                          ),
                         ),
                       ),
                     ),
@@ -249,8 +241,8 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                     DecoratedBox(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey,
-                          width: 2.0,
+                          color: Colors.black,
+                          width: 1.5,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -258,10 +250,6 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           'Fun Fact',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black54,
-                          ),
                         ),
                       ),
                     ),
@@ -269,8 +257,8 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                     DecoratedBox(
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey,
-                          width: 2.0,
+                          color: Colors.black,
+                          width: 1.5,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -278,10 +266,6 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           'Life Hacks',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black54,
-                          ),
                         ),
                       ),
                     ),
@@ -306,6 +290,6 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
 {% endhighlight %}
 {% endtabs %}
 
-![Action button chat](images/getting-started/actionbutton-chat.gif)
+![Action button chat](images/getting-started/add-actionbutton-to-ai-assistview.gif)
 
 >You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
