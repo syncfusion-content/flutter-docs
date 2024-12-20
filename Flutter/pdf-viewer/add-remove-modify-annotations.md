@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Add, Remove, Edit Annotations in Flutter PDF Viewer (Syncfusion)
+# Add, Remove, Edit Annotations in Flutter PDF Viewer (Syncfusion<sup>&reg;</sup>)
 
 This section will go through the various functions available in the `SfPdfViewer` for adding, removing, and editing annotations in a PDF document.
 
