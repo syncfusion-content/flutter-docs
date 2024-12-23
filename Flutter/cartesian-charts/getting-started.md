@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Chart dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -363,4 +363,4 @@ You can find the complete getting started example from this [`link`](https://sup
 
 #### See Also
 
-* [Integrate Syncfusion Flutter charts in Flutter web Application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
+* [Integrate Syncfusion<sup>&reg;</sup> Flutter charts in Flutter web Application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
