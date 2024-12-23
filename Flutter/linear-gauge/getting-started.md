@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Linear Gauge widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Linear Gauge (SfLinearGauge) widget, its elements, and more. 
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Gauge dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
