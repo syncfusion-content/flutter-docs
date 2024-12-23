@@ -17,7 +17,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Chart dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
