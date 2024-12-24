@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Undo and redo annotations in the Flutter PDF Viewer | Syncfusion
-description: Learn here all about Undo and Redo actions on the annotations in Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about Undo and Redo actions on the annotations in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and redo annotations in the Flutter PDF Viewer (Syncfusion)
+# Undo and redo annotations in the Flutter PDF Viewer (SfPdfViewer)
 
 If you performed any undesired actions when adding, removing, or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to undo and redo the changes made to the annotations.
 
