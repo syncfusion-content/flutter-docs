@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL support in Flutter PDF Viewer widget | Syncfusion 
-description: Learn here all about the Right to Left (RTL) support in Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about the Right to Left (RTL) support in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: flutter
 control: SfPdfViewer
 documentation: ug
@@ -33,7 +33,7 @@ To change the rendering direction from right to left, wrap the [SfPdfViewer](htt
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
@@ -97,7 +97,7 @@ Then, import the `flutter_localizations` library, specify [localizationsDelegate
       locale: const Locale('ar'),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: const Icon(

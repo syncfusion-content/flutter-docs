@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Accessibility in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about the accessibility feature of the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about the accessibility feature of the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -20,7 +20,7 @@ The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/l
 Widget build(BuildContext context) {
   return Scaffold(
     body: Semantics(
-      label: 'Syncfusion Flutter PDF Viewer',
+      label: 'Flutter PDF Viewer',
       child:
          SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
