@@ -30,7 +30,7 @@ final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           onPressed: () {
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(

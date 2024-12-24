@@ -33,7 +33,7 @@ To change the rendering direction from right to left, wrap the [SfPdfViewer](htt
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
@@ -97,7 +97,7 @@ Then, import the `flutter_localizations` library, specify [localizationsDelegate
       locale: const Locale('ar'),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: const Icon(

@@ -32,7 +32,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -74,7 +74,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -125,7 +125,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -178,7 +178,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(

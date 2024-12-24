@@ -43,7 +43,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 {% highlight dart hl_lines="3 4 5 6" %}
 
 void main() => runApp(MaterialApp(
-      title: 'Syncfusion PDF Viewer Demo',
+      title: 'PDF Viewer Demo',
       theme: ThemeData(
         textSelectionTheme: TextSelectionThemeData(
             selectionColor: Colors.red, selectionHandleColor: Colors.blue),
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: Text('Flutter PDF Viewer'),
         ),
         body: Container(
             child: SfPdfViewer.network(
@@ -111,7 +111,7 @@ The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pd
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
@@ -137,7 +137,7 @@ Using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutte
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: const Text('Syncfusion Flutter PDF Viewer'),
+      title: const Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: const Icon(Icons.add),
@@ -188,7 +188,7 @@ import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() => runApp(const MaterialApp(
-      title: 'Syncfusion PDF Viewer Demo',
+      title: 'PDF Viewer Demo',
       home: HomePage(),
     ));
 
@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',

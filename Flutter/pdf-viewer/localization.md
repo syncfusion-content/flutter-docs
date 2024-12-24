@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
     title: 'PDF Viewer Localization',
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
           'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),

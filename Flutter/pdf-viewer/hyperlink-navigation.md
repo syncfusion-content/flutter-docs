@@ -24,7 +24,7 @@ You can enable or disable the hyperlink navigation using the [enableHyperlinkNav
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
@@ -47,7 +47,7 @@ By default, the built-in hyperlink navigation dialog will be displayed when any 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
@@ -74,7 +74,7 @@ The [onHyperlinkClicked](https://pub.dev/documentation/syncfusion_flutter_pdfvie
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',

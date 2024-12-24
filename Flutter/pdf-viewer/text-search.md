@@ -40,7 +40,7 @@ void initState() {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: Icon(
@@ -95,7 +95,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -171,7 +171,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -239,7 +239,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: Icon(
@@ -294,7 +294,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -349,7 +349,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -530,7 +530,7 @@ class _HomePage extends State<HomePage> {
             )
           : AppBar(
               title: Text(
-                'Syncfusion Flutter PDF Viewer',
+                'Flutter PDF Viewer',
                 style: TextStyle(color: Colors.black87),
               ),
               actions: [

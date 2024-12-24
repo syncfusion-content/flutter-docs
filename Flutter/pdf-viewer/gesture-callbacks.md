@@ -30,7 +30,7 @@ The following code example illustrates how to retrieve information from the `Pdf
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: Text('Flutter PDF Viewer'),
     ),
     body: SfPdfViewer.network(
       'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',

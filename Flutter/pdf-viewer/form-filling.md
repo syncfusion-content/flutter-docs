@@ -39,7 +39,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -80,7 +80,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -121,7 +121,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -162,7 +162,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -203,7 +203,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -244,7 +244,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -285,7 +285,7 @@ By default, the `SfPdfViewer` displays the signature pad when tapped on the sign
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'),
+      title: const Text('Flutter PDF Viewer'),
     ), 
     body: SfPdfViewer.asset( 
       'assets/form_document.pdf', 
@@ -318,7 +318,7 @@ import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Syncfusion PDF Viewer Demo',
+    title: 'PDF Viewer Demo',
     home: HomePage(),
   ));
 }
@@ -423,7 +423,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -461,7 +461,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[
         IconButton( 
           icon: const Icon( 
@@ -508,7 +508,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -551,7 +551,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -601,7 +601,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -642,7 +642,7 @@ final PdfViewerController _pdfViewerController = PdfViewerController();
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
       actions: <Widget>[ 
         IconButton( 
           icon: const Icon( 
@@ -751,7 +751,7 @@ The [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pd
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
     ), 
     body: SfPdfViewer.asset( 
       'assets/form_document.pdf', 
@@ -778,7 +778,7 @@ The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_p
 Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Syncfusion Flutter PDF Viewer'), 
+      title: const Text('Flutter PDF Viewer'), 
     ), 
     body: SfPdfViewer.asset( 
       'assets/form_document.pdf', 
@@ -805,7 +805,7 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Syncfusion PDF Viewer Demo',
+    title: 'PDF Viewer Demo',
     home: HomePage(),
   ));
 }
@@ -871,7 +871,7 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Syncfusion PDF Viewer Demo',
+    title: 'PDF Viewer Demo',
     home: HomePage(),
   ));
 }
