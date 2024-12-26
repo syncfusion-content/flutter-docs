@@ -279,7 +279,7 @@ Similarly, refer the following table to know about the other specialized theme w
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData-class.html">SfAIAssistViewThemeData</a>
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/SfAIAssistView.html">SfAIAssistView</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html">SfAIAssistView</a>
         </td>
     </tr>
     <tr>
