@@ -45,6 +45,8 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView composer support](images/composer/composer-minLines-maxLines.gif)
+
 ### Decoration
 
 The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
@@ -91,6 +93,8 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView composer border](images/composer/composer-border.png)
+
 #### Content padding
 
 The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
@@ -107,6 +111,7 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
         messages: _messages,
         composer: const AssistComposer(
           decoration: InputDecoration(
+            hintText: 'Ask here!',
             contentPadding: EdgeInsets.all(30),
           ),
         ),
@@ -116,6 +121,8 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView composer contentPadding](images/composer/composer-contentPadding.png)
 
 #### Hint text
 
@@ -142,6 +149,8 @@ The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView composer hintText](images/composer/composer-hintText.png)
 
 #### Hint text style
 
@@ -173,6 +182,8 @@ The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView composer hintTextStyle](images/composer/composer-hintTextStyle.png)
 
 #### Prefix and suffix icons
 
@@ -207,6 +218,8 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView composer icon](images/composer/composer-prefix-suffix-icon.png)
+
 ### Padding
 
 The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
@@ -232,6 +245,8 @@ By default, the top padding is set to 16.
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView composer padding](images/composer/composer-padding.png)
 
 ### Text style
 
@@ -260,6 +275,8 @@ The specified text style will be merged with the [`bodyMedium`](https://api.flut
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistview composer text style](images/composer/composer-textStyle.gif)
 
 ## Builder
 
@@ -352,5 +369,7 @@ If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_c
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView composer builder support](images/composer/composer-builder-support.png)
 
 >You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.

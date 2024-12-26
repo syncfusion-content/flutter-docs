@@ -47,6 +47,8 @@ If no composer is added (by specifying the composer as null), the action button 
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView actionButton support](images/action-button/default-actionbutton.gif)
+
 ### Child
 
 The [child](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/child.html) property allows you to define a custom widget consisting of one or more interactive elements to serve as action buttons, such as a send button, microphone icon for voice input, file attachment button, or other interactive widgets.
@@ -73,6 +75,8 @@ The [child](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton child](images/action-button/actionbutton-child-property.png)
 
 ### onPressed callback
 
@@ -142,6 +146,8 @@ The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/ass
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton tooltip](images/action-button/actionbutton-tooltip-property.gif)
 
 ### Colors
 
@@ -245,6 +251,8 @@ The [`mouseCursor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 {% endhighlight %}
 {% endtabs %}
 
+![AIAssistView actionButton mousecursor](images/action-button/actionbutton-mousecursor-property.gif)
+
 ### Shape
 
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/shape.html) property sets the shape of the button's border, such as rounded or circular. By default, it is set to `RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0)))`.
@@ -278,6 +286,8 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assis
 
 {% endhighlight %}
 {% endtabs %}
+
+![AIAssistView actionButton shape](images/action-button/actionbutton-shape-property.png)
 
 ### Padding
 
@@ -333,8 +343,8 @@ The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects. 
+>You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
 
 #### See Also
 
-* You can also customize the above properties using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html).
+* You can also customize the above properties using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html). 
