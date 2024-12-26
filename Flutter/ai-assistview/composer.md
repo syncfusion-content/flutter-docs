@@ -9,18 +9,18 @@ documentation: ug
 
 # Composer in Flutter AI AssistView (SfAIAssistView)
 
-This section explains the customization options available in [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer-class.html), including the option to add any type of widget as a composer.
+This section explains the customization options available in [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html), including the option to add any type of widget as a composer.
 
 ## Default Composer
 
-The default [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/composer.html) is a rounded rectangular text editor that allows users to compose request messages. You can customize its appearance by adding hint text, borders, prefix icons, suffix icons, and more.
+The default [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) is a rounded rectangular text editor that allows users to compose request messages. You can customize its appearance by adding hint text, borders, prefix icons, suffix icons, and more.
 
 When the composer is null, no default text field is added to the AI AssistView widget.
 
 ### Minimum and maximum lines
 
-* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
-* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
+* [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
+* [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
 The default value for minLines is 1, and the default value for maxLines is 6.
 
@@ -49,7 +49,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 ### Decoration
 
-The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
+The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
 The [`InputDecoration`] class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
@@ -222,7 +222,7 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
 By default, the top padding is set to 16.
 
@@ -250,7 +250,7 @@ By default, the top padding is set to 16.
 
 ### Text style
 
-The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/textStyle.html) property is used to set the style for the default [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/AssistComposer.html) text.
+The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/textStyle.html) property is used to set the style for the default [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/AssistComposer.html) text.
 
 The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
 
@@ -280,9 +280,9 @@ The specified text style will be merged with the [`bodyMedium`](https://api.flut
 
 ## Builder
 
-The [AssistComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/builder.html) is used to specify a custom widget for the composer, allowing you to enable multiple options for composing messages, such as text, voice, and image messages.
+The [AssistComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used to specify a custom widget for the composer, allowing you to enable multiple options for composing messages, such as text, voice, and image messages.
 
-If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/AssistComposer/builder.html) is used, the action button will always be enabled.
+If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used, the action button will always be enabled.
 
 {% tabs %}
 {% highlight dart %}
