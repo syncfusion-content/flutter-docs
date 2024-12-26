@@ -25,7 +25,7 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of the [`Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
 
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
