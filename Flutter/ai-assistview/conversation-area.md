@@ -63,6 +63,8 @@ Customize the content of request messages by changing the background color, back
 {% endhighlight %}
 {% endtabs %}
 
+![Conversation Area](images/conversation-area/request-message.png)
+
 ### Response message
 
 Customize the content of response messages by changing the background color, background shape, and other features based on the message, index, or specific conditions.
@@ -99,6 +101,7 @@ Customize the content of response messages by changing the background color, bac
           },
         ),
         responseBubbleSettings: const AssistBubbleSettings(
+          contentPadding: EdgeInsets.all(8.0),
           contentBackgroundColor: Color(0xFFE1F5FE),
           contentShape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -110,6 +113,8 @@ Customize the content of response messages by changing the background color, bac
 
 {% endhighlight %}
 {% endtabs %}
+
+![Conversation Area](images/conversation-area/response-message.png)
 
 ### Header
 
@@ -169,6 +174,8 @@ The header displays the username of the message's author along with the time sta
 {% endhighlight %}
 {% endtabs %}
 
+![Conversation Area](images/conversation-area/header.png)
+
 ### Footer
 
 Showcases additional functionalities and information, including feedback options, AI model details, and more.
@@ -221,6 +228,8 @@ Showcases additional functionalities and information, including feedback options
 
 {% endhighlight %}
 {% endtabs %}
+
+![Conversation Area](images/conversation-area/footer.png)
 
 ### Avatar
 
@@ -280,6 +289,8 @@ The message author's avatar displays either an image or the initials of their na
 {% endhighlight %}
 {% endtabs %}
 
+![Conversation Area](images/conversation-area/avatar.png)
+
 ### Content area
 
 Customize the area where message content is displayed by changing its background color, shape, and functionalities based on the user or other specific conditions.
@@ -334,6 +345,8 @@ Customize the area where message content is displayed by changing its background
 {% endhighlight %}
 {% endtabs %}
 
+![Conversation Area](images/conversation-area/content-area.png)
+
 ### Suggestions
 
 Provide a list of response suggestions. When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
@@ -359,17 +372,6 @@ Provide a list of response suggestions. When the user selects one, it is conside
             data: 'Try something new!',
           ),
         ],
-        suggestionSettings: AssistSuggestionSettings(
-          itemBackgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
-            if (states.contains(WidgetState.hovered)) {
-              return Colors.green.shade200;
-            }
-            return Colors.red.shade300;
-          }),
-          orientation: Axis.horizontal,
-          itemOverflow: AssistSuggestionOverflow.wrap,
-          selectionType: AssistSuggestionSelectionType.single,
-        ),
       ));
     });
   }
@@ -412,6 +414,8 @@ Provide a list of response suggestions. When the user selects one, it is conside
 
 {% endhighlight %}
 {% endtabs %}
+
+![Conversation Area](images/conversation-area/suggestion-support.gif)
 
 ### Loading indicator
 
@@ -457,6 +461,8 @@ Indicates that the AI service's response is in progress after a request has been
 
 {% endhighlight %}
 {% endtabs %}
+
+![Conversation Area](images/conversation-area/responseLoadingBuilder-support.gif)
 
 ### Toolbar items
 
@@ -517,28 +523,6 @@ Append a toolbar to response messages that provides options to perform various a
             AssistMessageToolbarItem item, int toolbarItemIndex) {
           // Handle the toolbar item selection
         },
-        responseToolbarSettings: AssistMessageToolbarSettings(
-          itemBackgroundColor: WidgetStateProperty.resolveWith(
-            (Set<WidgetState> state) {
-              if (state.contains(WidgetState.hovered)) {
-                return Colors.lightBlueAccent;
-              }
-              return Colors.lightBlue;
-            },
-          ),
-          itemShape: WidgetStateProperty.resolveWith(
-            (Set<WidgetState> state) {
-              if (state.contains(WidgetState.hovered)) {
-                return RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                );
-              }
-              return RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              );
-            },
-          ),
-        ),
       ),
     );
   }
@@ -546,8 +530,10 @@ Append a toolbar to response messages that provides options to perform various a
 {% endhighlight %}
 {% endtabs %}
 
->You can refer to our [`Flutter AI AssistView`](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter AI AssistView example`](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
+![Conversation Area](images/conversation-area/toolbarItem-support.png)
+
+>You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
 
 #### See Also
 
-* You can also customize the bubble shapes and colors properties of both [`requestBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/requestBubbleSettings.html) and [`responseBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/responseBubbleSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/28.1.33-beta/assist_view/SfAIAssistView/SfAIAssistView.html).
+* You can also customize the bubble shapes and colors properties of both [`requestBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestBubbleSettings.html) and [`responseBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseBubbleSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html).
