@@ -2,7 +2,7 @@
 layout: post
 title: Labels and Dividers in Flutter Slider widget | Syncfusion
 description: Learn here all about the Labels and Dividers feature of Syncfusion Flutter Slider (SfSlider) widget and more.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---
