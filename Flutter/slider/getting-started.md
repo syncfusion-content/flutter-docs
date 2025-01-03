@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Slider widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Slider (SfSlider) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---

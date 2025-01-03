@@ -477,3 +477,8 @@ Widget build(BuildContext context) {
 * Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/slider/labels-and-divider)
 * Tooltip - [`Link`](https://help.syncfusion.com/flutter/slider/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay)
+
+To know more about how to customize both thumb and divider in the Flutter Slider, you can watch this video.
+
+<style>#FlutterSliderVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterSliderVideoTutorial' src='https://www.youtube.com/embed/IVRfO1qDom8'></iframe>
