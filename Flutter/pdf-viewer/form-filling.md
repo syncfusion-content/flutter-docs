@@ -11,6 +11,10 @@ documentation: ug
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to fill, edit, save, export, and import the AcroForm fields in a PDF document.
 
+To get started quickly, you can also check out our video tutorial below. 
+
+<style>#FlutterSfPdfViewerFormFillingTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='FlutterSfPdfViewerFormFillingTutorial' src='https://www.youtube.com/watch?v=fX9hwXCXXaA'></iframe>
+
 ## Supported form fields
 
 You can load and fill in the following form fields in a PDF document using the Flutter PDF Viewer. 
