@@ -13,7 +13,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 To get started quickly, you can also check out our video tutorial below. 
 
-<style>#FlutterSfPdfViewerFormFillingTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='FlutterSfPdfViewerFormFillingTutorial' src='https://www.youtube.com/watch?v=fX9hwXCXXaA'></iframe>
+<style>#FlutterSfPdfViewerFormFillingTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='FlutterSfPdfViewerFormFillingTutorial' src='https://www.youtube.com/embed/fX9hwXCXXaA'></iframe>
 
 ## Supported form fields
 
