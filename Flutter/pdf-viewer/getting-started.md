@@ -31,16 +31,23 @@ For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/lib
 
 On your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
 
+For PdfJs library version 4.0 and above
 ```html
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-<script type="text/javascript">
-   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
-</script>
-
+<script type="module" async>
+  import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
+</script>-jnookp
 ```
 
-N> Version **2.11.338** is recommended for using annotation support. This will not flatten the unsupported annotations while rendering the pages.
+For PdfJs library versions below 4.0
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+<script type="text/javascript">
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+</script>
+```
+
+N> Version above **2.11.338** is recommended for using annotation support. This will not flatten the unsupported annotations while rendering the pages.
 
 **Get packages** 
 
