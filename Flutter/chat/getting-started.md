@@ -99,7 +99,7 @@ Add a chat widget with the necessary properties, such as [`messages`](https://pu
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize chat in vue chat.](images/getting-started/initialize-chat.png)
+![Initialize chat in flutter chat.](images/getting-started/initialize-chat.png)
 
 ## Add placeholder to composer
 
@@ -151,7 +151,7 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Add placeholder to composer in vue chart.](images/getting-started/add-placeholder-to-composer.png)
+![Add placeholder to composer in flutter chart.](images/getting-started/add-placeholder-to-composer.png)
 
 ## Add placeholder to conversation area
 
@@ -187,7 +187,7 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 {% endhighlight %}
 {% endtabs %}
 
-![Add placeholder to conversation area in vue chat.](images/getting-started/add-placeholder-to-composer-area.png)
+![Add placeholder to conversation area in flutter chat.](images/getting-started/add-placeholder-to-composer-area.png)
 
 ## Add action button
 
@@ -260,6 +260,6 @@ When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.
 {% endhighlight %}
 {% endtabs %}
 
-![Add action button in Vue Chat.](images/getting-started/actionbutton-in-vue-chat.png)
+![Add action button in flutter Chat.](images/getting-started/actionbutton-in-flutter-chat.png)
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
