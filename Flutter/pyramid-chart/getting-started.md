@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -157,7 +157,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html) property.
+You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="12" %} 

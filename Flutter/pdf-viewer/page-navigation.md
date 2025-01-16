@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Page navigation in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about page navigation feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about page navigation feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -32,7 +32,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -74,7 +74,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -125,7 +125,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -178,7 +178,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(

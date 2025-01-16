@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Syncfusion Licensing Overview
+# Syncfusion<sup>&reg;</sup> Licensing Overview
 
-The License key registration is no longer required for Flutter from version 18.3.0.x. So, there is no need to generate or register Syncfusion Flutter license keys in your Flutter projects. 
+The License key registration is no longer required for Flutter from version 18.3.0.x. So, there is no need to generate or register Syncfusion<sup>&reg;</sup> Flutter license keys in your Flutter projects. 
 
-The Flutter controls from Syncfusion can be used without registering the license keys.
+The Flutter controls from Syncfusion<sup>&reg;</sup> can be used without registering the license keys.
 
->**Note**: If you are using Syncfusion controls prior to version 18.3.0.x, please follow the following steps to register your license key.
+>**Note**: If you are using Syncfusion<sup>&reg;</sup> controls prior to version 18.3.0.x, please follow the following steps to register your license key.
 
 ## How To Register In An Application
 

@@ -10,7 +10,7 @@ documentation: ug
 
 # System Requirements for Flutter
 
-The system requirements for using our Syncfusion Flutter platform are as follows
+The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows
 
 ### Operating Systems
 
@@ -40,13 +40,20 @@ See the links below for the recommended Flutter development environments
 <table>
     <tr>
         <th style="text-align:center">Flutter SDK Stable Version</th>
-        <th style="text-align:center">Syncfusion Compatible Package Version</th>
+        <th style="text-align:center">Syncfusion<sup>&reg;</sup> Compatible Package Version</th>
     </tr>
-      <tr>
+    <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.27.0-stable.zip">3.27.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.36">28.1.36</a> <28.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+        </td>
+    </tr>
+    <tr>
         <td style="text-align:center">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.0-stable.zip">3.24.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.14">26.2.14</a> <27.1.x(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.14">26.2.14</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.35">28.1.35</a>
         </td>
     </tr>
     <tr>

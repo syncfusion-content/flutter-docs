@@ -7,9 +7,9 @@ control: Overview
 documentation: ug
 ---
 
-# Introduction to Syncfusion Flutter Widgets Documentation
+# Introduction to Syncfusion<sup>&reg;</sup> Flutter Widgets Documentation
 
-The Syncfusion [Flutter Widgets](https://www.syncfusion.com/flutter-widgets) are a set of [advanced custom widgets and file formats packages](https://pub.dev/publishers/syncfusion.com/packages) needed to create rich and high-quality cross-platform applications in iOS, Android, and Web using a single code base. This article gives you a quick overview of how to read the Flutter widgets documentation and other help resources such as video tutorials, code examples, demos, and the knowledge base.
+The Syncfusion<sup>&reg;</sup> [Flutter Widgets](https://www.syncfusion.com/flutter-widgets) are a set of [advanced custom widgets and file formats packages](https://pub.dev/publishers/syncfusion.com/packages) needed to create rich and high-quality cross-platform applications in iOS, Android, and Web using a single code base. This article gives you a quick overview of how to read the Flutter widgets documentation and other help resources such as video tutorials, code examples, demos, and the knowledge base.
 
 ## How to best read this user guide
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Bookmark navigation in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about bookmark navigation feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about bookmark navigation feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -30,7 +30,7 @@ final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           onPressed: () {
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PdfViewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(

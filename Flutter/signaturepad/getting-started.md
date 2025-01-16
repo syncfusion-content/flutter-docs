@@ -25,7 +25,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter SignaturePad dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter SignaturePad dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 

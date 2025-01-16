@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Flutter Treemap (SfTreemap)
 
-This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion treemap.
+This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> treemap.
 
 To get start quickly with our Flutter Treemap widget, you can check on this video.
 
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Treemap dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Treemap dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
