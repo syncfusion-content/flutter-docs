@@ -2,7 +2,7 @@
 layout: post
 title: Overview of Syncfusion license and unlock keys - Syncfusion
 description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
-platform: Flutter
+platform: flutter
 control: Essential Studio
 documentation: ug
 ---
