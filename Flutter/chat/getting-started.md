@@ -99,7 +99,7 @@ Add a chat widget with the necessary properties, such as [`messages`](https://pu
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize chat in Flutter Chat.](images/getting-started/initialize-chat.png)
+![Getting started with Flutter Chat.](images/getting-started/initialize-chat.png)
 
 ## Add placeholder to composer
 
