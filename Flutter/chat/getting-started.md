@@ -187,7 +187,7 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 {% endhighlight %}
 {% endtabs %}
 
-![Add placeholder to conversation area in Flutter Chat.](images/getting-started/add-placeholder-to-composer-area.png)
+![Add placeholder to conversation area in Flutter Chat.](images/getting-started/add-placeholder-to-conversation-area-in-flutter-chat.png)
 
 ## Add action button
 
