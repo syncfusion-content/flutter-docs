@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 
-Check the following video to quickly get started with creating a Flutter PDF document using the PDF Library.
+Check the following video to quickly get started with creating a Flutter PDF document.
 {% youtube "https://youtu.be/tMM9ty4Wfq0?si=b3EBPP0mjVpLKdBJ" %}
 
 ## Steps to create PDF document in Flutter application
