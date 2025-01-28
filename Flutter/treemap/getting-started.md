@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Treemap widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Treemap (SfTreemap) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
