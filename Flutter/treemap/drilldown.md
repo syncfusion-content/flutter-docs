@@ -11,6 +11,11 @@ documentation: ug
 
 The drilldown feature provides better visualization of larger set of hierarchical level data.
 
+To learn more about how to deep dive into the Drilldown feature in Flutter Treemap, you can watch this video.
+
+<style>#flutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterTreemapVideoTutorial' src='https://www.youtube.com/embed/1xXeIedJ3bQ'></iframe>
+
 ## Enable drilldown
 
 You can drill down the tiles by setting the `enableDrilldown` property to `true`. In the UI, you can only see one level tiles at a time. When you tap a tile, it expands to the size of the viewport and loads its descendant tiles with smoother animation.
