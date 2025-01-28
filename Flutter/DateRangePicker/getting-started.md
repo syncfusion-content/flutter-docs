@@ -16,7 +16,7 @@ To get start quickly with our Flutter date range picker widget, you can check on
 <iframe id='flutterDateRangePickerVideoTutorial' src='https://www.youtube.com/embed/3TyuUVExuPs'></iframe>
 
 ## Add Flutter Date Range Picker to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 

@@ -13,7 +13,7 @@ This section explains how to add the Flutter AI AssistView widget to a single Fl
 
 ## Add Flutter AI AssistView to an application
 
-Create a simple Flutter project by following the instructions provided in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple Flutter project by following the instructions provided in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 

@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Signature Pad widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
@@ -21,7 +21,7 @@ To get start quickly with our Flutter SignaturePad widget, you can check on this
 <iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
 
 ## Add Flutter SignaturePad to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
