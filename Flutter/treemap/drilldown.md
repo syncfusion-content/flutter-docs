@@ -11,7 +11,7 @@ documentation: ug
 
 The drilldown feature provides better visualization of larger set of hierarchical level data.
 
-To learn more about how to deep dive into the Drilldown feature in Flutter Treemap, you can watch this video.
+To learn more about how to deep dive into the drill down feature in Flutter Treemap, you can watch this video.
 
 <style>#flutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterTreemapVideoTutorial' src='https://www.youtube.com/embed/1xXeIedJ3bQ'></iframe>
