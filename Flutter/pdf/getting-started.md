@@ -16,7 +16,7 @@ Check the following video to quickly get started with creating a Flutter PDF doc
 
 ## Steps to create PDF document in Flutter application
 
-Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
