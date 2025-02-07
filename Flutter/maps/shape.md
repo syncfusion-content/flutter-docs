@@ -2,7 +2,7 @@
 layout: post
 title: Shape colors in Flutter Maps widget | Syncfusion
 description: Learn here all about different shape appearance customization options of the Syncfusion Flutter Maps (SfMaps) widget.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
