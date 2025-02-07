@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About Flutter DataGrid widget | DataTable | Syncfusion
-description: Learn about the introduction of the Syncfusion Flutter DataGrid (SfDataGrid) widget, its features, and more.
+title: About Flutter DataGrid widget | DataTable | Syncfusion®
+description: Learn about the introduction of the Syncfusion® Flutter DataGrid (SfDataGrid) widget, its features, and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter DataGrid (SfDataGrid) Overview 
 
-The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance even when loading large amounts of data.         
+The Syncfusion® Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance even when loading large amounts of data.         
 
 ![Overview Flutter Datagrid](images/overview/flutter-datagrid-overview.png)
 
@@ -22,7 +22,7 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Editing** - Allows users to edit cell values. An editor widget can be loaded based on the column type to edit cell values.
 * **Sorting** - Sort one or more columns in ascending or descending order. 
 * **Selection** - Select one or more rows. Keyboard navigation is supported for web platforms.
-* **Filtering** - Interactive support to filter data as like Excel. Filter data by text, numbers, and date-time values. Also, supports programmatical filtering.
+* **Filtering** - Interactive support to filter data as like Excel. Filter data by text, numbers, and date-time values. Also, supports programmatic filtering.
 * **Column Drag and Drop** - Supports reordering columns by dragging and dropping them at the required position.
 * **Column resizing** - Resize columns by dragging the right edge of the column header.
 * **Exporting** - Support to export the data to Excel and PDF.
