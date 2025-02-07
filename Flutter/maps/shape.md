@@ -197,6 +197,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+To learn more about how to customize the colors in Flutter Maps, you can watch this video.
+
+<style>#flutterMapsVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterMapsVideoTutorial' src='https://www.youtube.com/embed/cHEbMFm3TMU'></iframe>
+
 ## Applying colors based on the data
 
 If you return a color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
