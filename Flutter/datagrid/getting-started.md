@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Flutter DataGrid | DataTable | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter DataGrid (SfDataGrid) widget, its basic features, and more.
+title: Getting started with Flutter DataGrid | DataTable | Syncfusion®
+description: Learn here about getting started with Syncfusion® Flutter DataGrid (SfDataGrid) widget, its basic features, and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Flutter DataGrid (SfDataGrid)
 
-This section explains the steps required to add the DataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter DataGrid widget.
+This section explains the steps required to add the DataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
 
 To get started quickly with Flutter DataGrid, check out this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
@@ -21,7 +21,7 @@ Create a simple project using the instruction given in the  [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter DataGrid dependency to your `pubspec.yaml` file.
+Add the Syncfusion® Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% highlight dart %} 
 
@@ -31,7 +31,7 @@ Add the Syncfusion Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package.
 
 **Get packages**
 
