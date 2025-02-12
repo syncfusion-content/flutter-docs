@@ -197,8 +197,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Applying colors based on the data
 
 To learn more about how to customize the colors in Flutter Maps, you can watch this video.
