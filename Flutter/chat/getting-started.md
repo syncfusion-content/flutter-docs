@@ -151,7 +151,7 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Add placeholder to composer in Flutter Chart.](images/getting-started/add-placeholder-to-composer-flutter-chat.png)
+![Add placeholder to composer in Flutter Chat.](images/getting-started/add-placeholder-to-composer-flutter-chat.png)
 
 ## Add placeholder to conversation area
 
