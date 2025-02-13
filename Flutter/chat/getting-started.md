@@ -99,7 +99,7 @@ Add a chat widget with the necessary properties, such as [`messages`](https://pu
 {% endhighlight %}
 {% endtabs %}
 
-![Getting started with Flutter Chat.](images/getting-started/initialize-chat.png)
+![Getting started with Flutter Chat.](images/getting-started/initialize-flutter-chat.png)
 
 ## Add placeholder to composer
 
@@ -151,7 +151,7 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Add placeholder to composer in Flutter Chart.](images/getting-started/add-placeholder-to-composer.png)
+![Add placeholder to composer in Flutter Chart.](images/getting-started/add-placeholder-to-composer-flutter-chat.png)
 
 ## Add placeholder to conversation area
 
