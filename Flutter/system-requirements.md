@@ -110,5 +110,3 @@ See the links below for the recommended Flutter development environments
 ### Supported Platforms
 
 Our Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. You can find the supported version at the link ['here'](https://docs.flutter.dev/reference/supported-platforms#supported-platforms).
-
->**Note**: Currently, the PDF viewer control is not supported on the Linux platform.
