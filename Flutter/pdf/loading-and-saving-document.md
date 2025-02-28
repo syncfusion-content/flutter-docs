@@ -50,3 +50,63 @@ List<int> bytes =await document.save();
 File('output.pdf').writeAsBytes(bytes);
 
 {% endhighlight %}
+
+## Save and open a PDF document in desktop
+
+You can save and open a PDF document in desktop by using the following steps:
+
+**Set up**
+
+Configure and enable the desktop support to run the app.
+
+{% highlight dart %} 
+
+flutter config --enable-<platform>-desktop
+
+{% endhighlight %}
+
+N> You only need to execute `flutter config --enable-<platform>-desktop` once. You can always check the status of your configuration using the no-argument flutter config command.
+
+Here you can get more details about [`How to add desktop support in the app`](https://docs.flutter.dev/desktop)
+
+**Add dependency**
+
+Add the following packages to your pub spec file.
+
+{% highlight dart %} 
+
+path_provider: ^1.6.5
+open_file: ^3.0.1
+
+{% endhighlight %}
+
+**Import package**
+
+{% highlight dart %}
+
+import 'dart:io';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
+
+{% endhighlight %}
+
+Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
+
+{% highlight dart %}
+
+//Get external storage directory
+final directory = await getExternalStorageDirectory();
+
+//Get directory path
+final path = directory.path;
+
+//Create an empty file to write PDF data
+File file = File('$path/Output.pdf');
+
+//Write PDF data
+await file.writeAsBytes(bytes, flush: true);
+
+//Open the PDF document in mobile
+OpenFile.open('$path/Output.pdf');
+
+{% endhighlight %}
