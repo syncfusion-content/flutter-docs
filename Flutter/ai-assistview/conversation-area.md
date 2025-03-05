@@ -50,9 +50,9 @@ Customize the content of request messages by changing the background color, back
             });
           },
         ),
-        requestBubbleSettings: const AssistBubbleSettings(
-          contentBackgroundColor: Color(0xFFF1F8E9),
-          contentShape: RoundedRectangleBorder(
+        requestMessageSettings: const AssistMessageSettings(
+          backgroundColor: Color(0xFFF1F8E9),
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
@@ -100,10 +100,10 @@ Customize the content of response messages by changing the background color, bac
             });
           },
         ),
-        responseBubbleSettings: const AssistBubbleSettings(
-          contentPadding: EdgeInsets.all(8.0),
-          contentBackgroundColor: Color(0xFFE1F5FE),
-          contentShape: RoundedRectangleBorder(
+        responseMessageSettings: const AssistMessageSettings(
+          margin: EdgeInsets.all(8.0),
+          backgroundColor: Color(0xFFE1F5FE),
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
         ),
@@ -159,12 +159,12 @@ The header displays the username of the message's author along with the time sta
             });
           },
         ),
-        requestBubbleSettings: const AssistBubbleSettings(
-          showUserName: true,
+        requestMessageSettings: const AssistMessageSettings(
+          showAuthorName: true,
           showTimestamp: true,
         ),
-        responseBubbleSettings: const AssistBubbleSettings(
-          showUserName: true,
+        responseMessageSettings: const AssistMessageSettings(
+          showAuthorName: true,
           showTimestamp: true,
         ),
       ),
@@ -219,7 +219,7 @@ Showcases additional functionalities and information, including feedback options
             });
           },
         ),
-        bubbleFooterBuilder: (context, index, message) {
+        messageFooterBuilder: (context, index, message) {
           return const Text('GPT-4');
         },
       ),
@@ -326,15 +326,15 @@ Customize the area where message content is displayed by changing its background
             });
           },
         ),
-        requestBubbleSettings: const AssistBubbleSettings(
-          contentBackgroundColor: Color(0xFFF1F8E9),
-          contentShape: RoundedRectangleBorder(
+        requestMessageSettings: const AssistMessageSettings(
+          backgroundColor: Color(0xFFF1F8E9),
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
-        responseBubbleSettings: const AssistBubbleSettings(
-          contentBackgroundColor: Color(0xFFE1F5FE),
-          contentShape: RoundedRectangleBorder(
+        responseMessageSettings: const AssistMessageSettings(
+          backgroundColor: Color(0xFFE1F5FE),
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
         ),
@@ -519,7 +519,7 @@ Append a toolbar to response messages that provides options to perform various a
             });
           },
         ),
-        onBubbleToolbarItemSelected: (bool selected, int messageIndex,
+        onToolbarItemSelected: (bool selected, int messageIndex,
             AssistMessageToolbarItem item, int toolbarItemIndex) {
           // Handle the toolbar item selection
         },
@@ -536,4 +536,4 @@ Append a toolbar to response messages that provides options to perform various a
 
 #### See Also
 
-* You can also customize the bubble shapes and colors properties of both [`requestBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestBubbleSettings.html) and [`responseBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseBubbleSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html).
+* You can also customize the message shapes and colors properties of both [`requestMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestMessageSettings.html) and [`responseMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseMessageSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html).

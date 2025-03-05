@@ -13,7 +13,7 @@ This section explains the customization options available in [`ChatComposer`](ht
 
 ## Composer
 
-The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
+The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, margin, and text style.
 
 When the composer is null, no default text field is added to the chat widget.
 
@@ -290,11 +290,11 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ![Chat composer icon](images/composer/composer-icon.png)
 
-### Padding
+### Margin
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/margin.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
-By default, the top padding is set to 16.
+By default, the top margin is set to 16.
 
 {% tabs %}
 {% highlight dart %}
@@ -331,7 +331,7 @@ By default, the top padding is set to 16.
         messages: _messages,
         outgoingUser: '123-005',
         composer: const ChatComposer(
-          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
+          margin: EdgeInsets.fromLTRB(10, 30, 10, 20),
         ),
       ),
     );
@@ -340,7 +340,7 @@ By default, the top padding is set to 16.
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer padding](images/composer/composer-padding.png)
+![Chat composer margin](images/composer/composer-padding.png)
 
 ### Text style
 

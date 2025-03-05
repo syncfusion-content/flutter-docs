@@ -457,9 +457,9 @@ The [`responseAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 {% endhighlight %}
 {% endtabs %}
 
-## Request bubble content background color
+## Request message background color
 
-The [`requestBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing request messages.
+The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageBackgroundColor.html) property is used to specify the background color of contents containing request messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -471,7 +471,7 @@ The [`requestBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfu
   Widget build(BuildContext context) {
     return SfAIAssistViewTheme(
       data: const SfAIAssistViewThemeData(
-        requestBubbleContentBackgroundColor: Colors.green[100],
+        requestMessageBackgroundColor: Colors.green[100],
       ),
       child: Scaffold(
         body: SfAIAssistView(
@@ -484,9 +484,9 @@ The [`requestBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfu
 {% endhighlight %}
 {% endtabs %}
 
-## Response bubble content background color
+## Response message background color
 
-The [`responseBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing response messages.
+The [`responseMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageBackgroundColor.html) property is used to specify the background color of contents containing response messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -498,7 +498,7 @@ The [`responseBubbleContentBackgroundColor`](https://pub.dev/documentation/syncf
   Widget build(BuildContext context) {
     return SfAIAssistViewTheme(
       data: const SfAIAssistViewThemeData(
-        responseBubbleContentBackgroundColor: Colors.blue[100],
+        responseMessageBackgroundColor: Colors.blue[100],
       ),
       child: Scaffold(
         body: SfAIAssistView(
@@ -544,7 +544,7 @@ The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/la
 
 ## Request content text style
 
-The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message bubbles.
+The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message contents
 
 {% tabs %}
 {% highlight Dart %}
@@ -575,7 +575,7 @@ The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 
 ## Response content text style
 
-The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message bubbles
+The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message contents
 
 {% tabs %}
 {% highlight Dart %}
@@ -606,7 +606,7 @@ The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutte
 
 ## Request primary header text style
 
-The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in request message bubbles.
+The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in request message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -637,7 +637,7 @@ The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_f
 
 ## Response primary header text style
 
-The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responsePrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in response message bubbles.
+The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responsePrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in response message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -668,7 +668,7 @@ The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_
 
 ## Request secondary header text style
 
-The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in request message bubbles.
+The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in request message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -699,7 +699,7 @@ The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion
 
 ## Response secondary header text style
 
-The [`responseSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in response message bubbles.
+The [`responseSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in response message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -783,9 +783,9 @@ The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 {% endhighlight %}
 {% endtabs %}
 
-## Request bubble content shape
+## Request message shape
 
-The [`requestBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentShape.html) property is used to specify the shape and border radius of request message bubbles.
+The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageShape.html) property is used to specify the shape and border radius of request message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -797,7 +797,7 @@ The [`requestBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutt
   Widget build(BuildContext context) {
     return SfAIAssistViewTheme(
       data: const SfAIAssistViewThemeData(
-        requestBubbleContentShape: RoundedRectangleBorder(
+        requestMessageShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
@@ -812,9 +812,9 @@ The [`requestBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutt
 {% endhighlight %}
 {% endtabs %}
 
-## Response bubble content shape
+## Response message shape
 
-The [`responseBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentShape.html) property is used to specify the shape and border radius of response message bubbles.
+The [`responseMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageShape.html) property is used to specify the shape and border radius of response message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -826,7 +826,7 @@ The [`responseBubbleContentShape`](https://pub.dev/documentation/syncfusion_flut
   Widget build(BuildContext context) {
     return SfAIAssistViewTheme(
       data: const SfAIAssistViewThemeData(
-        responseBubbleContentShape: RoundedRectangleBorder(
+        responseMessageShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
@@ -843,7 +843,7 @@ The [`responseBubbleContentShape`](https://pub.dev/documentation/syncfusion_flut
 
 ## Suggestion background color
 
-The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundColor.html) property is used to specify the background color of response message suggestion bubble.
+The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundColor.html) property is used to specify the background color of response message suggestion contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -870,7 +870,7 @@ The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutt
 
 ## Suggestion background shape
 
-The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of response message suggestion bubble.
+The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of response message suggestion contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -989,7 +989,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
 
 ## Response toolbar background color
 
-The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundColor.html) property is used to specify the background color of response message toolbar bubble.
+The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundColor.html) property is used to specify the background color of response message toolbar contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1016,7 +1016,7 @@ The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_
 
 ## Response toolbar background shape
 
-The [`responseToolbarBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundShape.html) property is used to specify the background shape of response message toolbar bubble.
+The [`responseToolbarBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundShape.html) property is used to specify the background shape of response message toolbar contents.
 
 {% tabs %}
 {% highlight Dart %}

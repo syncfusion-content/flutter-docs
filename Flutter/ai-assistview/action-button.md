@@ -289,9 +289,9 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assis
 
 ![AIAssistView actionButton shape](images/action-button/actionbutton-shape-property.png)
 
-### Padding
+### Margin
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/margin.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 {% tabs %}
 {% highlight dart %}
@@ -304,7 +304,7 @@ The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/ass
       body: SfAIAssistView(
         messages: _messages,
         actionButton: AssistActionButton(
-          padding: const EdgeInsetsDirectional.only(start: 8.0),
+          margin: const EdgeInsetsDirectional.only(start: 8.0),
           onPressed: (String data) {
             // Handle the send button click action here.
           },
@@ -347,4 +347,4 @@ The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist
 
 #### See Also
 
-* You can also customize the above properties using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html). 
+* You can also customize the above properties using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html).
