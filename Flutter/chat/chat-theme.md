@@ -471,9 +471,9 @@ The [`incomingAvatarBackgroundColor`] property is used to specify the background
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing message content background color
+## Outgoing message background color
 
-The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
+The [`outgoingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -485,7 +485,7 @@ The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncf
   Widget build(BuildContext context) {
     return SfChatTheme(
       data: const SfChatThemeData(
-        outgoingMessageContentBackgroundColor: Colors.green[100],
+        outgoingMessageBackgroundColor: Colors.green[100],
       ),
       child: Scaffold(
         body: SfChat(
@@ -499,9 +499,9 @@ The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming message content background color
+## Incoming message background color
 
-The [`incomingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
+The [`incomingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -513,7 +513,7 @@ The [`incomingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncf
   Widget build(BuildContext context) {
     return SfChatTheme(
       data: const SfChatThemeData(
-        incomingMessageContentBackgroundColor: Colors.blue[100],
+        incomingMessageBackgroundColor: Colors.blue[100],
       ),
       child: Scaffold(
         body: SfChat(
@@ -806,9 +806,9 @@ The [`suggestionItemTextStyle`] property is used to specify the text style for b
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing message content shape
+## Outgoing message shape
 
-The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
+The [`outgoingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -836,9 +836,9 @@ The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-## Incoming message content shape
+## Incoming message shape
 
-The [`incomingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentShape.html) property is used to specify the shape and border radius of incoming message content.
+The [`incomingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentShape.html) property is used to specify the shape and border radius of incoming message content.
 
 {% tabs %}
 {% highlight Dart %}

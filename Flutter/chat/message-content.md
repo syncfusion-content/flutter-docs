@@ -253,7 +253,7 @@ Based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ### User name
 
-The [`showAuthorName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/showUserName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
+The [`showAuthorName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
 
 ### Time stamp
 
@@ -314,7 +314,7 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ### User avatar
 
-The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/showUserAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
+The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
 
 {% tabs %}
 {% highlight dart %}
@@ -375,7 +375,7 @@ The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ### Background color
 
-The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/backgroundColor.html) property is used to specify the background color of the content area within the message.
+The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentBackgroundColor.html) property is used to specify the background color of the content area within the message.
 
 {% tabs %}
 {% highlight dart %}
@@ -428,7 +428,7 @@ The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ### Shape
 
-The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/shape.html) property is used to define the shape of the content area of the message, such as rounded or custom shapes.
+The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentShape.html) property is used to define the shape of the content area of the message, such as rounded or custom shapes.
 
 {% tabs %}
 {% highlight dart %}
@@ -493,7 +493,7 @@ The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
 
 ### Padding
 
-The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/margin.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
 
 ### Content padding
 
