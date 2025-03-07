@@ -291,7 +291,7 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assis
 
 ### Margin
 
-The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/margin.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 {% tabs %}
 {% highlight dart %}

@@ -392,7 +392,7 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 
 ### Margin
 
-The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/margin.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 {% tabs %}
 {% highlight dart %}

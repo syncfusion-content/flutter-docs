@@ -473,7 +473,7 @@ The [`incomingAvatarBackgroundColor`] property is used to specify the background
 
 ## Outgoing message content background color
 
-The [`outgoingMessageContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
+The [`outgoingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -501,7 +501,7 @@ The [`outgoingMessageContentBackgroundColor`](https://pub.dev/documentation/sync
 
 ## Incoming message content background color
 
-The [`incomingMessageContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
+The [`incomingBubbleContentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageContentBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -808,7 +808,7 @@ The [`suggestionItemTextStyle`] property is used to specify the text style for b
 
 ## Outgoing message content shape
 
-The [`outgoingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
+The [`outgoingBubbleContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingBubbleContentShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
 
 {% tabs %}
 {% highlight Dart %}
@@ -838,7 +838,7 @@ The [`outgoingMessageContentShape`](https://pub.dev/documentation/syncfusion_flu
 
 ## Incoming message content shape
 
-The [`incomingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageContentShape.html) property is used to specify the shape and border radius of incoming message content.
+The [`incomingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingBubbleContentShape.html) property is used to specify the shape and border radius of incoming message content.
 
 {% tabs %}
 {% highlight Dart %}
