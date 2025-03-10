@@ -544,7 +544,7 @@ The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/la
 
 ## Request content text style
 
-The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message contents
+The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -575,7 +575,7 @@ The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 
 ## Response content text style
 
-The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message contents
+The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message contents.
 
 {% tabs %}
 {% highlight Dart %}
