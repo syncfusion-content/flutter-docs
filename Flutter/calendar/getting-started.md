@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Flutter Event Calendar widget | Syncfusion
+title: Getting started with Flutter Calendar widget | Syncfusion
 description: Learn here about getting started with Syncfusion Event Calendar (SfCalendar) widget, its elements, and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Getting started with Flutter Event Calendar (SfCalendar)
-This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> calendar widget.
+# Getting started with Flutter Calendar widget (SfCalendar)
+This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion calendar widget.
 
 To get start quickly with our [Flutter event calendar widget](https://www.syncfusion.com/flutter-widgets/flutter-calendar), you can check on this video.
 
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter calendar dependency to your pubspec.yaml file.
+Add the Syncfusion Flutter calendar dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -32,7 +32,7 @@ syncfusion_flutter_calendar: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [Syncfusion<sup>&reg;</sup> Flutter Calendar](https://pub.dev/packages/syncfusion_flutter_calendar/versions) package.
+N> Here **xx.x.xx** denotes the current version of [Syncfusion Flutter Calendar](https://pub.dev/packages/syncfusion_flutter_calendar/versions) package.
 
 **Get packages** 
 
@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Calendar view](images/getting-started/dayview.png)
+![Calendar view in Flutter Calendar.](images/getting-started/dayview-in-flutter-calendar.png)
 
 ## Change different calendar views
 
@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Calendar view](images/getting-started/monthview.png)
+![Calendar view in Flutter Calendar.](images/getting-started/monthview-in-flutter-calendar.png)
 
 ## Add data source
 
@@ -171,7 +171,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-![AddData source](images/getting-started/datasource.png)
+![AddData source in Flutter Calendar.](images/getting-started/datasource-in-flutter-calendar.png)
 
 ## Change first day of week
 
@@ -192,7 +192,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Change first day of week](images/getting-started/firstday-week.png)
+![Change first day of week in Flutter Calendar.](images/getting-started/firstday-week-in-flutter-calendar.png)
 
 ## Initial selected date
 
@@ -218,7 +218,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initial selected date](images/getting-started/initial-selected-date.png)
+![Initial selected date in Flutter Calendar.](images/getting-started/initial-selected-date-in-flutter-calendar.png)
 
 ## Initial display date
 
@@ -244,7 +244,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initial display date](images/getting-started/initial-display-date.png)
+![Initial display date in Flutter Calendar.](images/getting-started/initial-display-date-in-flutter-calendar.png)
 
 ## Selection decoration
 
@@ -275,7 +275,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Selection decoration](images/getting-started/selection-decoration.png)
+![Selection decoration in Flutter Calendar.](images/getting-started/selection-decoration-in-flutter-calendar.png)
 
 ## Today highlight color
 
@@ -301,7 +301,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Today highlight color](images/getting-started/today-highlight-color.png)
+![Today highlight color in Flutter Calendar.](images/getting-started/today-highlight-color-in-flutter-calendar.png)
 
 ## Cell border color
 
@@ -327,7 +327,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Cell border color](images/getting-started/cell-border-color.png)
+![Cell border color in Flutter Calendar.](images/getting-started/cell-border-color-in-flutter-calendar.png)
 
 ## Background color
 
@@ -353,7 +353,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Background color](images/getting-started/calendar-background-color.png)
+![Background color in Flutter Calendar.](images/getting-started/background-color-in-flutter-calendar.png)
 
 ## Navigation arrow
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
@@ -374,7 +374,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Show Navigation Arrow](images/getting-started/show-navigation-arrow.jpg)
+![Show Navigation Arrow in Flutter Calendar.](images/getting-started/show-navigation-arrow-in-flutter-calendar.jpg)
 
 
 >**NOTE** 
@@ -404,7 +404,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Cell end padding](images/getting-started/cell-end-padding.png)
+![Cell end padding in Flutter Calendar.](images/getting-started/cell-end-padding-in-flutter-calendar.png)
 
 ## Current time indicator
 
@@ -426,7 +426,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![showCurrentTimeIndicator](images/getting-started/current-time-indicator.png)
+![showCurrentTimeIndicator in Flutter Calendar.](images/getting-started/current-time-indicator-in-flutter-calendar.png)
 
 ## Week number
 
@@ -450,7 +450,7 @@ Display the Week number of the year in all views except schedule view of the `Sf
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number in Flutter Calendar](images\getting-started\flutter-calendar-week-number.png)
+![Week Number in Flutter Calendar.](images\getting-started\week-number-in-flutter-calendar.png)
 
 ## Week number appearance
 
@@ -478,7 +478,7 @@ Customize the Week number text style of the calendar by using the [WeekNumberSty
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number Appearance in Flutter Calendar](images\getting-started\flutter-calendar-week-number-appearance.png)
+![Week Number Appearance in Flutter Calendar.](images\getting-started\week-number-appearance-in-flutter-calendar.png)
 
 Get the complete "getting started" sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 
