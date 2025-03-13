@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open a Document From URL in Flutter PDF Viewer widget (SfPdfViewer) | Syncfusion
-description: Learn here about opening a PDF document from URL in Syncfusion Flutter PDF Viewer widget (SfPdfViewer).
+title: Open a Document From URL in Flutter PDF Viewer | Syncfusion
+description: Learn here about opening a PDF document from URL in Syncfusion® Flutter PDF Viewer widget (SfPdfViewer).
 platform: flutter
 control: SfPdfViewer
 documentation: ug

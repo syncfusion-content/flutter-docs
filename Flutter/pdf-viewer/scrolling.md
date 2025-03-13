@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about scrolling functionality in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget including programmatically setting scroll positions and detecting scroll changes.
+description: Learn here about scrolling functionality in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget including programmatically setting scroll positions.
 platform: flutter
 control: SfPdfViewer
 documentation: ug

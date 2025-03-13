@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Load Callbacks in Flutter PDF Viewer widget | Syncfusion
-description: Learn here about the document load callbacks in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget
+description: Learn here all about the document load callbacks in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget
 platform: flutter
 control: SfPdfViewer
 documentation: ug
@@ -13,7 +13,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 ## Document loaded callback
 
-The [onDocumentLoaded](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoaded.html) callback triggers after the `document` are loaded in the `SfPdfViewer`. The document in the [PdfDocumentLoadedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadedDetails-class.html) will return the loaded [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) instance. The following code example explains the same.
+The [onDocumentLoaded](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoaded.html) callback triggers after the `document` is loaded in the `SfPdfViewer`. The document in the [PdfDocumentLoadedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfDocumentLoadedDetails-class.html) will return the loaded [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) instance. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8" %}

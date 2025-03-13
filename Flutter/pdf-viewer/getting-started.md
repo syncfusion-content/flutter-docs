@@ -12,7 +12,7 @@ This section explains the steps to add the [SfPdfViewer](https://pub.dev/documen
 
 To get started quickly, you can also check out our video tutorial below. 
 
-<style>#FlutterSfPdfViewerFormFillingTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='FlutterSfPdfViewerGettingStartedTutorial' src="https://www.youtube.com/embed/f1zEJZRdo7w?si=KaBtOjAEbrrRBw5y"></iframe>
+<style>#FlutterSfPdfViewerGettingStartedTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='FlutterSfPdfViewerGettingStartedTutorial' src="https://www.youtube.com/embed/f1zEJZRdo7w?si=KaBtOjAEbrrRBw5y"></iframe>
 
 ## Add the Flutter PDF Viewer to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
