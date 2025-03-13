@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Dayview in Flutter Calendar.](images/getting-started/dayview-in-flutter-calendar.png){:width="316" height="550" loading="lazy"}
+![Day view in Flutter Calendar.](images/getting-started/flutter-calendar-dayview.png){:width="316" height="550" loading="lazy"}
 
 ## Change different calendar views
 
@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Monthview in Flutter Calendar.](images/getting-started/monthview-in-flutter-calendar.png){:width="443" height="550" loading="lazy"}
+![Month view in Flutter Calendar.](images/getting-started/flutter-calendar-monthview.png){:width="443" height="550" loading="lazy"}
 
 ## Add data source
 
@@ -171,7 +171,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-![Datasource in Flutter Calendar.](images/getting-started/datasource-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Data source in Flutter Calendar.](images/getting-started/flutter-calendar-datasource.png){:width="452" height="550" loading="lazy"}
 
 ## Change first day of week
 
@@ -192,7 +192,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Change first day of week in Flutter Calendar.](images/getting-started/firstday-week-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Change first day of week in Flutter Calendar.](images/getting-started/flutter-calendar-firstday-week.png){:width="452" height="550" loading="lazy"}
 
 ## Initial selected date
 
@@ -218,7 +218,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initial selected date in Flutter Calendar.](images/getting-started/initial-selected-date-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Initial selected date in Flutter Calendar.](images/getting-started/flutter-calendar-initial-selected-date.png){:width="452" height="550" loading="lazy"}
 
 ## Initial display date
 
@@ -244,7 +244,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initial display date in Flutter Calendar.](images/getting-started/initial-display-date-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Initial display date in Flutter Calendar.](images/getting-started/flutter-calendar-initial-display-date.png){:width="452" height="550" loading="lazy"}
 
 ## Selection decoration
 
@@ -275,7 +275,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Selection decoration in Flutter Calendar.](images/getting-started/selection-decoration-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Selection decoration in Flutter Calendar.](images/getting-started/flutter-calendar-selection-decoration.png){:width="452" height="550" loading="lazy"}
 
 ## Today highlight color
 
@@ -301,7 +301,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Today highlight color in Flutter Calendar.](images/getting-started/today-highlight-color-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Today highlight color in Flutter Calendar.](images/getting-started/flutter-calendar-today-highlight-color.png){:width="452" height="550" loading="lazy"}
 
 ## Cell border color
 
@@ -327,7 +327,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Cell border color in Flutter Calendar.](images/getting-started/cell-border-color-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Cell border color in Flutter Calendar.](images/getting-started/flutter-calendar-cell-border-color.png){:width="452" height="550" loading="lazy"}
 
 ## Background color
 
@@ -353,7 +353,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Background color in Flutter Calendar.](images/getting-started/background-color-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![Background color in Flutter Calendar.](images/getting-started/flutter-calendar-background-color.png){:width="452" height="550" loading="lazy"}
 
 ## Navigation arrow
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
@@ -374,7 +374,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Show Navigation Arrow in Flutter Calendar.](images/getting-started/show-navigation-arrow-in-flutter-calendar.jpg){:width="340" height="504" loading="lazy"}
+![Show Navigation Arrow in Flutter Calendar.](images/getting-started/flutter-calendar-show-navigation-arrow.jpg){:width="340" height="504" loading="lazy"}
 
 
 >**NOTE** 
@@ -404,7 +404,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Cell end padding in Flutter Calendar.](images/getting-started/cell-end-padding-in-flutter-calendar.png){:width="418" height="550" loading="lazy"}
+![Cell end padding in Flutter Calendar.](images/getting-started/flutter-calendar-cell-end-padding.png){:width="418" height="550" loading="lazy"}
 
 ## Current time indicator
 
@@ -426,7 +426,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![showCurrentTimeIndicator in Flutter Calendar.](images/getting-started/current-time-indicator-in-flutter-calendar.png){:width="452" height="550" loading="lazy"}
+![show Current Time Indicator in Flutter Calendar.](images/getting-started/flutter-calendar-current-time-indicator.png){:width="452" height="550" loading="lazy"}
 
 ## Week number
 
@@ -450,7 +450,7 @@ Display the Week number of the year in all views except schedule view of the `Sf
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number in Flutter Calendar.](images\getting-started\week-number-in-flutter-calendar.png){:width="816" height="465" loading="lazy"}
+![Week Number in Flutter Calendar.](images\getting-started\flutter-calendar-week-number.png){:width="816" height="465" loading="lazy"}
 
 ## Week number appearance
 
@@ -478,7 +478,7 @@ Customize the Week number text style of the calendar by using the [WeekNumberSty
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number Appearance in Flutter Calendar.](images\getting-started\week-number-appearance-in-flutter-calendar.png){:width="297" height="550" loading="lazy"}
+![Week Number Appearance in Flutter Calendar.](images\getting-started\flutter-calendar-week-number-appearance.png){:width="297" height="550" loading="lazy"}
 
 Get the complete "getting started" sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 
