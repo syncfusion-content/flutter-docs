@@ -498,3 +498,5 @@ Get the complete "getting started" sample from [here](https://github.com/Syncfus
 * [How to show a particular week in a day view of Flutter event calendar(SfCalendar)](https://support.syncfusion.com/kb/article/10774/how-to-show-a-particular-week-in-a-day-view-of-flutter-calendar)
 * [How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10641/how-to-customize-the-selection-using-decoration-in-the-flutter-calendar)
 * [How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10764/how-to-format-the-view-header-day-and-date-in-the-flutter-calendar)
+
+N> You can also explore our [Flutter Calendar example](https://flutter.syncfusion.com/#/event-calendar/getting-started) that shows you how to render and configure the tabs.
