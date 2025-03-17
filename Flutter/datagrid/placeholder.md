@@ -9,11 +9,9 @@ documentation: ug
 
 # Placeholder in Flutter Datagrid (SfDataGrid)
 
-The DataGrid provides built-in support for displaying a placeholder when the row count is zero by setting the [SfDataGrid.placeholder]() property. When the `SfDataGrid.placeholder` is set, the DataGrid automatically shows the specified widget when there are no rows.
+The `SfDataGrid` provides built-in support for displaying a placeholder when the data source is empty by setting the [SfDataGrid.placeholder]() property. When the `SfDataGrid.placeholder` is set, the DataGrid automatically shows the specified widget in the scroll view area. By default, the `SfDataGrid` does not display anything when the data source is empty.
 
-By default, the DataGrid does not display anything when there are no rows. However, when a `placeholder` is applied, the DataGrid will display the corresponding widget specified in the `placeholder` property.
-
-The following example shows how to add a `placeholder` in DataGrid.
+The following example shows how to add a `placeholder` in SfDataGrid:
 
 {% tabs %}
 {% highlight Dart %} 
@@ -29,34 +27,40 @@ Widget build(BuildContext context) {
       columnWidthMode: ColumnWidthMode.auto,
       columns: <GridColumn>[
         GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.all(16.0),
+            alignment: Alignment.center,
+            child: Text('ID'),
+          ),
+        ),
         GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text('Name'),
+          ),
+        ),
         GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
         GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text('Salary'),
+          ),
+        ),
       ],
       placeholder: Center(
         child: Column(
@@ -64,7 +68,10 @@ Widget build(BuildContext context) {
           children: [
             Icon(Icons.thumb_down_alt_outlined, size: 30),
             SizedBox(height: 8),
-            Text('No Records Found', style: TextStyle(fontSize: 16)),
+            Text(
+              'No Records Found',
+              style: TextStyle(fontSize: 16),
+            ),
           ],
         ),
       ),

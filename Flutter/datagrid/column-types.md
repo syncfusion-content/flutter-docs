@@ -560,50 +560,64 @@ Widget build(BuildContext context) {
 
 The `SfDataGrid` provides the following callback for checkbox interactions:
 
-* [onCheckboxValueChanged]() : This callback is triggered when the checkbox is selected or unselected (i.e., when the value of the checkbox changes).
+* [onCheckboxValueChanged]() : This callback is triggered when the checkbox is selected or deselected, either by tapping on the checkbox or by selecting or deselecting a row (i.e., when the value of the checkbox changes).
+
+The checkbox callbacks provide the following properties in their arguments:
+
+* [value]() : Represents the current state of the checkbox.
+* [row]() : Refers to the DataGridRow linked to the checkbox in the checkbox column. If the checkbox is part of a column header, the value will be null, indicating that it is not linked to any specific data row.
+* [rowType]() : Defines the type of row associated with the checkbox. It indicates whether the checkbox value in a data row or header row has been modified.
 
 {% tabs %}
 {% highlight Dart %} 
  
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      showCheckboxColumn: true,
-      onCheckboxValueChanged: (details) {
-              print(details);
-            },
-      selectionMode: SelectionMode.multiple,
-      columns: [
-        GridColumn(
-            columnName: 'ID',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                  child: Text('ID'))),
-        GridColumn(
-            columnName: 'Name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'Designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Designation'))),
-        GridColumn(
-            columnName: 'Salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Salary')))
-      ],
-    ),
-  );
+@override  
+Widget build(BuildContext context) {  
+  return Scaffold(  
+    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),  
+    body: SfDataGrid(  
+      source: employeeDataSource,  
+      showCheckboxColumn: true,  
+      onCheckboxValueChanged: (details) {  
+        print(details);  
+      },  
+      selectionMode: SelectionMode.multiple,  
+      columns: [  
+        GridColumn(  
+          columnName: 'ID',  
+          label: Container(  
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+            alignment: Alignment.center,  
+            child: const Text('ID'),  
+          ),  
+        ),  
+        GridColumn(  
+          columnName: 'Name',  
+          label: Container(  
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+            alignment: Alignment.center,  
+            child: const Text('Name'),  
+          ),  
+        ),  
+        GridColumn(  
+          columnName: 'Designation',  
+          label: Container(  
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+            alignment: Alignment.center,  
+            child: const Text('Designation'),  
+          ),  
+        ),  
+        GridColumn(  
+          columnName: 'Salary',  
+          label: Container(  
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+            alignment: Alignment.center,  
+            child: const Text('Salary'),  
+          ),  
+        ),  
+      ],  
+    ),  
+  );  
 }
 
 {% endhighlight %}

@@ -288,15 +288,15 @@ Widget build(BuildContext context) {
 
 The `SfDataGrid` provides the following callbacks for sorting:
 
-* [onColumnSortChanging]() : This callback is invoked before a sort operation is performed on the `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
+* [onColumnSortChanging]() : This callback is invoked when a column is being sorted in `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
 
-* [onColumnSortChanged]() : This callback is triggered after the sort operation has been completed on the `SfDataGrid`.
+* [onColumnSortChanged]() : This callback is invoked when a column is sorted in `SfDataGrid`.
 
-The followings are the parameters of the [SfDataGrid.onColumnSortChanging]() and [SfDataGrid.onColumnSortChanged]() callbacks,
+The followings are the parameters of the [SfDataGrid.onColumnSortChanging]() and [SfDataGrid.onColumnSortChanged]() callbacks:
 
-* newSortedColumn: Retrieves the `SortColumnDetails` of the DataGrid row that was added for sorting.
+* newSortedColumn: Retrieves the `SortColumnDetails` that is going to sort a column.
 
-* oldSortedColumn: Retrieves the `SortColumnDetails` of the DataGrid row that was removed from sorting.
+* oldSortedColumn: Retrieves the `SortColumnDetails` that is removed from a column.
 
 The following example demonstrates how to use the `SfDataGrid.onColumnSortChanging` and `SfDataGrid.onColumnSortChanged` callbacks to sort a column and retrieve sorting details:
 
@@ -308,57 +308,66 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    onColumnSortChanging: (newSortedColumn, oldSortedColumn) {
-      print(newSortedColumn);
-      print(oldSortedColumn);
-      return true;
-    },
-    onColumnSortChanged: (newSortedColumn, oldSortedColumn) {
-      print(newSortedColumn);
-      print(oldSortedColumn);
-    },
-    columns: [
-      GridColumn(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      onColumnSortChanging: (newSortedColumn, oldSortedColumn) {
+        print(newSortedColumn);
+        print(oldSortedColumn);
+        return true;
+      },
+      onColumnSortChanged: (newSortedColumn, oldSortedColumn) {
+        print(newSortedColumn);
+        print(oldSortedColumn);
+      },
+      columns: [
+        GridColumn(
           columnName: 'id',
           label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
           columnName: 'name',
           label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
           columnName: 'city',
           label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
           columnName: 'freight',
           label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Freight',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 {% endhighlight %}
