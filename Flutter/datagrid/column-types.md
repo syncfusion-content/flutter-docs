@@ -556,6 +556,59 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid checkbox shape](images/column-types/flutter-datagrid-checkbox-shape.png)
 
+### Callbacks
+
+The `SfDataGrid` provides the following callback for checkbox interactions:
+
+* [onCheckboxValueChanged]() : This callback is triggered when the checkbox is selected or unselected (i.e., when the value of the checkbox changes).
+
+{% tabs %}
+{% highlight Dart %} 
+ 
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      showCheckboxColumn: true,
+      onCheckboxValueChanged: (details) {
+              print(details);
+            },
+      selectionMode: SelectionMode.multiple,
+      columns: [
+        GridColumn(
+            columnName: 'ID',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                  child: Text('ID'))),
+        GridColumn(
+            columnName: 'Name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'Designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Designation'))),
+        GridColumn(
+            columnName: 'Salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: Text('Salary')))
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Limitations
 
 The following are the limitations of GridCheckboxColumn:
