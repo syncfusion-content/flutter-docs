@@ -284,6 +284,95 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+### Callbacks
+
+The `SfDataGrid` provides the following callbacks for sorting:
+
+* [onColumnSortChanging]() : This callback is invoked when a column is being sorted in `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
+
+* [onColumnSortChanged]() : This callback is invoked when a column is sorted in `SfDataGrid`.
+
+The followings are the parameters of the [SfDataGrid.onColumnSortChanging]() and [SfDataGrid.onColumnSortChanged]() callbacks:
+
+* newSortedColumn: Retrieves the `SortColumnDetails` that is going to sort a column.
+
+* oldSortedColumn: Retrieves the `SortColumnDetails` that is removed from a column.
+
+The following example demonstrates how to use the `SfDataGrid.onColumnSortChanging` and `SfDataGrid.onColumnSortChanged` callbacks to sort a column and retrieve sorting details:
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      onColumnSortChanging: (newSortedColumn, oldSortedColumn) {
+        print(newSortedColumn);
+        print(oldSortedColumn);
+        return true;
+      },
+      onColumnSortChanged: (newSortedColumn, oldSortedColumn) {
+        print(newSortedColumn);
+        print(oldSortedColumn);
+      },
+      columns: [
+        GridColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'freight',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Freight',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Show sort number
 
 The Datagrid provides support for the sequence numbers to display the sorted columns during multi-column sorting by setting [SfDataGrid.showSortNumbers](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showSortNumbers.html) to true. This is applicable when the `SfDataGrid.allowMultiColumnSorting` property is enabled.
