@@ -576,7 +576,7 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            deciamlPlaces: 5
+                            decimalPlaces: 5
                         ),
                         primaryYAxis: NumericAxis(
                             decimalPlaces: 4,
