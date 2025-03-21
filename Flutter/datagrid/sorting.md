@@ -284,7 +284,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Callbacks
+## Callbacks
 
 The `SfDataGrid` provides the following callbacks for sorting:
 
