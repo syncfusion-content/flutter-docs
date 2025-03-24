@@ -25,14 +25,12 @@ This section provides the user guide link for each widget and its package link.
 <td><a href ="https://help.syncfusion.com/flutter/ai-assistview/overview">AIAssistView</a></td>
 <td><a href="https://pub.dev/packages/syncfusion_flutter_chat">syncfusion_flutter_chat</a></td>
 </tr>
-<tr>
 
 <tr>
 <td>Chat</td>
 <td><a href = "https://help.syncfusion.com/flutter/chat/overview">Chat</a></td>
 <td><a href="https://pub.dev/packages/syncfusion_flutter_chat">syncfusion_flutter_chat</a></td>
 </tr>
-<tr>
 
 <tr>
 <td>Grid</td>

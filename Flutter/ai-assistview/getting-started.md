@@ -56,7 +56,7 @@ Import the library using the code provided below.
 
 ## Initialize AI AssistView widget
 
-Add an AI AssistView widget with the required property, [messages](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html).
+Add an AI AssistView widget with the required [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) property. 
 
 {% tabs %}
 {% highlight dart %}
@@ -79,7 +79,7 @@ Add an AI AssistView widget with the required property, [messages](https://pub.d
 
 ## Add placeholder to composer
 
-To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property, which is of type InputDecoration. The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
+To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property, which is of type [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html). The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
 
 {% tabs %}
 {% highlight dart %}
@@ -107,7 +107,7 @@ To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syn
 
 ## Add placeholder to conversation area
 
-By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`] (https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
 {% highlight dart %}

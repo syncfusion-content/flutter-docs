@@ -151,7 +151,7 @@ In the following example, included the user's display name additionally in the e
 
 ## Suggestions 
 
-The [`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
+The [`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion `layout`, `background color`, and other properties can be customized.
 
 {% tabs %}
 {% highlight dart %}
@@ -261,7 +261,7 @@ The [`showTimestamp`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 ### Time stamp format
 
-The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/timestampFormat.html) property is used to specify the date format for the sending time (timestamp). The default value is DateFormat('d/M/y : hh:mm a').
+The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/timestampFormat.html) property is used to specify the date format for the sending time (timestamp). The default value is `DateFormat('d/M/y : hh:mm a')`.
 
 {% tabs %}
 {% highlight dart %}
@@ -371,7 +371,7 @@ The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/c
 
 ### Header text style
 
-The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/headerTextStyle.html) property is used to define the text style for the header of the message, including the username and timestamp.
+The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/headerTextStyle.html) property is used to define the text style for the header of the message, including the `username` and `timestamp`.
 
 ### Background color
 
