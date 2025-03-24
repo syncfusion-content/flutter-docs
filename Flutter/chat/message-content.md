@@ -253,7 +253,7 @@ Based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ### User name
 
-The [`showUserName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
+The [`showAuthorName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
 
 ### Time stamp
 
@@ -297,10 +297,10 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
           ),
         ],
         outgoingUser: '123-001',
-        incomingBubbleSettings: ChatBubbleSettings(
+        incomingMessageSettings: ChatMessageSettings(
           timestampFormat: DateFormat('MMM d, h:mm a'),
         ),
-        outgoingBubbleSettings: ChatBubbleSettings(
+        outgoingMessageSettings: ChatMessageSettings(
           timestampFormat: DateFormat('h:mm a'),
         ),
       ),
@@ -314,7 +314,7 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ### User avatar
 
-The [`showUserAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
+The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/showUserAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
 
 {% tabs %}
 {% highlight dart %}
@@ -350,11 +350,11 @@ The [`showUserAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/lat
           ),
         ],
         outgoingUser: '123-001',
-        incomingBubbleSettings: const ChatBubbleSettings(
-          showUserAvatar: true,
+        incomingMessageSettings: const ChatMessageSettings(
+          showAuthorAvatar: true,
         ),
-        outgoingBubbleSettings: const ChatBubbleSettings(
-          showUserAvatar: false,
+        outgoingMessageSettings: const ChatMessageSettings(
+          showAuthorAvatar: false,
         ),
       ),
     );
@@ -373,9 +373,9 @@ The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/c
 
 The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/headerTextStyle.html) property is used to define the text style for the header of the message, including the username and timestamp.
 
-### Content background color
+### Background color
 
-The [`contentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentBackgroundColor.html) property is used to specify the background color of the content area within the message.
+The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentBackgroundColor.html) property is used to specify the background color of the content area within the message.
 
 {% tabs %}
 {% highlight dart %}
@@ -411,11 +411,11 @@ The [`contentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_
           ),
         ],
         outgoingUser: '123-001',
-        incomingBubbleSettings: const ChatBubbleSettings(
-          contentBackgroundColor: Color(0xFFE1F5FE),
+        incomingMessageSettings: const ChatMessageSettings(
+          backgroundColor: Color(0xFFE1F5FE),
         ),
-        outgoingBubbleSettings: const ChatBubbleSettings(
-          contentBackgroundColor: Color(0xFFF1F8E9),
+        outgoingMessageSettings: const ChatMessageSettings(
+          backgroundColor: Color(0xFFF1F8E9),
         ),
       ),
     );
@@ -426,9 +426,9 @@ The [`contentBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_
 
 ![Bubble settings](images/message-content/contentbackgroundcolor-for-bubblesettings.png)
 
-### Content shape
+### Shape
 
-The [`contentShape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentShape.html) property is used to define the shape of the content area of the message, such as rounded or custom shapes.
+The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentShape.html) property is used to define the shape of the content area of the message, such as rounded or custom shapes.
 
 {% tabs %}
 {% highlight dart %}
@@ -464,13 +464,13 @@ The [`contentShape`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
           ),
         ],
         outgoingUser: '123-001',
-        incomingBubbleSettings: const ChatBubbleSettings(
-          contentShape: RoundedRectangleBorder(
+        incomingMessageSettings: const ChatMessageSettings(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
         ),
-        outgoingBubbleSettings: const ChatBubbleSettings(
-          contentShape: RoundedRectangleBorder(
+        outgoingMessageSettings: const ChatMessageSettings(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
@@ -493,11 +493,11 @@ The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
 
 ### Padding
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/padding.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
 
 ### Content padding
 
-The [`contentPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/contentPadding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
+The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatBubbleSettings/padding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
 
 ### Avatar padding
 
@@ -515,4 +515,4 @@ The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 #### See Also
 
-* You can also customize the bubble shapes and colors properties of both [`incomingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/incomingBubbleSettings.html) and [`outgoingBubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingBubbleSettings.html)using [`SfChatTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatTheme/SfChatTheme.html) by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/SfChat.html).
+* You can also customize the bubble shapes and colors properties of both [`incomingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/incomingBubbleSettings.html) and [`outgoingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingBubbleSettings.html)using [`SfChatTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatTheme/SfChatTheme.html) by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/SfChat.html).

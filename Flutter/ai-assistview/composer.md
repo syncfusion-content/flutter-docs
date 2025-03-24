@@ -220,11 +220,11 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ![AIAssistView composer icon](images/composer/composer-prefix-suffix-icon.png)
 
-### Padding
+### Margin
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
-By default, the top padding is set to 16.
+By default, the top margin is set to 16.
 
 {% tabs %}
 {% highlight dart %}
@@ -237,7 +237,7 @@ By default, the top padding is set to 16.
       body: SfAIAssistView(
         messages: _messages,
         composer: const AssistComposer(
-          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
+          margin: EdgeInsets.fromLTRB(10, 30, 10, 20),
         ),
       ),
     );
@@ -246,7 +246,7 @@ By default, the top padding is set to 16.
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer padding](images/composer/composer-padding.png)
+![AIAssistView composer margin](images/composer/composer-padding.png)
 
 ### Text style
 

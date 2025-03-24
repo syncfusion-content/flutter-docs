@@ -390,9 +390,9 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 
 ![Chat actionButton support](images/action-button/shape-property-for-actionbutton.png)
 
-### Padding
+### Margin
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/padding.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 {% tabs %}
 {% highlight dart %}
@@ -407,7 +407,7 @@ The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/cha
         messages: _messages,
         outgoingUser: '123-001,
         actionButton: ChatActionButton(
-          padding: const EdgeInsetsDirectional.only(start: 8.0),
+          margin: const EdgeInsetsDirectional.only(start: 8.0),
           onPressed: (String newMessage) {
             // Handle the send button click action here.
           },
