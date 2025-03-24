@@ -122,7 +122,7 @@ It is a callback that is invoked whenever the action button is pressed. Since th
 
 ### Tooltip
 
-The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/tooltip.html) text describes the button's action when pressed. It is displayed when the user long-presses on touch devices or hovers the mouse over it on desktop devices. By default, it is set to null, so no tooltip is shown.
+The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/tooltip.html) text describes the button's action when pressed. It is displayed when the user long-presses on touch devices or hovers the mouse over it on desktop devices. By default, it is set to `null`, so no tooltip is shown.
 
 {% tabs %}
 {% highlight dart %}
