@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Placeholder in Flutter Chat widget | Syncfusion
-description: Learn here about the RTL support in Syncfusion Flutter Chat (SfChat) widget and more.
+description: Learn here about the Right to Left(RTL) support in Syncfusion Flutter Chat (SfChat) widget and more.
 platform: flutter
 control: SfChat
 documentation: ug

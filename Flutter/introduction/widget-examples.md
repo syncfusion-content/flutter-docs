@@ -21,7 +21,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <tr>
 <td>AI AssistView</td>
 <td><a href ="https://help.syncfusion.com/flutter/ai-assistview/overview">AIAssistView</a></td>
-<td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/ai_assist_view">samples/ai_assist_view</a></td>
+<td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/ai_assist_view">samples/AI_assist_view</a></td>
 </tr>
 
 <tr>
