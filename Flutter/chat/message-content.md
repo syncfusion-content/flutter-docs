@@ -112,7 +112,7 @@ In the following example, included the user's display name additionally in the e
         body: SfChat(
           messages: _messages,
           outgoingUser: '123-001',
-          bubbleAvatarBuilder: (context, index, message) {
+          messageAvatarBuilder: (context, index, message) {
             if (message is ChatMessageExt) {
               return CircleAvatar(
                 radius: 20,
@@ -251,7 +251,7 @@ Based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_c
 
 >You must import the [`intl`](https://pub.dev/documentation/intl/latest/intl/intl-library.html) package for handling [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/timestampFormat.html) in your chat application.
 
-### User name
+### Author name
 
 The [`showAuthorName`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/showAuthorName.html) property is used to show or hide the author's name for the message. Defaults to `true`.
 
@@ -312,7 +312,7 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 
 ![Bubble settings](images/message-content/timestampformat-for-bubblesettings.png)
 
-### User avatar
+### Author avatar
 
 The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/showAuthorAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
 
