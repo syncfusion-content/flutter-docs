@@ -560,13 +560,13 @@ Widget build(BuildContext context) {
 
 The `SfDataGrid` provides the following callback for checkbox interactions:
 
-* [onCheckboxValueChanged]() : This callback is triggered when the checkbox is selected or deselected, either by tapping on the checkbox or by selecting or deselecting a row (i.e., when the value of the checkbox changes).
+* [onCheckboxValueChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCheckboxValueChanged.html) : This callback is triggered when the checkbox is selected or deselected, either by tapping on the checkbox or by selecting or deselecting a row (i.e., when the value of the checkbox changes).
 
 The checkbox callbacks provide the following properties in their arguments:
 
-* [value]() : Represents the current state of the checkbox.
-* [row]() : Refers to the DataGridRow linked to the checkbox in the checkbox column. If the checkbox is part of a column header, the value will be null, indicating that it is not linked to any specific data row.
-* [rowType]() : Defines the type of row associated with the checkbox. It indicates whether the checkbox value in a data row or header row has been modified.
+* [value](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/value.html) : Represents the current state of the checkbox.
+* [row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/row.html) : Refers to the DataGridRow linked to the checkbox in the checkbox column. If the checkbox is part of a column header, the value will be null, indicating that it is not linked to any specific data row.
+* [rowType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/rowType.html) : Defines the type of row associated with the checkbox. It indicates whether the checkbox value in a data row or header row has been modified.
 
 {% tabs %}
 {% highlight Dart %} 
