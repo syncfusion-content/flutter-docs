@@ -15,14 +15,14 @@ This section explains the customization options available in [`AssistComposer`](
 
 The default [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) is a rounded rectangular text editor that allows users to compose request messages. You can customize its appearance by adding hint text, borders, prefix icons, suffix icons, and more.
 
-When the composer is null, no default text field is added to the AI AssistView widget.
+When the `composer` is `null`, no default text field is added to the AI AssistView widget.
 
 ### Minimum and maximum lines
 
 * [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
 * [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
-The default value for minLines is 1, and the default value for maxLines is 6.
+The default value for `minLines` is `1`, and the default value for `maxLines` is `6`.
 
 {% tabs %}
 {% highlight dart %}
@@ -51,7 +51,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
-The [`InputDecoration`] class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
+The `InputDecoration` class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
 The following are the major features available in [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html) for decorating the composer:
 * [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html)
@@ -97,7 +97,7 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 
 #### Content padding
 
-The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
+The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the `padding` is set to `16` horizontally and `18` vertically.
 
 {% tabs %}
 {% highlight dart hl_lines="28" %}
@@ -126,7 +126,7 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 
 #### Hint text
 
-The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to null.
+The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to `null`.
 
 {% tabs %}
 {% highlight dart %}
@@ -224,7 +224,7 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/margin.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
 
-By default, the top margin is set to 16.
+By default, the top `margin` is set to `16`.
 
 {% tabs %}
 {% highlight dart %}
