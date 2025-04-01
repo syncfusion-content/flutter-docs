@@ -135,6 +135,135 @@ In the above code snippet, [`data`](https://pub.dev/documentation/syncfusion_flu
 Here, the [`SfChartThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html) includes the properties required to customize the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html), [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html), and [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) widgets.
 Similarly, refer the following table to know about the other specialized theme widget classes that are applicable for respective widgets.
 
+<table>
+    <tr>
+        <td>
+            <b>Theme data class</b>
+        </td>
+        <td>
+           <b>Applicable widgets</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData-class.html">SfAIAssistViewThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html">SfAIAssistView</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfBarcodeThemeData-class.html">SfBarcodeThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html">SfBarcodeGenerator</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfCalendarThemeData-class.html">SfCalendarThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/syncfusion_flutter_chat/SfChat-class.html">SfChat</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+         <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html">SfChartThemeData</a>
+        </td>
+        <td>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html">SfCartesianChart</a> <br/>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html">SfCircularChart</a><br>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html">SfPyramidChart</a><br>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html">SfFunnelChart</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="">SfSparkChartThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html">SfSparkLineChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html">SfSparkBarChart</a> <br/>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html">SfSparkAreaChart</a><br>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html">SfSparkWinLossChart</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+         <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html">SfDataGridThemeData</a>
+        </td>
+        <td>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html">SfDataGrid</a>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDateRangePickerThemeData-class.html">SfDateRangePickerThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html">SfDateRangePicker</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData-class.html">SfMapsThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html">SfMaps</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfGaugeThemeData-class.html">SfGaugeThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html">SfRadialGauge</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html">SfSliderThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">SfSlider</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html">SfRangeSliderThemeData</a>
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">SfRangeSlider</a>
+        </td>
+  </tr>
+  <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData-class.html">SfRangeSelectorThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData-class.html">SfPdfViewerThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html">SfPdfViewer</a>
+        </td>
+    </tr>
+</table>
+
 
 <table>
     <tr>
@@ -169,8 +298,7 @@ Similarly, refer the following table to know about the other specialized theme w
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
         </td>
     </tr>
-    </tr>
-        <tr>
+    <tr>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
         </td>
