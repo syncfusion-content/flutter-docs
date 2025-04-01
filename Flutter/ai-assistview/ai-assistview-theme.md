@@ -459,7 +459,7 @@ The [`responseAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 
 ## Request message background color
 
-The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentBackgroundColor.html) property is used to specify the background color of contents containing request messages.
+The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageBackgroundColor.html) property is used to specify the background color of contents containing request messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -486,7 +486,7 @@ The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 
 ## Response message background color
 
-The [`responseMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentBackgroundColor.html) property is used to specify the background color of contents containing response messages.
+The [`responseMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageBackgroundColor.html) property is used to specify the background color of contents containing response messages.
 
 {% tabs %}
 {% highlight Dart %}
@@ -785,7 +785,7 @@ The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 
 ## Request message shape
 
-The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestBubbleContentShape.html) property is used to specify the shape and border radius of request message contents.
+The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageShape.html) property is used to specify the shape and border radius of request message contents.
 
 {% tabs %}
 {% highlight Dart %}
@@ -814,7 +814,7 @@ The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_cor
 
 ## Response message shape
 
-The [`responseMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseBubbleContentShape.html) property is used to specify the shape and border radius of response message contents.
+The [`responseMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageShape.html) property is used to specify the shape and border radius of response message contents.
 
 {% tabs %}
 {% highlight Dart %}
