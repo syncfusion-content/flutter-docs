@@ -284,15 +284,15 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Callbacks
+## Callbacks
 
 The `SfDataGrid` provides the following callbacks for sorting:
 
-* [onColumnSortChanging]() : This callback is invoked when a column is being sorted in `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
+* `onColumnSortChanging` : This callback is invoked when a column is being sorted in `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
 
-* [onColumnSortChanged]() : This callback is invoked when a column is sorted in `SfDataGrid`.
+* `onColumnSortChanged` : This callback is invoked when a column is sorted in `SfDataGrid`.
 
-The followings are the parameters of the [SfDataGrid.onColumnSortChanging]() and [SfDataGrid.onColumnSortChanged]() callbacks:
+The followings are the parameters of the [SfDataGrid.onColumnSortChanging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnSortChanging.html) and [SfDataGrid.onColumnSortChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnSortChanged.html) callbacks:
 
 * newSortedColumn: Retrieves the `SortColumnDetails` that is going to sort a column.
 
