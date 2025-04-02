@@ -17,7 +17,7 @@ The AI AssistView displays the content of user requests and AI responses. Each m
 
 ### Request message
 
-Customize the content of request messages by changing the background color, background shape, and other features based on the message, index, or specific conditions.
+Customize the content of [request](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) messages by changing the `background color`, `background shape`, and other features based on the message, index, or specific conditions.
 
 {% tabs %}
 {% highlight dart %}
@@ -67,7 +67,7 @@ Customize the content of request messages by changing the background color, back
 
 ### Response message
 
-Customize the content of response messages by changing the background color, background shape, and other features based on the message, index, or specific conditions.
+Customize the content of [response](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) messages by changing the `background color`, `background shape`, and other features based on the message, index, or specific conditions.
 
 {% tabs %}
 {% highlight dart %}
@@ -293,7 +293,7 @@ The message author's avatar displays either an image or the initials of their na
 
 ### Content area
 
-Customize the area where message content is displayed by changing its background color, shape, and functionalities based on the user or other specific conditions.
+Customize the area where message content is displayed by changing its `background color`, `shape`, and functionalities based on the user or other specific conditions.
 
 {% tabs %}
 {% highlight dart %}
@@ -349,7 +349,7 @@ Customize the area where message content is displayed by changing its background
 
 ### Suggestions
 
-Provide a list of response suggestions. When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
+Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
 
 {% tabs %}
 {% highlight dart %}
@@ -466,7 +466,7 @@ Indicates that the AI service's response is in progress after a request has been
 
 ### Toolbar items
 
-Append a toolbar to response messages that provides options to perform various actions, such as rating the response, sharing it, copying it, and more.
+Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/toolbarItems.html) to response messages that provides options to perform various actions, such as rating the response, sharing it, copying it, and more.
 
 {% tabs %}
 {% highlight dart %}

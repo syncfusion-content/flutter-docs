@@ -109,8 +109,7 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
         </td>
     </tr>
-    </tr>
-        <tr>
+    <tr>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
         </td>
@@ -128,6 +127,7 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html">SfPyramidChart</a><br>
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html">SfFunnelChart</a>
         </td>
+    </tr>
     <tr>
         <td>
             <a href="">SfSparkChartThemeData</a>
@@ -298,8 +298,7 @@ Similarly, refer the following table to know about the other specialized theme w
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html">SfCalendar</a>
         </td>
     </tr>
-    </tr>
-        <tr>
+    <tr>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData-class.html">SfChatThemeData</a>
         </td>
