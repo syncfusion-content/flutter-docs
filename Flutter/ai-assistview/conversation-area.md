@@ -349,7 +349,7 @@ Customize the area where message content is displayed by changing its `backgroun
 
 ### Suggestions
 
-Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the `layout`, `background colors`, and other elements of the suggestions can be customized.
+Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
 
 {% tabs %}
 {% highlight dart %}
