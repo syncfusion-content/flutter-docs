@@ -7,9 +7,9 @@ control: API
 documentation: ug
 ---
 
-# Right to Left (RTL) in Syncfusion Flutter Widgets
+# Right to Left (RTL) in Syncfusion<sup>&reg;</sup> Flutter Widgets
 
-This page helps to navigate to the documentation of Right to left (RTL) support available in the Syncfusion Flutter widgets.
+This page helps to navigate to the documentation of Right to left (RTL) support available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
 
 <table>
 	<tr>
@@ -106,6 +106,14 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/treemap/right-to-left">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            PDF Viewer
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/pdf-viewer/right-to-left">Link</a>
         </td>
     </tr>
 </table>

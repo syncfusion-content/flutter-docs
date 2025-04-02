@@ -9,7 +9,8 @@ documentation: ug
 
 # Bookmarks in Flutter PDF
 
-The Syncfusion Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. It also provides support to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html), [`remove`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/remove.html), and modify the bookmarks in an existing PDF Document.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. It also provides support to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html), [`remove`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/remove.html), and modify the bookmarks in an existing PDF Document.
 
 ## Adding bookmarks to a PDF
 
@@ -33,7 +34,7 @@ bookmark.textStyle = [PdfTextStyle.bold];
 bookmark.color = PdfColor(255, 0, 0);
 
 //Save the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -74,7 +75,7 @@ childBookmark1.color = PdfColor(0, 255, 0);
 childBookmark2.color = PdfColor(0, 0, 255);
 
 //Saves the bookmark
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -104,7 +105,7 @@ bookmark.color = PdfColor(255, 0, 0);
 bookmark.textStyle = [PdfTextStyle.bold];
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
   
 //Disposes the document
 document.dispose();
@@ -113,7 +114,8 @@ document.dispose();
 
 ## Inserting bookmarks in an existing PDF
 
-When loading an existing document, the Syncfusion Flutter PDF loads all bookmarks of the document.
+When loading an existing document, the Syncfusion<sup>&reg;</sup>
+  Flutter PDF loads all bookmarks of the document.
 
 Each loaded bookmark is represented by the [`PdfBookmark`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmark-class.html) object. The following code example explains how to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html) new bookmarks in the existing PDF document.
 
@@ -130,7 +132,7 @@ PdfBookmark bookmark = document.bookmarks.insert(1, 'New Bookmark');
 bookmark.destination = PdfDestination(document.pages[0], Offset(40, 40));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -157,7 +159,7 @@ bookmark.removeAt(1);
 bookmark.remove('Page 1');
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -166,7 +168,8 @@ document.dispose();
 
 ## Modifying bookmarks in an existing PDF
 
-The Syncfusion Flutter PDF allows you to modify the [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) in the existing PDF document. The following modifications can be done to bookmarks in an existing document.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF allows you to modify the [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) in the existing PDF document. The following modifications can be done to bookmarks in an existing document.
 
 * Modify the bookmark style, color, title, and destination.
 * Add or insert new bookmarks into the root collection.
@@ -199,7 +202,7 @@ PdfBookmark childBookmark = bookmark.add('Child Bookmark');
 childBookmark.destination = PdfDestination(page, Offset(100, 100));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

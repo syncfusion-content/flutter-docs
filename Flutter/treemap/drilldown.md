@@ -2,7 +2,7 @@
 layout: post
 title: Drilldown in Flutter Treemap widget | Syncfusion
 description: Learn here all about how to drilled down hierarchical level tiles in Syncfusion Flutter Treemap (SfTreemap) widget and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
@@ -10,6 +10,11 @@ documentation: ug
 # Drilldown in Flutter Treemap (SfTreemap)
 
 The drilldown feature provides better visualization of larger set of hierarchical level data.
+
+To learn more about how to deep dive into the drill down feature in Flutter Treemap, you can watch this video.
+
+<style>#flutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterTreemapVideoTutorial' src='https://www.youtube.com/embed/tLAPEDlhfS4'></iframe>
 
 ## Enable drilldown
 
@@ -207,8 +212,8 @@ class CarSale {
 
 The breadcrumb is used to display information about the drilled item and provides option to navigate back to previous level. You can customize the breadcrumb items using the following properties:
 
-* Position - Positions the breadcrumbs either top or bottom of the treemap. The default value of the `position` is ` TreemapBreadcrumbPosition.top`.
-* Divider - Used to add a separator between two breadcrumbs.
+* **Position** - Positions the breadcrumbs either top or bottom of the treemap. The default value of the `position` is ` TreemapBreadcrumbPosition.top`.
+* **Divider** - Used to add a separator between two breadcrumbs.
 
 {% tabs %}
 {% highlight Dart %}

@@ -127,7 +127,6 @@ Chart supports watermark which allows you to mark the specific area of interest 
               )
             );
           }
-        }
 
         class ChartData {
           ChartData(this.x, this.y);

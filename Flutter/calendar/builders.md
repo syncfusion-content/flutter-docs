@@ -19,14 +19,14 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 [MonthCellDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails-class.html) - returns the details of the month cell.
 
-`date` - returns the month cell date.
-`appointments` - returns the month cell appointments.
-`visibleDates` - returns the current view visible dates.
-`bounds` - returns the month cell bounds.
+* `date` - returns the month cell date.
+* `appointments` - returns the month cell appointments.
+* `visibleDates` - returns the current view visible dates.
+* `bounds` - returns the month cell bounds.
 
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 @override
 Widget build(BuildContext context) {
@@ -73,11 +73,11 @@ You can design your custom view and assign this view to the month header of a sc
 
 [ScheduleViewMonthHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewMonthHeaderDetails-class.html) - returns the required details of the schedule view month header.
 
-`date` - returns the header date.
-`bounds` - returns the header bounds.
+* `date` - returns the header date.
+* `bounds` - returns the header bounds.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9" %}
+{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30" %}
 
 @override
 Widget build(BuildContext context) {
@@ -125,13 +125,13 @@ The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutte
 [CalendarAppointmentDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails-class.html): Returns the details of the appointment view.
 
 
-`date`: The date associate with the appointment view.
-`appointments`: List of appointments associated with the appointment view.
-`bound`: Returns the appointment view bounds.
-`isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
+* `date`: The date associate with the appointment view.
+* `appointments`: List of appointments associated with the appointment view.
+*`bound`: Returns the appointment view bounds.
+* `isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
 
 {% tabs %}
-{% highlight dart hl_lines="11 12" %}
+{% highlight dart hl_lines="11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106" %}
 
 class MyAppState extends State<MyApp> {
   CalendarController _controller = CalendarController();
@@ -258,12 +258,12 @@ The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calenda
 
 [TimeRegionDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails-class.html): Returns the details of the time region view.
 
-`date`: The date associate with the time region view.
-`bound`: Returns the time region view bounds.
-`region`: The Region detail associated with the time region view.
+* `date`: The date associate with the time region view.
+* `bound`: Returns the time region view bounds.
+* `region`: The Region detail associated with the time region view.
 
 {% tabs %}
-{% highlight dart hl_lines="22 23" %}
+{% highlight dart hl_lines="22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44" %}
 
 List<TimeRegion> _getTimeRegions() {
   final List<TimeRegion> regions = <TimeRegion>[];
@@ -323,12 +323,12 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 
 [ResourceViewHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails-class.html) - returns the required details of the resource view header builder.
 
-`bound`: returns the resource view header bound.
-`resource`: returns the display name, color, id and image.
+* `bound`: returns the resource view header bound.
+* `resource`: returns the display name, color, id and image.
 
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25" %}
 
 @override
   Widget build(BuildContext context) {
@@ -367,7 +367,7 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 ## See also
 
 
-* [How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12192/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-event-calendar)
-* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12191/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-event-calendar)
-* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://www.syncfusion.com/kb/12210/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
-* [How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://www.syncfusion.com/kb/12306/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-event-calendar)
+* [How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10677/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-calendar)
+* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10679/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-calendar)
+* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10707/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
+* [How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10747/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-calendar)

@@ -41,8 +41,8 @@ sheet.getRangeByName('C4').setNumber(1062.5);
 //Create a table with the data in given range.
 sheet.tableCollection.create('Table1',  sheet.getRangeByName('A1:C4'));
 
-final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'Table.xlsx');
+final List<int> bytes = workbook.saveSync();
+File('Table.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -79,8 +79,8 @@ final ExcelTable table = sheet.tableCollection.create('Table1',  sheet.getRangeB
 //Format the table with a built-in style.
 table.builtInTableStyle = ExcelTableBuiltInStyle.tableStyleDark10;
 
-final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'BuiltInStyle.xlsx');
+final List<int> bytes = workbook.saveSync();
+File('BuiltInStyle.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -196,8 +196,8 @@ final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRange
 //Remove a table from the worksheet.
 sheet.tableCollection.remove(table1);
 
-final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'RemoveTable.xlsx');
+final List<int> bytes = workbook.saveSync();
+File('RemoveTable.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}
 
@@ -262,7 +262,7 @@ final ExcelTable table2 = sheet.tableCollection.create('Table2',  sheet.getRange
 //Remove a table from the worksheet at the specified index.
 sheet.tableCollection.removeAt(1);
 
-final List<int> bytes = workbook.saveAsStream();
-saveAsExcel(bytes, 'RemoveTable.xlsx');
+final List<int> bytes = workbook.saveSync();
+File('RemoveTable.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 {% endhighlight %}

@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Linear Gauge widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Linear Gauge (SfLinearGauge) widget, its elements, and more. 
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -18,11 +18,11 @@ To get start quickly with our Flutter Linear Gauge widget, you can check on this
 
 ## Add Linear Gauge to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Gauge dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -184,8 +184,8 @@ The following code example gives you the complete view of the above configuratio
 
 {% highlight dart %} 
 
-   import 'package:flutter/material.dart';
-   import 'package:syncfusion_flutter_gauges/gauges.dart';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
    void main() => runApp(ChartApp());
     class LinearGaugeDemo extends StatelessWidget {

@@ -42,7 +42,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders hiloOpenCloseSeries 
                             hiloOpenCloseSeries<ChartData, DateTime>(
                                 dataSource: financialData,
@@ -67,7 +67,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 #### See Also 
 
-* [Display volume data of financial series](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
+* [Display volume data of financial series](https://support.syncfusion.com/kb/article/11479/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
 
 ## Indication for same values
 
@@ -86,7 +86,7 @@ The following are the types of indication when the combination of high, low, ope
         return Scaffold(
             body: Center(
                 child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                           HiloOpenCloseSeries<ChartData, double>(
                             showIndicationForSameValues: true,
                             dataSource: <ChartData>[
@@ -117,9 +117,8 @@ The following are the types of indication when the combination of high, low, ope
                         ]
                     ),
                 )   
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 {% endtabs %}

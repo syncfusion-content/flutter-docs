@@ -325,6 +325,86 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Disable resizing for the checkbox column
+
+The checkbox column is always added as the first column this is the 0th index. To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeEndDetails/columnIndex.html) is 0. 
+
+{% tabs %}
+{% highlight Dart %}
+
+late Map<String, double> columnWidths = {
+  'id': double.nan,
+  'name': double.nan,
+  'designation': double.nan,
+  'salary': double.nan,
+  'checkbox': double.nan
+};
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowColumnsResizing: true,
+      onColumnResizeStart: (ColumnResizeStartDetails details) {
+      // Disable resizing for the `checkbox` column.
+       if (details.columnIndex == 0) {
+            return false;
+          }
+          return true;
+      },
+      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+        setState(() {
+          columnWidths[details.column.columnName] = details.width;
+        });
+        return true;
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            width: columnWidths['id']!,
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'ID',
+                ))),
+        GridColumn(
+            width: columnWidths['name']!,
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Name'))),
+        GridColumn(
+            width: columnWidths['designation']!,
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            width: columnWidths['salary']!,
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Salary'))),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Prevent column from being hidden on resizing
 
 To prevent a column from being hidden while resizing, use the `GridColumn.minimumWidth` property to set the columns’ minimum width. The column will not be resized below the minimum width.

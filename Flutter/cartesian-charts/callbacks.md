@@ -446,7 +446,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointTap: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -479,7 +479,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointDoubleTap: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -512,7 +512,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            series: <ChartSeries<ChartData,num>>[
+            series: <CartesianSeries<ChartData,num>>[
               ColumnSeries(
                 onPointLongPress: (ChartPointDetails details) {
                   print(details.pointIndex);
@@ -558,7 +558,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 
 #### See Also
 
-* [Navigating to an hyperlink on axis label tap](https://www.syncfusion.com/kb/12202/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
+* [Navigating to an hyperlink on axis label tap](https://support.syncfusion.com/kb/article/10658/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
 
 ## onLegendTapped
 
@@ -684,14 +684,14 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback contains the following arguments.
+Triggers when the trendline gets rendered. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/onRenderDetailsUpdate.html) callback contains the following arguments.
 
-* `seriesName` - specifies the series name of the trendline.
-* `calculatedDataPoints` - specifies the calculated data points of the trendline.
-* `trendlineName` - specifies the name of the trendline.
-* `intercept` - specifies the intercept value of the trendline.
-* `rSquaredValue` - specifies the r-squared value of the trendline.
-* `slope` - specifies the slope value of the trendline.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/seriesName.html) - specifies the series name of the trendline.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/calculatedDataPoints.html) - specifies the calculated data points of the trendline.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/trendlineName.html) - specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - specifies the intercept value of the trendline.
+* [`rSquaredValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/rSquaredValue.html) - specifies the r-squared value of the trendline.
+* [`slope`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/slope.html) - specifies the slope value of the trendline.
 
 {% tabs %}
 {% highlight dart %}
@@ -726,9 +726,12 @@ Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback 
 >**Note**
 * The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
 
-## onRendererCreated
+## onRendererCreated (Series)
 
-Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to:
+* Add, remove, or replace the data points programmatically.
+* pixelToPoint and pointToPixel conversions.
+* Restart the loading animation.
 
 {% tabs %}
 {% highlight dart %}
@@ -780,6 +783,74 @@ Triggers when the series renderer is created. This callback can be used to obtai
             )
           )
         ]
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## onRendererCreated (Axis)
+
+Triggers when the axis renderer is created and attached to its parent. It can be used to obtain the axis-wise [AxisController] which has the current visible range details and provides an option to change the visible range programmatically. Here, you can customize the following properties.
+
+* [`visibleMinimum`] - to gets and sets the visible minimum of the axis.
+* [`visibleMaximum`] - to gets and sets the visible maximum of the axis.
+* [`zoomFactor`] - to gets and sets the zoom factor of the axis.
+* [`zoomPosition`] - to gets and sets the zoom position of the axis.
+* [`previousZoomFactor`] - to gets the previous zoom factor of the axis.
+* [`previousZoomPosition`] - to gets the previous zoom position of the axis.
+
+{% tabs %}
+{% highlight dart %}
+
+    NumericAxisController? _xAxisController;
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+    @override
+    Widget build(BuildContext context) {
+      return Column(
+        children: <Widget>[
+          SfCartesianChart(
+            primaryXAxis: NumericAxis(
+              // Initialize the onRendererCreated.
+              onRendererCreated: (NumericAxisController controller) {
+                _xAxisController = controller;
+              },
+              // Sets the initialVisibleMinimum.
+              initialVisibleMinimum: 3,
+              // Sets the initialVisibleMaximum.
+              initialVisibleMaximum: 5,
+            ),
+            series: <LineSeries<ChartData, num>>[
+              LineSeries<ChartData, num>(
+                dataSource: chartData,
+                xValueMapper: (ChartData chartData, _) => chartData.x,
+                yValueMapper: (ChartData chartData, _) => chartData.y,
+              ),
+            ],
+          ),
+          ElevatedButton(
+            onPressed: () {
+              // Update the initialVisibleMaximum.
+              _xAxisController?.visibleMaximum = 1;
+              // Update the initialVisibleMinimum.
+              _xAxisController?.visibleMinimum = 6;
+            },
+            child: Text('Update Visible Range'),
+          )
+        ],
       );
     }
 
@@ -906,9 +977,6 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
-
->**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
-
 {% tabs %}
 {% highlight dart %}
 
@@ -919,7 +987,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
               onDatalabelTapped: (DataLabelTapArgs args) {
                 print(args.seriesIndex);                 
               },
-              series: <ChartSeries<Sample, DateTime>>[
+              series: <CartesianSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (Sample data, _) => data.x,
@@ -958,7 +1026,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
             onPlotAreaSwipe:
               (ChartSwipeDirection direction) =>
                   performSwipe(direction),
-            series: <ChartSeries<ChartData, num>>[
+            series: <CartesianSeries<ChartData, num>>[
                  AreaSeries<ChartData, num>(
                      dataSource: chartData,
                  ),
@@ -987,17 +1055,17 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 #### See Also
 
-* [Achieve sliding viewport functionality using Cartesian chart](https://www.syncfusion.com/kb/12841/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
+* [Achieve sliding viewport functionality using Cartesian chart](https://support.syncfusion.com/kb/article/11332/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
 
-* [Perform an action on swiping over the Cartesian chart](https://www.syncfusion.com/kb/12532/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
+* [Perform an action on swiping over the Cartesian chart](https://support.syncfusion.com/kb/article/10860/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
-Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
+Triggers when the error bar is being rendered. In this [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/onRenderDetailsUpdate.html) callback, you can get the following arguments.
 
-* `pointIndex` - To obtain the point index of the error bar.
-* `viewPortPointIndex` - To obtain the viewport index value of the error bar.
-* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/pointIndex.html) - To obtain the point index of the error bar.
+* [`viewPortPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/viewPortPointIndex.html) - To obtain the viewport index value of the error bar.
+* [`calculatedErrorBarValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarRenderDetails/calculatedErrorBarValues.html) - This contains the calculated error bar values such as [`horizontalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalPositiveErrorValue.html),[`horizontalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalNegativeErrorValue.html),[`verticalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalPositiveErrorValue.html) and [`verticalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalNegativeErrorValue.html).
 
 {% tabs %}
 {% highlight dart %}
@@ -1016,7 +1084,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 
       return Scaffold(
         body: SfCartesianChart(
-      series: <ChartSeries<ChartData, int>>[
+      series: <CartesianSeries<ChartData, int>>[
         ErrorBarSeries<ChartData, int>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
@@ -1076,8 +1144,8 @@ Defaults to `null`.
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
-              onCreateRenderer: (ChartSeries<ChartData, int> series) {
-                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
+              onCreateRenderer: (series) {
+                return _CustomColumnSeriesRenderer();
               }
             ),
           ],
@@ -1085,27 +1153,25 @@ Defaults to `null`.
       );
     }
 
-    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
-      _CustomColumnSeriesRenderer(this.series);
+    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer<ChartData, int> {
+      _CustomColumnSeriesRenderer();
 
-      final ColumnSeries<ChartData, int> series;
       @override
-      ChartSegment createSegment() {
-        return _ColumnCustomPainter(series);
+      ColumnSegment<ChartData, int> createSegment() {
+        return _ColumnCustomPainter();
       }
     }
 
-    class _ColumnCustomPainter extends ColumnSegment {
-      _ColumnCustomPainter(this.series);
+    class _ColumnCustomPainter extends ColumnSegment<ChartData, int> {
+      _ColumnCustomPainter();
 
-      final ColumnSeries<ChartData, int> series;
       @override
-      int get currentSegmentIndex => super.currentSegmentIndex!;
+      int get currentSegmentIndex => super.currentSegmentIndex;
 
       @override
       Paint getFillPaint() {
         final Paint customerFillPaint = Paint();
-        customerFillPaint.color = series.dataSource[currentSegmentIndex].y > 30
+        customerFillPaint.color = series.dataSource![currentSegmentIndex].y > 30
           ? Colors.red
           : Colors.green;
         customerFillPaint.style = PaintingStyle.fill;
@@ -1185,7 +1251,6 @@ the data points and legend. For further reference on this callback, Check the [`
           )
         );
       }
-    }
 
     class ChartData {
       ChartData(this.x, this.y);
@@ -1224,7 +1289,7 @@ Defaults to `null`.
 
 #### See Also
 
-* [Format the date-time axis labels in Cartesian chart](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
+* [Format the date-time axis labels in Cartesian chart](https://support.syncfusion.com/kb/article/11396/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
 
 ## multiLevelLabelFormatter
 
@@ -1283,7 +1348,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1305,13 +1370,14 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 
 #### See Also
 
-* [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+* [Customize the tooltip using its callback event](https://support.syncfusion.com/kb/article/9958/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
 
-* [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+* [Customize the axis labels using its callback event](https://support.syncfusion.com/kb/article/10114/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
 
-* [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+* [Customize the data labels using its callback event](https://support.syncfusion.com/kb/article/10115/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
 
-* [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
-* [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
+* [Disabling trackball tooltip for particular series using its callback event](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+
+* [To Synchronize panning in multiple charts](https://support.syncfusion.com/kb/article/9939/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

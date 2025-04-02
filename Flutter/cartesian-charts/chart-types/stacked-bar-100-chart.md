@@ -24,7 +24,14 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
 
 {% tabs %}
 {% highlight dart %} 
-    
+    List<ChartData> chartData = [
+        ChartData('Jan', 45, 47, 40),
+        ChartData('Feb', 45, 47, 41),
+        ChartData('Mar', 50, 42, 42),
+        ChartData('Apr', 44, 48, 40),
+        ChartData('May', 43, 49, 43),
+        ChartData('June', 44, 48, 42),
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -32,7 +39,7 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -47,17 +54,19 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y3
-                            ),
-                            StackedBar100Series<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
                 )      
             )
         );
+    }
+    class ChartData {
+        final String x;
+        final num y;
+        final num y2;
+        final num y3;
+        ChartData(this.x, this.y, this.y2, this.y3);
     }
 
 {% endhighlight %}
@@ -73,7 +82,14 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 {% tabs %}
 {% highlight dart hl_lines="13 14 20 21" %}
-    
+    List<ChartData> chartData = [
+        ChartData('Jan', 45, 47),
+        ChartData('Feb', 45, 47),
+        ChartData('Mar', 50, 42),
+        ChartData('Apr', 44, 48),
+        ChartData('May', 43, 49),
+        ChartData('June', 44, 48),
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -81,7 +97,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             StackedBar100Series<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -102,7 +118,12 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
             )
         );
     }
-
+    class ChartData {
+        final String x;
+        final num y;
+        final num y2;
+        ChartData(this.x, this.y, this.y2);
+    }
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,4 +136,4 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 * [Animation](/flutter/cartesian-charts/series-customization#animation)
 * [Gradient](/flutter/cartesian-charts/series-customization#gradient-fill)
 * [Empty points](/flutter/cartesian-charts/series-customization#empty-points)
-* [Sorting](/flutter/cartesian-charts/series-customization##sorting)
+* [Sorting](/flutter/cartesian-charts/series-customization#sorting)

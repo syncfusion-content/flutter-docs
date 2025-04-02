@@ -14,12 +14,12 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 
 [DateRangePickerCellDetails](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerCellDetails-class.html): Returns the details of the cell.
 
-`date`: The date associate with the cell.
-`bound`: Returns the cell bounds.
-`visibleDates`: The visible dates of the current view.
+* `date`: The date associate with the cell.
+* `bound`: Returns the cell bounds.
+* `visibleDates`: The visible dates of the current view.
 
 {% tabs %}
-{% highlight dart hl_lines="12 13" %}
+{% highlight dart hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 3 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63" %}
 
 class MyAppState extends State<MyApp> {
   final DateRangePickerController _controller = DateRangePickerController();
@@ -126,6 +126,6 @@ class MyAppState extends State<MyApp> {
 
 ## See also
 
-* [How to customize the date range picker cells using builder in the Flutter (SfDateRangePicker)](https://www.syncfusion.com/kb/12208/how-to-customize-the-date-range-picker-cells-using-builder-in-the-flutter-sfdaterangepicker)
-* [How to create timeline Date Picker in Flutter](https://www.syncfusion.com/kb/12474/how-to-create-timeline-date-picker-in-flutter)
-* [How to customize the special dates using builder in the Flutter Date Range Picker](https://www.syncfusion.com/kb/12374/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-range-picker)
+* [How to customize the date range picker cells using builder in the Flutter (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10711/how-to-customize-the-date-range-picker-cells-using-builder-in-the-flutter-sfdaterangepicker)
+* [How to create timeline Date Picker in Flutter](https://support.syncfusion.com/kb/article/10992/how-to-create-timeline-date-picker-in-flutter)
+* [How to customize the special dates using builder in the Flutter Date Range Picker](https://support.syncfusion.com/kb/article/10750/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-range-picker)

@@ -13,10 +13,10 @@ Calendar supports the `ViewChangedCallback` and `SelectionChangedCallback` to in
 ## View changed callback
 The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onViewChanged.html) callback triggers when the current view swiped to previous or next view, picker view switched to another picker view.
 
-`visibleDateRange` - returns the start and end dates of the current visible month.
+* `visibleDateRange` - returns the start and end dates of the current visible month.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="6 7 8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -39,10 +39,10 @@ Widget build(BuildContext context) {
 ## Selection changed callback
 The [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback triggers when selecting the dates from the date picker.
 
-`args.value` - returns the dates based on the selection mode.
+* `args.value` - returns the dates based on the selection mode.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 @override
 Widget build(BuildContext context) {

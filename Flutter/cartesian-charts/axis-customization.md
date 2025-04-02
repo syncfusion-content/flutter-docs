@@ -219,7 +219,7 @@ The color and width of the axis border can be customized with [`borderColor`](ht
             borderWidth: 1.0, 
             borderColor: Colors.blue
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -481,7 +481,86 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Opposed axis](images/axis-customization/opposite.jpg)
 
-### Offset the rendering
+### Maximum number of labels per 100 logical pixels
+
+By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for `interval` property of an axis.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(
+                            maximumLabels: 3
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Initial visible minimum
+
+The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) property defines the lowest data point initially displayed on an axis. When panning is enabled, you can pan to the actual minimum range of an axis. This property only works at load time. Use the controller to programmatically change the visible minimum.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            initialVisibleMinimum: 2
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an axis.
+
+### Initial visible maximum
+
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) property defines the highest data point finally displayed on an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property only works at load time. Use the controller to programmatically change the visible maximum.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            initialVisibleMaximum: 4
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Offset the rendering
+
+### Plot offset
 
 The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffset.html) property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates how to apply the plot offset of an axis.
 
@@ -509,37 +588,12 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Plot Offset](images/axis-customization/plot_offset.jpg)
 
-### Maximum number of labels per 100 logical pixels
+### Plot offset start
 
-By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for `interval` property of an axis.
-
-{% tabs %}
-{% highlight dart hl_lines="8" %}
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(
-                            maximumLabels: 3
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### Visible minimum
-
-The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) property is used to set the minimum visible range of an axis. When panning is enabled, you can pan to the actual minimum range of an axis.
+The [`plotOffsetStart`]() property is used to offset the rendering of the axis at start position. The following code snippet demonstrates how to apply the plot offset start of an axis.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %} 
+{% highlight dart hl_lines="9" %}
 
     @override
     Widget build(BuildContext context) {
@@ -548,7 +602,8 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            visibleMinimum: 2
+                            // 20 logical pixels gap will be left at the start of the x axis
+                            plotOffsetStart: 20
                         )
                     )
                 )
@@ -559,14 +614,14 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 {% endhighlight %}
 {% endtabs %}
 
-Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an axis.
+![Plot Offset Start](images\axis-customization\plot_offset_start.png)
 
-### Visible maximum
+### Plot offset end
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis.
+The [`plotOffsetEnd`]() property is used to offset the rendering of the axis at end position. The following code snippet demonstrates how to apply the plot offset end of an axis.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %} 
+{% highlight dart hl_lines="9" %}
 
     @override
     Widget build(BuildContext context) {
@@ -575,7 +630,8 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            visibleMaximum: 4
+                            // 20 logical pixels gap will be left at the end of the x axis
+                            plotOffsetEnd: 20
                         )
                     )
                 )
@@ -585,6 +641,8 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 {% endtabs %}
+
+![Plot Offset End](images\axis-customization\plot_offset_end.png)
 
 ## Smart axis labels
 
@@ -937,7 +995,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 #### See Also
 
-* [Render a line at a specific axis value in Cartesian charts](https://www.syncfusion.com/kb/12951/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
+* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
 
 ### Plot band padding
 
@@ -1021,7 +1079,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                 )
                             )
                         ],
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             LineSeries<ChartData, String>(
                                 dataSource: [
                                     ChartData('Jan', 35),
@@ -1164,7 +1222,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 ## Auto range calculation
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
-By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) and [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) values.
+By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) values.
   
 To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
@@ -1191,7 +1249,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 #### See Also
 
-* [Synchronize on-demand loading in the Cartesian charts](https://www.syncfusion.com/kb/13021/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
+* [Synchronize on-demand loading in the Cartesian charts](https://support.syncfusion.com/kb/article/11533/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 
 ## Axis label width customization
 
@@ -1208,7 +1266,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
             primaryXAxis: CategoryAxis(
                 maximumLabelWidth: 80,
             ),
-            series: <ChartSeries<ChartData, String>>[
+            series: <CartesianSeries<ChartData, String>>[
                     BarSeries<ChartData, String>(
                         dataSource: <ChartData>[
                             ChartData('Goldin Finance 117', 597),
@@ -1302,9 +1360,10 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## RangeController
 
-The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property is used to set the maximum and minimum values for the chart in the viewport. In the minimum and maximum properties of the axis, you can specify the minimum and maximum values with respect to the entire data source. In the visibleMinimum and visibleMaximum properties, you can specify the values to be viewed in the viewed port i.e. range controller's start and end values respectively.
+The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property defines the lowest and highest data points that are displayed on an axis.
+If the same [RangeController] instance is used in both the chart axis and the [RangeSelector], the chart's visible range will be updated based on the range selected in the [RangeSelector].
 
-Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMinimum.html), and [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/visibleMaximum.html) properties to the axis and the axis values will be visible with respect to visibleMinimum and visibleMaximum properties.
+Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html), [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMinimum.html), and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/initialVisibleMaximum.html) properties to the axis and the axis values will be visible with respect to initialVisibleMinimum and initialVisibleMaximum properties.
 
 {% tabs %}
 {% highlight dart %}
@@ -1335,10 +1394,8 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               primaryXAxis: DateTimeAxis(
                   maximum: DateTime(2020, 1, 1),
                   minimum: DateTime(2020, 3, 30),
-                  // set maximum value from the range controller
-                  visibleMaximum: rangeController.end,
                   // set minimum value from the range controller
-                  visibleMinimum: rangeController.start,
+                  initialVisibleMinimum: rangeController.start,
                   rangeController: rangeController),
               primaryYAxis: NumericAxis(),
               series: <SplineSeries<ChartSampleData, DateTime>>[
@@ -1384,7 +1441,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
 
 ## Multi-level labels
 
-The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
+The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
 
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) - Represents the start value of an multi-level label.
 * [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html)   - Represents the end value of an multi-level label.
@@ -1437,7 +1494,7 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1502,7 +1559,7 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
               )
             ]
           ),
-          series: <ChartSeries<ChartData, String>>[
+          series: <CartesianSeries<ChartData, String>>[
             LineSeries<ChartData, String>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1570,7 +1627,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, DateTime>>[
+          series: <CartesianSeries<ChartData, DateTime>>[
             LineSeries<ChartData, DateTime>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1594,7 +1651,7 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
 
 ### Multi-level labels in date time category axis
 
-The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/end.html) properties need to be date-time values.
+The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% tabs %}
 {% highlight dart %}
@@ -1635,7 +1692,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, DateTime>>[
+          series: <CartesianSeries<ChartData, DateTime>>[
             LineSeries<ChartData, DateTime>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1659,7 +1716,7 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
 
 ### Multi-level labels in logarithmic axis
 
-The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/end.html) properties need to be double values.
+The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) properties need to be double values.
 
 {% tabs %}
 {% highlight dart %}
@@ -1703,7 +1760,7 @@ The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
               ),
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1780,7 +1837,7 @@ The text style of the multi-level label like color, font size, font-weight, etc 
               )
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1860,7 +1917,7 @@ The different types of multi-level label's border are mentioned below,
               )
             ]
           ),
-          series: <ChartSeries<ChartData, int>>[
+          series: <CartesianSeries<ChartData, int>>[
             LineSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -1884,10 +1941,10 @@ The different types of multi-level label's border are mentioned below,
 
 #### See Also
 
-* [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
+* [Rendering a particular part of a data in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 
-* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://www.syncfusion.com/kb/12318/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
 
-* [Changing the visible range of chart using range selector in the Cartesian chart](https://www.syncfusion.com/kb/12053/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
+* [Changing the visible range of chart using range selector in the Cartesian chart](https://support.syncfusion.com/kb/article/10571/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
 
-* [Add vertical line and update it dynamically in the Cartesian charts](https://www.syncfusion.com/kb/13028/how-to-add-a-vertical-line-and-update-it-dynamically-in-the-cartesian-charts).
+* [Add vertical line and update it dynamically in the Cartesian charts](https://support.syncfusion.com/kb/article/11405/how-to-add-a-vertical-line-and-update-it-dynamically-in-the-cartesian-charts).

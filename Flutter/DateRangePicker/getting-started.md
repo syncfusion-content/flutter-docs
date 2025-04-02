@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with Flutter Date Range Picker (SfDateRangePicker)
-This section explains the steps required to add the [date range picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
+This section explains the steps required to add the [date range picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> date range picker widget.
 
 To get start quickly with our Flutter date range picker widget, you can check on this video.
 
@@ -16,11 +16,11 @@ To get start quickly with our Flutter date range picker widget, you can check on
 <iframe id='flutterDateRangePickerVideoTutorial' src='https://www.youtube.com/embed/3TyuUVExuPs'></iframe>
 
 ## Add Flutter Date Range Picker to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter date range picker dependency to your `pubspec.yaml` file.
+Add the Syncfusion<sup>&reg;</sup> Flutter date range picker dependency to your `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize Date Range Picker](images/getting-started/initialize.png)
+![Initialize Date Range Picker in Flutter.](images/getting-started/flutter-daterangepicker-initialize.png)
 
 ## Multiple picker views
 
@@ -93,7 +93,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple picker views Date Range Picker](images/getting-started/year-view.png)
+![Multiple picker views Date Range Picker in Flutter.](images/getting-started/flutter-daterangepicker-year-view.png)
 
 ## Change first day of week
 
@@ -122,7 +122,7 @@ The [DateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicke
 The selected date or range details can be obtained using the [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback of date range picker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
 
 {% tabs %}
-{% highlight dart hl_lines="1 11" %}
+{% highlight dart hl_lines="1 2 3 11" %}
 
 void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
 // TODO: implement your code here
@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
+  ![Date selection Date Range Picker in Flutter.](images/getting-started/flutter-daterandepicker-range-selection.png)
   
 ## Action buttons
 
@@ -181,7 +181,7 @@ You can display action buttons at the bottom of the date range picker by using t
 {% endhighlight %}
 {% endtabs %}
 
-![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
+![Show action buttons in Flutter Date Range Picker.](images/getting-started/flutter-daterangepicker-confirm-and-cancel-buttons.png)  
   
 ## Today button
 The today button can be displayed at the bottom of the date range picker by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showTodayButton.html) property of the `DateRangePicker`. It easily moves to the current date of the picker view.
@@ -202,10 +202,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![todayButton](images/getting-started/todayButton.jpg)  
+![Today button in Flutter DateRangePicker.](images/getting-started/flutter-daterangepicker-today-button.jpg)  
 
 ## See also
 
-* [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
-* [How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12221/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to confirm or cancel the selection in the Flutter Date Range Picker](https://www.syncfusion.com/kb/12546/how-to-confirm-or-cancel-the-selection-in-the-flutter-date-range-picker)
+* [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10342/how-to-apply-theming-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10803/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to confirm or cancel the selection in the Flutter Date Range Picker](https://support.syncfusion.com/kb/article/10924/how-to-confirm-or-cancel-the-selection-in-the-flutter-date-range-picker)

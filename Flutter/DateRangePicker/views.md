@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 
 Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the `DateRangePickerMonthViewSettings` as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="7 8 9" %}
 
 @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ Display the Week number of the year in the MonthView by setting the [showWeekNum
 Customize the Week number style by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/backgroundColor.html) properties of the [DateRangePickerWeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="8 9" %}
+{% highlight dart hl_lines="8 9 10 11" %}
 
 @override
   Widget build(BuildContext context) {
@@ -147,7 +147,7 @@ Widget build(BuildContext context) {
 The number of weeks in the month view can be customized by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/numberOfWeeksInView.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="6 7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)
-* [How to get the current view dates in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11331/how-to-get-the-current-view-dates-in-flutter-date-range-picker-sfdaterangepicker)
-* [How to show two pickers vertically in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12193/how-to-show-two-pickers-vertically-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to change the number of weeks in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12167/how-to-change-the-number-of-weeks-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/9781/how-to-switch-between-the-date-range-picker-views-in-the-flutter-date-range-picker)
+* [How to get the current view dates in Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10063/how-to-get-the-current-view-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to show two pickers vertically in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10675/how-to-show-two-pickers-vertically-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to change the number of weeks in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10619/how-to-change-the-number-of-weeks-in-the-flutter-date-range-picker-sfdaterangepicker)

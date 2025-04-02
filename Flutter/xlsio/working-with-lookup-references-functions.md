@@ -45,7 +45,7 @@ range = sheet.getRangeByName('A6');
 range.setFormula('=INDEX(A1:B2,1,1,1)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('INDEXFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -82,7 +82,7 @@ range = sheet.getRangeByName('A8');
 range.setFormula('=MATCH(6,A1:A4,-1)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('MATCHFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -122,7 +122,7 @@ range = sheet.getRangeByName('A7');
 range.setFormula('=VLOOKUP("John",A1:B4,2,TRUE)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('VLOOKUPFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

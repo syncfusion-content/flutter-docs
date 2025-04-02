@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Text search in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about text search feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about text search feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -15,12 +15,16 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) as parameters. This method searches for the text and highlights all the instances of the texts in the document and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you to navigate to the different searched text instances available and cancel the search operation as well.
 
+On mobile and desktop platforms, the search will be performed asynchronously and so the results will be returned periodically on a page-by-page basis, which can be retrieved using the `PdfTextSearchResult.addListener` method in the application.  
+
+Whereas in the web platform, the search will be performed synchronously and so the result will be returned only after completing the search on all the pages. This is since `isolate` is not supported for the web platform yet.
+
 To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results for the same.
 
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="23 24 25 26 27 28 29 30 31 32 33 34 35 36" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -36,18 +40,28 @@ void initState() {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: Icon(
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () async {
-                _searchResult = await _pdfViewerController.searchText('the',
+              onPressed: () {
+                _searchResult = _pdfViewerController.searchText('the',
                     searchOption: TextSearchOption.caseSensitive);
-                print(
-                    'Total instance count: ${_searchResult.totalInstanceCount}');
+                if (kIsWeb) {
+                  print(
+                      'Total instance count: ${_searchResult.totalInstanceCount}');
+                } else {
+                  _searchResult.addListener(() {
+                    if (_searchResult.hasResult &&
+                        _searchResult.isSearchCompleted) {
+                      print(
+                          'Total instance count: ${_searchResult.totalInstanceCount}');
+                    }
+                  });
+                }
               },
             ),
           ],
@@ -65,8 +79,7 @@ void initState() {
 The [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) and [previousInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/previousInstance.html) methods in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class help you to navigate to the next and previous search text instance in the PDF document. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
-
+{% highlight dart hl_lines="44 56" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -82,17 +95,25 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
               color: Colors.white,
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController.searchText('the',
+            onPressed: () {
+              _searchResult = _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
+              if (kIsWeb) {
+                setState(() {});
+              } else {
+                _searchResult.addListener(() {
+                  if (_searchResult.hasResult) {
+                    setState(() {});
+                  }
+                });
+              }
             },
           ),          
           Visibility(
@@ -134,7 +155,7 @@ Widget build(BuildContext context) {
 The [clear](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/clear.html) method in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class is used to cancel the text search operation. When the text search is in progress, this method can be used to cancel the same and clear all the highlighted texts in the `SfPdfViewer`. The following code example explains the same
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="45" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -150,17 +171,25 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
               color: Colors.white,
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController.searchText('the',
+            onPressed: () {
+              _searchResult = _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
+              if (kIsWeb) {
+                setState(() {});
+              } else {
+                _searchResult.addListener(() {
+                  if (_searchResult.hasResult) {
+                    setState(() {});
+                  }
+                });
+              }
             },
           ),
           Visibility(
@@ -194,7 +223,7 @@ The colors in which the current instance and other instances are highlighted can
 The following code example explains how to customize the search text highlight color.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="41 42" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -210,16 +239,25 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: Icon(
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () async {
-                _searchResult = await _pdfViewerController.searchText('the',
+              onPressed: () {
+                _searchResult = _pdfViewerController.searchText('the',
                     searchOption: TextSearchOption.caseSensitive);
+                if (kIsWeb) {
+                  setState(() {});
+                } else {
+                  _searchResult.addListener(() {
+                    if (_searchResult.hasResult) {
+                      setState(() {});
+                    }
+                  });
+                }
               },
             ),
           ],
@@ -240,7 +278,7 @@ Widget build(BuildContext context) {
 The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) property in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if no instance of the searched text is found in the PDF document. That is, if the [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) returns value 0, then there is no matching instance found for the searched text. The following code explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="25 26 27 28 29 30 31 32 33 34 35 36" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -256,18 +294,27 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
               color: Colors.white,
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController.searchText('pdf',
+            onPressed: () {
+              _searchResult = _pdfViewerController.searchText('pdf',
                   searchOption: TextSearchOption.caseSensitive);
-              if (_searchResult.totalInstanceCount == 0) {
-                print('No matches found.');
+              if (kIsWeb) {
+                if (_searchResult.totalInstanceCount == 0) {
+                  print('No matches found.');
+                }
+              } else {
+                _searchResult.addListener(() {
+                  if (_searchResult.isSearchCompleted &&
+                      _searchResult.totalInstanceCount == 0) {
+                    print('No matches found.');
+                  }
+                });
               }
             },
           ),
@@ -286,7 +333,7 @@ Widget build(BuildContext context) {
 The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) and [currentInstanceIndex](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/currentInstanceIndex.html) properties in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if a complete cycle of text search is completed in the PDF document. That is, when the [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) method is called, you can check if the `currentInstanceIndex` equals the `totalInstanceCount`, then it can be considered that a complete cycle of text search is completed. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="71 72 73 74 75" %}
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -302,17 +349,25 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
               color: Colors.white,
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController.searchText('the',
+            onPressed: () {
+              _searchResult = _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
+              if (kIsWeb) {
+                setState(() {});
+              } else {
+                _searchResult.addListener(() {
+                  if (_searchResult.hasResult) {
+                    setState(() {});
+                  }
+                });
+              }
             },
           ),
           Visibility(
@@ -349,8 +404,10 @@ Widget build(BuildContext context) {
                 color: Colors.white,
               ),
               onPressed: () {
-                _searchResult.nextInstance();
-                if(_searchResult.currentInstanceIndex == _searchResult.totalInstanceCount){
+                _searchResult.nextInstance();				
+                if (_searchResult.currentInstanceIndex ==
+                        _searchResult.totalInstanceCount &&
+                    _searchResult.isSearchCompleted) {
                   print('No more occurrences found.');
                 }
               },
@@ -375,6 +432,7 @@ In this example, initially the main toolbar or AppBar will be displayed with a s
 * **Back button** - To close the search toolbar.
 * **Text field entry** - To enter the text to be searched in the document.
 * **Close button** - To cancel the search progress.
+* **Busy indicator** - To indicate that the search is in progress. This will be visible only on mobile and desktop platforms.
 * **Instances information text** - Displays the current instance index and total instances count of the searched text. 
 * **Previous instance search navigation button** - To navigate to the previous match instance.
 * **Next instance search navigation button** - To navigate to the next match instance.
@@ -382,6 +440,7 @@ In this example, initially the main toolbar or AppBar will be displayed with a s
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -471,7 +530,7 @@ class _HomePage extends State<HomePage> {
             )
           : AppBar(
               title: Text(
-                'Syncfusion Flutter PDF Viewer',
+                'Flutter PDF Viewer',
                 style: TextStyle(color: Colors.black87),
               ),
               actions: [
@@ -563,10 +622,8 @@ class SearchToolbar extends StatefulWidget {
 
 /// State for the SearchToolbar widget
 class SearchToolbarState extends State<SearchToolbar> {
-  int _searchTextLength = 0;
-
-  /// Indicates whether search toolbar items need to be shown or not.
-  bool _showItem = false;
+  /// Indicates whether search is initiated or not.
+  bool _isSearchInitiated = false;
 
   /// Indicates whether search toast need to be shown or not.
   bool _showToast = false;
@@ -583,7 +640,6 @@ class SearchToolbarState extends State<SearchToolbar> {
   @override
   void initState() {
     super.initState();
-
     focusNode = FocusNode();
     focusNode?.requestFocus();
   }
@@ -592,11 +648,13 @@ class SearchToolbarState extends State<SearchToolbar> {
   void dispose() {
     // Clean up the focus node when the Form is disposed.
     focusNode?.dispose();
+    _pdfTextSearchResult.removeListener(() {});
     super.dispose();
   }
 
   ///Clear the text search result
   void clearSearch() {
+    _isSearchInitiated = false;
     _pdfTextSearchResult.clear();
   }
 
@@ -635,7 +693,7 @@ class SearchToolbarState extends State<SearchToolbar> {
                 setState(() {
                   _pdfTextSearchResult.clear();
                   _editingController.clear();
-                  _showItem = false;
+                  _isSearchInitiated = false;
                   focusNode?.requestFocus();
                 });
                 Navigator.of(context).pop();
@@ -670,6 +728,7 @@ class SearchToolbarState extends State<SearchToolbar> {
             ),
             onPressed: () {
               widget.onTap?.call('Cancel Search');
+              _isSearchInitiated = false;
               _editingController.clear();
               _pdfTextSearchResult.clear();
             },
@@ -690,24 +749,30 @@ class SearchToolbarState extends State<SearchToolbar> {
               hintStyle: TextStyle(color: Color(0x00000000).withOpacity(0.34)),
             ),
             onChanged: (text) {
-              if (_searchTextLength < _editingController.value.text.length) {
+              if (_editingController.text.isNotEmpty) {
                 setState(() {});
-                _searchTextLength = _editingController.value.text.length;
-              }
-              if (_editingController.value.text.length < _searchTextLength) {
-                setState(() {
-                  _showItem = false;
-                });
               }
             },
-            onFieldSubmitted: (String value) async {
-              _pdfTextSearchResult =
-                  await widget.controller!.searchText(_editingController.text);
-              if (_pdfTextSearchResult.totalInstanceCount == 0) {
-                widget.onTap?.call('noResultFound');
+            onFieldSubmitted: (String value) {
+              if (kIsWeb) {
+                _pdfTextSearchResult =
+                    widget.controller!.searchText(_editingController.text);
+                if (_pdfTextSearchResult.totalInstanceCount == 0) {
+                  widget.onTap?.call('noResultFound');
+                }
+                setState(() {});
               } else {
-                setState(() {
-                  _showItem = true;
+                _isSearchInitiated = true;
+                _pdfTextSearchResult =
+                    widget.controller!.searchText(_editingController.text);
+                _pdfTextSearchResult.addListener(() {
+                  if (super.mounted) {
+                    setState(() {});
+                  }
+                  if (!_pdfTextSearchResult.hasResult &&
+                      _pdfTextSearchResult.isSearchCompleted) {
+                    widget.onTap?.call('noResultFound');
+                  }
                 });
               }
             },
@@ -728,7 +793,7 @@ class SearchToolbarState extends State<SearchToolbar> {
                   _editingController.clear();
                   _pdfTextSearchResult.clear();
                   widget.controller!.clearSelection();
-                  _showItem = false;
+                  _isSearchInitiated = false;
                   focusNode!.requestFocus();
                 });
                 widget.onTap!.call('Clear Text');
@@ -738,7 +803,21 @@ class SearchToolbarState extends State<SearchToolbar> {
           ),
         ),
         Visibility(
-          visible: _showItem,
+          visible:
+              !_pdfTextSearchResult.isSearchCompleted && _isSearchInitiated,
+          child: Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: SizedBox(
+              width: 24,
+              height: 24,
+              child: CircularProgressIndicator(
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
+          ),
+        ),
+        Visibility(
+          visible: _pdfTextSearchResult.hasResult,
           child: Row(
             children: [
               Text(
@@ -789,7 +868,8 @@ class SearchToolbarState extends State<SearchToolbar> {
                       if (_pdfTextSearchResult.currentInstanceIndex ==
                               _pdfTextSearchResult.totalInstanceCount &&
                           _pdfTextSearchResult.currentInstanceIndex != 0 &&
-                          _pdfTextSearchResult.totalInstanceCount != 0) {
+                          _pdfTextSearchResult.totalInstanceCount != 0 &&
+                          _pdfTextSearchResult.isSearchCompleted) {
                         _showSearchAlertDialog(context);
                       } else {
                         widget.controller!.clearSelection();

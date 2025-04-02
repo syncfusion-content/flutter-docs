@@ -38,8 +38,37 @@ template.graphics!.drawString(
 document.pages.add().graphics.drawPdfTemplate(template, Offset(0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
+
+{% endhighlight %}
+
+## Creating templates from existing PDF document
+
+Essential<sup>&reg;</sup> PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
+
+The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
+
+{% highlight dart %}
+
+    //Load the PDF document.
+    PdfDocument loadedDocument =
+      PdfDocument(inputBytes: File('Input.pdf').readAsBytesSync());
+    //Get the first page from the document.
+    PdfPage loadedPage = loadedDocument.pages[0];
+    //Create a PDF Template.
+    PdfTemplate template = loadedPage.createTemplate();
+    //Create a new PDF document.
+    PdfDocument document = PdfDocument();
+    //Add the page.
+    PdfPage page = document.pages.add();
+    //Create the graphics.
+    PdfGraphics graphics = page.graphics;
+    //Draw the template.
+    graphics.drawPdfTemplate(template, Offset(0, 0));
+    //Save and dispose of the PDF document.
+    File('Output.pdf').writeAsBytes(await document.save());
+    document.dispose();
 
 {% endhighlight %}
 
@@ -62,6 +91,11 @@ PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 7);
 
 //Create a header and draw the image
 PdfPageTemplateElement header = PdfPageTemplateElement(bounds);
+
+//Get image data
+File imageFile = File('image.jpg');
+Uint8List imagebytes = await imageFile.readAsBytes();
+String imageData = base64.encode(imagebytes);
 
 //Draw the image in the header
 header.graphics.drawImage(
@@ -92,14 +126,14 @@ compositeField.draw(footer.graphics, Offset(470, 40));
 document.template.bottom = footer;
 
 //Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
+File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
 
 ## Adding stamp to the PDF document
 
-The Syncfusion Flutter PDF allows you add stamp to the PDF document using PDF templates.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you add stamp to the PDF document using PDF templates.
 
 The following code example explains how to draw text as a stamp to the PDF document.
 
@@ -134,7 +168,7 @@ page.graphics.drawRectangle(
     bounds: Offset(0, 0) & page.getClientSize());
 
 //Save the document
-final List<int> bytes = document.save();
+final List<int> bytes = await document.save();
 
 //Dispose the document
 document.dispose();

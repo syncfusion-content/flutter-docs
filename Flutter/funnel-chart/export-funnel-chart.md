@@ -18,57 +18,244 @@ To export the funnel chart as a PNG image, we can get the image by calling [`toI
 {% tabs %}
 {% highlight dart %} 
 
-    Future<void> _renderFunnelImage() async {
-      dart_ui.Image data = await _funnelChartKey.currentState!.toImage(pixelRatio: 3.0);
-      final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
-      if (data != null) {
-        await Navigator.of(context).push(
-          MaterialPageRoute(
+    import 'dart:typed_data';
+    import 'dart:ui' as ui;
+    import 'package:flutter/material.dart';
+    import 'package:syncfusion_flutter_charts/charts.dart';
+
+    void main() {
+      runApp(const MyApp());
+    }
+
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+
+      @override
+      Widget build(BuildContext context) {
+        return const MaterialApp(
+            home: ExportFunnel(),
+        );
+      }
+    }
+    
+    class ExportFunnel extends StatefulWidget {
+      
+      const ExportFunnel({Key? key}) : super(key: key);
+
+      @override
+      _ExportState createState() => _ExportState();
+    }
+
+    class _ExportState extends State<ExportFunnel> {
+      _ExportState();
+
+      late GlobalKey<SfFunnelChartState> _funnelChartKey;
+      late List<ChartSampleData> _chartData;
+
+      @override
+      void initState() {
+        _funnelChartKey = GlobalKey();
+        _chartData = <ChartSampleData>[
+          ChartSampleData(x: 'Jan', y: 12),
+          ChartSampleData(x: 'Feb', y: 28),
+          ChartSampleData(x: 'Mar', y: 35),
+          ChartSampleData(x: 'Apr', y: 47),
+          ChartSampleData(x: 'May', y: 56),
+          ChartSampleData(x: 'Jun', y: 70),
+        ];
+        super.initState();
+      }
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              SfFunnelChart(
+                key: _funnelChartKey,
+                series: FunnelSeries<ChartSampleData, String>(
+                    dataSource: _chartData,
+                    xValueMapper: (ChartSampleData data, _) => data.x,
+                    yValueMapper: (ChartSampleData data, _) => data.y,
+                  )
+              ),
+              TextButton(
+                child: const Text('Export as image'),
+                onPressed: () {
+                  _renderFunnelImage();
+                },
+              )
+            ]
+          ),
+        );
+      }
+
+      Future<void> _renderFunnelImage() async {
+        final ui.Image? data =
+          await _funnelChartKey.currentState!.toImage(pixelRatio: 3.0);
+        final ByteData? bytes =
+          await data!.toByteData(format: ui.ImageByteFormat.png);
+        final Uint8List imageBytes =
+          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+        if (!mounted) return;
+        await Navigator.of(context).push<dynamic>(
+          MaterialPageRoute<dynamic>(
             builder: (BuildContext context) {
               return Scaffold(
                 appBar: AppBar(),
-                body: Center(
-                  child: Container(
-                    color: Colors.white,
-                    child: Image.memory(bytes!.buffer.asUint8List()),
-                  ),
-                ),
-              );
+                body: Image.memory(imageBytes));
             },
           ),
         );
       }
     }
 
-  {% endhighlight %}
+    class ChartSampleData {
+      ChartSampleData({this.x, this.y});
+        final String? x;
+        final num? y;
+    }
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above way, we can also export the rendered Funnel chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+
+**Add dependency**
+
+Add the following additional packages to the dependencies in your pubspec.yaml file.
+
+{% highlight dart %} 
+
+    path_provider: ^2.0.11
+    open_file: ^3.2.1
+    syncfusion_flutter_pdf: ^latest_version
+
+{% endhighlight %}
+
+Include the following code snippet in the main.dart file of your flutter application to export the rendered Funnel chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %} 
 
-    Future<void> _renderFunnelPDF() async {
-      var document = PdfDocument();
-      PdfPage page = document.pages.add();
-      dart_ui.Image data = await _funnelChartKey. currentState!.toImage(pixelRatio: 3.0);
-      final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
-      final Uint8List imageBytes =
-          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-      page.graphics
-          .drawImage(PdfBitmap(imageBytes), Rect.fromLTWH(25, 50, 300, 300));
-      var byteData = document.save();
-      document.dispose();
-      Directory directory = await getExternalStorageDirectory();
-      String path = directory.path;
-      File file = File('$path/Output.pdf');
-      await file.writeAsBytes(byteData, flush: true);
-      OpenFile.open('$path/Output.pdf');
+    import 'dart:io';
+    import 'dart:typed_data';
+    import 'dart:ui' as ui;
+    import 'dart:async';
+    import 'package:flutter/material.dart';
+    import 'package:open_file/open_file.dart';
+    import 'package:path_provider/path_provider.dart';
+
+    /// Chart import.
+    import 'package:syncfusion_flutter_charts/charts.dart';
+
+    /// Pdf import.
+    import 'package:syncfusion_flutter_pdf/pdf.dart';
+
+
+    void main() {
+        runApp(const MyApp());
+    }
+
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+
+      @override
+      Widget build(BuildContext context) {
+          return const MaterialApp(
+          home: ExportChartToPdf(),
+        );
+      }
+    }
+
+    class ExportChartToPdf extends StatefulWidget {
+      const ExportChartToPdf({Key? key}) : super(key: key);
+
+      @override
+      ExportChartToPdfState createState() => ExportChartToPdfState();
+    }
+
+    class ExportChartToPdfState extends State<ExportChartToPdf> {
+      ExportChartToPdfState();
+      late GlobalKey<SfFunnelChartState> _funnelChartKey;
+      late List<ChartSampleData> _chartData;
+
+      @override
+      void initState() {
+        _funnelChartKey = GlobalKey();
+        _chartData = <ChartSampleData>[
+        ChartSampleData(x: 'Jan', y: 35),
+        ChartSampleData(x: 'Feb', y: 28),
+        ChartSampleData(x: 'Mar', y: 33),
+        ChartSampleData(x: 'Apr', y: 32),
+        ChartSampleData(x: 'May', y: 40),];
+        super.initState();
+      }
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(title: const Text('Syncfusion Flutter Charts'),),
+          body: SfFunnelChart(
+                key: _funnelChartKey,
+                series: FunnelSeries<ChartSampleData, String>(
+                    dataSource: _chartData,
+                    xValueMapper: (ChartSampleData data, _) => data.x,
+                    yValueMapper: (ChartSampleData data, _) => data.y,
+                )
+          ),
+          floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                _renderPDF();
+              },
+              child: const Icon(Icons.picture_as_pdf),
+          ),
+        );
+      }
+
+      Future<void> _renderPDF() async {
+          final List<int> imageBytes = await _readImageData();
+          final PdfBitmap bitmap = PdfBitmap(imageBytes);
+          final PdfDocument document = PdfDocument();
+          document.pageSettings.size =
+          Size(bitmap.width.toDouble(), bitmap.height.toDouble());
+          final PdfPage page = document.pages.add();
+          final Size pageSize = page.getClientSize();
+          page.graphics.drawImage(
+              bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
+          final List<int> bytes = document.saveSync();
+          document.dispose();
+          //Get external storage directory
+          final Directory directory = await getApplicationSupportDirectory();
+          //Get directory path
+          final String path = directory.path;
+          //Create an empty file to write PDF data
+          File file = File('$path/Output.pdf');
+          //Write PDF bytes data
+          await file.writeAsBytes(bytes, flush: true);
+          //Open the PDF document in mobile
+          OpenFile.open('$path/Output.pdf');
+      }
+
+      Future<List<int>> _readImageData() async {
+          final ui.Image data =
+              await _funnelChartKey.currentState!.toImage(pixelRatio: 3.0);
+          final ByteData? bytes =
+              await data.toByteData(format: ui.ImageByteFormat.png);
+          return bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+      }
+    }
+
+    class ChartSampleData {
+        ChartSampleData({this.x, this.y});
+        final String? x;
+        final num? y;
     } 
 
-  {% endhighlight %}
+{% endhighlight %}
 {% endtabs %}
   
   ![pdf_export](images/export-funnel-chart/pdf_view.png)

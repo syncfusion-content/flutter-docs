@@ -2,7 +2,7 @@
 layout: post
 title: Shape colors in Flutter Maps widget | Syncfusion
 description: Learn here all about different shape appearance customization options of the Syncfusion Flutter Maps (SfMaps) widget.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
@@ -198,6 +198,11 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Applying colors based on the data
+
+To learn more about how to customize the colors in Flutter Maps, you can watch this video.
+
+<style>#flutterMapsVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterMapsVideoTutorial' src='https://www.youtube.com/embed/cHEbMFm3TMU'></iframe>
 
 If you return a color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
 

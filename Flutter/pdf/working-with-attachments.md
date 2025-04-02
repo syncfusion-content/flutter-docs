@@ -9,7 +9,8 @@ documentation: ug
 
 # Attachments in Flutter PDF
 
-The Syncfusion Flutter PDF provides support for file attachments in PDF documents.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF provides support for file attachments in PDF documents.
 
 Attachments can contain any kind of file with detailed information.
 
@@ -28,7 +29,7 @@ document.attachments.add(PdfAttachment(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -48,14 +49,15 @@ document.attachments.add(PdfAttachment.fromBase64String(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
 
 {% endhighlight %}
 
-The Syncfusion Flutter PDF also provides support for adding the attachments to an existing PDF document. The following code example shows the same.
+The Syncfusion<sup>&reg;</sup>
+  Flutter PDF also provides support for adding the attachments to an existing PDF document. The following code example shows the same.
 
 {% highlight dart %}
 
@@ -69,7 +71,7 @@ document.attachments.add(PdfAttachment(
     description: 'Text File', mimeType: 'application/txt'));
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -96,7 +98,7 @@ document.attachments.remove(attachment);
 document.attachments.removeAt(1);
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -105,7 +107,8 @@ document.dispose();
 
 ## Extracting and saving an attachment to the disc
 
-The Syncfusion Flutter PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment.
+The <sup>&reg;</sup>
+  Flutter PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment.
 
 {% highlight dart %}
 
@@ -124,7 +127,7 @@ for (int i = 0; i < attachmentCollection.count; i++) {
 }
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

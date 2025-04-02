@@ -7,13 +7,13 @@ control: Excel
 documentation: ug
 ---
 
-# Getting Started for Syncfusion Flutter XlsIO
+# Getting Started with Flutter XlsIO
 
 This section explains the steps required to create an Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
 
 ## Steps to create Excel document in Flutter application
 
-Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
@@ -81,7 +81,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 // Save the Excel file in the local machine.
@@ -131,7 +131,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 // Get external storage directory
@@ -181,7 +181,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 //Download the output file in web.
@@ -195,7 +195,7 @@ AnchorElement(
 
 ## Create an Excel document in Desktop
 
-Follow the steps provide in [link](https://flutter.dev/desktop) to set desktop support in Flutter.
+Follow the steps provide in [link](https://flutter.dev/multi-platform/desktop) to set desktop support in Flutter.
  
 You can create an Excel document in desktop by using the following steps:
 
@@ -234,7 +234,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello!!');
 
 //Save and launch the excel.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 //Dispose the document.
 workbook.dispose();
 

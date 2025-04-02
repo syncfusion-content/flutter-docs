@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Magnification in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about magnification feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about magnification feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -13,10 +13,10 @@ The content of a document can be zoomed in and out either by pinch to zoom or ch
 
 ## Change the zoom level factor programmatically
 
-You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set between 1.0 and 3.0. The default value is 1.0. The following code example explains the same.
+You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set to 1.0 and above. The default value is 1.0. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="21" %}
 
 late PdfViewerController _pdfViewerController;
 
@@ -30,7 +30,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: Text('Flutter PDF Viewer'),
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -53,14 +53,34 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> The maximum allowed zoom level is 3.0 and if any value is set beyond that, then it will be restricted to 3.0.
+## Set and adjust the maximum zoom level
+
+The `SfPdfViewer` allows you to set and adjust the maximum zoom level for the PDF document being displayed using the `maxZoomLevel` property. The following code example explains the same.
+
+{% tabs %}
+{% highlight dart hl_lines="6" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
+              maxZoomLevel: 5));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Active viewport rendering at higher zoom levels
+
+With the support of active viewport rendering, at higher zoom levels, only the parts of the PDF file that are visible on-screen are rendered, ignoring the parts outside the viewport. The mode is automatically enabled when the page size or zoom increases beyond the zoom level of 2. This approach will be helpful to open large-size pages containing PDF documents at higher zoom levels.
 
 ## Enable or disable the double-tap zoom.
 
 By default, the `SfPdfViewer` will be zoomed in and out when double-tapped. You can enable or disable the double-tap zoom using the [enableDoubleTapZooming](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableDoubleTapZooming.html) property. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -90,7 +110,7 @@ The [onZoomLevelChanged](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the `oldZoomLevel` title and `newZoomLevel` values. The following code example explains the same.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6 7 8" %}
 
 @override
 Widget build(BuildContext context) {

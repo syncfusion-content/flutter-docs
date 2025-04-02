@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in the date range picker.
 
 {% tabs %}
-{% highlight dart hl_lines="4" %}
+{% highlight dart hl_lines="4 5 6 7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to enable or disable the past dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12168/how-to-enable-or-disable-the-past-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to add active dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12075/how-to-add-active-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to restrict date range picker within the date limit in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11329/how-to-restrict-date-range-picker-within-the-date-limit-in-flutter-date-range-picker)
-* [How to update blackout dates using onViewChanged callback in the Flutter date picker](https://www.syncfusion.com/kb/12372/how-to-update-blackout-dates-using-onviewchanged-callback-in-the-flutter-date-picker)
+* [How to enable or disable the past dates in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10609/how-to-enable-or-disable-the-past-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to add active dates in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10380/how-to-add-active-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to restrict date range picker within the date limit in Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10062/how-to-restrict-date-range-picker-within-the-date-limit-in-the-flutter-date-range-picker)
+* [How to update blackout dates using onViewChanged callback in the Flutter date picker](https://support.syncfusion.com/kb/article/10751/how-to-update-blackout-dates-using-onviewchanged-callback-in-the-flutter-date-range-picker)

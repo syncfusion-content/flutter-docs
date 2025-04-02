@@ -2,13 +2,13 @@
 layout: post
 title: Getting started with Flutter Slider widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Slider (SfSlider) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
 # Getting started with Flutter Slider (Slider)
-This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion slider.
+This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> slider.
 
 To get start quickly with our Flutter Slider widget, you can check on this video.
 
@@ -16,11 +16,11 @@ To get start quickly with our Flutter Slider widget, you can check on this video
 <iframe id='FlutterSliderVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe>
 
 ## Add Flutter slider to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter slider dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter slider dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 

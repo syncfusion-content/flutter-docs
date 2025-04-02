@@ -38,7 +38,7 @@ double.parse(range.calculatedValue).toStringAsFixed(2);
 range.numberFormat = 'm/d/yyyy h:mm';
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('NOWFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -67,7 +67,7 @@ range.setFormula('=TODAY()');
 range.numberFormat = 'mm/dd/yyyy';
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('TODAYFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

@@ -89,10 +89,11 @@ The data points that has null value are considered as empty points. Empty data p
     Widget build(BuildContext context) {
         
          final List<ChartData> chartData = [
-            ChartData('David', null),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', null),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
         ];
         return Scaffold(
             body: Center(
@@ -124,10 +125,11 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-        ChartData('David', null),
-        ChartData('Steve', 38),
-        ChartData('Jack', 34),
-        ChartData('Others', 52)
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', null),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
         ];
         return Scaffold(
             body: Center(
@@ -163,7 +165,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-            static List<ChartData> chartData = <ChartData>[
+            List<ChartData> chartData = <ChartData>[
                 ChartData('Rent', 1000,Colors.teal),
                 ChartData('Food', 2500,Colors.lightBlue),
                 ChartData('Savings', 760,Colors.brown),

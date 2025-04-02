@@ -18,11 +18,11 @@ Add the Syncfusion Flutter OfficeChart dependency to your pub spec file.
 {% highlight dart %}
 
 dependencies: 
-syncfusion_flutter_officechart: ^xx.x.xx
+syncfusion_officechart: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter OfficeChart'](https://pub.dev/packages/syncfusion_flutter_xlsio/versions) package.
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter OfficeChart'](https://pub.dev/packages/syncfusion_officechart/versions) package.
 
 **Get packages**
 
@@ -42,7 +42,7 @@ Import the following package in your Dart code to add charts
 
 {% highlight dart %}
 
-import 'package:syncfusion_flutter_officechart/officechart.dart';
+import 'package:syncfusion_officechart/officechart.dart';
 
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ chart.dataRange = sheet.getRangeByName('A1:B4');
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('Chart.xlsx').writeAsBytes(bytes);
@@ -181,7 +181,7 @@ chart.linePatternColor = '#0000FF';
 sheet.charts = charts;
 
 // save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 workbook.dispose();
 
 File('ChartElement.xlsx').writeAsBytes(bytes);
@@ -199,3 +199,23 @@ The following chart types are supported in Flutter XlsIO.
 * [Bar_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-bar-chart)
 * [Column_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-column-chart)
 * [Line_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-line-chart)
+* Line With Markers
+* Stacked Line With Markers
+* 100% Stacked Line With Markers
+* 3-D Line3D
+* 3-D Column
+* 3-D Clustered Column
+* 3-D 100% Stacked Column
+* 3-D Stacked Column
+* 3-D Clustered Bar
+* 3-D 100% Stacked Bar
+* High Low Close
+* Open High Low Close
+* Volume High Low Close
+* Volume Open High Low Close
+* 3-D Pie
+* Pie Of Pie
+* Bar Of Pie
+* Doughnut
+* Doughnut Exploded
+

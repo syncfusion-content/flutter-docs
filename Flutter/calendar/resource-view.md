@@ -48,7 +48,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 You can associate resources to the appointments by adding `id` of a resource to the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/resourceIds.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html). The appointments will be displayed in the row associates with the resource in the event calendar timeline views.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 appointments.add(Appointment(
       startTime: DateTime(2020, 08, 25, 14, 0, 0),
@@ -66,7 +66,7 @@ appointments.add(Appointment(
 You can associate resources to custom business objects using the equivalent field of [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getResourceIds.html) in the custom business object class.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="3 5 8 9 10 11" %}
 
 class _AppointmentDataSource extends CalendarDataSource {
   _AppointmentDataSource(
@@ -91,7 +91,7 @@ For more about custom appointments, refer to this [link](https://help.syncfusion
 You can add time regions to the resources by adding `id` of the resource in the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/resourceIds.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 List<TimeRegion> _specialTimeRegions = <TimeRegion>[];
     _specialTimeRegions.add(TimeRegion(
@@ -155,7 +155,7 @@ Widget build(BuildContext context) {
 ### Display name text style
 The display name text style for the resource view can be customized by setting an appropriate text style to the [displayNameTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/displayNameTextStyle.html) property available in the `ResourceViewSettings`.
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="8 9 10 11" %}
 
 @override
 Widget build(BuildContext context) {
@@ -201,6 +201,6 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to add appointment for the selected resources using appointment editor in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12109/how-to-add-appointment-for-the-selected-resources-using-appointment-editor-in-flutter-event)
-* [How to add resources in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12070/how-to-add-resources-in-the-flutter-event-calendar-sfcalendar)
-* [How to customize the resource view in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12351/how-to-customize-the-resource-view-in-the-flutter-event-calendar-sfcalendar)
+* [How to add appointment for the selected resources using appointment editor in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10550)
+* [How to add resources in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10393/how-to-add-resources-in-the-flutter-calendar)
+* [How to customize the resource view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10738/how-to-customize-the-resource-view-in-the-flutter-calendar)

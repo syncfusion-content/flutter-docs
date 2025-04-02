@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Localization in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about localization feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about localization feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -25,7 +25,7 @@ syncfusion_localizations: ^XX.X.XX
 Next, import the `flutter_localizations` and `syncfusion_localizations` library and specify the `localizationsDelegates` and `supportedLocales` for `MaterialApp` to localize the contents in the `SfPdfViewer` (page navigation dialog and bookmark view).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="1 2 7 8 9 10 11 12 13 14 15 16 17" %}
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:syncfusion_localizations/syncfusion_localizations.dart';
@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
     title: 'PDF Viewer Localization',
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: Text('Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
           'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),

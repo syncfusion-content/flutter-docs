@@ -9,7 +9,7 @@ documentation: ug
 
 # Flow layout in Flutter PDF
 
-The Syncfusion Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
+The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
 
 ## Flow model using PdfLayoutResult
 
@@ -79,7 +79,7 @@ grid.draw(
     bounds: Rect.fromLTWH(0, layoutResult.bounds.bottom + 20, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The Syncfusion Flutter Spark/Micro charts widget [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The Syncfusion<sup>&reg;</sup> Flutter Spark/Micro charts widget [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Axis](https://help.syncfusion.com/flutter/sparkcharts/axis-types)
@@ -24,6 +24,6 @@ The customization the colors can be done for the following chart elements.
 
 ## Large fonts
 
-The Syncfusion Flutter Spark/Micro charts widget font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). And also it allows to change the font size of all elements in Spark chart.
+The Syncfusion<sup>&reg;</sup> Flutter Spark/Micro charts widget font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). And also it allows to change the font size of all elements in Spark chart.
 * [Data label](https://help.syncfusion.com/flutter/sparkcharts/marker-datalabel#data-label)
 * [Trackball tooltip](https://help.syncfusion.com/flutter/sparkcharts/trackball)

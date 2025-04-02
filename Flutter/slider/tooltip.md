@@ -279,6 +279,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:syncfusion_flutter_core/theme.dart';
+
 double _value = 6.0;
 
 @override
@@ -319,6 +321,8 @@ Widget build(BuildContext context) {
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
 
 double _value = 6.0;
 

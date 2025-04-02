@@ -57,7 +57,7 @@ range = sheet.getRangeByName('C9');
 range.setFormula('=SUMIF(C1:C5,C4,B1:B5)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('SUMIFFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -104,7 +104,7 @@ range = sheet.getRangeByName('C9');
 range.setFormula('=SUMIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('SUMIFSFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -151,7 +151,7 @@ range = sheet.getRangeByName('C9');
 range.setFormula('=SUMPRODUCT(--(A1:A5=\"Apple\"), B1:B5, C1:C5)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('SUMPRODUCTFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -191,7 +191,7 @@ range = sheet.getRangeByName('C9');
 range.setFormula('=PRODUCT(A1,B1)');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('PRODUCTFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 

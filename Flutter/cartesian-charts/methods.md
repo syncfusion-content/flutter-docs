@@ -79,9 +79,9 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
 
-[`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipValue/seriesIndex.html) - index of the series for which the pointIndex is specified.
+* `seriesIndex` - index of the series for which the pointIndex is specified.
 
-[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipValue/pointIndex.html)  - index of the point for which the tooltip should be shown.
+* `pointIndex` - index of the point for which the tooltip should be shown.
 
 
 {% tabs %}
@@ -335,7 +335,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/showByIndex.html) method is used to activate the trackball at the specified point index.
 
-[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) - index of the point for which the trackball must be shown.
+The [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) specifies the index of the trackball point.
 
 {% tabs %}
 {% highlight dart %} 
@@ -458,6 +458,166 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       }
 {% endhighlight %}
 {% endtabs %}
+
+### Events in trackballBehavior
+
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+
+* [`handleEvent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleEvent.html) - Specifies to customize the necessary pointer events.
+* [`handleLongPressStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressStart.html) - Specifies to customize the pointer event when a long-press begins.
+* [`handleLongPressMoveUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressMoveUpdate.html) - Specifies to customize the pointer event during movement after a long-press.
+* [`handleLongPressEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleLongPressEnd.html) - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* [`handleTapDown`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleTapDown.html) - Specifies to customize the pointer event when a tap has contacted the screen once.
+* [`handleTapUp`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleTapUp.html) - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* [`handleDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handleDoubleTap.html) - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* [`handlePointerEnter`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handlePointerEnter.html) -Specifies to customize the pointer event when the mouse enter on the screen.
+* [`handlePointerExit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/handlePointerExit.html) - Specifies to customize the pointer event when the mouse exit on the screen.
+
+This following code sample defines how to enable or disable specific pointer events and customize to show trackball in double tap and disabled trackball showing in pointer enter and exit.
+
+{% tabs %}
+{% highlight dart %} 
+
+    SfCartesianChart(
+      trackballBehavior: CustomTrackball(),
+      // Add series.
+    );
+    
+    class CustomTrackball extends TrackballBehavior {
+      @override
+      bool get enable => true;
+
+      // Disable the behavior of pointer events(move, cancel, hover and up).
+      @override
+      void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
+
+      // Disable the behavior of the pointer enter on the screen.
+      @override
+      void handlePointerEnter(PointerEnterEvent details) {}
+
+      // Disable the behavior of the pointer exit on the screen.
+      @override
+      void handlePointerExit(PointerExitEvent details) {}
+
+      @override
+      void handleDoubleTap(Offset position) {
+        if (activationMode == ActivationMode.doubleTap) {
+          Offset localPosition = parentBox!.globalToLocal(position);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### onPaint in trackballBehavior
+
+The [`onPaint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/onPaint.html) method is used to customize the label, position, and style of trackball tooltip.
+
+{% tabs %}
+{% highlight dart %} 
+
+    SfCartesianChart(
+      trackballBehavior: CustomTrackball(),
+      // Add series.
+    );
+
+    class CustomTrackball extends TrackballBehavior {
+      @override
+      bool get enable => true;
+
+      @override
+      ActivationMode get activationMode => ActivationMode.singleTap;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void onPaint(PaintingContext context, Offset offset,
+      SfChartThemeData chartThemeData, ThemeData themeData) {
+        _drawCustomTrackballLine(context, offset, chartThemeData, themeData);
+        TextStyle style = TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+          background: Paint()
+            ..color = Colors.blueGrey
+            ..strokeWidth = 17
+            ..strokeJoin = StrokeJoin.round
+            ..strokeCap = StrokeCap.round
+            ..style = PaintingStyle.stroke,
+          );
+
+        if (chartPointInfo.isNotEmpty) {
+          _drawText(
+            context.canvas,
+            chartPointInfo[0].label!,
+            Offset(chartPointInfo[0].xPosition!, chartPointInfo[0].yPosition!),
+            style);
+        }
+      }
+
+      void _drawCustomTrackballLine(PaintingContext context, Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
+        if (chartPointInfo.isNotEmpty && lineType != TrackballLineType.none) {
+          final Rect plotAreaBounds = parentBox!.paintBounds;
+          final double x = chartPointInfo[0].xPosition!;
+          final Offset start = Offset(x, chartPointInfo[0].yPosition!);
+          final Offset end = Offset(x, plotAreaBounds.bottom);
+          final Paint paint = Paint()
+            ..isAntiAlias = true
+            ..color = Colors.red
+            ..strokeWidth = 2
+            ..style = PaintingStyle.stroke
+            ..shader = ui.Gradient.linear(
+              start,
+              end,
+              <Color>[Colors.blueGrey, Colors.white],
+              <double>[0.75, 1],
+            );
+
+          context.canvas.drawLine(end, start, paint);
+          context.canvas.drawCircle(start, 5,
+              Paint()
+                ..color = Colors.blueGrey
+                ..style = PaintingStyle.fill);
+          context.canvas.drawCircle(start, 5,
+              Paint()
+                ..color = Colors.blueGrey
+                ..strokeWidth = 2.0
+                ..style = PaintingStyle.stroke
+                ..isAntiAlias = true);
+        }
+      }
+
+      void _drawText(Canvas canvas, String text, Offset point,  TextStyle style) {
+        final TextPainter tp = TextPainter(
+          text: TextSpan(text: text, style: style),
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          maxLines: getMaxLinesContent(text),
+        );
+
+        tp.layout();
+        canvas.save();
+        canvas.translate(point.dx - tp.width / 2, point.dy - (tp.height * 2));
+        Offset labelOffset = Offset.zero;
+        tp.paint(canvas, labelOffset);
+        canvas.restore();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized trackball](images\trackball-crosshair/customized_trackball.gif)
 
 ## Methods in crosshairBehavior
 
@@ -652,6 +812,336 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% endhighlight %}
 {% endtabs %}
+
+### Events in crosshairBehavior
+
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as long-press, tap, double-tap, pointer enter, and exit.
+
+* [`handleEvent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleEvent.html) - Specifies to customize the necessary pointer events.
+* [`handleLongPressStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressStart.html) - Specifies to customize the pointer event when a long-press begins.
+* [`handleLongPressMoveUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressMoveUpdate.html) - Specifies to customize the pointer event during movement after a long-press.
+* [`handleLongPressEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleLongPressEnd.html) - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+* [`handleTapDown`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleTapDown.html) - Specifies to customize the pointer event when a tap has contacted the screen once.
+* [`handleTapUp`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleTapUp.html) - Specifies to customize the pointer event when it has stopped contacting the screen after a tap.
+* [`handleDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handleDoubleTap.html) - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* [`handlePointerEnter`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handlePointerEnter.html) -Specifies to customize the pointer event when the mouse enter on the screen.
+* [`handlePointerExit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/handlePointerExit.html) - Specifies to customize the pointer event when the mouse exit on the screen.
+
+This following code sample defines how to enable or disable specific pointer events and customize to show crosshair in double tap and disabled crosshair showing in pointer enter and exit.
+
+{% tabs %}
+{% highlight dart %} 
+
+    SfCartesianChart(
+      crosshairBehavior: CustomCrosshair(),
+      // Add series.
+    );
+    
+    class CustomCrosshair extends crosshairBehavior {
+      @override
+      bool get enable => true;
+
+      // Disable the behavior of pointer events(move, cancel, hover and up).
+      @override
+      void handleEvent(PointerEvent event, BoxHitTestEntry entry) {}
+
+      // Disable the behavior of the pointer enter on the screen.
+      @override
+      void handlePointerEnter(PointerEnterEvent details) {}
+
+      // Disable the behavior of the pointer exit on the screen.
+      @override
+      void handlePointerExit(PointerExitEvent details) {}
+
+      @override
+      void handleDoubleTap(Offset position) {
+        if (activationMode == ActivationMode.doubleTap) {
+          Offset localPosition = parentBox!.globalToLocal(position);
+          show(localPosition.dx, localPosition.dy, 'pixel');
+        }
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### DrawVerticalAxisLine method in crosshairBehavior
+
+The [`drawVerticalAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawVerticalAxisLine.html) method is used to customize the stroke drawing and styling of vertical crosshair line.
+
+* `context` - Specifies the painting context.
+* `offset` - Specifies the crosshair position.
+* `dashArray` - Specifies the crosshair [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html).
+* `strokePaint` - Specifies the crosshair line stroke paint.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      void drawVerticalAxisLine(PaintingContext context, Offset offset,
+        List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..color = Colors.green
+          ..strokeWidth = 1;
+        dashArray = [5, 10, 5];
+        super.drawVerticalAxisLine(context, offset, dashArray, strokePaint);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### DrawHorizontalAxisLine method in crosshairBehavior
+
+The [`drawHorizontalAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawHorizontalAxisLine.html) method is used to customize the stroke drawing and styling of horizontal crosshair line.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      void drawHorizontalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.red
+          ..strokeWidth = 2;
+        dashArray = [10, 15, 10];
+        super.drawHorizontalAxisLine(context, offset, dashArray, strokePaint);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### DrawHorizontalAxisTooltip method in crosshairBehavior
+
+The [`drawHorizontalAxisTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawHorizontalAxisTooltip.html) method is used to customize the tooltip label, position, and style for horizontal axis tooltip.
+
+* `context` - Specifies the painting context.
+* `position` - Specifies the position of the tooltip label.
+* `text` - Specifies the tooltip label.
+* `style` - Specifies the style of the tooltip text.
+* `path` - Specifies path reference of the tooltip rectangle.
+* `fillPaint` - Specifies the fill paint applied to the default tooltip rectangle.
+* `strokePaint` - Specifies the stroke paint applied to the default tooltip rectangle.
+
+{% tabs %}
+{% highlight dart %} 
+
+    class CustomCrosshair extends CrosshairBehavior {
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void drawHorizontalAxisTooltip(PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        TextStyle style = TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        background: Paint()
+          ..color = Colors.blueGrey
+          ..strokeWidth = 16
+          ..strokeJoin = StrokeJoin.round
+          ..style = dart_ui.PaintingStyle.stroke,
+        );
+
+        if (parentBox != null) {
+        final Rect bounds = parentBox!.paintBounds;
+        final String finalText = 'Y : ${verticalValue.toStringAsFixed(2)}';
+        final Offset horizontalPosition =
+            Offset(bounds.right, customPosition!.dy).translate(-50, -20);
+        _drawText(context.canvas, finalText, horizontalPosition, style);
+      }
+    }
+
+      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
+        final TextPainter textPainter = TextPainter(
+          text: TextSpan(
+            text: text,
+            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
+        textDirection: dart_ui.TextDirection.ltr,
+        textAlign: TextAlign.center,
+        maxLines: getMaxLinesContent(text),
+        );
+        
+        textPainter
+        ..layout()
+        ..paint(canvas, point);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Crosshair Horizonatl Axis Tooltip](images\trackball-crosshair/custom_crosshair_horizontal_tooltip.png)
+
+### DrawVerticalAxisTooltip method in crosshairBehavior
+
+The [`drawVerticalAxisTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/drawVerticalAxisTooltip.html) method is used to customize the tooltip label, position, and style for vertical axis tooltip.
+
+For further reference, please consult the [`drawHorizontalAxisTooltip`](https://help.syncfusion.com/flutter/cartesian-charts/methods#drawhorizontalaxistooltip-method-in-crosshairbehavior) code sample.
+
+![Crosshair Vertical Axis Tooltip](images\trackball-crosshair/custom_crosshair_vertical_tooltip.png)
+
+### onPaint in crosshairBehavior
+
+The [`onPaint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/onPaint.html) method is used to customize the label, position, and style of crosshair tooltip.
+
+{% tabs %}
+{% highlight dart %} 
+
+    dynamic verticalValue;
+    late String horizontalText;
+
+    @override
+    void initState() {
+      verticalValue = null;
+      horizontalText = '';
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      final List<_SalesData> dateTimeData = [
+        _SalesData(DateTime(2015, 2, 0), 31),
+        _SalesData(DateTime(2015, 2, 1), 21),
+        // Add data points.
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          crosshairBehavior: CustomCrosshair(),
+          onCrosshairPositionChanging: (CrosshairRenderArgs args) {
+            if (args.orientation != null) {
+              if (args.orientation == AxisOrientation.horizontal) {
+                horizontalText = args.text;
+              }
+              if (args.orientation == AxisOrientation.vertical) {
+                verticalValue = args.value;
+              }
+            }
+          },
+          series: <CartesianSeries<_SalesData, DateTime>>[
+            SplineSeries(
+              dataSource: dateTimeData,
+              xValueMapper: (_SalesData sales, _) => sales.x,
+              yValueMapper: (_SalesData sales, _) => sales.y,
+              markerSettings: MarkerSettings(isVisible: true),
+            ),
+          ],
+        ),
+      );
+    }
+    
+
+    class _SalesData {
+      _SalesData(this.x, this.y);
+      final dynamic x;
+      final double y;
+    }
+
+    class CustomCrosshair extends CrosshairBehavior {
+      @override
+      bool get enable => true;
+
+      Offset? customPosition;
+
+      @override
+      void show(x, double y, [String coordinateUnit = 'point']) {
+        if (coordinateUnit == 'pixel') {
+          customPosition = Offset(x.toDouble(), y);
+        }
+        super.show(x, y, 'pixel');
+      }
+
+      @override
+      void drawHorizontalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.red
+          ..strokeWidth = 2;
+        dashArray = [10, 15, 10];
+        super.drawHorizontalAxisLine(context, offset, dashArray, strokePaint);
+      }
+
+      @override
+      void drawVerticalAxisLine(PaintingContext context, Offset offset, List<double>? dashArray, Paint strokePaint) {
+        strokePaint
+          ..isAntiAlias = true
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.green
+          ..strokeWidth = 2;
+        dashArray = [5, 10, 5];
+        super.drawVerticalAxisLine(context, offset, dashArray, strokePaint);
+      }
+
+      @override
+      void drawVerticalAxisTooltip(
+      PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        // Don't invoke default tooltip.
+      }
+
+      @override
+      void drawHorizontalAxisTooltip(
+      PaintingContext context, Offset position, String text, TextStyle style, [Path? path, Paint? fillPaint, Paint? strokePaint]) {
+        // Don't invoke default tooltip.
+      }
+
+      @override
+      void onPaint(PaintingContext context, Offset offset, SfChartThemeData chartThemeData, ThemeData themeData) {
+        super.onPaint(context, offset, chartThemeData, themeData);
+        // Custom tooltip.
+        TextStyle style = TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          background: Paint()
+            ..color = Colors.blueGrey
+            ..strokeWidth = 16
+            ..strokeJoin = StrokeJoin.round
+            ..style = dart_ui.PaintingStyle.stroke,
+        );
+
+        if (customPosition != null && horizontalText != '' && verticalValue != null) {
+          final String finalText = 'X : ${horizontalText}  Y : ${verticalValue.toStringAsFixed(2)}';
+          _drawText( context.canvas, finalText, customPosition!.translate(20, 20), style);
+        }
+      }
+
+      void _drawText(Canvas canvas, String text, Offset point, TextStyle style) {
+        final TextPainter textPainter = TextPainter(
+          text: TextSpan(
+            text: text,
+            style: style.copyWith(fontWeight: dart_ui.FontWeight.bold)),
+          textAlign: TextAlign.center,
+          textDirection: dart_ui.TextDirection.ltr,
+        );
+        textPainter
+          ..layout()
+          ..paint(canvas, point);
+      }
+
+      @override
+      void hide() {
+        customPosition = null;
+        horizontalText = '';
+        verticalValue = null;
+        super.hide();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized crosshair](images\trackball-crosshair/customized_crosshair.gif)
 
 ## Methods in selectionBehavior
 
@@ -1223,6 +1713,235 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% endhighlight %}
 {% endtabs %}
 
+### Events in zoomPanBehavior
+
+Provided the following methods for handling pointer and gesture events and allowing customizations for various pointer events such as double-tap, scale and long-press.
+
+* `handleEvent` - Specifies to customize the necessary pointer events.
+* `handleDoubleTap` - Specifies to customize the pointer event when a tap has contacted the screen twice.
+* `handleScaleStart` - Specifies to customize the pointer event when the pointers begins to move.
+* `handleScaleUpdate` - Specifies to customize the pointer event when the pointers in the moving state.
+* `handleScaleEnd` - Specifies to customize the pointer event when the pointers stops moving and contacting on the screen.
+* `handleLongPressStart` - Specifies to customize the pointer event when a long-press begins.
+* `handleLongPressMoveUpdate` - Specifies to customize the pointer event during movement after a long-press.
+* `handleLongPressEnd` - Specifies to customize the pointer event when the pointer stops contacting the screen after a long-press.
+
+This following code sample defines how to perform zoom in and out behavior in double tap zooming.
+
+{% tabs %}
+{% highlight dart %}
+
+    CategoryAxis xAxis = CategoryAxis();
+    NumericAxis yAxis = NumericAxis();
+
+    SfCartesianChart(
+      primaryXAxis: xAxis,
+      primaryYAxis: yAxis,
+      zoomPanBehavior: CustomDoubleTapZoomPanBehavior(xAxis, yAxis),
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
+    );
+
+    class CustomDoubleTapZoomPanBehavior extends ZoomPanBehavior {
+      CustomDoubleTapZoomPanBehavior(this.xAxis, this.yAxis);
+
+      CategoryAxis xAxis;
+      NumericAxis yAxis;
+
+      @override
+      bool get enableDoubleTapZooming => true;
+
+      bool _isZoomIn = true;
+
+      @override
+      void handleDoubleTap(Offset position) {
+        if (parentBox == null && !enableDoubleTapZooming) {
+          return;
+        }
+        const double origin = 0.5;
+        final double cumulativeZoomLevel = _isZoomIn ? 1.4 : 1.0;
+        double zoomFactor = 1 / cumulativeZoomLevel;
+        double zoomPosition = (1 - zoomFactor) * origin;
+
+        _isZoomIn = !_isZoomIn;
+        zoomToSingleAxis(xAxis, zoomPosition, zoomFactor);
+        zoomToSingleAxis(yAxis, zoomPosition, zoomFactor);
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized double tap](images\zooming-panning\custom_double_tap_zoom.gif)
+
+### onPaint in ZoomPanBehavior
+
+To customize the tooltip label, position, and selection rect of the zooming.
+
+This following code sample defines how to perform selection zooming and customize the selection zooming rect in single tap using scale methods.
+
+{% tabs %}
+{% highlight dart %}
+
+    SfCartesianChart(
+      zoomPanBehavior: CustomScaleZoomPanBehavior(),
+      // Add series here.
+      series: series: [
+        LineSeries(),
+      ]
+    );
+
+    class CustomScaleZoomPanBehavior extends ZoomPanBehavior {
+      @override
+      bool get enableSelectionZooming => true;
+
+      RRect? _customRect;
+      Rect? _zoomRect;
+      Offset? _customRectStartPosition;
+      Offset? _textPosition;
+
+      @override
+      void handleScaleStart(ScaleStartDetails details) {
+        _customRectStartPosition = parentBox!.globalToLocal(details.focalPoint);
+      }
+
+      @override
+      void handleScaleUpdate(ScaleUpdateDetails details) {
+        if (details.pointerCount != 1 || !enableSelectionZooming) {
+          return;
+        }
+        _calculateCustomRect(parentBox!.globalToLocal(details.focalPoint));
+        parentBox!.markNeedsPaint();
+      }
+
+      @override
+      void handleScaleEnd(ScaleEndDetails details) {
+        _customRectStartPosition = null;
+        _textPosition = null;
+        zoomByRect(_zoomRect!);
+        _customRect = RRect.zero;
+        _zoomRect = Rect.zero;
+        parentBox?.markNeedsPaint();
+      }
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressStart(LongPressStartDetails details) {}
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressMoveUpdate(LongPressMoveUpdateDetails details) {}
+
+      // Disable the long Press selection zooming behavior
+      @override
+      void handleLongPressEnd(LongPressEndDetails details) {}
+
+      @override
+      void onPaint(PaintingContext context, Offset offset,
+          SfChartThemeData chartThemeData, ThemeData themeData) {
+        if (_zoomRect == null || _textPosition == null) {
+          return;
+        }
+        _drawCustomRect(context, chartThemeData, themeData);
+        _drawText(context.canvas);
+      }
+
+      void _calculateCustomRect(Offset position) {
+        if (parentBox == null) {
+          return;
+        }
+        if (_customRectStartPosition != null) {
+          final Rect clipRect = parentBox!.paintBounds;
+          final Offset startPosition = Offset(
+            max(_customRectStartPosition!.dx, clipRect.left),
+            max(_customRectStartPosition!.dy, clipRect.top),
+          );
+          Offset currentPosition = position;
+          final double currentX =
+              _minMax(currentPosition.dx, clipRect.left, clipRect.right);
+          final double currentY =
+              _minMax(currentPosition.dy, clipRect.top, clipRect.bottom);
+          currentPosition = Offset(currentX, currentY);
+          double left = startPosition.dx > currentPosition.dx
+              ? currentPosition.dx
+              : startPosition.dx;
+          double top = startPosition.dy > currentPosition.dy
+              ? currentPosition.dy
+              : startPosition.dy;
+          double right = startPosition.dx < currentPosition.dx
+              ? currentPosition.dx
+              : startPosition.dx;
+          double bottom = startPosition.dy < currentPosition.dy
+              ? currentPosition.dy
+              : startPosition.dy;
+          _zoomRect = Rect.fromLTRB(left, top, right, bottom);
+          _customRect = RRect.fromRectAndRadius(_zoomRect!, Radius.circular(20));
+          _textPosition = currentPosition;
+        }
+      }
+
+      void _drawCustomRect(PaintingContext context, SfChartThemeData chartThemeData,
+          ThemeData themeData) {
+        final Paint customRectPaint = Paint()..color = Colors.teal.withOpacity(0.1);
+        final Paint customStrokeRectPaint = Paint()
+          ..color = Colors.teal.withOpacity(0.7)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2;
+        context.canvas.drawRRect(_customRect!, customRectPaint);
+        context.canvas.drawRRect(_customRect!, customStrokeRectPaint);
+      }
+
+      double _minMax(double value, double min, double max) {
+        return value > max ? max : (value < min ? min : value);
+      }
+
+      void _drawText(Canvas canvas) {
+        String left = _zoomRect!.left.toStringAsFixed(2);
+        String top = _zoomRect!.top.toStringAsFixed(2);
+        String right = _zoomRect!.right.toStringAsFixed(2);
+        String bottom = _zoomRect!.bottom.toStringAsFixed(2);
+        String text =
+            'left: $left \n top: $top \n right: $right \n bottom: $bottom';
+        final TextSpan span = TextSpan(
+            text: text, style: TextStyle(fontSize: 10, color: Colors.black));
+        final TextPainter textPainter = TextPainter(
+          text: span,
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.ltr,
+        );
+        textPainter.layout();
+        if (_zoomRect!.width < textPainter.width ||
+            _zoomRect!.height < textPainter.height) {
+          return;
+        }
+        double leftX = 0;
+        double topY = 0;
+        if (_zoomRect!.left == _textPosition!.dx) {
+          leftX = 80;
+        } else {
+          leftX = -10;
+        }
+        if (_zoomRect!.top == _textPosition!.dy) {
+          topY = 60;
+        } else {
+          topY = -10;
+        }
+        canvas.save();
+        canvas.translate(_textPosition!.dx, _textPosition!.dy);
+        final Offset labelOffset =
+            Offset(-textPainter.width + leftX, -textPainter.height + topY);
+        textPainter.paint(canvas, labelOffset);
+        canvas.restore();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customized selection zooming](images\zooming-panning\custom_selection_zooming.png)
+
 ## UpdateDataSource
 
 Used to process only the newly added, updated, and removed data points in a series, instead of processing all the data points.
@@ -1284,6 +2003,7 @@ Widget build(BuildContext context) {
         ]
       );
     }
+  }
 
      class ChartData {
         ChartData(this.x, this.y);
@@ -1297,7 +2017,7 @@ Widget build(BuildContext context) {
 
 #### See Also
 
-* [Rendering real time live charts using updateDataSource method](https://www.syncfusion.com/kb/12316/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart).
+* [Rendering real time live charts using updateDataSource method](https://support.syncfusion.com/kb/article/10783/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart).
 
 ## PixelToPoint 
 
@@ -1396,8 +2116,8 @@ and funnel charts.
 
 #### See Also
 
-* [Show or hide tooltip dynamically in Cartesian chart](https://www.syncfusion.com/kb/11490/how-to-show-or-hide-the-tooltip-dynamically-in-cartesian-charts-sfcartesianchart).
-* [Show or hide trackball dynamically in Cartesian chart](https://www.syncfusion.com/kb/11489/how-to-show-or-hide-trackball-dynamically-in-cartesian-charts-sfcartesianchart).
-* [Show or hide crosshair dynamically in Cartesian chart](https://www.syncfusion.com/kb/11488/how-to-show-or-hide-crosshair-dynamically-in-cartesian-charts-sfcartesianchart).
+* [Show or hide tooltip dynamically in Cartesian chart](https://support.syncfusion.com/kb/article/9957/how-to-show-or-hide-the-tooltip-dynamically-in-flutter-cartesian-charts-sfcartesianchart).
+* [Show or hide trackball dynamically in Cartesian chart](https://support.syncfusion.com/kb/article/9960/how-to-show-or-hide-trackball-dynamically-in-flutter-cartesian-charts-sfcartesianchart).
+* [Show or hide crosshair dynamically in Cartesian chart](https://support.syncfusion.com/kb/article/9911/how-to-show-or-hide-crosshair-dynamically-in-flutter-cartesian-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

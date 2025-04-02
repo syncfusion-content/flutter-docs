@@ -9,16 +9,16 @@ documentation: ug
 
 # Getting started with Flutter Barcodes (SfBarcodeGenerator)
 
-This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator widget. 
+This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> barcode generator widget. 
 
 
 ## Add Flutter Barcode to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter Barcode dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Barcode dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -28,7 +28,7 @@ Add the Syncfusion Flutter Barcode dependency to your pubspec.yaml file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Barcodes`](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package.
+N> Here **xx.x.xx** denotes the current version of [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package.
 
 **Get packages**
 

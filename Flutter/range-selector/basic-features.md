@@ -173,7 +173,7 @@ class Data {
 
 **onChangeStart**
 
-The `onChangeStart` callback is called when the user begins to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range selector thumb.
+The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeStart.html) callback is called when the user begins to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range selector thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -201,7 +201,7 @@ Widget build(BuildContext context) {
 
 **onChangeEnd**
 
-The `onChangeEnd` callback is called when the user stops to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range selector thumb.
+The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeEnd.html) callback is called when the user stops to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range selector thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -595,6 +595,6 @@ class Data {
 
 * Track - [`Link`](https://help.syncfusion.com/flutter/range-selector/track)
 * Ticks - [`Link`](https://help.syncfusion.com/flutter/range-selector/ticks)
-* Labels and dividers - `Link`
+* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider)
 * Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-selector/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay)

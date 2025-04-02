@@ -11,6 +11,11 @@ documentation: ug
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to return a widget which can be used to load more data to the chart when the visible range reaches the end on dragging in the chart with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
 
+To learn more about how to lazy load data while panning in Flutter Charts, you can watch this video.
+
+<style>#flutterChartsVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartsVideoTutorial' src='https://www.youtube.com/embed/GBKB1U-iwqI'></iframe>
+
 ## Infinite scrolling
 
 The [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builds the widget at the top of the chart area (ex., loading indicator or load more button) when horizontal scrolling reaches the start or end of the chart and if the chart is transposed then, this will be called when the vertical scrolling reaches the top or bottom of the chart. this can be used to achieve the functionalities like infinite scrolling in the chart.
@@ -27,7 +32,7 @@ The below example demonstrates the infinite scrolling by showing the ci
              loadMoreIndicatorBuilder:
                (BuildContext context, ChartSwipeDirection direction) =>
                    getLoadMoreViewBuilder(context, direction),
-             series: <ChartSeries<ChartData, num>>[
+             series: <CartesianSeries<ChartData, num>>[
                   LineSeries<ChartData, num>(
                       dataSource: chartData,
                   ),
@@ -68,4 +73,4 @@ The below example demonstrates the infinite scrolling by showing the ci
 
 #### See Also
 
-* [Lazily load more data to the chart](https://www.syncfusion.com/kb/12535/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart).
+* [Lazily load more data to the chart](https://support.syncfusion.com/kb/article/10855/how-to-lazily-load-more-data-to-the-chart-sfcartesianchart).

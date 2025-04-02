@@ -1,22 +1,21 @@
 ---
 layout: post
 title: Add digital signature in SfPdfViewer using SfSignaturePad | Syncfusion
-description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about how to add SfSignaturePad signatures in the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
 # How to add a digital signature in SfPdfViewer using SfSignaturePad?
 
-In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) to the document in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
+In this example, we have added the signature drawn on [SfSignaturePad](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) to the document in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) with the help of [Syncfusion<sup>&reg;</sup> PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes). 
 
-In the `_handleSigningProcess()` method, the signature in SfSignaturePad is saved as image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method. Created a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and added the signature image as digital signature in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in `Syncfusion PDF Library` and then save the document as bytes. Loaded the saved document bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
+In the `_handleSigningProcess()` method, the signature in SfSignaturePad is saved as image using the [toImage()](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method. Created a [PdfSignatureField()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) and added the signature image as digital signature in the PDF document using the [drawImage()](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method in [Syncfusion<sup>&reg;</sup> PDF Library](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html#classes) and then save the document as bytes. Loaded the saved document bytes using the [SfPdfViewer.memory()](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html). The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
 
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +28,7 @@ void main() {
 }
 
 class SignaturePadApp extends StatelessWidget {
-  const SignaturePadApp({Key? key}) : super(key: key);
+  const SignaturePadApp({super.key});
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -40,7 +39,7 @@ class SignaturePadApp extends StatelessWidget {
 
 @immutable
 class _MyHomePage extends StatefulWidget {
-  const _MyHomePage({Key? key}) : super(key: key);
+  const _MyHomePage({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -53,11 +52,17 @@ class _MyHomePageState extends State<_MyHomePage> {
   @override
   void initState() {
     super.initState();
+    _loadDocument();
+  }
+
+  Future<void> _loadDocument() async {
+    final ByteData docBytes = await rootBundle.load("assets/sample.pdf");
+    _documentBytes = docBytes.buffer.asUint8List();
+    setState(() {});
   }
 
   //Add the signature in the PDF document.
   void _handleSigningProcess() async {
-  
     //Save the signature as PNG image.
     final data =
         await _signaturePadGlobalKey.currentState!.toImage(pixelRatio: 3.0);
@@ -74,7 +79,7 @@ class _MyHomePageState extends State<_MyHomePage> {
     PdfPage page = document.pages[0];
 
     //Create a digital signature and set the signature information.
-    PdfSignatureField _signatureField = PdfSignatureField(page, 'signature',
+    PdfSignatureField signatureField = PdfSignatureField(page, 'signature',
         bounds: const Rect.fromLTRB(300, 500, 550, 700),
         signature: PdfSignature(
             //Create a certificate instance from the PFX file with a private key.
@@ -86,19 +91,16 @@ class _MyHomePageState extends State<_MyHomePage> {
             cryptographicStandard: CryptographicStandard.cms));
 
     //Get the signature field appearance graphics.
-    PdfGraphics? graphics = _signatureField.appearance.normal.graphics;
+    PdfGraphics? graphics = signatureField.appearance.normal.graphics;
 
     //Draw the signature image in the PDF page.
     graphics?.drawImage(PdfBitmap(bytes!.buffer.asUint8List()),
         const Rect.fromLTWH(0, 0, 250, 200));
 
     //Add a signature field to the form.
-    document.form.fields.add(_signatureField);
+    document.form.fields.add(signatureField);
 
-    //Flatten the PDF form field annotation
-    document.form.flattenAllFields();
-
-    _documentBytes = Uint8List.fromList(document.save());
+    _documentBytes = Uint8List.fromList(document.saveSync());
     document.dispose();
     setState(() {});
   }
@@ -112,7 +114,7 @@ class _MyHomePageState extends State<_MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('PdfViewer with Signature pad'),
+          title: const Text('PDF Viewer with Signature pad'),
         ),
         body: Column(
           children: [
@@ -127,6 +129,7 @@ class _MyHomePageState extends State<_MyHomePage> {
               height: 170,
               decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -144,24 +147,23 @@ class _MyHomePageState extends State<_MyHomePage> {
                     ),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
                         child: ElevatedButton(
+                          onPressed: _handleSigningProcess,
                           child:
                               const Text('Add signature and load the document'),
-                          onPressed: _handleSigningProcess,
                         ),
                       ),
                       ElevatedButton(
-                        child: const Text('Clear'),
                         onPressed: _handleClearButtonPressed,
+                        child: const Text('Clear'),
                       ),
                     ],
-                    mainAxisAlignment: MainAxisAlignment.center,
                   )
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
               ),
             )
           ],
@@ -172,6 +174,6 @@ class _MyHomePageState extends State<_MyHomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![PdfViewer with Signature pad](images/pdfviewer-with-signaturepad.jpg)
+![PDF Viewer with Signature pad](images/pdfviewer-with-signaturepad.jpg)
 
 To know more about adding a digital signature to a PDF document, please refer [here](https://help.syncfusion.com/flutter/pdf/working-with-digital-signature).

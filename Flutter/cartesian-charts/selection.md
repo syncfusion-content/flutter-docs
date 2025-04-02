@@ -37,8 +37,9 @@ The selection feature in chart let you to select a segment in a series or the se
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, double>(
+                            ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -102,19 +103,18 @@ You can customize the segments using the below properties.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <CartesianSeries>[
-                            series: <ChartSeries<ChartData, String>>[
-                        ColumnSeries<ChartData, String>(
-                            dataSource: chartData,
-                            selectionBehavior: _selectionBehavior
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y)
-                        ]
+                        series: <CartesianSeries<ChartData, String>>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                selectionBehavior: _selectionBehavior
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y)
+                            ]
+                        )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
     class ChartData {
         ChartData(this.x, this.y);
@@ -161,7 +161,8 @@ The selection features allows you to select segments in following modes using [`
                     child: SfCartesianChart(
         // Mode of selection
         selectionType: SelectionType.cluster,
-        series: <ChartSeries<ChartData, String>>[
+        primaryXAxis: CategoryAxis(),
+        series: <CartesianSeries<ChartData, String>>[
             ColumnSeries<ChartData, String>(
                 dataSource: chartData,
                 selectionBehavior: _selectionBehavior,
@@ -222,7 +223,8 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
           child: SfCartesianChart(
             // Enables multiple selection
             enableMultiSelection: true,
-            series: <ChartSeries<ChartData, String>>[
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
                   selectionBehavior: _selectionBehavior,
@@ -270,16 +272,17 @@ You can select a point or series programmatically on a chart using [`initialSele
                     child: SfCartesianChart(
                         // Mode of selection
                         selectionType: SelectionType.cluster,
-                        series: <ChartSeries<ChartData, String>>[
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries<ChartData, String>>[
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
                             initialSelectedDataIndexes: <int>[1],
-                            selectionBehavior: _selectionBehavior
+                            selectionBehavior: _selectionBehavior,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y),
                         ColumnSeries<ChartData, String>(
                             dataSource: chartData,
-                            selectionBehavior: _selectionBehavior
+                            selectionBehavior: _selectionBehavior,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y1),
                         ],
@@ -309,7 +312,7 @@ Defaults to `true`.
 {% tabs %}
 {% highlight dart %} 
     
-    late selectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
@@ -327,12 +330,13 @@ Defaults to `true`.
             ChartData('USA', 69),
             ChartData('IDN', 68),
             ChartData('JAP', 61),
-            ChartData('BRA', 69),
+            ChartData('BRA', 69), 
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ColumnSeries<ChartData, String>>[
                           ColumnSeries<ChartData, String>(
                            dataSource: chartData1,
@@ -351,10 +355,10 @@ Defaults to `true`.
 
 ![Toggle selection](images/selection/cartesian_deselection.gif)
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [selection event](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onselectionchanged) for customizing the selection further.
 
 #### See Also
 
-* [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
+* [Dynamically selecting the data points in a chart](https://support.syncfusion.com/kb/article/10146/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

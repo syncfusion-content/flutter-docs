@@ -7,11 +7,19 @@ control: API
 documentation: ug
 ---
 
-# Syncfusion Flutter Widgets - API reference
+# Syncfusion<sup>&reg;</sup> Flutter Widgets - API reference
 
-This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
+This page helps to navigate to the public API's available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
 
 <table>
+    <tr>
+        <td>
+            AI AssistView
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html">Link</a>
+        </td>
+    </tr>
     <tr>
         <td>
             Barcode Generator
@@ -26,6 +34,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/calendar-library.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Chat
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/chat-library.html">Link</a>
         </td>
     </tr>
     <tr>

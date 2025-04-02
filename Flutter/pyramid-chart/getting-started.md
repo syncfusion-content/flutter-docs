@@ -18,11 +18,11 @@ To get start quickly with our Flutter chart widget, you can check on this video.
 
 ## Add Flutter Charts to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -157,7 +157,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html) property.
+You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="12" %} 
@@ -239,9 +239,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title: Text(widget.title),
-            ),
             body: Center(
                 child: Container(
                     child: SfPyramidChart(

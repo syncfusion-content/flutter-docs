@@ -233,7 +233,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: Container(
                     child:SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -276,8 +276,7 @@ This feature is used to connect label and data point using a line. It is applica
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                enableSmartLabels: true,
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,

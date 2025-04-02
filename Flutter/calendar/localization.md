@@ -114,5 +114,5 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to override the localization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12328/how-to-override-the-localization-in-the-flutter-event-calendar-sfcalendar)
-* [How to override the Material app locale and set English language for Flutter Calendar](https://www.syncfusion.com/kb/12619/how-to-override-the-material-app-locale-and-set-english-language-for-flutter-calendar)
+* [How to override the localization in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10830/how-to-override-the-localization-in-the-flutter-calendar)
+* [How to override the Material app locale and set English language for Flutter Calendar](https://support.syncfusion.com/kb/article/11052/how-to-override-the-material-app-locale-and-set-english-language-for-flutter-calendar)

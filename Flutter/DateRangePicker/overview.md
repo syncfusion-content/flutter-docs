@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Date Range Picker (SfDateRangePicker) Overview
 
-The Syncfusion Flutter Date Range Picker is a lightweight widget that allows users to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, and disabled dates to restrict date selection.
+The Syncfusion<sup>&reg;</sup> Flutter Date Range Picker is a lightweight widget that allows users to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, and disabled dates to restrict date selection.
 
 
 ## Key features
@@ -26,7 +26,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Enable/disable built-in view switching**: Restrict users from navigating to different picker views by disabling view switching. Select values in terms of month, year, or decade with this feature enabled.
 
-	![Range selection Date Range Picker](images/overview/range-selection.jpg)
+	![Range selection Date Range Picker](images/overview/range-selection.png)
 
 * **Date selection**: Select single, multiple, and range of dates. It also supports programmatic selection.
 

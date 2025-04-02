@@ -1,6 +1,6 @@
-# Syncfusion Flutter Documentation
+# Syncfusion<sup>&reg;</sup> Flutter Documentation
 
-This is the GitHub repository for the technical product documentation for Syncfusion Flutter components. This documentation is published to http://help.syncfusion.com/Flutter
+This is the GitHub repository for the technical product documentation for Syncfusion<sup>&reg;</sup> Flutter components. This documentation is published to http://help.syncfusion.com/Flutter
 
 ## Contributions Welcome!
 

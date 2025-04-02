@@ -30,7 +30,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -51,12 +51,12 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.mediumVioletRed);
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
 
-You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from [`portrait`] to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation-class.html) enum by the following code snippet.
+You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from [`portrait`] to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation.html) enum by the following code snippet.
 
 {% highlight dart %}
 
@@ -76,12 +76,12 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
 
-You can also change the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) by setting the [`rotation angle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle-class.html) enum. The following code snippet explains the same.
+You can also change the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) by setting the [`rotation angle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle.html) enum. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -101,7 +101,7 @@ document.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
@@ -125,14 +125,14 @@ section.pages.add().graphics.drawString(
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
 
 ## Performing incremental update for the PDF document
 
-The Syncfusion Flutter PDF supports incremental update for the PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. The changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the incrementalUpdate of [`PdfFileStructure`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFileStructure-class.html) will rewrite the entire file, which results in a smaller PDF. This is explained in the following code sample.
+The Syncfusion<sup>&reg;</sup> Flutter PDF supports incremental update for the PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. The changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the incrementalUpdate of [`PdfFileStructure`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFileStructure-class.html) will rewrite the entire file, which results in a smaller PDF. This is explained in the following code sample.
 
 {% highlight dart %}
 
@@ -147,7 +147,7 @@ document.fileStructure.incrementalUpdate = false;
 document.compressionLevel = PdfCompressionLevel.best;
 
 //Saves the document
-File('output.pdf').writeAsBytes(document.save());
+File('output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();

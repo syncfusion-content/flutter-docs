@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Page layout and Scrolling options in Flutter PDF Viewer | Syncfusion
-description: Learn here all about Page layout and Scrolling options feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
-platform: Flutter
+description: Learn here all about page layout and scrolling options feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+platform: flutter
 control: SfPdfViewer
 documentation: ug
 ---
@@ -18,14 +18,12 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 * Continuous page layout mode
 * Single page layout mode
 
-N> For now, only `Horizontal` scrolling is supported in `Single page layout mode`.
-
 ### Continuous page layout mode
 
 By default, the `continuous` page layout mode is enabled, which scrolls the PDF pages vertically and horizontally. To enable the `continuous` page layout mode in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -43,7 +41,7 @@ Widget build(BuildContext context) {
 In `Single` page layout mode, PDFs will be displayed page by page horizontally. To enable the `Single` page layout mode in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -56,7 +54,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Single page layout mode](images/page-layout-and-scroll-direction/page-by-page.gif)
+![Single page layout mode in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-page-by-page.gif)
 
 ## Scrolling options
 
@@ -65,12 +63,14 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 * Vertical scrolling
 * Horizontal scrolling
 
+If the scroll direction is not specified, continuous page layout mode defaults to vertical scrolling, and single page layout mode defaults to horizontal scrolling.
+
 ### Vertical scrolling
 
 By default, `Vertical` scrolling is enabled, which moves the PDF pages from up to down. To enable the `Vertical` scrolling in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="6" %}
 
 @override
 Widget build(BuildContext context) {
@@ -101,4 +101,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Horizontal scrolling](images/page-layout-and-scroll-direction/horizontal-scrolling.gif)
+![Horizontal scrolling in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-horizontal-scrolling.gif)

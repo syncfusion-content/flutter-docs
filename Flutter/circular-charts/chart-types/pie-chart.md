@@ -57,7 +57,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
         ChartData(this.x, this.y, [this.color]);
         final String x;
         final double y;
-        final Color color;
+        final Color? color;
     }
 
 {% endhighlight %}

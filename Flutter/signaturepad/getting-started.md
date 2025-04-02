@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Signature Pad widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its elements, and more.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
@@ -21,11 +21,11 @@ To get start quickly with our Flutter SignaturePad widget, you can check on this
 <iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
 
 ## Add Flutter SignaturePad to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter SignaturePad dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter SignaturePad dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -260,7 +260,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://flutter.dev/docs/development/tools/web-renderers) page for more details. 
+N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://docs.flutter.dev/development/tools/web-renderers) page for more details. 
 
 ## Clear the existing signature in SignaturePad
 

@@ -26,11 +26,18 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders bar chart
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -60,11 +67,18 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -95,11 +109,18 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -132,11 +153,18 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
@@ -162,6 +190,6 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 #### See Also
 
-* [Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
+* [Create vertical bar chart](https://support.syncfusion.com/kb/article/10833/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
 
-* [Create horizontal bar chart](https://www.syncfusion.com/kb/12347/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget).
+* [Create horizontal bar chart](https://support.syncfusion.com/kb/article/10822/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget).

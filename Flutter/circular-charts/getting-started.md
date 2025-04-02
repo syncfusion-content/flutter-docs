@@ -18,11 +18,11 @@ To get start quickly with our Flutter chart widget, you can check on this video.
 
 ## Add Flutter Charts to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -115,10 +115,9 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y, [this.color]);
+      ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color color;
     }
 
 {% endhighlight %}
@@ -171,7 +170,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html) property.
+You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="21" %} 
@@ -182,7 +181,7 @@ You can add data labels to improve the readability of the chart using the [`data
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 dataSource: [
@@ -227,7 +226,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                     child: SfCircularChart(
                         // Enables the legend
                         legend: Legend(isVisible: true), 
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 dataSource: [
@@ -282,7 +281,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                     child: SfCircularChart(
                         // Enables the tooltip for all the series in chart
                         tooltipBehavior: _tooltipBehavior,
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
                             PieSeries<ChartData, String>(
                                 // Enables the tooltip for individual series

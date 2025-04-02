@@ -2,7 +2,7 @@
 layout: post
 title: Controller in Flutter Range Selector widget | Syncfusion
 description: Learn here all about adding the Controller in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -113,7 +113,6 @@ We have provided built-in support for selecting the chart segments based on the 
 
 SfRangeValues _values = SfRangeValues(DateTime(2010, 03, 01), DateTime(2010, 06, 01));
 RangeController _rangeController;
-List<int> selectedItems;
 
 @override
 void initState() {
@@ -143,62 +142,59 @@ final List<Data> chartData = <Data>[
 
 @override
 Widget build(BuildContext context) {
-   selectedItems = <int>[];
-   for (int i = 0; i < chartData.length; i++) {
-      if (chartData[i].x.millisecondsSinceEpoch >=
-          _rangeController.start.millisecondsSinceEpoch &&
-          chartData[i].x.millisecondsSinceEpoch <=
-              _rangeController.end.millisecondsSinceEpoch) {
-        selectedItems.add(chartData.indexOf(chartData[i]));
-      }
-   }
-
-    return Scaffold(
-        body: Center(
-          child: SfRangeSelector(
-            min: DateTime(2010, 01, 01),
-            max: DateTime(2010, 09, 01),
-            interval: 2,
-            dateIntervalType: DateIntervalType.months,
-            dateFormat: DateFormat.yM(),
-            showTicks: true,
-            showLabels: true,
-            controller: _rangeController,
-            child: Container(
-              height: 130,
-              child: SfCartesianChart(
-                margin: const EdgeInsets.all(0),
-                primaryXAxis: DateTimeAxis(minimum: DateTime(2010, 01, 01),
-                    maximum: DateTime(2010, 09, 01),
-                    isVisible: false),
-                primaryYAxis: NumericAxis(isVisible: false),
-                plotAreaBorderWidth: 0,
-                plotAreaBackgroundColor: Colors.transparent,
-                series: <ColumnSeries<Data, DateTime>>[
-                  ColumnSeries<Data, DateTime>(
-                      initialSelectedDataIndexes: selectedItems,
-                      selectionSettings: SelectionSettings(
-                          enable: true,
-                          unselectedOpacity: 0,
-                          selectedBorderColor: const Color.fromRGBO(
-                              0, 178, 206, 1),
-                          selectedColor: const Color.fromRGBO(0, 178, 206, 1),
-                          unselectedColor: Colors.transparent,
-                          selectionController: _rangeController),
-                      color: const Color.fromRGBO(255, 255, 255, 0),
-                      dashArray: <double>[5, 4],
-                      borderColor: const Color.fromRGBO(194, 194, 194, 1),
-                      animationDuration: 0,
-                      borderWidth: 1,
-                      dataSource: chartData,
-                      xValueMapper: (Data sales, int index) => sales.x,
-                      yValueMapper: (Data sales, int index) => sales.y)
-                ],
-              ),
+  return Scaffold(
+    body: Center(
+      child: SfRangeSelector(
+        min: DateTime(2010, 01, 01),
+        max: DateTime(2010, 09, 01),
+        interval: 2,
+        dateIntervalType: DateIntervalType.months,
+        dateFormat: DateFormat.yM(),
+        showTicks: true,
+        showLabels: true,
+        controller: _rangeController,
+        onChanged: (SfRangeValues values) {
+          setState(() {});
+        },
+        child: SizedBox(
+          height: 130,
+          child: SfCartesianChart(
+            margin: EdgeInsets.zero,
+            primaryXAxis: DateTimeAxis(
+              minimum: DateTime(2010, 01, 01),
+              maximum: DateTime(2010, 09, 01),
+              isVisible: false,
             ),
+            primaryYAxis: const NumericAxis(isVisible: false),
+            plotAreaBorderWidth: 0,
+            plotAreaBackgroundColor: Colors.transparent,
+            series: <ColumnSeries<Data, DateTime>>[
+              ColumnSeries<Data, DateTime>(
+                dataSource: chartData,
+                selectionBehavior: SelectionBehavior(
+                  selectionController: _rangeController,
+                ),
+                xValueMapper: (Data sales, int index) => sales.x,
+                yValueMapper: (Data sales, int index) => sales.y,
+                pointColorMapper: (Data sales, int index) {
+                  if (sales.x.isAfter(_rangeController.start) &&
+                      sales.x.isBefore(_rangeController.end)) {
+                    return const Color.fromRGBO(0, 178, 206, 1);
+                  }
+                  return Colors.transparent;
+                },
+                color: const Color.fromRGBO(255, 255, 255, 0),
+                dashArray: const <double>[5, 4],
+                borderColor: const Color.fromRGBO(194, 194, 194, 1),
+                animationDuration: 0,
+                borderWidth: 1,
+              ),
+            ],
           ),
-        )
-    );
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}

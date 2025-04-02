@@ -529,77 +529,85 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late AnimationController animationController;
-late Animation animation;
-
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-
-  animationController = AnimationController(
-    duration: Duration(seconds: 3),
-    vsync: this,
-  );
-  animation = CurvedAnimation(
-    parent: animationController,
-    curve: Curves.easeInOut,
-  );
-  animationController.forward(from: 0);
-  super.initState();
+class AnimationSample extends StatefulWidget {
+  const AnimationSample({Key? key}) : super(key: key;
+  @override
+  State<AnimationSample> createState() => _AnimationSampleState();
 }
 
-@override
-void dispose() {
-  animationController.dispose();
-  super.dispose();
-}
+class _AnimationSampleState extends State<AnimationSample> with TickerProviderStateMixin {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late AnimationController animationController;
+  late Animation<double> animation;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                  );
-                },
-              ).toSet(),
-              color: Colors.blue,
-              animation: animation,
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+
+    animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+    animation = CurvedAnimation(
+      parent: animationController,
+      curve: Curves.easeInOut,
+    );
+    animationController.forward(from: 0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                  (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                    );
+                  },
+                ).toSet(),
+                color: Colors.blue,
+                animation: animation,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -799,9 +807,9 @@ class DataModel {
 
 You can customize the appearance of the tooltip.
 
-* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
-* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
-* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
+* **Background color** - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* **Stroke color** - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* **Stroke width** - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}

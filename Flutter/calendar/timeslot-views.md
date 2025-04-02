@@ -23,7 +23,7 @@ documentation: ug
 You can customize the interval of timeslots in all the timeslots view by using the [timeInterval](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeInterval.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines=" 6 7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ You can restrict the user interaction such as selection and highlights specific 
 You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
 
 {% tabs %}
-{% highlight dart hl_lines="6 11 12 13 14 15 16 17 18" %}
+{% highlight dart hl_lines="6 11 12 13 14 15 16 17 18 20 21" %}
 
 @override
   Widget build(BuildContext context) {
@@ -208,7 +208,7 @@ in the region
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in `TimeRegion`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="17" %}
 
 @override
   Widget build(BuildContext context) {
@@ -245,7 +245,7 @@ You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointment
 You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="20" %}
 
 @override
   Widget build(BuildContext context) {
@@ -281,7 +281,7 @@ You can delete any of occurrence that is an exception from the recurrence patter
 The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of `TimeRegion` that is used to customize the text style for the `text` and `iconData` of the `specialTimeRegion`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="17 18 19" %}
 
 @override
   Widget build(BuildContext context) {
@@ -317,7 +317,7 @@ The `specialTimeRegion` background color can be customized by using the [color](
 The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -341,7 +341,7 @@ Widget build(BuildContext context) {
 You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="8" %}
 
 @override
 Widget build(BuildContext context) {
@@ -367,7 +367,7 @@ Widget build(BuildContext context) {
 The [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/minimumAppointmentDuration.html) property in timeSlotViewSettings is to set an arbitrary height to appointments when it has minimum duration, in timeslot views, so that the subject can be readable.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -422,7 +422,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -449,7 +449,7 @@ Widget build(BuildContext context) {
 You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of `TimeSlotViewSettings`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -475,7 +475,7 @@ Widget build(BuildContext context) {
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -502,7 +502,7 @@ Widget build(BuildContext context) {
 You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of `timeSlotViewSettings` in calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 10 11 12 13 14" %}
 
 @override
 Widget build(BuildContext context) {
@@ -533,7 +533,7 @@ Widget build(BuildContext context) {
 All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="9 " %}
 
 @override
 Widget build(BuildContext context) {
@@ -557,14 +557,14 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [Time label customization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
-* [How to customize the timeline appointment height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12147/how-to-customize-the-timeline-appointment-height-in-the-flutter-event-calendar-sfcalendar)
-* [How to format the date and time in timeline views in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11997/how-to-format-the-date-and-time-in-timeline-views-in-the-flutter-event-calendar-sfcalendar)
-* [How to use multiple recurrence rule (RRule) in special region using Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11730/how-to-use-multiple-recurrence-rule-rrule-in-special-region-using-flutter-event-calendar)
-* [How to add a special region dynamically using onTap, onViewChanged callbacks of the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11729/how-to-add-a-special-region-dynamically-using-ontap-onviewchanged-callbacks-of-the-fluttter)
-* [How to highlight the weekends in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11712/how-to-highlight-the-weekends-in-flutter-event-calendar-sfcalendar)
-* [How to highlight the working and non-working hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11711/how-to-highlight-the-working-and-non-working-hours-in-the-flutter-event-calendar-sfcalendar)
-* [How to highlight the lunch hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11710/how-to-highlight-the-lunch-hours-in-the-flutter-event-calendar-sfcalendar)
-* [How to autofit the calendar to screen height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12231/how-to-autofit-the-calendar-to-screen-height-in-the-flutter-event-calendar-sfcalendar)
-* [How to change the time interval width and height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12322/how-to-change-the-time-interval-width-and-height-in-the-flutter-event-calendar-sfcalendar)
-* [How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12339/how-to-format-the-view-header-day-and-date-in-the-flutter-event-calendar-sfcalendar)
+* [Time label customization in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/9586/how-to-customize-the-time-label-in-the-flutter-calendar)
+* [How to customize the timeline appointment height in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10725/how-to-customize-the-timeline-appointment-height-in-the-flutter-calendar)
+* [How to format the date and time in timeline views in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10353/how-to-format-the-date-and-time-in-timeline-views-in-the-flutter-calendar)
+* [How to use multiple recurrence rule (RRule) in special region using Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10163/how-to-use-multiple-recurrence-rule-rrule-in-special-region-using-flutter-calendar)
+* [How to add a special region dynamically using onTap, onViewChanged callbacks of the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10161/how-to-add-a-special-region-dynamically-using-ontap-onviewchanged-callbacks-of-the-flutter)
+* [How to highlight the weekends in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10220/how-to-highlight-the-weekends-in-the-flutter-calendar)
+* [How to highlight the working and non-working hours in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10219/how-to-highlight-the-working-and-non-working-hours-in-the-flutter-calendar)
+* [How to highlight the lunch hours in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10218/how-to-highlight-the-lunch-hours-in-the-flutter-calendar)
+* [How to autofit the calendar to screen height in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10693/how-to-autofit-the-calendar-to-screen-height-in-the-flutter-calendar)
+* [How to change the time interval width and height in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10787/how-to-change-the-time-interval-width-and-height-in-the-flutter-calendar)
+* [How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10764/how-to-format-the-view-header-day-and-date-in-the-flutter-calendar)

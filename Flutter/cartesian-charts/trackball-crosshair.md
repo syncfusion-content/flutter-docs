@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trackball and Crosshair in Flutter Cartesian Charts | Syncfusion 
-description: Learn here all about Trackball and Crosshair feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about trackball and crosshair feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
@@ -37,7 +37,7 @@ You can use the following properties to customize the appearance of trackball to
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -64,7 +64,7 @@ You can use the following properties to customize the appearance of trackball to
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -78,7 +78,7 @@ You can use the following properties to customize the appearance of trackball to
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball](images/trackball-crosshair/default_trackball.jpg)
+![Trackball in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-default-trackball.jpg)
 
 ### Label display mode
 
@@ -114,7 +114,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
                 trackballBehavior: _trackballBehavior, 
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -128,7 +128,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 {% endhighlight %}
 {% endtabs %}
 
-![Label display mode](images/trackball-crosshair/label_display_mode.jpg)
+![Label display mode in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-display-mode.jpg)
 
 ### Label alignment
 
@@ -165,7 +165,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -179,7 +179,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 {% endhighlight %}
 {% endtabs %}
 
-![Label alignment](images/trackball-crosshair/label_alignment.jpg)
+![Label alignment in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-alignment.jpg)
 
 >**Note**: This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
 
@@ -214,7 +214,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -227,7 +227,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
 {% endhighlight %}
 {% endtabs %}
 
-![Label format](images/trackball-crosshair/label_format.jpg)
+![Label format in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-format.jpg)
 
 ###	Activation mode
 
@@ -266,7 +266,7 @@ The ActivationMode enum contains the following values:
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                           ]
@@ -285,7 +285,7 @@ The ActivationMode enum contains the following values:
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -299,29 +299,29 @@ The ActivationMode enum contains the following values:
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-          child: Center(
+          body: Center(
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y1),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y2),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
+                          dataSource: chartData,
                           markerSettings: MarkerSettings(isVisible: true),
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y3)
@@ -341,7 +341,7 @@ The ActivationMode enum contains the following values:
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
+![Trackball tooltip overlap in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-overlap.png)
 
 And moreover, the trackball tooltip will render on the right side of the trackball line if adequate space is available else will be moved to the left by default. The trackball tooltip is smartly positioned above the trackball line if there is no space on the right and left sides of the trackball line. However, the trackball tooltip size must be smaller than the chart's plot area size.
 
@@ -421,7 +421,7 @@ And moreover, the trackball tooltip will render on the right side of the trackba
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip smart positioning](images/trackball-crosshair/trackball_smart_positioning.gif)
+![Trackball tooltip smart positioning in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-smart-positioning.gif)
 
 ### Trackball marker settings
 
@@ -431,7 +431,7 @@ Trackball markers are used to provide information about the exact point location
 * [`TrackballVisibilityMode.visible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballVisibilityMode.html) - Makes the trackball marker visible for all the series irrespective of considering the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property's value in the [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html).
 * [`TrackballVisibilityMode.hidden`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballVisibilityMode.html) - Hides the trackball marker for all the series.
 
-Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
+Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -455,17 +455,17 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<ChartData, DateTime>>[
+                series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => data.x,
-                          yValueMapper: (ChartData data, _) => data.y)
-                      LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData1,
+                          dataSource: chartData,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
-                          dataSource: ChartData2,
+                          dataSource: chartData1,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: chartData2,
                           xValueMapper: (ChartData data, _) => data.x,
                           yValueMapper: (ChartData data, _) => data.y),
                 ]
@@ -485,18 +485,18 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball marker](images/trackball-crosshair/trackball_marker.png)
+![Trackball marker in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-marker.png)
 
 #### See Also
 
-* [Disable marker for a specific series in trackball](https://www.syncfusion.com/kb/12107/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts).
+* [Disable marker for a specific series in trackball](https://support.syncfusion.com/kb/article/10485/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts).
 
 ### Trackball tooltip template
 
 You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). 
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late TrackballBehavior _trackballBehavior;
 
@@ -552,7 +552,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               trackballBehavior: _trackballBehavior,
-              series: <ChartSeries<ChartData, String>>[
+              series: <CartesianSeries<ChartData, String>>[
                 SplineSeries<ChartData, String>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
@@ -573,7 +573,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball template](images/trackball-crosshair/trackball_template.jpg)
+![Trackball template in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball-template.jpg)
 
 ### Trackball grouping mode info
 [TrackballGroupingModeInfo](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo-class.html) is store the group mode details of trackball template.
@@ -596,7 +596,7 @@ Trackball tooltip marker uses the same shape specified for the series marker. Bu
 Defaults to `true`.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
 
     late TrackballBehavior _trackballBehavior;
 
@@ -652,13 +652,89 @@ Defaults to `true`.
 {% endhighlight %}
 {% endtabs %}
 
-![Trackball tooltip marker](images/trackball-crosshair/trackball_tooltip_marker.png)
+![Trackball tooltip marker in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-trackball_tooltip_marker.png)
+
+### Enable trackball
+
+The [`enableTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTrackball.html) is used to enable or disable the trackball feature for specific series. When enabled this property, the trackball provides additional information about data points when you tap or interact with the chart area.
+
+Defaults to `true`.
+
+{% tabs %}
+{% highlight dart %}
+
+    late TrackballBehavior _trackballBehavior;
+    late List<ChartData> chartData;
+
+    @override
+    void initState() {
+      _trackballBehavior = TrackballBehavior(
+          enable: true, activationMode: ActivationMode.singleTap);
+      chartData = <ChartData>[
+        ChartData(x: 'USA', y: 55),
+        ChartData(x: 'China', y: 33),
+        ChartData(x: 'UK', y: 43),
+        ChartData(x: 'Japan', y: 32),
+        ChartData(x: 'France', y: 56),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: SfCartesianChart(
+            title: ChartTitle(
+              text: 'Enable and disable the trackball for specific series',
+              textStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            legend: Legend(isVisible: true, position: LegendPosition.bottom),
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'John',
+                enableTrackball: false,
+              ),
+              StackedLineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, int index) => data.x,
+                yValueMapper: (ChartData data, int index) => data.y,
+                markerSettings: const MarkerSettings(isVisible: true),
+                name: 'Mary',
+                enableTrackball: true,
+              ),
+            ],
+            trackballBehavior: _trackballBehavior,
+          ),
+        ),
+      );
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y});
+
+      final String? x;
+      final num? y;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enable trackball in Flutter Cartesian Charts.](images/trackball-crosshair/enable_trackball.png)
 
 #### See Also
 
-* [Synchronize trackball with multiple charts in Cartesian charts](https://www.syncfusion.com/kb/11881/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
+* [Synchronize trackball with multiple charts in Cartesian charts](https://support.syncfusion.com/kb/article/10568/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
 
-* [Hide the marker displayed in the trackball tooltip](https://www.syncfusion.com/kb/12534/how-to-hide-the-marker-displayed-in-the-trackball-tooltip-sfcartesianchart).
+* [Hide the marker displayed in the trackball tooltip](https://support.syncfusion.com/kb/article/10857/how-to-hide-the-marker-displayed-in-the-trackball-tooltip-sfcartesianchart).
 
 ## Crosshair
 
@@ -671,7 +747,7 @@ The crosshair state will be preserved on the device's orientation change and on 
 >**Note**: The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -708,7 +784,7 @@ The crosshair state will be preserved on the device's orientation change and on 
 {% endhighlight %}
 {% endtabs %}
 
-![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
+![Crosshair in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-chart-default-crosshair.jpg)
 
 ### Track line customization
 
@@ -721,7 +797,7 @@ The appearance of the track line in crosshair can be customized using the follow
 * [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/shouldAlwaysShow.html) - enables or disables the crosshair. Defaults to `false`.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -755,7 +831,7 @@ The appearance of the track line in crosshair can be customized using the follow
 {% endhighlight %}
 {% endtabs %}
 
-![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
+![Customized trackline in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-customized-trackline.jpg)
 
 ### Show axis tooltip
 
@@ -773,17 +849,17 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 
 ### Activation mode
 
-The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html).
+The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress).
 
 The ActivationMode enum contains the following values:
 
-* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing the long press action.
-* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing single tap action.
-* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates crosshair only when performing double tap action.
-* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
+* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates crosshair only when performing the long press action.
+* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap) - activates crosshair only when performing single tap action.
+* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#doubleTap) - activates crosshair only when performing double tap action.
+* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
 
 {% tabs %}
-{% highlight dart %} 
+{% highlight dart %}
     
     late CrosshairBehavior _crosshairBehavior;
 
@@ -819,6 +895,6 @@ Also refer [`crosshair`](./events#oncrosshairpositionchanging) and [`trackball`]
 
 #### See Also
 
-* [Disabling trackball tooltip for particular series in Cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+* [Disabling trackball tooltip for particular series in Cartesian chart](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

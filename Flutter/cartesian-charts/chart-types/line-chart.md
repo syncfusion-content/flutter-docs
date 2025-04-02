@@ -37,7 +37,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             // Renders line chart
                             LineSeries<ChartData, int>(
                                 dataSource: chartData,
@@ -82,7 +82,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             LineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Dash values for line
@@ -104,7 +104,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 #### See Also
 
-* [Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
+* [Applying dashed pattern for line chart](https://support.syncfusion.com/kb/article/10763/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
 ## Multi-colored line
 
@@ -120,7 +120,7 @@ To render a multi-colored line series, map the individual colors to the data usi
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
+                        series: <CartesianSeries>[
                             LineSeries<ChartData, String>(
                                 dataSource: [
                                     ChartData('Jan', 35, Colors.red),

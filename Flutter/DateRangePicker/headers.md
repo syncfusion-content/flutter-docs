@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 You can customize the header style of the `DataRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textAlign.html) properties of [DateRangePickerHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14" %}
 
 @override
 Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ You can customize the view header of the `DateRangePicker` using the [viewHeader
 You can customize the view header height of `DateRangePicker` using the `viewHeaderHeight` property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="6 7" %}
 
 @override
 Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ Widget build(BuildContext context) {
 You can customize the view header style of `DateRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of [DateRangePickerViewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="7 8 9" %}
 
 @override
 Widget build(BuildContext context) {
@@ -131,8 +131,8 @@ Widget build(BuildContext context) {
 
 ## See also
 
-* [How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12098/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
-* [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12113/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
-* [How to customize the header in Flutter multi date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11897/how-to-customize-the-header-in-flutter-multi-date-range-picker-sfdaterangepicker)
-* [How to style a header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12342/how-to-style-a-header-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to select all days when clicking on the day header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12353/how-to-select-all-days-when-clicking-on-the-day-header-in-the-flutter-date-range-picker)
+* [How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10526/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
+* [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10509/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
+* [How to customize the header in Flutter multi date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10373/how-to-customize-the-header-in-the-flutter-multi-date-range-picker-sfdaterangepicker)
+* [How to style a header in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10831/how-to-style-a-header-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to select all days when clicking on the day header in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10731/how-to-select-all-days-when-clicking-on-the-day-header-in-the-flutter-date-range-picker)

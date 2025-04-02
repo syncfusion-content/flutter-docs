@@ -1,15 +1,15 @@
 ---
 layout: post
-title: About Essential Studio Flutter | Syncfusion
-description: Learn here all about introduction of Syncfusion Essential Studio Flutter, its elements, features and more.
+title: About Essential Studio<sup>&reg;</sup> Flutter | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential Studio<sup>&reg;</sup> Flutter, its elements, features and more.
 platform: flutter
 control: Overview
 documentation: ug
 ---
 
-# Introduction to Syncfusion Flutter Widgets Documentation
+# Introduction to Syncfusion<sup>&reg;</sup> Flutter Widgets Documentation
 
-The Syncfusion [Flutter Widgets](https://www.syncfusion.com/flutter-widgets) are a set of [advanced custom widgets and file formats packages](https://pub.dev/publishers/syncfusion.com/packages) needed to create rich and high-quality cross-platform applications in iOS, Android, and Web using a single code base. This article gives you a quick overview of how to read the Flutter widgets documentation and other help resources such as video tutorials, code examples, demos, and the knowledge base.
+The Syncfusion<sup>&reg;</sup> [Flutter Widgets](https://www.syncfusion.com/flutter-widgets) are a set of [advanced custom widgets and file formats packages](https://pub.dev/publishers/syncfusion.com/packages) needed to create rich and high-quality cross-platform applications in iOS, Android, and Web using a single code base. This article gives you a quick overview of how to read the Flutter widgets documentation and other help resources such as video tutorials, code examples, demos, and the knowledge base.
 
 ## How to best read this user guide
 
@@ -53,20 +53,14 @@ tr, td, th
 <table>
 <tr>
 
- <td> <a href="https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples"><img alt="Flutter Google Play Store" src="https://cdn.syncfusion.com/content/images/FTControl/google-play-store.png"/></a></td>
-  <td> <a href="https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341"><img alt="Flutter iOS App Store" src="https://cdn.syncfusion.com/content/images/FTControl/ios-store.png"/></a></td>
+ <td> <a href="https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples"><img alt="Flutter Google Play Store" src="https://cdn.syncfusion.com/content/images/FTControl/google-play-store.png"/></a></td>  
   <td> <a href="https://flutter.syncfusion.com"><img alt="Flutter Web Sample Browser" src="https://cdn.syncfusion.com/content/images/FTControl/web-sample-browser.png"/></a> </td>
-
+<td> <a href="https://www.microsoft.com/en-us/p/syncfusion-flutter-gallery/9nhnbwcsf85d?activetab=pivot:overviewtab"><img alt="Flutter Windows Store" src="https://cdn.syncfusion.com/content/images/FTControl/windows-store.png"/></a> </td>
 </tr>
-<tr>
-
- <td> <a href="https://www.microsoft.com/en-us/p/syncfusion-flutter-gallery/9nhnbwcsf85d?activetab=pivot:overviewtab"><img alt="Flutter Windows Store" src="https://cdn.syncfusion.com/content/images/FTControl/windows-store.png"/></a> </td>
+  
+<tr> 
  <td> <a href="https://install.appcenter.ms/orgs/syncfusion-demos/apps/syncfusion-flutter-gallery/distribution_groups/release"><img alt="Flutter macOS App Center" src="https://cdn.syncfusion.com/content/images/FTControl/macos-app-center.png"/></a></td>
  <td> <a href="https://snapcraft.io/syncfusion-flutter-gallery"><img alt="Flutter Snap Store" src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png"/></a></td>
-
-</tr>
-<tr>
-
  <td colspan="3"> <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a></td>
 
 </tr>

@@ -36,7 +36,7 @@ sheet.insertRow(1, 1, ExcelInsertOptions.formatAsAfter);
 sheet.insertColumn(2, 1, ExcelInsertOptions.formatAsBefore);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('InsertRowandColumn.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -69,7 +69,7 @@ sheet.deleteRow(1, 1);
 sheet.deleteColumn(2, 1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('DeleteRowandColumn.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -99,7 +99,7 @@ range1.cellStyle.wrapText = true;
 sheet.autoFitRow(1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('AutoFitRow.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -122,7 +122,7 @@ range1.setText('This is long text');
 sheet.autoFitColumn(1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('AutoFitColumn.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -152,7 +152,7 @@ range.cellStyle.wrapText = true;
 range.autoFitRows();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('AutoFitRows.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -177,7 +177,7 @@ range.setText('This is Long Text');
 range.autoFitColumns();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveSync();
 File('AutoFitColumns.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
@@ -204,7 +204,7 @@ sheet.getRangeByName('C10').showColumns(false);
 sheet.getRangeByName('D10:E10').showColumns(false);
        
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('HideRowsAndColumns.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
@@ -227,7 +227,7 @@ sheet.getRangeByName('G15').showRange(false);
 sheet.getRangeByName('J22:J25').showRange(false);
        
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveSync();
 File('HideRowsAndColumns.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 

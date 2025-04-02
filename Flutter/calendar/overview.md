@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar (SfCalendar) Overview
 
-The Syncfusion Flutter Calendar library was written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
+The Syncfusion<sup>&reg;</sup> Flutter Calendar library was written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
 
 ![Calendar overview](images/overview/calendar_overview.png)
 
@@ -23,7 +23,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has nin
 ![Calendar appointments](images/overview/appointments_events.png)
 * **Recurring appointments**: Easily configure recurring events to be repeated on a daily, weekly, monthly, or yearly basis with optimized recurrence options. You can also skip or change the occurrence of a recurring appointment. 
 
-![Recurring appointments](images/overview/recurring_events.jpg)
+![Recurring appointments](images/overview/recurring_events.png)
 * **Time zone**: Regardless of the time zone in your device, Calendar supports setting any required time zone for the control itself, as well as individual events.
 
 ![Calendar timezone](images/overview/timezone.png)

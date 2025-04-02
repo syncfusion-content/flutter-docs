@@ -9,17 +9,21 @@ documentation: ug
 
 # Getting started with Flutter PDF
 
-This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/flutter-widgets/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
+This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
+
+Check the following video to quickly get started with creating a Flutter PDF document.
+{% youtube "https://youtu.be/tMM9ty4Wfq0?si=b3EBPP0mjVpLKdBJ" %}
 
 ## Steps to create PDF document in Flutter application
 
-Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter PDF dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup>
+  Flutter PDF dependency to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 dependencies:
   syncfusion_flutter_pdf: ^xx.x.xx
@@ -32,7 +36,7 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](ht
 
 Run the following command to get the required packages.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 $ flutter pub get
 
@@ -42,7 +46,7 @@ $ flutter pub get
 
 Import the following package in your Dart code.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
@@ -50,7 +54,7 @@ import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 Add a new button widget as a child of your container widget.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -81,11 +85,71 @@ Future<void> _createPDF() async {
       bounds: Rect.fromLTWH(0, 0, 500, 50));
 
   //Save the document
-  List<int> bytes = document.save();
+  List<int> bytes = await document.save();
 
   //Dispose the document
   document.dispose();
 }
+
+{% endhighlight %}
+
+## Save and open a PDF document in desktop
+
+You can save and open a PDF document in desktop by using the following steps:
+
+**Set up**
+
+Configure and enable the desktop support to run the app.
+
+{% highlight dart %} 
+
+flutter config --enable-<platform>-desktop
+
+{% endhighlight %}
+
+N> You only need to execute `flutter config --enable-<platform>-desktop` once. You can always check the status of your configuration using the no-argument flutter config command.
+
+Here you can get more details about [`How to add desktop support in the app`](https://docs.flutter.dev/desktop)
+
+**Add dependency**
+
+Add the following packages to your pub spec file.
+
+{% highlight dart %} 
+
+path_provider: ^1.6.5
+open_file: ^3.0.1
+
+{% endhighlight %}
+
+**Import package**
+
+{% highlight dart %}
+
+import 'dart:io';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
+
+{% endhighlight %}
+
+Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
+
+{% highlight dart %}
+
+//Get external storage directory
+final directory = await getExternalStorageDirectory();
+
+//Get directory path
+final path = directory.path;
+
+//Create an empty file to write PDF data
+File file = File('$path/Output.pdf');
+
+//Write PDF data
+await file.writeAsBytes(bytes, flush: true);
+
+//Open the PDF document in mobile
+OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
 
@@ -97,7 +161,7 @@ You can save and open a PDF document in mobile by using the following steps:
 
 Add the following packages to your pub spec file.
 
-{% highlight dart %} 
+{% highlight dart %}
 
 path_provider: ^2.0.7
 open_file: ^3.2.1
@@ -119,7 +183,7 @@ Include the following code snippet in _createPDF method to open the PDF document
 {% highlight dart %}
 
 //Get external storage directory
-final directory = await getApplicationDocumentsDirectory();
+final directory = await getApplicationSupportDirectory();
 
 //Get directory path
 final path = directory.path;
@@ -178,6 +242,46 @@ Add the following code in the header section of index.html file under the web fo
 
 {% endhighlight %}
 
+## Save and download a PDF document in WASM
+
+step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
+
+step 2:	Create a new Dart file called **save_file_wasm.dart**.
+
+step 3:	Add the following code:
+
+**Import package**
+
+{% highlight dart %}
+
+import 'dart:convert';
+import 'package:web/web.dart' as web;
+
+{% endhighlight %}
+
+To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
+
+{% highlight dart %}
+
+// Function to save and launch a file for download in a web environment
+Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
+  final web.HTMLAnchorElement anchor =
+      web.document.createElement('a') as web.HTMLAnchorElement
+        ..href = "data:application/octet-stream;base64,${base64Encode(bytes)}"
+        ..style.display = 'none'
+        ..download = fileName;
+
+// Insert the new element into the DOM
+web.document.body!.appendChild(anchor);
+
+// Initiate the download
+anchor.click();
+// Clean up the DOM by removing the anchor element
+web.document.body!.removeChild(anchor);
+}
+
+{% endhighlight %}
+
 By executing the above code sample, you will get the PDF document as follows.
 
 ![Getting started PDF](images/getting-started/default.jpg)
@@ -194,10 +298,10 @@ PdfDocument document = PdfDocument();
 //Draw the image
 document.pages.add().graphics.drawImage(
     PdfBitmap(File('image.jpg').readAsBytesSync()),
-    Rect.fromLTWH(0, 0, 100, 100));
+   Rect.fromLTWH(0, 0, 100, 100));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -242,10 +346,10 @@ row.cells[2].value = '8';
 
 //Draw grid to the page of the PDF document
 grid.draw(
-    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: Rect.fromLTWH(0, 0, 0, 0));
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
@@ -273,7 +377,8 @@ PdfGraphics graphics = page.graphics;
 
 * All the units are measured in point instead of pixel.
 * In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced.
-* Syncfusion PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
+* Syncfusion<sup>&reg;</sup>
+  PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from base64 string to a PDF document, by providing the rectangle coordinates.
 
@@ -485,14 +590,15 @@ The following code example shows how to save the invoice document and dispose th
 {% highlight dart %}
 
 //Saves the document
-File('Output.pdf').writeAsBytes(document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Dispose the document
 document.dispose();
 
 {% endhighlight %}
 
-The following screenshot shows the invoice PDF document created by the Syncfusion Flutter PDF.
+The following screenshot shows the invoice PDF document created by the Syncfusion<sup>&reg;</sup>
+  Flutter PDF.
 
 ![Invoice PDF](images/getting-started/invoice.jpg)
 

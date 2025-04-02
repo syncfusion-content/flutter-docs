@@ -93,7 +93,7 @@ The day header can be customized by using the [dayHeaderSettings](https://pub.de
 The [DayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings-class.html) contains the properties to customize the day format, width, day text style, and date text style of the day header by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayFormat.html), [width](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/width.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayTextStyle.html), and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dateTextStyle.html) of `DayHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 10 15" %}
+{% highlight dart hl_lines=" 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
   @override
   Widget build(BuildContext context) {
@@ -129,7 +129,7 @@ The week header can be customized by using the [weekHeaderSettings](https://pub.
 The [WeekHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings-class.html) contains the properties to customize the start and end date format, height, Text alignment, background color, and week text style of the week header by using the [startDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/startDateFormat.html), [endDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/endDateFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/backgroundColor.html), and [weekTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/weekTextStyle.html) of `WeekHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 13" %}
+{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17" %}
 
 @override
   Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ The month header can be customized by using the [monthHeaderSettings](https://pu
 The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings-class.html) contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/backgroundColor.html), and [monthTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthTextStyle.html) of `MonthHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 12" %}
+{% highlight dart hl_lines="7 8 9 10 11 12  13 14 15" %}
 
 @override
   Widget build(BuildContext context) {
@@ -192,7 +192,7 @@ The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calen
 
 ## See also
 
-* [How do I view schedule in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11803/how-do-i-view-schedule-in-flutter-event-calendar-sfcalendar)
-* [How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12178/how-to-customize-the-day-week-month-header-of-schedule-view-in-the-flutter-event-calendar)
-* [How to customize the schedule view month header using builder in Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12064/how-to-customize-the-schedule-view-month-header-using-builder-in-flutter-event-calendar)
-* [How to customize the appointment height in schedule view of the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12226/how-to-customize-the-appointment-height-in-schedule-view-of-the-flutter-event-calendar)
+* [How do I view schedule in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10138/how-to-view-schedule-in-the-flutter-calendar)
+* [How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10710/how-to-customize-the-day-week-month-header-of-schedule-view-in-the-flutter-calendar)
+* [How to customize the schedule view month header using builder in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10399/how-to-customize-the-schedule-view-month-header-using-builder-in-the-flutter-calendar)
+* [How to customize the appointment height in schedule view of the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10650/how-to-customize-the-appointment-height-in-schedule-view-of-the-flutter-calendar)

@@ -170,8 +170,8 @@ Defaults to `true`.
 
 ![Toggle selection](images/selection/deselection.gif)
 
-Also refer [`selection event`](./events#onselectionchanged) for customizing the selection further.
+Also refer [`selection event`](https://help.syncfusion.com/flutter/circular-charts/callbacks#onselectionchanged) for customizing the selection further.
 
 #### See Also
 
-* [Creating a clickable pie chart using selection in circular charts](https://www.syncfusion.com/kb/12346/how-to-create-clickable-pie-chart-in-flutter-using-circular-charts-widget-sfcircularchart).
+* [Creating a clickable pie chart using selection in circular charts](https://support.syncfusion.com/kb/article/10815/how-to-create-clickable-pie-chart-in-flutter-using-circular-charts-widget-sfcircularchart).
