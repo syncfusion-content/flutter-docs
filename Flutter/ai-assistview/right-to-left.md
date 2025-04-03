@@ -47,69 +47,62 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
 Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="10" %}
 
       @override
       Widget build(BuildContext context) {
         return Scaffold(
           body: Directionality(
             textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              placeholderBuilder: (context) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Ask AI Anything',
-                          style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Icon(
-                          Icons.smart_toy,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: SfAIAssistView(
+                messages: _messages,
+                placeholderBuilder: (context) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Ask AI Anything',
+                        style: TextStyle(
                           color: Colors.deepPurple,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text('Music'),
-                              SizedBox(width: 5),
-                              Icon(Icons.music_note)
-                            ],
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          OutlinedButton(
+                            onPressed: () {},
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Music'),
+                                SizedBox(width: 5),
+                                Icon(Icons.music_note)
+                              ],
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 5),
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text('Movies'),
-                              SizedBox(width: 5),
-                              Icon(Icons.movie_creation_rounded)
-                            ],
+                          const SizedBox(width: 5),
+                          OutlinedButton(
+                            onPressed: () {},
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Movies'),
+                                SizedBox(width: 5),
+                                Icon(Icons.movie_creation_rounded)
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                );
-              },
+                        ],
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         );
@@ -126,7 +119,7 @@ Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https:
 Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AIAssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="8" %}
 
       @override
       Widget build(BuildContext context) {
@@ -157,7 +150,7 @@ Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/
 Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AIAssistView. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="8" %}
 
       @override
       Widget build(BuildContext context) {
@@ -187,7 +180,7 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, Header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart %}
 
     final List<AssistMessage> _messages = <AssistMessage>[];
 
