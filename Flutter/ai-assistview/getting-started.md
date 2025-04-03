@@ -56,10 +56,10 @@ Import the library using the code provided below.
 
 ## Initialize AI AssistView widget
 
-Add an AI AssistView widget with the required property, [messages](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html).
+Add an AI AssistView widget with the required [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) property. 
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="5" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -77,12 +77,12 @@ Add an AI AssistView widget with the required property, [messages](https://pub.d
 
 ![Default ai-assistview](images/getting-started/initialize-ai-assistview.png)
 
-## Add placeholder to composer
+## Add composer
 
-To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property, which is of type InputDecoration. The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
+To add the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html) to the SfAIAssistView widget, use the composer property. The composer can be customized using the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property, which is of type [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html). The hint text in the composer can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property within InputDecoration.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="8" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -107,10 +107,10 @@ To add a placeholder to the [`AssistComposer`](https://pub.dev/documentation/syn
 
 ## Add placeholder to conversation area
 
-By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`] (https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="19" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -167,7 +167,7 @@ It represents the send button, which was not included by default. To add it, cre
 When the send button is clicked, the [`AssistActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/onPressed.html) callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="106" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
