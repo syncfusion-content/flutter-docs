@@ -14,7 +14,7 @@ The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat
 It will be displayed when there are no messages in the conversions and will be removed when messages start being added.
 
 {% tabs %}
-{% highlight Darthl_lines="10" %}
+{% highlight dart hl_lines="10" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
