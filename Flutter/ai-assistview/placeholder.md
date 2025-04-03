@@ -9,14 +9,14 @@ documentation: ug
 
 # Placeholder in Flutter AI AssistView (SfAIAssistView)
 
-Define a custom placeholder widget to display at the top of all messages, serving as a header, or to be shown when there are no messages in the chat.
+Define a custom [`placeholder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) widget to display at the top of all messages, serving as a header, or to be shown when there are no messages in the chat.
 
 ## Hide on message
 
 Configure the placeholder to become visible when there are no messages in the AI AssistView and to be hidden when a new message is added.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="110" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -139,10 +139,10 @@ Configure the placeholder to become visible when there are no messages in the AI
 
 ## Scroll with message
 
-The placeholder can scroll along with messages.
+The placeholder can [`scroll`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistPlaceholderBehavior.html#scrollWithMessage) along with messages.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="110" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 

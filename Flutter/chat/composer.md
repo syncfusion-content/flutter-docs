@@ -25,9 +25,9 @@ When the composer is null, no default text field is added to the chat widget.
 The default value for `minLines` is `1`, and the default value for `maxLines` is `6`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11 12" %}
 
-   // Load if there are existing messages.
+  // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
 
   @override
