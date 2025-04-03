@@ -25,7 +25,7 @@ When the `composer` is `null`, no default text field is added to the AI AssistVi
 The default value for `minLines` is `1`, and the default value for `maxLines` is `6`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="9 10" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -49,7 +49,7 @@ The default value for `minLines` is `1`, and the default value for `maxLines` is
 
 ### Decoration
 
-The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
+The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text, borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
 The `InputDecoration` class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
@@ -63,14 +63,14 @@ The following are the major features available in [`InputDecoration`](https://ap
 
 #### Enabled
 
-The [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html) property defines whether the compose feature is in an enabled or disabled state. By default, it is set to true. If set to false, the compose feature will be disabled, and the default action button will also be disabled.
+The [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled.html) property defines whether the compose feature is in an enabled or disabled state. By default, it is set to `true`. If set to false, the compose feature will be disabled, and the default action button will also be disabled.
 
 #### Border
 
 The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="10" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -100,7 +100,7 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the `padding` is set to `16` horizontally and `18` vertically.
 
 {% tabs %}
-{% highlight dart hl_lines="28" %}
+{% highlight dart hl_lines="11" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -129,7 +129,7 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to `null`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -157,7 +157,7 @@ The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -190,7 +190,7 @@ The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [`suffixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="10 14" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -227,7 +227,7 @@ The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assi
 By default, the top `margin` is set to `16`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="9" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -255,7 +255,7 @@ The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/a
 The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="9" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -285,7 +285,7 @@ The [AssistComposer.builder](https://pub.dev/documentation/syncfusion_flutter_ch
 If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used, the action button will always be enabled.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="15" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
   late TextEditingController _controller;
