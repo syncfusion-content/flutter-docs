@@ -59,7 +59,7 @@ Import the library using the code provided below.
 Add an AI AssistView widget with the required [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) property. 
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="6" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -110,7 +110,7 @@ To add the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_c
 By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
-{% highlight dart hl_lines="19" %}
+{% highlight dart hl_lines="21" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -167,7 +167,7 @@ It represents the send button, which was not included by default. To add it, cre
 When the send button is clicked, the [`AssistActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/onPressed.html) callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
 
 {% tabs %}
-{% highlight dart hl_lines="106" %}
+{% highlight dart hl_lines="107" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
