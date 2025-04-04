@@ -352,7 +352,7 @@ Customize the area where message content is displayed by changing its `backgroun
 Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="8 41" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
@@ -469,7 +469,7 @@ Indicates that the AI service's response is in progress after a request has been
 Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/toolbarItems.html) to response messages that provides options to perform various actions, such as rating the response, sharing it, copying it, and more.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="8 48" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
