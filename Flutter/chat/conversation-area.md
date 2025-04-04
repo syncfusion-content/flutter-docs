@@ -641,7 +641,7 @@ The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat
 The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/padding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
 
 {% tabs %}
-{% highlight dart hl_lines="33 37" %}
+{% highlight dart hl_lines="33 34 37 38" %}
 
   @override
   Widget build(BuildContext context) {
@@ -745,7 +745,7 @@ The [`avatarPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp. Defaults to `EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0)`.
 
 {% tabs %}
-{% highlight dart hl_lines="33 37" %}
+{% highlight dart hl_lines="33 34 37 38" %}
 
   @override
   Widget build(BuildContext context) {

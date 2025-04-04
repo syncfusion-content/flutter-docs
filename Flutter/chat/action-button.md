@@ -126,7 +126,7 @@ The [`child`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 It is a callback that is invoked whenever the action button is pressed. Since the chat widget does not rebuild itself to update the newly composed message, it provides the default text from the composer as a parameter. The user can create a message object and include it in the existing [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) list by rebuilding the chat widget to add the newly composed message to the conversational area.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="11" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -165,7 +165,7 @@ It is a callback that is invoked whenever the action button is pressed. Since th
 The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/tooltip.html) text describes the button's action when pressed. It is displayed when the user long-presses on touch devices or hovers the mouse over it on desktop devices. By default, it is set to null, so no tooltip is shown.
 
 {% tabs %}
-{% highlight dart hl_lines="26" %}
+{% highlight dart hl_lines="27" %}
 
   @override
   Widget build(BuildContext context) {

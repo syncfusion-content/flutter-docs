@@ -992,7 +992,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
 The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundColor.html) property is used to specify the background color of response message toolbar contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
