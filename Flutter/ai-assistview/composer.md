@@ -129,7 +129,7 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to `null`.
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="10" %}
 
   final List<AssistMessage> _messages = <AssistMessage>[];
 
