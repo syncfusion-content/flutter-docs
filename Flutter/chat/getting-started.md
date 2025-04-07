@@ -196,7 +196,7 @@ It represents the send button, which was not included by default. To add it, cre
 When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback is invoked, which rebuilds the chat widget with the newly composed message.
 
 {% tabs %}
-{% highlight dart hl_lines="38" %}
+{% highlight dart hl_lines="39" %}
 
   @override
   void initState() {
