@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Placeholder in Flutter AIAssistView widget | Syncfusion
-description: Learn here about the RTL support in Syncfusion Flutter AIAssistView (SfAIAssistVIew) widget and more.
+title: Placeholder in Flutter Chat widget | Syncfusion
+description: Learn here about the Right to Left(RTL) support in Syncfusion Flutter Chat (SfChat) widget and more.
 platform: flutter
-control: SfAIAssistView
+control: SfChat
 documentation: ug
 ---
 
 
-# Right To Left (RTL) in Flutter AIAssistView (SfAIAssistView)
+# Right To Left (RTL) in Flutter Chat (SfChat)
 
 
-AIAssistView supports the right to left rendering for all the elements in the AIAssistView widget. 
+Chat supports the right to left rendering for all the elements in the Chat widget. 
 
 ## RTL rendering ways
 
@@ -19,7 +19,7 @@ Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfChat with Directionality widget
 
-To change the rendering direction from right to left, you can wrap the [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
+To change the rendering direction from right to left, you can wrap the [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
@@ -29,7 +29,7 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
       return Scaffold(
         body: Directionality(
           textDirection: TextDirection.rtl,
-          child: SfAIAssistView(
+          child: SfChat(
               //...
           ),
         ),
@@ -40,73 +40,51 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
 {% endtabs %}
 
 
-## RTL supported AIAssistView elements
+## RTL supported chat elements
 
 ### Placeholder
 
-Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
+Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) in the chat. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="5 9" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: SfAIAssistView(
-                messages: _messages,
-                placeholderBuilder: (context) {
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        'Ask AI Anything',
-                        style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: const Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text('Music'),
-                                SizedBox(width: 5),
-                                Icon(Icons.music_note)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: const Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text('Movies'),
-                                SizedBox(width: 5),
-                                Icon(Icons.movie_creation_rounded)
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ),
-        );
-      }
+     @override
+     Widget build(BuildContext context) {
+       return Scaffold(
+         body: Directionality(
+           textDirection: TextDirection.rtl,
+           child: SfChat(
+             outgoingUser: '1010',
+             messages: _messages,
+             placeholderBuilder: (context) {
+               return const Center(
+                 child: Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                     SizedBox(width: 10),
+                     Icon(
+                       size: 30,
+                       Icons.emoji_people_rounded,
+                       color: Colors.red,
+                     ),
+                     SizedBox(width: 5),
+                     Text(
+                    'Start a conversation',
+                       style: TextStyle(
+                         color: Colors.deepPurple,
+                         fontSize: 16,
+                         fontWeight: FontWeight.bold,
+                       ),
+                     ),
+                   ],
+                 ),
+               );
+             },
+           ),
+         ),
+       );
+     } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -116,27 +94,27 @@ Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https:
 
 ### Composer
 
-Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AIAssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
+Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) in the chat. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="5 9" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              composer: const AssistComposer(
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfChat(
+            outgoingUser: '1010',
+            messages: _messages,
+            composer: const ChatComposer(
                 decoration: InputDecoration(
-                  hintText: 'Ask AI anything',
-                ),
-              ),
-            ),
+              hintText: 'Enter Message here',
+            )),
           ),
-        );
-      }
+        ),
+      );
+    }  
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,27 +125,37 @@ Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/
 
 ### Action Button
 
-Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AIAssistView. Action button will be rendered from right to left direction.
+Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/actionButton.html) in the chat. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="5 9" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              actionButton: AssistActionButton(
-                onPressed: (String value) {
-                  // Handle the send button click action here.
-                },
-              ),
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfChat(
+            outgoingUser: '1010',
+            messages: _messages,
+            actionButton: ChatActionButton(
+              onPressed: (value) {
+                setState(() {
+                  _messages.add(
+                    ChatMessage(
+                      text: value,
+                      time: DateTime.now(),
+                      author: const ChatAuthor(
+                          id: '1010', name: 'Johnathan wick'),
+                    ),
+                  );
+                });
+              },
             ),
           ),
-        );
-      } 
+        ),
+      );
+    }  
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,69 +163,53 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 ![Action Button RTL](images/rtl/action_button_rtl.gif)
 
 
-### Conversation Area
+### Message Content
 
-Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, Header and suggestions will render the widget in right to left direction. 
+Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the chat conversation area. In RTL mode, message content, header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="5 8" %}
 
-    final List<AssistMessage> _messages = <AssistMessage>[];
-
-      void _generativeResponse(String data) async {
-        final String response = await _getAIResponse(data);
-        setState(() {
-          _messages.add(
-            AssistMessage.response(
-              data: response,
-              time: DateTime.now(),
-              suggestions: [
-                const AssistMessageSuggestion(data: 'Provier'),
-                const AssistMessageSuggestion(data: 'Riverpoad'),
-                const AssistMessageSuggestion(data: 'Bloc'),
-                const AssistMessageSuggestion(data: 'GetX'),
-              ],
-            ),
-          );
-        });
-      }
-
-      Future<String> _getAIResponse(String data) async {
-        String response = '';
-        // Connect with your preferred AI to generate a response to the request.
-        return response;
-      }
-
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              actionButton: AssistActionButton(
-                onPressed: (String data) {
-                  if (data.trim().isNotEmpty) {
-                    setState(() {
-                      _messages.add(
-                        AssistMessage.request(
-                          data: data,
-                          time: DateTime.now(),
-                          author: const AssistMessageAuthor(
-                              id: 'User ID', name: 'User name'),
-                        ),
-                      );
-                      _generativeResponse(data);
-                    });
-                  }
-                },
-              ),
-            ),
-          ),
-        );
-      }
+     @override
+     Widget build(BuildContext context) {
+       return Scaffold(
+         body: Directionality(
+           textDirection: TextDirection.rtl,
+           child: SfChat(
+             outgoingUser: '1010',
+             messages: <ChatMessage>[
+               ChatMessage(
+                 text: 'Hey, Any plans for today?',
+                 time: DateTime.parse('2025-03-21T10:02:00Z'),
+                 author: const ChatAuthor(
+                   id: '1010',
+                   name: 'Johnathan wick',
+                   avatar: AssetImage('assets/images/People_Circle23.png'),
+                 ),
+               ),
+               ChatMessage(
+                 text:
+                     "I'm thinking of watching a web series. Can you suggest some?",
+                 time: DateTime.parse('2025-03-21T10:03:00Z'),
+                 author: const ChatAuthor(
+                   id: '1020',
+                   name: 'John carter',
+                   avatar: AssetImage('assets/images/People_Circle5.png'),
+                 ),
+                 suggestions: [
+                   const ChatMessageSuggestion(data: 'Peaky Blinders'),
+                   const ChatMessageSuggestion(data: 'Breaking Bad'),
+                   const ChatMessageSuggestion(data: 'Prison Break'),
+                   const ChatMessageSuggestion(data: 'Blacklist'),
+                 ],
+               ),
+             ],
+           ),
+         ),
+       );
+     }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Message Content RTL](images/rtl/conversation_area_rtl.gif)
+![Message Content RTL](images/rtl/message_content_rtl.png)
