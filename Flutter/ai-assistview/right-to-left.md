@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Placeholder in Flutter AIAssistView widget | Syncfusion
-description: Learn here about the RTL support in Syncfusion Flutter AIAssistView (SfAIAssistVIew) widget and more.
+description: Learn here about the RTL support in Syncfusion Flutter AIAssistView (SfAIAssistView) widget and more.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
@@ -17,7 +17,7 @@ AIAssistView supports the right to left rendering for all the elements in the AI
 
 Right to left rendering can be switched in the following ways:
 
-### Wrapping the SfChat with Directionality widget
+### Wrapping the SfAIAssistView with Directionality widget
 
 To change the rendering direction from right to left, you can wrap the [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
@@ -47,7 +47,7 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
 Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="5 10" %}
 
       @override
       Widget build(BuildContext context) {
@@ -119,7 +119,7 @@ Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https:
 Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AIAssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="5 8" %}
 
       @override
       Widget build(BuildContext context) {
@@ -150,7 +150,7 @@ Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/
 Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AIAssistView. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="5 8" %}
 
       @override
       Widget build(BuildContext context) {
@@ -177,7 +177,7 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 
 ### Conversation Area
 
-Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, Header and suggestions will render the widget in right to left direction. 
+Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
 {% highlight dart %}

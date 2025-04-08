@@ -44,10 +44,10 @@ To change the rendering direction from right to left, you can wrap the [`SfChat`
 
 ### Placeholder
 
-Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the chat. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
+Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) in the chat. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="5 9" %}
 
      @override
      Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https:
 Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) in the chat. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="5 9" %}
 
     @override
     Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/
 Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/actionButton.html) in the chat. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="5 9" %}
 
     @override
     Widget build(BuildContext context) {
@@ -168,7 +168,7 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the chat conversation area. In RTL mode, message content, header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
-{% highlight dart hl_lines="3 6" %}
+{% highlight dart hl_lines="5 8" %}
 
      @override
      Widget build(BuildContext context) {
