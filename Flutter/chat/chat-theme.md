@@ -308,7 +308,7 @@ The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flut
 The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
-{% highlight Darthl_lines="8" %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
