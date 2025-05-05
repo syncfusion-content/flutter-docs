@@ -378,6 +378,81 @@ class Data {
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
+## Edge Label Placement
+
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`]() property can be used to avoid the partial appearance of labels at the corners. Default value of this property is [`EdgeLabelPlacement.auto`](). Another available options of edgeLabelPlacement is inside. [`EdgeLabelPlacement.inside`]() option will move the edge labels inside the axis bounds.
+
+{% tabs %}
+{% highlight Dart %}
+
+    final DateTime _min = DateTime(2000);
+    final DateTime _max = DateTime(2008);
+    final slider.SfRangeValues _values =
+        slider.SfRangeValues(DateTime(2002), DateTime(2006));
+
+    final List<Data> _chartData = <Data>[
+        Data(x: DateTime(2000), y: 2.2),
+        Data(x: DateTime(2001), y: 3.4),
+        Data(x: DateTime(2002), y: 2.8),
+        Data(x: DateTime(2003), y: 1.6),
+        Data(x: DateTime(2004), y: 2.3),
+        Data(x: DateTime(2005), y: 2.5),
+        Data(x: DateTime(2006), y: 2.9),
+        Data(x: DateTime(2007), y: 3.8),
+        Data(x: DateTime(2008), y: 3.7),
+    ];
+
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+            body: Center(
+            child: slider.SfRangeSelector(
+                min: _min,
+                max: _max,
+                showLabels: true,
+                showTicks: true,
+                interval: 2,
+                edgeLabelPlacement: slider.EdgeLabelPlacement.inside,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: slider.DateIntervalType.years,
+                initialValues: _values,
+                child: SizedBox(
+                height: 130,
+                child: SfCartesianChart(
+                    margin: const EdgeInsets.all(0),
+                    primaryXAxis: DateTimeAxis(
+                        minimum: _min, maximum: _max, isVisible: false),
+                    primaryYAxis: NumericAxis(isVisible: false),
+                    plotAreaBorderWidth: 0,
+                    series: <SplineSeries<Data, DateTime>>[
+                    SplineSeries<Data, DateTime>(
+                        color: const Color.fromARGB(255, 126, 184, 253),
+                        dataSource: _chartData,
+                        xValueMapper: (Data sales, int index) => sales.x,
+                        yValueMapper: (Data sales, int index) => sales.y)
+                    ],
+                ),
+                ),
+            ),
+            ),
+        ),
+        );
+    }
+    }
+
+    class Data {
+    Data({required this.x, required this.y});
+    final DateTime x;
+    final double y;
+    }
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge label placement](images/label-and-divider/range_selector_placement.jpg)
+
 ## Label placement
 
 The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is used to place the labels either between the major ticks or on the major ticks. The default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is `LabelPlacement.onTicks`.
