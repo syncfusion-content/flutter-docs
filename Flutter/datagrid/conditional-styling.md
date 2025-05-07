@@ -277,7 +277,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Styling alternate rows
 
-The appearance of the alternating rows in `SfDataGrid` can be customized by using the `DataGridRowAdapter.color`. Use the [effectiveRows]() property to get the index of the row. This collection contains the sorted collection if the sorting is applied.
+The appearance of the alternating rows in `SfDataGrid` can be customized by using the `DataGridRowAdapter.color`. Use the [effectiveRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/effectiveRows.html) property to get the index of the row. This collection contains the sorted collection if the sorting is applied.
 
 {% tabs %}
 {% highlight Dart %} 
