@@ -28,7 +28,7 @@ Import the following library to use the chat theme data:
 The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonForegroundColor.html) property is used to specify the color for the default action button icon.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -56,7 +56,7 @@ The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flu
 The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonBackgroundColor.html) property is used to specify the background color for the action button in its default state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -84,7 +84,7 @@ The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flu
 The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusColor.html) property is used to specify the background color for the action button when it is in the focused state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -112,7 +112,7 @@ The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_
 The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverColor.html) property is used to specify the background color for the action button when it is hovered over.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -140,7 +140,7 @@ The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_
 The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonSplashColor.html) property is used to specify the color of the ripple effect when the action button is tapped.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -168,7 +168,7 @@ The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter
 The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledForegroundColor.html) property is used to specify the color of the text or icon on the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -196,7 +196,7 @@ The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfu
 The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledBackgroundColor.html) property is used to specify the background color of the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -224,7 +224,7 @@ The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfu
 The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonElevation.html) property is used to specify the elevation of the action button in its default state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -252,7 +252,7 @@ The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_c
 The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonFocusElevation.html) property is used to specify the elevation of the action button when it is focused.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -280,7 +280,7 @@ The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flut
 The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHoverElevation.html) property is used to specify the elevation of the action button when it is hovered over.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -308,7 +308,7 @@ The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flut
 The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -336,7 +336,7 @@ The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_
 The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonDisabledElevation.html) property is used to specify the elevation of the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -364,7 +364,7 @@ The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_f
 The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonMouseCursor.html) property is used to specify the type of cursor displayed when hovering over the action button.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -392,7 +392,7 @@ The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter
 The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/actionButtonShape.html) property is used to specify the shape and border radius of the action button.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -419,10 +419,10 @@ The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/
 
 ## Outgoing avatar background color
 
-The [`outgoingAvatarBackgroundColor`] property is used to specify the background color of outgoing message avatar.
+The [`outgoingAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingAvatarBackgroundColor.html) property is used to specify the background color of outgoing message avatar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -446,10 +446,10 @@ The [`outgoingAvatarBackgroundColor`] property is used to specify the background
 
 ## Incoming avatar background color
 
-The [`incomingAvatarBackgroundColor`] property is used to specify the background color of incoming message avatar.
+The [`incomingAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingAvatarBackgroundColor.html) property is used to specify the background color of incoming message avatar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -476,7 +476,7 @@ The [`incomingAvatarBackgroundColor`] property is used to specify the background
 The [`outgoingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageBackgroundColor.html) property is used to specify the background color of bubbles containing outgoing messages.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -504,7 +504,7 @@ The [`outgoingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_
 The [`incomingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageBackgroundColor.html) property is used to specify the background color of bubbles containing incoming messages.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -532,7 +532,7 @@ The [`incomingMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_
 The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/editorTextStyle.html) property is used to specify the style for text in the message editor.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -564,7 +564,7 @@ The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/la
 The [`outgoingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingContentTextStyle.html) property is used to specify the style for text in outgoing message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -596,7 +596,7 @@ The [`outgoingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutte
 The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingContentTextStyle.html) property is used to specify the style for text in incoming message bubbles
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -628,7 +628,7 @@ The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutte
 The [`outgoingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in outgoing message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -660,7 +660,7 @@ The [`outgoingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_
 The [`incomingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in incoming message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -692,7 +692,7 @@ The [`incomingPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_
 The [`outgoingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in outgoing message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -724,7 +724,7 @@ The [`outgoingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusio
 The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in incoming message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -753,10 +753,10 @@ The [`incomingSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusio
 
 ## Suggestion item text style
 
-The [`suggestionItemTextStyle`] property is used to specify the text style for both outgoing and incoming message suggestion items.
+The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemTextStyle.html) property is used to specify the text style for both outgoing and incoming message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -811,7 +811,7 @@ The [`suggestionItemTextStyle`] property is used to specify the text style for b
 The [`outgoingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageShape.html) property is used to specify the shape and border radius of outgoing message bubbles.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -841,7 +841,7 @@ The [`outgoingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_co
 The [`incomingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageShape.html) property is used to specify the shape and border radius of incoming message content.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -868,10 +868,10 @@ The [`incomingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_co
 
 ## Suggestion background color
 
-The [`suggestionBackgroundColor`] property is used to specify the background color of both outgoing and incoming message suggestion bubble.
+The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionBackgroundColor.html) property is used to specify the background color of both outgoing and incoming message suggestion bubble.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -895,10 +895,10 @@ The [`suggestionBackgroundColor`] property is used to specify the background col
 
 ## Suggestion background shape
 
-The [`suggestionBackgroundShape`] property is used to specify the background shape of both outgoing and incoming message suggestion bubble.
+The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of both outgoing and incoming message suggestion bubble.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -924,10 +924,10 @@ The [`suggestionBackgroundShape`] property is used to specify the background sha
 
 ## Suggestion item background color
 
-The [`suggestionItemBackgroundColor`] property is used to specify the background color for both outgoing and incoming message suggestion items.
+The [`suggestionItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemBackgroundColor.html) property is used to specify the background color for both outgoing and incoming message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -964,10 +964,10 @@ The [`suggestionItemBackgroundColor`] property is used to specify the background
 
 ## Suggestion item shape
 
-The [`suggestionItemShape`] property is used to specify the shape for both outgoing and incoming message suggestion items.
+The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/suggestionItemShape.html) property is used to specify the shape for both outgoing and incoming message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];

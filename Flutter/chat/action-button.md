@@ -17,16 +17,10 @@ The [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 
 When the send button is clicked, it invokes the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback with the text composed in the default composer (text field), which rebuilds the Chat widget to add the new message to the conversation area.
 
-If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/builder.html) is used, the parameter of onPressed will always be an empty string.
-
-If [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) is null, the action button will always be disabled.
-
-If the default composer is disabled, the action button will also be disabled.
-
-If no composer is added (by specifying the composer as null), the action button will always be enabled.
+If the [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/builder.html) is used, the onPressed parameter will always receive an empty string. When the [`onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) property of ChatActionButton is set to null, the action button remains disabled. Additionally, if the default composer is disabled, the action button will also be disabled. However, if no composer is added by setting the composer property to null, the action button will always remain enabled.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="26" %}
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +78,7 @@ If no composer is added (by specifying the composer as null), the action button 
 The [`child`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/child.html) property allows you to specify one or more interactive widgets as the content of an action button. This is useful for adding a microphone icon for voice input, attaching files to share documents or images, and more.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="27" %}
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +126,7 @@ The [`child`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 It is a callback that is invoked whenever the action button is pressed. Since the chat widget does not rebuild itself to update the newly composed message, it provides the default text from the composer as a parameter. The user can create a message object and include it in the existing [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) list by rebuilding the chat widget to add the newly composed message to the conversational area.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -171,7 +165,7 @@ It is a callback that is invoked whenever the action button is pressed. Since th
 The [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/tooltip.html) text describes the button's action when pressed. It is displayed when the user long-presses on touch devices or hovers the mouse over it on desktop devices. By default, it is set to null, so no tooltip is shown.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="27" %}
 
   @override
   Widget build(BuildContext context) {
@@ -227,7 +221,7 @@ The [`hoverColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
 The [`splashColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/splashColor.html) property is the splash color of the button's InkWell. The default color is set to `colorScheme.primary.withOpacity(0.86)`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11 12 13 14 15" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -266,7 +260,7 @@ The [`hoverElevation`](https://pub.dev/documentation/syncfusion_flutter_chat/lat
 The [`highlightElevation`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/highlightElevation.html) property determines the elevation when the button is pressed. Defaults to `0.0`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11 12 13 14" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -298,7 +292,7 @@ The [`highlightElevation`](https://pub.dev/documentation/syncfusion_flutter_chat
 The [`mouseCursor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/mouseCursor.html) property defines the type of cursor that appears when hovering over the button. It can be set to different values to customize the cursor shape (e.g., [`SystemMouseCursors.click`](https://api.flutter.dev/flutter/services/SystemMouseCursors/click-constant.html), [`SystemMouseCursors.forbidden`](https://api.flutter.dev/flutter/services/SystemMouseCursors/forbidden-constant.html), etc.). If not specified, the default cursor will be used.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="25" %}
 
   @override
   Widget build(BuildContext context) {
@@ -343,7 +337,7 @@ The [`mouseCursor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/shape.html) property sets the shape of the button's border, such as rounded or circular. By default, it is set to `RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0)))`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="25" %}
 
   @override
   Widget build(BuildContext context) {
@@ -395,7 +389,7 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/margin.html) property defines the space inside the button between its border and the content. By default, it is set to `EdgeInsetsDirectional.only(start: 8.0)`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -424,7 +418,7 @@ The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat
 The [`size`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/size.html) property specifies the width and height of the button. By default, it is set to `Size.square(40.0)`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];

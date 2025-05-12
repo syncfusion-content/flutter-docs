@@ -22,7 +22,7 @@ Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 * [`author`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/author.html) - This includes details about the author of the message, such as their name and user avatar or profile image.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="5" %}
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ Additionally the message can be extended to include more detailed information ab
 In the following example, included the user's display name additionally in the existing message.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="40" %}
 
   @override
   void initState() {
@@ -154,7 +154,7 @@ In the following example, included the user's display name additionally in the e
 The [`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="21" %}
 
   @override
   Widget build(BuildContext context) {
@@ -200,7 +200,7 @@ The [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 The name may be repeated within the group, but the ID is unique to each user.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="34" %}
 
   @override
   Widget build(BuildContext context) {
@@ -264,7 +264,7 @@ The [`showTimestamp`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/timestampFormat.html) property is used to specify the date format for the sending time (timestamp). The default value is DateFormat('d/M/y : hh:mm a').
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33 36" %}
 
   @override
   Widget build(BuildContext context) {
@@ -317,7 +317,7 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/showAuthorAvatar.html) property is used to show or hide the author's image for the message. Defaults to `true`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33 36" %}
 
   @override
   Widget build(BuildContext context) {
@@ -378,7 +378,7 @@ The [`headerTextStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/backgroundColor.html) property is used to specify the background color of the content area within the message.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33 36" %}
 
   @override
   Widget build(BuildContext context) {
@@ -431,7 +431,7 @@ The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/shape.html) property is used to define the shape of the content area of the message, such as rounded or custom shapes.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33 38" %}
 
   @override
   Widget build(BuildContext context) {
@@ -486,30 +486,384 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 ### Width factor
 
 The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/widthFactor.html) property is used to define the width factor of the message relative to available width. The width value should be between 0 and 1. Default value is `0.8`.
+<<<<<<< HEAD:Flutter/chat/message-content.md
+=======
+
+{% tabs %}
+{% highlight dart hl_lines="33 36" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          widthFactor: 0.9,
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          widthFactor: 0.7,
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
 
 ### Avatar size
 
 The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `Size.square(32.0)`.
 
+<<<<<<< HEAD:Flutter/chat/message-content.md
+### Margin
+
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/margin.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
+=======
+{% tabs %}
+{% highlight dart hl_lines="33 36" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          avatarSize: const Size.square(35.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          avatarSize: const Size.square(35.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Margin
 
 The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/margin.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
 
+{% tabs %}
+{% highlight dart hl_lines="33 36" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          margin: const EdgeInsets.all(4.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          margin: const EdgeInsets.all(4.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
+
 ### Padding
 
 The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/padding.html) property is used to specify the padding within the content area of the message, controlling spacing around the text. Defaults to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)`.
+<<<<<<< HEAD:Flutter/chat/message-content.md
+=======
+
+{% tabs %}
+{% highlight dart hl_lines="33 34 37 38" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          padding:
+          const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          padding:
+          const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
 
 ### Avatar padding
 
 The [`avatarPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/avatarPadding.html) property is used to define the padding around the author's avatar within the message.
+<<<<<<< HEAD:Flutter/chat/message-content.md
+=======
+
+{% tabs %}
+{% highlight dart hl_lines="33 36" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          avatarPadding: const EdgeInsets.all(4.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          avatarPadding: const EdgeInsets.all(4.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
 
 ### Header padding
 
 The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/headerPadding.html) property is used to specify the padding around the header section of the message, including the username and timestamp. Defaults to `EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0)`.
+<<<<<<< HEAD:Flutter/chat/message-content.md
+=======
+
+{% tabs %}
+{% highlight dart hl_lines="33 34 37 38" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          headerPadding:
+          const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          headerPadding:
+          const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
 
 ### Footer padding
 
 The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/footerPadding.html) property is used to define the padding around the footer section of the message. Defaults to `EdgeInsetsDirectional.only(top: 4.0)`.
+<<<<<<< HEAD:Flutter/chat/message-content.md
+=======
+
+{% tabs %}
+{% highlight dart hl_lines="33 36" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfChat(
+        messages: <ChatMessage>[
+          ChatMessage(
+            text: 'Hi! How’s your day?',
+            time: DateTime(2024, 08, 07, 9, 0),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+          ChatMessage(
+            text: 'Good! Just relaxing.',
+            time: DateTime(2024, 08, 07, 9, 5),
+            author: const ChatAuthor(
+              id: '123-002',
+              name: 'Jane Smith',
+            ),
+          ),
+          ChatMessage(
+            text: 'Any plans later?',
+            time: DateTime(2024, 08, 07, 9, 10),
+            author: const ChatAuthor(
+              id: '123-001',
+              name: 'John Doe',
+            ),
+          ),
+        ],
+        outgoingUser: '123-001',
+        incomingMessageSettings: const ChatMessageSettings(
+          footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
+        ),
+        outgoingMessageSettings: const ChatMessageSettings(
+          footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+>>>>>>> a8966153b29296c2deef35c51ed9441797ee2cb6:Flutter/chat/conversation-area.md
 
 >You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
 

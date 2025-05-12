@@ -28,7 +28,7 @@ Import the following library to use the assist theme data:
 The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonForegroundColor.html) property is used to specify the color for the default action button icon.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -55,7 +55,7 @@ The [`actionButtonForegroundColor`](https://pub.dev/documentation/syncfusion_flu
 The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonBackgroundColor.html) property is used to specify the background color for the action button in its default state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -82,7 +82,7 @@ The [`actionButtonBackgroundColor`](https://pub.dev/documentation/syncfusion_flu
 The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonFocusColor.html) property is used to specify the background color for the action button when it is in the focused state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -109,7 +109,7 @@ The [`actionButtonFocusColor`](https://pub.dev/documentation/syncfusion_flutter_
 The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHoverColor.html) property is used to specify the background color for the action button when it is hovered over.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -136,7 +136,7 @@ The [`actionButtonHoverColor`](https://pub.dev/documentation/syncfusion_flutter_
 The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonSplashColor.html) property is used to specify the color of the ripple effect when the action button is tapped.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -163,7 +163,7 @@ The [`actionButtonSplashColor`](https://pub.dev/documentation/syncfusion_flutter
 The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledForegroundColor.html) property is used to specify the color of the text or icon on the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -190,7 +190,7 @@ The [`actionButtonDisabledForegroundColor`](https://pub.dev/documentation/syncfu
 The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledBackgroundColor.html) property is used to specify the background color of the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -217,7 +217,7 @@ The [`actionButtonDisabledBackgroundColor`](https://pub.dev/documentation/syncfu
 The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonElevation.html) property is used to specify the elevation of the action button in its default state.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -244,7 +244,7 @@ The [`actionButtonElevation`](https://pub.dev/documentation/syncfusion_flutter_c
 The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonFocusElevation.html) property is used to specify the elevation of the action button when it is focused.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -271,7 +271,7 @@ The [`actionButtonFocusElevation`](https://pub.dev/documentation/syncfusion_flut
 The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHoverElevation.html) property is used to specify the elevation of the action button when it is hovered over.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -298,7 +298,7 @@ The [`actionButtonHoverElevation`](https://pub.dev/documentation/syncfusion_flut
 The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonHighlightElevation.html) property is used to specify the elevation of the action button when it is highlighted.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -325,7 +325,7 @@ The [`actionButtonHighlightElevation`](https://pub.dev/documentation/syncfusion_
 The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonDisabledElevation.html) property is used to specify the elevation of the action button when it is disabled.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -352,7 +352,7 @@ The [`actionButtonDisabledElevation`](https://pub.dev/documentation/syncfusion_f
 The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonMouseCursor.html) property is used to specify the type of cursor displayed when hovering over the action button.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -379,7 +379,7 @@ The [`actionButtonMouseCursor`](https://pub.dev/documentation/syncfusion_flutter
 The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/actionButtonShape.html) property is used to specify the shape and border radius of the action button.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -408,7 +408,7 @@ The [`actionButtonShape`](https://pub.dev/documentation/syncfusion_flutter_core/
 The [`requestAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestAvatarBackgroundColor.html) property is used to specify the background color of request message avatar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -435,7 +435,7 @@ The [`requestAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_fl
 The [`responseAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseAvatarBackgroundColor.html) property is used to specify the background color of response message avatar.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -462,7 +462,7 @@ The [`responseAvatarBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageBackgroundColor.html) property is used to specify the background color of contents containing request messages.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -489,7 +489,7 @@ The [`requestMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 The [`responseMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageBackgroundColor.html) property is used to specify the background color of contents containing response messages.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -516,7 +516,7 @@ The [`responseMessageBackgroundColor`](https://pub.dev/documentation/syncfusion_
 The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/editorTextStyle.html) property is used to specify the style for text in the message editor.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -547,7 +547,7 @@ The [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/la
 The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestContentTextStyle.html) property is used to specify the style for text in request message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -578,7 +578,7 @@ The [`requestContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseContentTextStyle.html) property is used to specify the style for text in response message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -609,7 +609,7 @@ The [`responseContentTextStyle`](https://pub.dev/documentation/syncfusion_flutte
 The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestPrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in request message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -640,7 +640,7 @@ The [`requestPrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_f
 The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responsePrimaryHeaderTextStyle.html) property is used to specify the style for the primary header text in response message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -671,7 +671,7 @@ The [`responsePrimaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_
 The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in request message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -702,7 +702,7 @@ The [`requestSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion
 The [`responseSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseSecondaryHeaderTextStyle.html) property is used to specify the style for the secondary header text in response message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -733,7 +733,7 @@ The [`responseSecondaryHeaderTextStyle`](https://pub.dev/documentation/syncfusio
 The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemTextStyle.html) property is used to specify the text style for response message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -788,7 +788,7 @@ The [`suggestionItemTextStyle`](https://pub.dev/documentation/syncfusion_flutter
 The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/requestMessageShape.html) property is used to specify the shape and border radius of request message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -817,7 +817,7 @@ The [`requestMessageShape`](https://pub.dev/documentation/syncfusion_flutter_cor
 The [`responseMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseMessageShape.html) property is used to specify the shape and border radius of response message contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -846,7 +846,7 @@ The [`responseMessageShape`](https://pub.dev/documentation/syncfusion_flutter_co
 The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundColor.html) property is used to specify the background color of response message suggestion contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -873,7 +873,7 @@ The [`suggestionBackgroundColor`](https://pub.dev/documentation/syncfusion_flutt
 The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionBackgroundShape.html) property is used to specify the background shape of response message suggestion contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -902,7 +902,7 @@ The [`suggestionBackgroundShape`](https://pub.dev/documentation/syncfusion_flutt
 The [`suggestionItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemBackgroundColor.html) property is used to specify the background color for response message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -942,7 +942,7 @@ The [`suggestionItemBackgroundColor`](https://pub.dev/documentation/syncfusion_f
 The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/suggestionItemShape.html) property is used to specify the shape for response message suggestion items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -984,7 +984,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
     );
   }
 
-{% endhighlight %}
+{% endhighlight hl_lines="8" %}
 {% endtabs %}
 
 ## Response toolbar background color
@@ -992,7 +992,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
 The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundColor.html) property is used to specify the background color of response message toolbar contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -1019,7 +1019,7 @@ The [`responseToolbarBackgroundColor`](https://pub.dev/documentation/syncfusion_
 The [`responseToolbarBackgroundShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarBackgroundShape.html) property is used to specify the background shape of response message toolbar contents.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -1048,7 +1048,7 @@ The [`responseToolbarBackgroundShape`](https://pub.dev/documentation/syncfusion_
 The [`responseToolbarItemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarItemBackgroundColor.html) property is used to specify the background color of response message toolbar items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];
@@ -1089,7 +1089,7 @@ The [`responseToolbarItemBackgroundColor`](https://pub.dev/documentation/syncfus
 The [`responseToolbarItemShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/responseToolbarItemShape.html) property is used to specify the shape of response message toolbar items.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight Dart hl_lines="8" %}
 
   // Load if there are existing messages.
   final List<AssistMessage> _messages = <AssistMessage>[];

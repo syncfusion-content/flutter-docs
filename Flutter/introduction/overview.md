@@ -59,9 +59,8 @@ tr, td, th
 </tr>
   
 <tr> 
- <td> <a href="https://install.appcenter.ms/orgs/syncfusion-demos/apps/syncfusion-flutter-gallery/distribution_groups/release"><img alt="Flutter macOS App Center" src="https://cdn.syncfusion.com/content/images/FTControl/macos-app-center.png"/></a></td>
  <td> <a href="https://snapcraft.io/syncfusion-flutter-gallery"><img alt="Flutter Snap Store" src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png"/></a></td>
- <td colspan="3"> <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a></td>
+ <td> <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a></td>
 
 </tr>
 </table>
