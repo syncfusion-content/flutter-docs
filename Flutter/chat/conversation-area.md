@@ -24,40 +24,40 @@ Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 {% tabs %}
 {% highlight dart hl_lines="5" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-        ],
-        outgoingUser: '123-001',
-      ),
-    );
-  }
+          ],
+          outgoingUser: '123-001',
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -71,78 +71,78 @@ In the following example, included the user's display name additionally in the e
 {% tabs %}
 {% highlight dart hl_lines="40" %}
 
-  @override
-  void initState() {
-    super.initState();
-    _messages = [
-      ChatMessageExt(
-        text: 'Hi! How’s your day?',
-        time: DateTime(2024, 08, 07, 9, 0),
-        author: const ChatAuthor(
-          id: '123-001',
-          name: 'John Doe',
+    @override
+    void initState() {
+      super.initState();
+      _messages = [
+        ChatMessageExt(
+          text: 'Hi! How’s your day?',
+          time: DateTime(2024, 08, 07, 9, 0),
+          author: const ChatAuthor(
+            id: '123-001',
+            name: 'John Doe',
+          ),
+          displayName: 'JD',
         ),
-        displayName: 'JD',
-      ),
-      ChatMessageExt(
-        text: 'Good! Just relaxing.',
-        time: DateTime(2024, 08, 07, 9, 5),
-        author: const ChatAuthor(
-          id: '123-002',
-          name: 'Jane Smith',
+        ChatMessageExt(
+          text: 'Good! Just relaxing.',
+          time: DateTime(2024, 08, 07, 9, 5),
+          author: const ChatAuthor(
+            id: '123-002',
+            name: 'Jane Smith',
+          ),
+          displayName: 'JS',
         ),
-        displayName: 'JS',
-      ),
-      ChatMessageExt(
-        text: 'Any plans later?',
-        time: DateTime(2024, 08, 07, 9, 10),
-        author: const ChatAuthor(
-          id: '123-001',
-          name: 'John Doe',
+        ChatMessageExt(
+          text: 'Any plans later?',
+          time: DateTime(2024, 08, 07, 9, 10),
+          author: const ChatAuthor(
+            id: '123-001',
+            name: 'John Doe',
+          ),
+          displayName: 'JD',
         ),
-        displayName: 'JD',
-      ),
-    ];
-  }
+      ];
+    }
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfChat(
-          messages: _messages,
-          outgoingUser: '123-001',
-          messageAvatarBuilder: (context, index, message) {
-            if (message is ChatMessageExt) {
-              return CircleAvatar(
-                radius: 20,
-                child: Text(
-                  message.author.name.isNotEmpty
-                      ? message.displayName
-                      : '?',
-                  style: const TextStyle(
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: SfChat(
+            messages: _messages,
+            outgoingUser: '123-001',
+            messageAvatarBuilder: (context, index, message) {
+              if (message is ChatMessageExt) {
+                return CircleAvatar(
+                  radius: 20,
+                  child: Text(
+                    message.author.name.isNotEmpty
+                        ? message.displayName
+                        : '?',
+                    style: const TextStyle(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              );
-            }
-            return Container();
-          },
+                );
+              }
+              return Container();
+            },
+          ),
         ),
-      ),
-    );
-  }
+      );
+    }
 
-  class ChatMessageExt extends ChatMessage {
-    const ChatMessageExt({
-      required super.text,
-      required super.time,
-      required super.author,
-      required this.displayName,
-    });
-    final String displayName;
-  }
+    class ChatMessageExt extends ChatMessage {
+      const ChatMessageExt({
+        required super.text,
+        required super.time,
+        required super.author,
+        required this.displayName,
+      });
+      final String displayName;
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,37 +156,37 @@ The [`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 {% tabs %}
 {% highlight dart hl_lines="21" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing. How are you?',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing. How are you?',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
+              suggestions: <ChatMessageSuggestion>[
+                const ChatMessageSuggestion(data: 'All good!'),
+                const ChatMessageSuggestion(data: 'Doing well!'),
+                const ChatMessageSuggestion(data: 'I\'m Fine'),
+              ],
             ),
-            suggestions: <ChatMessageSuggestion>[
-              const ChatMessageSuggestion(data: 'All good!'),
-              const ChatMessageSuggestion(data: 'Doing well!'),
-              const ChatMessageSuggestion(data: 'I\'m Fine'),
-            ],
-          ),
-        ],
-        outgoingUser: '123-001',
-      ),
-    );
-  }
+          ],
+          outgoingUser: '123-001',
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -202,43 +202,43 @@ The name may be repeated within the group, but the ID is unique to each user.
 {% tabs %}
 {% highlight dart hl_lines="34" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
-              avatar: NetworkImage('https://randomuser.me/api/portraits/men/1.jpg'),
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+                avatar: NetworkImage('https://randomuser.me/api/portraits/men/1.jpg'),
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
-              avatar: NetworkImage('https://randomuser.me/api/portraits/women/1.jpg'),
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+                avatar: NetworkImage('https://randomuser.me/api/portraits/women/1.jpg'),
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-003',
-              name: 'John Doe',
-              avatar: NetworkImage('https://randomuser.me/api/portraits/men/4.jpg'),
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-003',
+                name: 'John Doe',
+                avatar: NetworkImage('https://randomuser.me/api/portraits/men/4.jpg'),
+              ),
             ),
-          ),
-        ],
-        outgoingUser: '123-001',
-      ),
-    );
-  }
+          ],
+          outgoingUser: '123-001',
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -266,46 +266,46 @@ The [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: ChatMessageSettings(
+            timestampFormat: DateFormat('MMM d, h:mm a'),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: ChatMessageSettings(
-          timestampFormat: DateFormat('MMM d, h:mm a'),
+          outgoingMessageSettings: ChatMessageSettings(
+            timestampFormat: DateFormat('h:mm a'),
+          ),
         ),
-        outgoingMessageSettings: ChatMessageSettings(
-          timestampFormat: DateFormat('h:mm a'),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -319,46 +319,46 @@ The [`showAuthorAvatar`](https://pub.dev/documentation/syncfusion_flutter_chat/l
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            showAuthorAvatar: true,
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          showAuthorAvatar: true,
+          outgoingMessageSettings: const ChatMessageSettings(
+            showAuthorAvatar: false,
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          showAuthorAvatar: false,
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -380,46 +380,46 @@ The [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_chat/la
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            backgroundColor: Color(0xFFE1F5FE),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          backgroundColor: Color(0xFFE1F5FE),
+          outgoingMessageSettings: const ChatMessageSettings(
+            backgroundColor: Color(0xFFF1F8E9),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          backgroundColor: Color(0xFFF1F8E9),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -433,50 +433,50 @@ The [`shape`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/
 {% tabs %}
 {% highlight dart hl_lines="33 38" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
+            ),
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
+            ),
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
+            ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
           ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+          outgoingMessageSettings: const ChatMessageSettings(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
-            ),
-          ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -490,46 +490,46 @@ The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            widthFactor: 0.9,
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          widthFactor: 0.9,
+          outgoingMessageSettings: const ChatMessageSettings(
+            widthFactor: 0.7,
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          widthFactor: 0.7,
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -538,49 +538,53 @@ The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 
 The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `Size.square(32.0)`.
 
+### Margin
+
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/margin.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
+
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            avatarSize: const Size.square(35.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          avatarSize: const Size.square(35.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            avatarSize: const Size.square(35.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          avatarSize: const Size.square(35.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -592,46 +596,46 @@ The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            margin: const EdgeInsets.all(4.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          margin: const EdgeInsets.all(4.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            margin: const EdgeInsets.all(4.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          margin: const EdgeInsets.all(4.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -643,48 +647,48 @@ The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/cha
 {% tabs %}
 {% highlight dart hl_lines="33 34 37 38" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            padding:
+            const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          padding:
-          const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            padding:
+            const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          padding:
-          const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -696,46 +700,46 @@ The [`avatarPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            avatarPadding: const EdgeInsets.all(4.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          avatarPadding: const EdgeInsets.all(4.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            avatarPadding: const EdgeInsets.all(4.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          avatarPadding: const EdgeInsets.all(4.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -747,48 +751,48 @@ The [`headerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 {% tabs %}
 {% highlight dart hl_lines="33 34 37 38" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            headerPadding:
+            const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          headerPadding:
-          const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            headerPadding:
+            const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          headerPadding:
-          const EdgeInsetsDirectional.only(top: 14.0, bottom: 4.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -800,46 +804,46 @@ The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfChat(
-        messages: <ChatMessage>[
-          ChatMessage(
-            text: 'Hi! How’s your day?',
-            time: DateTime(2024, 08, 07, 9, 0),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfChat(
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hi! How’s your day?',
+              time: DateTime(2024, 08, 07, 9, 0),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Good! Just relaxing.',
-            time: DateTime(2024, 08, 07, 9, 5),
-            author: const ChatAuthor(
-              id: '123-002',
-              name: 'Jane Smith',
+            ChatMessage(
+              text: 'Good! Just relaxing.',
+              time: DateTime(2024, 08, 07, 9, 5),
+              author: const ChatAuthor(
+                id: '123-002',
+                name: 'Jane Smith',
+              ),
             ),
-          ),
-          ChatMessage(
-            text: 'Any plans later?',
-            time: DateTime(2024, 08, 07, 9, 10),
-            author: const ChatAuthor(
-              id: '123-001',
-              name: 'John Doe',
+            ChatMessage(
+              text: 'Any plans later?',
+              time: DateTime(2024, 08, 07, 9, 10),
+              author: const ChatAuthor(
+                id: '123-001',
+                name: 'John Doe',
+              ),
             ),
+          ],
+          outgoingUser: '123-001',
+          incomingMessageSettings: const ChatMessageSettings(
+            footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
           ),
-        ],
-        outgoingUser: '123-001',
-        incomingMessageSettings: const ChatMessageSettings(
-          footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
+          outgoingMessageSettings: const ChatMessageSettings(
+            footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
+          ),
         ),
-        outgoingMessageSettings: const ChatMessageSettings(
-          footerPadding: const EdgeInsetsDirectional.only(top: 4.0),
-        ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
