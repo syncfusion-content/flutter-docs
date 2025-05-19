@@ -9,7 +9,7 @@ documentation: ug
 
 # One-dimensional symbology in Flutter Barcodes (SfBarcodeGenerator)
 
-The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion<sup>&reg;</sup> flutter barcode generator supports the following one-dimensional barcode types:
+One-dimensional barcodes represent data by varying the widths and spacings of parallel lines. These barcode types are also known as linear barcode types. The Syncfusion<sup>&reg;</sup> flutter barcode generator supports the following one-dimensional barcode types:
 
 * [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html)
 * [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html)

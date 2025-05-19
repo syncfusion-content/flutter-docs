@@ -28,7 +28,7 @@ Add the Syncfusion<sup>&reg;</sup> Flutter Barcode dependency to your pubspec.ya
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package.
 
 **Get packages**
 
