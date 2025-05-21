@@ -15,7 +15,7 @@ This section explains the customization options available for modifying the inco
 
 The [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) property is the data source of the Chat widget which accepts the list of [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) objects to be displayed as incoming or outgoing messages based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html) property value.
 
-Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) contains the following message information,
+Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) contains the following message information:
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/text.html) - This defines the actual content of the message.
 * [`time`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/time.html) - This indicates the time the message was sent.
@@ -64,9 +64,9 @@ Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 
 ![Messages](images/message-content/default-message.png)
 
-Additionally the message can be extended to include more detailed information about the respected chat message.
+Additionally, the message can be extended to include more detailed information about the respective chat message.
 
-In the following example, included the user's display name additionally in the existing message.
+In the following example, the user's display name is included additionally in the existing message.
 
 {% tabs %}
 {% highlight dart hl_lines="40" %}
@@ -151,7 +151,7 @@ In the following example, included the user's display name additionally in the e
 
 ## Suggestions 
 
-The [`Suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
+The [`suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) property allows you to add a list of suggestion items to a message in the message list. The selected suggestion item can be displayed in the chat interface as either an incoming or outgoing message, depending on the user who selected it. The suggestion layout, background color, and other properties can be customized.
 
 {% tabs %}
 {% highlight dart hl_lines="21" %}
@@ -538,10 +538,6 @@ The [`widthFactor`](https://pub.dev/documentation/syncfusion_flutter_chat/latest
 
 The [`avatarSize`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/avatarSize.html) property is used to specify the size of the author's avatar in the message. Defaults to `Size.square(32.0)`.
 
-### Margin
-
-The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/margin.html) property is used to define the space inside the message between the border and content. Defaults to `EdgeInsets.all(2.0)`.
-
 {% tabs %}
 {% highlight dart hl_lines="33 36" %}
 
@@ -852,4 +848,4 @@ The [`footerPadding`](https://pub.dev/documentation/syncfusion_flutter_chat/late
 
 #### See Also
 
-* You can also customize the Message shapes and colors properties of both [`incomingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/incomingMessageSettings.html) and [`outgoingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingMessageSettings.html)using [`SfChatTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatTheme/SfChatTheme.html) by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/SfChat.html).
+* You can also customize the Message shapes and colors properties of both [`incomingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/incomingMessageSettings.html) and [`outgoingMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingMessageSettings.html) using [`SfChatTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatTheme/SfChatTheme.html) by wrapping with [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/SfChat.html).

@@ -67,7 +67,7 @@ The [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled
 
 #### Border
 
-The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
+The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines the shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
