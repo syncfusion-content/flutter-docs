@@ -9,7 +9,7 @@ documentation: ug
 
 # Bar Pointer in Flutter Linear Gauge (SfLinearGauge)
 
-A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. The [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
@@ -129,7 +129,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis and it cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The following  code sample demonstrates how to change the offset value of the bar pointer. 
+In addition to positioning the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis and it cannot be negative. Cross-positioned elements will not be affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The following code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% highlight dart %} 
 
@@ -331,7 +331,7 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 
 ## Add multiple bar pointers
 
-You can add multiple bar pointers in a [`LinearGauge`](). The bar pointers by default will overlap each other. So while adding a bar pointer offset value is needed to be specified. The below code example demonstrates adding two bar pointer with different offset
+You can add multiple bar pointers in a [`LinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). The bar pointers by default will overlap each other. So while adding a bar pointer, offset value is needed to be specified. The below code example demonstrates adding two bar pointer with different offsets:
 
 {% highlight dart %} 
 
