@@ -113,8 +113,8 @@ class JobVacancyModel {
 ![Levels color customization](images/colors/levels-color.png)
 
 N>
-* Refer the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html), for applying tile color based on specific value.
-* Refer the [`TreemapColorMapper.range`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.range.html), for applying tile color based on range of values.
+* Refer to the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html), for applying tile color based on a specific value.
+* Refer to the [`TreemapColorMapper.range`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.range.html), for applying tile color based on a range of values.
 
 ## Equal color mapping
 
@@ -200,7 +200,7 @@ The value returned from the [`TreemapLevel.colorValueMapper`](https://pub.dev/do
 
 * **MinSaturation and MaxSaturation** - The tiles with the lowest value which is `from` will be applied a `minSaturation` and the tiles with the highest value which is `to` will be applied a `maxSaturation`. The tiles with values in-between the range will get a saturation based on their respective value.
 
-N> You can customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) and the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties.
+N> Customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) and the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
