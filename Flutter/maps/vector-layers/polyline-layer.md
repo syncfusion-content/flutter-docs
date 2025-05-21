@@ -9,11 +9,11 @@ documentation: ug
 
 # Polylines in Flutter Maps (SfMaps)
 
-Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the polylines and customize them.
+Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add polylines and customize them.
 
 ## Adding polylines
 
-The [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) is a collection of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html). Every single [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) connects multiple coordinates through a [`points`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/points.html) property.
+The [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) is a collection of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html). Every single [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) connects multiple coordinates through the [`points`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/points.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -482,7 +482,7 @@ class PolylineModel {
 
 ## Animation
 
-You can apply animation for the [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) using the [`MapPolylineLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/animation.html) property and able to customize the animation flow, curve and duration.
+You can apply animation for the [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) using the [`MapPolylineLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/animation.html) property and customize the animation flow, curve and duration.
 
 By default, there will not be any animation.
 
@@ -777,7 +777,7 @@ class PolylineModel {
 
 ## Tooltip customization
 
-You can customize the appearance of the tooltip.
+You can customize the appearance of the tooltip:
 
 * **Background color** - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
 * **Stroke color** - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.

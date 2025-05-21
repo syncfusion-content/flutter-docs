@@ -11,7 +11,7 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) can be accessed by the screen readers by wrapping the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
+The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) can be accessed by screen readers by wrapping the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) widget with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
 {% highlight Dart %}
@@ -43,11 +43,11 @@ Widget build(BuildContext context) {
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) using the following APIs for the sufficient contrast.
+You can customize the colors of the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) using the following APIs to ensure sufficient contrast:
 
 * [`Background`](https://help.syncfusion.com/flutter/signaturepad/getting-started#initialize-signaturepad)
 * [`Stroke`](https://help.syncfusion.com/flutter/signaturepad/getting-started#customize-signature-stroke-color)
 
 ## Easier touch targets
 
-The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) has touch target as 48 * 48 as per the standard.
+The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) has a touch target size of 48 × 48 pixels, which meets accessibility standards.

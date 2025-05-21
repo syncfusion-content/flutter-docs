@@ -9,7 +9,7 @@ documentation: ug
 
 # Bubbles in Flutter Maps (SfMaps)
 
-Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
+Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more.
 
 ## Enable bubbles
 
@@ -215,7 +215,7 @@ class Model {
 
 ## Appearance customization
 
-You can customize the below appearance of the bubbles.
+You can customize the following appearance properties of the bubbles:
 
 * **MinRadius** - Change the minimum radius of the bubbles using the [`MapBubbleSettings.minRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property. The default value of the [`minRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property is `10.0`.
 * **MaxRadius** - Change the maximum radius of the bubbles using the [`MapBubbleSettings.maxRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property. The default value of the [`maxRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property is `50.0`.

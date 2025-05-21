@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 
 ### Changing the locale to RTL languages
 
-The maps elements will render in right to left direction if the locale belongs to RTL languages such as (Arabic ,Persian ,Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+The maps elements will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, or Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 
 ### Legend
 
-Legend items will be rendered from right to left direction. It is applicable for both shape and bubble legend with solid and bar type.
+Legend items will be rendered from right to left direction. This is applicable for both shape and bubble legends with solid and bar types.
 
 {% tabs %}
 {% highlight Dart %}
@@ -163,7 +163,7 @@ class PopulationModel {
 
 ### Tooltip
 
-Tooltip text will be rendered from right to left direction. It is applicable for shape tooltip, bubble tooltip, and marker tooltip.
+Tooltip text will be rendered from right to left direction. This is applicable for shape tooltip, bubble tooltip, and marker tooltip.
 
 {% tabs %}
 {% highlight Dart %}

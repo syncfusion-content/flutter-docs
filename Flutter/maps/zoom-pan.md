@@ -9,9 +9,9 @@ documentation: ug
 
 # Zooming and Panning in Flutter Maps (SfMaps)
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or trackpad, or using the toolbar on the web. You can also pan the map to navigate across regions and customize the zoom level and center point of the initial rendering.
 
-The procedure for zooming and panning for both layers is very similar.
+The procedure for zooming and panning is very similar for both layers.
 
 **Shape layer**
 
@@ -89,9 +89,9 @@ Widget build(BuildContext context) {
 
 ## Customizing the center latitude and longitude
 
-The [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) is the focal point of the map layer based on which zooming happens. It represents the focal latitude and longitude position of the map layer. You can also get the current focalLatLng after interaction using the [MapZoomPanBehavior.focalLatLng](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) property.
+The [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) is the focal point of the map layer based on which zooming happens. It represents the focal latitude and longitude position of the map layer. You can also get the current focalLatLng after interaction using the [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) property.
 
-To enable panning, set the instance of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to [`MapTileLayer.zoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/zoomPanBehavior.html). By default, it will be `true`. 
+To enable panning, set the instance of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to [`MapTileLayer.zoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/zoomPanBehavior.html). By default, panning is enabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
 
 You can change the center latitude and longitude of the shape layer programmatically using the [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) property.
 
-N> It is applicable for both shape layer and tile layer.
+N> This is applicable for both shape layer and tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -191,11 +191,11 @@ Widget build(BuildContext context) {
 
 ## Customizing the zoom level
 
-You can set the current zoom level of the map layer by using [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
+You can set the current zoom level of the map layer by using the [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
 
-The default [MapZoomPanBehavior.zoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) value is 1 which will show the whole map in the viewport for [MapShapeLayer](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and the possible bounds for the [MapShapeLayer](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) based on the [MapZoomPanBehavior.focalLatLng](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html). You can also get the current zoom level after interaction using the [MapZoomPanBehavior.zoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
+The default [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) value is 1, which will show the whole map in the viewport for [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and the possible bounds for the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) based on the [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html). You can also get the current zoom level after interaction using the [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
 
-To enable zooming, set the instance of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to [`MapTileLayer.zoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/zoomPanBehavior.html). By default, it will be `true`. 
+To enable zooming, set the instance of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to [`MapTileLayer.zoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/zoomPanBehavior.html). By default, zooming is enabled.
 
 {% tabs %}
 {% highlight Dart %}
@@ -241,7 +241,7 @@ Widget build(BuildContext context) {
 
 You can change the zoom level of the shape layer programmatically using the [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
 
-N> It is applicable for both shape layer and tile layer.
+N> This is applicable for both shape layer and tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -295,9 +295,9 @@ Widget build(BuildContext context) {
 
 ## Customizing min and max zoom level
 
-You can set the min and max zoom level of the map layer by setting the value to [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) are 1 and 15 respectively.
+You can set the minimum and maximum zoom level of the map layer by setting values to the [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) are 1 and 15 respectively.
 
-However, for [MapTileLayer](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), [MapZoomPanBehavior.maxZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) may slightly vary depends on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
+However, for [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) may slightly vary depending on the providers. Please check the respective official website of the map tile providers to know about the maximum zoom level they support.
 
 {% tabs %}
 {% highlight Dart %}
@@ -341,9 +341,9 @@ Widget build(BuildContext context) {
 
 ## Double tap zooming
 
-Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) property. The default value of the [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) is `false`.
+Double tap zooming can be enabled using the [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) property. The default value of the [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) is `false`.
 
-N> It is applicable for both tile layer and shape layer.
+N> This is applicable for both tile layer and shape layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -377,16 +377,19 @@ Widget build(BuildContext context) {
 
 ## Toolbar
 
-The toolbar can be used to perform zoom in, zoom out, and reset operations in the web and desktop platforms. By default, the [MapZoomPanBehavior.showToolbar](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/showToolbar.html) property is `true`.
+The toolbar can be used to perform zoom in, zoom out, and reset operations in the web and desktop platforms. By default, the [`MapZoomPanBehavior.showToolbar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/showToolbar.html) property is `true`.
 
 ## Toolbar customization
 
 You can customize the toolbar items using the following properties:
 
 * **Position** - Used to position the toolbar item at the four corners of the map visual bounds using the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property is `MapToolbarPosition.topRight`. The possible values are `topRight`, `topLeft`, `bottomLeft`, and `bottomRight`.
-* **Icon color** - used to set color to the three icons using the [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/iconColor.html) property.
+
+* **Icon color** - Used to set color to the three icons using the [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/iconColor.html) property.
+
 * **Item background color** - Used to set background color of the toolbar icons using the [`itemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/itemBackgroundColor.html) property.
-* **Item hover color** - Used to set color while hover over the icon using the [`itemHoverColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/itemHoverColor.html) property.
+
+* **Item hover color** - Used to set color while hovering over the icon using the [`itemHoverColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/itemHoverColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -436,13 +439,14 @@ Widget build(BuildContext context) {
 
 Whenever zooming happens, this callback is called. If it returns false, zooming will not happen.
 
-[MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains following properties.
-* [MapZoomDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
-* [MapZoomDetails.newVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newVisibleBounds.html) - provides the new visible bounds when the current zoom completes. Hence, if it returns false, there will be no changes in the UI.
-* [MapZoomDetails.previousZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousZoomLevel.html) - provides the zoom level before the current zooming operation completes i.e. current zoom level.
-* [MapZoomDetails.newZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newZoomLevel.html) - provides the new zoom level when the current zoom completes. Hence, if it returns false, there will be no changes in the UI.
-* [MapZoomDetails.globalFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
-* [MapZoomDetails.localFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
+[`MapZoomDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains the following properties:
+
+* [`MapZoomDetails.previousVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - Provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
+* [`MapZoomDetails.newVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newVisibleBounds.html) - Provides the new visible bounds when the current zoom completes. Hence, if it returns false, there will be no changes in the UI.
+* [`MapZoomDetails.previousZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousZoomLevel.html) - Provides the zoom level before the current zooming operation completes i.e. current zoom level.
+* [`MapZoomDetails.newZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newZoomLevel.html) - Provides the new zoom level when the current zoom completes. Hence, if it returns false, there will be no changes in the UI.
+* [`MapZoomDetails.globalFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
+* [`MapZoomDetails.localFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
 
 {% tabs %}
 {% highlight Dart %}
@@ -485,14 +489,15 @@ Widget build(BuildContext context) {
 ## Panning callback
 
 Whenever panning happens, this callback is called. If it returns false, panning will not happen.
- 
-[MapPanDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html) contains following properties.
-* [MapPanDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/previousVisibleBounds.html) - provides the visible bounds before the current panning operation completes i.e. current visible bounds.
-* [MapPanDetails.newVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/newVisibleBounds.html) - provides the new visible bounds when the current pan completes. Hence, if it returns false, there will be no changes in the UI.
-* [MapPanDetails.zoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/zoomLevel.html) - provides the current zoom level.
-* [MapPanDetails.delta](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/delta.html) - The difference in pixels between touch start and current touch position.
-* [MapPanDetails.globalFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
-* [MapPanDetails.localFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
+
+[`MapPanDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html) contains the following properties:
+
+* [`MapPanDetails.previousVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/previousVisibleBounds.html) - Provides the visible bounds before the current panning operation completes i.e. current visible bounds.
+* [`MapPanDetails.newVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/newVisibleBounds.html) - Provides the new visible bounds when the current pan completes. Hence, if it returns false, there will be no changes in the UI.
+* [`MapPanDetails.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/zoomLevel.html) - Provides the current zoom level.
+* [`MapPanDetails.delta`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/delta.html) - The difference in pixels between touch start and current touch position.
+* [`MapPanDetails.globalFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
+* [`MapPanDetails.localFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
 
 {% tabs %}
 {% highlight Dart %}
@@ -536,16 +541,16 @@ Widget build(BuildContext context) {
 
 ### Zooming
 
-Whenever zooming happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html).
-[MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains following properties,
-* [MapZoomDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
-* [MapZoomDetails.newVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newVisibleBounds.html) - provides the new visible bounds when the current zoom completes. Hence, if the
-    `super.onZooming(details)` is not called, there will be no changes in the UI.
-* [MapZoomDetails.previousZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousZoomLevel.html) - provides the zoom level before the current zooming operation completes i.e. current zoom level.
-* [MapZoomDetails.newZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newZoomLevel.html) - provides the new zoom level when the current zoom completes. Hence, if the
-    `super.onZooming(details)` is not called, there will be no changes in the UI.
-* [MapZoomDetails.globalFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
-* [MapZoomDetails.localFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
+Whenever zooming happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [`MapZoomDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html).
+
+[`MapZoomDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains the following properties:
+
+* [`MapZoomDetails.previousVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - Provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
+* [`MapZoomDetails.newVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newVisibleBounds.html) - Provides the new visible bounds when the current zoom completes. Hence, if the `super.onZooming(details)` is not called, there will be no changes in the UI.
+* [`MapZoomDetails.previousZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousZoomLevel.html) - Provides the zoom level before the current zooming operation completes i.e. current zoom level.
+* [`MapZoomDetails.newZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/newZoomLevel.html) - Provides the new zoom level when the current zoom completes. Hence, if the `super.onZooming(details)` is not called, there will be no changes in the UI.
+* [`MapZoomDetails.globalFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
+* [`MapZoomDetails.localFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
 
 {% tabs %}
 {% highlight Dart %}
@@ -596,16 +601,16 @@ N>
 
 ### Panning
 
-Whenever panning happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapPanDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html). 
-  
-[MapPanDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html) contains following properties,
-* [MapPanDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/previousVisibleBounds.html) - provides the visible bounds before the current panning operation completes i.e. current visible bounds.
-* [MapPanDetails.newVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/newVisibleBounds.html) - provides the new visible bounds when the current pan completes. Hence, if the
-    `super.onPanning(details)` is not called, there will be no changes in the UI.
-* [MapPanDetails.zoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/zoomLevel.html) - provides the current zoom level.
-* [MapPanDetails.delta](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/delta.html) - The difference in pixels between touch start and current touch position.
-* [MapPanDetails.globalFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
-* [MapPanDetails.localFocalPoint](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
+Whenever panning happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [`MapPanDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html).
+
+[`MapPanDetails`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html) contains the following properties:
+
+* [`MapPanDetails.previousVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/previousVisibleBounds.html) - Provides the visible bounds before the current panning operation completes i.e. current visible bounds.
+* [`MapPanDetails.newVisibleBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/newVisibleBounds.html) - Provides the new visible bounds when the current pan completes. Hence, if the `super.onPanning(details)` is not called, there will be no changes in the UI.
+* [`MapPanDetails.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/zoomLevel.html) - Provides the current zoom level.
+* [`MapPanDetails.delta`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/delta.html) - The difference in pixels between touch start and current touch position.
+* [`MapPanDetails.globalFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/globalFocalPoint.html) - The global focal point of the pointers in contact with the screen.
+* [`MapPanDetails.localFocalPoint`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/localFocalPoint.html) - The local focal point of the pointers in contact with the screen.
 
 {% tabs %}
 {% highlight Dart %}
@@ -656,7 +661,7 @@ N>
 
 ### Reset
 
-You can [`reset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/reset.html) the map to the [MapZoomPanBehavior.minZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) by calling this method.
+You can [`reset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/reset.html) the map to the [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) by calling this method.
 
 {% tabs %}
 {% highlight Dart %}

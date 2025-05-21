@@ -58,7 +58,7 @@ Widget build(BuildContext context) {
 ![Shape legend support](images/legend/default-legend.png)
 
 N>
-* Refer the [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
+* Refer to [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
 
 ## Bubble legend
 
@@ -128,7 +128,7 @@ class Model {
 ![Bubble legend support](images/legend/bubble_legend.png)
 
 N>
-* Refer the [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
+* Refer to [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
 
 ## Bar shape legend
 
@@ -177,7 +177,7 @@ Widget build(BuildContext context) {
 ![Bar shape legend](images/legend/bar-shape-legend.png)
 
 N>
-* Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
+* Refer to [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
 ## Bar bubble legend
 
@@ -247,7 +247,7 @@ class Model {
 ![Bar bubble legend](images/legend/bar-bubble-legend.png)
 
 N>
-* Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
+* Refer to [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
 ## Title
 
@@ -547,7 +547,7 @@ class Model {
 ![Legend position](images/legend/legend-position.png)
 
 N>
-* Refer the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html), for placing the legend in custom position.
+* Refer to [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html), for placing the legend in custom position.
 
 ## Offset
 
@@ -816,7 +816,7 @@ class Model {
 ![Bar legend overflow mode](images/legend/bar-legend-overflow-mode.gif)
 
 N>
-* Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for setting the size of the icon.
+* Refer to [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for setting the size of the icon.
 
 ## Legend toggling
 
@@ -1285,7 +1285,7 @@ class Model {
 ![Legend items customization](images/legend/legend-items-customization.png)
 
 N>
-* Refer the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html), for setting the position of the legend.
+* Refer to [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html), for setting the position of the legend.
 
 ## Bar legend segment painting style
 

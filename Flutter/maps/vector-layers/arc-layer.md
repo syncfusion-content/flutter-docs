@@ -9,11 +9,11 @@ documentation: ug
 
 # Arc Layer in Flutter Maps (SfMaps)
 
-Arc layer is a sublayer that renders a group of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the arcs and customize them.
+Arc layer is a sublayer that renders a group of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add arcs and customize them.
 
 ## Adding arcs
 
-The [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) is a collection of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html). Every single [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) connects two location coordinates through a curved line. The start coordinate is set to [`MapArc.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/from.html) property and the end coordinate is set to [`MapArc.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/to.html) property.
+The [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) is a collection of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html). Every single [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) connects two location coordinates through a curved line. The start coordinate is set to the [`MapArc.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/from.html) property and the end coordinate is set to the [`MapArc.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/to.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -152,9 +152,9 @@ class DataModel {
 
 ## Height factor
 
-The [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) is the distance from the line connecting two points to the arc bend point. The default value of [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) property is `0.2` and the value ranges from -1 to 1.
+The [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) is the distance from the line connecting two points to the arc bend point. The default value of the [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) property is `0.2` and the value ranges from -1 to 1.
 
-By default, the arc will always render above the [`MapArc.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/from.html) and [`MapArc.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/to.html) points. To render the arc below the points, set the value between -1 to 0.
+By default, the arc will always render above the [`MapArc.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/from.html) and [`MapArc.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/to.html) points. To render the arc below the points, set the value between -1 and 0.
 
 {% tabs %}
 {% highlight Dart %}
@@ -226,7 +226,7 @@ class DataModel {
 
 ## Control point factor
 
-The [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) is the arc bending position. The default value of [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) property is `0.5` and the value ranges from 0 to 1.
+The [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) is the arc bending position. The default value of the [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) property is `0.5` and the value ranges from 0 to 1.
 
 By default, the arc will bend at the center between the [`MapArc.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/from.html) and [`MapArc.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/to.html) points.
 
@@ -373,7 +373,7 @@ class DataModel {
 
 ## Width
 
-You can apply the same width for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property. Alternatively, you can apply different width to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/width.html) property. The default value of the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property is `2`.
+You can apply the same width for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property. Alternatively, you can apply different widths to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/width.html) property. The default value of the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property is `2`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -447,9 +447,9 @@ class DataModel {
 
 ## Dash array
 
-You can apply dash support for the arc using the [MapArc.dashArray](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/dashArray.html) property.
+You can apply dash support for the arc using the [`MapArc.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/dashArray.html) property.
 
-A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the arc.
+A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list are rendered, they will be repeated again until the end of the arc.
 
 {% tabs %}
 {% highlight Dart %}
@@ -522,7 +522,7 @@ class DataModel {
 
 ## Animation
 
-You can apply animation for the [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) using the [`MapArcLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/animation.html) property and able to customize the animation flow, curve and duration.
+You can apply animation for the [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) using the [`MapArcLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/animation.html) property and customize the animation flow, curve, and duration.
 
 By default, there will not be any animation.
 
@@ -530,7 +530,7 @@ By default, there will not be any animation.
 {% highlight Dart %}
 
 class AnimationSample extends StatefulWidget {
-  const AnimationSample({Key? key}) : super(key: key;
+  const AnimationSample({Key? key}) : super(key: key);
   @override
   State<AnimationSample> createState() => _AnimationSampleState();
 }
@@ -624,7 +624,7 @@ class DataModel {
 
 ## Tap
 
-You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/onTap.html) callback to get a notification if the particular [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) is tapped. You can also customize the tapped [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/onTap.html) callback to get a notification when a particular [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) is tapped. You can also customize the tapped [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) based on the index passed in the callback as shown in the code snippet below.
 
 {% tabs %}
 {% highlight Dart %}
@@ -705,7 +705,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about an arc drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
+You can show additional information about an arc using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -805,11 +805,11 @@ class DataModel {
 
 ## Tooltip customization
 
-You can customize the appearance of the tooltip.
+You can customize the appearance of the tooltip:
 
-* **Background color** - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
-* **Stroke color** - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
-* **Stroke width** - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
+* **Background color** - Change the background color of the tooltip using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* **Stroke color** - Change the stroke color of the tooltip using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* **Stroke width** - Change the stroke width of the tooltip using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}

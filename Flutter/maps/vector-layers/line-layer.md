@@ -9,7 +9,7 @@ documentation: ug
 
 # Lines in Flutter Maps (SfMaps)
 
-Line layer is a sublayer that renders a group of [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the lines and customize them.
+Line layer is a sublayer that renders a group of [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add lines and customize them.
 
 ## Adding lines
 
@@ -325,7 +325,7 @@ class DataModel {
 
 You can apply dash support for the line using the [`MapLine.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/dashArray.html) property.
 
-A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
+A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list are rendered, it will be repeated again till the end of the line.
 
 {% tabs %}
 {% highlight Dart %}
@@ -634,7 +634,7 @@ class DataModel {
 
 ## Tooltip customization
 
-You can customize the appearance of the tooltip.
+You can customize the appearance of the tooltip:
 
 * Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
 * Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.

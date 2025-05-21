@@ -31,7 +31,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ### Add Maps widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Maps](https://pub.dev/packages/syncfusion_flutter_maps) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to the [Syncfusion<sup>&reg;</sup> Flutter Maps](https://pub.dev/packages/syncfusion_flutter_maps) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
