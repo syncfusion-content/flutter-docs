@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Thumb and thumb overlay in Flutter Range Selector (SfRangeSelector)
+# Thumb and Thumb overlay in Flutter Range Selector (SfRangeSelector)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the range selector.
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with Flutter Slider (Slider)
-This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> slider.
+This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> slider.
 
 To get start quickly with our Flutter Slider widget, you can check on this video.
 

@@ -25,7 +25,7 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
- double _value = 5.0;
+double _value = 5.0;
 
 @override
 Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ You can change the size and shape of the thumb using the [`thumbShape`](https://
 * paint() - Used to change the thumb shape.
 
 N>
-* You must use the`currentValue` parameter of paint override method for customizing slider thumb.
+* You must use the `currentValue` parameter of paint override method for customizing slider thumb.
 * You must use the `currentValues` parameter of paint override method for customizing range slider and range selector thumbs.
 
 {% tabs %}
