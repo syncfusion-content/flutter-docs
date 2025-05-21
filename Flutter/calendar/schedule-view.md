@@ -9,14 +9,14 @@ documentation: ug
 
 # Schedule view in Flutter Event Calendar (SfCalendar)
 
-The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min, and max dates, by default displaying the appointments from the current date. If the `DataSource` property of `SfCalendar` is null then the schedule view will display the month, week, and date headers alone in the view.
+The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min and max dates, by default displaying the appointments from the current date. If the `DataSource` property of `SfCalendar` is null then the schedule view will display the month, week, and date headers alone in the view.
 
 The schedule view display two different UI for mobile and web, for mobile it will display the month header, week header, and date header but for the web, it will display the appointments alone in the view.
 
 ![Schedule view in Flutter event calendar](images/scheduleview/Schedule-view.png)
 
 >**NOTE** 
-* If the web view width is less than `767` the calendar will render the mobile schedule UI for the web. 
+* If the web view width is less than `767`, the calendar will render the mobile schedule UI for the web. 
 
 ## Appointment item height
 You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).

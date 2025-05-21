@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about accessibility feature of Syncfusion Flutter Calendar (SfCalendar) widget and more.
+description: Learn here all about accessibility features of Syncfusion Flutter Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
@@ -47,7 +47,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | View                     | Format                  | Example                              |
 |--------------------------|-------------------------|--------------------------------------|
 | Header                   | MMMM yyyy               | January 2020                         |
-| Timeline week header     | dd/MMMM to dd/MMMM/yyyy | 15th of January to 21th January 2020 |
+| Timeline week header     | dd/MMMM to dd/MMMM/yyyy | 15th of January to 21st January 2020 |
 | Timeline workweek header | dd/MMMM to dd/MMMM/yyyy | 16th of January to 20th January 2020 |
 | Month view header        | EEE                     | Monday                               |
 | TimeSlot view header     | EEE, dd/MMMM/yyyy       | Wednesday the 29th of January 2020   |
@@ -75,7 +75,7 @@ The `SfCalendar` font size can be adjusted automatically based on device setting
 * [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
 * [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
 * [dayTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
-* [displayNameText style](https://help.syncfusion.com/flutter/calendar/resource-view#customization)
+* [displayNameTextStyle](https://help.syncfusion.com/flutter/calendar/resource-view#customization)
 
 ## Keyboard navigation
 

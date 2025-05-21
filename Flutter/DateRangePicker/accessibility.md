@@ -56,9 +56,9 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and a standardized look, as well as the ability to set the colors for all the UI elements.
+The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all the UI elements.
 
-The following APIs allows to customize the colors of the following elements.
+The following APIs allows you to customize the colors of the following elements.
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 
 * [headerStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#header-appearance)
 * [leadingDatesDecoration](https://help.syncfusion.com/flutter/daterangepicker/customizations#month-cell-customization)
@@ -75,7 +75,7 @@ The following APIs allows to customize the colors of the following elements.
 
 ## Large fonts
 
-The `SfDateRangePicker` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in date range picker.
+The `SfDateRangePicker` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. It also allows you to change the font size of all elements in date range picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)

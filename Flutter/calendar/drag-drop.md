@@ -155,7 +155,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 
 ## Disabling navigation when dragging appointment
 
-You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of `DragDropSettings`. Default value of `allowNavigation` property is true.
+You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of `DragAndDropSettings`. Default value of `allowNavigation` property is true.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
@@ -181,7 +181,7 @@ Widget build(BuildContext context) {
 
 ## Disabling scroll when dragging appointment
 
-You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
+You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
@@ -207,7 +207,7 @@ Widget build(BuildContext context) {
 
 ## Time indicator
 
-[showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
+[ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
