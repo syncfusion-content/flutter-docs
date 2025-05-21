@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Builders in Flutter Date Range Picker widget | Syncfusion
-description: Learn here all about Bulders feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
+description: Learn here all about Builders feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug

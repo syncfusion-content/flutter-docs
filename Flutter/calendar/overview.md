@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar (SfCalendar) Overview
 
-The Syncfusion<sup>&reg;</sup> Flutter Calendar library was written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
+The Syncfusion<sup>&reg;</sup> Flutter Calendar library is written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
 
 ![Calendar overview](images/overview/calendar_overview.png)
 
@@ -36,7 +36,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Calendar library was written natively in 
 * **Resource view**: Display the appointments of each resource in a discrete timeline view to enhance viewability.
 
 ![Resource view](images/overview/resource-view.png)
-* **Special time regions**: Disable interactions and selections for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots.
+* **Special time regions**: Disable interactions and selections for specific time ranges. This is useful when you want to block user interaction during holidays or other special events and to highlight those time slots.
 ![Calendar time regions](images/overview/Special_region.png)
 
 * **Flexible working days**: Customize the work days in a workweek so that the remaining days will be hidden from view.

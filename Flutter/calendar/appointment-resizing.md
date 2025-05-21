@@ -38,11 +38,11 @@ Widget build(BuildContext context) {
 ![appointment_resizing](images/appointments/appointment_resize.gif)
 
 >**NOTE**
-* It is not applicable for mobile platforms.
+* This feature is not applicable for mobile platforms.
 
 ## onAppointmentResizeStart
 
-[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
+[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback is called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/appointment.html) - Get the resizing appointment details.
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/resource.html) - Get the resource details.
@@ -75,7 +75,7 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 {% endtabs %}
 
 ## onAppointmentResizeUpdate
-[onAppointmentResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeUpdate.html) callback was called whenever the appointment resizing in SfCalendar. The [AppointmentResizeUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails-class.html) arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
+[onAppointmentResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeUpdate.html) callback is called whenever the appointment resizing in SfCalendar. The [AppointmentResizeUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails-class.html) arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/appointment.html) - Get the resize appointment.
 * [resizingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/resizingTime.html) - Get the resize appointment time.
@@ -112,7 +112,7 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 {% endtabs %}
 
 ## onAppointmentResizeEnd
-[onAppointmentResizeEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeEnd.html) callback was called whenever the appointment resizing end in the SfCalendar. The [AppointmentResizeEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails-class.html) arguments contains the resized appointment, start time, end time and resource details. 
+[onAppointmentResizeEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeEnd.html) callback is called whenever the appointment resizing end in the SfCalendar. The [AppointmentResizeEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails-class.html) arguments contains the resized appointment, start time, end time and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/appointment.html) - Get the resized appointment details.
 * [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/startTime.html) -  Get the start time.
