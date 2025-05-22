@@ -122,7 +122,7 @@ To export the pyramid chart as a PNG image, we can get the image by calling [`to
 
 ### Export PDF
 
-Similar to the above way, we can also export the rendered Pyramid chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above way, we can also export the rendered Pyramid chart as a PDF document. We create the PDF document using PDF component. This can be done in the application level itself and please find the code snippet below.
 
 **Add dependency**
 
@@ -152,7 +152,7 @@ Include the following code snippet in the main.dart file of your flutter applica
     /// Chart import.
     import 'package:syncfusion_flutter_charts/charts.dart';
 
-    /// Pdf import.
+    /// PDF import.
     import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 
