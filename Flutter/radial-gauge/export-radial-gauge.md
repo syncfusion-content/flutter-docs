@@ -9,92 +9,92 @@ documentation: ug
 
 # Export in Flutter Radial Gauge (SfRadialGauge)
 
-[`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) provides support to export the Radial Gauge as a PNG image or as PDF document.
+[`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) provides support to export the Radial Gauge as a PNG image or as a PDF document.
 
 ## Export image
 
-To export the Radial Gauge as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
+To export the Radial Gauge as a PNG image, we can get the image by calling the [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method on a  repaint boundary.
 
 {% highlight dart %} 
 
-GlobalKey _globalKey = GlobalKey();
+  GlobalKey _globalKey = GlobalKey();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 400,
-            width: 400,
-            child: RepaintBoundary(
-              key: _globalKey,
-              child: SfRadialGauge(
-                axes: <RadialAxis>[
-                  RadialAxis(
-                    minimum: 0,
-                    maximum: 150,
-                    ranges: <GaugeRange>[
-                      GaugeRange(
-                          startValue: 0,
-                          endValue: 50,
-                          color: Colors.green,
-                          startWidth: 10,
-                          endWidth: 10),
-                      GaugeRange(
-                          startValue: 50,
-                          endValue: 100,
-                          color: Colors.orange,
-                          startWidth: 10,
-                          endWidth: 10),
-                      GaugeRange(
-                          startValue: 100,
-                          endValue: 150,
-                          color: Colors.red,
-                          startWidth: 10,
-                          endWidth: 10)
-                    ],
-                    pointers: <GaugePointer>[NeedlePointer(value: 90)],
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 5.0),
-            child: ElevatedButton(
-              onPressed: _renderGaugeImage,
-              child: Text('Gauge to image'),
-            ),
-          ),
-        ],
-      ),
-    );
- }
-
- Future<void> _renderGaugeImage() async {
-    final RenderRepaintBoundary boundary =
-        _globalKey.currentContext?.findRenderObject() as RenderRepaintBoundary;
-    final ui.Image data = await boundary.toImage(pixelRatio: 3.0);
-    final bytes = await data.toByteData(format: ui.ImageByteFormat.png);
-    if (data != null) {
-      await Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (BuildContext context) {
-            return Scaffold(
-              appBar: AppBar(),
-              body: Center(
-                child: Container(
-                  color: Colors.white,
-                  child: Image.memory(bytes!.buffer.asUint8List()),
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Column(
+          children: [
+            Container(
+              height: 400,
+              width: 400,
+              child: RepaintBoundary(
+                key: _globalKey,
+                child: SfRadialGauge(
+                  axes: <RadialAxis>[
+                    RadialAxis(
+                      minimum: 0,
+                      maximum: 150,
+                      ranges: <GaugeRange>[
+                        GaugeRange(
+                            startValue: 0,
+                            endValue: 50,
+                            color: Colors.green,
+                            startWidth: 10,
+                            endWidth: 10),
+                        GaugeRange(
+                            startValue: 50,
+                            endValue: 100,
+                            color: Colors.orange,
+                            startWidth: 10,
+                            endWidth: 10),
+                        GaugeRange(
+                            startValue: 100,
+                            endValue: 150,
+                            color: Colors.red,
+                            startWidth: 10,
+                            endWidth: 10)
+                      ],
+                      pointers: <GaugePointer>[NeedlePointer(value: 90)],
+                    )
+                  ],
                 ),
               ),
-            );
-          },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: ElevatedButton(
+                onPressed: _renderGaugeImage,
+                child: Text('Gauge to image'),
+              ),
+            ),
+          ],
         ),
       );
-    }
- }
+  }
+
+  Future<void> _renderGaugeImage() async {
+      final RenderRepaintBoundary boundary =
+          _globalKey.currentContext?.findRenderObject() as RenderRepaintBoundary;
+      final ui.Image data = await boundary.toImage(pixelRatio: 3.0);
+      final bytes = await data.toByteData(format: ui.ImageByteFormat.png);
+      if (data != null) {
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return Scaffold(
+                appBar: AppBar(),
+                body: Center(
+                  child: Container(
+                    color: Colors.white,
+                    child: Image.memory(bytes!.buffer.asUint8List()),
+                  ),
+                ),
+              );
+            },
+          ),
+        );
+      }
+  }
 
 {% endhighlight %}
 
@@ -113,11 +113,11 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
 
 GlobalKey _globalKey = GlobalKey();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: Text('RenderGaugePdf')),
-    body: Column(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('RenderGaugePdf')),
+      body: Column(
         children: [
           Container(
             height: 400,

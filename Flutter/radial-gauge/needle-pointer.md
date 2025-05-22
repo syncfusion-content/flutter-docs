@@ -9,23 +9,26 @@ documentation: ug
 
 # Needle Pointer in Flutter Radial Gauge (SfRadialGauge)
 
-[`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark the values.
+[`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark values.
 
 {% highlight dart %}
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60)
-                ]
-              )
-            ],
-          )
-        ),
-      );
-    }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(value: 60)
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -52,25 +55,30 @@ The needle can be customized using the following properties:
 The needle length can be controlled using the [`needleLength`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleLength.html) and [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) properties. The length can be set either in logical pixels or factor using [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html). 
 
 If the [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) is set to logical pixel, the logical pixel value will be set to the [`needleLength`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleLength.html)
-If the [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) is set to factor, then the factor value will be set to the [`needleLength`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleLength.html). The factor value ranges from 0 to 1. For example, if the needle length is set to 0.5, the half of the radius value of axis to needle length. The default value of  [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) is GaugeSizeUnit.factor
+If the [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) is set to factor, then the factor value will be set to the [`needleLength`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleLength.html). The factor value ranges from 0 to 1. For example, if the needle length is set to 0.5, half of the radius value of axis will be used as the needle length. The default value of  [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) is GaugeSizeUnit.factor
 
 {% highlight dart %}
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60,
-                    lengthUnit: GaugeSizeUnit.logicalPixel,
-                    needleLength: 130)]
-                  )
-                ],
-              )
-            ),
-          );
-        }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  lengthUnit: GaugeSizeUnit.logicalPixel,
+                  needleLength: 130
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -81,21 +89,30 @@ Widget build(BuildContext context) {
 The width of the needle pointer can be customized using the [`needleStartWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleStartWidth.html) and [`needleEndWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleEndWidth.html) properties.
 
 {% highlight dart %}
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60,
-                      lengthUnit: GaugeSizeUnit.factor,
-                  needleLength: 0.75, needleColor: Colors.red, 
-                  needleStartWidth: 6, needleEndWidth: 6)]
-                )],
-              )
-            ),
-          );
-        }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  lengthUnit: GaugeSizeUnit.factor,
+                  needleLength: 0.75, 
+                  needleColor: Colors.red,
+                  needleStartWidth: 6, 
+                  needleEndWidth: 6
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -103,34 +120,40 @@ Widget build(BuildContext context) {
 
 **Gradient support for needle**
 
- The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) property of [`needle pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) property of [`needle pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) allows you to specify a smooth color transition for the pointer by defining different colors based on provided factor values.
 
- {% highlight dart %}
-@override
-Widget build(BuildContext context) {
- return Scaffold(
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: Center(
         child: SfRadialGauge(
-            axes: <RadialAxis>[RadialAxis(,
-                pointers: <GaugePointer>[
-                  NeedlePointer(
-                      value: 65,
-                      lengthUnit: GaugeSizeUnit.factor,
-                      needleLength: 0.8,
-                      needleEndWidth:  11,
-                      gradient: const LinearGradient(
-                          colors: <Color>[
-                        Color(0xFFFF6B78), Color(0xFFFF6B78),
-                        Color(0xFFE20A22), Color(0xFFE20A22)],
-                          stops: <double>[0, 0.5, 0.5, 1]),
-                      needleColor: const Color(0xFFF67280),
-                      knobStyle: KnobStyle(
-                          knobRadius: 0.08,
-                          sizeUnit: GaugeSizeUnit.factor,
-                          color: Colors.black)),
-                ]
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 65,
+                  lengthUnit: GaugeSizeUnit.factor,
+                  needleLength: 0.8,
+                  needleEndWidth: 11,
+                  gradient: const LinearGradient(
+                    colors: <Color>[
+                      Color(0xFFFF6B78), Color(0xFFFF6B78),
+                      Color(0xFFE20A22), Color(0xFFE20A22)
+                    ],
+                    stops: <double>[0, 0.5, 0.5, 1]
+                  ),
+                  needleColor: const Color(0xFFF67280),
+                  knobStyle: KnobStyle(
+                    knobRadius: 0.08,
+                    sizeUnit: GaugeSizeUnit.factor,
+                    color: Colors.black
+                  )
+                ),
+              ]
             ),
-            ]
+          ]
         ),
       ),
     );
@@ -152,31 +175,40 @@ The knob can be customized using the following properties:
 
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/borderColor.html) – Specifies the border color of knob.
 
-* [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/sizeUnit.html) – Allows to specify whether the value of knob radius and border width is in logical pixels or in factor.
+* [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/sizeUnit.html) – Allows you to specify whether the value of knob radius and border width is in logical pixels or in factor.
 
 **Knob radius customization**
 
 The radius of the knob can be customized using the [`knobRadius`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/knobRadius.html) and [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/sizeUnit.html). 
- The logical pixel value can be set to knob radius when the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/sizeUnit.html) is set to logical pixel
+The logical pixel value can be set to knob radius when the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/KnobStyle/sizeUnit.html) is set to logical pixel
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60,
-                   needleStartWidth: 1, needleEndWidth: 5,
-                    knobStyle: KnobStyle(knobRadius: 10,
-                        sizeUnit: GaugeSizeUnit.logicalPixel, color: Colors.red))
-                  ]
-                )],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  needleStartWidth: 1, 
+                  needleEndWidth: 5,
+                  knobStyle: KnobStyle(
+                    knobRadius: 10,
+                    sizeUnit: GaugeSizeUnit.logicalPixel, 
+                    color: Colors.red
+                  )
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -190,24 +222,32 @@ Like radius, the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutte
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60, 
-                  needleStartWidth: 1, needleEndWidth: 5,
-                    knobStyle: KnobStyle(knobRadius: 0.05, borderColor: Colors.black,
-                     borderWidth: 0.02, 
-                     color: Colors.white
-                    )
-                  )]
-                )],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  needleStartWidth: 1, 
+                  needleEndWidth: 5,
+                  knobStyle: KnobStyle(
+                    knobRadius: 0.05, 
+                    borderColor: Colors.black,
+                    borderWidth: 0.02,
+                    color: Colors.white
+                  )
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -223,9 +263,9 @@ The [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gaug
 
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/width.html) – Specifies the width for the tail.
 
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderColor.html) –  Allows to specify the border color of tail.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderColor.html) –  Allows you to specify the border color of tail.
 
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderWidth.html) – Allows to specify the border width of tail.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderWidth.html) – Allows you to specify the border width of tail.
 
 * [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) - Specifies the gradient for the tail.
 
@@ -233,20 +273,25 @@ By default, the value of [`lengthUnit`](https://pub.dev/documentation/syncfusion
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60,
-                      tailStyle: TailStyle(width: 8, length: 0.15)
-                     )]
-                )],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  tailStyle: TailStyle(width: 8, length: 0.15)
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -256,24 +301,40 @@ The following code example shows how to specify the length in logical pixels.
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  pointers: <GaugePointer>[NeedlePointer(value: 60,needleStartWidth: 3, needleEndWidth: 3,
-                      knobStyle: KnobStyle(color: Colors.white, knobRadius: 0.07,
-                          borderColor: Colors.black, borderWidth: 0.02),
-                      tailStyle: TailStyle(width: 5, length: 30, lengthUnit: GaugeSizeUnit.logicalPixel,
-                      color: Colors.white, borderWidth: 3, borderColor: Colors.black)
-                    )
-                  ]
-                )],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 60,
+                  needleStartWidth: 3, 
+                  needleEndWidth: 3,
+                  knobStyle: KnobStyle(
+                    color: Colors.white, 
+                    knobRadius: 0.07,
+                    borderColor: Colors.black, 
+                    borderWidth: 0.02
+                  ),
+                  tailStyle: TailStyle(
+                    width: 5, 
+                    length: 30, 
+                    lengthUnit: GaugeSizeUnit.logicalPixel,
+                    color: Colors.white, 
+                    borderWidth: 3, 
+                    borderColor: Colors.black
+                  )
+                )
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -283,36 +344,45 @@ The following code shows how to apply the gradient for the tail.
 
 {% highlight dart %}
 
-@override
- Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: SfRadialGauge(
-            axes: <RadialAxis>[RadialAxis(
-                pointers: <GaugePointer>[
-                  NeedlePointer(
-                      value: 65,
-                      lengthUnit: GaugeSizeUnit.factor,
-                      needleLength: 0.8,
-                      needleEndWidth:  11,
-                      tailStyle: TailStyle(length: 0.2, width: 11,
-                        gradient:LinearGradient(
-                            colors: <Color>[
-                              Color(0xFFFF6B78), Color(0xFFFF6B78),
-                              Color(0xFFE20A22), Color(0xFFE20A22)],
-                            stops: <double>[0, 0.5, 0.5, 1]),
-                      ),
-                      gradient: LinearGradient(
-                          colors: <Color>[
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                NeedlePointer(
+                  value: 65,
+                  lengthUnit: GaugeSizeUnit.factor,
+                  needleLength: 0.8,
+                  needleEndWidth: 11,
+                  tailStyle: TailStyle(
+                    length: 0.2, 
+                    width: 11,
+                    gradient: LinearGradient(
+                      colors: <Color>[
                         Color(0xFFFF6B78), Color(0xFFFF6B78),
-                        Color(0xFFE20A22), Color(0xFFE20A22)],
-                          stops: <double>[0, 0.5, 0.5, 1]),
-                      needleColor: Color(0xFFF67280),
-                      knobStyle: KnobStyle(
-                          knobRadius: 0.08,
-                          sizeUnit: GaugeSizeUnit.factor,
-                          color: Colors.black)),
-                ]
+                        Color(0xFFE20A22), Color(0xFFE20A22)
+                      ],
+                      stops: <double>[0, 0.5, 0.5, 1]
+                    ),
+                  ),
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                      Color(0xFFFF6B78), Color(0xFFFF6B78),
+                      Color(0xFFE20A22), Color(0xFFE20A22)
+                    ],
+                    stops: <double>[0, 0.5, 0.5, 1]
+                  ),
+                  needleColor: Color(0xFFF67280),
+                  knobStyle: KnobStyle(
+                    knobRadius: 0.08,
+                    sizeUnit: GaugeSizeUnit.factor,
+                    color: Colors.black
+                  )
+                ),
+              ]
             ),
           ]
         ),

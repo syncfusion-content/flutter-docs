@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with Flutter Radial Gauge (SfRadialGauge)
 
-This section explains the steps required to add the Flutter [Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> radial gauge. 
+This section explains the steps required to add the Flutter [Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) and its elements such as title, axis, range, pointer and annotation. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> radial gauge. 
 
-To get start quickly with our Flutter radial gauge widget, you can check on this video.
+To get start quickly with our Flutter radial gauge widget, you can check on this video:
 
 <style>#flutterRadialGaugeVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterRadialGaugeVideoTutorial' src='https://www.youtube.com/embed/2NuipO7j2tA'></iframe>
@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize the radial gauge
 
-After the package has been imported, initialize the [SfRadialGauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) as a child of any widget such as container widget.
+After the package has been imported, initialize the [SfRadialGauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) as a child of any widget such as a container widget.
 
 {% highlight dart %} 
 
@@ -67,11 +67,11 @@ After the package has been imported, initialize the [SfRadialGauge](https://www.
                 body: Center(
                     child: Container(
                         child:SfRadialGauge()
-                        )
                     )
-                )      
-            );
-        }
+                )
+            )      
+        );
+    }
 
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ After the package has been imported, initialize the [SfRadialGauge](https://www.
 
 ## Add title
 
-You can add a title to the radial gauge to provide information to users about the designed gauge. The title can be set to gauge as demonstrated in following code snippet. 
+You can add a title to the radial gauge to provide information to users about the designed gauge. The title can be set to the gauge as demonstrated in the following code snippet:
 
 {% highlight dart %} 
 
