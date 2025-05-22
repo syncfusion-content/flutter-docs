@@ -9,78 +9,86 @@ documentation: ug
 
 # Columns Resizing in Flutter DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`. 
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`.
 
 `SfDataGrid` does not automatically resize the columns when you perform column resizing. You should maintain the column width collection at the application level and set the column width of the corresponding column using the [SfDataGrid.onColumnResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeUpdate.html) callback.
 
- The column resizing indicator comes to view based on the platform. In web and desktop platforms, the indicator appears when you hover over the right end of the column and drag it. In mobile platforms, the indicator comes into view when you long-press the corresponding column header.
+The column resizing indicator appears based on the platform. In web and desktop platforms, the indicator appears when you hover over the right end of the column and drag it. In mobile platforms, the indicator comes into view when you long-press the corresponding column header.
 
 > **NOTE:**
-    Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties.
+> Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties.
 
 {% tabs %}
 {% highlight Dart %} 
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      columns: <GridColumn>[
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowColumnsResizing: true,
+        onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+          setState(() {
+            columnWidths[details.column.columnName] = details.width;
+          });
+          return true;
+        },
+        columns: <GridColumn>[
+          GridColumn(
             width: columnWidths['id']!,
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['name']!,
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             width: columnWidths['designation']!,
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['salary']!,
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,77 +97,85 @@ Widget build(BuildContext context) {
 
 ## Column resizing modes
 
-By default, the columns are resized by dragging the right end of the columns. `SfDataGrid` provided the two modes to perform the column resizing:
+By default, the columns are resized by dragging the right end of the columns. `SfDataGrid` provides two modes to perform column resizing:
 
-* `onResize`: The resizing indicator is moved based on the dragging gesture. `onColumnResizeUpdate` callback is called when a column is resized.
-* `onResizeEnd`: The resizing indicator is moved based on the dragging gesture. `onColumnResizeUpdate` callback is called when you release the pointer.
+* `onResize`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called when a column is resized.
+* `onResizeEnd`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called when you release the pointer.
 
 The following example demonstrates how to resize a column by setting the [SfDataGrid.columnResizeMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnResizeMode.html) property to `onResizeEnd`.
 
 {% tabs %}
 {% highlight Dart %} 
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      columnResizeMode: ColumnResizeMode.onResizeEnd,
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      columns: <GridColumn>[
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowColumnsResizing: true,
+        columnResizeMode: ColumnResizeMode.onResizeEnd,
+        onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+          setState(() {
+            columnWidths[details.column.columnName] = details.width;
+          });
+          return true;
+        },
+        columns: <GridColumn>[
+          GridColumn(
             width: columnWidths['id']!,
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['name']!,
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             width: columnWidths['designation']!,
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['salary']!,
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -168,81 +184,89 @@ Widget build(BuildContext context) {
 
 ## Callbacks
 
-The following callbacks are called when you perform the column resizing:
+The following callbacks are called when you perform column resizing:
 
-* [onColumnResizeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeStart.html): Called when column resizing is started. In Mobile platforms, it will be called when the resizing indicator appears after you long-press the corresponding column header. In Web and Windows platforms, it will be called when you click and drag the right end of the columns.
+* [onColumnResizeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeStart.html): Called when column resizing is started. In mobile platforms, it will be called when the resizing indicator appears after you long-press the corresponding column header. In web and desktop platforms, it will be called when you click and drag the right end of the columns.
 * `onColumnResizeUpdate`: Called when a column is being resized. Typically, you should set the column width here.
-* [onColumnResizeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeEnd.html): Called when a column resizing is ended. Typically, this will be called when you release the pointer.
+* [onColumnResizeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeEnd.html): Called when column resizing is ended. Typically, this will be called when you release the pointer.
 
 {% tabs %}
 {% highlight Dart %}
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      onColumnResizeStart: (ColumnResizeStartDetails details) {
-        return true;
-      },
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      onColumnResizeEnd: (ColumnResizeEndDetails details) {
-        print('Column resizing is ended for the ${details.column.columnName}');
-      },
-      columns: <GridColumn>[
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowColumnsResizing: true,
+        onColumnResizeStart: (ColumnResizeStartDetails details) {
+          return true;
+        },
+        onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+          setState(() {
+            columnWidths[details.column.columnName] = details.width;
+          });
+          return true;
+        },
+        onColumnResizeEnd: (ColumnResizeEndDetails details) {
+          print('Column resizing is ended for the ${details.column.columnName}');
+        },
+        columns: <GridColumn>[
+          GridColumn(
             width: columnWidths['id']!,
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['name']!,
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             width: columnWidths['designation']!,
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['salary']!,
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -254,152 +278,168 @@ To disable resizing for a particular column, use the `SfDataGrid.onColumnResizeS
 {% tabs %}
 {% highlight Dart %}
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      onColumnResizeStart: (ColumnResizeStartDetails details) {
-        // Disable resizing for the `id` column.
-        if (details.column.columnName == 'id') {
-          return false;
-        }
-        return true;
-      },
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      columns: <GridColumn>[
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowColumnsResizing: true,
+        onColumnResizeStart: (ColumnResizeStartDetails details) {
+          // Disable resizing for the `id` column.
+          if (details.column.columnName == 'id') {
+            return false;
+          }
+          return true;
+        },
+        onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+          setState(() {
+            columnWidths[details.column.columnName] = details.width;
+          });
+          return true;
+        },
+        columns: <GridColumn>[
+          GridColumn(
             width: columnWidths['id']!,
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['name']!,
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             width: columnWidths['designation']!,
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['salary']!,
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Disable resizing for the checkbox column
 
-The checkbox column is always added as the first column this is the 0th index. To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeEndDetails/columnIndex.html) is 0. 
+The checkbox column is always added as the first column (index 0). To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeStartDetails/columnIndex.html) is 0. 
 
 {% tabs %}
 {% highlight Dart %}
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan,
-  'checkbox': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan,
+    'checkbox': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      onColumnResizeStart: (ColumnResizeStartDetails details) {
-      // Disable resizing for the `checkbox` column.
-       if (details.columnIndex == 0) {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowColumnsResizing: true,
+        onColumnResizeStart: (ColumnResizeStartDetails details) {
+          // Disable resizing for the `checkbox` column.
+          if (details.columnIndex == 0) {
             return false;
           }
           return true;
-      },
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      columns: <GridColumn>[
-        GridColumn(
+        },
+        onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+          setState(() {
+            columnWidths[details.column.columnName] = details.width;
+          });
+          return true;
+        },
+        columns: <GridColumn>[
+          GridColumn(
             width: columnWidths['id']!,
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['name']!,
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             width: columnWidths['designation']!,
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             width: columnWidths['salary']!,
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -407,115 +447,25 @@ Widget build(BuildContext context) {
 
 ## Prevent column from being hidden on resizing
 
-To prevent a column from being hidden while resizing, use the `GridColumn.minimumWidth` property to set the columns’ minimum width. The column will not be resized below the minimum width.
+To prevent a column from being hidden while resizing, use the `GridColumn.minimumWidth` property to set the column's minimum width. The column will not be resized below the minimum width.
 
 {% tabs %}
 {% highlight Dart %}
 
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowColumnsResizing: true,
-      onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
-        setState(() {
-          columnWidths[details.column.columnName] = details.width;
-        });
-        return true;
-      },
-      columns: <GridColumn>[
-        GridColumn(
-            width: columnWidths['id']!,
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            width: columnWidths['name']!,
-            minimumWidth: 30.0,
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            width: columnWidths['designation']!,
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            width: columnWidths['salary']!,
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Customize indicator appearance
-
-The column resizing indicator color and its width can be customized by using the [SfDataGridThemeData.columnResizeIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorColor.html) and [SfDataGridThemeData.columnResizeIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorStrokeWidth.html) properties.
-
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the below file,
-
-{% tabs %}
-{% highlight Dart %}
-
-import 'package:syncfusion_flutter_core/theme.dart';
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
-import 'package:syncfusion_flutter_core/theme.dart';
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-late Map<String, double> columnWidths = {
-  'id': double.nan,
-  'name': double.nan,
-  'designation': double.nan,
-  'salary': double.nan
-};
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGridTheme(
-      data: SfDataGridThemeData(
-        columnResizeIndicatorColor: Colors.orange,
-        columnResizeIndicatorStrokeWidth: 2.0,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
       ),
-      child: SfDataGrid(
+      body: SfDataGrid(
         source: _employeeDataSource,
         allowColumnsResizing: true,
         onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
@@ -526,43 +476,149 @@ Widget build(BuildContext context) {
         },
         columns: <GridColumn>[
           GridColumn(
+            width: columnWidths['id']!,
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
+            width: columnWidths['name']!,
+            minimumWidth: 30.0,
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
+            width: columnWidths['designation']!,
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            width: columnWidths['salary']!,
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize indicator appearance
+
+The column resizing indicator color and its width can be customized by using the [SfDataGridThemeData.columnResizeIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorColor.html) and [SfDataGridThemeData.columnResizeIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorStrokeWidth.html) properties.
+
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file:
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+  import 'package:syncfusion_flutter_core/theme.dart';
+  import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  late Map<String, double> columnWidths = {
+    'id': double.nan,
+    'name': double.nan,
+    'designation': double.nan,
+    'salary': double.nan
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          columnResizeIndicatorColor: Colors.orange,
+          columnResizeIndicatorStrokeWidth: 2.0,
+        ),
+        child: SfDataGrid(
+          source: _employeeDataSource,
+          allowColumnsResizing: true,
+          onColumnResizeUpdate: (ColumnResizeUpdateDetails details) {
+            setState(() {
+              columnWidths[details.column.columnName] = details.width;
+            });
+            return true;
+          },
+          columns: <GridColumn>[
+            GridColumn(
               width: columnWidths['id']!,
               columnName: 'id',
               label: Container(
-                  padding: EdgeInsets.all(16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'ID',
-                  ))),
-          GridColumn(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'ID',
+                )
+              )
+            ),
+            GridColumn(
               width: columnWidths['name']!,
               columnName: 'name',
               label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Name'))),
-          GridColumn(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Name')
+              )
+            ),
+            GridColumn(
               width: columnWidths['designation']!,
               columnName: 'designation',
               label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                )
+              )
+            ),
+            GridColumn(
               width: columnWidths['salary']!,
               columnName: 'salary',
               label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Salary'))),
-        ],
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Salary')
+              )
+            ),
+          ],
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}

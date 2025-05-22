@@ -22,60 +22,60 @@ The summary information can be displayed in a row by setting the [GridTableSumma
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            showSummaryInRow: true,
-            title: 'Total Salary: {Sum} for 20 employees',
-            columns: [
-              GridSummaryColumn(
-                  name: 'Sum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
-            ],
-            position: GridTableSummaryRowPosition.bottom)
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              showSummaryInRow: true,
+              title: 'Total Salary: {Sum} for 20 employees',
+              columns: [
+                GridSummaryColumn(
+                    name: 'Sum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum)
+              ],
+              position: GridTableSummaryRowPosition.bottom)
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -136,59 +136,59 @@ The summary information can be displayed in a column by setting the `GridTableSu
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            showSummaryInRow: false,
-            columns: [
-              GridSummaryColumn(
-                  name: 'Sum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum),
-            ],
-            position: GridTableSummaryRowPosition.bottom)
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              showSummaryInRow: false,
+              columns: [
+                GridSummaryColumn(
+                    name: 'Sum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum),
+              ],
+              position: GridTableSummaryRowPosition.bottom)
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -245,69 +245,69 @@ The table summary row can be shown at the either top or bottom position by using
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            showSummaryInRow: false,
-            columns: [
-              GridSummaryColumn(
-                  name: 'Sum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
-            ],
-            position: GridTableSummaryRowPosition.top),
-        GridTableSummaryRow(
-            showSummaryInRow: true,
-            title: 'Total Salary: {Sum} for 20 employees',
-            columns: [
-              GridSummaryColumn(
-                  name: 'Sum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
-            ],
-            position: GridTableSummaryRowPosition.bottom)
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              showSummaryInRow: false,
+              columns: [
+                GridSummaryColumn(
+                    name: 'Sum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum)
+              ],
+              position: GridTableSummaryRowPosition.top),
+          GridTableSummaryRow(
+              showSummaryInRow: true,
+              title: 'Total Salary: {Sum} for 20 employees',
+              columns: [
+                GridSummaryColumn(
+                    name: 'Sum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum)
+              ],
+              position: GridTableSummaryRowPosition.bottom)
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -374,65 +374,65 @@ The SfDataGrid supports displaying columns’ summary value along with the title
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            showSummaryInRow: false,
-            title: 'Total Employee Count: {Count}',
-            titleColumnSpan: 3,
-            columns: [
-              GridSummaryColumn(
-                  name: 'Count',
-                  columnName: 'id',
-                  summaryType: GridSummaryType.count),
-              GridSummaryColumn(
-                  name: 'Sum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
-            ],
-            position: GridTableSummaryRowPosition.bottom),
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              showSummaryInRow: false,
+              title: 'Total Employee Count: {Count}',
+              titleColumnSpan: 3,
+              columns: [
+                GridSummaryColumn(
+                    name: 'Count',
+                    columnName: 'id',
+                    summaryType: GridSummaryType.count),
+                GridSummaryColumn(
+                    name: 'Sum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum)
+              ],
+              position: GridTableSummaryRowPosition.bottom),
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -489,61 +489,61 @@ The background color of the table summary row can be customized by using the [Gr
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            color: Colors.indigo,
-            showSummaryInRow: true,
-            title: 'Minimum Salary: {Minimum} for 20 employees',
-            columns: [
-              GridSummaryColumn(
-                  name: 'Minimum',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.minimum)
-            ],
-            position: GridTableSummaryRowPosition.bottom),
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              color: Colors.indigo,
+              showSummaryInRow: true,
+              title: 'Minimum Salary: {Minimum} for 20 employees',
+              columns: [
+                GridSummaryColumn(
+                    name: 'Minimum',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.minimum)
+              ],
+              position: GridTableSummaryRowPosition.bottom),
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -605,60 +605,60 @@ The following example demonstrates how to customize the summary calculation to f
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      tableSummaryRows: [
-        GridTableSummaryRow(
-            showSummaryInRow: true,
-            title: 'Standard Deviation: {Deviation}',
-            columns: [
-              GridSummaryColumn(
-                  name: 'Deviation',
-                  columnName: 'salary',
-                  summaryType: GridSummaryType.sum)
-            ],
-            position: GridTableSummaryRowPosition.bottom),
-      ],
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Job Title',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        tableSummaryRows: [
+          GridTableSummaryRow(
+              showSummaryInRow: true,
+              title: 'Standard Deviation: {Deviation}',
+              columns: [
+                GridSummaryColumn(
+                    name: 'Deviation',
+                    columnName: 'salary',
+                    summaryType: GridSummaryType.sum)
+              ],
+              position: GridTableSummaryRowPosition.bottom),
+        ],
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Job Title',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {

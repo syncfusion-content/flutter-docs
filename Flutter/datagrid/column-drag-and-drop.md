@@ -47,12 +47,12 @@ class EmployeeDataSource extends DataGridSource {
   void buildDataGridRows() {
     dataGridRows = employees.map<DataGridRow>((employee) {
       return DataGridRow(
-          cells: columns.map<DataGridCell>((column) {
-        return DataGridCell(
-          columnName: column.columnName,
-          value: employee[column.columnName],
-        );
-      }).toList());
+        cells: columns.map<DataGridCell>((column) {
+          return DataGridCell(
+            columnName: column.columnName,
+            value: employee[column.columnName],
+          );
+        }).toList());
     }).toList();
   }
 
@@ -66,14 +66,14 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map((dataGridCell) {
-      return Container(
+      cells: row.getCells().map((dataGridCell) {
+        return Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             dataGridCell.value.toString(),
           ));
-    }).toList());
+      }).toList());
   }
 
   refreshDataGrid() {
@@ -118,7 +118,7 @@ You can cancel the column dropping at a specific column by returning `false` fro
         allowColumnsDragging: true,
         columns: columns,
         onColumnDragging: (DataGridColumnDragDetails details) {
-         if (details.action == DataGridColumnDragAction.update &&
+          if (details.action == DataGridColumnDragAction.update &&
               details.to == 2) {
             return false;
           }
@@ -127,8 +127,8 @@ You can cancel the column dropping at a specific column by returning `false` fro
             final GridColumn rearrangeColumn = columns[details.from];
             columns.removeAt(details.from);
             columns.insert(details.to!, rearrangeColumn);
-            employeeDataSource.buildDataGridRow();
-            employeeDataSource.updateDtaGrid();
+            employeeDataSource.buildDataGridRows();
+            employeeDataSource.refreshDataGrid();
           }
           return true;
         },
@@ -162,22 +162,22 @@ The DataGrid allows you to change the drag feedback widget by returning a custom
             child: const Center(
               child: DefaultTextStyle(
                 style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.pink,
-                    fontWeight: FontWeight.bold),
+                  fontSize: 14,
+                  color: Colors.pink,
+                  fontWeight: FontWeight.bold),
                 child: Text('Drag View'),
               ),
             ),
           );
         },
         onColumnDragging: (DataGridColumnDragDetails details) {
-         if (details.action == DataGridColumnDragAction.dropped &&
+          if (details.action == DataGridColumnDragAction.dropped &&
               details.to != null) {
             final GridColumn rearrangeColumn = columns[details.from];
             columns.removeAt(details.from);
             columns.insert(details.to!, rearrangeColumn);
-            employeeDataSource.buildDataGridRow();
-            employeeDataSource.updateDtaGrid();
+            employeeDataSource.buildDataGridRows();
+            employeeDataSource.refreshDataGrid();
           }
           return true;
         },
@@ -215,8 +215,8 @@ The following code describes how to change the drag indicator color and thicknes
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
-            columnDragIndicatorColor: Colors.pink,
-            columnDragIndicatorStrokeWidth: 3),
+          columnDragIndicatorColor: Colors.pink,
+          columnDragIndicatorStrokeWidth: 3),
         child: SfDataGrid(
           source: employeeDataSource,
           allowColumnsDragging: true,

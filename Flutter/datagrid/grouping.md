@@ -9,9 +9,9 @@ documentation: ug
 
 # Grouping in Flutter DataGrid (SfDataGrid)
 
-Grouping in a DataGrid involves organizing and categorizing data based on specific criteria or field values. This feature enables the grouping of related records together, forming a hierarchical structure within the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html). Each group is represented by the `CaptionSummaryRow `that displays at the top of each group and holds the caption summary value of that group.
+Grouping in a DataGrid involves organizing and categorizing data based on specific criteria or field values. This feature enables you to group related records together, forming a hierarchical structure within the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html). Each group is represented by the `CaptionSummaryRow` that displays at the top of each group and holds the caption summary value of that group.
 
-By default, the DataGrid doesn't show the group's caption summary value. To showcase the caption summary value, it is necessary to override the [DataGridSource.buildGroupCaptionCellWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildGroupCaptionCellWidget.html) method. This method receives the caption summary value as a parameter. Consequently, you will be required to return the necessary widget containing the summary value.
+By default, the DataGrid doesn't show the group's caption summary value. To display the caption summary value, you need to override the [DataGridSource.buildGroupCaptionCellWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildGroupCaptionCellWidget.html) method. This method receives the caption summary value as a parameter, allowing you to return the necessary widget containing the summary value.
 
 ## Programmatic grouping
 
@@ -258,7 +258,7 @@ To clear all the column groups, simply call the [DataGridSource.clearColumnGroup
 
 The `SfDataGrid` allows grouping of data against one or more columns by adding multiple columns to the [DataGridSource.addColumnGroup](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/addColumnGroup.html) property. This feature organizes data into a hierarchical tree structure based on identical values within those columns.
 
-Initially, data is grouped according to the first column added to the `DataGridSource.addColumnGroup` property. Subsequently, when additional columns are included in `DataGridSource.addColumnGroup,` each new column is grouped in consideration of the existing group(s). This process creates a tree-like hierarchy. To enable multi-grouping, please refer to the following code snippet:
+Initially, data is grouped according to the first column added to the `DataGridSource.addColumnGroup` property. Subsequently, when additional columns are included, each new column is grouped in consideration of the existing group(s), creating a tree-like hierarchy:
     
 {% tabs %}
 {% highlight Dart %}
@@ -435,7 +435,7 @@ The [SfDataGrid.groupExpanded](https://pub.dev/documentation/syncfusion_flutter_
 
 ### GroupCollapsing
 
-The [SfDataGrid.groupCollapsing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupCollapsing.html) callback is invoked when the group is being collapsed. You can return false from this callback to restrict the group from being collapsed.
+The [SfDataGrid.groupCollapsing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/groupCollapsing.html) callback is invoked when a group is being collapsed. You can return `false` from this callback to restrict the group from being collapsed:
 
 {% tabs %}
 {% highlight Dart %}
@@ -594,7 +594,7 @@ The `DataGridSource.performGrouping` method is invoked when grouping is applied 
           ]),
     );
   }
-}
+
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {

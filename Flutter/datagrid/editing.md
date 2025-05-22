@@ -9,9 +9,9 @@ documentation: ug
 
 # Editing in Flutter DataGrid
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) supports editing the cell values by setting the [SfDataGrid.allowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property as true and [SfDataGrid.navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) as cell, and [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) as other than none.
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) supports editing the cell values by setting the [SfDataGrid.allowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property to true, [SfDataGrid.navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) to cell, and [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) to a value other than none.
 
-By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) does not load any widget when the cell is moved into edit mode. Users must load any widget when the cell is moved into edit mode by returning the required widget through the [DataGridSource.buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method in [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/DataGridSource.html) class.
+By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) does not load any widget when a cell enters edit mode. You must provide the required widget when a cell enters edit mode by returning it through the [DataGridSource.buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method in the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/DataGridSource.html) class.
 
 The following arguments are passed in the `buildEditWidget` method.
 
@@ -20,60 +20,70 @@ The following arguments are passed in the `buildEditWidget` method.
 * [column](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html): Gets the Grid Column of the SfDataGrid.
 * [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html): Programmatically call to end the editing. Typically, this method can be called when the widget completes its editing. For example, `TextField.onSubmitted` method is called whenever TextField ends its editing. So, you can simply call submitCell method. This will automatically call the DataGridSource.
 
-You are recommended to save the edited value through editors in the [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method. The `onCellSubmit` method will be called whenever the [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html) method from the [buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method is called, or other cells are navigated when a cell is in edit mode.
+It is recommended to save the edited value through editors in the [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method. The `onCellSubmit` method will be called whenever the [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html) method from the [buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method is called, or when other cells are navigated while a cell is in edit mode.
 
 The following example shows how to enable editing in Datagrid and commit the edited cell value in the `onCellSubmit` method.
 
 {% tabs %}
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          allowEditing: true,
-          selectionMode: SelectionMode.single,
-          navigationMode: GridNavigationMode.cell,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        allowEditing: true,
+        selectionMode: SelectionMode.single,
+        navigationMode: GridNavigationMode.cell,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ]
+      )
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   /// Helps to hold the new value of all editable widgets.
@@ -86,20 +96,19 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   Future<void> onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
-      GridColumn column) {
+      GridColumn column) async {
     final dynamic oldValue = dataGridRow
-            .getCells()
-            .firstWhereOrNull((DataGridCell dataGridCell) =>
-                dataGridCell.columnName == column.columnName)
-            ?.value ??
+        .getCells()
+        .firstWhereOrNull((DataGridCell dataGridCell) =>
+            dataGridCell.columnName == column.columnName)
+        ?.value ??
         '';
-
     final int dataRowIndex = dataGridRows.indexOf(dataGridRow);
-
+    
     if (newCellValue == null || oldValue == newCellValue) {
       return;
     }
-
+    
     if (column.columnName == 'id') {
       dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
           DataGridCell<int>(columnName: 'id', value: newCellValue);
@@ -124,21 +133,21 @@ class EmployeeDataSource extends DataGridSource {
       RowColumnIndex rowColumnIndex, GridColumn column, CellSubmit submitCell) {
     // Text going to display on editable widget
     final String displayText = dataGridRow
-            .getCells()
-            .firstWhereOrNull((DataGridCell dataGridCell) =>
-                dataGridCell.columnName == column.columnName)
-            ?.value
-            ?.toString() ??
+        .getCells()
+        .firstWhereOrNull((DataGridCell dataGridCell) =>
+            dataGridCell.columnName == column.columnName)
+        ?.value
+        ?.toString() ??
         '';
-
+        
     // The new cell value must be reset.
     // To avoid committing the [DataGridCell] value that was previously edited
     // into the current non-modified [DataGridCell].
     newCellValue = null;
-
+    
     final bool isNumericType =
         column.columnName == 'id' || column.columnName == 'salary';
-
+        
     return Container(
       padding: const EdgeInsets.all(8.0),
       alignment: isNumericType ? Alignment.centerRight : Alignment.centerLeft,
@@ -187,54 +196,64 @@ To disable the editing for a particular column, set the [GridColumn.allowEditing
 {% tabs %}
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          allowEditing: true,
-          selectionMode: SelectionMode.single,
-          navigationMode: GridNavigationMode.cell,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        allowEditing: true,
+        selectionMode: SelectionMode.single,
+        navigationMode: GridNavigationMode.cell,
+        columns: [
+          GridColumn(
             columnName: 'id',
             allowEditing: false,
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -243,59 +262,69 @@ Widget build(BuildContext context) {
 
 ## Entering edit mode
 
-By default, the cell will be moved to edit mode when you double-tap the cells. Enable the editing to be performed by tapping, and set the [SfDataGrid.editingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/editingGestureType.html) property as tap.
+By default, a cell will enter edit mode when you double-tap it. To enable editing with a single tap, set the [SfDataGrid.editingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/editingGestureType.html) property to tap.
 
 {% tabs %}
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          allowEditing: true,
-          selectionMode: SelectionMode.single,
-          navigationMode: GridNavigationMode.cell,
-          editingGestureType: EditingGestureType.tap,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        allowEditing: true,
+        selectionMode: SelectionMode.single,
+        navigationMode: GridNavigationMode.cell,
+        editingGestureType: EditingGestureType.tap,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -304,7 +333,7 @@ Widget build(BuildContext context) {
 
 ### onCellBeginEdit
 
-The [DataGridSource.onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method is called when the cell enters edit mode. Return false if you don’t want to move any specific cells to edit mode. The following arguments are passed in this method:
+The [DataGridSource.onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method is called when a cell enters edit mode. Return false if you don’t want specific cells to enter edit mode. The following arguments are passed in this method:
 
 * [row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html): Gets the DataGridRow of the SfDataGrid.
 * [rowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html): Gets the current row and column index of the DataGrid.
@@ -412,7 +441,7 @@ class EmployeeDataSource extends DataGridSource {
 The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when you press the `Esc` key from Web and Desktop platforms. The [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) will not be called when the `Esc` key is pressed.
 
 >**NOTE**    
-   No need to call the notifyListener inside it.
+  No need to call the notifyListener inside it.
 
 {% tabs %}
 {% highlight dart %}
@@ -437,64 +466,78 @@ The SfDataGrid allows moving the cell into edit mode programmatically by calling
 {% tabs %}
 {% highlight dart %}
 
-final DataGridController _dataGridController = DataGridController();
+  final DataGridController _dataGridController = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text("Begin Edit"),
-        onPressed: () {
-          _dataGridController.beginEdit(RowColumnIndex(2, 3));
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            allowEditing: true,
-            selectionMode: SelectionMode.single,
-            navigationMode: GridNavigationMode.cell,
-            controller: _dataGridController,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  )))
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TextButton(
+            child: Text("Begin Edit"),
+            onPressed: () {
+              _dataGridController.beginEdit(RowColumnIndex(2, 3));
+            }
+          ),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              allowEditing: true,
+              selectionMode: SelectionMode.single,
+              navigationMode: GridNavigationMode.cell,
+              controller: _dataGridController,
+              columns: [
+                GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                )
+              ]
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -508,78 +551,92 @@ The [SfDataGrid.endEdit](https://pub.dev/documentation/syncfusion_flutter_datagr
 {% tabs %}
 {% highlight dart %}
 
-final DataGridController _dataGridController = DataGridController();
+  final DataGridController _dataGridController = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text("End Edit"),
-        onPressed: () {
-          _dataGridController.endEdit();
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            allowEditing: true,
-            selectionMode: SelectionMode.single,
-            navigationMode: GridNavigationMode.cell,
-            controller: _dataGridController,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  )))
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TextButton(
+            child: Text("End Edit"),
+            onPressed: () {
+              _dataGridController.endEdit();
+            }
+          ),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              allowEditing: true,
+              selectionMode: SelectionMode.single,
+              navigationMode: GridNavigationMode.cell,
+              controller: _dataGridController,
+              columns: [
+                GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                )
+              ]
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## How to check whether the current cell is in editing mode
 
-You can check whether the current cell is in editing mode or not by using the [DataGridController.isCurrentCellInEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/isCurrentCellInEditing.html) property.
+You can check whether the current cell is in editing mode by using the [DataGridController.isCurrentCellInEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/isCurrentCellInEditing.html) property.
 
 {% tabs %}
 {% highlight dart %}
 
- final DataGridController _dataGridController = DataGridController();
- 
- @override
+  final DataGridController _dataGridController = DataGridController();
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -588,15 +645,17 @@ You can check whether the current cell is in editing mode or not by using the [D
       body: Column(
         children: [
           TextButton(
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                          content: Text(
-                              'Cell is in Edit Mode: ${_dataGridController.isCurrentCellInEditing}'),
-                        ));
-              },
-              child: const Text('In Edit Mode')),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  content: Text(
+                    'Cell is in Edit Mode: ${_dataGridController.isCurrentCellInEditing}'),
+                )
+              );
+            },
+            child: const Text('In Edit Mode')
+          ),
           Expanded(
             child: SfDataGrid(
               source: _employeeDataSource,
@@ -608,41 +667,49 @@ You can check whether the current cell is in editing mode or not by using the [D
               editingGestureType: EditingGestureType.tap,
               columns: [
                 GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'id',
+                  label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
                 GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'name',
+                  label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
                 GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'designation',
+                  label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
                 GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        )))
+                  columnName: 'salary',
+                  label: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                )
               ],
             ),
           ),
@@ -678,7 +745,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to cancel the specific column from being entered into edit mode,
+The following code example shows how to prevent a specific column from being entered into edit mode:
 
 {% tabs %}
 {% highlight dart %}
@@ -700,9 +767,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Cancel edited cell value from being committed
 
-You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return false based on your criteria.
+You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) from the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return false based on your criteria.
 
-If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow the focus to the other widget, which is added outside the DataGrid. The focus would always be on the `currentCell`.
+If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow focus to move to other widgets outside the DataGrid. The focus will remain on the `currentCell`.
 
 {% tabs %}
 {% highlight dart %}
@@ -727,9 +794,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform editing asynchronously
 
-The editing can be asynchronously performed by handling the [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method, which is called before the cell ends its editing and [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html), which is called when the cell ends its editing.
+Editing can be performed asynchronously by handling the [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method, which is called before the cell ends its editing and [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html), which is called when the cell ends its editing.
 
-The following example shows how to show the loading indicator for a specific amount of time when the cell ends its editing and also shows the loading indicator until the cell checks whether entered value is valid.
+The following example shows how to display a loading indicator for a specific amount of time when the cell ends its editing and also shows the loading indicator until the cell validates whether the entered value is valid.
 
 {% tabs %}
 {% highlight Dart %} 
