@@ -19,18 +19,18 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(minimum: -60, maximum: 60
-       )
-      ]
-     ),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(minimum: -60, maximum: 60)
+          ]
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -42,18 +42,18 @@ The start and end angles of radial axis can be customized using the [`startAngle
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(startAngle: 180, endAngle: 90,
-       )
-      ]
-     ),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(startAngle: 180, endAngle: 90)
+          ]
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -65,17 +65,19 @@ The radius of the radial axis can be customized using the [`radiusFactor`](https
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(),
-         RadialAxis(radiusFactor: 0.5)]
-     ),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(),
+            RadialAxis(radiusFactor: 0.5)
+          ]
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -87,21 +89,26 @@ The position of the [`radial axis`](https://pub.dev/documentation/syncfusion_flu
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(startAngle: 270, endAngle: 270, interval: 10),
-         RadialAxis( centerY: 0.55, centerX: 0.35,
-             radiusFactor: 0.3, startAngle: 270, 
-             endAngle: 270, interval: 20
-          )
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(startAngle: 270, endAngle: 270, interval: 10),
+            RadialAxis(
+              centerY: 0.55, 
+              centerX: 0.35,
+              radiusFactor: 0.3, 
+              startAngle: 270,
+              endAngle: 270, 
+              interval: 20
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -114,13 +121,19 @@ The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 {% highlight dart %}
 
   @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: SfRadialGauge(
-            axes: <RadialAxis>[RadialAxis( startAngle: 180, endAngle: 0,
-                interval: 10,
-                canScaleToFit: true)]),
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              startAngle: 180, 
+              endAngle: 0,
+              interval: 10,
+              canScaleToFit: true
+            )
+          ]
+        ),
       ),
     );
   }
@@ -136,16 +149,18 @@ The axis label can be rotated based on its current angle using the [`canRotateLa
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(canRotateLabels: true)]
-     ),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(canRotateLabels: true)
+          ]
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -162,18 +177,25 @@ The default value of both the [`showFirstLabel`](https://pub.dev/documentation/s
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis( interval: 1, showFirstLabel: false,
-           startAngle: 270, endAngle: 270, minimum: 0, maximum: 12),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              interval: 1, 
+              showFirstLabel: false,
+              startAngle: 270, 
+              endAngle: 270, 
+              minimum: 0, 
+              maximum: 12
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -187,16 +209,16 @@ When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis( isInversed: true)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis( isInversed: true)]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -208,16 +230,16 @@ By default, a maximum of three labels are displayed for each 100 logical pixels 
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis( maximumLabels: 5)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis( maximumLabels: 5)]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -229,16 +251,18 @@ The interval between labels can be customized using the [`interval`](https://pub
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(interval: 20)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(interval: 20)
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -257,19 +281,24 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-         axisLineStyle: AxisLineStyle(thickness: 0.1,
-           thicknessUnit: GaugeSizeUnit.factor, color: Colors.deepPurple,)),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              axisLineStyle: AxisLineStyle(
+                thickness: 0.1,
+                thicknessUnit: GaugeSizeUnit.factor, 
+                color: Colors.deepPurple
+              )
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -281,18 +310,24 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(axisLineStyle: AxisLineStyle(thickness: 15,              
-         cornerStyle:CornerStyle.bothCurve)),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              axisLineStyle: AxisLineStyle(
+                thickness: 15,              
+                cornerStyle: CornerStyle.bothCurve
+              )
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
+
 {% endhighlight %}
 
 ![axis corner](images/axis/axis_corner.jpg)
@@ -303,18 +338,20 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-         axisLineStyle: AxisLineStyle( dashArray: <double>[5,5])),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              axisLineStyle: AxisLineStyle(dashArray: <double>[5, 5])
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -326,25 +363,27 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-            axes:<RadialAxis>[RadialAxis(
-                axisLineStyle: AxisLineStyle(thickness: 0.1,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              axisLineStyle: AxisLineStyle(
+                thickness: 0.1,
                 thicknessUnit: GaugeSizeUnit.factor,
-                  gradient: const SweepGradient(
-                      colors: <Color>[Color(0xFFFF7676), Color(0xFFF54EA2)],
-                      stops: <double>[0.25, 0.75]
-                  ),
+                gradient: const SweepGradient(
+                  colors: <Color>[Color(0xFFFF7676), Color(0xFFF54EA2)],
+                  stops: <double>[0.25, 0.75]
                 )
-              ),
-            ]
+              )
+            )
+          ]
         ),
-    ),
-  );
-}
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -356,16 +395,18 @@ The visibility of the axis line can be customized using the [`showAxisLine`](htt
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(showAxisLine: false)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(showAxisLine: false)
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -377,14 +418,15 @@ Widget build(BuildContext context) {
 
 {% highlight dart %}
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: SfRadialGauge(
-        backgroundColor: Colors.lightBlue,
-        axes: <RadialAxis>[RadialAxis()],
-      )),
+        child: SfRadialGauge(
+          backgroundColor: Colors.lightBlue,
+          axes: <RadialAxis>[RadialAxis()]
+        )
+      ),
     );
   }
 
@@ -398,62 +440,70 @@ Widget build(BuildContext context) {
 
 {% highlight dart %}
 
-@override
- Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Padding(
           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: SfRadialGauge(
             axes: <RadialAxis>[
-              RadialAxis(showAxisLine: false,
-                  radiusFactor: 1, 
-                  showLastLabel: false,
-                  canRotateLabels: true,
-                  tickOffset: 0.32,
-                  offsetUnit: GaugeSizeUnit.factor,
-                  onLabelCreated: axisLabelCreated,
-                  startAngle: 270,
-                  endAngle: 270,
-                  labelOffset: 0.05,
-                  maximum: 360,
-                  minimum: 0,
-                  interval: 30,
-                  minorTicksPerInterval: 4,
-                  axisLabelStyle: GaugeTextStyle(color: const Color(0xFF949494)),
-                  minorTickStyle: MinorTickStyle(color: const Color(0xFF616161),
-                      thickness: 1.6,
-                      length: 0.058,
-                      lengthUnit: GaugeSizeUnit.factor),
-                  majorTickStyle: MajorTickStyle(color: const Color(0xFF949494),
-                      thickness: 2.3,
-                      length: 0.087,
-                      lengthUnit: GaugeSizeUnit.factor),
-                  backgroundImage: const AssetImage(
-                      'images/dark_theme_gauge.png'),
-                  pointers: <GaugePointer>[
-                    MarkerPointer(value: 90,
+              RadialAxis(
+                showAxisLine: false,
+                radiusFactor: 1,
+                showLastLabel: false,
+                canRotateLabels: true,
+                tickOffset: 0.32,
+                offsetUnit: GaugeSizeUnit.factor,
+                onLabelCreated: axisLabelCreated,
+                startAngle: 270,
+                endAngle: 270,
+                labelOffset: 0.05,
+                maximum: 360,
+                minimum: 0,
+                interval: 30,
+                minorTicksPerInterval: 4,
+                axisLabelStyle: GaugeTextStyle(color: const Color(0xFF949494)),
+                minorTickStyle: MinorTickStyle(
+                  color: const Color(0xFF616161),
+                  thickness: 1.6,
+                  length: 0.058,
+                  lengthUnit: GaugeSizeUnit.factor
+                ),
+                majorTickStyle: MajorTickStyle(
+                  color: const Color(0xFF949494),
+                  thickness: 2.3,
+                  length: 0.087,
+                  lengthUnit: GaugeSizeUnit.factor
+                ),
+                backgroundImage: const AssetImage('images/dark_theme_gauge.png'),
+                pointers: <GaugePointer>[
+                  MarkerPointer(
+                    value: 90,
+                    color: const Color(0xFFDF5F2D),
+                    enableAnimation: true,
+                    animationDuration: 1200,
+                    markerOffset: 0.71,
+                    offsetUnit: GaugeSizeUnit.factor,
+                    markerType: MarkerType.triangle,
+                    markerHeight: 10,
+                    markerWidth: 15
+                  )
+                ],
+                annotations: <GaugeAnnotation>[
+                  GaugeAnnotation(
+                    angle: 270,
+                    positionFactor: 0.025,
+                    widget: Text(
+                      '90',
+                      style: TextStyle(
                         color: const Color(0xFFDF5F2D),
-                        enableAnimation: true,
-                        animationDuration: 1200,
-                        markerOffset: 0.71,
-                        offsetUnit: GaugeSizeUnit.factor,
-                        markerType: MarkerType.triangle,
-                        markerHeight: 10,
-                        markerWidth: 15)
-                  ],
-                  annotations: <GaugeAnnotation>[
-                    GaugeAnnotation(angle: 270,
-                      positionFactor:  0.025,
-                      widget: Text('90',
-                        style: TextStyle(
-                          color: const Color(0xFFDF5F2D),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22
-                            )
-                          )
-                        )
-                  ]
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22
+                      )
+                    )
+                  )
+                ]
               )
             ],
           ),
@@ -465,20 +515,16 @@ Widget build(BuildContext context) {
   void axisLabelCreated(AxisLabelCreatedArgs args) {
     if (args.text == '90') {
       args.text = 'E';
-      args.labelStyle = GaugeTextStyle(
-          color: const Color(0xFFDF5F2D));
-    }else{
+      args.labelStyle = GaugeTextStyle(color: const Color(0xFFDF5F2D));
+    } else {
       if (args.text == '0') {
         args.text = 'N';
-      }else if (args.text == '180') {
+      } else if (args.text == '180') {
         args.text = 'S';
       } else if (args.text == '270') {
         args.text = 'W';
       }
-
-      args.labelStyle = GaugeTextStyle(
-          color: const Color(0xFFFFFFFF),
-      );
+      args.labelStyle = GaugeTextStyle(color: const Color(0xFFFFFFFF));
     }
   }
 
@@ -498,20 +544,26 @@ The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/d
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(axisLabelStyle: GaugeTextStyle(
-            color: Colors.red, fontSize: 15, 
-             fontStyle:FontStyle.italic,
-             fontWeight: FontWeight.bold, fontFamily: 'Times') ),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              axisLabelStyle: GaugeTextStyle(
+                color: Colors.red, 
+                fontSize: 15,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold, 
+                fontFamily: 'Times'
+              )
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -519,22 +571,24 @@ Widget build(BuildContext context) {
 
 **Formatting axis label**
 
-The following property of the axis allows to customize the axis label text.
+The following property of the axis allows to customize the axis label text:
 
 * [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelFormat.html) - Allows to add prefix or suffix with the axis labels.
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(labelFormat: '{value}m' ),]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(labelFormat: '{value}m')
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -544,20 +598,18 @@ Widget build(BuildContext context) {
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-        numberFormat: NumberFormat.compactSimpleCurrency()),
-        ]
-     ),
-    ),
-
-  );
-}
-
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(numberFormat: NumberFormat.compactSimpleCurrency())
+          ]
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -569,17 +621,16 @@ The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/lates
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(showLabels: false ),]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(showLabels: false ),]
+        ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 
 {% endhighlight %}
 
@@ -601,20 +652,31 @@ The major and minor tick lines of an axis can be customized using the [`majorTic
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(majorTickStyle: MajorTickStyle(length: 0.1, 
-       lengthUnit: GaugeSizeUnit.factor, thickness: 1.5, color: Colors.black),
-         minorTickStyle: MinorTickStyle(length: 0.05, 
-         lengthUnit: GaugeSizeUnit.factor, thickness: 1.5, color: Colors.black)
-        )]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              majorTickStyle: MajorTickStyle(
+                length: 0.1,
+                lengthUnit: GaugeSizeUnit.factor, 
+                thickness: 1.5, 
+                color: Colors.black
+              ),
+              minorTickStyle: MinorTickStyle(
+                length: 0.05,
+                lengthUnit: GaugeSizeUnit.factor, 
+                thickness: 1.5, 
+                color: Colors.black
+              )
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -626,19 +688,21 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-         majorTickStyle: MajorTickStyle(length: 20, dashArray: <double>[5,2.5]),
-         minorTickStyle: MinorTickStyle(length: 15, dashArray: <double>[3,2.5])),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              majorTickStyle: MajorTickStyle(length: 20, dashArray: <double>[5, 2.5]),
+              minorTickStyle: MinorTickStyle(length: 15, dashArray: <double>[3, 2.5])
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -650,18 +714,18 @@ The major ticks are generated based on the [`interval`](https://pub.dev/document
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(minorTicksPerInterval: 4
-          ),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(minorTicksPerInterval: 4
+            ),
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -673,16 +737,16 @@ The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(showTicks: false)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(showTicks: false)]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -690,22 +754,22 @@ Widget build(BuildContext context) {
 
 **Label and tick Placement**
 
-The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the labels and ticks either inside or outside the axis line using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelsPosition.html) and [`ticksPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/ticksPosition.html) properties. By default, both labels and ticks are positioned inside the axis line.
+The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the labels and ticks either inside or outside the axis line using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelsPosition.html) and [`ticksPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/ticksPosition.html) properties. By default, both labels and ticks are positioned inside the axis.
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-          labelsPosition: ElementsPosition.outside,
-         ticksPosition: ElementsPosition.outside)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(
+            labelsPosition: ElementsPosition.outside,
+          ticksPosition: ElementsPosition.outside)]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -719,17 +783,17 @@ The default value of tick offset is 0. While setting offset for the ticks, the a
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-          tickOffset: 20)]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(
+            tickOffset: 20)]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -739,20 +803,22 @@ The following code example shows how to add tick offset with the [`offsetUnit`](
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(tickOffset: 0.2,
-          labelOffset: 0.2, offsetUnit: GaugeSizeUnit.factor
-          ),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              tickOffset: 0.2,
+              labelOffset: 0.2, 
+              offsetUnit: GaugeSizeUnit.factor
+            )
+          ]
+        ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 
 {% endhighlight %}
 
@@ -764,19 +830,19 @@ The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-          labelOffset: 0.3, offsetUnit: GaugeSizeUnit.factor
-          ),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(
+            labelOffset: 0.3, offsetUnit: GaugeSizeUnit.factor
+            ),
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -792,42 +858,42 @@ The [`Radial Gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes: <RadialAxis>[ RadialAxis(minimum:  0 , maximum: 100, interval: 10,
-           ticksPosition: ElementsPosition.outside,
-           labelsPosition: ElementsPosition.outside,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes: <RadialAxis>[ RadialAxis(minimum:  0 , maximum: 100, interval: 10,
+            ticksPosition: ElementsPosition.outside,
+            labelsPosition: ElementsPosition.outside,
 
-           minorTicksPerInterval: 5,
-           radiusFactor: 0.9, labelOffset: 15,
-           minorTickStyle: MinorTickStyle(thickness: 1.5,
-            color: Color.fromARGB(255, 143, 20, 2),
-            length: 0.07, lengthUnit: GaugeSizeUnit.factor),
-           majorTickStyle: MinorTickStyle(thickness: 1.5,
-             color: Color.fromARGB(255, 143, 20, 2),
-             length: 0.15, lengthUnit: GaugeSizeUnit.factor,),
-           axisLineStyle: AxisLineStyle( thickness: 3, 
-            color: Color.fromARGB(255, 143, 20, 2), ),
-           axisLabelStyle: GaugeTextStyle(fontSize: 12,
-             color:Color.fromARGB(255, 143, 20, 2),),),
+            minorTicksPerInterval: 5,
+            radiusFactor: 0.9, labelOffset: 15,
+            minorTickStyle: MinorTickStyle(thickness: 1.5,
+              color: Color.fromARGB(255, 143, 20, 2),
+              length: 0.07, lengthUnit: GaugeSizeUnit.factor),
+            majorTickStyle: MinorTickStyle(thickness: 1.5,
+              color: Color.fromARGB(255, 143, 20, 2),
+              length: 0.15, lengthUnit: GaugeSizeUnit.factor,),
+            axisLineStyle: AxisLineStyle( thickness: 3, 
+              color: Color.fromARGB(255, 143, 20, 2), ),
+            axisLabelStyle: GaugeTextStyle(fontSize: 12,
+              color:Color.fromARGB(255, 143, 20, 2),),),
 
-         RadialAxis(minimum:  0 , maximum: 60, interval: 10,
-           radiusFactor:  0.6, labelOffset: 15, isInversed: true,
-           minorTicksPerInterval: 5,
-           minorTickStyle: MinorTickStyle(color: Colors.black, thickness: 1.5,
-               lengthUnit: GaugeSizeUnit.factor, length: 0.07),
-           majorTickStyle: MajorTickStyle(color: Colors.black, thickness: 1.5,
-               lengthUnit: GaugeSizeUnit.factor, length: 0.15),
-           axisLineStyle: AxisLineStyle(color: Colors.black, thickness: 3, ),
-           axisLabelStyle: GaugeTextStyle(color:  Colors.black, fontSize: 12)),
-        ],
-      )
-    ),
-  );
-}
+          RadialAxis(minimum:  0 , maximum: 60, interval: 10,
+            radiusFactor:  0.6, labelOffset: 15, isInversed: true,
+            minorTicksPerInterval: 5,
+            minorTickStyle: MinorTickStyle(color: Colors.black, thickness: 1.5,
+                lengthUnit: GaugeSizeUnit.factor, length: 0.07),
+            majorTickStyle: MajorTickStyle(color: Colors.black, thickness: 1.5,
+                lengthUnit: GaugeSizeUnit.factor, length: 0.15),
+            axisLineStyle: AxisLineStyle(color: Colors.black, thickness: 3, ),
+            axisLabelStyle: GaugeTextStyle(color:  Colors.black, fontSize: 12)),
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -847,28 +913,27 @@ N> If both [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_g
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-          onLabelCreated:axisLabelCreated,),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(
+            onLabelCreated:axisLabelCreated,),
+          ]
+        ),
       ),
-    ),
-  );
-}
-
-void axisLabelCreated(AxisLabelCreatedArgs args){
-  if(args.text == '100'){
-    args.labelStyle = GaugeTextStyle(color: Colors.red,fontStyle: FontStyle.italic,
-        fontFamily: 'Times', fontWeight: FontWeight.bold, fontSize: 15);
-    args.canRotate = true;
-    args.text = '100 %';
+    );
   }
-}
 
+  void axisLabelCreated(AxisLabelCreatedArgs args){
+    if(args.text == '100'){
+      args.labelStyle = GaugeTextStyle(color: Colors.red,fontStyle: FontStyle.italic,
+          fontFamily: 'Times', fontWeight: FontWeight.bold, fontSize: 15);
+      args.canRotate = true;
+      args.text = '100 %';
+    }
+  }
 
 {% endhighlight %}
 
@@ -880,23 +945,22 @@ The [`onAxisTapped`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-     child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(
-          onAxisTapped: axisTapped),
-        ]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+      child: SfRadialGauge(
+        axes:<RadialAxis>[RadialAxis(
+            onAxisTapped: axisTapped),
+          ]
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
-
-void axisTapped(double _tappedValue){
-  
-}
+  void axisTapped(double _tappedValue){
+    // Handle the tapped value
+  }
 
 {% endhighlight %}
 
@@ -905,7 +969,8 @@ void axisTapped(double _tappedValue){
 [`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event of the axis. The `onCreateAxisRenderer` event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
 
 {% highlight dart %}
- @override
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -923,72 +988,72 @@ void axisTapped(double _tappedValue){
     );
   }
 
-class _CustomAxisRenderer extends RadialAxisRenderer {
-  _CustomAxisRenderer() : super();
+  class _CustomAxisRenderer extends RadialAxisRenderer {
+    _CustomAxisRenderer() : super();
 
-  /// Generated the 9 non-linear interval labels from 0 to 150
-  /// instead of actual generated labels.
-  @override
-  List<CircularAxisLabel> generateVisibleLabels() {
-    final List<CircularAxisLabel> _visibleLabels = <CircularAxisLabel>[];
-    for (num i = 0; i < 9; i++) {
-      final double _value = _calculateLabelValue(i);
-      final CircularAxisLabel label = CircularAxisLabel(
-          this.axis.axisLabelStyle, _value.toInt().toString(), i, false);
-      label.value = _value;
-      _visibleLabels.add(label);
+    /// Generated the 9 non-linear interval labels from 0 to 150
+    /// instead of actual generated labels.
+    @override
+    List<CircularAxisLabel> generateVisibleLabels() {
+      final List<CircularAxisLabel> _visibleLabels = <CircularAxisLabel>[];
+      for (num i = 0; i < 9; i++) {
+        final double _value = _calculateLabelValue(i);
+        final CircularAxisLabel label = CircularAxisLabel(
+            this.axis.axisLabelStyle, _value.toInt().toString(), i, false);
+        label.value = _value;
+        _visibleLabels.add(label);
+      }
+
+      return _visibleLabels;
     }
 
-    return _visibleLabels;
-  }
+    /// Returns the factor(0 to 1) from value to place the labels in an axis.
+    @override
+    double valueToFactor(double value) {
+      if (value >= 0 && value <= 2) {
+        return (value * 0.125) / 2;
+      } else if (value > 2 && value <= 5) {
+        return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
+      } else if (value > 5 && value <= 10) {
+        return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
+      } else if (value > 10 && value <= 20) {
+        return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
+      } else if (value > 20 && value <= 30) {
+        return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
+      } else if (value > 30 && value <= 50) {
+        return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
+      } else if (value > 50 && value <= 100) {
+        return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
+      } else if (value > 100 && value <= 150) {
+        return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
+      } else {
+        return 1;
+      }
+    }
 
-  /// Returns the factor(0 to 1) from value to place the labels in an axis.
-  @override
-  double valueToFactor(double value) {
-    if (value >= 0 && value <= 2) {
-      return (value * 0.125) / 2;
-    } else if (value > 2 && value <= 5) {
-      return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
-    } else if (value > 5 && value <= 10) {
-      return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
-    } else if (value > 10 && value <= 20) {
-      return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
-    } else if (value > 20 && value <= 30) {
-      return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
-    } else if (value > 30 && value <= 50) {
-      return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
-    } else if (value > 50 && value <= 100) {
-      return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
-    } else if (value > 100 && value <= 150) {
-      return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
-    } else {
-      return 1;
+    /// To return the label value based on interval
+    double _calculateLabelValue(num value) {
+      if (value == 0) {
+        return 0;
+      } else if (value == 1) {
+        return 2;
+      } else if (value == 2) {
+        return 5;
+      } else if (value == 3) {
+        return 10;
+      } else if (value == 4) {
+        return 20;
+      } else if (value == 5) {
+        return 30;
+      } else if (value == 6) {
+        return 50;
+      } else if (value == 7) {
+        return 100;
+      } else {
+        return 150;
+      }
     }
   }
-
-  /// To return the label value based on interval
-  double _calculateLabelValue(num value) {
-    if (value == 0) {
-      return 0;
-    } else if (value == 1) {
-      return 2;
-    } else if (value == 2) {
-      return 5;
-    } else if (value == 3) {
-      return 10;
-    } else if (value == 4) {
-      return 20;
-    } else if (value == 5) {
-      return 30;
-    } else if (value == 6) {
-      return 50;
-    } else if (value == 7) {
-      return 100;
-    } else {
-      return 150;
-    }
-  }
-}
 
 {% endhighlight %}
 
