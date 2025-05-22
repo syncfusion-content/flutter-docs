@@ -270,7 +270,7 @@ Data label considers the format used in the vertical axis by default. In the bel
 
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
-Import the following package to use label format in your package in your application, `import "package:intl/intl.dart";`.
+Import the following package to use label format in your application, `import "package:intl/intl.dart";`.
 
 ### Label position
 
@@ -577,7 +577,7 @@ In Vertical padding, providing positive value for y moves the data lab
 
 ### Data label saturation color
 
-If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
+If the user didn't provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
 
 ![label_saturation](images/marker-datalabel/cartesian_saturation.png)
 

@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts (SfCartesianChart) widget is
 
 ![Overview flutter chart](images/overview/overview.png)
 
-To get start quickly with our Flutter chart widget, you can check on this video.
+To get started quickly with our Flutter chart widget, you can check out this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/FwUSJtv-3NY'></iframe>

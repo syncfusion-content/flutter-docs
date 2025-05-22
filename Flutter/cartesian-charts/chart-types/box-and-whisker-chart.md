@@ -9,7 +9,7 @@ documentation: ug
 
 # Box and Whisker Chart in Flutter Cartesian Charts (SfCartesianChart)
 
-The [Flutter Box and Whisker Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/box-and-whisker-chart) can be used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
+The [Flutter Box and Whisker Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/box-and-whisker-chart) can be used to visualize a group of numerical data through their quartiles. It is also referred to as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
 
 To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
 

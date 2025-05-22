@@ -13,7 +13,7 @@ documentation: ug
 
 The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
-The customization the colors can be done for the following chart elements.
+The customization of colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/funnel-chart/chart-title)
 * [Palette for data points](https://help.syncfusion.com/flutter/funnel-chart/funnel-customization#applying-palette-color)
 * [Color mapping for data points](https://help.syncfusion.com/flutter/funnel-chart/series-customization#color-mapping-for-data-points)
@@ -34,7 +34,7 @@ The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ## Easily tappable targets
 
-The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) Provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides callback support to notify when tapping on the essential elements in the chart.
 * [Data points](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onpointtapped)
 * [Data labels](https://help.syncfusion.com/flutter/funnel-chart/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onlegendtapped)
