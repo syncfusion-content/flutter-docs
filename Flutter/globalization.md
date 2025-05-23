@@ -151,9 +151,9 @@ By default, the Syncfusion<sup>&reg;</sup> widgets are implemented with English 
 
 ### How to localize the Syncfusion<sup>&reg;</sup> Flutter widgets?
 
-Here, lets see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
+Here, let's see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 
-To accomplish this add to your pub spec file the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) and the [`syncfusion_flutter_calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) packages as dependency.
+To accomplish this add to your pubspec.yaml file the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) and the [`syncfusion_flutter_calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) packages as dependency.
 
 {% highlight dart %} 
 
@@ -315,7 +315,7 @@ Import the created dart file in your application and specify the [`localizations
             supportedLocales: [
                 const Locale('en'),
 
-                //Specify the suported locales here
+                //Specify the supported locales here
                 const Locale('et'),
             ],
 

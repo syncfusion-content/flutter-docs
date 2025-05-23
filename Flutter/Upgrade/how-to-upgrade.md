@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Upgrading Syncfusion Flutter installer to latest version
-description: Learn here about the how upgrade Syncfusion Flutter installer to a latest version from website and control panel.
+description: Learn here about the how to upgrade Syncfusion Flutter installer to the latest version from website and control panel.
 platform: flutter
 control: Essential Studio
 documentation: ug
 ---
 
-# Upgrading Syncfusion<sup>&reg;</sup> Flutter installer to a latest version
+# Upgrading Syncfusion<sup>&reg;</sup> Flutter installer to the latest version
 
 Syncfusion<sup>&reg;</sup> releases new volumes once every three months, with exciting new features. There will be one Service Pack release for these volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
 
 You can upgrade to our latest version from any installed Syncfusion<sup>&reg;</sup> version.
 
-See our "[**Upgrade Guide**](https://help.syncfusion.com/upgrade-guide/flutter-widgets)" for Flutter to learn more about the “Breaking Changes, Bug Fixes, Features and Knows Issues” between your current version and the latest version you are trying to upgrade.
+See our "[**Upgrade Guide**](https://help.syncfusion.com/upgrade-guide/flutter-widgets)" for Flutter to learn more about the “Breaking Changes, Bug Fixes, Features and Known Issues” between your current version and the latest version you are trying to upgrade.
 
 
 ## Upgrading to the latest version
@@ -22,7 +22,7 @@ The most recent version of Syncfusion<sup>&reg;</sup> Flutter can be downloaded 
 
 ![Control Panel](Upgrade-images/upgrade-control-panel.png)
 
-You can also upgrade to the latest version just by downloading and installing the platforms you require from [this](https://www.syncfusion.com/account/downloads) link. The existing installed versions are not required to be uninstalled. 
+You can also upgrade to the latest version by downloading and installing the platforms you require from [this](https://www.syncfusion.com/account/downloads) link. The existing installed versions are not required to be uninstalled. 
 
 
 It is not required to install the Volume release before installing the Service Pack release. As releases for Volume and Service Packs work independently, you can install the latest version with major bug fixes directly.

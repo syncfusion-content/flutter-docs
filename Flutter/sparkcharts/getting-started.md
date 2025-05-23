@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Flutter Spark Charts
 
-This section explains the steps required to populate the spark charts with data, data labels, marker and trackball. This section covers only the minimal features needed to know to get started with the spark charts.
+This section explains the steps required to populate the spark charts with data, data labels, markers, and trackball. This section covers only the minimal features needed to get started with the spark charts.
 
 ## Add Flutter Spark charts to an application
 
@@ -17,7 +17,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml  file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -173,7 +173,7 @@ You can add data labels to improve the readability of the chart using the [`labe
 
 ## Enable trackball for spark chart
 
-The spark charts displays additional information through trackball when touched on a specific location of the chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
+The spark charts display additional information through trackball when touched on a specific location of the chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
 {% tabs %}
 {% highlight dart %} 

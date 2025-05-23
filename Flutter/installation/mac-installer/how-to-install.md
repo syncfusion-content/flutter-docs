@@ -21,7 +21,7 @@ The Essential Studio<sup>&reg;</sup> Flutter Mac installer allows you to create 
      
    If you receive this alert, follow the below steps for the easiest solution.   
 
-   1.	Right-click the downloaded dmg file.
+   1.	Right-click the downloaded DMG file.
    2.	Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
 
 	    ![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
@@ -32,7 +32,7 @@ The Essential Studio<sup>&reg;</sup> Flutter Mac installer allows you to create 
 
 The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter Mac installer.
 
-1. Locate the downloaded dmg file and open the file by double click on it.
+1. Locate the downloaded DMG file and open the file by double-click on it.
 
    ![Welcome wizard](images/Mac_Installer1.png)
    

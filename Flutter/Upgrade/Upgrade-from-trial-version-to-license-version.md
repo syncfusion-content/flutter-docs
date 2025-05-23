@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade from trial version to license version | Syncfusion
-description: Learn here all about Upgrading the packages from trial version to license version using the link provided.
+description: Learn here all about upgrading the packages from trial version to license version using the link provided.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Syncfusion<sup>&reg;</sup> Flutter Widgets 
 
-This page helps to navigate to the documentation of accessibility features available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
+This page helps you navigate to the documentation of accessibility features available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
 
 <table>
     <tr>

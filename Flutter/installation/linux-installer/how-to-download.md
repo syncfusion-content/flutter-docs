@@ -32,9 +32,9 @@ Our 30-day trial can be downloaded in two ways.
 
    ![Trial and downloads of Syncfusion Flutter](images/trial-confirmation.png)
    
-3. With a trial license, only the latest version’s trial installer can be downloaded.
+3. With a trial license, only the latest version's trial installer can be downloaded.
 4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Flutter Linux trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
  
    ![Trial and downloads of Syncfusion Flutter](images/trial-download.png)
 

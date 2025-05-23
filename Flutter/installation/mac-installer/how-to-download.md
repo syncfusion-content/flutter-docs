@@ -10,7 +10,7 @@ documentation: ug
 
 # Downloading Syncfusion<sup>&reg;</sup> Flutter Mac installer
 
-Syncfusion<sup>&reg;</sup> provides Flutter Mac installer for both evaluation and paid customers. You can either download the licensed installer or try our trial installer depending on your license. 
+Syncfusion<sup>&reg;</sup> provides Flutter Mac installer for both evaluation and paid customers. You can download either the licensed installer or try our trial installer depending on your license.
 
    -	Trial Installer
    -	Licensed Installer
@@ -23,9 +23,9 @@ Syncfusion<sup>&reg;</sup> provides Flutter Mac installer for both evaluation an
    
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
-3. With a trial license, only the latest version’s trial installer can be downloaded.
+3. With a trial license, only the latest version's trial installer can be downloaded.
 4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Flutter Mac trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 

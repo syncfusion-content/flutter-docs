@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade from one version to another version | common | Syncfusion
-description: Learn here all about Upgrading the packages from one version to another version using the link provided.
+description: Learn here all about upgrading the packages from one version to another version using the link provided.
 platform: flutter
 control: Essential Studio
 documentation: ug
