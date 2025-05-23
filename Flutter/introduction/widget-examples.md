@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Widgets Examples
 
-The section contains the GitHub link for each widget’s code examples. This is very useful when you want to learn by practice.
+The section contains the GitHub link for each widget's code examples. This is very useful when you want to learn by practice.
 
 <table>
 <tr>
