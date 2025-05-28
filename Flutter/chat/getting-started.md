@@ -155,7 +155,7 @@ To add the [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 ## Add placeholder to conversation area
 
-By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+By default, conversation messages are empty. It's a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
@@ -191,7 +191,7 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 ## Add action button
 
-It represents the send button, which was not included by default. To add it, create an instance of [`ChatActionButton`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) for the actionButton.
+It represents the send button, which was not included by default. To add it, create an instance of [`ChatActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton-class.html) for the actionButton.
 
 When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback is invoked, which rebuilds the chat widget with the newly composed message.
 
