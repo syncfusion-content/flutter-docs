@@ -15,7 +15,7 @@ documentation: ug
 
 The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter product.
 
-1.	Open the Syncfusion<sup>&reg;</sup> Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Open the Syncfusion<sup>&reg;</sup> Flutter offline installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -65,7 +65,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
 
 
-5.	If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
+5.	If any previous versions of the current product are installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
 
 
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
@@ -88,7 +88,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 	
 	![Installing wizard](images/Step-by-Step-Installation_img5.png)
 
-    N> The Completed screen is displayed once the Flutter product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
+    N> The Completed screen is displayed once the Flutter product is installed. If any version is selected to uninstall, the completed screen will display both install and uninstall status.
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	

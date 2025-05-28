@@ -503,7 +503,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Thumb overlay size support](images/thumb-and-overlay/slider-overlay-color.png)
+![Thumb overlay color support](images/thumb-and-overlay/slider-overlay-color.png)
 
 ### Vertical
 

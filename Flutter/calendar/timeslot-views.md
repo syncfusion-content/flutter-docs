@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Timeslot views in Flutter Event Calendar (SfCalendar)
-[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on its duration.
+[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on their duration.
 
 * **Day view:** Displays a single day.
 * **Week view:** Views all days of a week.
@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 
 ## Flexible working days and working hours
 
-The default values for [startHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/startHour.html) and [endHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/endHour.html) are 0 and 24 to show all the time slots in time slot views. You can to set the `startHour` and `endHour` properties of `timeSlotViewSettings` to show only the required time duration for users. You can set `startHour` and `endHour` in time duration to show the required time duration in minutes.
+The default values for [startHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/startHour.html) and [endHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/endHour.html) are 0 and 24 to show all the time slots in time slot views. You can set the `startHour` and `endHour` properties of `timeSlotViewSettings` to show only the required time duration for users. You can set `startHour` and `endHour` in time duration to show the required time duration in minutes.
 
 You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of `timeSlotViewSettings` to show only the required days for the users.
 
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
 >**NOTE**
-* The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
+* The `nonWorkingDays` property is applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
 * Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
 * No need to specify the decimal point values for `startHour` and `endHour`, if you don’t want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
@@ -158,7 +158,7 @@ You can restrict the user interaction such as selection and highlights specific 
 
 >**NOTE** 
 * If time region has both the text and icon then it will draw icon only.
-* The `TimeRegion` not applicable, when the calendar view is set to `timelineMonth`.
+* The `TimeRegion` is not applicable, when the calendar view is set to `timelineMonth`.
 
 ### Selection restriction in timeslots
 You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
@@ -242,7 +242,7 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
 ### Recurrence exception dates
-You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
+You can delete any occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -411,11 +411,11 @@ class _AppointmentDataSource extends CalendarDataSource {
 ![Minimum appointment duration](images/timeslot-views/minimum-appointment-height.png)
 
 >**NOTE**
-* `minimumAppointmentDuration` value will be set, when an appointment duration value lesser than `minimumAppointmentDuration`.
-* Appointment duration value will be set, when the appointment duration value greater than `minimumAppointmentDuration`.
+* `minimumAppointmentDuration` value will be set, when an appointment duration value is lesser than `minimumAppointmentDuration`.
+* Appointment duration value will be set, when the appointment duration value is greater than `minimumAppointmentDuration`.
 * `timeInterval` value will be set, when `minimumAppointmentDuration` greater than `timeInterval` with lesser appointment duration.
 * All day Appointment does not support `minimumAppointmentDuration`.
-* The `minimumAppointmentDuration` property not applicable when the calendar view is set to `timelineMonth`.
+* The `minimumAppointmentDuration` property is not applicable when the calendar view is set to `timelineMonth`.
 
 ## Timeline appointment height
 
