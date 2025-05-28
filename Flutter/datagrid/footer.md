@@ -14,49 +14,58 @@ Creates an additional row that can be displayed under the last row. Widgets can 
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
       source: _employeeDataSource,
       footer: Container(
-          color: Colors.grey[400],
-          child: Center(
-              child: Text(
+        color: Colors.grey[400],
+        child: Center(
+          child: Text(
             'FOOTER VIEW',
             style: TextStyle(fontWeight: FontWeight.bold),
-          ))),
+          )
+        )
+      ),
       columns: <GridColumn>[
         GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text('ID')
+          )
+        ),
         GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text('Name')
+          )
+        ),
         GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            )
+          )
+        ),
         GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ]);
-}
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.all(8.0),
+            alignment: Alignment.center,
+            child: Text('Salary')
+          )
+        ),
+      ]
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -70,50 +79,50 @@ An additional row height can be personalized by using the [SfDataGrid.footerHeig
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      footerHeight: 60.0,
-      footer: Container(
-          color: Colors.grey[400],
-          child: Center(
-              child: Text(
-            'FOOTER VIEW',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ))),
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        footerHeight: 60.0,
+        footer: Container(
+            color: Colors.grey[400],
+            child: Center(
                 child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ]);
-}
+              'FOOTER VIEW',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ))),
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ]);
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,50 +136,50 @@ By default, the additional row will be displayed below the last row. To show the
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      footerFrozenRowsCount: 1,
-      footer: Container(
-          color: Colors.grey[400],
-          child: Center(
-              child: Text(
-            'FOOTER VIEW',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ))),
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        footerFrozenRowsCount: 1,
+        footer: Container(
+            color: Colors.grey[400],
+            child: Center(
                 child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ]);
-}
+              'FOOTER VIEW',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ))),
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ]);
+  }
 
 {% endhighlight %}
 {% endtabs %}

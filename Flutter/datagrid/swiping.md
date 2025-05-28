@@ -20,95 +20,95 @@ The Flutter DataTable enables you to load the desired widget behind the swiped r
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-List<Employee> _employees = <Employee>[];
+  late EmployeeDataSource _employeeDataSource;
+  List<Employee> _employees = <Employee>[];
 
-@override
-void initState() {
-  super.initState();
-  _employees = getEmployeeData();
-  _employeeDataSource = EmployeeDataSource(employees: _employees);
-}
+  @override
+  void initState() {
+    super.initState();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employees: _employees);
+  }
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-    allowSwiping: true,
-    swipeMaxOffset: 100.0,
-    source: _employeeDataSource,
-    startSwipeActionsBuilder:
-        (BuildContext context, DataGridRow row, int rowIndex) {
-      return GestureDetector(
-          onTap: () {
-            _employeeDataSource.dataGridRows.insert(
-                rowIndex,
-                DataGridRow(cells: [
-                  DataGridCell(value: 1011, columnName: 'id'),
-                  DataGridCell(value: 'Tom Bass', columnName: 'name'),
-                  DataGridCell(value: 'Developer', columnName: 'designation'),
-                  DataGridCell(value: 20000, columnName: 'salary')
-                ]));
-            _employeeDataSource.updateDataGridSource();
-          },
-          child: Container(
-              color: Colors.greenAccent,
-              child: Center(
-                child: Icon(Icons.add),
-              )));
-    },
-    endSwipeActionsBuilder:
-        (BuildContext context, DataGridRow row, int rowIndex) {
-      return GestureDetector(
-          onTap: () {
-            _employeeDataSource.dataGridRows.removeAt(rowIndex);
-            _employeeDataSource.updateDataGridSource();
-          },
-          child: Container(
-              color: Colors.redAccent,
-              child: Center(
-                child: Icon(Icons.delete),
-              )));
-    },
-    columns: <GridColumn>[
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'designation',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'salary',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+      allowSwiping: true,
+      swipeMaxOffset: 100.0,
+      source: _employeeDataSource,
+      startSwipeActionsBuilder:
+          (BuildContext context, DataGridRow row, int rowIndex) {
+        return GestureDetector(
+            onTap: () {
+              _employeeDataSource.dataGridRows.insert(
+                  rowIndex,
+                  DataGridRow(cells: [
+                    DataGridCell(value: 1011, columnName: 'id'),
+                    DataGridCell(value: 'Tom Bass', columnName: 'name'),
+                    DataGridCell(value: 'Developer', columnName: 'designation'),
+                    DataGridCell(value: 20000, columnName: 'salary')
+                  ]));
+              _employeeDataSource.updateDataGridSource();
+            },
+            child: Container(
+                color: Colors.greenAccent,
+                child: Center(
+                  child: Icon(Icons.add),
+                )));
+      },
+      endSwipeActionsBuilder:
+          (BuildContext context, DataGridRow row, int rowIndex) {
+        return GestureDetector(
+            onTap: () {
+              _employeeDataSource.dataGridRows.removeAt(rowIndex);
+              _employeeDataSource.updateDataGridSource();
+            },
+            child: Container(
+                color: Colors.redAccent,
+                child: Center(
+                  child: Icon(Icons.delete),
+                )));
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
@@ -181,81 +181,81 @@ You can perform customized swipe functionality using the swiping callbacks. The 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
+  late EmployeeDataSource _employeeDataSource;
 
-@override
-Widget build(BuildContext context) {
-  return LayoutBuilder(builder: (context, constraints) {
-    return SfDataGrid(
-      allowSwiping: true,
-      swipeMaxOffset: constraints.maxWidth,
-      source: _employeeDataSource,
-      startSwipeActionsBuilder:
-          (BuildContext context, DataGridRow row, int rowIndex) {
-        return GestureDetector(
-            onTap: () {
-              _employeeDataSource.dataGridRows.removeAt(rowIndex);
-              _employeeDataSource.updateDataGridSource();
-            },
-            child: Container(
-                color: Colors.green,
-                padding: EdgeInsets.only(left: 30.0),
-                alignment: Alignment.centerLeft,
-                child: Text('Delete', style: TextStyle(color: Colors.white))));
-      },
-      onSwipeUpdate: (details) {
-        isReachedCenter =
-            (details.swipeOffset >= constraints.maxWidth / 2) ? true : false;
-        return true;
-      },
-      onSwipeEnd: (details) async {
-        if (isReachedCenter && _employeeDataSource.dataGridRows.isNotEmpty) {
-          _employeeDataSource.dataGridRows.removeAt(details.rowIndex);
-          _employeeDataSource.updateDataGridSource();
-          isReachedCenter = false;
-        }
-      },
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    );
-  });
-}
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return SfDataGrid(
+        allowSwiping: true,
+        swipeMaxOffset: constraints.maxWidth,
+        source: _employeeDataSource,
+        startSwipeActionsBuilder:
+            (BuildContext context, DataGridRow row, int rowIndex) {
+          return GestureDetector(
+              onTap: () {
+                _employeeDataSource.dataGridRows.removeAt(rowIndex);
+                _employeeDataSource.updateDataGridSource();
+              },
+              child: Container(
+                  color: Colors.green,
+                  padding: EdgeInsets.only(left: 30.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text('Delete', style: TextStyle(color: Colors.white))));
+        },
+        onSwipeUpdate: (details) {
+          isReachedCenter =
+              (details.swipeOffset >= constraints.maxWidth / 2) ? true : false;
+          return true;
+        },
+        onSwipeEnd: (details) async {
+          if (isReachedCenter && _employeeDataSource.dataGridRows.isNotEmpty) {
+            _employeeDataSource.dataGridRows.removeAt(details.rowIndex);
+            _employeeDataSource.updateDataGridSource();
+            isReachedCenter = false;
+          }
+        },
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ],
+      );
+    });
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -271,9 +271,9 @@ Set the different swipe offsets based on swipe direction by using the `onSwipeSt
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource employeeDataSource;
+  late EmployeeDataSource employeeDataSource;
 
-@override
+  @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return SfDataGrid(

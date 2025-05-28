@@ -27,77 +27,74 @@ The following code example illustrates using the `SfDataPager` with the Datagrid
 
 import 'package:intl/intl.dart';
 
-final int _rowsPerPage = 15;
+  final int _rowsPerPage = 15;
+  final double _dataPagerHeight = 60.0;
+  List<OrderInfo> _orders = [];
+  List<OrderInfo> _paginatedOrders = [];
+  final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
-final double _dataPagerHeight = 60.0;
-
-List<OrderInfo> _orders = [];
-
-List<OrderInfo> _paginatedOrders = [];
-
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
-
-@override
-Widget build(BuildContext context) {
-  return LayoutBuilder(builder: (context, constraint) {
-    return Column(children: [
-      SizedBox(
-          height: constraint.maxHeight - _dataPagerHeight,
-          width: constraint.maxWidth,
-          child: _buildDataGrid(constraint)),
-      Container(
-          height: _dataPagerHeight,
-          child: SfDataPager(
-            delegate: _orderInfoDataSource,
-            pageCount: _orders.length / _rowsPerPage,
-            direction: Axis.horizontal,
-          ))
-    ]);
-  });
-}
-Widget _buildDataGrid(BoxConstraints constraint) {
-  return SfDataGrid(
-      source: _orderInfoDataSource,
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'orderID',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Order ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'customerID',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Customer Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'orderDate',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Order Date',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'freight',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                )))
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraint) {
+      return Column(children: [
+        SizedBox(
+            height: constraint.maxHeight - _dataPagerHeight,
+            width: constraint.maxWidth,
+            child: _buildDataGrid(constraint)),
+        Container(
+            height: _dataPagerHeight,
+            child: SfDataPager(
+              delegate: _orderInfoDataSource,
+              pageCount: _orders.length / _rowsPerPage,
+              direction: Axis.horizontal,
+            ))
       ]);
-}
+    });
+  }
+
+  Widget _buildDataGrid(BoxConstraints constraint) {
+    return SfDataGrid(
+        source: _orderInfoDataSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'orderID',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'customerID',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Customer Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'orderDate',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'freight',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Freight',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]);
+  }
 
 class OrderInfoDataSource extends DataGridSource {
   OrderInfoDataSource() {
@@ -195,32 +192,32 @@ Typically, these callbacks are used to show and hide the loading indicator.
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
-    return Row(children: [
-      Column(children: [
-        SizedBox(
-            height: constraints.maxHeight - 60,
-            width: constraints.maxWidth,
-            child: _buildDataGrid(constraints)),
-        Container(
-            height: 60,
-            width: constraints.maxWidth,
-            child: SfDataPager(
-                pageCount: _orders.length / _rowsPerPage,
-                direction: Axis.horizontal,
-                onPageNavigationStart: (int pageIndex) {
-                  //You can do your customization
-                },
-                delegate: _orderInfoDataSource,
-                onPageNavigationEnd: (int pageIndex) {
-                  //You can do your customization
-                }))
-      ])
-    ]);
-  }));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
+      return Row(children: [
+        Column(children: [
+          SizedBox(
+              height: constraints.maxHeight - 60,
+              width: constraints.maxWidth,
+              child: _buildDataGrid(constraints)),
+          Container(
+              height: 60,
+              width: constraints.maxWidth,
+              child: SfDataPager(
+                  pageCount: _orders.length / _rowsPerPage,
+                  direction: Axis.horizontal,
+                  onPageNavigationStart: (int pageIndex) {
+                    //You can do your customization
+                  },
+                  delegate: _orderInfoDataSource,
+                  onPageNavigationEnd: (int pageIndex) {
+                    //You can do your customization
+                  }))
+        ])
+      ]);
+    }));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -238,63 +235,63 @@ In the below example, we have set await for 2000ms and displayed the loading ind
 
 import 'package:intl/intl.dart';
 
-bool showLoadingIndicator = true;
+  bool showLoadingIndicator = true;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
-    return Row(children: [
-      Column(children: [
-        SizedBox(
-            height: constraints.maxHeight - 60,
-            width: constraints.maxWidth,
-            child: _buildStack(constraints)),
-        Container(
-            height: 60,
-            width: constraints.maxWidth,
-            child: SfDataPager(
-                pageCount: _orders.length / _rowsPerPage,
-                direction: Axis.horizontal,
-                onPageNavigationStart: (int pageIndex) {
-                  setState(() {
-                    showLoadingIndicator = true;
-                  });
-                },
-                delegate: _orderInfoDataSource,
-                onPageNavigationEnd: (int pageIndex) {
-                  setState(() {
-                    showLoadingIndicator = false;
-                  });
-                }))
-      ])
-    ]);
-  }));
-}
-
-Widget _buildStack(BoxConstraints constraints) {
-  List<Widget> _getChildren() {
-    final List<Widget> stackChildren = [];
-    stackChildren.add(_buildDataGrid(constraints));
-
-    if (showLoadingIndicator) {
-      stackChildren.add(Container(
-          color: Colors.black12,
-          width: constraints.maxWidth,
-          height: constraints.maxHeight,
-          child: Align(
-              alignment: Alignment.center,
-              child: CircularProgressIndicator(
-                strokeWidth: 3,
-              ))));
-    }
-
-    return stackChildren;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
+      return Row(children: [
+        Column(children: [
+          SizedBox(
+              height: constraints.maxHeight - 60,
+              width: constraints.maxWidth,
+              child: _buildStack(constraints)),
+          Container(
+              height: 60,
+              width: constraints.maxWidth,
+              child: SfDataPager(
+                  pageCount: _orders.length / _rowsPerPage,
+                  direction: Axis.horizontal,
+                  onPageNavigationStart: (int pageIndex) {
+                    setState(() {
+                      showLoadingIndicator = true;
+                    });
+                  },
+                  delegate: _orderInfoDataSource,
+                  onPageNavigationEnd: (int pageIndex) {
+                    setState(() {
+                      showLoadingIndicator = false;
+                    });
+                  }))
+        ])
+      ]);
+    }));
   }
 
-  return Stack(
-    children: _getChildren(),
-  );
-}
+  Widget _buildStack(BoxConstraints constraints) {
+    List<Widget> _getChildren() {
+      final List<Widget> stackChildren = [];
+      stackChildren.add(_buildDataGrid(constraints));
+
+      if (showLoadingIndicator) {
+        stackChildren.add(Container(
+            color: Colors.black12,
+            width: constraints.maxWidth,
+            height: constraints.maxHeight,
+            child: Align(
+                alignment: Alignment.center,
+                child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                ))));
+      }
+
+      return stackChildren;
+    }
+
+    return Stack(
+      children: _getChildren(),
+    );
+  }
 
 class OrderInfoDataSource extends DataGridSource {
   OrderInfoDataSource() {
@@ -402,36 +399,36 @@ The following code example shows how to navigate the previous page programmatica
 {% tabs %}
 {% highlight Dart %}
 
-DataPagerController _controller = DataPagerController();
+  DataPagerController _controller = DataPagerController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(body: LayoutBuilder(builder: (context, constraint) {
-    return Column(children: [
-      MaterialButton(
-        onPressed: () {
-          _controller.previousPage();
-        },
-        child: Text('Move Previous page'),
-      ),
-      SizedBox(
-          height: constraint.maxHeight - 120,
-          width: constraint.maxWidth,
-          child: _buildDataGrid(constraint)),
-      Container(
-          height: 60,
-          child: Align(
-              alignment: Alignment.center,
-              child: SfDataPager(
-                delegate: _orderInfoDataSource,
-                initialPageIndex: 2,
-                controller: _controller,
-                pageCount: _orders.length / _rowsPerPage,
-                direction: Axis.horizontal,
-              )))
-    ]);
-  }));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: LayoutBuilder(builder: (context, constraint) {
+      return Column(children: [
+        MaterialButton(
+          onPressed: () {
+            _controller.previousPage();
+          },
+          child: Text('Move Previous page'),
+        ),
+        SizedBox(
+            height: constraint.maxHeight - 120,
+            width: constraint.maxWidth,
+            child: _buildDataGrid(constraint)),
+        Container(
+            height: 60,
+            child: Align(
+                alignment: Alignment.center,
+                child: SfDataPager(
+                  delegate: _orderInfoDataSource,
+                  initialPageIndex: 2,
+                  controller: _controller,
+                  pageCount: _orders.length / _rowsPerPage,
+                  direction: Axis.horizontal,
+                )))
+      ]);
+    }));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -614,24 +611,24 @@ The following code example illustrates using `SfDataPagerThemeData` with the dat
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataPagerTheme(
-      data: SfDataPagerThemeData(
-        itemColor: Colors.white,
-        selectedItemColor: Colors.lightGreen,
-        itemBorderRadius: BorderRadius.circular(5),
-        backgroundColor: Colors.teal,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataPagerTheme(
+        data: SfDataPagerThemeData(
+          itemColor: Colors.white,
+          selectedItemColor: Colors.lightGreen,
+          itemBorderRadius: BorderRadius.circular(5),
+          backgroundColor: Colors.teal,
+        ),
+        child: SfDataPager(
+          delegate: _orderInfoDataSource,
+          pageCount: _orders.length / _rowsPerPage,
+          direction: Axis.horizontal,
+        ),
       ),
-      child: SfDataPager(
-        delegate: _orderInfoDataSource,
-        pageCount: _orders.length / _rowsPerPage,
-        direction: Axis.horizontal,
-      ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -715,7 +712,7 @@ To hide certain navigation page items, use the following properties:
 {% tabs %}
 {% highlight Dart %}
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -763,9 +760,9 @@ You can change the number of visible items i.e. page buttons in view by using th
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text('Flutter DataGrid Sample'),
       ),
@@ -788,7 +785,7 @@ Widget build(BuildContext context) {
           ],
         );
       }));
-}
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -800,43 +797,44 @@ Load any widget to the page button by using the [SfDataPager.pageItemBuilder](ht
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter DataGrid Sample'),
-      ),
-      body: LayoutBuilder(builder: (context, constraint) {
-        return Column(children: [
-          SizedBox(
-              height: constraint.maxHeight - _dataPagerHeight,
-              width: constraint.maxWidth,
-              child: _buildDataGrid(constraint)),
-          Container(
-              height: _dataPagerHeight,
-              child: SfDataPagerTheme(
-                  data: SfDataPagerThemeData(
-                    itemBorderColor: Colors.blue,
-                    itemBorderWidth: 1,
-                    backgroundColor: Colors.transparent,
-                    itemBorderRadius: BorderRadius.circular(0),
-                  ),
-                  child: SfDataPager(
-                    pageItemBuilder: (String value) {
-                      return Container(
-                          child: Text(
-                        value,
-                        style: TextStyle(
-                            fontSize: 10, fontWeight: FontWeight.w700),
-                      ));
-                    },
-                    delegate: _orderInfoDataSource,
-                    pageCount: _orders.length / _rowsPerPage,
-                    direction: Axis.horizontal,
-                  )))
-        ]);
-      }));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter DataGrid Sample'),
+        ),
+        body: LayoutBuilder(builder: (context, constraint) {
+          return Column(children: [
+            SizedBox(
+                height: constraint.maxHeight - _dataPagerHeight,
+                width: constraint.maxWidth,
+                child: _buildDataGrid(constraint)),
+            Container(
+                height: _dataPagerHeight,
+                child: SfDataPagerTheme(
+                    data: SfDataPagerThemeData(
+                      itemBorderColor: Colors.blue,
+                      itemBorderWidth: 1,
+                      backgroundColor: Colors.transparent,
+                      itemBorderRadius: BorderRadius.circular(0),
+                    ),
+                    child: SfDataPager(
+                      pageItemBuilder: (String value) {
+                        return Container(
+                            child: Text(
+                          value,
+                          style: TextStyle(
+                              fontSize: 10, fontWeight: FontWeight.w700),
+                        ));
+                      },
+                      delegate: _orderInfoDataSource,
+                      pageCount: _orders.length / _rowsPerPage,
+                      direction: Axis.horizontal,
+                    )))
+          ]);
+        }));
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -849,76 +847,74 @@ If you want to specifically maintain the rows required for a page, you can use t
 {% tabs %}
 {% highlight Dart %}
 
-final int _rowsPerPage = 15;
+  final int _rowsPerPage = 15;
+  final double _dataPagerHeight = 60.0;
+  List<OrderInfo> _orders = [];
 
-final double _dataPagerHeight = 60.0;
-
-List<OrderInfo> _orders = [];
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(body: LayoutBuilder(builder: (context, constraint) {
-    return Column(children: [
-      SizedBox(
-          height: constraint.maxHeight - _dataPagerHeight,
-          width: constraint.maxWidth,
-          child: _buildDataGrid(constraint)),
-      Container(
-          height: _dataPagerHeight,
-          child: SfDataPager(
-            delegate: _orderInfoDataSource,
-            pageCount: (_orders.length / _rowsPerPage).ceil().toDouble(),
-            direction: Axis.horizontal,
-          ))
-    ]);
-  }));
-}
-
-Widget _buildDataGrid(BoxConstraints constraint) {
-  return SfDataGrid(
-      source: _orderInfoDataSource,
-      columnWidthMode: ColumnWidthMode.fill,
-      rowsPerPage: _rowsPerPage,
-      allowSorting: true,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'orderID',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Order ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'customerID',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Customer Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'orderDate',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Order Date',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'freight',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                )))
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: LayoutBuilder(builder: (context, constraint) {
+      return Column(children: [
+        SizedBox(
+            height: constraint.maxHeight - _dataPagerHeight,
+            width: constraint.maxWidth,
+            child: _buildDataGrid(constraint)),
+        Container(
+            height: _dataPagerHeight,
+            child: SfDataPager(
+              delegate: _orderInfoDataSource,
+              pageCount: (_orders.length / _rowsPerPage).ceil().toDouble(),
+              direction: Axis.horizontal,
+            ))
       ]);
-}
+    }));
+  }
+
+  Widget _buildDataGrid(BoxConstraints constraint) {
+    return SfDataGrid(
+        source: _orderInfoDataSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        rowsPerPage: _rowsPerPage,
+        allowSorting: true,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'orderID',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'customerID',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Customer Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'orderDate',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'freight',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Freight',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]);
+  }
 
 class OrderInfoDataSource extends DataGridSource {
   OrderInfoDataSource() {

@@ -17,53 +17,53 @@ You can simply enable the PullToRefresh option by setting the [SfDataGrid.allowP
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-    allowPullToRefresh: true,
-    source: _employeeDataSource,
-    columns: <GridColumn>[
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'designation',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'salary',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+      allowPullToRefresh: true,
+      source: _employeeDataSource,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
@@ -173,19 +173,84 @@ Also, change the stroke width and displacement of the refresh indicator by using
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Theme(
-      data: ThemeData(
-            brightness: Brightness.light,
-            canvasColor: Colors.lightBlue,
-            colorScheme: const ColorScheme.light(
-                primary: Colors.white)),
-      child: SfDataGrid(
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+        data: ThemeData(
+              brightness: Brightness.light,
+              canvasColor: Colors.lightBlue,
+              colorScheme: const ColorScheme.light(
+                  primary: Colors.white)),
+        child: SfDataGrid(
+            allowPullToRefresh: true,
+            source: _employeeDataSource,
+            refreshIndicatorStrokeWidth: 3.0,
+            refreshIndicatorDisplacement: 60.0,
+            columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+            ]));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-refresh-indicator-appearance-in-flutter-datatable-sfdatagrid).
+
+![flutter datagrid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
+
+## Programmatic Pull to Refresh
+
+If you want to refresh data without showing a refresh indicator, pass `false` to the `showRefreshIndicator` optional parameter of the [refresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState/refresh.html) method. By doing this, the `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+          key: key,
           allowPullToRefresh: true,
           source: _employeeDataSource,
-          refreshIndicatorStrokeWidth: 3.0,
-          refreshIndicatorDisplacement: 60.0,
           columns: <GridColumn>[
             GridColumn(
                 columnName: 'id',
@@ -223,79 +288,14 @@ Widget build(BuildContext context) {
                       'Salary',
                       overflow: TextOverflow.ellipsis,
                     ))),
-          ]));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-refresh-indicator-appearance-in-flutter-datatable-sfdatagrid).
-
-![flutter datagrid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
-
-## Programmatic Pull to Refresh
-
-If you want to refresh data without showing a refresh indicator, pass `false` to the `showRefreshIndicator` optional parameter of the [refresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState/refresh.html) method. By doing this, the `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-        key: key,
-        allowPullToRefresh: true,
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.refresh),
-          onPressed: () {
-            key.currentState!.refresh();
-          }));
-}
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.refresh),
+            onPressed: () {
+              key.currentState!.refresh();
+            }));
+  }
 
 {% endhighlight %}
 {% endtabs %}

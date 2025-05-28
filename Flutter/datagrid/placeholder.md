@@ -16,72 +16,70 @@ The following example shows how to add a `placeholder` in SfDataGrid:
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      columnWidthMode: ColumnWidthMode.auto,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'id',
-          label: Container(
-            padding: EdgeInsets.all(16.0),
-            alignment: Alignment.center,
-            child: Text('ID'),
-          ),
-        ),
-        GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.all(8.0),
-            alignment: Alignment.center,
-            child: Text('Name'),
-          ),
-        ),
-        GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.all(8.0),
-            alignment: Alignment.center,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        columnWidthMode: ColumnWidthMode.auto,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text('ID'),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.all(8.0),
-            alignment: Alignment.center,
-            child: Text('Salary'),
-          ),
-        ),
-      ],
-      placeholder: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.thumb_down_alt_outlined, size: 30),
-            SizedBox(height: 8),
-            Text(
-              'No Records Found',
-              style: TextStyle(fontSize: 16),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name'),
             ),
-          ],
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary'),
+            ),
+          ),
+        ],
+        placeholder: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.thumb_down_alt_outlined, size: 30),
+              SizedBox(height: 8),
+              Text(
+                'No Records Found',
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 <img alt="Flutter DataGrid displays a placeholder when there are no rows" src="images/placeholder/flutter-datagrid-placeholder.png" width="404" height="396"/>
-
-
