@@ -62,58 +62,66 @@ Add the SfDataGrid widget as a child of any widget. The [SfDataGrid](https://pub
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 ## Creating Data for an Application
 
-The `SfDataGrid` depends upon the data. Create a simple Datasource for the `SfDataGrid` as shown in the following code example.
+The `SfDataGrid` requires data to display. Create a simple data source for the `SfDataGrid` as shown in the following code example.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -244,67 +252,10 @@ The `SfDataGrid` supports adding any widget in a column using the `GridColumn` p
 {% tabs %}
 {% highlight Dart %} 
   
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(source: _employeeDataSource, columns: [
-    GridColumn(
-        columnName: 'id',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'name',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'designation',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'salary',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            )))
-  ]));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png)
-
-## Selection
-
-The `SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether the user can select a single row or multiple rows. 
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    columns: [
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(source: _employeeDataSource, columns: [
       GridColumn(
           columnName: 'id',
           label: Container(
@@ -340,11 +291,77 @@ Widget build(BuildContext context) {
               child: Text(
                 'Salary',
                 overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-    selectionMode: SelectionMode.multiple,
-  ));
-}
+              )))
+    ]));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png)
+
+## Selection
+
+The `SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether the user can select a single row or multiple rows. 
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ],
+        selectionMode: SelectionMode.multiple,
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -358,68 +375,68 @@ The information about the rows that are selected can be retrieved using the [sel
 {% tabs %}
 {% highlight Dart %} 
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('Get Selection Information'),
-        onPressed: () {
-          int selectedIndex = _controller.selectedIndex;
-          DataGridRow selectedRow = _controller.selectedRow!;
-          List<DataGridRow> selectedRows = _controller.selectedRows;
-          print(selectedIndex);
-          print(selectedRow);
-          print(selectedRows);
-        }),
-    Expanded(
-        child: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-      controller: _controller,
-      selectionMode: SelectionMode.multiple,
-    ))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('Get Selection Information'),
+          onPressed: () {
+            int selectedIndex = _controller.selectedIndex;
+            DataGridRow selectedRow = _controller.selectedRow!;
+            List<DataGridRow> selectedRows = _controller.selectedRows;
+            print(selectedIndex);
+            print(selectedRow);
+            print(selectedRows);
+          }),
+      Expanded(
+          child: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ],
+        controller: _controller,
+        selectionMode: SelectionMode.multiple,
+      ))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}

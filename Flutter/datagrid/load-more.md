@@ -24,80 +24,80 @@ The following example demonstrates infinite scrolling by showing the circular pr
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
-        Future<String> loadRows() async {
-          // Call the loadMoreRows function to call the
-          // DataGridSource.handleLoadMoreRows method. So, additional
-          // rows can be added from handleLoadMoreRows method.
-          await loadMoreRows();
-          return Future<String>.value('Completed');
-        }
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
+          Future<String> loadRows() async {
+            // Call the loadMoreRows function to call the
+            // DataGridSource.handleLoadMoreRows method. So, additional
+            // rows can be added from handleLoadMoreRows method.
+            await loadMoreRows();
+            return Future<String>.value('Completed');
+          }
 
-        return FutureBuilder<String>(
-            initialData: 'loading',
-            future: loadRows(),
-            builder: (context, snapShot) {
-              if (snapShot.data == 'loading') {
-                return Container(
-                    height: 60.0,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: BorderDirectional(
-                            top: BorderSide(
-                                width: 1.0,
-                                color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                    alignment: Alignment.center,
-                    child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
-              } else {
-                return SizedBox.fromSize(size: Size.zero);
-              }
-            });
-      },
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]);
-}
+          return FutureBuilder<String>(
+              initialData: 'loading',
+              future: loadRows(),
+              builder: (context, snapShot) {
+                if (snapShot.data == 'loading') {
+                  return Container(
+                      height: 60.0,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: BorderDirectional(
+                              top: BorderSide(
+                                  width: 1.0,
+                                  color: Color.fromRGBO(0, 0, 0, 0.26)))),
+                      alignment: Alignment.center,
+                      child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
+                } else {
+                  return SizedBox.fromSize(size: Size.zero);
+                }
+              });
+        },
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]);
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
@@ -208,113 +208,113 @@ The following example demonstrates how to show the button when vertical scrollin
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
-        bool showIndicator = false;
-        return StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState) {
-          if (showIndicator) {
-            return Container(
-                height: 60.0,
-                width: double.infinity,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: BorderDirectional(
-                        top: BorderSide(
-                            width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
-          } else {
-            return Container(
-                height: 60.0,
-                width: double.infinity,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: BorderDirectional(
-                        top: BorderSide(
-                            width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                child: Container(
-                    height: 36.0,
-                    width: 142.0,
-                    child: TextButton(
-                        style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.purple)),
-                        child: Text('LOAD MORE',
-                            style: TextStyle(color: Colors.white)),
-                        onPressed: () async {
-                          // To avoid the "Error: setState() called after dispose():"
-                          // while scrolling the datagrid vertically and displaying the
-                          // load more view, current load more view is checked whether
-                          // loaded widget is mounted or not.
-                          if (context is StatefulElement &&
-                              context.state.mounted) {
-                            setState(() {
-                              showIndicator = true;
-                            });
-                          }
-                          // Call the loadMoreRows function to call the
-                          // DataGridSource.handleLoadMoreRows method. So, additional
-                          // rows can be added from handleLoadMoreRows method.
-                          await loadMoreRows();
-                          // To avoid the "Error: setState() called after dispose():"
-                          // while scrolling the datagrid vertically and displaying the
-                          // load more view, current load more view is checked whether
-                          // loaded widget is mounted or not.
-                          if (context is StatefulElement &&
-                              context.state.mounted) {
-                            setState(() {
-                              showIndicator = false;
-                            });
-                          }
-                        })));
-          }
-        });
-      },
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]);
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
+          bool showIndicator = false;
+          return StatefulBuilder(
+              builder: (BuildContext context, StateSetter setState) {
+            if (showIndicator) {
+              return Container(
+                  height: 60.0,
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: BorderDirectional(
+                          top: BorderSide(
+                              width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
+                  child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
+            } else {
+              return Container(
+                  height: 60.0,
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: BorderDirectional(
+                          top: BorderSide(
+                              width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
+                  child: Container(
+                      height: 36.0,
+                      width: 142.0,
+                      child: TextButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.purple)),
+                          child: Text('LOAD MORE',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () async {
+                            // To avoid the "Error: setState() called after dispose():"
+                            // while scrolling the datagrid vertically and displaying the
+                            // load more view, current load more view is checked whether
+                            // loaded widget is mounted or not.
+                            if (context is StatefulElement &&
+                                context.state.mounted) {
+                              setState(() {
+                                showIndicator = true;
+                              });
+                            }
+                            // Call the loadMoreRows function to call the
+                            // DataGridSource.handleLoadMoreRows method. So, additional
+                            // rows can be added from handleLoadMoreRows method.
+                            await loadMoreRows();
+                            // To avoid the "Error: setState() called after dispose():"
+                            // while scrolling the datagrid vertically and displaying the
+                            // load more view, current load more view is checked whether
+                            // loaded widget is mounted or not.
+                            if (context is StatefulElement &&
+                                context.state.mounted) {
+                              setState(() {
+                                showIndicator = false;
+                              });
+                            }
+                          })));
+            }
+          });
+        },
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]);
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {

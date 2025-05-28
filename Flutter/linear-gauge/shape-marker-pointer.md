@@ -9,7 +9,7 @@ documentation: ug
 
 # Shape Marker Pointer in Flutter Linear Gauge (SfLinearGauge)
 
-The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) have the following pre-defined shapes to mark a specific value. The default shape pointer is `invertedTriangle`. 
+The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) provides pre-defined shapes to mark specific values. The default shape pointer is `invertedTriangle`. 
 
 1. `Triangle`
 2. `Inverted Triangle`
@@ -21,7 +21,7 @@ The following is the default appearance of default shape pointer.
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -40,7 +40,7 @@ The following is the default appearance of default shape pointer.
 
 ## Change the size
 
-The size of the marker pointer can be changed by the [`height`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/width.html) properties of [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). The following code sample demonstrates how to change the size of a shape pointer.
+The size of the marker pointer can be changed by the [`height`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/width.html) properties of [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). The following code sample demonstrates how to change the size of a shape pointer:
 
 {% highlight dart %} 
 
@@ -68,7 +68,7 @@ The color of the shape pointer can be changed by the [`color`](https://pub.dev/d
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -80,6 +80,7 @@ The color of the shape pointer can be changed by the [`color`](https://pub.dev/d
         ),
       ),
     );
+  }
   
 {% endhighlight %}
 
@@ -97,10 +98,13 @@ The border can be customized by the [`borderColor`](https://pub.dev/documentatio
       color: Colors.white,
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
-                value: 50, borderColor: Colors.redAccent, borderWidth: 2)
-          ]),
+          child: SfLinearGauge(
+            markerPointers: [
+              LinearShapePointer(
+                value: 50, borderColor: Colors.redAccent, borderWidth: 2,
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -116,7 +120,7 @@ The elevation can be customized by the [`elevation`](https://pub.dev/documentati
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -126,10 +130,11 @@ The elevation can be customized by the [`elevation`](https://pub.dev/documentati
             color: Colors.white,
             child: SfLinearGauge(markerPointers: [
               LinearShapePointer(
-                  value: 50,
-                  shapeType: LinearShapePointerType.circle,
-                  elevation: 5,
-                  elevationColor: Colors.blueGrey)
+                value: 50,
+                shapeType: LinearShapePointerType.circle,
+                elevation: 5,
+                elevationColor: Colors.blueGrey,
+              ),
             ]),
           ),
         ),
@@ -147,15 +152,19 @@ The marker pointer alignment can be changed by the [`markerAlignment`](https://p
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
-            LinearShapePointer(
-                value: 0, markerAlignment: LinearMarkerAlignment.start)
-          ]),
+          child: SfLinearGauge(
+            axisTrackExtent: 30, 
+            markerPointers: [
+              LinearShapePointer(
+                value: 0, markerAlignment: LinearMarkerAlignment.start,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -176,12 +185,15 @@ By default, the shape pointer is positioned `outside` the axis. This position ca
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
+          child: SfLinearGauge(
+            markerPointers: [
+              LinearShapePointer(
                 value: 55,
                 shapeType: LinearShapePointerType.triangle,
-                position: LinearElementPosition.inside)
-          ]),
+                position: LinearElementPosition.inside,
+              ),
+            ]
+          ),
         ),
       ),
     );
@@ -202,13 +214,16 @@ In addition to position the shape pointer, it is also possible to change the off
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
+          child: SfLinearGauge(
+            markerPointers: [
+              LinearShapePointer(
                 value: 50,
                 offset: 25,
                 shapeType: LinearShapePointerType.triangle,
-                position: LinearElementPosition.inside)
-          ]),
+                position: LinearElementPosition.inside,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -228,42 +243,42 @@ The `LinearMarkerDragBehavior.constrained` can be used to limit the active point
 
 {% highlight dart %}
 
-double _firstPointer = 30;
-double _secondPointer = 70;
+  double _firstPointer = 30;
+  double _secondPointer = 70;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearShapePointer(
-          value: _firstPointer,
-          height: 25,
-          width: 25,
-          shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.free,
-          onChanged: (double newValue) {
-            setState(() {
-              _firstPointer = newValue;
-            });
-          },
-        ),
-        LinearShapePointer(
-          value: _secondPointer,
-          height: 25,
-          width: 25,
-          shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.free,
-          onChanged: (double newValue) {
-            setState(() {
-              _secondPointer = newValue;
-            });
-          },
-        ),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearShapePointer(
+            value: _firstPointer,
+            height: 25,
+            width: 25,
+            shapeType: LinearShapePointerType.invertedTriangle,
+            dragBehavior: LinearMarkerDragBehavior.free,
+            onChanged: (double newValue) {
+              setState(() {
+                _firstPointer = newValue;
+              });
+            },
+          ),
+          LinearShapePointer(
+            value: _secondPointer,
+            height: 25,
+            width: 25,
+            shapeType: LinearShapePointerType.invertedTriangle,
+            dragBehavior: LinearMarkerDragBehavior.free,
+            onChanged: (double newValue) {
+              setState(() {
+                _secondPointer = newValue;
+              });
+            },
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -273,42 +288,42 @@ Widget build(BuildContext context) {
 
 {% highlight dart %}
 
-double _firstPointer = 30;
-double _secondPointer = 70;
+  double _firstPointer = 30;
+  double _secondPointer = 70;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearShapePointer(
-          value: _firstPointer,
-          height: 25,
-          width: 25,
-          shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _firstPointer = newValue;
-            });
-          },
-        ),
-        LinearShapePointer(
-          value: _secondPointer,
-          height: 25,
-          width: 25,
-          shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _secondPointer = newValue;
-            });
-          },
-        ),
-      ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearShapePointer(
+            value: _firstPointer,
+            height: 25,
+            width: 25,
+            shapeType: LinearShapePointerType.invertedTriangle,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _firstPointer = newValue;
+              });
+            },
+          ),
+          LinearShapePointer(
+            value: _secondPointer,
+            height: 25,
+            width: 25,
+            shapeType: LinearShapePointerType.invertedTriangle,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _secondPointer = newValue;
+              });
+            },
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -320,31 +335,31 @@ The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gaug
 
 {% highlight dart %}
 
-double _value = 50;
+  double _value = 50;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearShapePointer(
-          value: _value,
-          onChangeStart: (double newValue) {
-            _value = newValue;
-          },
-          onChanged: (double newValue) {
-            setState(() {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearShapePointer(
+            value: _value,
+            onChangeStart: (double newValue) {
               _value = newValue;
-            });
-          },
-          onChangeEnd: (double newValue) {
-            _value = newValue;
-          },
-          shapeType: LinearShapePointerType.invertedTriangle,
-        ),
-      ],
-    ),
-  );
-}
+            },
+            onChanged: (double newValue) {
+              setState(() {
+                _value = newValue;
+              });
+            },
+            onChangeEnd: (double newValue) {
+              _value = newValue;
+            },
+            shapeType: LinearShapePointerType.invertedTriangle,
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}

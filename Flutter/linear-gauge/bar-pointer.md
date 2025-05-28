@@ -9,7 +9,7 @@ documentation: ug
 
 # Bar Pointer in Flutter Linear Gauge (SfLinearGauge)
 
-A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. The [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
@@ -54,7 +54,7 @@ The thickness can be changed by the [`thickness`](https://pub.dev/documentation/
             barPointers: [
               LinearBarPointer(
                 value: 50,
-                thickness: 10
+                thickness: 10,
               )
             ],
           ),
@@ -129,7 +129,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis and it cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The following  code sample demonstrates how to change the offset value of the bar pointer. 
+In addition to positioning the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis and it cannot be negative. Cross-positioned elements will not be affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The following code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% highlight dart %} 
 
@@ -193,7 +193,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -202,16 +202,16 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 100,
-                  //Apply radial gradient
-                  shaderCallback: (bounds) => RadialGradient(
-                        radius: 30,
-                        colors: [
-                          Colors.redAccent,
-                          Colors.blueAccent,
-                          Colors.greenAccent,
-                        ],
-                      ).createShader(bounds))
+                value: 100,
+                //Apply radial gradient
+                shaderCallback: (bounds) => RadialGradient(
+                radius: 30,
+                colors: [
+                  Colors.redAccent,
+                  Colors.blueAccent,
+                  Colors.greenAccent,
+                ],
+              ).createShader(bounds))
             ],
           ),
         ),
@@ -242,10 +242,10 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
                 thickness: 10,
                 //Apply linear gradient
                 shaderCallback: (bounds) => LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [Colors.redAccent, Colors.blueAccent])
-                    .createShader(bounds)
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [Colors.redAccent, Colors.blueAccent]
+                ).createShader(bounds)
               ),
             ],
           ),
@@ -264,7 +264,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -273,20 +273,20 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 100,
-                  thickness: 10,
-                  //Apply linear gradient
-                  shaderCallback: (bounds) => SweepGradient(
-                  startAngle: 0.1,
-                  endAngle: 0.2,
-                  colors: [
-                    Colors.blueAccent,
-                    Colors.greenAccent,
-                    Colors.orangeAccent,
-                  ],
-                  tileMode: TileMode.mirror,
-                  center: Alignment.bottomRight,
-                ).createShader(bounds))
+                value: 100,
+                thickness: 10,
+                //Apply linear gradient
+                shaderCallback: (bounds) => SweepGradient(
+                startAngle: 0.1,
+                endAngle: 0.2,
+                colors: [
+                  Colors.blueAccent,
+                  Colors.greenAccent,
+                  Colors.orangeAccent,
+                ],
+                tileMode: TileMode.mirror,
+                center: Alignment.bottomRight,
+              ).createShader(bounds))
             ],
           ),
         ),
@@ -313,10 +313,11 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 80,
-                  thickness: 10,
-                  borderWidth: 3,
-                  borderColor: Colors.cyanAccent)
+                value: 80,
+                thickness: 10,
+                borderWidth: 3,
+                borderColor: Colors.cyanAccent,
+              ),
             ],
           ),
         ),
@@ -331,7 +332,7 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 
 ## Add multiple bar pointers
 
-You can add multiple bar pointers in a [`LinearGauge`](). The bar pointers by default will overlap each other. So while adding a bar pointer offset value is needed to be specified. The below code example demonstrates adding two bar pointer with different offset
+You can add multiple bar pointers in a [`LinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). The bar pointers by default will overlap each other. So while adding a bar pointer, offset value is needed to be specified. The below code example demonstrates adding two bar pointer with different offsets:
 
 {% highlight dart %} 
 
@@ -341,7 +342,7 @@ You can add multiple bar pointers in a [`LinearGauge`](). The bar pointers by de
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-              barPointers: [
+            barPointers: [
               LinearBarPointer(
                 value: 20, 
                 position: LinearElementPosition.outside
@@ -353,7 +354,7 @@ You can add multiple bar pointers in a [`LinearGauge`](). The bar pointers by de
                 position: LinearElementPosition.outside
               ),
             ],
-            ),
+          ),
         ),
       ),
     );

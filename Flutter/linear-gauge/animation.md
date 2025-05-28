@@ -9,11 +9,11 @@ documentation: ug
 
 # Animation in Flutter Linear Gauge (SfLinearGauge)
 
-All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and widget marker pointer can be animated separately. 
+All Linear Gauge elements such as axis (along with ticks and labels), range, bar pointer, shape marker pointer, and widget marker pointer can be animated separately.
 
 ## Animate axis
 
-The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) is used to  animate the axis track along with the ticks and labels. The axis will have a fade-in with opacity animation when this [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to true. By default, the [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to false. 
+The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) are used to animate the axis track along with the ticks and labels. The axis will have a fade-in with opacity animation when [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to true. By default, the [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to false. 
 
 {% highlight dart %}
 
@@ -37,7 +37,7 @@ The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 ## Animate range
 
-The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) is used to  animate the axis track along with the ticks and labels. The range will be have a fade-in with opacity animation when this [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to true. By default, the [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to false. 
+The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) are used to animate ranges. The range will have a fade-in with opacity animation when [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to true. By default, the [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to false. 
 
 {% highlight dart %}
 
@@ -61,15 +61,15 @@ The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
 
 ## Pointer animation
 
-The animation behavior is common for all the three pointers in Linear Gauge - shape, widget and bar pointer. 
+The animation behavior is common for all three pointers in Linear Gauge - shape pointer, widget pointer, and bar pointer.
 
-All the above three pointers have the below properties for animation. 
+All three pointers have the following properties for animation:
 
 *  [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/enableAnimation.html) - Enable or disable the animation for bar pointer. The default value is `true`
 *  [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/animationDuration.html) - Sets the animation duration. The default value is 1000
 *  [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/animationType.html) - Sets the animation type. 
 
-The [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/animationType.html) supports the below animations. The default animation type is `animationType.ease`.
+The [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/animationType.html) supports the following animations. The default animation type is `animationType.ease`.
 
 * `bounceOut`
 * `ease`
@@ -81,7 +81,7 @@ The [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 
 ### Animate bar pointer
 
-The below code example demonstrates updating the animation for bar pointer.
+The following code example demonstrates how to customize the animation for bar pointer:
 
 {% highlight dart %} 
 
@@ -108,7 +108,7 @@ The below code example demonstrates updating the animation for bar pointer.
 
 ### Animate marker pointers (Shape and Widget Pointers)
 
-Both the shape and widget marker pointers will have the same set of properties and behave similarly for animation. So we have demonstrated the [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) only but the same is applicable for [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) too. 
+Both the shape and widget marker pointers have the same set of properties and behave similarly for animation. The example below demonstrates [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) but the same principles apply to [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) as well. 
 
 ### Marker pointer with `bounceOut` animation
 
