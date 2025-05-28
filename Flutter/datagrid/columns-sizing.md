@@ -28,66 +28,66 @@ The following example shows how to set the width equally for columns based on th
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.fill,
-          columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'city',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'city',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            source: _employeeDataSource,
+            columnWidthMode: ColumnWidthMode.fill,
+            columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'city',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'city',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]));
+  }
   
 {% endhighlight %}
 {% endtabs %}
 
 > **NOTE**  
-    The `GridColumn.columnWidthMode` takes higher priority than the `SfDataGrid.columnWidthMode`.
+The `GridColumn.columnWidthMode` takes higher priority than the `SfDataGrid.columnWidthMode`.
 
 ![columns filled based on view port size in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-columns.png)
 
@@ -98,51 +98,51 @@ By default, the autofit calculation is performed for only visible rows. You can 
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      columnWidthMode: ColumnWidthMode.auto,
-      columnWidthCalculationRange: ColumnWidthCalculationRange.allRows,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'ID',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'Name',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'Designation',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'Salary',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  softWrap: false,
-                )))
-      ]);
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        columnWidthMode: ColumnWidthMode.auto,
+        columnWidthCalculationRange: ColumnWidthCalculationRange.allRows,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'ID',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'Name',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'Designation',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'Salary',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    softWrap: false,
+                  )))
+        ]);
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,59 +152,59 @@ Widget build(BuildContext context) {
 By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the [GridColumn.autoFitPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/autoFitPadding.html) property.
 
 >**NOTE** 
-  `GridColumn.autoFitPadding` is applicable for header cell also.
+`GridColumn.autoFitPadding` is applicable for header cell also.
 
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      columnWidthMode: ColumnWidthMode.auto,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            autoFitPadding: EdgeInsets.all(10.0),
-            label: Container(
-                padding: EdgeInsets.all(10.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            autoFitPadding: EdgeInsets.all(10.0),
-            label: Container(
-                padding: EdgeInsets.all(10.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            autoFitPadding: EdgeInsets.all(10.0),
-            label: Container(
-                padding: EdgeInsets.all(10.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            autoFitPadding: EdgeInsets.all(10.0),
-            label: Container(
-                padding: EdgeInsets.all(10.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  softWrap: false,
-                )))
-      ]);
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        columnWidthMode: ColumnWidthMode.auto,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              autoFitPadding: EdgeInsets.all(10.0),
+              label: Container(
+                  padding: EdgeInsets.all(10.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              autoFitPadding: EdgeInsets.all(10.0),
+              label: Container(
+                  padding: EdgeInsets.all(10.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              autoFitPadding: EdgeInsets.all(10.0),
+              label: Container(
+                  padding: EdgeInsets.all(10.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              autoFitPadding: EdgeInsets.all(10.0),
+              label: Container(
+                  padding: EdgeInsets.all(10.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    softWrap: false,
+                  )))
+        ]);
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
@@ -250,56 +250,56 @@ By default, the cell width is calculated based on the default text style. To cal
 {% tabs %}
 {% highlight Dart %} 
 
-final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+  final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      columnSizer: _customColumnSizer,
-      columnWidthMode: ColumnWidthMode.auto,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'ID',
-            autoFitPadding: EdgeInsets.all(12.0),
-            label: Container(
-                padding: EdgeInsets.all(12.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
-            columnName: 'Name',
-            autoFitPadding: EdgeInsets.all(12.0),
-            label: Container(
-                padding: EdgeInsets.all(12.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Name',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
-                ))),
-        GridColumn(
-            columnName: 'Designation',
-            autoFitPadding: EdgeInsets.all(12.0),
-            label: Container(
-                padding: EdgeInsets.all(12.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
-                ))),
-        GridColumn(
-            columnName: 'Salary',
-            autoFitPadding: EdgeInsets.all(12.0),
-            label: Container(
-                padding: EdgeInsets.all(12.0),
-                alignment: Alignment.center,
-                child: Text('Salary'))),
-      ]);
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        columnSizer: _customColumnSizer,
+        columnWidthMode: ColumnWidthMode.auto,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'ID',
+              autoFitPadding: EdgeInsets.all(12.0),
+              label: Container(
+                  padding: EdgeInsets.all(12.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'ID',
+                  ))),
+          GridColumn(
+              columnName: 'Name',
+              autoFitPadding: EdgeInsets.all(12.0),
+              label: Container(
+                  padding: EdgeInsets.all(12.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Name',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                  ))),
+          GridColumn(
+              columnName: 'Designation',
+              autoFitPadding: EdgeInsets.all(12.0),
+              label: Container(
+                  padding: EdgeInsets.all(12.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                  ))),
+          GridColumn(
+              columnName: 'Salary',
+              autoFitPadding: EdgeInsets.all(12.0),
+              label: Container(
+                  padding: EdgeInsets.all(12.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ]);
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
@@ -373,53 +373,53 @@ The cell width is calculated by default based on the `DataGridCell.value` proper
 
 import 'package:intl/intl.dart';
 
-final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+  final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 
-@override
-Widget build(BuildContext context) {
-  return SfDataGrid(
-      source: _employeeDataSource,
-      columnSizer: _customColumnSizer,
-      columnWidthMode: ColumnWidthMode.fitByCellValue,
-      columns: <GridColumn>[
-        GridColumn(
-            columnName: 'ID',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'Name',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'DOB',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'DOB',
-                  softWrap: false,
-                ))),
-        GridColumn(
-            columnName: 'Salary',
-            label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  softWrap: false,
-                )))
-      ]);
-}
+  @override
+  Widget build(BuildContext context) {
+    return SfDataGrid(
+        source: _employeeDataSource,
+        columnSizer: _customColumnSizer,
+        columnWidthMode: ColumnWidthMode.fitByCellValue,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'ID',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'Name',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'DOB',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'DOB',
+                    softWrap: false,
+                  ))),
+          GridColumn(
+              columnName: 'Salary',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    softWrap: false,
+                  )))
+        ]);
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
@@ -491,51 +491,51 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill`  the remaining wi
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.lastColumnFill,
-          columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            source: _employeeDataSource,
+            columnWidthMode: ColumnWidthMode.lastColumnFill,
+            columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -547,51 +547,51 @@ The below example shows Name column is set as `lastColumnFill` mode.
 {% tabs %}
 {% highlight Dart %} 
  
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            columnWidthMode: ColumnWidthMode.lastColumnFill,
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                )))
-      ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            source: _employeeDataSource,
+            columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              columnWidthMode: ColumnWidthMode.lastColumnFill,
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}

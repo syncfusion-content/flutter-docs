@@ -47,14 +47,14 @@ You can export the `SfDataGrid` to PDF by using the following extension methods 
 
 **Add GlobalKey for the DataGrid**
  
-Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) using the `SfDataGridState` class. Exporting related methods are available via `SfDataGridState` class.
+Create a [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) using the `SfDataGridState` class. Exporting related methods are available via `SfDataGridState` class.
 
 Set the created `GlobalKey` to the `SfDataGrid`.
 
 {% tabs %}
 {% highlight Dart %}
 
-final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+  final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
     
 {% endhighlight %}
 {% endtabs %}
@@ -64,66 +64,66 @@ The following code illustrates how to create and display a `SfDataGrid` using th
 {% tabs %}
 {% highlight Dart %}
 
-GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+  GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Column(
-      children: [
-        ElevatedButton(
-            child: Text('Export To Pdf'),
-            onPressed: () {
-              PdfDocument document = key.currentState!.exportToPdfDocument()
-              final List<int> bytes = document.saveSync();
-            }),
-        Expanded(
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridColumn(
-                  columnName: 'ID',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'ID',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'Name',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Name',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'Designation',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Designation',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'Salary',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Salary',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          ElevatedButton(
+              child: Text('Export To Pdf'),
+              onPressed: () {
+                PdfDocument document = key.currentState!.exportToPdfDocument()
+                final List<int> bytes = document.saveSync();
+              }),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridColumn(
+                    columnName: 'ID',
+                    label: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'ID',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'Name',
+                    label: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Name',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'Designation',
+                    label: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Designation',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'Salary',
+                    label: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Salary',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+              ],
+            ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -382,7 +382,7 @@ final List<int> bytes = document.saveSync();
 
 ## Customize Exporting Behavior 
 
-Customize the exporting behavior by overriding the available methods in the [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) Customize the exporting behavior by overriding the available methods in the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
+Customize the exporting behavior by overriding the available methods in the [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) class. Use the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
 
 {% tabs %}
 {% highlight Dart %}

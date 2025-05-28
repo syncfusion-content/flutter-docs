@@ -23,7 +23,7 @@ syncfusion_flutter_datagrid_export: ^xx.x.xx
 
 {% endhighlight %}
 
-  >**NOTE:** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
+>**NOTE:** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
 
 **Import package**
 
@@ -33,7 +33,6 @@ Import the following package in your Dart code.
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid_export/export.dart';
-
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
 {% endhighlight %}
@@ -295,7 +294,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Customize cell values while exporting
 
-The cell value can be customized while exporting to Excel by directly setting the cell value of a cell to the [excelRange.value](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellExcelExportDetails/excelRange.html) property available in the argument of `cellExport` callback.
+The cell value can be customized while exporting to Excel by directly setting the cell value to the [excelRange.value](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellExcelExportDetails/excelRange.html) property available in the argument of `cellExport` callback.
 
 {% tabs %}
 {% highlight Dart %}
@@ -337,7 +336,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Customize Exporting Behavior 
 
-Customize the exporting behavior by overriding the available methods in the [DataGridToExcelConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter-class.html) Customize the exporting behavior by overriding the available methods in the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
+Customize the exporting behavior by overriding the available methods in the [DataGridToExcelConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToExcelConverter-class.html) class. Use the `converter` parameter in the `exportToExcelWorksheet` or `exportToExcelWorkbook` method.
 
 {% tabs %}
 {% highlight Dart %}

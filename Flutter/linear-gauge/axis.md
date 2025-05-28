@@ -10,11 +10,11 @@ documentation: ug
 
 # Axis in Flutter Linear Gauge (SfLinearGauge)
 
-The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color and edge styles. Axis elements such as labels and ticks can also be easily customized and you can also inverse the axis.
+The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color, and edge styles. Axis elements such as labels and ticks can also be easily customized, and you can inverse the axis.
 
 ## Default axis
 
-By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) axis value as 0 and the [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) axis value as 100. Without any changes the default axis of the Linear Gauge will be displayed as follows. 
+By default axis will have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) axis value as 0 and a [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) axis value of 100. Without any customization, the default axis of the Linear Gauge will be displayed as follows:
 
 {% highlight dart %} 
 
@@ -35,7 +35,7 @@ By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusi
 
 ## Customize minimum and maximum axis values
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the below code snippet the axis is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by the labels. Customizing these label styles are further explained in next topics.  
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the example below, the axis is customized to have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by labels. which can be further customized as explained in later sections.  
 
 {% highlight dart %} 
 
@@ -44,7 +44,7 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(minimum: -50, maximum: 50)
+          child: SfLinearGauge(minimum: -50, maximum: 50),
         ),
       ),
     );
@@ -64,7 +64,7 @@ The linear axis track can be customized using the [`axisTrackStyle`](https://pub
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderWidth.html) - Customizes the border width of the axis track.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderColor.html) - Customizes the border color of the axis track.
 
-The following code sample demonstrates how to customize the [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/thickness.html) and [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/color.html) properties.
+The following code sample demonstrates how to customize the [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/thickness.html) and [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/color.html) property:
 
 {% highlight dart %} 
 
@@ -73,11 +73,11 @@ The following code sample demonstrates how to customize the [`thickness`](https:
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(thickness: 15)
-            ),
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(thickness: 15),
           ),
         ),
+      ),
     );
   }
 
@@ -87,7 +87,7 @@ The following code sample demonstrates how to customize the [`thickness`](https:
 
 ## Apply solid color
 
-The below code snippet sets solid colors to the axis track.
+The code snippet below sets a solid color to the axis track:
 
 {% highlight dart %} 
 
@@ -96,8 +96,9 @@ The below code snippet sets solid colors to the axis track.
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue),
+          ),
         ),
       ),
     );
@@ -109,9 +110,9 @@ The below code snippet sets solid colors to the axis track.
 
 ## Apply gradient
 
-The [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/color.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to set a solid color, while the [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/gradient.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to apply linear-gradient to axis track.
+The [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/color.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows you to set a solid color, while the [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/gradient.html) property allows you to apply a linear gradient to the axis track.
 
-The following code sample sets solid colors to the axis track.
+The following code sample applies a gradient to the axis track.
 
 {% highlight dart %} 
 
@@ -122,18 +123,18 @@ The following code sample sets solid colors to the axis track.
         body: Center(
           child: Container(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(
-                  gradient: LinearGradient(
-                        colors: [Colors.purple, Colors.blue],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        stops: [0.1, 0.5],
-                        tileMode: TileMode.clamp
-                  )
-                )
+              axisTrackStyle: LinearAxisTrackStyle(
+                gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.blue],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  stops: [0.1, 0.5],
+                  tileMode: TileMode.clamp,
+                ),
               ),
             ),
           ),
+        ),
       ),
     );
   }
@@ -146,25 +147,27 @@ The following code sample sets solid colors to the axis track.
 
 The [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderWidth.html) properties of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allow you to set a border to the axis track.
 
-The below code snippet sets a border to the axis track.
+The code snippet below sets a border to the axis track:
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-              axisTrackStyle: LinearAxisTrackStyle(
-                  // Sets axis thickness for the better visibility of border
-                  thickness: 15,
-                  // Hides axis axis color for the better visibility of border
-                  color: Colors.transparent,
-                  //Sets the border color
-                  borderColor: Colors.blueGrey,
-                  //Sets the border width
-                  borderWidth: 2))
+            axisTrackStyle: LinearAxisTrackStyle(
+              // Sets axis thickness for the better visibility of border
+              thickness: 15,
+              // Hides axis axis color for the better visibility of border
+              color: Colors.transparent,
+              //Sets the border color
+              borderColor: Colors.blueGrey,
+              //Sets the border width
+              borderWidth: 2,
+            ),
+          ),
         ),
       ),
     );
@@ -176,7 +179,7 @@ The below code snippet sets a border to the axis track.
 
 ## Customize corners
 
-The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/edgeStyle.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) specifies the corner type for the axis track. The corners can be customized with `bothFlat`, `bothCurve`, `startCurve`, and `endCurve` options. The default value of this property is `bothFlat`.
+The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/edgeStyle.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) specifies the corner type for the axis track. The corners can be customized with `bothFlat`, `bothCurve`, `startCurve`, and `endCurve` options. The default value is `bothFlat`.
 
 {% highlight dart %} 
 
@@ -185,9 +188,12 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(
-                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve))         
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(
+              thickness: 20,
+              edgeStyle: LinearEdgeStyle.bothCurve
+            ),
+          ),   
         ),
       ),
     );
@@ -199,8 +205,8 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 ## Inverse the axis
 
-The direction of linear gauge axis can be customized by the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property.
-When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is true, the axis can be placed in an inverse direction. The default value of the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is false.
+The direction of linear gauge axis can be customized using the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property.
+When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is set to true, the axis will be displayed in an inverse direction. The default value is false.
 
 {% highlight dart %} 
 
@@ -223,7 +229,7 @@ You can see that the axis values are displayed from 100 to 0 as the axis track i
 
 ## Extend the axis
 
-The axis track can be extended by the [`axisTrackExtent`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackExtent.html) property. This will extend the axis track in both ends. The following code sample demonstrates this. 
+The axis track can be extended using the [`axisTrackExtent`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackExtent.html) property. This will extend the axis track at both ends. The following code sample demonstrates this: 
 
 {% highlight dart %} 
 
@@ -270,33 +276,33 @@ Linear gauge allows you to display a set of values along with a custom axis base
 
 {% highlight dart %} 
 
-double pointerValue = 50.0;
+  double pointerValue = 50.0;
 
-// To return the label value based on interval
-double _calculateLabelValue(num value) {
-  if (value == 0) {
-    return 0;
-  } else if (value == 1) {
-    return 2;
-  } else if (value == 2) {
-    return 5;
-  } else if (value == 3) {
-    return 10;
-  } else if (value == 4) {
-    return 20;
-  } else if (value == 5) {
-    return 30;
-  } else if (value == 6) {
-    return 50;
-  } else if (value == 7) {
-    return 100;
-  } else {
-    return 150;
+  // To return the label value based on interval
+  double _calculateLabelValue(num value) {
+    if (value == 0) {
+      return 0;
+    } else if (value == 1) {
+      return 2;
+    } else if (value == 2) {
+      return 5;
+    } else if (value == 3) {
+      return 10;
+    } else if (value == 4) {
+      return 20;
+    } else if (value == 5) {
+      return 30;
+    } else if (value == 6) {
+      return 50;
+    } else if (value == 7) {
+      return 100;
+    } else {
+      return 150;
+    }
   }
-}
 
-Widget _getLinearGauge() {
-  return Container(
+  Widget _getLinearGauge() {
+    return Container(
       child: SfLinearGauge(
         minimum: 0,
         maximum: 150.0,
@@ -352,8 +358,9 @@ Widget _getLinearGauge() {
               height: 16)
         ],
       ),
-      margin: EdgeInsets.all(10));
-}
+      margin: EdgeInsets.all(10)
+    );
+  }
 
 {% endhighlight %}
 

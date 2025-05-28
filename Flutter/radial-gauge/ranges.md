@@ -9,7 +9,7 @@ documentation: ug
 
 # Ranges in Flutter Radial Gauge (SfRadialGauge)
 
-Gauge range is a visual element that helps to quickly visualize where a value falls on the axis. The text can be easily annotated in range to improve the readability.
+Gauge ranges are visual elements that help to quickly visualize where a value falls on the axis. Text can be easily annotated in ranges to improve readability.
 
 **Setting start and end value**
 
@@ -17,21 +17,22 @@ The start and end values of ranges are set using the [`startValue`](https://pub.
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis( 
-                  ranges: <GaugeRange>[GaugeRange(startValue: 30, endValue: 65)]
-                )
-                ],
-              )
-            ),
-          );
-        }
-
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              ranges: <GaugeRange>[
+                GaugeRange(startValue: 30, endValue: 65)
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -39,7 +40,7 @@ Widget build(BuildContext context) {
 
 ## Range Customization
 
-The following properties are used for the range customization:
+The following properties are used for range customization:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) – Specifies the color for the range.
 
@@ -53,21 +54,27 @@ The following properties are used for the range customization:
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis( 
-                  ranges: <GaugeRange>[GaugeRange(startValue: 30, endValue: 65,
-                    startWidth: 5, endWidth: 20
-                  )]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              ranges: <GaugeRange>[
+                GaugeRange(
+                  startValue: 30, 
+                  endValue: 65,
+                  startWidth: 5, 
+                  endWidth: 20
                 )
-                ],
-              )
-            ),
-          );
-        }
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -83,25 +90,28 @@ If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: Center(
-          child: SfRadialGauge(
-            axes: <RadialAxis>[RadialAxis(
-                ranges: <GaugeRange>[
-                  GaugeRange(startValue: 30,
-                      endValue: 65,
-                      gradient: const SweepGradient(
-                          colors: <Color>[Color(0xFFBC4E9C), Color(0xFFF80759)],
-                          stops: <double>[0.25, 0.75]),
-                      startWidth: 5,
-                      endWidth: 20
-                  )
-                ]
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              ranges: <GaugeRange>[
+                GaugeRange(
+                  startValue: 30,
+                  endValue: 65,
+                  gradient: const SweepGradient(
+                    colors: <Color>[Color(0xFFBC4E9C), Color(0xFFF80759)],
+                    stops: <double>[0.25, 0.75]
+                  ),
+                  startWidth: 5,
+                  endWidth: 20
+                )
+              ]
             )
-            ],
-          )
+          ],
+        )
       ),
     );
   }
@@ -121,22 +131,26 @@ The [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis(
-                  ranges: <GaugeRange>[GaugeRange(startValue: 30, endValue: 65,
-                  rangeOffset: 50,
-                  )]
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              ranges: <GaugeRange>[
+                GaugeRange(
+                  startValue: 30, 
+                  endValue: 65,
+                  rangeOffset: 50
                 )
-                ],
-              )
-            ),
-          );
-        }
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
  
 {% endhighlight %}
 
@@ -144,51 +158,75 @@ Widget build(BuildContext context) {
 
 ## Setting range color to axis elements
 
-You can set range color to axis labels and ticks using the [`useRangeColorForAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/useRangeColorForAxis.html) property of axis.
+You can apply range color to axis labels and ticks using the [`useRangeColorForAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/useRangeColorForAxis.html) property of the axis.
 
 {% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[
-                  RadialAxis(showAxisLine: false, 
-                      ticksPosition: ElementsPosition.outside,
-                      labelsPosition: ElementsPosition.outside,
-                      startAngle: 270, endAngle: 270, useRangeColorForAxis: true,
-                       interval: 10,
-                      axisLabelStyle:GaugeTextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 12),
-                      majorTickStyle: MajorTickStyle(length: 0.15,
-                          lengthUnit: GaugeSizeUnit.factor,
-                          thickness: 1),
-                      minorTicksPerInterval: 4, labelOffset: 15,
-                      minorTickStyle: MinorTickStyle(length: 0.04,
-                          lengthUnit: GaugeSizeUnit.factor,
-                          thickness: 1),
-                      ranges: <GaugeRange>[GaugeRange(startValue: 0, endValue: 35,
-                          color: Color(0xFFF8B195),
-                          sizeUnit: GaugeSizeUnit.factor,
-                          rangeOffset: 0.06,
-                          startWidth: 0.05, endWidth: 0.25),
-                        GaugeRange(startValue: 35, endValue: 70,
-                            rangeOffset: 0.06,
-                            sizeUnit: GaugeSizeUnit.factor,
-                            color: Color(0xFFC06C84),
-                            startWidth: 0.05, endWidth: 0.25),
-                        GaugeRange(startValue: 70, endValue: 100,
-                            rangeOffset: 0.06,
-                            sizeUnit: GaugeSizeUnit.factor,
-                            color: Color(0xFF355C7D),
-                            startWidth: 0.05, endWidth: 0.25),]
-                )],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              showAxisLine: false,
+              ticksPosition: ElementsPosition.outside,
+              labelsPosition: ElementsPosition.outside,
+              startAngle: 270, 
+              endAngle: 270, 
+              useRangeColorForAxis: true,
+              interval: 10,
+              axisLabelStyle: GaugeTextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 12
+              ),
+              majorTickStyle: MajorTickStyle(
+                length: 0.15,
+                lengthUnit: GaugeSizeUnit.factor,
+                thickness: 1
+              ),
+              minorTicksPerInterval: 4, 
+              labelOffset: 15,
+              minorTickStyle: MinorTickStyle(
+                length: 0.04,
+                lengthUnit: GaugeSizeUnit.factor,
+                thickness: 1
+              ),
+              ranges: <GaugeRange>[
+                GaugeRange(
+                  startValue: 0, 
+                  endValue: 35,
+                  color: Color(0xFFF8B195),
+                  sizeUnit: GaugeSizeUnit.factor,
+                  rangeOffset: 0.06,
+                  startWidth: 0.05, 
+                  endWidth: 0.25
+                ),
+                GaugeRange(
+                  startValue: 35, 
+                  endValue: 70,
+                  rangeOffset: 0.06,
+                  sizeUnit: GaugeSizeUnit.factor,
+                  color: Color(0xFFC06C84),
+                  startWidth: 0.05, 
+                  endWidth: 0.25
+                ),
+                GaugeRange(
+                  startValue: 70, 
+                  endValue: 100,
+                  rangeOffset: 0.06,
+                  sizeUnit: GaugeSizeUnit.factor,
+                  color: Color(0xFF355C7D),
+                  startWidth: 0.05, 
+                  endWidth: 0.25
+                ),
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -196,43 +234,63 @@ Widget build(BuildContext context) {
 
 ## Range label
 
-A text can be displayed on range using the [`label`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/label.html) property. The provided text can be customized using the [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/labelStyle.html) property.
+Text can be displayed on a range using the [`label`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/label.html) property. The provided text can be customized using the [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/labelStyle.html) property.
 
 {% highlight dart %}
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes:<RadialAxis>[
-                  RadialAxis(showLabels: false, showAxisLine: false, showTicks: false,
-                      minimum: 0, maximum: 99, 
-                      ranges: <GaugeRange>[GaugeRange(startValue: 0, endValue: 33,
-                          color: Color(0xFFFE2A25), label: 'Slow',
-                          sizeUnit: GaugeSizeUnit.factor,
-                          labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize:  20),
-                          startWidth: 0.65, endWidth: 0.65
-                      ),GaugeRange(startValue: 33, endValue: 66,
-                        color:Color(0xFFFFBA00), label: 'Moderate',
-                        labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize:   20),
-                        startWidth: 0.65, endWidth: 0.65, sizeUnit: GaugeSizeUnit.factor,
-                      ),
-                        GaugeRange(startValue: 66, endValue: 99,
-                          color:Color(0xFF00AB47), label: 'Fast',
-                          labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize:   20),
-                          sizeUnit: GaugeSizeUnit.factor,
-                          startWidth: 0.65, endWidth: 0.65,
-                        ),
 
-                      ],
-                      pointers: <GaugePointer>[NeedlePointer(value: 60
-                    )]
-                  )
-                ],
-              )
-            ),
-          );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              showLabels: false, 
+              showAxisLine: false, 
+              showTicks: false,
+              minimum: 0, 
+              maximum: 99,
+              ranges: <GaugeRange>[
+                GaugeRange(
+                  startValue: 0, 
+                  endValue: 33,
+                  color: Color(0xFFFE2A25), 
+                  label: 'Slow',
+                  sizeUnit: GaugeSizeUnit.factor,
+                  labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize: 20),
+                  startWidth: 0.65, 
+                  endWidth: 0.65
+                ),
+                GaugeRange(
+                  startValue: 33, 
+                  endValue: 66,
+                  color: Color(0xFFFFBA00), 
+                  label: 'Moderate',
+                  labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize: 20),
+                  startWidth: 0.65, 
+                  endWidth: 0.65, 
+                  sizeUnit: GaugeSizeUnit.factor
+                ),
+                GaugeRange(
+                  startValue: 66, 
+                  endValue: 99,
+                  color: Color(0xFF00AB47), 
+                  label: 'Fast',
+                  labelStyle: GaugeTextStyle(fontFamily: 'Times', fontSize: 20),
+                  sizeUnit: GaugeSizeUnit.factor,
+                  startWidth: 0.65, 
+                  endWidth: 0.65
+                ),
+              ],
+              pointers: <GaugePointer>[
+                NeedlePointer(value: 60)
+              ]
+            )
+          ],
+        )
+      ),
+    );
+  }
 
 {% endhighlight %}
 

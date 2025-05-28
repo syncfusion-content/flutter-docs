@@ -11,31 +11,31 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can be accessed by the screen readers by wrapping the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
+The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can be made accessible to screen readers by wrapping it with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 50;
+  double _value = 50;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Semantics(
-      label: 'Syncfusion Flutter Linear Gauge',
-      value: _value.toString(),
-      child:
-          SfLinearGauge(markerPointers: [LinearShapePointer(value: _value)]),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Semantics(
+        label: 'Syncfusion Flutter Linear Gauge',
+        value: _value.toString(),
+        child:
+            SfLinearGauge(markerPointers: [LinearShapePointer(value: _value)]),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following APIs for the sufficient contrast.
+You can customize the color of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following APIs to ensure sufficient contrast.
 
 * [`Axis solid color`](https://help.syncfusion.com/flutter/linear-gauge/axis#apply-solid-color)
 * [`Axis gradient`](https://help.syncfusion.com/flutter/linear-gauge/axis#apply-gradient)
@@ -50,10 +50,10 @@ You can customize the color of the [`SfLinearGauge`](https://pub.dev/documentati
 
 ## Large fonts
 
-You can change the font size of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following API:
+You can adjust the font size of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following API:
 
 * [`Labels`](https://help.syncfusion.com/flutter/linear-gauge/labels#customize-label-styles)
 
 ## Easily touch targets
 
-The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) has touch target as 48 * 48 as per the standard for all the elements.
+The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) follows accessibility standards by providing touch target of 48 * 48 pixels for all interactive elements.

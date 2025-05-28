@@ -16,22 +16,23 @@ The default style of axis ticks is as follows.
 ## Customize tick style
 
 There are two types of ticks in the Flutter Linear Gauge namely major and minor ticks. In the above image, the larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MinorTickStyle-class.html) properties. The following properties can be customized for both the major and the minor ticks:
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/color.html) – Allows to customize the tick color.
-* [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/thickness.html) – Allows to customize the thickness of ticks.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/color.html) – Allows customization of the tick color.
+* [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/thickness.html) – Allows customization of the thickness of ticks.
 * [`length`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/length.html) – Specifics the length of ticks.
 
 {% highlight dart %} 
 
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            body: Center(
-              child: SfLinearGauge(
-                  majorTickStyle: LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
-                  minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black))
-            )
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            majorTickStyle: LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
+            minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black)
+          )
         )
+      )
     );
   }
 
@@ -45,16 +46,16 @@ The major ticks are generated based on the [`interval`](https://pub.dev/document
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(             
-               child: SfLinearGauge(minorTicksPerInterval: 4)         
-          )
+        body: Center(             
+          child: SfLinearGauge(minorTicksPerInterval: 4)         
+        )
       )
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -66,18 +67,18 @@ The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-                child: SfLinearGauge(
-                    showTicks: false
-                ),
-          )
+        body: Center(
+          child: SfLinearGauge(
+            showTicks: false
+          ),
+        )
       )
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -85,23 +86,23 @@ Widget build(BuildContext context) {
 
 ## Customize tick position
 
-The linear axis allows to position the ticks either inside or outside the axis track using the [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickPosition.html) property. By default, ticks are positioned inside the axis track.
+The linear axis allows positioning the ticks either inside or outside the axis track using the [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickPosition.html) property. By default, ticks are positioned inside the axis track.
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-                child: SfLinearGauge(
-                    tickPosition: LinearElementPosition.outside,
-                    labelPosition: LinearLabelPosition.outside
-                ),
-          )
+        body: Center(
+          child: SfLinearGauge(
+            tickPosition: LinearElementPosition.outside,
+            labelPosition: LinearLabelPosition.outside
+          ),
+        )
       )
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 
@@ -110,20 +111,20 @@ Widget build(BuildContext context) {
 
 ## Customize tick offset
 
-The ticks can be moved near or far to the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickOffset.html) property. The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
+The ticks can be moved near or far from the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickOffset.html) property. The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-                child: SfLinearGauge(tickOffset: 20),
-          )
+        body: Center(
+          child: SfLinearGauge(tickOffset: 20),
+        )
       )
     );
-}
+  }
 
 {% endhighlight %}
 

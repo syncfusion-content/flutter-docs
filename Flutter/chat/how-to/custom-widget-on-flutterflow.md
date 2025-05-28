@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfChat widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive code. It also offers the capability to include custom widgets that aren't part of the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfChat widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 ### Create a new project
 
@@ -30,7 +30,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Add Chat widget as a dependency
 
-1. Click on `+ Add Dependency`, a text editor will appear.
+1. Click on `+ Add Dependency`, and a text editor will appear.
 2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.

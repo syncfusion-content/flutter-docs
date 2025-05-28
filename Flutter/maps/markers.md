@@ -9,15 +9,15 @@ documentation: ug
 
 # Markers in Flutter Maps (SfMaps)
 
-Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom widget at a specific latitude and longitude on a map.
+Markers can be used to denote specific locations on a map. You can use built-in symbols or display custom widgets at specific latitude and longitude coordinates on the map.
 
 ## Adding markers
 
 ### Shape layer
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
+You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
 
-The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
+The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -83,14 +83,14 @@ class Model {
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html), for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
-* Refer the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html), for dynamically updating the markers.
+* Refer to the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) documentation for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
+* Refer to the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html) documentation for dynamically updating the markers.
 
 ### Tile layer
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`MapTileLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
+You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`MapTileLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
 
-The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
+The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -147,14 +147,15 @@ class Model {
 ![Tile layer marker](images/markers/tile_layer_marker.png)
 
 N>
-* Refer the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html), for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
-* Refer the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/controller.html) for dynamically updating the markers.
+* Refer to the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) documentation for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
+* Refer to the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/controller.html) documentation for dynamically updating the markers.
 
 ## Appearance customization
 
 You can customize the built-in markers appearance using the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconType.html), [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconColor.html), [`iconStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeColor.html), [`iconStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeWidth.html), and [`size`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/size.html) properties of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
 
 * **Alignment** - You can change the position of the marker from the given coordinate using the `alignment` property. The default value is `Alignment.center`. The available alignment options are `topLeft`, `topRight`, `topCenter`, `centerLeft`, `center`, `centerRight`, `bottomLeft`, `bottomCenter`, `bottomRight`.
+
 * **Offset** - You can adjust the marker position from the given coordinate using the `offset` property. The default value of the `offset` property is `Offset.zero`.
 
 N>
@@ -231,7 +232,7 @@ class Model {
 
 ## Adding custom markers
 
-You can show custom marker using the `child` property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html).
+You can show custom markers using the `child` property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -304,9 +305,9 @@ class Model {
 
 ## Adding markers dynamically
 
-You can add markers dynamically using the [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/insertMarker.html) method. The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called for the respective index once [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/insertMarker.html) method is called. The [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html) property of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) has to be set with the new instance of [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html).
+You can add markers dynamically using the [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/insertMarker.html) method. The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called for the respective index once the [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/insertMarker.html) method is called. The [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html) property of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) must be set with a new instance of [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html).
 
-Marker will be inserted at the given index if the index value is less than or equal to the current available index and the marker will be added as a last item if the index value is greater than the current available index.
+A marker will be inserted at the given index if the index value is less than or equal to the current available index. The marker will be added as the last item if the index value is greater than the current available index.
 
 N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
 
@@ -468,11 +469,11 @@ class Model {
 
 ## Updating the existing markers
 
-You can update multiple markers at a same time by passing indices to the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method in the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html). The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called again for the respective indices once [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method is called.
+You can update multiple markers at the same time by passing indices to the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method in the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html). The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called again for the respective indices once the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method is called.
 
 N>
 * You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
-* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
+* You can refer to this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -558,11 +559,11 @@ class Model {
 
 ## Deleting a marker
 
-You can remove marker at any index using the [`removeMarkerAt`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/removeMarkerAt.html) method.
+You can remove a marker at any index using the [`removeMarkerAt`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/removeMarkerAt.html) method.
 
 N>
 * You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
-* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
+* You can refer to this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -645,7 +646,7 @@ You can clear all markers using the [`clearMarkers`](https://pub.dev/documentati
 
 N>
 * You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
-* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
+* You can refer to this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -724,9 +725,9 @@ class Model {
 
 ## Marker controller
 
-You can position the marker at the tapped position by converting touch pixel point into coordinates using the [`pixelToLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController/pixelToLatLng.html) method of [`MapTileLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController-class.html) in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html) in the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html).
+You can position a marker at the tapped position by converting the touch pixel point into coordinates using the [`pixelToLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController/pixelToLatLng.html) method of [`MapTileLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController-class.html) in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html) in the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html).
 
-N> It is applicable for both tile layer and shape layer.
+N> This is applicable for both tile layer and shape layer.
 
 ### Shape layer
 

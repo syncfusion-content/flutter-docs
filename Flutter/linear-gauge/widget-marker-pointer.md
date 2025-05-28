@@ -9,7 +9,7 @@ documentation: ug
 
 # Widget Marker Pointer in Flutter Linear Gauge (SfLinearGauge)
 
-The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/LinearWidgetPointer.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) allows to use any Flutter widget as marker pointer. The following code sample uses a [`container`](https://api.flutter.dev/flutter/widgets/Container-class.html) as marker widget.
+The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/LinearWidgetPointer.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) allows you to use any Flutter widget as a marker pointer. The following code sample uses a [`container`](https://api.flutter.dev/flutter/widgets/Container-class.html) as marker widget.
 
 {% highlight dart %} 
 
@@ -44,13 +44,18 @@ The widget marker pointer's alignment can be changed by the [`markerAlignment`](
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
-            LinearWidgetPointer(
+          child: SfLinearGauge(
+            axisTrackExtent: 30, 
+            markerPointers: [
+              LinearWidgetPointer(
                 value: 0,
                 markerAlignment: LinearMarkerAlignment.center,
-                child:
-                    Container(height: 14, width: 14, color: Colors.redAccent)),
-          ]),
+                child: Container(
+                  height: 14, width: 14, color: Colors.redAccent,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -62,11 +67,11 @@ The widget marker pointer's alignment can be changed by the [`markerAlignment`](
 
 ## Change the position
 
-By default, the shape pointer is positioned `outside` the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/position.html) property of a [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/position.html). It is possible to position the shape pointer `inside`, `cross`, or `outside`  the axis. The following code sample demonstrates how to change the shape pointer position to `inside` the axis. 
+By default, the widget pointer is positioned `outside` the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/position.html) property of a [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/position.html). It is possible to position the wwidget pointer `inside`, `cross`, or `outside`  the axis. The following code sample demonstrates how to change the widget pointer position to `inside` the axis. 
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -89,7 +94,7 @@ By default, the shape pointer is positioned `outside` the axis. This position ca
 
 ## Change the offset
 
-In addition to position the widget marker pointer, it is also possible to change the offset of the shape pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/offset.html) is the distance from the axis and it cannot be negative. The cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/offset.html) value. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the widget marker pointer, it is also possible to change the offset of the shape pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/offset.html) is the distance from the axis and it cannot be negative. The cross positioned elements will not be affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/offset.html) value. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% highlight dart %} 
 
@@ -129,40 +134,40 @@ The `LinearMarkerDragBehavior.constrained` can be used to limit the active point
 
 {% highlight dart %}
 
-double _firstPointer = 30;
-double _secondPointer = 70;
+  double _firstPointer = 30;
+  double _secondPointer = 70;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearWidgetPointer(
-          value: _firstPointer,
-          dragBehavior: LinearMarkerDragBehavior.free,
-          onChanged: (double newValue) {
-            setState(() {
-              _firstPointer = newValue;
-            });
-          },
-          position: LinearElementPosition.outside,
-          child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
-        ),
-        LinearWidgetPointer(
-          value: _secondPointer,
-          position: LinearElementPosition.outside,
-          dragBehavior: LinearMarkerDragBehavior.free,
-          onChanged: (double newValue) {
-            setState(() {
-              _secondPointer = newValue;
-            });
-          },
-          child: Icon(Icons.location_pin, color: Colors.red, size: 30),
-        ),
-       ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearWidgetPointer(
+            value: _firstPointer,
+            dragBehavior: LinearMarkerDragBehavior.free,
+            onChanged: (double newValue) {
+              setState(() {
+                _firstPointer = newValue;
+              });
+            },
+            position: LinearElementPosition.outside,
+            child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
+          ),
+          LinearWidgetPointer(
+            value: _secondPointer,
+            position: LinearElementPosition.outside,
+            dragBehavior: LinearMarkerDragBehavior.free,
+            onChanged: (double newValue) {
+              setState(() {
+                _secondPointer = newValue;
+              });
+            },
+            child: Icon(Icons.location_pin, color: Colors.red, size: 30),
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -172,40 +177,40 @@ Widget build(BuildContext context) {
 
 {% highlight dart %}
 
-double _firstPointer = 30;
-double _secondPointer = 70;
+  double _firstPointer = 30;
+  double _secondPointer = 70;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearWidgetPointer(
-          value: _firstPointer,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _firstPointer = newValue;
-            });
-          },
-          position: LinearElementPosition.outside,
-          child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
-        ),
-        LinearWidgetPointer(
-          value: _secondPointer,
-          position: LinearElementPosition.outside,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _secondPointer = newValue;
-            });
-          },
-          child: Icon(Icons.location_pin, color: Colors.red, size: 30),
-        ),
-       ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearWidgetPointer(
+            value: _firstPointer,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _firstPointer = newValue;
+              });
+            },
+            position: LinearElementPosition.outside,
+            child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
+          ),
+          LinearWidgetPointer(
+            value: _secondPointer,
+            position: LinearElementPosition.outside,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _secondPointer = newValue;
+              });
+            },
+            child: Icon(Icons.location_pin, color: Colors.red, size: 30),
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -217,31 +222,31 @@ The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gau
 
 {% highlight dart %}
 
-double _value = 50;
+  double _value = 50;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearWidgetPointer(
-          value: _value,
-          onChangeStart: (double newValue) {
-            _value = newValue;
-          },
-          onChanged: (double newValue) {
-            setState(() {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearWidgetPointer(
+            value: _value,
+            onChangeStart: (double newValue) {
               _value = newValue;
-            });
-          },
-          onChangeEnd: (double newValue) {
-            _value = newValue;
-          },
-          child: Container(height: 14, width: 14, color: Colors.redAccent),
-        ),
-      ],
-    ),
-  );
-}
+            },
+            onChanged: (double newValue) {
+              setState(() {
+                _value = newValue;
+              });
+            },
+            onChangeEnd: (double newValue) {
+              _value = newValue;
+            },
+            child: Container(height: 14, width: 14, color: Colors.redAccent),
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}

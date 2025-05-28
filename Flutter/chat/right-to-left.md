@@ -7,11 +7,9 @@ control: SfChat
 documentation: ug
 ---
 
-
 # Right To Left (RTL) in Flutter Chat (SfChat)
 
-
-Chat supports the right to left rendering for all the elements in the Chat widget. 
+Chat supports the right to left rendering for all the elements in the Chat widget.
 
 ## RTL rendering ways
 
@@ -165,7 +163,7 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 
 ### Message Content
 
-Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the chat conversation area. In RTL mode, message content, header and suggestions will render the widget in right to left direction. 
+Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the chat conversation area. In RTL mode, message content, header and suggestions will render the widget in right to left direction.
 
 {% tabs %}
 {% highlight dart hl_lines="5 8" %}
@@ -213,3 +211,5 @@ Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/docu
 {% endtabs %}
 
 ![Message Content RTL](images/rtl/message_content_rtl.png)
+
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
