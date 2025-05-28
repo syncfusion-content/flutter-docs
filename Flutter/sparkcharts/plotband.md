@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Plot band in Flutter Spark Charts 
 
-This feature is used to highlight a particular region in the spark charts along Y axis.
+This feature is used to highlight a particular region in the spark charts along the Y axis.
 
 The following properties are used to customize the appearances:
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/start.html) - used to configure the start plot band value in Y axis.
