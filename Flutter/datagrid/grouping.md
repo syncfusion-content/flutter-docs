@@ -723,7 +723,7 @@ The group expand and collapse functionality can be enabled by setting the [SfDat
 
 ## Disable group expanding on the initial loading
 
-By default, the SfDataGrid always expands all the groups. All the groups can be collapsed intially by setting the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property to false.
+By default, the SfDataGrid always expands all the groups. All the groups can be collapsed initially by setting the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property to false.
 
 {% tabs %}
 {% highlight Dart %}
