@@ -185,8 +185,6 @@ Below code snippet shows the one dimensional barcode without the [`module`](http
 
 ![without module value](images/text-customization/without-module.jpg)
 
-N> In the image above, the width of the smallest bar line is calculated by dividing the available width by the total number of inputs (0's and 1's).
-
 For two dimensional barcode , if the [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property is not set, the smallest dot size is calculated based on the minimum of available width or height.
 
 The following code snippet shows the two dimensional barcode with [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property,
