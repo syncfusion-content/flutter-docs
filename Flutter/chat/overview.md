@@ -11,8 +11,6 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message content (header, footer, content, and avatar).
 
-The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message content (header, footer, content, and avatar).
-
 ![Chat overview](images/overview/chat-overview.gif)
 
 ## Features
