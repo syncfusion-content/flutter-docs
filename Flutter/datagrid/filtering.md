@@ -342,8 +342,8 @@ The [FilterBehavior](https://pub.dev/documentation/syncfusion_flutter_datagrid/l
 
 The [FilterOperator](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterOperator.html) property determines which logical operator to apply between multiple filter conditions:
 
-* **and** - Applies the `AND` logical operator applies between multiple filter conditions. 
-* **or** - Applies the `OR` logical operator applies between multiple filter conditions.
+* **and** - Applies the `AND` logical operator between multiple filter conditions. 
+* **or** - Applies the `OR` logical operator between multiple filter conditions.
 
 {% tabs %}
 {% highlight Dart %} 

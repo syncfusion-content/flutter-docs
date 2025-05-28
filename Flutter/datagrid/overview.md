@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter DataGrid (SfDataGrid) Overview 
 
-The Syncfusion® Flutter DataGrid is a powerful widget designed to display and manipulate data in a tabular format. Built with performance in mind, it efficiently handles large datasets while providing a rich set of features for data visualization and interaction.        
+The Syncfusion® Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
 ![Overview Flutter Datagrid](images/overview/flutter-datagrid-overview.png)
 
