@@ -22,7 +22,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Date Range Picker is a lightweight widget
 
 	![Multi date picker view Date Range Picker](images/overview/multi-date-picker.png)
 
-* **Quick navigation**: Navigate back and forth the date-range views and between different view modes.
+* **Quick navigation**: Navigate back and forth between date-range views and different view modes.
 
 * **Enable/disable built-in view switching**: Restrict users from navigating to different picker views by disabling view switching. Select values in terms of month, year, or decade with this feature enabled.
 
@@ -32,7 +32,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Date Range Picker is a lightweight widget
 
     ![Date selection Date Range Picker](images/overview/selection_mode.png)
 
-* **Limit the date selection range**: Select only a date range with a specific minimum and maximum numbers of days (span of days) by setting the minimum and maximum days options.
+* **Limit the date selection range**: Select only a date range with a specific minimum and maximum number of days (span of days) by setting the minimum and maximum days options.
 
      ![Limit the date selection range Date Range Picker](images/overview/min_max_date.png)
 
@@ -52,7 +52,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Date Range Picker is a lightweight widget
 
   ![Right to left Date Range Picker](images/overview/right_to_left.png)
 
-* **Accessibility** - Easy access of the date range picker by the screen readers.
+* **Accessibility** - Easy access of the date range picker by screen readers.
 
 * **Globalization** - Display the current date and time by following the globalized date and time formats.
 
