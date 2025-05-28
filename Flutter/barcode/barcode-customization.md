@@ -185,7 +185,7 @@ Below code snippet shows the one dimensional barcode without the [`module`](http
 
 ![without module value](images/text-customization/without-module.jpg)
 
-N> In the image above, the smallest bar line width is calculated based on available width divided by total inputs (0's and 1's).
+N> In the image above, the width of the smallest bar line is calculated by dividing the available width by the total number of inputs (0's and 1's).
 
 For two dimensional barcode , if the [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property is not set, the smallest dot size is calculated based on the minimum of available width or height.
 
@@ -268,7 +268,7 @@ Customize the barcode's bar color using the [`barColor`](https://pub.dev/documen
 
 **Background color customization**
 
-You can customize the barcode's background color with the  [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) property of barcode generator as like the below code snippet,
+You can customize the barcode's background color with the [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) property of barcode generator as like the below code snippet,
 
 {% highlight dart %} 
 

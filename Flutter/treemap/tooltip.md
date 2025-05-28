@@ -120,8 +120,6 @@ You can customize the appearance of the tooltip.
 * **Border radius** - Change the border radius of the tooltip in the treemap using the [`TreemapTooltipSettings.borderRadius`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderRadius.html) property.
 * **Visibility** - Change the duration of the tooltip visibility using the `hideDelay` property. The default value of the `hideDelay` property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. Also, you can increase or decrease the tooltip duration or show tooltip always by setting double.infinity to the `hideDelay` property.
 
-N> For mobile platforms, the hideDelay option is supported. On web or desktop, tooltips appear when hovering over shapes, bubbles, or markers and disappear when the hover is removed.
-
 {% tabs %}
 {% highlight Dart %}
 

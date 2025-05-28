@@ -75,7 +75,7 @@ class PopulationModel {
 
 ## Slice
 
-The [`slice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/SfTreemap.slice.html) layout will arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from[`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback and the available height.
+The [`slice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/SfTreemap.slice.html) layout will arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback and the available height.
 
 {% tabs %}
 {% highlight Dart %}
