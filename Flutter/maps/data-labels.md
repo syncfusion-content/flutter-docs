@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Labels  in Flutter Maps (SfMaps)
 
-Data labels provides identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
+Data labels provide identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 
 ## Show data labels
 
@@ -119,7 +119,7 @@ class Model {
 
 You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are `visible`, `ellipsis`, and `hide`. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflow.visible`.
 
-By default, the data labels will render even if it overflows from the shape. 
+By default, the data labels will render even if they overflows from the shape. 
 
 {% tabs %}
 {% highlight Dart %}

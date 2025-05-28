@@ -9,13 +9,13 @@ documentation: ug
 
 # Shape Sublayer in Flutter Maps (SfMaps)
 
-The shape sublayer is where geographical rendering will happen for the sublayer. This is similar to the main [`shape layer`](https://help.syncfusion.com/flutter/maps/getting-started#add-a-geojson-file-for-shape-layer) rendering. This section explains adding a shape sublayer on the shape layer and tile layer.
+The shape sublayer is where geographical rendering happens for the sublayer. This is similar to the main [`shape layer`](https://help.syncfusion.com/flutter/maps/getting-started#add-a-geojson-file-for-shape-layer) rendering. This section explains how to add a shape sublayer on both the shape layer and tile layer.
 
 ## Shape sublayer on tile layer
 
-The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/MapTileLayer.html) in [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) contains collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html).The actual geographical rendering is done in the each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
+The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html) property in [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) contains a collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer-class.html). The actual geographical rendering is done in each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data must be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer to the unique field name in the .json file to identify each shape.
 
 {% tabs %}
 {% highlight Dart %}
@@ -59,13 +59,13 @@ return Scaffold(
 ![Tile sublayer support](images/shape-sublayer/tile-sublayer.png)
 
 N>
-* Refer the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), for adding tile layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
+* Refer to the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) documentation for adding a tile layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
 
 ## Shape sublayer on shape layer
 
-The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/MapShapeLayer.html) in [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) contains collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html).The actual geographical rendering is done in the each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
+The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html) property in [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) contains a collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer-class.html). The actual geographical rendering is done in each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data must be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer to the unique field name in the .json file to identify each shape.
 
 {% tabs %}
 {% highlight Dart %}
@@ -118,7 +118,7 @@ N>
 
 ## Color and stroke color
 
-You can change the color, strokeColor and strokeWidth of the shape sublayer using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/color.html), [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/strokeColor.html) and [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/strokeWidth.html) properties.
+You can change the color, strokeColor, and strokeWidth of the shape sublayer using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/color.html), [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/strokeColor.html), and [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/strokeWidth.html) properties.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -248,7 +248,7 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the sublayer shape based on whether the value returned from [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) falls within the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
+You can apply color to the sublayer shape based on whether the value returned from [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) falls within the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) range. Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
@@ -321,9 +321,9 @@ class Model {
 
 ## Enable data labels and its customization
 
-You can enable data labels to the shape sublayer using the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/showDataLabels.html) property and customize the data labels text using the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
+You can enable data labels for the shape sublayer using the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/showDataLabels.html) property and customize the data labels text using the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
-N> Refer the [`DataLabels`](https://help.syncfusion.com/flutter/maps/data-labels) section, for customizing data labels.
+N> Refer to the [`DataLabels`](https://help.syncfusion.com/flutter/maps/data-labels) section, for customizing data labels.
 
 {% tabs %}
 {% highlight Dart %}
@@ -412,11 +412,11 @@ class DataModel {
 
 ## Add bubbles to the sublayer
 
-You can enable bubbles to the shape sublayer using the [`bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html) property and customize the bubbles appearance using the [`bubblesSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/bubbleSettings.html) property and enable tooltip for the shape sublayer bubbles using the [`bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/bubbleTooltipBuilder.html) property.
+You can enable bubbles for the shape sublayer using the [`bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html) property and customize the bubbles appearance using the [`bubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/bubbleSettings.html) property. You can also enable tooltips for the shape sublayer bubbles using the [`bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/bubbleTooltipBuilder.html) property.
 
 N> It is applicable for both tile layer and shape layer.
 
-N> Refer the [`Bubbles`](https://help.syncfusion.com/flutter/maps/bubble#tooltip-for-the-bubbles) section, to know more about the bubbles customization.
+N> Refer to the [`Bubbles`](https://help.syncfusion.com/flutter/maps/bubble#tooltip-for-the-bubbles) section, to know more about the bubbles customization.
 
 {% tabs %}
 {% highlight Dart %}
@@ -527,11 +527,11 @@ class DataModel {
 
 ## Enable tooltip for shape sublayer
 
-You can enable tooltip for the shape sublayer using the [`shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/shapeTooltipBuilder.html) property.
+You can enable tooltips for the shape sublayer using the [`shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/shapeTooltipBuilder.html) property.
 
 N> It is applicable for both tile layer and shape layer.
 
-N> Refer the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) section to know more about the tooltip customization.
+N> Refer to the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) section to know more about the tooltip customization.
 
 {% tabs %}
 {% highlight Dart %}
@@ -639,9 +639,9 @@ class DataModel {
 
 You can enable shape sublayer selection using the [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/onSelectionChanged.html) callback along with setting the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/selectedIndex.html) property.
 
-The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/onSelectionChanged.html) callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
+The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/onSelectionChanged.html) callback is triggered when the user selects a shape by tapping or clicking, or when a shape is selected programmatically. It provides the index of the selected shape.
 
-If the selected shape is tapped or clicked again, the index will be passed as -1. It means that, the shape is unselected.
+If the selected shape is tapped or clicked again, the index will be passed as -1, indicating that the shape is unselected.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -736,15 +736,15 @@ class DataModel {
 
 ## Marker
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) property.
+You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) property.
 
-The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property is null.
+The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property is null.
 
 N> It is applicable for both tile layer and shape layer.
 
 N>
-* Refer the [`Marker`](https://help.syncfusion.com/flutter/maps/markers) section to know more about the marker feature.
-* Refer the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) section to know more about the tooltip feature.
+* Refer to the [`Marker`](https://help.syncfusion.com/flutter/maps/markers) section to know more about the marker feature.
+* Refer to the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) section to know more about the tooltip feature.
 
 {% tabs %}
 {% highlight Dart %}
