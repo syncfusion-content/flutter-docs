@@ -165,7 +165,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
 
 ## Explode segments
 
-You can explode a funnel segment using the [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeIndex.html) property. The [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeOffset.html) property is used to specify the exploded segment’s distance.
+You can explode a funnel segment using the [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeIndex.html) property. The [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeOffset.html) property is used to specify the exploded segment's distance.
 
 Also, the segments can be exploded by tapping the segment.
 

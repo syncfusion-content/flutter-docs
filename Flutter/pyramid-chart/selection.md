@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Pyramid Chart (SfPyramidChart)
 
-The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
+The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
