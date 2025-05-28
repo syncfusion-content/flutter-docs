@@ -207,7 +207,7 @@ Widget build(BuildContext context) {
 
 ## Time indicator
 
-[ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [ShowTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
+[showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
