@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Builders in Flutter Event Calendar (SfCalendar)
-The calendar allows you to create a responsive UI with conditions based on a widget’s details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
+The calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
 
 The calendar has two builders to create and assign your custom view:
 * Month cell builder
@@ -319,7 +319,7 @@ Widget build(BuildContext context) {
 ![Time regions builder](images/builder/timeregion-builder.png)
 
 ## Resource view header builder
-The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows to design the custom view, and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows you to design the custom view, and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ResourceViewHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails-class.html) - returns the required details of the resource view header builder.
 

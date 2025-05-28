@@ -256,7 +256,7 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
 
 ## Adding multiple annotation
 
-You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) property. as depicted in below code snippet.
+You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) property as depicted in below code snippet.
 
 {% tabs %}
 {% highlight dart %} 

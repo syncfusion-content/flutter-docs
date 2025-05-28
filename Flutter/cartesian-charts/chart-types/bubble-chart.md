@@ -186,7 +186,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 ## Bubble with multiple series
 
-Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
+Using the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
 
 {% tabs %}
 {% highlight dart %} 
@@ -228,6 +228,6 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 {% endtabs %}
 
-![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)
+![Bubble multiple series](cartesian-chart-types-images/bubble_with_multiple.png)
 
 >**Note**: You can refer to our [Flutter Bubble Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bubble-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bubble Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bubble/default-bubble-chart) that shows how to easily configure with built-in support for creating stunning visual effects.

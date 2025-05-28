@@ -10,7 +10,7 @@ documentation: ug
 
 # System Requirements for Flutter
 
-The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows
+The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows:
 
 ### Operating Systems
 
@@ -24,12 +24,12 @@ The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platfor
 ### Hardware Environment
 
 * Processor: x86 or x64
-* RAM : 512 MB (minimum), 1 GB (recommended)
-* Hard disc: up to 3 GB of free space will be required.
+* RAM: 512 MB (minimum), 1 GB (recommended)
+* Hard disk: up to 3 GB of free space will be required.
 
 ### Development Environment
 
-See the links below for the recommended Flutter development environments
+See the links below for the recommended Flutter development environments:
 
 * Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
 * MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
