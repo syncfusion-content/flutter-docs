@@ -54,15 +54,16 @@ The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/lates
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                  child: SfLinearGauge(showLabels: false)) 
-        )
+        body: Center( 
+          child: SfLinearGauge(showLabels: false),
+        ),
+      ),
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -74,18 +75,18 @@ The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                  child: SfLinearGauge(
-                   interval: 20 
-                )
-            )
-        )
+        body: Center( 
+          child: SfLinearGauge(
+            interval: 20,
+          ),
+        ),
+      ),
     );
-}
+  }
 
 {% endhighlight %}
 

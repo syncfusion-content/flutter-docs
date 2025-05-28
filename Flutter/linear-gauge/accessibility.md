@@ -16,19 +16,19 @@ The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 50;
+  double _value = 50;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Semantics(
-      label: 'Syncfusion Flutter Linear Gauge',
-      value: _value.toString(),
-      child:
-          SfLinearGauge(markerPointers: [LinearShapePointer(value: _value)]),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Semantics(
+        label: 'Syncfusion Flutter Linear Gauge',
+        value: _value.toString(),
+        child:
+            SfLinearGauge(markerPointers: [LinearShapePointer(value: _value)]),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}

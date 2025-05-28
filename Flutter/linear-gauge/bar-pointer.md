@@ -54,7 +54,7 @@ The thickness can be changed by the [`thickness`](https://pub.dev/documentation/
             barPointers: [
               LinearBarPointer(
                 value: 50,
-                thickness: 10
+                thickness: 10,
               )
             ],
           ),
@@ -193,7 +193,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -202,16 +202,16 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 100,
-                  //Apply radial gradient
-                  shaderCallback: (bounds) => RadialGradient(
-                        radius: 30,
-                        colors: [
-                          Colors.redAccent,
-                          Colors.blueAccent,
-                          Colors.greenAccent,
-                        ],
-                      ).createShader(bounds))
+                value: 100,
+                //Apply radial gradient
+                shaderCallback: (bounds) => RadialGradient(
+                radius: 30,
+                colors: [
+                  Colors.redAccent,
+                  Colors.blueAccent,
+                  Colors.greenAccent,
+                ],
+              ).createShader(bounds))
             ],
           ),
         ),
@@ -242,10 +242,10 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
                 thickness: 10,
                 //Apply linear gradient
                 shaderCallback: (bounds) => LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [Colors.redAccent, Colors.blueAccent])
-                    .createShader(bounds)
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [Colors.redAccent, Colors.blueAccent]
+                ).createShader(bounds)
               ),
             ],
           ),
@@ -264,7 +264,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -273,20 +273,20 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 100,
-                  thickness: 10,
-                  //Apply linear gradient
-                  shaderCallback: (bounds) => SweepGradient(
-                  startAngle: 0.1,
-                  endAngle: 0.2,
-                  colors: [
-                    Colors.blueAccent,
-                    Colors.greenAccent,
-                    Colors.orangeAccent,
-                  ],
-                  tileMode: TileMode.mirror,
-                  center: Alignment.bottomRight,
-                ).createShader(bounds))
+                value: 100,
+                thickness: 10,
+                //Apply linear gradient
+                shaderCallback: (bounds) => SweepGradient(
+                startAngle: 0.1,
+                endAngle: 0.2,
+                colors: [
+                  Colors.blueAccent,
+                  Colors.greenAccent,
+                  Colors.orangeAccent,
+                ],
+                tileMode: TileMode.mirror,
+                center: Alignment.bottomRight,
+              ).createShader(bounds))
             ],
           ),
         ),
@@ -313,10 +313,11 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                  value: 80,
-                  thickness: 10,
-                  borderWidth: 3,
-                  borderColor: Colors.cyanAccent)
+                value: 80,
+                thickness: 10,
+                borderWidth: 3,
+                borderColor: Colors.cyanAccent,
+              ),
             ],
           ),
         ),
@@ -341,7 +342,7 @@ You can add multiple bar pointers in a [`LinearGauge`](https://pub.dev/documenta
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-              barPointers: [
+            barPointers: [
               LinearBarPointer(
                 value: 20, 
                 position: LinearElementPosition.outside
@@ -353,7 +354,7 @@ You can add multiple bar pointers in a [`LinearGauge`](https://pub.dev/documenta
                 position: LinearElementPosition.outside
               ),
             ],
-            ),
+          ),
         ),
       ),
     );

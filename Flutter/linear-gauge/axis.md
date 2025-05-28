@@ -44,7 +44,7 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(minimum: -50, maximum: 50)
+          child: SfLinearGauge(minimum: -50, maximum: 50),
         ),
       ),
     );
@@ -73,11 +73,11 @@ The following code sample demonstrates how to customize the [`thickness`](https:
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(thickness: 15)
-            ),
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(thickness: 15),
           ),
         ),
+      ),
     );
   }
 
@@ -96,8 +96,9 @@ The code snippet below sets a solid color to the axis track:
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue),
+          ),
         ),
       ),
     );
@@ -122,18 +123,18 @@ The following code sample applies a gradient to the axis track.
         body: Center(
           child: Container(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(
-                  gradient: LinearGradient(
-                        colors: [Colors.purple, Colors.blue],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        stops: [0.1, 0.5],
-                        tileMode: TileMode.clamp
-                  )
-                )
+              axisTrackStyle: LinearAxisTrackStyle(
+                gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.blue],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  stops: [0.1, 0.5],
+                  tileMode: TileMode.clamp,
+                ),
               ),
             ),
           ),
+        ),
       ),
     );
   }
@@ -150,21 +151,23 @@ The code snippet below sets a border to the axis track:
 
 {% highlight dart %} 
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-              axisTrackStyle: LinearAxisTrackStyle(
-                  // Sets axis thickness for the better visibility of border
-                  thickness: 15,
-                  // Hides axis axis color for the better visibility of border
-                  color: Colors.transparent,
-                  //Sets the border color
-                  borderColor: Colors.blueGrey,
-                  //Sets the border width
-                  borderWidth: 2))
+            axisTrackStyle: LinearAxisTrackStyle(
+              // Sets axis thickness for the better visibility of border
+              thickness: 15,
+              // Hides axis axis color for the better visibility of border
+              color: Colors.transparent,
+              //Sets the border color
+              borderColor: Colors.blueGrey,
+              //Sets the border width
+              borderWidth: 2,
+            ),
+          ),
         ),
       ),
     );
@@ -185,9 +188,12 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(
-                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve))         
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(
+              thickness: 20,
+              edgeStyle: LinearEdgeStyle.bothCurve
+            ),
+          ),   
         ),
       ),
     );
@@ -270,33 +276,33 @@ Linear gauge allows you to display a set of values along with a custom axis base
 
 {% highlight dart %} 
 
-double pointerValue = 50.0;
+  double pointerValue = 50.0;
 
-// To return the label value based on interval
-double _calculateLabelValue(num value) {
-  if (value == 0) {
-    return 0;
-  } else if (value == 1) {
-    return 2;
-  } else if (value == 2) {
-    return 5;
-  } else if (value == 3) {
-    return 10;
-  } else if (value == 4) {
-    return 20;
-  } else if (value == 5) {
-    return 30;
-  } else if (value == 6) {
-    return 50;
-  } else if (value == 7) {
-    return 100;
-  } else {
-    return 150;
+  // To return the label value based on interval
+  double _calculateLabelValue(num value) {
+    if (value == 0) {
+      return 0;
+    } else if (value == 1) {
+      return 2;
+    } else if (value == 2) {
+      return 5;
+    } else if (value == 3) {
+      return 10;
+    } else if (value == 4) {
+      return 20;
+    } else if (value == 5) {
+      return 30;
+    } else if (value == 6) {
+      return 50;
+    } else if (value == 7) {
+      return 100;
+    } else {
+      return 150;
+    }
   }
-}
 
-Widget _getLinearGauge() {
-  return Container(
+  Widget _getLinearGauge() {
+    return Container(
       child: SfLinearGauge(
         minimum: 0,
         maximum: 150.0,
@@ -352,8 +358,9 @@ Widget _getLinearGauge() {
               height: 16)
         ],
       ),
-      margin: EdgeInsets.all(10));
-}
+      margin: EdgeInsets.all(10)
+    );
+  }
 
 {% endhighlight %}
 

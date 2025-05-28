@@ -44,13 +44,18 @@ The widget marker pointer's alignment can be changed by the [`markerAlignment`](
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
-            LinearWidgetPointer(
-              value: 0,
-              markerAlignment: LinearMarkerAlignment.center,
-              child:
-                Container(height: 14, width: 14, color: Colors.redAccent)),
-          ]),
+          child: SfLinearGauge(
+            axisTrackExtent: 30, 
+            markerPointers: [
+              LinearWidgetPointer(
+                value: 0,
+                markerAlignment: LinearMarkerAlignment.center,
+                child: Container(
+                  height: 14, width: 14, color: Colors.redAccent,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -66,7 +71,7 @@ By default, the widget pointer is positioned `outside` the axis. This position c
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -172,40 +177,40 @@ The `LinearMarkerDragBehavior.constrained` can be used to limit the active point
 
 {% highlight dart %}
 
-double _firstPointer = 30;
-double _secondPointer = 70;
+  double _firstPointer = 30;
+  double _secondPointer = 70;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfLinearGauge(
-      markerPointers: [
-        LinearWidgetPointer(
-          value: _firstPointer,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _firstPointer = newValue;
-            });
-          },
-          position: LinearElementPosition.outside,
-          child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
-        ),
-        LinearWidgetPointer(
-          value: _secondPointer,
-          position: LinearElementPosition.outside,
-          dragBehavior: LinearMarkerDragBehavior.constrained,
-          onChanged: (double newValue) {
-            setState(() {
-              _secondPointer = newValue;
-            });
-          },
-          child: Icon(Icons.location_pin, color: Colors.red, size: 30),
-        ),
-       ],
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfLinearGauge(
+        markerPointers: [
+          LinearWidgetPointer(
+            value: _firstPointer,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _firstPointer = newValue;
+              });
+            },
+            position: LinearElementPosition.outside,
+            child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
+          ),
+          LinearWidgetPointer(
+            value: _secondPointer,
+            position: LinearElementPosition.outside,
+            dragBehavior: LinearMarkerDragBehavior.constrained,
+            onChanged: (double newValue) {
+              setState(() {
+                _secondPointer = newValue;
+              });
+            },
+            child: Icon(Icons.location_pin, color: Colors.red, size: 30),
+          ),
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 

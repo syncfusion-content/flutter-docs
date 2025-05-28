@@ -13,7 +13,7 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 {% highlight dart %} 
 
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -152,8 +152,8 @@ The below code snippet demonstrates applying a linear gradient to the range.
                 shaderCallback: (bounds) => LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Colors.greenAccent, Colors.blueAccent])
-                  .createShader(bounds)
+                  colors: [Colors.greenAccent, Colors.blueAccent],
+                ).createShader(bounds)
               )
             ],
           ),
@@ -221,7 +221,8 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
             //Here the range is positioned inside the axis.
             ranges: [
               LinearGaugeRange(position: LinearElementPosition.inside)
-            ]),
+            ],
+          ),
         ),
       ),
     );
@@ -245,20 +246,23 @@ You can set range color to axis elements using the [`useRangeColorForAxis`](http
       axisTrackStyle: LinearAxisTrackStyle(thickness: 1),
       ranges: <LinearGaugeRange>[
         LinearGaugeRange(
-            startValue: 0,
-            endValue: 33,
-            position: LinearElementPosition.outside,
-            color: Color(0xffF45656)),
+          startValue: 0,
+          endValue: 33,
+          position: LinearElementPosition.outside,
+          color: Color(0xffF45656),
+        ),
         LinearGaugeRange(
-            startValue: 33,
-            endValue: 66,
-            position: LinearElementPosition.outside,
-            color: Color(0xffFFC93E)),
+          startValue: 33,
+          endValue: 66,
+          position: LinearElementPosition.outside,
+          color: Color(0xffFFC93E),
+        ),
         LinearGaugeRange(
-            startValue: 66,
-            endValue: 100,
-            position: LinearElementPosition.outside,
-            color: Color(0xff0DC9AB)),
+          startValue: 66,
+          endValue: 100,
+          position: LinearElementPosition.outside,
+          color: Color(0xff0DC9AB),
+        ),
       ],
     )
   )
@@ -282,13 +286,16 @@ You can add multiple ranges for an axis. The below code example demonstrates add
             ranges: [
               //First range.
               LinearGaugeRange(
-                  startValue: 0, endValue: 50, color: Colors.blueAccent),
+                startValue: 0, endValue: 50, color: Colors.blueAccent,
+              ),
               //Second range.
               LinearGaugeRange(
-                  startValue: 50, endValue: 70, color: Colors.redAccent),
+                startValue: 50, endValue: 70, color: Colors.redAccent,
+              ),
               //Third range.
               LinearGaugeRange(
-                  startValue: 70, endValue: 100, color: Colors.greenAccent)
+                startValue: 70, endValue: 100, color: Colors.greenAccent,
+              ),
             ],
           ),
         ),

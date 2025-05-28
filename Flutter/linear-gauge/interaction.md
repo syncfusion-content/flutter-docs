@@ -29,14 +29,15 @@ The following code sample demonstrates how to update a simple marker pointer val
           child: SfLinearGauge(
             markerPointers: [
               LinearShapePointer(
-                  value: shapePointerValue,
-                  //Changes the value of shape pointer based on interaction
-                  onChanged: (value) {
-                    setState(() {
-                      shapePointerValue = value;
-                    });
-                  },
-                  color: Colors.blue[800]),
+                value: shapePointerValue,
+                //Changes the value of shape pointer based on interaction
+                onChanged: (value) {
+                  setState(() {
+                    shapePointerValue = value;
+                  });
+                },
+                color: Colors.blue[800],
+              ),
             ],
           ),
         ),

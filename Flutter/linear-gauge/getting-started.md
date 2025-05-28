@@ -60,16 +60,16 @@ After the package has been imported, initialize the [`SfLinearGauge`](https://pu
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                        child:SfLinearGauge()
-                )
-              )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child:SfLinearGauge()
+        )
+      )      
+    );
+  }
 
 {% endhighlight %}
 
@@ -81,16 +81,16 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                   child: SfLinearGauge(minimum: 100, maximum: 200)
-                )
-            )      
-        );
-    }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(minimum: 100, maximum: 200)
+        )
+      )      
+    );
+  }
 
 {% endhighlight %}
 
