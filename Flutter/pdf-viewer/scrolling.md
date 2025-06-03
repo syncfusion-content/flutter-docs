@@ -13,11 +13,11 @@ The Syncfusion<sup>&reg;</sup> [Flutter PDF Viewer](https://www.syncfusion.com/f
 
 W> Please note that since the PDF Viewer has built-in scrolling capability, it is advised to avoid placing the PDF Viewer inside other controls that also offer scrolling, such as ScrollView. Nesting within such controls may cause unexpected issues.
 
-## Navigate to the desired offset programmatically
+## Navigate to the Desired Offset Programmatically
 
 The [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method moves the scroll position of the `SfPdfViewer` to the specified horizontal and vertical offset. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained. 
 
-N> Both the `xOffset` and `yOffset` are optional parameters and if the offset values are not provided, then the `SfPdfViewer` will be scrolled or moved to the default position (0, 0).
+N> Both the `xOffset` and `yOffset` are optional parameters, and if the offset values are not provided, then the `SfPdfViewer` will be scrolled or moved to the default position (0, 0).
 
 {% tabs %}
 {% highlight dart hl_lines="21" %}
@@ -57,15 +57,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-
-## Get the current scroll offset position
+## Get the Current Scroll Offset Position
 
 The `SfPdfViewer` allows you to get the current scroll offset position using the [scrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/scrollOffset.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="16 17" %}
 
-final PdfViewerController _pdfViewerController=PdfViewerController();
+final PdfViewerController _pdfViewerController = PdfViewerController();
 
 @override
 Widget build(BuildContext context) {
@@ -80,8 +79,8 @@ Widget build(BuildContext context) {
           ),
           onPressed: () {
             _pdfViewerController.jumpToPage(3);
-            print( _pdfViewerController.scrollOffset.dy);
-            print( _pdfViewerController.scrollOffset.dx);
+            print(_pdfViewerController.scrollOffset.dy);
+            print(_pdfViewerController.scrollOffset.dx);
           },
         ),
       ],

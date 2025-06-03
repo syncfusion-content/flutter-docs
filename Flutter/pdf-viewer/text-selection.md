@@ -7,17 +7,17 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Text selection in Flutter PDF Viewer (SfPdfViewer)
+# Text Selection in Flutter PDF Viewer (SfPdfViewer)
 
-On a touch device, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to select a text in the PDF page by long pressing on it, which in turn displays the selection handles or bubbles at the top-left and bottom-right corners of its bounds. Then, you can use the left handle to select the text at the left and top, and the right handle to select the text at the right and bottom directions.
+On a touch device, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to select text in the PDF page by long pressing on it, which in turn displays the selection handles or bubbles at the top-left and bottom-right corners of its bounds. You can then use the left handle to select text at the left and top, and the right handle to select text at the right and bottom directions.
 
-And on a desktop web browser, the text selection can also be performed using mouse dragging with the [`selection`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode.html) interaction mode enabled.
+On a desktop web browser, text selection can also be performed using mouse dragging with the [`selection`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode.html) interaction mode enabled.
 
-N> The images in the document will not be selected and, the multiple-page text selection is not supported for now. 
+N> Images in the document will not be selected, and multiple-page text selection is not supported for now. 
 
-## Enable or disable text selection
+## Enable or Disable Text Selection
 
-You can enable or disable the text selection in the PDF page using the [enableTextSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableTextSelection.html) property. The following code example explains the same.
+You can enable or disable text selection in the PDF page using the [enableTextSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableTextSelection.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -33,9 +33,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On a desktop web browser, this `enableTextSelection` property will have no effect on the [`pan`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode.html) interaction mode.
+N> On a desktop web browser, the `enableTextSelection` property will have no effect on the [`pan`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode.html) interaction mode.
 
-## Customize the text selection and its handle color
+## Customize the Text Selection and Its Handle Color
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to customize the color used for text selection and its handle based on your requirements. The properties [selectionColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionColor.html) and [selectionHandleColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionHandleColor.html) of the [TextSelectionThemeData](https://api.flutter.dev/flutter/material/TextSelectionThemeData-class.html) class can be used to customize them. The following code example explains the same.
 
@@ -100,9 +100,9 @@ Widget build(BuildContext context) {
 
 The `SfPdfViewer` text selection supports the [PdfTextSelectionChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedCallback.html) to notify the text selection changes.
 
-### Text selection changed callback
+### Text Selection Changed Callback
 
-The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback triggers when the text is selected or deselected in the SfPdfViewer. The [PdfTextSelectionChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails-class.html) will hold the [globalSelectedRegion](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/globalSelectedRegion.html) representing the global bounds information of the selected text region and the [selectedText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/selectedText.html) representing the selected text value. The following code example explains the same.
+The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback triggers when the text is selected or deselected in the SfPdfViewer. The [PdfTextSelectionChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails-class.html) holds the [globalSelectedRegion](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/globalSelectedRegion.html) representing the global bounds information of the selected text region and the [selectedText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSelectionChangedDetails/selectedText.html) representing the selected text value. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11 12 13" %}
@@ -126,7 +126,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to get the selected text lines in the PDF viewer?
+## How to Get the Selected Text Lines in the PDF Viewer?
 
 Using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method, you can get the selected text lines in the PDF viewer. The following code example explains the same.
 
@@ -169,13 +169,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a customized text selection context menu with copy and text markup options to retrieve the selected text?
+## How to Create and Display a Customized Text Selection Context Menu with Copy and Text Markup Options to Retrieve the Selected Text?
 
 With the options available in `SfPdfViewer` text selection, you can easily create and display a customized text selection context menu with various options such as **Copy, Highlight, Underline, Strikethrough, and Squiggly**, and perform operations with them. The following code example explains how to implement this functionality.
 
 In this example, we use the [OverlayEntry](https://api.flutter.dev/flutter/widgets/OverlayEntry-class.html) widget to create the customized context menu and add buttons for various options, such as Copy, Highlight, Underline, Strikethrough, and Squiggly. We are calling the method to display the customized context menu in the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback. Whenever one of these options is pressed, the corresponding action is performed on the selected text.
 
-* For the copy operation, the selected text value is retrieved from the'selectedText` property of the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details. We then copy the text to the clipboard using the [Clipboard.setData](https://api.flutter.dev/flutter/services/Clipboard/setData.html) method.
+* For the copy operation, the selected text value is retrieved from the `selectedText` property of the [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onTextSelectionChanged.html) callback details. We then copy the text to the clipboard using the [Clipboard.setData](https://api.flutter.dev/flutter/services/Clipboard/setData.html) method.
 The text selection is cleared after the Copy operation by calling the [clearSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearSelection.html) controller method.
 
 * For the text markup options, we retrieve the selected text lines using the [getSelectedTextLines](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/getSelectedTextLines.html) method and add the respective annotations using the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method on the `PdfViewerController`.

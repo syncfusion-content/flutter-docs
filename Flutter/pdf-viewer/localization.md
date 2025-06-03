@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Flutter PDF Viewer (SfPdfViewer)
 
-By default, the `SfPdfViewer` widget supports US English localization. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and `syncfusion_localizations` package to your application. 
+By default, the `SfPdfViewer` widget supports US English localization. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and `syncfusion_localizations` packages to your application. 
 
 To use `flutter_localizations` and `syncfusion_localizations`, add the packages as a dependency to the `pubspec.yaml` file.
 

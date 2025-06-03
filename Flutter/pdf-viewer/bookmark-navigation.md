@@ -7,19 +7,19 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Bookmark navigation in Flutter PDF Viewer (SfPdfViewer)
+# Bookmark Navigation in Flutter PDF Viewer (SfPdfViewer)
 
-Navigate to the desired bookmark topics using the default bookmark view or the controller method programmatically.  
+Navigate to the desired bookmark topics using the default bookmark view or the controller method programmatically.
 
-## Open and close the built-in bookmark view programmatically
+## Open and Close the Built-in Bookmark View Programmatically
 
-The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBookmarkView](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/openBookmarkView.html) method and it can be closed either by tapping the close icon or device's back button. Also, we can close the bookmark programmatically by using the Navigator’s pop method. 
+The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBookmarkView](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/openBookmarkView.html) method, and it can be closed either by tapping the close icon or the device's back button. Also, we can close the bookmark programmatically by using the Navigator’s pop method.
 
-* You can use [isBookmarkViewOpen](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/isBookmarkViewOpen.html) property of the `SfPdfViewerState` class, to know whether the built-in bookmark view is open or not.
+* You can use the [isBookmarkViewOpen](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/isBookmarkViewOpen.html) property of the `SfPdfViewerState` class to know whether the built-in bookmark view is open or not.
 
 ![Bookmark view](images/bookmark-navigation/bookmark_view.png)
 
-The following code example explains the opening of built-in bookmark view programmatically.
+The following code example explains the opening of the built-in bookmark view programmatically.
 
 {% tabs %}
 {% highlight dart hl_lines="1 15" %}
@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
         ),
         IconButton(
           icon: Icon(
-            Icons. bookmark,
+            Icons.bookmark,
             color: Colors.white,
           ),
           onPressed: () {
@@ -63,7 +63,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Navigate to the desired bookmark topic programmatically
+## Navigate to the Desired Bookmark Topic Programmatically
 
 You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains the same.
 

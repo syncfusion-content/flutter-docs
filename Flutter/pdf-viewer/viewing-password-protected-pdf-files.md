@@ -7,13 +7,13 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Viewing password-protected PDF's in Flutter PDF Viewer (SfPdfViewer)
+# Viewing Password-Protected PDFs in Flutter PDF Viewer (SfPdfViewer)
 
-To load a password-protected document without a password or with an invalid password in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) using the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property. The default password dialog will be displayed.
+To load a password-protected document without a password or with an invalid password in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html), use the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property. The default password dialog will be displayed.
 
 ![Password dialog](images/password-dialog/password-dialog.png)
 
-## Customize the visibility of password dialog
+## Customize the Visibility of Password Dialog
 
 The password-protected document can be loaded by providing the password in the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property of SfPdfViewer. The [canShowPasswordDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPasswordDialog.html) property allows the user to customize the password dialog visibility. The following code example explains the same.
 
@@ -33,10 +33,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a Customized Password Dialog?
+## How to Create and Display a Customized Password Dialog?
 
-The `SfPdfViewer` library allows you to create and display a customized password dialog. The following code example explains the same.
-In this example, We have disabled the built-in password dialog by setting the false to the [canShowPasswordDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPasswordDialog.html) property and creating the customized password dialog with the [AlertDialog](https://api.flutter.dev/flutter/material/AlertDialog-class.html) widget. Whenever the `password` is empty or incorrect, the [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoadFailed.html) callback is triggered, used this callback to display the customized password dialog.
+The `SfPdfViewer` library allows you to create and display a customized password dialog. The following code example explains the same. In this example, we have disabled the built-in password dialog by setting the [canShowPasswordDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPasswordDialog.html) property to false and created the customized password dialog with the [AlertDialog](https://api.flutter.dev/flutter/material/AlertDialog-class.html) widget. Whenever the `password` is empty or incorrect, the [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoadFailed.html) callback is triggered, and this callback is used to display the customized password dialog.
 
 {% tabs %}
 {% highlight Dart %}
@@ -245,7 +244,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
         });
   }
 
-  ///Close the password dialog
+  /// Close the password dialog
   void _closePasswordDialog() {
     Navigator.pop(context, 'Cancel');
     _hasPasswordDialog = false;
@@ -253,7 +252,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
     _textFieldController.clear();
   }
 
-  /// Validates the password entered in text field.
+  /// Validates the password entered in the text field.
   void _handlePasswordValidation(String value) {
     setState(() {
       _password = value;
