@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open a Document From URL in Flutter PDF Viewer | Syncfusion
-description: Learn here about opening a PDF document from URL in Syncfusion® Flutter PDF Viewer widget (SfPdfViewer).
+description: Learn here about opening a PDF document from a URL in the Syncfusion® Flutter PDF Viewer widget (SfPdfViewer).
 platform: flutter
 control: SfPdfViewer
 documentation: ug
@@ -35,7 +35,7 @@ N> Due to CORS security restrictions in a web application, some PDFs obtained fr
 
 This issue can be resolved by configuring the CORS settings on the requested server or by disabling the security settings in **chrome.dart** as mentioned in the steps below:
 
-Go to **flutter\bin\cache** and remove a file named: **flutter_tools.stamp**.
-Go to **flutter\packages\flutter_tools\lib\src\web** and open the file **chrome.dart**.
-Find **'--disable-extensions'**.
-Add **'--disable-web-security'**.
+1. Go to **flutter\bin\cache** and remove a file named: **flutter_tools.stamp**.
+2. Go to **flutter\packages\flutter_tools\lib\src\web** and open the file **chrome.dart**.
+3. Find **'--disable-extensions'**.
+4. Add **'--disable-web-security'**.
