@@ -8,19 +8,19 @@ documentation: ug
 keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter open pdf, flutter pdf view
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> PDF Viewer widget in FlutterFlow?
+# How to Add Syncfusion<sup>&reg;</sup> PDF Viewer Widget in FlutterFlow?
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfPdfViewer widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the SfPdfViewer widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
-### Create a new project
+### Create a New Project
 
 Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) and click the `+ Create New` button to create a new project.
 
-### Creating the custom widget
+### Creating the Custom Widget
 
-1. Navigate to the `Custom Code` section in the left side navigation menu.
+1. Navigate to the `Custom Code` section in the left-side navigation menu.
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
 4. Click the `View Boilerplate Code` button on the right side, represented by this icon `[</>]`.
@@ -29,14 +29,14 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](images/custom-widget.png)
 
-### Add PDF Viewer widget as a dependency
+### Add PDF Viewer Widget as a Dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) on [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](images/copy-version.png)
-3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
+3. Paste the copied dependency into the text editor, then click `Refresh` and `Save`.
 
->**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) has been migrated to the latest version of the Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](images/dependency.png)
 
@@ -44,21 +44,21 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: Since [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) depends on the [Syncfusion<sup>&reg;</sup> Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
 
-### Import the package
+### Import the Package
 
 1. Navigate to the `Installing` tab on the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) page. Under the `Import it` section, copy the package import statement.
 ![Package](images/copy-package.png)
-2. Paste the copied import statement into the code editor and then `Save` it.
+2. Paste the copied import statement into the code editor and then `Save`.
 ![Import](images/import-package-flutterflow.png)
 
-### Add widget code snippet in code editor
+### Add Widget Code Snippet in Code Editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_PdfViewer/example) tab in [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_PdfViewer/example) tab in [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_PdfViewer) and copy the widget-specific codes.
 ![Code](images/code-snippet.png)
-2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
+2. Paste the copied code sample into the code editor, click `Format Code`, and `Save`.
 ![Code snippet](images/Adding-code-snippent.png)
 
-### Compiling the codes
+### Compiling the Codes
 
 1. Click the 'Compile Code' button located in the top right corner.
 2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
@@ -67,7 +67,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: The compilation progress takes 2 to 3 minutes to complete.
 
-### Create Custom Action to import pdf.js script
+### Create Custom Action to Import pdf.js Script
 
 1. Click the `+ Add` button to open a dropdown menu, then select `Action`.
 2. Update the action name as desired, say `importPdfjsScript`.
@@ -101,20 +101,20 @@ Future importPdfjsScript() async {
 
 ![Custom Action](images/custom-action.png)
 
-### Utilizing the custom action
+### Utilizing the Custom Action
 
-1. Click on main.dart file under Custom Files section.
+1. Click on the main.dart file under the Custom Files section.
 2. Add the `importPdfjsScript` action as Initial Action.
 3. Save the file.
 
 ![main.dart](images/add-custom-action.png)
 
-### Utilizing the custom widget
+### Utilizing the Custom Widget
 
-1. Navigate to `Widget Palette` located in the left side navigation menu.
+1. Navigate to the `Widget Palette` located in the left-side navigation menu.
 2. Click on the `Components` tab.
-3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget onto your page.
 
 ![Page](images/page.png)
 
->**Note**: Since, the SfPdfViewer depends on the pdf.js library on the web platform, the preview of the widget will not be displayed in the FlutterFlow editor. To view the widget, run the application on a web platform.
+>**Note**: Since the SfPdfViewer depends on the pdf.js library on the web platform, the preview of the widget will not be displayed in the FlutterFlow editor. To view the widget, run the application on a web platform.

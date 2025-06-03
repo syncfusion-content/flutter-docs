@@ -9,13 +9,13 @@ documentation: ug
 
 # Right to Left (RTL) in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports right-to-left rendering. All the user interface elements will be rendered based on LTR and RTL direction, and the functionalities like text search and copying text also support RTL languages.
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports right-to-left rendering. All the user interface elements will be rendered based on LTR and RTL direction, and functionalities like text search and copying text also support RTL languages.
 
-## RTL rendering ways
+## RTL Rendering Ways
 
-Right to left rendering can be switched in the following ways:
+Right-to-left rendering can be switched in the following ways:
 
-### Wrapping the SfPdfViewer with Directionality widget
+### Wrapping the SfPdfViewer with Directionality Widget
 
 To change the rendering direction from right to left, wrap the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget inside the [Directionality](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [textDirection](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [TextDirection.rtl](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html).
 
@@ -60,11 +60,11 @@ To change the rendering direction from right to left, wrap the [SfPdfViewer](htt
 {% endhighlight %}
 {% endtabs %}
 
-### Changing the locale to RTL languages
+### Changing the Locale to RTL Languages
 
 To change the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) rendering direction from right to left, change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
-To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
+To use `flutter_localizations`, add the package as a dependency in the `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -74,7 +74,7 @@ flutter_localizations:
 
 {% endhighlight %}
 
-Then, import the `flutter_localizations` library, specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
+Then, import the `flutter_localizations` library, and specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
 {% highlight dart %}
@@ -122,4 +122,4 @@ Then, import the `flutter_localizations` library, specify [localizationsDelegate
 {% endhighlight %}
 {% endtabs %}
 
-N> RTL scrolling is not supported in single page layout mode when the [scrollDirection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/scrollDirection.html) property is set to `PdfScrollDirection.horizontal`.
+N> RTL scrolling is not supported in single-page layout mode when the [scrollDirection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/scrollDirection.html) property is set to `PdfScrollDirection.horizontal`.

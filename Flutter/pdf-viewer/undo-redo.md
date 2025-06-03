@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and redo annotations in the Flutter PDF Viewer (SfPdfViewer)
+# Undo and Redo Annotations in the Flutter PDF Viewer (SfPdfViewer)
 
 If you performed any undesired actions when adding, removing, or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to undo and redo the changes made to the annotations.
 
@@ -15,7 +15,7 @@ For desktop platforms such as Windows, macOS, and desktop web, you can use the f
 
 <table>
 <tr>
-<th>Action & Shortcut keys</th>
+<th>Action & Shortcut Keys</th>
 <th>Windows</th>
 <th>macOS</th>
 </tr>

@@ -11,11 +11,11 @@ documentation: ug
 
 This section will go through the various functions available in the `SfPdfViewer` for adding, removing, and editing annotations in a PDF document.
 
-## Add annotations to a PDF document
+## Add Annotations to a PDF Document
 
 This section will go through how to add annotations to a PDF document programmatically.
 
-### Add annotations programmatically
+### Add Annotations Programmatically
 
 You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method of the `PdfViewerController` class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
 
@@ -39,7 +39,7 @@ void addHighlightAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation added callback
+### Annotation Added Callback
 
 The callback provided to the [onAnnotationAdded](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationAdded.html) property is triggered when an annotation is successfully added to the PDF document. The following example shows how to use this callback.
 
@@ -63,11 +63,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Remove annotations from the PDF document
+## Remove Annotations from the PDF Document
 
 This section will go through different methods of removing annotations from a PDF document.
 
-### Remove a specific annotation programmatically
+### Remove a Specific Annotation Programmatically
 
 You can programmatically remove an annotation from the document by providing the specific annotation instance as the parameter to the [removeAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAnnotation.html) method of `PdfViewerController`. The following example shows how to remove the first annotation in the annotation collection from a PDF document.
 
@@ -88,7 +88,7 @@ void removeFirstAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
-### Remove all the annotations
+### Remove All Annotations
 
 You can programmatically remove all the annotations from a document by calling the [removeAllAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAllAnnotations.html) method. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the pageNumber parameter is 0. Refer to the following code example. 
 
@@ -108,7 +108,7 @@ void removeAllAnnotationsInFirstPage() {
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation removed callback
+### Annotation Removed Callback
 
 The callback provided to the [onAnnotationRemoved](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationRemoved.html) property is triggered when an annotation is removed successfully from the PDF document. The following example shows how to use this callback.
 
@@ -132,11 +132,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit annotations
+## Edit Annotations
 
 This section will go through different methods of editing annotations in a PDF document programmatically.
 
-### Edit a specific annotation
+### Edit a Specific Annotation
 
 You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the Annotation collection. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can modify the other properties also.
 
@@ -159,7 +159,7 @@ void editAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation edited callback
+### Annotation Edited Callback
 
 The callback provided to the [onAnnotationEdited](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationEdited.html) property is triggered when an annotation is edited in the PDF document. The following code sample explains how to use this callback.
 

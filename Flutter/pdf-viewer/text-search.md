@@ -7,19 +7,19 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Text search in Flutter PDF Viewer (SfPdfViewer)
+# Text Search in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to find texts in the PDF document and navigate to all its occurrences.
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to find text in the PDF document and navigate to all its occurrences.
 
-## Initiate text search and retrieve results
+## Initiate Text Search and Retrieve Results
 
-The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) as parameters. This method searches for the text and highlights all the instances of the texts in the document and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you to navigate to the different searched text instances available and cancel the search operation as well.
+The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) as parameters. This method searches for the text, highlights all the instances of the text in the document, and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you navigate to the different searched text instances available and cancel the search operation.
 
-On mobile and desktop platforms, the search will be performed asynchronously and so the results will be returned periodically on a page-by-page basis, which can be retrieved using the `PdfTextSearchResult.addListener` method in the application.  
+On mobile and desktop platforms, the search will be performed asynchronously, so the results will be returned periodically on a page-by-page basis, which can be retrieved using the `PdfTextSearchResult.addListener` method in the application.
 
-Whereas in the web platform, the search will be performed synchronously and so the result will be returned only after completing the search on all the pages. This is since `isolate` is not supported for the web platform yet.
+Whereas on the web platform, the search will be performed synchronously, so the result will be returned only after completing the search on all the pages. This is because `isolate` is not supported for the web platform yet.
 
-To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results for the same.
+To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results.
 
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.
 
@@ -74,9 +74,9 @@ void initState() {
 {% endhighlight %}
 {% endtabs %}
 
-## Navigate to the next and previous instance
+## Navigate to the Next and Previous Instance
 
-The [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) and [previousInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/previousInstance.html) methods in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class help you to navigate to the next and previous search text instance in the PDF document. The following code example explains the same.
+The [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) and [previousInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/previousInstance.html) methods in the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class help you to navigate to the next and previous search text instances in the PDF document. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="44 56" %}
@@ -150,9 +150,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Cancel text search
+## Cancel Text Search
 
-The [clear](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/clear.html) method in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class is used to cancel the text search operation. When the text search is in progress, this method can be used to cancel the same and clear all the highlighted texts in the `SfPdfViewer`. The following code example explains the same
+The [clear](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/clear.html) method in the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) class is used to cancel the text search operation. When the text search is in progress, this method can be used to cancel the same and clear all the highlighted texts in the `SfPdfViewer`. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="45" %}
@@ -216,9 +216,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the search text highlight color
+## Customize the Search Text Highlight Color
 
-The colors in which the current instance and other instances are highlighted can be customized with the help of [currentSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/currentSearchTextHighlightColor.html) and [otherSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/otherSearchTextHighlightColor.html) property. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (w.r.t this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances color opacity will be 30%.
+The colors in which the current instance and other instances are highlighted can be customized with the help of [currentSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/currentSearchTextHighlightColor.html) and [otherSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/otherSearchTextHighlightColor.html) property. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (with respect to this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances color opacity will be 30%.
 
 The following code example explains how to customize the search text highlight color.
 
@@ -273,9 +273,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to identify if there is no instance found for the text being searched?
+## How to Identify if There is No Instance Found for the Text Being Searched?
 
-The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) property in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if no instance of the searched text is found in the PDF document. That is, if the [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) returns value 0, then there is no matching instance found for the searched text. The following code explains the same.
+The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) property in the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if no instance of the searched text is found in the PDF document. That is, if [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) returns value 0, then there is no matching instance found for the searched text. The following code explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="25 26 27 28 29 30 31 32 33 34 35 36" %}
@@ -328,9 +328,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to identify if a complete cycle of text search is completed? 
+## How to Identify if a Complete Cycle of Text Search is Completed?
 
-The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) and [currentInstanceIndex](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/currentInstanceIndex.html) properties in the [PdfSearchTextResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if a complete cycle of text search is completed in the PDF document. That is, when the [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) method is called, you can check if the `currentInstanceIndex` equals the `totalInstanceCount`, then it can be considered that a complete cycle of text search is completed. The following code example explains the same.
+The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) and [currentInstanceIndex](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/currentInstanceIndex.html) properties in the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if a complete cycle of text search is completed in the PDF document. That is, when the [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/nextInstance.html) method is called, you can check if the `currentInstanceIndex` equals the `totalInstanceCount`, then it can be considered that a complete cycle of text search is completed. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="71 72 73 74 75" %}
@@ -423,17 +423,17 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a custom search toolbar with the search features?  
+## How to Create and Display a Custom Search Toolbar with the Search Features?
 
-With the options available in the `SfPdfViewer` text search, you can easily create and display a custom search toolbar with the search features. The following code example explains the same. 
+With the options available in the `SfPdfViewer` text search, you can easily create and display a custom search toolbar with the search features. The following code example explains the same.
 
-In this example, initially the main toolbar or AppBar will be displayed with a search button and on pressing that, a custom search toolbar will be displayed with the following options,
+In this example, initially the main toolbar or AppBar will be displayed with a search button, and on pressing that, a custom search toolbar will be displayed with the following options:
 
 * **Back button** - To close the search toolbar.
 * **Text field entry** - To enter the text to be searched in the document.
 * **Close button** - To cancel the search progress.
 * **Busy indicator** - To indicate that the search is in progress. This will be visible only on mobile and desktop platforms.
-* **Instances information text** - Displays the current instance index and total instances count of the searched text. 
+* **Instances information text** - Displays the current instance index and total instances count of the searched text.
 * **Previous instance search navigation button** - To navigate to the previous match instance.
 * **Next instance search navigation button** - To navigate to the next match instance.
 
