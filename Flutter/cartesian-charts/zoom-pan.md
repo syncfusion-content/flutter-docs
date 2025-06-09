@@ -50,7 +50,9 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 ## Directional zooming
 
-Directional zooming provides zoom functionality in a specified direction on the chart. This can be enabled by [`enableDirectionalZooming`]() property and defaults to `false`. Directional zooming can be performed by moving two fingers across the chart.
+The directional zooming feature improves the zoom experience by allowing you to zoom in and out in a specific direction. To enable this feature, set the [`enableDirectionalZooming`]() property to `true`, the default value is `false`. 
+
+Additionally, ensure that `pinch zooming` is enabled and the `zoomMode` is set to `ZoomMode.xy` for directional zooming to work. The following code sample demonstrates how to enable directional zooming.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -87,6 +89,8 @@ Directional zooming provides zoom functionality in a specified direction on the 
 
 {% endhighlight %}
 {% endtabs %}
+
+![Directional Zooming](images/zooming-panning/directional-zooming.gif)
 
 ## Double tap zooming
 
