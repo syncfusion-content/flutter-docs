@@ -11,7 +11,7 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) can be accessed by the screen readers by wrapping the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget can be accessed by the screen readers by wrapping it with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,7 +71,7 @@ class PopulationModel {
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs for the sufficient contrast.
+You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs to ensure sufficient contrast:
 
 * [`Shape`](https://help.syncfusion.com/flutter/maps/shape#shape-color)
 * [`Bubble`](https://help.syncfusion.com/flutter/maps/bubble#color)
@@ -87,9 +87,9 @@ You can customize the color of the [`SfMaps`](https://pub.dev/documentation/sync
 
 ## Large fonts
 
-The font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) will be automatically scaled based on the device settings. 
+The font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) will automatically scale based on the device settings.
 
-Also, you can change the font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs:
+Additionally, you can manually adjust the font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using these APIs:
 
 * [`Data label style`](https://help.syncfusion.com/flutter/maps/data-labels#appearance-customization)
 * [`Legend text style`](https://help.syncfusion.com/flutter/maps/legend#text-style)
@@ -97,4 +97,4 @@ Also, you can change the font size of the [`SfMaps`](https://pub.dev/documentati
 
 ## Easier touch targets
 
-The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the applicable elements.
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget provides touch targets of 48 × 48 pixels as per accessibility standards for all applicable elements.

@@ -12,7 +12,7 @@ Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfu
 
 ## View changed callback
 
-The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onViewChanged.html) callback triggers when the current view of calendar changed, that is view swiped to previous /next view, calendar view switched to another calendar view.
+The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onViewChanged.html) callback triggers when the current view of calendar changed, that is view swiped to previous/next view, calendar view switched to another calendar view.
 
 * `visibleDates` - returns the current view visible dates collection.
 
@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
 
 ## Calendar tap callback
 
-The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar tapped.
+The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar is tapped.
 
 * `date` - returns the selected date.
 * `appointments` - returns the selected appointments.

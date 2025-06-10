@@ -9,7 +9,7 @@ documentation: ug
 
 # Circle Layer in Flutter Maps (SfMaps)
 
-Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the circles and customize them.
+Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add circles and customize them.
 
 ## Adding circles
 
@@ -736,15 +736,15 @@ Widget build(BuildContext context) {
 
 ## Inverted circle
 
-You can apply color to the inverted circle by initializing the [`MapCircleLayer.inverted`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/MapCircleLayer.inverted.html) constructor. The inner circle color is transparent and the outer portion of the circle covered by an overlay color.
+You can apply color to the inverted circle by initializing the [`MapCircleLayer.inverted`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/MapCircleLayer.inverted.html) constructor. The inner circle remains transparent while the outer portion of the circle is covered by an overlay color.
 
 You can customize the inverted circle using the following properties:
 
 * **Stroke color** - Change the stroke color of the circle using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeColor.html) property.
 * **Stroke width** - Change the stroke width of the circle using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property. The default value of the `strokeWidth` property is `1`.
 * **Overlay color** - Change the outer portion color of the circle using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/color.html) property.
-* **Tooltip** - You can enable tooltip for the inverted circle using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
-* **Animation** - You can apply animation for the inverted circle using the [`animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) property and able to customize the animation curve and duration.
+* **Tooltip** - Enable tooltip for the inverted circle using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
+* **Animation** - Apply animation to the inverted circle using the [`animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) property and customize the animation curve and duration.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -798,5 +798,5 @@ Widget build(BuildContext context) {
 ![Inverted circle](../images/circle-layer/inverted-circle.png)
 
 N>
-* Refer [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) section, for adding and customizing tooltip to the inverted circle.
-* Refer [`animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) section, for applying animation to the inverted circle.
+* Refer to the [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) section for adding and customizing tooltips to the inverted circle.
+* Refer to the [`animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) section for applying animation to the inverted circle.

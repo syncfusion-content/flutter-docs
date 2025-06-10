@@ -17,29 +17,30 @@ The default style of axis labels is as follows.
 
 Axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisLabelStyle.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). The [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisLabelStyle.html) property has the following properties to customize the axis labels.
 
-* `color` – Allows to customize the color of the labels.
-* `fontFamily` – Allows to specify the font family for labels.
-* `fontStyle` – Allows to specify the font style for labels.
-* `fontWeight` – Allows to specify the font weight for labels.
-* `fontSize` – Allows to specify the font size for labels.
+* `color` – Allows you to customize the color of the labels.
+* `fontFamily` – Allows you to specify the font family for labels.
+* `fontStyle` – Allows you to specify the font style for labels.
+* `fontWeight` – Allows you to specify the font weight for labels.
+* `fontSize` – Allows you to specify the font size for labels.
 
 {% highlight dart %} 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            body: Center(
-                child: SfLinearGauge(
-                    axisLabelStyle: TextStyle(
-                        color: Colors.red,
-                        fontSize: 15,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Times')
-                )
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            axisLabelStyle: TextStyle(
+              color: Colors.red,
+              fontSize: 15,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Times'
             )
+          )
         )
+      )
     );
   }
 
@@ -53,15 +54,16 @@ The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/lates
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                  child: SfLinearGauge(showLabels: false)) 
-        )
+        body: Center( 
+          child: SfLinearGauge(showLabels: false),
+        ),
+      ),
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -73,18 +75,18 @@ The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                  child: SfLinearGauge(
-                   interval: 20 
-                )
-            )
-        )
+        body: Center( 
+          child: SfLinearGauge(
+            interval: 20,
+          ),
+        ),
+      ),
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -92,23 +94,23 @@ Widget build(BuildContext context) {
 
 ## Change label position
 
-The linear axis allows to position the labels either `inside` or `outside` the axis track using the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelPosition.html) property. By default, labels are positioned `inside` the axis track.
+The linear axis allows you to position the labels either `inside` or `outside` the axis track using the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelPosition.html) property. By default, labels are positioned `inside` the axis track.
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                child: SfLinearGauge(
-                    tickPosition: LinearElementPosition.outside,
-                    labelPosition: LinearLabelPosition.outside
-                ), 
-            )
+        body: Center(
+          child: SfLinearGauge(
+            tickPosition: LinearElementPosition.outside,
+            labelPosition: LinearLabelPosition.outside
+          ),
         )
+      )
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -121,18 +123,18 @@ The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                child: SfLinearGauge(
-                  labelOffset:20
-                ),             
-            )
+        body: Center(
+          child: SfLinearGauge(
+            labelOffset: 20
+          ),            
         )
+      )
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -140,22 +142,22 @@ Widget build(BuildContext context) {
 
 ##  Customize maximum number of visible labels
 
-By default, a maximum of three labels is displayed for every 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximumLabels.html) property of the axis. 
+By default, a maximum of three labels is displayed for every 100 logical pixels in an axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximumLabels.html) property of the axis. 
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center( 
-                  child: SfLinearGauge(
-                    maximumLabels: 5
-                ) 
-            )
+        body: Center(
+          child: SfLinearGauge(
+            maximumLabels: 5
+          )
         )
+      )
     );
-}
+  }
 
 {% endhighlight %}
 
@@ -167,23 +169,20 @@ You can format or change the whole numeric label text using the [`labelFormatter
 
 {% highlight dart %}
 
-SfLinearGauge(
+  SfLinearGauge(
     labelFormatterCallback: (label) {
       if (label == '0') {
         return 'Start';
       }
-
       if (label == '50') {
         return 'Mid';
       }
-
       if (label == '100') {
         return 'End';
       }
-
       return label;
     }
-)
+  )
 
 {% endhighlight %}
 
@@ -191,14 +190,14 @@ SfLinearGauge(
 
 ## Number format
 
-The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/numberFormat.html) property is used to format the numeric labels. The default value of this  property is null.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/numberFormat.html) property is used to format the numeric labels. The default value of this property is null.
 
 
 {% highlight dart %}
 
-SfLinearGauge(
-  numberFormat: NumberFormat("\$")
-),
+  SfLinearGauge(
+    numberFormat: NumberFormat("\$")
+  ),
 
 {% endhighlight %}
 

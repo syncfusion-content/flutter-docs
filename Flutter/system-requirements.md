@@ -10,7 +10,7 @@ documentation: ug
 
 # System Requirements for Flutter
 
-The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows
+The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows:
 
 ### Operating Systems
 
@@ -24,12 +24,12 @@ The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platfor
 ### Hardware Environment
 
 * Processor: x86 or x64
-* RAM : 512 MB (minimum), 1 GB (recommended)
-* Hard disc: up to 3 GB of free space will be required.
+* RAM: 512 MB (minimum), 1 GB (recommended)
+* Hard disk: up to 3 GB of free space will be required.
 
 ### Development Environment
 
-See the links below for the recommended Flutter development environments
+See the links below for the recommended Flutter development environments:
 
 * Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
 * MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
@@ -44,9 +44,16 @@ See the links below for the recommended Flutter development environments
     </tr>
     <tr>
         <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.29.0-stable.zip">3.29.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/29.1.33">29.1.33</a> <29.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+        </td>
+    </tr>
+        <tr>
+        <td style="text-align:center">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.27.0-stable.zip">3.27.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.36">28.1.36</a> <28.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.36">28.1.36</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.2.12">28.2.12</a>
         </td>
     </tr>
     <tr>

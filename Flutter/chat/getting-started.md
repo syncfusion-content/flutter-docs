@@ -59,7 +59,7 @@ Import the library using the code provided below.
 Add a chat widget with the necessary properties, such as [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) and [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html).
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="5 31" %}
 
   @override
   Widget build(BuildContext context) {
@@ -101,12 +101,12 @@ Add a chat widget with the necessary properties, such as [`messages`](https://pu
 
 ![Default chat](images/getting-started/initialize-chat.png)
 
-## Add placeholder to composer
+## Add composer
 
-To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer-class.html), use the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property, which is of type InputDecoration. The placeholder can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property.
+To add the [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer-class.html) to the SfChat widget, use the composer property. The composer can be customized using the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property, which is of type [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html). The hint text in the composer can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property within InputDecoration.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="32" %}
 
   @override
   Widget build(BuildContext context) {
@@ -155,10 +155,10 @@ To add a placeholder to the [`ChatComposer`](https://pub.dev/documentation/syncf
 
 ## Add placeholder to conversation area
 
-By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
+By default, conversation messages are empty. It's a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="10" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -191,12 +191,12 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 ## Add action button
 
-It represents the send button, which was not included by default. To add it, create an instance of [`ChatActionButton`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) for the actionButton.
+It represents the send button, which was not included by default. To add it, create an instance of [`ChatActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton-class.html) for the actionButton.
 
 When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback is invoked, which rebuilds the chat widget with the newly composed message.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="39" %}
 
   @override
   void initState() {

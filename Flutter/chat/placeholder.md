@@ -9,12 +9,12 @@ documentation: ug
 
 # Placeholder in Flutter Chat (SfChat)
 
-The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversion area.
+The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) property allows you to specify any type of widget that will be displayed in the conversation area.
 
-It will be displayed when there are no messages in the conversions and will be removed when messages start being added.
+It will be displayed when there are no messages in the conversation and will be removed when messages start being added.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart hl_lines="10" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -68,4 +68,4 @@ It will be displayed when there are no messages in the conversions and will be r
 
 ![Chat composer support](images/placeholder/placeholder-chat.gif)
 
->You can refer to our [`Flutter Chat`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Chat example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.

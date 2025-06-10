@@ -13,8 +13,8 @@ The Syncfusion<sup>&reg;</sup> [Flutter Widgets](https://www.syncfusion.com/flut
 
 ## How to best read this user guide
 
-* The best way to read the user guide is to start with the Getting Started section of the documentation for the [widget or library](https://help.syncfusion.com/flutter/introduction/widgets-catalog) that you need. The Getting Started guide gives the needed information to write the code. This is the only section recommended for end-to-end reading before writing the code. All other information can be referred when needed. The [widgets catalog](https://help.syncfusion.com/flutter/introduction/widgets-catalog) section helps you find the user guide link and its package in [pub.dev](https://pub.dev/publishers/syncfusion.com/packages).
-* Now, that you are familiar with the basics of using the widget, the next step would be to start integrating the library into your application. It is very likely that you would find a code example that resembles your intended usage scenario.
+* The best way to read the user guide is to start with the Getting Started section of the documentation for the [widget or library](https://help.syncfusion.com/flutter/introduction/widgets-catalog) that you need. The Getting Started guide provides the needed information to write the code. This is the only section recommended for end-to-end reading before writing the code. All other information can be referred when needed. The [widgets catalog](https://help.syncfusion.com/flutter/introduction/widgets-catalog) section helps you find the user guide link and its package in [pub.dev](https://pub.dev/publishers/syncfusion.com/packages).
+* Once you are familiar with the basics of using the widget, the next step would be to start integrating the library into your application. It is very likely that you would find a code example that resembles your intended usage scenario.
 * After you have integrated the component into your application, it is likely that you would need additional information on specific features and API. Search the specific topic using the search box available at the top of the user guide.
 
 ## Additional help resources
@@ -59,9 +59,8 @@ tr, td, th
 </tr>
   
 <tr> 
- <td> <a href="https://install.appcenter.ms/orgs/syncfusion-demos/apps/syncfusion-flutter-gallery/distribution_groups/release"><img alt="Flutter macOS App Center" src="https://cdn.syncfusion.com/content/images/FTControl/macos-app-center.png"/></a></td>
  <td> <a href="https://snapcraft.io/syncfusion-flutter-gallery"><img alt="Flutter Snap Store" src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png"/></a></td>
- <td colspan="3"> <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a></td>
+ <td> <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a></td>
 
 </tr>
 </table>

@@ -27,70 +27,70 @@ The `SortColumnDetails` object holds the following two properties:
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-List<Employee> _employees = <Employee>[];
+  late EmployeeDataSource _employeeDataSource;
+  List<Employee> _employees = <Employee>[];
 
-@override
-void initState() {
-  super.initState();
-  _employees = getEmployeeData();
-  _employeeDataSource = EmployeeDataSource(employees: _employees);
-}
+  @override
+  void initState() {
+    super.initState();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employees: _employees);
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-    SfDataGrid(source: _employeeDataSource, columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ]),
-    Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: TextButton(
-          onPressed: () {
-            _employeeDataSource.sortedColumns.add(SortColumnDetails(
-                name: 'name', sortDirection: DataGridSortDirection.ascending));
-            _employeeDataSource.sort();
-          },
-          child: Text('Apply sort')),
-    )
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      SfDataGrid(source: _employeeDataSource, columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ]),
+      Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: TextButton(
+            onPressed: () {
+              _employeeDataSource.sortedColumns.add(SortColumnDetails(
+                  name: 'name', sortDirection: DataGridSortDirection.ascending));
+              _employeeDataSource.sort();
+            },
+            child: Text('Apply sort')),
+      )
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,383 +108,10 @@ To apply sorting for multiple columns on the web and desktop, click the column h
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    allowMultiColumnSorting: true,
-    columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows multi-column sorting](images/sorting/flutter-datagrid-multicolumn-sorting.gif)
-
-## Tri-state sorting
-
-In addition to sorting the data in ascending or descending order, the SfDataGrid unsort the data in the original order by clicking the header again after sorting to descending order by setting the [SfDataGrid.allowTriStateSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowTriStateSorting.html) property to true. When this property is set, sorting in each column iterates through three sort states: ascending, descending, and unsort.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    allowMultiColumnSorting: true,
-    allowTriStateSorting: true,
-    columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows tri-state sorting](images/sorting/flutter-datagrid-tristate-sorting.gif)
-
-## Sort column in double tap
-
-By default, the column gets sorted when the column header is clicked. This behavior can be changed to sort the column in double click action by setting the [SfDataGrid.sortingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/sortingGestureType.html) property to `doubleTap`.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    sortingGestureType: SortingGestureType.doubleTap,
-    columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Show sort number
-
-The Datagrid provides support for the sequence numbers to display the sorted columns during multi-column sorting by setting [SfDataGrid.showSortNumbers](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showSortNumbers.html) to true. This is applicable when the `SfDataGrid.allowMultiColumnSorting` property is enabled.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    allowMultiColumnSorting: true,
-    showSortNumbers: true,
-    columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
-}
-  
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
-
-## Change the sort number and background color
-
-The color of the sort order number and its rounded background color can be customized by using the [SfDataGridThemeData.sortOrderNumberColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberColor.html) and [SfDataGridThemeData.sortOrderNumberBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberBackgroundColor.html) respectively.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_core/theme.dart';
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-    body: SfDataGridTheme(
-      data: SfDataGridThemeData(
-          sortOrderNumberBackgroundColor: Colors.tealAccent,
-          sortOrderNumberColor: Colors.pink),
-      child: SfDataGrid(
-          source: employeeDataSource,
-          columnWidthMode: ColumnWidthMode.auto,
-          allowSorting: true,
-          allowMultiColumnSorting: true,
-          showSortNumbers: true,
-          columns: <GridColumn>[
-            GridColumn(
-                columnName: 'id',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'ID'))),
-            GridColumn(
-                columnName: 'name',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.center,
-                    child: const Text('Name'))),
-            GridColumn(
-                columnName: 'city',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.center,
-                    child: const Text('City'))),
-            GridColumn(
-                columnName: 'freight',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.center,
-                    child: const Text('Freight'))),
-          ]),
-    ),
-  );
-}
-  
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid sort order number and its background color change](images/sorting/flutter-datagrid-sort-order-number-style.png)
-
-## Disable sorting for an individual column
-
-The data grid disables sorting for an individual column by setting the [GridColumn.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowSorting.html) property to false. The default value of this property is true. So all the columns in the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection can be sorted when `SfDataGrid.allowSorting` is set to true.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDataSource,
-    allowSorting: true,
-    columns: [
-      GridColumn(
-          columnName: 'id',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'name',
-          allowSorting: false,
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'city',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ))),
-      GridColumn(
-          columnName: 'freight',
-          label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ))),
-    ],
-  ));
-}
-  
-{% endhighlight %}
-{% endtabs %}
-
-## Change the color of the sort icon
-
-The color of the sort icon can be customized by using [SfDataGridThemeData.sortIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIconColor.html).
-
-The following code describes how to change the sort icon color by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGridTheme(
-    data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
-    child: SfDataGrid(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
       source: _employeeDataSource,
       allowSorting: true,
       allowMultiColumnSorting: true,
@@ -526,10 +153,472 @@ Widget build(BuildContext context) {
                   overflow: TextOverflow.ellipsis,
                 ))),
       ],
-    ),
-  ));
-}
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows multi-column sorting](images/sorting/flutter-datagrid-multicolumn-sorting.gif)
+
+## Tri-state sorting
+
+In addition to sorting the data in ascending or descending order, the SfDataGrid unsort the data in the original order by clicking the header again after sorting to descending order by setting the [SfDataGrid.allowTriStateSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowTriStateSorting.html) property to true. When this property is set, sorting in each column iterates through three sort states: ascending, descending, and unsort.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      allowMultiColumnSorting: true,
+      allowTriStateSorting: true,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows tri-state sorting](images/sorting/flutter-datagrid-tristate-sorting.gif)
+
+## Sort column in double tap
+
+By default, the column gets sorted when the column header is clicked. This behavior can be changed to sort the column in double click action by setting the [SfDataGrid.sortingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/sortingGestureType.html) property to `doubleTap`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      sortingGestureType: SortingGestureType.doubleTap,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Callbacks
+
+The `SfDataGrid` provides the following callbacks for sorting:
+
+* `onColumnSortChanging` : This callback is invoked when a column is being sorted in `SfDataGrid`. If the callback returns `true`, the `SfDataGrid` will proceed with the sorting; if it returns `false`, the sort operation will be canceled.
+
+* `onColumnSortChanged` : This callback is invoked when a column is sorted in `SfDataGrid`.
+
+The followings are the parameters of the [SfDataGrid.onColumnSortChanging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnSortChanging.html) and [SfDataGrid.onColumnSortChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnSortChanged.html) callbacks:
+
+* newSortedColumn: Retrieves the `SortColumnDetails` that is going to sort a column.
+
+* oldSortedColumn: Retrieves the `SortColumnDetails` that is removed from a column.
+
+The following example demonstrates how to use the `SfDataGrid.onColumnSortChanging` and `SfDataGrid.onColumnSortChanged` callbacks to sort a column and retrieve sorting details:
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        onColumnSortChanging: (newSortedColumn, oldSortedColumn) {
+          print(newSortedColumn);
+          print(oldSortedColumn);
+          return true;
+        },
+        onColumnSortChanged: (newSortedColumn, oldSortedColumn) {
+          print(newSortedColumn);
+          print(oldSortedColumn);
+        },
+        columns: [
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+          GridColumn(
+            columnName: 'city',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'City',
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+          GridColumn(
+            columnName: 'freight',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Freight',
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Show sort number
+
+The Datagrid provides support for the sequence numbers to display the sorted columns during multi-column sorting by setting [SfDataGrid.showSortNumbers](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showSortNumbers.html) to true. This is applicable when the `SfDataGrid.allowMultiColumnSorting` property is enabled.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      allowMultiColumnSorting: true,
+      showSortNumbers: true,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    ));
+  }
   
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
+
+## Change the sort number and background color
+
+The color of the sort order number and its rounded background color can be customized by using the [SfDataGridThemeData.sortOrderNumberColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberColor.html) and [SfDataGridThemeData.sortOrderNumberBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortOrderNumberBackgroundColor.html) respectively.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+            sortOrderNumberBackgroundColor: Colors.tealAccent,
+            sortOrderNumberColor: Colors.pink),
+        child: SfDataGrid(
+            source: employeeDataSource,
+            columnWidthMode: ColumnWidthMode.auto,
+            allowSorting: true,
+            allowMultiColumnSorting: true,
+            showSortNumbers: true,
+            columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'ID'))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      alignment: Alignment.center,
+                      child: const Text('Name'))),
+              GridColumn(
+                  columnName: 'city',
+                  label: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      alignment: Alignment.center,
+                      child: const Text('City'))),
+              GridColumn(
+                  columnName: 'freight',
+                  label: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      alignment: Alignment.center,
+                      child: const Text('Freight'))),
+            ]),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid sort order number and its background color change](images/sorting/flutter-datagrid-sort-order-number-style.png)
+
+## Disable sorting for an individual column
+
+The data grid disables sorting for an individual column by setting the [GridColumn.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowSorting.html) property to false. The default value of this property is true. So all the columns in the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection can be sorted when `SfDataGrid.allowSorting` is set to true.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+      source: _employeeDataSource,
+      allowSorting: true,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            allowSorting: false,
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ],
+    ));
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+## Change the color of the sort icon
+
+The color of the sort icon can be customized by using [SfDataGridThemeData.sortIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/sortIconColor.html).
+
+The following code describes how to change the sort icon color by using [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGridTheme(
+      data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
+      child: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        allowMultiColumnSorting: true,
+        columns: [
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'city',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'City',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'freight',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Freight',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ],
+      ),
+    ));
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -544,56 +633,56 @@ The position of the sort icon can be changed by using the [GridColumn.sortIconPo
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      allowMultiColumnSorting: true,
-      gridLinesVisibility: GridLinesVisibility.both,
-      headerGridLinesVisibility: GridLinesVisibility.both,
-      columns: [
-        GridColumn(
-            sortIconPosition: ColumnHeaderIconPosition.start,
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.centerRight,
-                child: Text('Salary'
-                ))),
-      ],
-    ),
-  );
-}
-  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        allowMultiColumnSorting: true,
+        gridLinesVisibility: GridLinesVisibility.both,
+        headerGridLinesVisibility: GridLinesVisibility.both,
+        columns: [
+          GridColumn(
+              sortIconPosition: ColumnHeaderIconPosition.start,
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text('Salary'
+                  ))),
+        ],
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 

@@ -28,49 +28,50 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
-      ),
-      body: SfDataGridTheme(
-          data: SfDataGridThemeData(headerColor: const Color(0xff009889)),
-          child: SfDataGrid(
-              source: _employeeDataSource,
-              columnWidthMode: ColumnWidthMode.fill,
-              columns: <GridColumn>[
-                GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: EdgeInsets.all(16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'ID',
-                        ))),
-                GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Name'))),
-                GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Salary'))),
-              ])));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataGridTheme(
+            data: SfDataGridThemeData(headerColor: const Color(0xff009889)),
+            child: SfDataGrid(
+                source: _employeeDataSource,
+                columnWidthMode: ColumnWidthMode.fill,
+                columns: <GridColumn>[
+                  GridColumn(
+                      columnName: 'id',
+                      label: Container(
+                          padding: EdgeInsets.all(16.0),
+                          alignment: Alignment.center,
+                          child: Text(
+                            'ID',
+                          ))),
+                  GridColumn(
+                      columnName: 'name',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text('Name'))),
+                  GridColumn(
+                      columnName: 'designation',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'salary',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text('Salary'))),
+                ])));
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,49 +86,50 @@ N> This is applicable for web and desktop platforms.
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
-      ),
-      body: SfDataGridTheme(
-          data: SfDataGridThemeData(headerHoverColor: Colors.yellow),
-          child: SfDataGrid(
-              source: _employeeDataSource,
-              columnWidthMode: ColumnWidthMode.fill,
-              columns: <GridColumn>[
-                GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: EdgeInsets.all(16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'ID',
-                        ))),
-                GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Name'))),
-                GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Salary'))),
-              ])));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataGridTheme(
+            data: SfDataGridThemeData(headerHoverColor: Colors.yellow),
+            child: SfDataGrid(
+                source: _employeeDataSource,
+                columnWidthMode: ColumnWidthMode.fill,
+                columns: <GridColumn>[
+                  GridColumn(
+                      columnName: 'id',
+                      label: Container(
+                          padding: EdgeInsets.all(16.0),
+                          alignment: Alignment.center,
+                          child: Text(
+                            'ID',
+                          ))),
+                  GridColumn(
+                      columnName: 'name',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text('Name'))),
+                  GridColumn(
+                      columnName: 'designation',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'salary',
+                      label: Container(
+                          padding: EdgeInsets.all(8.0),
+                          alignment: Alignment.center,
+                          child: Text('Salary'))),
+                ])));
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,6 +141,7 @@ The DataGrid supports to change the row background color by using [DataGridRowAd
 
 {% tabs %}
 {% highlight Dart %}
+
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
@@ -179,6 +182,7 @@ class EmployeeDataSource extends DataGridSource {
     }).toList());
   }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,13 +195,82 @@ The color and thickness of the grid lines can be changed by using the [SfDataGri
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGridTheme(
-          data: SfDataGridThemeData(
-              gridLineColor: Colors.amber, gridLineStrokeWidth: 3.0),
-          child: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGridTheme(
+            data: SfDataGridThemeData(
+                gridLineColor: Colors.amber, gridLineStrokeWidth: 3.0),
+            child: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+            ])));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
+
+## Show vertical and horizontal grid lines
+
+To show the vertical and horizontal gridlines, use the following properties. 
+
+* [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): To set the border lines for the cells other than a header and stacked header cells. 
+* [SfDataGrid.headerGridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerGridLinesVisibility.html): To set the border lines only for header and stacked header cells.
+
+The following is the list of options available to customize gridlines.
+
+* Vertical
+* Horizontal
+* Both
+* None
+
+The following code describes how to show vertical and horizontal grid lines for the `SfDataGrid`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: <GridColumn>[
             GridColumn(
                 columnName: 'id',
                 label: Container(
@@ -234,81 +307,12 @@ Widget build(BuildContext context) {
                       'Salary',
                       overflow: TextOverflow.ellipsis,
                     ))),
-          ])));
-}
-    
-{% endhighlight %}
-{% endtabs %}
+          ],
+          gridLinesVisibility: GridLinesVisibility.both,
+          headerGridLinesVisibility: GridLinesVisibility.both),
+    );
+  }
 
-![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
-
-## Show vertical and horizontal grid lines
-
-To show the vertical and horizontal gridlines, use the following properties. 
-
-* [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): To set the border lines for the cells other than a header and stacked header cells. 
-* [SfDataGrid.headerGridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerGridLinesVisibility.html): To set the border lines only for header and stacked header cells.
-
-The following is the list of options available to customize gridlines.
-
-* Vertical
-* Horizontal
-* Both
-* None
-
-The following code describes how to show vertical and horizontal grid lines for the `SfDataGrid`.
-
-{% tabs %}
-{% highlight Dart %} 
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ],
-        gridLinesVisibility: GridLinesVisibility.both,
-        headerGridLinesVisibility: GridLinesVisibility.both),
-  );
-}
-    
 {% endhighlight %}
 {% endtabs %}
 
@@ -323,44 +327,44 @@ N> This is applicable for web and desktop platforms.
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          highlightRowOnHover: false,
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text('ID'),
-            )),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text('Name'),
-            )),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text('Designation'),
-            )),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text('Salary'),
-            )),
-      ]));
-}
-    
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            highlightRowOnHover: false,
+            source: _employeeDataSource,
+            columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('ID'),
+              )),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'),
+              )),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Designation'),
+              )),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'),
+              )),
+        ]));
+  }
+ 
 {% endhighlight %}
 {% endtabs %}
 
@@ -371,47 +375,48 @@ Change the row highlighting color and text style by using the [SfDataGridThemeDa
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGridTheme(
-          data: SfDataGridThemeData(
-              rowHoverColor: Colors.yellow,
-              rowHoverTextStyle: TextStyle(
-                color: Colors.red,
-                fontSize: 14,
-              )),
-          child: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
-            GridColumn(
-                columnName: 'id',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text('ID'),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGridTheme(
+            data: SfDataGridThemeData(
+                rowHoverColor: Colors.yellow,
+                rowHoverTextStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 14,
                 )),
-            GridColumn(
-                columnName: 'name',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text('Name'),
-                )),
-            GridColumn(
-                columnName: 'designation',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text('Designation'),
-                )),
-            GridColumn(
-                columnName: 'salary',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text('Salary'),
-                )),
-          ])));
-}
+            child: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text('ID'),
+                  )),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text('Name'),
+                  )),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text('Designation'),
+                  )),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text('Salary'),
+                  )),
+            ])));
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -445,7 +450,7 @@ class EmployeeDataSource extends DataGridSource {
   @override
   List<DataGridRow> get rows => dataGridRows;
 
- @override
+  @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {

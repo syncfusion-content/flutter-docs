@@ -13,7 +13,7 @@ This section explains the customization options available in [`ChatComposer`](ht
 
 ## Composer
 
-The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the minimum and maximum number of lines, decoration, padding, and text style.
+The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the `minimum` and `maximum` number of lines, `decoration`, `margin`, and `text style`.
 
 When the composer is null, no default text field is added to the chat widget.
 
@@ -22,12 +22,12 @@ When the composer is null, no default text field is added to the chat widget.
 * [`minLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/minLines.html) specifies the minimum number of lines in the text span, which affects the height of the text field.
 * [`maxLines`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/maxLines.html) defines the maximum number of lines for the text, determining how many lines are visible when the text wraps.
 
-The default value for minLines is 1, and the default value for maxLines is 6.
+The default value for `minLines` is `1`, and the default value for `maxLines` is `6`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11 12" %}
 
-   // Load if there are existing messages.
+  // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
 
   @override
@@ -51,7 +51,7 @@ The default value for minLines is 1, and the default value for maxLines is 6.
 
 ### Decoration
 
-The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text,borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
+The [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property customizes the visual attributes of the message input field, such as hint text, borders, and internal padding, using an [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html).
 
 The [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html) class enhances the composer by utilizing its properties, such as borders, labels, icons, and styles.
 
@@ -69,10 +69,10 @@ The [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled
 
 #### Border
 
-The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
+The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines the shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="34" %}
 
   late List<ChatMessage> _messages;
 
@@ -123,10 +123,10 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 
 #### Content padding
 
-The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the padding is set to 16 horizontally and 18 vertically.
+The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the `padding` is set to `16` horizontally and `18` vertically.
 
 {% tabs %}
-{% highlight dart hl_lines="28" %} 
+{% highlight dart hl_lines="27" %} 
 
   late List<ChatMessage> _messages;
 
@@ -168,10 +168,10 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 
 #### Hint text
 
-The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to null.
+The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to `null`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="12" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -201,7 +201,7 @@ The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="13" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -236,7 +236,7 @@ The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [`suffixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="34 38" %}
 
   late List<ChatMessage> _messages;
 
@@ -290,14 +290,14 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ![Chat composer icon](images/composer/composer-icon.png)
 
-### Padding
+### Margin
 
-The [`padding`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/padding.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/margin.html) property defines the space around the text field, which is used to create space between the conversation area and the text field.
 
-By default, the top padding is set to 16.
+By default, the top `margin` is set to `16`.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33" %}
 
   late List<ChatMessage> _messages;
 
@@ -331,7 +331,7 @@ By default, the top padding is set to 16.
         messages: _messages,
         outgoingUser: '123-005',
         composer: const ChatComposer(
-          padding: EdgeInsets.fromLTRB(10, 30, 10, 20),
+          margin: EdgeInsets.fromLTRB(10, 30, 10, 20),
         ),
       ),
     );
@@ -340,7 +340,7 @@ By default, the top padding is set to 16.
 {% endhighlight %}
 {% endtabs %}
 
-![Chat composer padding](images/composer/composer-padding.png)
+![Chat composer margin](images/composer/composer-padding.png)
 
 ### Text style
 
@@ -349,7 +349,7 @@ The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/c
 The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="33" %}
 
   late List<ChatMessage> _messages;
 
@@ -403,7 +403,7 @@ The [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_ch
 If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
 
 {% tabs %}
-{% highlight dart %}
+{% highlight dart hl_lines="11" %}
 
   // Load if there are existing messages.
   final List<ChatMessage> _messages = <ChatMessage>[];
@@ -480,4 +480,4 @@ If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 ![Chat composer support](images/composer/composer-builder.png)
 
->You can refer to our [`Flutter Chat`](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Chat example`](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.

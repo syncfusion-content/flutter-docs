@@ -9,15 +9,15 @@ documentation: ug
 
 # Shape Selection in Flutter Maps (SfMaps)
 
-You can select a shape in order to highlight that area on a map. You can use the callback for performing any action during shape selection.
+You can select a shape to highlight a specific area on a map. You can also use callbacks to perform custom actions during shape selection.
 
 ## Enable shape selection
 
 You can enable shape selection on a map using the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) property along with setting the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property. The default value of the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property is `-1`.
 
-The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
+The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is triggered when a user selects a shape by tapping or clicking, or when a shape is selected programmatically. It provides the index of the selected shape.
 
-N> You must call `setState()` in the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) to observe the changes in the UI.
+N> You must call `setState()` in the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback to reflect the changes in the UI.
 
 {% tabs %}
 {% highlight Dart %}
@@ -88,11 +88,11 @@ class Model {
 ![Enable shape selection](images/selection/enable-shape-selection.png)
 
 N>
-* Refer the [`MapSelectionSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectionSettings.html), for customizing the selected shape's appearance.
+* Refer to the [`MapSelectionSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings-class.html) class for customizing the selected shape's appearance.
 
 ## Appearance customization
 
-You can customize the below appearance of the selected shape.
+You can customize the following aspects of the selected shape:
 
 * **Background color** - Change the background color of the selected shape using the [`MapSelectionSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/color.html) property.
 * **Stroke width** - Change the stroke width of the selected shape using the [`MapSelectionSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/strokeWidth.html) property.
@@ -171,7 +171,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the selected shape using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+You can also customize the appearance of the selected shape using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html):
 
 * **Background color** - Change the background color of the selected shape using the [`SfMapsThemeData.selectionColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/selectionColor.html) property.
 * **Stroke width** - Change the stroke width of the selected shape using the [`SfMapsThemeData.selectionStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/selectionStrokeWidth.html) property.

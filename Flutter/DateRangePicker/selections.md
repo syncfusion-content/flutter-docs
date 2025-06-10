@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Selections in Flutter Date Range Picker (SfDateRangePicker)
-Dates can be selected by touching the on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as `Single`, `Multiple`, `Range` and `MultiRange` selection
+Dates can be selected by touching the month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as `Single`, `Multiple`, `Range` and `MultiRange` selection
 
 >**NOTE** When the `enableViewNavigation` property is set to false, the Date range picker allows you to select the cells in the year, decade, and century views of date range picker.
 
@@ -43,7 +43,7 @@ Eg:
 
 
 ## Multiple selection
-You can randomly select more than one date range picker cell by setting the `DateRangePickerSelectionMode` to `multiple`. By Clicking again you can deselect the selected cells.
+You can randomly select more than one date range picker cell by setting the `DateRangePickerSelectionMode` to `multiple`. By clicking again you can deselect the selected cells.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -210,7 +210,7 @@ Widget build(BuildContext context) {
 ![Selection shape Date Range Picker](images/selections/selectionshape.png)
 
 ## Enable swipe selection
-Using the [enableSwipeSelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html) property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+Using the [enableSwipeSelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html) property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property is set to `true`.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8" %}

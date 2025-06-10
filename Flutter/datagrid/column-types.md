@@ -11,59 +11,77 @@ documentation: ug
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column.
 
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column.
+
 ## GridColumn
+
+GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
 
 GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
 
 ### Mapping column to a property
 
-The column can be bound to a property in a data object using the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. The [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header. 
+The column can be bound to a property in a data object using the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. The [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header.
+
+The column can be bound to a property in a data object using the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. The [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header.
 
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
-    GridColumn(
-        columnName: 'id',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'name',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'designation',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'salary',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            )))
-  ]));
-}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource, 
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,112 +90,138 @@ Widget build(BuildContext context) {
 
 [GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
+[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
+
 >**NOTE**  
-   Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
+>Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
-    GridColumn(
-        columnName: 'id',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'name',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'designation',
-        visible: false,
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'salary',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            )))
-  ]));
-}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource, 
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'designation',
+            visible: false,
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Set manual width for a column
 
-`SfDataGrid` allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.Columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
 >**NOTE**  
-   Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
+>Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
-    GridColumn(
-        columnName: 'id',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'name',
-        width: 100.0,
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'designation',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
-    GridColumn(
-        columnName: 'salary',
-        label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            )))
-  ]));
-}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource, 
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'name',
+            width: 100.0,
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,55 +232,69 @@ By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flu
 
 The selection is applied to rows only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property other than `none.`
 
+By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as the first column.
+
+The selection is applied to rows only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property to a value other than `none`.
+
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          showCheckboxColumn: true,
-          selectionMode: SelectionMode.multiple,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        showCheckboxColumn: true,
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -247,57 +305,71 @@ Widget build(BuildContext context) {
 
 Display widgets along with the checkbox in the header cell by adding a widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
 
+Display widgets along with the checkbox in the header cell by adding a widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
+
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          showCheckboxColumn: true,
-          checkboxColumnSettings: DataGridCheckboxColumnSettings(
-              label: Text('Selector'), width: 100),
-          selectionMode: SelectionMode.multiple,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        showCheckboxColumn: true,
+        checkboxColumnSettings: DataGridCheckboxColumnSettings(
+          label: Text('Selector'), 
+          width: 100
+        ),
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -306,59 +378,69 @@ Widget build(BuildContext context) {
 
 ### Disable the checkbox in the header cell
 
-By default, checkBox gets displayed in the header cell. By disabling the [SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/showCheckboxOnHeader.html) property, checkBox can be disappeared in the header cell.
+By default, a checkbox is displayed in the header cell. By setting the [SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/showCheckboxOnHeader.html) property to `false`, the checkbox can be hidden in the header cell.
 
 {% tabs %}
 {% highlight Dart %} 
- 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          showCheckboxColumn: true,
-          checkboxColumnSettings:
-              DataGridCheckboxColumnSettings(showCheckboxOnHeader: false),
-          selectionMode: SelectionMode.multiple,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        showCheckboxColumn: true,
+        checkboxColumnSettings:
+          DataGridCheckboxColumnSettings(showCheckboxOnHeader: false),
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -372,54 +454,64 @@ The background color of the checkbox column can be customized by using the [SfDa
 {% tabs %}
 {% highlight Dart %} 
  
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SfDataGrid(
-          source: _employeeDataSource,
-          showCheckboxColumn: true,
-          checkboxColumnSettings:
-              DataGridCheckboxColumnSettings(backgroundColor: Colors.yellow),
-          selectionMode: SelectionMode.multiple,
-          columns: [
-        GridColumn(
+        source: _employeeDataSource,
+        showCheckboxColumn: true,
+        checkboxColumnSettings:
+          DataGridCheckboxColumnSettings(backgroundColor: Colors.yellow),
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -433,74 +525,85 @@ Get the checked items by using the [DataGridController.selectedRows](https://pub
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _dataGridController = DataGridController();
+  final DataGridController _dataGridController = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('Get Checked Items Information'),
-        onPressed: () {
-          //Index of the checked item
-          var _selectedIndex = _dataGridController.selectedIndex;
-
-          //CheckedRow
-          var _selectedRow = _dataGridController.selectedRow;
-
-          //Collection of checkedRows
-          var _selectedRows = _dataGridController.selectedRows;
-
-          print(_selectedIndex);
-          print(_selectedRow);
-          print(_selectedRows);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            showCheckboxColumn: true,
-            controller: _dataGridController,
-            selectionMode: SelectionMode.multiple,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TextButton(
+            child: Text('Get Checked Items Information'),
+            onPressed: () {
+              //Index of the checked item
+              var _selectedIndex = _dataGridController.selectedIndex;
+              //CheckedRow
+              var _selectedRow = _dataGridController.selectedRow;
+              //Collection of checkedRows
+              var _selectedRows = _dataGridController.selectedRows;
+              print(_selectedIndex);
+              print(_selectedRow);
+              print(_selectedRows);
+            }
+          ),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              showCheckboxColumn: true,
+              controller: _dataGridController,
+              selectionMode: SelectionMode.multiple,
+              columns: [
+                GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+                GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    )
+                  )
+                ),
+              ]
+            )
+          )
+        ]
+      )
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -512,49 +615,124 @@ By default, the checkbox shows in the DataGrid as a square shape. Change the che
 {% tabs %}
 {% highlight Dart %} 
  
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      showCheckboxColumn: true,
-      checkboxShape: CircleBorder(),
-      selectionMode: SelectionMode.multiple,
-      columns: [
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        showCheckboxColumn: true,
+        checkboxShape: CircleBorder(),
+        selectionMode: SelectionMode.multiple,
+        columns: [
+          GridColumn(
             columnName: 'ID',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                  child: Text('ID'))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.center,
+              child: Text('ID')
+            )
+          ),
+          GridColumn(
             columnName: 'Name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.center,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             columnName: 'Designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Designation'))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.center,
+              child: Text('Designation')
+            )
+          ),
+          GridColumn(
             columnName: 'Salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                alignment: Alignment.center,
-                child: Text('Salary')))
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.center,
+              child: Text('Salary')
+            )
+          )
+        ],
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![flutter datagrid checkbox shape](images/column-types/flutter-datagrid-checkbox-shape.png)
+
+### Callbacks
+
+The `SfDataGrid` provides the following callback for checkbox interactions:
+
+* [onCheckboxValueChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCheckboxValueChanged.html): This callback is triggered when the checkbox is selected or deselected, either by tapping on the checkbox or by selecting or deselecting a row (i.e., when the value of the checkbox changes).
+
+The checkbox callbacks provide the following properties in their arguments:
+
+* [value](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/value.html): Represents the current state of the checkbox.
+* [row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/row.html): Refers to the DataGridRow linked to the checkbox in the checkbox column. If the checkbox is part of a column header, the value will be null, indicating that it is not linked to any specific data row.
+* [rowType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxValueChangedDetails/rowType.html): Defines the type of row associated with the checkbox. It indicates whether the checkbox value in a data row or header row has been modified.
+
+{% tabs %}
+{% highlight Dart %} 
+
+  @override  
+  Widget build(BuildContext context) {  
+    return Scaffold(  
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),  
+      body: SfDataGrid(  
+        source: employeeDataSource,  
+        showCheckboxColumn: true,  
+        onCheckboxValueChanged: (details) {  
+          print(details);  
+        },  
+        selectionMode: SelectionMode.multiple,  
+        columns: [  
+          GridColumn(  
+            columnName: 'ID',  
+            label: Container(  
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+              alignment: Alignment.center,  
+              child: const Text('ID'),  
+            ),  
+          ),  
+          GridColumn(  
+            columnName: 'Name',  
+            label: Container(  
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+              alignment: Alignment.center,  
+              child: const Text('Name'),  
+            ),  
+          ),  
+          GridColumn(  
+            columnName: 'Designation',  
+            label: Container(  
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+              alignment: Alignment.center,  
+              child: const Text('Designation'),  
+            ),  
+          ),  
+          GridColumn(  
+            columnName: 'Salary',  
+            label: Container(  
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),  
+              alignment: Alignment.center,  
+              child: const Text('Salary'),  
+            ),  
+          ),  
+        ],  
+      ),  
+    );  
+  }
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Limitations
 
@@ -571,58 +749,68 @@ To display column header icons, such as sort and filter icons, when the mouse ho
 {% tabs %}
 {% highlight Dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: SfDataGrid(
-      source: employeeDataSource,
-      allowSorting: true,
-      allowFiltering: true,
-      showColumnHeaderIconOnHover: true,
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: <GridColumn>[
-        GridColumn(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        allowSorting: true,
+        allowFiltering: true,
+        showColumnHeaderIconOnHover: true,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.centerLeft,
-                child: Text('Name'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name')
+            )
+          ),
+          GridColumn(
             columnName: 'company',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Company',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Company',
+                overflow: TextOverflow.ellipsis,
+              )
+            )
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('City'))),
-        GridColumn(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('City')
+            )
+          ),
+          GridColumn(
             columnName: 'country',
             label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Country'))),
-      ],
-    ),
-  );
-}
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Country')
+            )
+          ),
+        ],
+      ),
+    );
+  }
   
 {% endhighlight %}
 {% endtabs %}
