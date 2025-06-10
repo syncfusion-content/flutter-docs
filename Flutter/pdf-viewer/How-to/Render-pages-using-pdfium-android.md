@@ -10,7 +10,7 @@ keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter o
 
 # How to render PDF pages using PDFium on Android?
 
-The Syncfusion Flutter PDF Viewer allows users to render PDF pages using the PDFium library on Android. This enables rendering PDF pages with better performance on Android devices running API levels below 35. By default, the PDF Viewer uses the [PdfRenderer](https://developer.android.com/reference/android/graphics/pdf/PdfRenderer) to render PDF pages on the Android platform.
+The Syncfusion Flutter PDF Viewer allows users to render PDF pages using the PDFium library on Android through an optional package, [syncfusion_pdfviewer_android](https://pub.dev/packages/syncfusion_pdfviewer_android). This enables loading password-protected documents and rendering PDF pages with better performance on Android devices running API levels below 35. By default, the PDF Viewer uses the [PdfRenderer](https://developer.android.com/reference/android/graphics/pdf/PdfRenderer) to render PDF pages on the Android platform.
 
 However, the `PdfRenderer` does not support loading password-protected documents on Android devices running API levels below 35. To load password-protected documents on Android, we decrypt the PDF document using the `syncfusion_flutter_pdf` library and employ the decrypted bytes to load the PDF document.
 
