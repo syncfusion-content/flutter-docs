@@ -59,24 +59,26 @@ The `SfPdfViewer` supports the following keyboard interactions:
     <th  style="text-align:left" colspan="1">Action</th>
     <th>Windows</th>
     <th>Macintosh</th>
-    </tr>
-     <tr>
+    <th>Linux</th>
   </tr>
      <tr>
-  <th style="text-align:left" colspan="3">Shortcuts for page navigation</th>
+  <th style="text-align:left" colspan="4">Shortcuts for page navigation</th>
   </tr>
   <tr>
   <td>Navigate to the first page</td>
     <td>Home</td>
     <td>Function+Left arrow</td>
+    <td>Home</td>
   </tr>
   <tr>
    <td>Navigate to the last page</td>
     <td>End</td>
     <td>Function+Right arrow</td>
+    <td>End</td>
   </tr>
   <tr>
    <td>Navigate to the previous page</td>
+    <td>Left arrow</td>
     <td>Left arrow</td>
     <td>Left arrow</td>
   </tr>
@@ -84,14 +86,16 @@ The `SfPdfViewer` supports the following keyboard interactions:
     <td>Navigate to the next page</td>
     <td>Right arrow</td>
     <td>Right arrow</td>
+    <td>Right arrow</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="3">Shortcuts for Zooming</th>
+    <th style="text-align:left" colspan="4">Shortcuts for Zooming</th>
   </tr>
    <tr>
    <td>Perform zoom in operation</td>
     <td>CONTROL + =</td>
      <td>COMMAND + =</td> 
+    <td>CONTROL + =</td>
   </tr>
   <tr>
   </tr>
@@ -99,27 +103,31 @@ The `SfPdfViewer` supports the following keyboard interactions:
     <td>Perform zoom out operation</td>
     <td>CONTROL + -</td>
     <td>COMMAND + -</td>
+    <td>CONTROL + -</td>
   </tr>
   <tr>
-   <td>Retain the zoom level to 1</td>
+   <td>Reset the zoom level to 1</td>
     <td>CONTROL + 0</td>
     <td>COMMAND + 0</td>
+    <td>CONTROL + 0</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="3">Shortcut for Text Search</th>
+    <th style="text-align:left" colspan="4">Shortcut for Text Search</th>
   </tr>
   <tr>
   <td>Open the search toolbar</td>
     <td>CONTROL + F</td>
      <td>COMMAND + F</td>
+    <td>CONTROL + F</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="3">Shortcut for Text Selection</th>
+    <th style="text-align:left" colspan="4">Shortcut for Text Selection</th>
   </tr>
   <tr>
     <td>Copy the selected text</td>
     <td>CONTROL + C</td>
     <td>COMMAND + C</td>
+    <td>CONTROL + C</td>
   </tr>
 </table>
 

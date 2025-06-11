@@ -83,7 +83,7 @@ void customizeSelectorAppearance() {
 ## Deselect an annotation
 
 You can deselect an annotation by tapping outside its bounds using a touch or mouse. When the annotation is deselected, the selection border (selector) disappears, indicating that the annotation is deselected.
-* In desktop platforms like Windows, macOS, and desktop web, you can also use the keyboard shortcut Esc to deselect an annotation.
+* In desktop platforms like Windows, macOS, Linux, and desktop web, you can also use the keyboard shortcut Esc to deselect an annotation.
 
 ### Deselect an annotation programmatically
 
