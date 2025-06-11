@@ -1259,6 +1259,83 @@ The Datagrid provides the following callbacks to handle interactions with the ce
 {% endhighlight %}
 {% endtabs %}
 
+### Getting row details
+
+To retrieve the details of a row in the DataGrid, use the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and assign it to the controller property of the DataGrid. To obtain the details of a row, use the `getRowDetails` method from the controller, providing the index as the parameter. This method returns a `DataGridRowDetails`, which includes the following properties:
+
+* [rowType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowType.html) – Returns the type of the row (e.g., dataRow, headerRow).
+
+* [dataGridRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html) – Provides the DataGridRow corresponding to the specified index.
+
+* isSelected – Indicates whether the row is currently selected.
+
+{% tabs %}
+{% highlight Dart %}
+
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TextButton(
+              onPressed: () {
+                DataGridRowDetails? details =
+                    _dataGridController.getRowDetails(4);
+                if (details != null) {
+                  print(details.rowType);
+                  print(details.dataGridRow);
+                  print(details.isSelected);
+                }
+              },
+              child: Text('Get row details')),
+          Expanded(
+            child: SfDataGrid(
+              source: employeeDataSource,
+              controller: _dataGridController,
+              columns: <GridColumn>[
+                GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: Text('ID'),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Name'),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Designation'),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Salary'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customizing selection behavior
 
 To perform custom actions apart from the functionalities mentioned in the above tables for key press actions of the keyboard, implement your custom actions in the [handleKeyEvent()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager/handleKeyEvent.html) override of the custom written selection manager class derived from [RowSelectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager-class.html) and assign it to the [SfDataGrid.selectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionManager.html) property.
