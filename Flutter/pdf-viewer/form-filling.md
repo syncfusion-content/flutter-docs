@@ -718,23 +718,26 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-For desktop platforms such as Windows, macOS, and desktop web, use the following shortcut keys to perform the actions.
+For desktop platforms such as Windows, macOS, Linux, and desktop web, use the following shortcut keys to perform the actions.
 
 <table>
 <tr>
 <th>Action & Shortcut keys</th>
 <th>Windows</th>
 <th>macOS</th>
+<th>Linux</th>
 </tr>
 <tr>
 <th>Undo</th>
 <td><code>Ctrl</code> + <code>z</code></td>
 <td><code>Command</code> + <code>z</code></td>
+<td><code>Ctrl</code> + <code>z</code></td>
 </tr>
 <tr>
 <th>Redo</th>
 <td><code>Ctrl</code> + <code>y</code></td>
 <td><code>Command</code> + <code>y</code></td>
+<td><code>Ctrl</code> + <code>y</code></td>
 </tr>
 </table>
 
