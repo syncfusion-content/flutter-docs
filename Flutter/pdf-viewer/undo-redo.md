@@ -11,23 +11,26 @@ documentation: ug
 
 If you performed any undesired actions when adding, removing, or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to undo and redo the changes made to the annotations.
 
-For desktop platforms such as Windows, macOS, and desktop web, you can use the following shortcut keys to perform the actions.
+For desktop platforms such as Windows, macOS, Linux, and desktop web, you can use the following shortcut keys to perform the actions.
 
 <table>
 <tr>
 <th>Action & Shortcut Keys</th>
 <th>Windows</th>
 <th>macOS</th>
+<th>Linux</th>
 </tr>
 <tr>
 <th>Undo</th>
 <td><code>Ctrl</code> + <code>z</code></td>
 <td><code>Command</code> + <code>z</code></td>
+<td><code>Ctrl</code> + <code>z</code></td>
 </tr>
 <tr>
 <th>Redo</th>
 <td><code>Ctrl</code> + <code>y</code></td>
 <td><code>Command</code> + <code>y</code></td>
+<td><code>Ctrl</code> + <code>y</code></td>
 </tr>
 </table>
 
