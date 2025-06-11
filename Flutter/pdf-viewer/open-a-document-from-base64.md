@@ -134,6 +134,5 @@ class Base64PDFSource extends PDFSource {
   }
 }
 
-
 {% endhighlight %}
 {% endtabs %}

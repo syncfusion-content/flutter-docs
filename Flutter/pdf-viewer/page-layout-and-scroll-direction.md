@@ -7,18 +7,18 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Page layout and Scrolling options in Flutter PDF Viewer (SfPdfViewer)
+# Page Layout and Scrolling Options in Flutter PDF Viewer (SfPdfViewer)
 
-Page layout modes describe how the PDF page is displayed and, scrolling options describe the direction in which the PDF pages can be scrolled in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html).
+Page layout modes describe how the PDF page is displayed, and scrolling options describe the direction in which the PDF pages can be scrolled in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html).
 
-## Page layout modes
+## Page Layout Modes
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following page layout modes:
 
 * Continuous page layout mode
 * Single page layout mode
 
-### Continuous page layout mode
+### Continuous Page Layout Mode
 
 By default, the `continuous` page layout mode is enabled, which scrolls the PDF pages vertically and horizontally. To enable the `continuous` page layout mode in `SfPdfViewer`, use the following code sample.
 
@@ -28,7 +28,7 @@ By default, the `continuous` page layout mode is enabled, which scrolls the PDF 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body:SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               pageLayoutMode: PdfPageLayoutMode.continuous));
 }
@@ -36,7 +36,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Single page layout mode
+### Single Page Layout Mode
 
 In `Single` page layout mode, PDFs will be displayed page by page horizontally. To enable the `Single` page layout mode in `SfPdfViewer`, use the following code sample.
 
@@ -46,7 +46,7 @@ In `Single` page layout mode, PDFs will be displayed page by page horizontally. 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body:SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               pageLayoutMode: PdfPageLayoutMode.single));
 }
@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
 
 ![Single page layout mode in Flutter PDF Viewer.](images/page-layout-and-scroll-direction/flutter-pdf-viewer-page-by-page.gif)
 
-## Scrolling options
+## Scrolling Options
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following scrolling options:
 
@@ -65,7 +65,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 If the scroll direction is not specified, continuous page layout mode defaults to vertical scrolling, and single page layout mode defaults to horizontal scrolling.
 
-### Vertical scrolling
+### Vertical Scrolling
 
 By default, `Vertical` scrolling is enabled, which moves the PDF pages from up to down. To enable the `Vertical` scrolling in `SfPdfViewer`, use the following code sample.
 
@@ -75,7 +75,7 @@ By default, `Vertical` scrolling is enabled, which moves the PDF pages from up t
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body:SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               scrollDirection: PdfScrollDirection.vertical));
 }
@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Horizontal scrolling
+### Horizontal Scrolling
 
 In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
 
@@ -93,7 +93,7 @@ In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enab
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body:SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               scrollDirection: PdfScrollDirection.horizontal));
 }
