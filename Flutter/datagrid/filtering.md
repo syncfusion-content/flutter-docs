@@ -1515,3 +1515,123 @@ By default, the `FilterBehavior.strongDataType` applies to the num, string, and 
  
 {% endhighlight %}
 {% endtabs %}
+
+## Color Customization for Filter Popup Menu Options
+
+The `SfDataGrid` provides complete color customization support for the filter popup menu, allowing you to personalize its appearance and enhance its visual appeal. This enables you to define the look and feel of the filter popup menu more effectively and in a user-friendly manner.
+
+You can apply custom colors and personalize the filter popup menu by configuring the properties listed below through the `SfDataGridTheme.` To enable this, ensure that the `SfDataGrid` is wrapped inside an `SfDataGridTheme` widget.
+
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, make sure to import the following file.
+
+
+| Properties                      | Description                                         |
+|---------------------------|-----------------------------------------------------|
+| `advancedFilterPopupDropdownColor`      | You can customize the background color of the dropdown in the advanced filter popup using the [SfDataGridThemeData.advancedFilterPopupDropdownColor]() property. |
+| `advancedFilterPopupDropdownIconColor` | The color of the dropdown icon in the advanced filter popup can be customized using the [SfDataGridThemeData.advancedFilterPopupDropdownIconColor]() property. |
+| `advancedFilterTypeDropdownFocusedBorderColor` | You can customize the focused border color of the advanced filter type dropdown by using the [SfDataGridThemeData.advancedFilterTypeDropdownFocusedBorderColor]() property. |
+| `advancedFilterTypeDropdownIconColor` | The background color of the advanced filter type dropdown icon in the `SfDataGrid` can be customized using the [SfDataGridThemeData.advancedFilterTypeDropdownIconColor]() property. |
+| `advancedFilterValueDropdownFocusedBorderColor`      | The focused border color of the advanced filter value dropdown can be customized using the [SfDataGridThemeData.advancedFilterValueDropdownFocusedBorderColor]() property.         |
+| `advancedFilterValueDropdownIconColor`     | Customize the background color of the advanced filter value dropdown icon using the [SfDataGridThemeData.advancedFilterValueDropdownIconColor]() property. |
+| `advancedFilterValueTextAreaCursorColor`     | The cursor color in the advanced filter value text area can be customized using the [SfDataGridThemeData.advancedFilterValueTextAreaCursorColor]() property. |
+| `andRadioActiveColor`     | The active (selected) color of the "AND" radio button in the advanced filter can be customized using the [SfDataGridThemeData.andRadioActiveColor]() property. |
+| `andRadioFillColor`     | The fill color of the "AND" radio button in the advanced filter can be customized using the [SfDataGridThemeData.andRadioFillColor]() property. |
+| `appBarBottomBorderColor`     | You can customize the color of the bottom border of the AppBar by using the [SfDataGridThemeData.appBarBottomBorderColor]() property. |
+| `calendarIconColor`     | The color of the calendar icon in the filter popup menu can be customized using the [SfDataGridThemeData.calendarIconColor]() property. |
+| `cancelFilteringLabelButtonColor`     | The color of the cancel button in the filter popup can be customized using the [SfDataGridThemeData.cancelFilteringLabelButtonColor]() property. |
+| `cancelFilteringLabelColor`     | You can customize the color of the cancel label text in the filter popup menu by using the [SfDataGridThemeData.cancelFilteringLabelColor]() property. |
+| `captionSummaryRowColor`     | The background color of the caption summary row in the `SfDataGrid` can be customized using the [SfDataGridThemeData.captionSummaryRowColor]() property. |
+| `caseSensitiveIconActiveColor`     | The active (selected) color of the case-sensitive icon in the filter popup menu can be customized using the [SfDataGridThemeData.caseSensitiveIconActiveColor]() property. |
+| `caseSensitiveIconColor`     | The default color of the case-sensitive icon in the filter popup menu can be customized using the [SfDataGridThemeData.caseSensitiveIconColor]() property. |
+| `closeIconColor`     | The color of the close icon, which is used to clear the input text in the search area of the filter popup's TextField, can be customized using the [SfDataGridThemeData.closeIconColor]() property. |
+| `filterPopupBackgroundColor`     | You can customize the background color of the filter popup menu by using the [SfDataGridThemeData.filterPopupBackgroundColor]() property. |
+| `filterPopupBottomDividerColor`     | The [SfDataGridThemeData.filterPopupBottomDividerColor]() property allows you to define a custom color for the bottom divider in the filter popup, helping to match your application's theme. |
+| `filterPopupCheckColor`     | The checkmark color of the checkbox in the filter popup menu can be customized using the [SfDataGridThemeData.filterPopupCheckColor]() property. |
+| `filterPopupCheckboxFillColor`     | You can customize the fill color of checkboxes within the filter popup menu by using the [SfDataGridThemeData.filterPopupCheckboxFillColor]() property. |
+| `filterPopupDisabledIconColor`     | Use the [SfDataGridThemeData.filterPopupDisabledIconColor]() property to define a custom color for disabled icons in the filter popup menu. |
+| `filterPopupIconColor`     | The color of icons displayed in the filter popup menu can be customized using the [SfDataGridThemeData.filterPopupIconColor]() property. |
+| `filterPopupInputBorderColor`     | You can customize the border color of the input field in the filter popup menu by using the [SfDataGridThemeData.filterPopupInputBorderColor]() property. |
+| `filterPopupTopDividerColor`     | The color of the top divider in the filter popup menu can be customized using the [SfDataGridThemeData.filterPopupTopDividerColor]() property. |
+| `noMatchesFilteringLabelColor`     | The color of the 'No Matches' label, displayed when no results are found in the filter popup menu, can be customized using the [SfDataGridThemeData.noMatchesFilteringLabelColor]() property. |
+| `okFilteringLabelButtonColor`     | The color of the OK button in the filter popup menu can be customized using the [SfDataGridThemeData.okFilteringLabelButtonColor]() property. |
+| `okFilteringLabelColor`     | You can customize the color of the OK label text in the filter popup menu by using the [SfDataGridThemeData.okFilteringLabelColor]() property |
+| `okFilteringLabelDisabledButtonColor`     | The color of the disabled OK button in the filter popup menu can be customized using the [SfDataGridThemeData.okFilteringLabelDisabledButtonColor]() property |
+| `orRadioActiveColor`     | The active (selected) color of the 'OR' radio button in the advanced filter can be customized using the [SfDataGridThemeData.orRadioActiveColor]() property. |
+| `orRadioFillColor`     | The fill color of the 'OR' radio button in the advanced filter can be customized using the [SfDataGridThemeData.orRadioFillColor]() property. |
+| `searchAreaCursorColor`     | The cursor color in the search area of the filter popup menu can be customized using the [SfDataGridThemeData.searchAreaCursorColor]() property. |
+| `searchAreaFocusedBorderColor`     | Use the [SfDataGridThemeData.searchAreaFocusedBorderColor]() property to define the focused border color of the search area in the filter popup menu |
+| `searchIconColor`     | The color of the search icon in the search area of the filter popup menu can be customized using the [SfDataGridThemeData.searchIconColor]() property. |
+| 
+
+> **NOTE**  
+    The `cancelFilteringLabelColor`, `filterPopupBottomDividerColor`, and `okFilteringLabelColor` properties are supported only on desktop platforms.
+
+The following example demonstrates how to customize the color of disabled icons in the filter popup menu using the `filterPopupDisabledIconColor` property.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          filterPopupCheckboxFillColor: WidgetStatePropertyAll(
+            Colors.purple[600],
+          ),
+          filterPopupDisabledIconColor: Colors.pink,
+        ),
+        child: SfDataGrid(
+          source: employeeDataSource,
+          allowFiltering: true,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: <GridColumn>[
+            GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text('ID'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Designation', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+ 
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="flutter datagrid shows filter popup with customized colors for disabled icons" src="images/filtering/flutter-datagrid-customized-disabledicon-color.png" width="689"/>
+
+
+
