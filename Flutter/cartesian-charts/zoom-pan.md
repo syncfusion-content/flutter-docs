@@ -90,7 +90,7 @@ The directional zooming feature improves the zoom experience by allowing users t
 
 >**Note**: 
 * Directional zooming functions when both [`enableDirectionalZooming`]() and [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) are set to `true`, and [`zoomMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomMode.html) is set to [`ZoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#xy).
-* This feature is intended for touch gestures and is ineffective with a mouse or trackpad.
+* This feature is intended for touch gestures and is ineffective with a mouse or trackpad-based interactions.
 
 ![Directional Zooming](images/zooming-panning/directional-zooming.gif)
 
