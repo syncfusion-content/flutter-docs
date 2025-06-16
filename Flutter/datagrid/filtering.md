@@ -1516,9 +1516,9 @@ By default, the `FilterBehavior.strongDataType` applies to numeric, String, and 
 {% endhighlight %}
 {% endtabs %}
 
-## Color Customization for Filter Popup Menu Options
+## Customize appearance of Filter Popup Menu
 
-The `SfDataGrid` provides complete color customization support for the filter popup menu, allowing you to personalize its appearance and enhance its visual appeal. This enables you to define the look and feel of the filter popup menu more effectively and in a user-friendly manner.
+The `SfDataGrid` provides complete color customization support for the filter popup menu, allowing you to personalize its appearance and enhance its visual appeal.
 
 You can apply custom colors and personalize the filter popup menu by configuring the properties listed below through the `SfDataGridTheme.` To enable this, ensure that the `SfDataGrid` is wrapped inside an `SfDataGridTheme` widget.
 
@@ -1566,7 +1566,7 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [sy
 > **NOTE**  
     The `cancelFilteringLabelColor`, `filterPopupBottomDividerColor`, and `okFilteringLabelColor` properties are supported only on desktop platforms.
 
-The following example demonstrates how to customize the color of disabled icons in the filter popup menu using the `filterPopupDisabledIconColor` property.
+The following example shows how to customize the filter popup menu using properties from `SfDataGridTheme`, such as `cancelFilteringLabelButtonColor`, `cancelFilteringLabelColor`, `okFilteringLabelButtonColor`, `okFilteringLabelColor`, `filterPopupCheckboxFillColor`, and `filterPopupDisabledIconColor`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1580,10 +1580,13 @@ import 'package:syncfusion_flutter_core/theme.dart';
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
-          filterPopupCheckboxFillColor: WidgetStatePropertyAll(
-            Colors.purple[600],
-          ),
-          filterPopupDisabledIconColor: Colors.pink,
+          filterPopupCheckboxFillColor:
+                WidgetStatePropertyAll(Colors.green[400]),
+          filterPopupDisabledIconColor: Colors.teal[400],
+          okFilteringLabelColor: Colors.white,
+          okFilteringLabelButtonColor: Colors.indigo[600],
+          cancelFilteringLabelColor: Colors.black,
+          cancelFilteringLabelButtonColor: Colors.blueGrey[200]
         ),
         child: SfDataGrid(
           source: employeeDataSource,
@@ -1615,6 +1618,14 @@ import 'package:syncfusion_flutter_core/theme.dart';
               ),
             ),
             GridColumn(
+              columnName: 'location',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Location', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
               columnName: 'salary',
               label: Container(
                 padding: EdgeInsets.all(8.0),
@@ -1631,7 +1642,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid shows filter popup with customized colors for disabled icons" src="images/filtering/flutter-datagrid-customized-disabledicon-color.png" width="689"/>
+<img alt="flutter datagrid shows filter popup menu with customized colors" src="images/filtering/flutter-datagrid-customized-filter-popup-menu.png" width="689"/>
 
 
 
