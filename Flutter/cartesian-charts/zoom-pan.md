@@ -50,7 +50,7 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 ## Directional zooming
 
-The directional zooming feature improves the zoom experience by allowing you to zoom in and out in a specific direction. To enable this feature, set the [`enableDirectionalZooming`]() property to `true`, the default value is `false`. The following code sample demonstrates how to enable directional zooming.
+The directional zooming feature improves the zoom experience by allowing users to zoom in and out in a specific direction (horizontal, vertical, or diagonal) depending on the angle of their pinch or drag gesture. To enable this feature, set the [`enableDirectionalZooming`]() property to `true`, the default value is `false`. The following code sample demonstrates how to enable directional zooming.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -88,7 +88,9 @@ The directional zooming feature improves the zoom experience by allowing you to 
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Directional zooming works only when [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) is true and [`zoomMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomMode.html) is [`ZoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#xy), as it relies on the pinch gesture direction to determine the zoom axis.
+>**Note**: 
+* Directional zooming functions when both [`enableDirectionalZooming`]() and [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) are set to `true`, and [`zoomMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomMode.html) is set to [`ZoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#xy).
+* This feature is intended for touch gestures and is ineffective with a mouse or trackpad.
 
 ![Directional Zooming](images/zooming-panning/directional-zooming.gif)
 
