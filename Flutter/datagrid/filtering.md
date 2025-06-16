@@ -1435,7 +1435,7 @@ To show a filter icon when the mouse hovers over a column header in a DataGrid, 
 <img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
 
 ## Perform filtering to the user-defined type
-By default, the `FilterBehavior.strongDataType` applies to the `num`, `String`, and `DateTime` types. Now, it also applies to the user-defined types also. It can be enabled by extending the user-defined type with the [Comparable](https://api.dart.dev/stable/3.3.1/dart-core/Comparable-class.html) class.
+By default, the `FilterBehavior.strongDataType` applies to numeric, String, and DateTime types. Now, it also applies to the user-defined types also. It can be enabled by extending the user-defined type with the [Comparable](https://api.dart.dev/stable/3.3.1/dart-core/Comparable-class.html) class.
 
 {% tabs %}
 {% highlight Dart %} 
