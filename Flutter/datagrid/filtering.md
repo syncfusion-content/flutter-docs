@@ -1376,7 +1376,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 
 ## Show the filter icon when hovering the header cell
 
-To show a filter icon when the mouse hovers over a column header in a DataGrid, set the [SfDataGrid.showFilterIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showFilterIconOnHover.html) property to true. Note that this feature is only available on web and desktop platforms
+To show a filter icon when the mouse hovers over a column header in a DataGrid, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to true. Note that this feature is only available on web and desktop platforms
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1390,7 +1390,7 @@ To show a filter icon when the mouse hovers over a column header in a DataGrid, 
       body: SfDataGrid(
         source: employeeDataSource,
         allowFiltering: true,
-        showFilterIconOnHover:true,
+        showColumnHeaderIconOnHover:true,
         headerGridLinesVisibility: GridLinesVisibility.both,
         gridLinesVisibility: GridLinesVisibility.both,
         columnWidthMode: ColumnWidthMode.auto,
