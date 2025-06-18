@@ -11,7 +11,7 @@ documentation: ug
 
 ## Keyboard support
 
-This feature allows users to navigate to the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) widget using the TAB key and adjust its values using the keyboard arrow keys. The left and down arrow keys can be used to decrease the selection value, while the right and up arrow keys can be used to increase it.
+This feature allows you to focus on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. By default, the start thumb receives focus first. You can press the TAB key again to move focus to the end thumb. The left and down arrow keys can be used to decrease the value of the focused thumb, while the right and up arrow keys can be used to increase it.
 
 N> In [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html), keyboard accessibility is not supported when [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, as focus can only be applied to one thumb at a time.
 

@@ -489,7 +489,7 @@ You can format or change the whole numeric or date label text using the [`labelF
 * formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 >**NOTE**
-* `LabelFormatterCallback` is deprecated, use the `onLabelCreated` callback instead.
+* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use `onLabelCreated` callback to customize both the text and text style of the label.
 
 ### Horizontal
 
@@ -661,7 +661,7 @@ Widget build(BuildContext context) {
 
 ## Individual label style
 
-You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and textStyle for each label.
+You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and text style for each label.
 
 ## Horizontal
 
@@ -704,7 +704,7 @@ You can now customize the appearance of each label on the [`SfRangeSlider`](http
                       )
                       : TextStyle(
                         color: Colors.red[200],
-                        fontSize: 12,
+                        fontSize: 10,
                       ),
             );
           },
@@ -755,13 +755,11 @@ You can now customize the appearance of each label on the [`SfRangeSlider`](http
                   (value == start || value == end)
                       ? const TextStyle(
                         color: Colors.blue,
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 14,
                       )
                       : TextStyle(
                         color: Colors.red[200],
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 10,
                       ),
             );
           },

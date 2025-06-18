@@ -488,7 +488,7 @@ You can format or change the whole numeric or date label text using the [`labelF
 * formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html).
 
 >**NOTE**
-* `LabelFormatterCallback` is deprecated, use the `onLabelCreated` callback instead.
+* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use `onLabelCreated` callback to customize both the text and text style of the label.
 
 ### Horizontal
 
@@ -658,7 +658,7 @@ Widget build(BuildContext context) {
 
 ## Individual label style
 
-You can customize the appearance of each label on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and textStyle for each label.
+You can customize the appearance of each label on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and text style for each label.
 
 ### Horizontal
 
@@ -698,7 +698,7 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
                       )
                       : TextStyle(
                         color: Colors.red[200],
-                        fontSize: 12,
+                        fontSize: 10,
                       ),
             );
           },
@@ -746,13 +746,11 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
                   actualValue == _value.toInt()
                       ? const TextStyle(
                         color: Colors.blue,
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 14,
                       )
                       : TextStyle(
                         color: Colors.red[200],
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 10,
                       ),
             );
           },

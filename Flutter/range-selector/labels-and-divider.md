@@ -460,7 +460,7 @@ You can format or change the whole numeric or date label text using the [`labelF
 * **formattedText** – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
 >**NOTE**
-* `LabelFormatterCallback` is deprecated, use the `onLabelCreated` callback instead.
+* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use `onLabelCreated` callback to customize both the text and text style of the label.
 
 {% tabs %}
 {% highlight Dart %}
@@ -617,7 +617,7 @@ class Data {
 
 ## Individual label style
 
-You can now customize the appearance of each label on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and textStyle for each label.
+You can now customize the appearance of each label on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and text style for each label.
 
 {% tabs %}
 {% highlight Dart %}
@@ -660,7 +660,7 @@ You can now customize the appearance of each label on the [`SfRangeSelector`](ht
                       )
                       : TextStyle(
                         color: Colors.red[200],
-                        fontSize: 12,
+                        fontSize: 10,
                       ),
             );
           },
