@@ -9,6 +9,12 @@ documentation: ug
 
 # Accessibility in Flutter Range Selector (SfRangeSelector)
 
+## Keyboard support
+
+This feature allows users to navigate to the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) widget using the TAB key and adjust its values using the keyboard arrow keys. The left and down arrow keys can be used to decrease the selection value, while the right and up arrow keys can be used to increase it.
+
+N> In [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html), keyboard accessibility is not supported when [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, as focus can only be applied to one thumb at a time.
+
 ## Screen reader
 
 The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/semanticFormatterCallback.html) property.
