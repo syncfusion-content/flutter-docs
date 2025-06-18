@@ -658,7 +658,7 @@ Widget build(BuildContext context) {
 
 ## Individual label style
 
-You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the [`onLabelCreated`] callback. This callback allows you to fully control the text and the TextStyle for each label.
+You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and textStyle for each label.
 
 ## Horizontal
 
@@ -697,13 +697,11 @@ You can now customize the appearance of each label on the [`SfRangeSlider`](http
                   (value == start || value == end)
                       ? const TextStyle(
                         color: Colors.blue,
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 14,
                       )
                       : TextStyle(
                         color: Colors.red[200],
                         fontSize: 12,
-                        fontStyle: FontStyle.italic,
                       ),
             );
           },

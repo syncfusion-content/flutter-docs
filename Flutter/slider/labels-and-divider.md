@@ -655,7 +655,7 @@ Widget build(BuildContext context) {
 
 ## Individual label style
 
-You can customize the appearance of each label on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) individually by using the [`onLabelCreated`] callback. This callback gives you full control over the text and the TextStyle for each label.
+You can customize the appearance of each label on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and textStyle for each label.
 
 ### Horizontal
 
@@ -691,13 +691,11 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
                   actualValue == _value.toInt()
                       ? const TextStyle(
                         color: Colors.blue,
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic,
+                        fontSize: 14,
                       )
                       : TextStyle(
                         color: Colors.red[200],
                         fontSize: 12,
-                        fontStyle: FontStyle.italic,
                       ),
             );
           },
