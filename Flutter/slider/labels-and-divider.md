@@ -653,6 +653,117 @@ Widget build(BuildContext context) {
 
 ![Labels style support](images/label-and-divider/vertical-slider-labels-color.png)
 
+## Individual label style
+
+You can customize the appearance of each label on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) individually by using the [`onLabelCreated`] callback. This callback gives you full control over the text and the TextStyle for each label.
+
+### Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider(
+          min: 2.0,
+          max: 10.0,
+          value: _value,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          onChanged: (dynamic value) {
+            setState(() {
+              _value = value;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            return SliderLabel(
+              text: text,
+              textStyle:
+                  actualValue == _value.toInt()
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Individual label style support](images/label-and-divider/slider-individual-label-color.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider.vertical(
+          min: 2.0,
+          max: 10.0,
+          value: _value,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          onChanged: (dynamic value) {
+            setState(() {
+              _value = value;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            return SliderLabel(
+              text: text,
+              textStyle:
+                  actualValue == _value.toInt()
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Individual label style support](images/label-and-divider/vertical-slider-individual-label-color.png)
 
 ## Label offset
 

@@ -612,6 +612,94 @@ class Data {
 
 ![Labels color support](images/label-and-divider/selector-labels-color.png)
 
+## Individual label style
+
+You can now customize the appearance of each label on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) individually by using the [`onLabelCreated`] callback. This callback allows you to fully control the text and the TextStyle for each label.
+
+{% tabs %}
+{% highlight Dart %}
+
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRangeSelector(
+          min: _min,
+          max: _max,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          initialValues: _values,
+          onChanged: (dynamic value) {
+            setState(() {
+              _values = value;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            final int value = actualValue.toInt();
+            final int start = _values.start.toInt();
+            final int end = _values.end.toInt();
+            return RangeSelectorLabel(
+              text: text,
+              textStyle:
+                  (value == start || value == end)
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+            );
+          },
+          child: SizedBox(
+            height: 130,
+            child: SfCartesianChart(
+              margin: EdgeInsets.zero,
+              primaryXAxis: NumericAxis(
+                minimum: _min,
+                maximum: _max,
+                isVisible: false,
+              ),
+              primaryYAxis: const NumericAxis(isVisible: false),
+              plotAreaBorderWidth: 0,
+              series: <SplineAreaSeries<Data, double>>[
+                SplineAreaSeries<Data, double>(
+                  color: const Color.fromARGB(255, 126, 184, 253),
+                  dataSource: chartData,
+                  xValueMapper: (Data sales, int index) => sales.x,
+                  yValueMapper: (Data sales, int index) => sales.y,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+class Data {
+  Data({required this.x, required this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels color support](images/label-and-divider/selector-individual-label-color.png)
+
 ## Label offset
 
 You can adjust the space between ticks and labels of the range selector using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property.

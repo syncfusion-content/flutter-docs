@@ -656,6 +656,124 @@ Widget build(BuildContext context) {
 
 ![Labels style support](images/label-and-divider/vertical-slider-labels-color.png)
 
+## Individual label style
+
+You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the [`onLabelCreated`] callback. This callback allows you to fully control the text and the TextStyle for each label.
+
+## Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRangeSlider(
+          min: 2.0,
+          max: 10.0,
+          values: _values,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          onChanged: (SfRangeValues newValues) {
+            setState(() {
+              _values = newValues;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            final int value = actualValue.toInt();
+            final int start = _values.start.toInt();
+            final int end = _values.end.toInt();
+            return RangeSliderLabel(
+              text: text,
+              textStyle:
+                  (value == start || value == end)
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Individual label style support](images/label-and-divider/slider-individual-label-color.png)
+
+## Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRangeSlider.vertical(
+          min: 2.0,
+          max: 10.0,
+          values: _values,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          onChanged: (SfRangeValues newValues) {
+            setState(() {
+              _values = newValues;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            final int value = actualValue.toInt();
+            final int start = _values.start.toInt();
+            final int end = _values.end.toInt();
+            return RangeSliderLabel(
+              text: text,
+              textStyle:
+                  (value == start || value == end)
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Individual label style support](images/label-and-divider/vertical-slider-individual-label-color.png)
+
 ## Label offset
 
 You can adjust the space between ticks and labels of the range slider using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property.
