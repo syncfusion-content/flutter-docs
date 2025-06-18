@@ -488,6 +488,9 @@ You can format or change the whole numeric or date label text using the [`labelF
 * actualValue – either `DateTime` or `double` based on given [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html).
 * formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
+>**NOTE**
+* `LabelFormatterCallback` is deprecated, use the `onLabelCreated` callback instead.
+
 ### Horizontal
 
 {% tabs %}
