@@ -1376,7 +1376,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 
 ## Show the filter icon when hovering the header cell
 
-To show a filter icon when the mouse hovers over a column header in a DataGrid, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to true. Note that this feature is only available on web and desktop platforms
+To show a filter icon when the mouse hovers over a column header in a DataGrid, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to true. Note that this feature is only available on web and desktop platforms.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1561,7 +1561,6 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [sy
 | `searchAreaCursorColor`     | The cursor color in the search area of the filter popup menu can be customized using the [SfDataGridThemeData.searchAreaCursorColor]() property. |
 | `searchAreaFocusedBorderColor`     | Use the [SfDataGridThemeData.searchAreaFocusedBorderColor]() property to define the focused border color of the search area in the filter popup menu |
 | `searchIconColor`     | The color of the search icon in the search area of the filter popup menu can be customized using the [SfDataGridThemeData.searchIconColor]() property. |
-| 
 
 > **NOTE**  
     The `cancelFilteringLabelColor`, `filterPopupBottomDividerColor`, and `okFilteringLabelColor` properties are supported only on desktop platforms.
