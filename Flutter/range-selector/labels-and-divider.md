@@ -459,6 +459,9 @@ You can format or change the whole numeric or date label text using the [`labelF
 * **actualValue** – either `DateTime` or `double` based on given [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html).
 * **formattedText** – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
+>**NOTE**
+* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use `onLabelCreated` callback to customize both the text and text style of the label.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -611,6 +614,92 @@ class Data {
 {% endtabs %}
 
 ![Labels color support](images/label-and-divider/selector-labels-color.png)
+
+## Individual label style
+
+You can now customize the appearance of each label on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and text style for each label.
+
+{% tabs %}
+{% highlight Dart %}
+
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRangeSelector(
+          min: _min,
+          max: _max,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          initialValues: _values,
+          onChanged: (dynamic value) {
+            setState(() {
+              _values = value;
+            });
+          },
+          onLabelCreated: (
+            dynamic actualValue,
+            String text,
+            TextStyle labelTextStyle,
+          ) {
+            final int value = actualValue.toInt();
+            final int start = _values.start.toInt();
+            final int end = _values.end.toInt();
+            return RangeSelectorLabel(
+              text: text,
+              textStyle:
+                  (value == start || value == end)
+                      ? const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 14,
+                      )
+                      : TextStyle(
+                        color: Colors.red[200],
+                        fontSize: 10,
+                      ),
+            );
+          },
+          child: SizedBox(
+            height: 130,
+            child: SfCartesianChart(
+              margin: EdgeInsets.zero,
+              primaryXAxis: NumericAxis(
+                minimum: _min,
+                maximum: _max,
+                isVisible: false,
+              ),
+              primaryYAxis: const NumericAxis(isVisible: false),
+              plotAreaBorderWidth: 0,
+              series: <SplineAreaSeries<Data, double>>[
+                SplineAreaSeries<Data, double>(
+                  color: const Color.fromARGB(255, 126, 184, 253),
+                  dataSource: chartData,
+                  xValueMapper: (Data sales, int index) => sales.x,
+                  yValueMapper: (Data sales, int index) => sales.y,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+class Data {
+  Data({required this.x, required this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Individual label style support](images/label-and-divider/selector-individual-label-color.png)
 
 ## Label offset
 

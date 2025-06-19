@@ -9,6 +9,10 @@ documentation: ug
 
 # Accessibility in Flutter Slider (SfSlider)
 
+## Keyboard support
+
+This feature allows you to focus on the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. The left and down arrow keys can be used to decrease the thumb value, while the right and up arrow keys can be used to increase it.
+
 ## Screen reader
 
 The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
