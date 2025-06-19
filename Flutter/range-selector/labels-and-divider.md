@@ -699,7 +699,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels color support](images/label-and-divider/selector-individual-label-color.png)
+![Individual label style support](images/label-and-divider/selector-individual-label-color.png)
 
 ## Label offset
 
