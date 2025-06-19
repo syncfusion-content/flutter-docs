@@ -506,6 +506,32 @@ File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 
+## Retrieving Actions from a Form Field
+
+In PDF documents, form fields can have associated actions that dictate behavior when a user interacts with the field. You can retrieve these actions from a form field using the PdfFieldActions property. This property is read-only and provides the actions currently associated with a field.
+
+The following code sample demonstrates how to retrieve actions from an existing form field in a PDF document.
+
+{% highlight dart %}
+// Load an existing PDF document.
+final PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+// Get the form field from which you want to retrieve actions.
+final PdfButtonField buttonField = document.form.fields[0] as PdfButtonField;
+
+// Retrieve and process the actions of the form field.
+final PdfFieldActions actions = buttonField.actions;
+// Check if actions are not null and perform a test.
+if (actions != null) {
+// Check for specific known action properties or behaviors.
+  print('Actions are present for the field.');
+} else {
+  print('No actions associated with the field.');
+}
+
+{% endhighlight %}
+
 ## Filling form fields in an existing PDF Document
 
 Flutter PDF allows you to fill the form fields using the PdfField class.
