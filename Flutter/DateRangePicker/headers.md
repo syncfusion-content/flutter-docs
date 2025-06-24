@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
             fontStyle: FontStyle.normal,
             fontSize: 25,
             letterSpacing: 5,
-            color: Color(0xFFff5eaea),
+            color: Color(0xFFffeaea),
           )),
     ),
   );

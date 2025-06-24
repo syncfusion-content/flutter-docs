@@ -19,10 +19,10 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 [MonthCellDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails-class.html) - returns the details of the month cell.
 
-* `date` - returns the month cell date.
-* `appointments` - returns the month cell appointments.
-* `visibleDates` - returns the current view visible dates.
-* `bounds` - returns the month cell bounds.
+* [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails/date.html) - returns the month cell date.
+* [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails/appointments.html) - returns the month cell appointments.
+* [visibleDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails/visibleDates.html) - returns the current view visible dates.
+* [bounds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails/bounds.html) - returns the month cell bounds.
 
 
 {% tabs %}
@@ -69,12 +69,12 @@ Widget build(BuildContext context) {
 
 ## Schedule view month header builder
 
-You can design your custom view and assign this view to the month header of a schedule view in the calendar by returning an appropriate widget using the [scheduleViewMonthHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/scheduleViewMonthHeaderBuilder.html) in the `SfCalendar`.
+You can design your custom view and assign this view to the month header of a schedule view in the calendar by returning an appropriate widget using the [scheduleViewMonthHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/scheduleViewMonthHeaderBuilder.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ScheduleViewMonthHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewMonthHeaderDetails-class.html) - returns the required details of the schedule view month header.
 
-* `date` - returns the header date.
-* `bounds` - returns the header bounds.
+* [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewMonthHeaderDetails/date.html) - returns the header date.
+* [bounds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewMonthHeaderDetails/bounds.html) - returns the header bounds.
 
 {% tabs %}
 {% highlight dart hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30" %}
@@ -120,15 +120,15 @@ Widget build(BuildContext context) {
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
 
 ## Appointment builder
-The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentBuilder.html) allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) of `SfCalendar`.
+The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentBuilder.html) allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [CalendarAppointmentDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails-class.html): Returns the details of the appointment view.
 
 
-* `date`: The date associate with the appointment view.
-* `appointments`: List of appointments associated with the appointment view.
-*`bound`: Returns the appointment view bounds.
-* `isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
+* [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails/date.html): The date associate with the appointment view.
+* [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails/appointments.html): List of appointments associated with the appointment view.
+* [bounds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails/bounds.html): Returns the appointment view bounds.
+* [isMoreAppointmentRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails/isMoreAppointmentRegion.html): Determines whether the widget replaces the more appointment region.
 
 {% tabs %}
 {% highlight dart hl_lines="11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106" %}
@@ -258,9 +258,9 @@ The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calenda
 
 [TimeRegionDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails-class.html): Returns the details of the time region view.
 
-* `date`: The date associate with the time region view.
-* `bound`: Returns the time region view bounds.
-* `region`: The Region detail associated with the time region view.
+* [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails/date.html): The date associate with the time region view.
+* [bounds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails/bounds.html): Returns the time region view bounds.
+* [region](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails/region.html): The Region detail associated with the time region view.
 
 {% tabs %}
 {% highlight dart hl_lines="22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44" %}
@@ -323,8 +323,8 @@ The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter
 
 [ResourceViewHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails-class.html) - returns the required details of the resource view header builder.
 
-* `bound`: returns the resource view header bound.
-* `resource`: returns the display name, color, id and image.
+* [bounds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails/bounds.html): returns the resource view header bounds.
+* [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails/resource.html): returns the display name, color, id and image.
 
 
 {% tabs %}

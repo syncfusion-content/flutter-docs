@@ -14,7 +14,7 @@ Event calendar supports Right to Left rendering and all the calendar elements re
 Right to Left rendering can be switched in the following ways:
 
 ### Wrapping the SfCalendar with Directionality widget
-`SfCalendar` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
+[SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
 {% highlight dart hl_lines="7 8" %}
@@ -69,7 +69,7 @@ return MaterialApp(
 
 
 ## RTL supported calendar element
-Right to Left rendering is supported for all the elements in the `SfCalendar`.
+Right to Left rendering is supported for all the elements in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 
 {% tabs %}
