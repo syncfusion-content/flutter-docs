@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with Flutter Linear Gauge (SfLinearGauge)
 
-This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer and also covers basic features needed to know to get started with the Linear Gauge widget.
+This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer, and also covers basic features needed to get started with the Linear Gauge widget.
 
-To get start quickly with our Flutter Linear Gauge widget, you can check on this video.
+To get started quickly with our Flutter Linear Gauge widget, you can check out this video:
 
 <style>#FlutterLinearGaugeVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterLinearGaugeVideoTutorial' src='https://www.youtube.com/embed/8NmzRA-kM5Y'></iframe>
@@ -56,20 +56,20 @@ Import the following package in your Dart code.
 
 ## Initialize the Linear Gauge
 
-After the package has been imported, initialize the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) as a child of any widget such as container widget.
+After the package has been imported, initialize the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) as a child of any widget such as a container widget.
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                        child:SfLinearGauge()
-                )
-              )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child:SfLinearGauge()
+        )
+      )      
+    );
+  }
 
 {% endhighlight %}
 
@@ -81,16 +81,16 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                   child: SfLinearGauge(minimum: 100, maximum: 200)
-                )
-            )      
-        );
-    }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(minimum: 100, maximum: 200)
+        )
+      )      
+    );
+  }
 
 {% endhighlight %}
 
@@ -98,13 +98,13 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 ## Update orientation
 
-As you can see in the above image, the default orientation of the Linear Gauge is horizontal. But you can change it with the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/orientation.html) property of the Linear Gauge widget.
+As you can see in the above image, the default orientation of the Linear Gauge is horizontal. You can change it with the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/orientation.html) property of the Linear Gauge widget.
 
 {% highlight dart %} 
 
-SfLinearGauge(
-              orientation: LinearGaugeOrientation.vertical
-            ),
+  SfLinearGauge(
+    orientation: LinearGaugeOrientation.vertical
+  ),
 
 {% endhighlight %}
 
@@ -112,18 +112,18 @@ SfLinearGauge(
 
 ## Add range
 
-A range is a visual element that helps you to quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a Linear gauge. You can also specify the start value, end value, and color for a range as demonstrated in the following code sample.  
+A range is a visual element that helps you to quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a Linear gauge. You can also specify the start value, end value, and color for a range as demonstrated in the following code sample.
 
 {% highlight dart %} 
 
-    SfLinearGauge(
-        ranges: <LinearGaugeRange>[
-        //First range
-        LinearGaugeRange(startValue: 0, endValue: 50, color: Colors.green),
-        //Second range
-        LinearGaugeRange(startValue: 50, endValue: 100, color: Colors.blue)
-      ]
-    )
+  SfLinearGauge(
+    ranges: <LinearGaugeRange>[
+      //First range
+      LinearGaugeRange(startValue: 0, endValue: 50, color: Colors.green),
+      //Second range
+      LinearGaugeRange(startValue: 50, endValue: 100, color: Colors.blue)
+    ]
+  )
 
 {% endhighlight %}
 
@@ -131,15 +131,15 @@ A range is a visual element that helps you to quickly visualize where a range fa
 
 ## Add marker pointer
 
-The Linear Gauge supports two marker pointers - shape pointer and widget pointer. The shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointer facilitates using any Flutter widget to point a value in an axis track. 
+The Linear Gauge supports two marker pointers - shape pointer and widget pointer. The shape pointer has a default set of pre-built icons to point to a value in an axis track, while the widget pointer facilitates using any Flutter widget to point to a value in an axis track.
 
-The following code sample demonstrates how to add a shape pointer.
+The following code sample demonstrates how to add a shape pointer:
 
 {% highlight dart %} 
 
-    SfLinearGauge(
-        markerPointers: [LinearShapePointer(value: 50)]
-      ),
+  SfLinearGauge(
+    markerPointers: [LinearShapePointer(value: 50)]
+  ),
 
 {% endhighlight %}
 
@@ -149,18 +149,18 @@ The following code sample demonstrates how to add a widget pointer.
 
 {% highlight dart %} 
 
-    SfLinearGauge(
-        markerPointers: [
-          LinearWidgetPointer(
-            value: 40,
-              child: Container(
-              height: 20,
-              width: 20,
-              decoration: BoxDecoration(color: Colors.blueAccent)
-            ), 
-          ),
-        ],
+  SfLinearGauge(
+    markerPointers: [
+      LinearWidgetPointer(
+        value: 40,
+        child: Container(
+          height: 20,
+          width: 20,
+          decoration: BoxDecoration(color: Colors.blueAccent)
+        ),
       ),
+    ],
+  ),
 
 {% endhighlight %}
 
@@ -168,66 +168,66 @@ The following code sample demonstrates how to add a widget pointer.
 
 ## Add bar pointer
 
-In a Linear Gauge, the bar pointer is used to specify a value in an axis track by drawing a track from the axis’s minimum value to its specified value
+In a Linear Gauge, the bar pointer is used to specify a value in an axis track by drawing a track from the axis's minimum value to its specified value.
 
 {% highlight dart %} 
 
-    SfLinearGauge(
-        barPointers: [LinearBarPointer(value: 40)]
-      ),
+  SfLinearGauge(
+    barPointers: [LinearBarPointer(value: 40)]
+  ),
 
 {% endhighlight %}
 
 ![Bar pointer added to a linear gauge](images/getting-started/add_bar_pointer.png)
 
-The following code example gives you the complete view of the above configurations.
+The following code example gives you the complete view of the above configurations:
 
 {% highlight dart %} 
 
-import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
+  import 'package:flutter/material.dart';
+  import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-   void main() => runApp(ChartApp());
-    class LinearGaugeDemo extends StatelessWidget {
+  void main() => runApp(LinearGaugeDemo());
 
+  class LinearGaugeDemo extends StatelessWidget {
     @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+    Widget build(BuildContext context) {
+      return MaterialApp(
         home: Scaffold(
-            body: Center(
-              child: SfLinearGauge(
-                ranges: <LinearGaugeRange>[ 
-                  //First range
-                 LinearGaugeRange(
-                   startValue: 0,
-                   endValue: 50,
-                   color: Colors.green
-                 ),
-                 //Second range
-                 LinearGaugeRange(
-                   startValue: 50,
-                   endValue: 100,
-                   color: Colors.blue
-                 ),
-                ],
-                markerPointers: [
-                  LinearShapePointer(value: 50),
-                  LinearWidgetPointer(
-                    value: 40,
-                    child: Container(
-                      height: 20,
-                      width: 20,
-                      decoration: BoxDecoration(color: Colors.blueAccent)
-                    ),
+          body: Center(
+            child: SfLinearGauge(
+              ranges: <LinearGaugeRange>[
+                //First range
+                LinearGaugeRange(
+                  startValue: 0,
+                  endValue: 50,
+                  color: Colors.green
+                ),
+                //Second range
+                LinearGaugeRange(
+                  startValue: 50,
+                  endValue: 100,
+                  color: Colors.blue
+                ),
+              ],
+              markerPointers: [
+                LinearShapePointer(value: 50),
+                LinearWidgetPointer(
+                  value: 40,
+                  child: Container(
+                    height: 20,
+                    width: 20,
+                    decoration: BoxDecoration(color: Colors.blueAccent)
                   ),
-                ],
-                barPointers: [LinearBarPointer(value: 40)]
-              ),
-            )
+                ),
+              ],
+              barPointers: [LinearBarPointer(value: 40)]
+            ),
+          )
         )
-    );
+      );
+    }
   }
-}
 
 {% endhighlight %}
 

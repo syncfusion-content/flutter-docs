@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion license and unlock keys - Syncfusion
-description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
+description: Learn here about the Syncfusion license and unlock keys and the difference between license and unlock keys.
 platform: flutter
 control: Essential Studio
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 
 # Syncfusion<sup>&reg;</sup> Licensing Overview
 
-The License key registration is no longer required for Flutter from version 18.3.0.x. So, there is no need to generate or register Syncfusion<sup>&reg;</sup> Flutter license keys in your Flutter projects. 
+The License key registration is no longer required for Flutter from version 18.3.0.x. Therefore, there is no need to generate or register Syncfusion<sup>&reg;</sup> Flutter license keys in your Flutter projects. 
 
 The Flutter controls from Syncfusion<sup>&reg;</sup> can be used without registering the license keys.
 

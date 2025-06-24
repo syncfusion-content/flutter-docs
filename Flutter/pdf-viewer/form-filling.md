@@ -9,7 +9,7 @@ documentation: ug
 
 # Form filling in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to fill, edit, save, export, and import the AcroForm fields in a PDF document.
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to fill, edit, save, export, and import the AcroForm fields within a PDF document.
 
 To get started quickly, you can also check out our video tutorial below. 
 
@@ -17,7 +17,7 @@ To get started quickly, you can also check out our video tutorial below.
 
 ## Supported form fields
 
-You can load and fill in the following form fields in a PDF document using the Flutter PDF Viewer. 
+You can load and fill the following form fields in a PDF document using the Flutter PDF Viewer. 
 
 * Text box. 
 * Checkbox. 
@@ -28,11 +28,11 @@ You can load and fill in the following form fields in a PDF document using the F
 
 ## Adding or Editing the form data programmatically
 
-Programmatically add or edit the form data in the document using the [getFormFields](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getFormFields.html) method, which retrieves the form field collection.
+Add or edit the form data programmatically in the document using the [getFormFields](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getFormFields.html) method, which retrieves the form fields collection.
 
 ### Adding or Editing text box data
 
-Programmatically add or edit the text of the text box by changing the [text](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextFormField/text.html) property.
+Add or edit the text of the text box programmatically by changing the [text](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextFormField/text.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 
 ### Adding or Editing checkbox data
 
-Programmatically check or uncheck the checkbox by changing the [isChecked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfCheckboxFormField/isChecked.html) property.
+Check or uncheck the checkbox programmatically by changing the [isChecked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfCheckboxFormField/isChecked.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -114,7 +114,7 @@ Widget build(BuildContext context) {
 
 ### Editing combo box data
 
-Programmatically select an item from the combo box using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField/selectedItem.html) property.
+Select an item from the combo box programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField/selectedItem.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -155,7 +155,7 @@ Widget build(BuildContext context) {
 
 ### Editing radio button data
 
-Programmatically select an item from the radio buttons using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField/selectedItem.html) property.
+Select an item from the radio buttons programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField/selectedItem.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -196,7 +196,7 @@ Widget build(BuildContext context) {
 
 ### Editing list box data
 
-Programmatically select an item or more from the list box using the [selectedItems](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField/selectedItems.html) property.
+Select one or more items from the list box programmatically using the [selectedItems](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField/selectedItems.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -237,7 +237,7 @@ Widget build(BuildContext context) {
 
 ### Adding or Editing signature data
 
-Programmatically add or remove the signature in a signature form field by assigning the image bytes or `null` to the [signature](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfSignatureFormField/signature.html) property.
+Add or remove the signature in a signature form field programmatically by assigning the image bytes or `null` to the [signature](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfSignatureFormField/signature.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20 21 22" %}
@@ -280,7 +280,7 @@ Widget build(BuildContext context) {
 
 ## Customize the visibility of built-in Signature pad
 
-By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize the visibility of the built-in signature pad using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains the same.
+By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize its visibility using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains this.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -303,7 +303,7 @@ Widget build(BuildContext context) {
 
 ### How to create and display a custom signature pad?
 
-With the above option in the `SfPdfViewer`, you can easily hide the built-in signature pad and create and display a custom signature pad to draw and add personalized signatures to the signature form field. The following code example explains the same.
+With the above option in the `SfPdfViewer`, you can hide the built-in signature pad and create and display a custom signature pad to draw and add personalized signatures to the signature form field. The following code example explains this.
 
 In this example, the custom signature pad using the `SfSignaturePad` will be displayed when tapping on the signature field with the following options:
 
@@ -454,7 +454,7 @@ Widget build(BuildContext context) {
 
 ## Clear form data
 
-The [clearFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearFormData.html) method clears all the form field data in the PDF document. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the `pageNumber` parameter is 0. Refer to the following code example.
+The [clearFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/clearFormData.html) method clears all form field data in the PDF document. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the `pageNumber` parameter is 0. Refer to the following code example.
 
 {% tabs %}
 {% highlight dart hl_lines="16 26" %}
@@ -581,7 +581,7 @@ Widget build(BuildContext context) {
 
 ## Importing and Exporting form data 
 
-The Flutter PDF viewer allows users to import and export form data to and from PDF documents. The import and export of form data support the following extensions. 
+The Flutter PDF viewer allows users to import and export form data to and from PDF documents. The import and export of form data support the following extensions: 
 
 * fdf 
 * xfdf 
@@ -590,7 +590,7 @@ The Flutter PDF viewer allows users to import and export form data to and from P
 
 The required file type can be chosen from the [DataFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) enumeration. In the following sections, only the `xfdf` file type is explained for brevity. 
 
-N> Import ‘package:syncfusion_flutter_pdf/pdf.dart’ in the Dart code to use the [DartFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) parameter. 
+N> Import ‘package:syncfusion_flutter_pdf/pdf.dart’ in the Dart code to use the [DartFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) parameter.
 
 ### Exporting form data 
 
@@ -600,7 +600,7 @@ The [exportFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/
 {% highlight dart hl_lines="15 16" %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController(); 
- 
+
 @override 
 Widget build(BuildContext context) { 
   return Scaffold( 
@@ -629,7 +629,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> When exporting, the signature form field data will not be exported.  
+N> When exporting, the signature form field data will not be exported.
  
 ### Importing form data 
 
@@ -641,7 +641,7 @@ The [importFormData](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/
 {% highlight dart hl_lines="15 16 17 18" %}
 
 final PdfViewerController _pdfViewerController = PdfViewerController(); 
- 
+
 @override 
 Widget build(BuildContext context) { 
   return Scaffold( 
@@ -718,23 +718,26 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-For desktop platforms such as Windows, macOS, and desktop web, use the following shortcut keys to perform the actions.
+For desktop platforms such as Windows, macOS, Linux, and desktop web, use the following shortcut keys to perform the actions.
 
 <table>
 <tr>
 <th>Action & Shortcut keys</th>
 <th>Windows</th>
 <th>macOS</th>
+<th>Linux</th>
 </tr>
 <tr>
 <th>Undo</th>
 <td><code>Ctrl</code> + <code>z</code></td>
 <td><code>Command</code> + <code>z</code></td>
+<td><code>Ctrl</code> + <code>z</code></td>
 </tr>
 <tr>
 <th>Redo</th>
 <td><code>Ctrl</code> + <code>y</code></td>
 <td><code>Command</code> + <code>y</code></td>
+<td><code>Ctrl</code> + <code>y</code></td>
 </tr>
 </table>
 
@@ -746,11 +749,11 @@ The `SfPdfViewer` supports the [PdfFormFieldFocusChangeCallback](https://pub.dev
 
 ### Form field focus change callback
 
-The [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback triggers when the focus changes in or out of the form field. The [PdfFormFieldFocusChangeDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldFocusChangeDetails-class.html) will return the `formField` instance and its focus change value in the `hasFocus` property. The following code example explains the same.
+The [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback triggers when the focus changes in or out of the form field. The [PdfFormFieldFocusChangeDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldFocusChangeDetails-class.html) will return the `formField` instance and its focus change value in the `hasFocus` property. The following code example explains this.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11" %}
- 
+
 @override 
 Widget build(BuildContext context) { 
   return Scaffold( 
@@ -773,7 +776,7 @@ N> The `PdfFormFieldFocusChangeCallback` only triggers for text boxes and signat
 
 ### Form field value changed callback
 
-The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) the `formField` instance along with its `oldValue` and `newValue`. The following code example explains the same.
+The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) the `formField` instance along with its `oldValue` and `newValue`. The following code example explains this.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11 12" %}
@@ -799,7 +802,7 @@ Widget build(BuildContext context) {
 
 ## How to synchronize text form field data with the text entry widget periodically for each character change?
 
-With the help of the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback, we can synchronize text form field data with the text entry widget periodically for each character change. The following code example explains the same.
+With the help of the [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback, we can synchronize text form field data with the text entry widget periodically for each character change. The following code example explains this.
 
 {% tabs %}
 {% highlight dart %}
@@ -814,7 +817,7 @@ void main() {
   ));
 }
 
-/// Represents Homepage for Navigation
+/// Represents HomePage for Navigation
 class HomePage extends StatefulWidget {
   @override
   _HomePage createState() => _HomePage();
@@ -865,7 +868,7 @@ class _HomePage extends State<HomePage> {
 
 ## How to synchronize text form field data with the text entry widget after filling it out completely?
 
-With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback, we can synchronize text form field data with the text entry widget after filling it out completely. The following code example explains the same.
+With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) callback, we can synchronize text form field data with the text entry widget after filling it out completely. The following code example explains this.
 
 {% tabs %}
 {% highlight dart %}
@@ -880,7 +883,7 @@ void main() {
   ));
 }
 
-/// Represents Homepage for Navigation
+/// Represents HomePage for Navigation
 class HomePage extends StatefulWidget {
   @override
   _HomePage createState() => _HomePage();
@@ -933,7 +936,7 @@ class _HomePage extends State<HomePage> {
 
 ## How to perform validation over the form field data?
 
-With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in the `SfPdfViewer`, we can validate the form field data. The following code examples explain the same.
+With the help of the [onFormFieldFocusChange](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldFocusChange.html) and [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callbacks and the form field programmatic options available in the `SfPdfViewer`, we can validate the form field data. The following code examples explain this.
 
 In this example, we are validating the form field data in a registration form when saving. The validation includes,
 
@@ -981,7 +984,7 @@ Date of birth
 Course
 </td>
 <td>
-* Atleast one course should be selected.
+* At least one course should be selected.
 </td>
 </tr>
 <tr>

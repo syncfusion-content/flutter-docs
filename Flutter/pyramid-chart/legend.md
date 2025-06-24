@@ -162,7 +162,7 @@ You can control the visibility of the series by tapping the legend item. You can
           child: Container(
             child: SfPyramidChart(
             legend: Legend(isVisible: true,
-              // Toogles the series visibility on tapping the legend item
+              // Toggles the series visibility on tapping the legend item
               toggleSeriesVisibility: true
             ),
             series: PyramidSeries<ChartData, String>(
@@ -227,7 +227,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
             child: SfPyramidChart(
             legend: Legend(
               isVisible: true,
-              // Overflowing legend content will be wraped
+              // Overflowing legend content will be wrapped
               overflowMode: LegendItemOverflowMode.wrap
             ),
             series: PyramidSeries<ChartData, String>(

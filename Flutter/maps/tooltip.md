@@ -9,13 +9,13 @@ documentation: ug
 
 # Tooltip in Flutter Maps (SfMaps)
 
-Tooltip is used to indicate the shape, bubble, marker information during the tap, or click interaction. This section helps to learn about how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
+Tooltip is used to indicate shape, bubble, and marker information during tap or click interactions. This section helps you learn how to show tooltips for shapes, bubbles, and markers in maps and customize them.
 
 ## Tooltip for the shapes
 
-It is used to clearly indicate the shape information on the tap or click. To show tooltip for the shape, return a widget in [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
+Tooltips clearly indicate shape information on tap or click. To show a tooltip for a shape, return a widget in [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html). This widget will be wrapped in a built-in shape which comes with a nose at the bottom.
 
-The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) will be called with the corresponding index every time you interact with the shapes i.e., while tapping in touch devices and hover enter in mouse-enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -121,13 +121,13 @@ class Model {
 ![Maps shape tooltip builder](images/tooltip/shape_tooltip_builder.png)
 
 N>
-* Refer the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html), for customizing the tooltip.
+* Refer to the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html) class for customizing the tooltip.
 
 ## Tooltip for the bubbles
 
-It is used to clearly indicate the bubble information on the tap or click. To show tooltip for the bubble, return a widget in [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
+Tooltips clearly indicate bubble information on tap or click. To show a tooltip for a bubble, return a widget in [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html). This widget will be wrapped in a built-in shape which comes with a nose at the bottom.
 
-The [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) will be called with the corresponding index every time you interact with the bubbles i.e., while tapping in touch devices and hover enter in mouse-enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -239,13 +239,13 @@ class Model {
 ![Maps bubble tooltip builder](images/tooltip/bubble_tooltip_builder.png)
 
 N>
-* Refer the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html), for customizing the tooltip.
+* Refer to the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html) class for customizing the tooltip.
 
 ## Tooltip for the markers
 
-It is used to clearly indicate the marker information on the tap or click. To show tooltip for the marker, return a widget in [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom. 
+Tooltips clearly indicate marker information on tap or click. To show a tooltip for a marker, return a widget in [`MapLayer.markerTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html). This widget will be wrapped in a built-in shape which comes with a nose at the bottom.
 
-The [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`MapLayer.markerTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html) will be called with the corresponding index every time you interact with the markers i.e., while tapping in touch devices and hover enter in mouse-enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -395,16 +395,16 @@ class WorldWonderModel {
 ![Maps marker tooltip builder](images/tooltip/marker_tooltip_builder.png)
 
 N>
-* Refer the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html), for customizing the tooltip.
+* Refer to the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html) class for customizing the tooltip.
 
 ## Appearance customization
 
-You can customize the below appearances of the tooltip.
+You can customize the following aspects of the tooltip:
 
-* **Background color** - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
-* **Stroke color** - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
-* **Stroke width** - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
-* **Visibility** - Change the duration of the tooltip visibility using the `hideDelay` property. The default value of the `hideDelay` property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. Also, you can increase or decrease the tooltip duration or show tooltip always by setting `double.infinity` to the `hideDelay` property.
+* **Background color** - Change the background color of the tooltip using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* **Stroke color** - Change the stroke color of the tooltip using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* **Stroke width** - Change the stroke width of the tooltip using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
+* **Visibility** - Change the duration of the tooltip visibility using the `hideDelay` property. The default value of the `hideDelay` property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. You can increase or decrease the tooltip duration or show tooltip always by setting `double.infinity` to the `hideDelay` property.
 
 N> For mobile platforms, the `hideDelay` option is supported. When you hover over the shape, bubble, or marker on the web or desktop, a tooltip will appear. When you remove hover from the shape, it will disappear.
 
@@ -505,12 +505,12 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the tooltip using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+You can also customize the appearance of the tooltip using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html):
 
-* **Background color** - Change the background color of the tooltip in the maps using the [`SfMapsThemeData.tooltipColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipColor.html) property.
-* **Stroke color** - Change the stroke color of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeColor.html) property.
-* **Stroke width** - Change the stroke width of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeWidth.html) property.
-* **Border radius** - Change the appearance of the tooltip borders in the maps using the [`SfMapsThemeData.tooltipBorderRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipBorderRadius.html) property.
+* **Background color** - Change the background color of the tooltip using the [`SfMapsThemeData.tooltipColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipColor.html) property.
+* **Stroke color** - Change the stroke color of the tooltip using the [`SfMapsThemeData.tooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeColor.html) property.
+* **Stroke width** - Change the stroke width of the tooltip using the [`SfMapsThemeData.tooltipStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeWidth.html) property.
+* **Border radius** - Change the appearance of the tooltip borders using the [`SfMapsThemeData.tooltipBorderRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipBorderRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -617,8 +617,8 @@ class Model {
 ![Maps tooltip appearance customization](images/tooltip/tooltip_textStyle.png)
 
 N>
-* Refer the [MapShapeLayer.shapeTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html), for enabling tooltip for the shapes.
-* Refer the [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html), for enabling tooltip for the bubbles.
-* Refer the [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html), for enabling tooltip for the markers.
+* Refer to the [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) property for enabling tooltip for shapes.
+* Refer to the [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) property for enabling tooltip for bubbles.
+* Refer to the [`MapLayer.markerTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html) property for enabling tooltip for markers.
 
 N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Tooltip example](https://flutter.syncfusion.com/#/maps/shape-layer/tooltip) that shows how to configure a Maps in Flutter.

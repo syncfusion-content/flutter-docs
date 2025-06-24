@@ -44,7 +44,7 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
 
 ### Placeholder
 
-Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
+Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
 {% highlight dart hl_lines="5 10" %}
@@ -241,3 +241,5 @@ Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/
 {% endtabs %}
 
 ![Message Content RTL](images/rtl/conversation_area_rtl.gif)
+
+>You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.

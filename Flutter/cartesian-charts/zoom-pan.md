@@ -48,6 +48,52 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 {% endhighlight %}
 {% endtabs %}
 
+## Directional zooming
+
+The directional zooming feature improves the zoom experience by allowing users to zoom in and out in a specific direction (horizontal, vertical, or diagonal) based on their finger gesture. To enable this feature, set the [`enableDirectionalZooming`]() property to `true`, the default value is `false`. The following code sample demonstrates how to enable directional zooming.
+
+{% tabs %}
+{% highlight dart hl_lines="7" %}
+
+    late ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+                  // Enables directional zooming
+                  enableDirectionalZooming: true,
+                  enablePinching: true,
+                  zoomMode: ZoomMode.xy,
+                );
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                zoomPanBehavior: _zoomPanBehavior
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**Note**: 
+* Directional zooming functions when both [`enableDirectionalZooming`]() and [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) are set to `true`.
+* This feature is intended for touch gestures and is ineffective with a mouse or track pad-based interactions.
+
+![Directional Zooming](images/zooming-panning/directional_zooming.gif)
+
 ## Double tap zooming
 
 Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to `false`.

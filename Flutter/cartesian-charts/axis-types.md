@@ -576,11 +576,11 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            deciamlPlaces: 5
+                            decimalPlaces: 5
                         ),
                         primaryYAxis: NumericAxis(
                             decimalPlaces: 4,
-                            rangPadding: ChartRangePadding.none
+                            rangePadding: ChartRangePadding.none
                         ),
                         series: <CartesianSeries<ChartData, double>>[
                             LineSeries<ChartData, double>(

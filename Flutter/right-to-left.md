@@ -9,7 +9,7 @@ documentation: ug
 
 # Right to Left (RTL) in Syncfusion<sup>&reg;</sup> Flutter Widgets
 
-This page helps to navigate to the documentation of Right to left (RTL) support available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
+This page helps you navigate to the documentation of Right to Left (RTL) support available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
 
 <table>
 	<tr>

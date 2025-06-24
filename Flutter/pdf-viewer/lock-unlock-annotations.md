@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Lock and Unlock Annotations in Flutter PDF Viewer widget (SfPdfViewer)
+# Lock and Unlock Annotations in Flutter PDF Viewer Widget (SfPdfViewer)
 
 You can lock an annotation to prevent it from being edited. The annotation that has been locked cannot be removed or edited further until it is unlocked. This section will go through the process of locking and unlocking annotations in a PDF document.
 
-## Lock all annotations in a document
+## Lock All Annotations in a Document
 
 To lock all annotations in a document, set the `isLocked` property of the `annotationSettings` to true. The following example explains how to lock all annotations in a document.
 
@@ -28,7 +28,7 @@ void lockAllAnnotations() {
 
 * Similarly, to unlock all the annotations, set the `isLocked` property value to false.
 
-## Lock a specific annotation
+## Lock a Specific Annotation
 
 To lock a specific annotation in a document, access the annotation instance and set the `isLocked` property of the annotation to true. The following example explains how to lock the first annotation in a PDF document.
 
@@ -51,9 +51,9 @@ void lockFirstAnnotation() {
 
 * Similarly, to unlock the annotation, set the `isLocked` property value to false.
 
-## Lock specific annotation types
+## Lock Specific Annotation Types
 
-You can also use the `annotationSettings` property to lock a specific annotation type in a document. The following example explains how to lock all the underline annotations in a document by accessing the underline annotation settings. Similarly, you can lock other types of annotation.
+You can also use the `annotationSettings` property to lock a specific annotation type in a document. The following example explains how to lock all the underline annotations in a document by accessing the underline annotation settings. Similarly, you can lock other types of annotations.
 
 {% tabs %}
 {% highlight dart %}
@@ -71,7 +71,7 @@ void lockUnderlineAnnotations() {
 
 * Similarly, to unlock the specific annotation types, set the `isLocked` property value to false.
 
-## Lock the selected annotation
+## Lock the Selected Annotation
 
 To lock the selected annotation, access the selected annotation instance and set the `isLocked` property to true. The selected annotation instance may be obtained from the `onAnnotationSelected` callback. The following example explains locking the selected annotation in a PDF document.
 

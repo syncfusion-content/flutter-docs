@@ -593,7 +593,7 @@ The [`outgoingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutte
 
 ## Incoming content text style
 
-The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingContentTextStyle.html) property is used to specify the style for text in incoming message bubbles
+The [`incomingContentTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingContentTextStyle.html) property is used to specify the style for text in incoming message bubbles.
 
 {% tabs %}
 {% highlight Dart hl_lines="8" %}

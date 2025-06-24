@@ -292,7 +292,7 @@ class JobVacancyModel {
 
 ## Alignment
 
-You can change the labels alignment by wrapping the text widget using the [`Align`](https://api.flutter.dev/flutter/widgets/Align-class.html) widget and set the [`alignment`](https://api.flutter.dev/flutter/widgets/Align/alignment.html) property.
+You can change the labels alignment by wrapping the text widget in the [`Align`](https://api.flutter.dev/flutter/widgets/Align-class.html) widget and setting the [`alignment`](https://api.flutter.dev/flutter/widgets/Align/alignment.html) property.
 
 {% tabs %}
 {% highlight Dart %}

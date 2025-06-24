@@ -20,51 +20,51 @@ N> The default value of `isScrollbarAlwaysShown` is false.
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDataSource,
-          isScrollbarAlwaysShown: true,
-          columns: [
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            source: _employeeDataSource,
+            isScrollbarAlwaysShown: true,
+            columns: [
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -80,54 +80,54 @@ The following code snippets demonstrate how to hide the scrollbars in the DataGr
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: ScrollConfiguration(
-      behavior: const ScrollBehavior().copyWith(scrollbars: false),
-      child: SfDataGrid(
-        source: employeeDataSource,
-        showVerticalScrollbar: false,
-        showHorizontalScrollbar: false,
-        isScrollbarAlwaysShown: true,
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.all(16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text('Name'))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.centerRight,
-                  child: Text('Salary'))),
-        ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
       ),
-    ),
-  );
-}
+      body: ScrollConfiguration(
+        behavior: const ScrollBehavior().copyWith(scrollbars: false),
+        child: SfDataGrid(
+          source: employeeDataSource,
+          showVerticalScrollbar: false,
+          showHorizontalScrollbar: false,
+          isScrollbarAlwaysShown: true,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.all(16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text('Name'))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.centerRight,
+                    child: Text('Salary'))),
+          ],
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,52 +143,52 @@ The following example shows how to disable the horizontal and vertical scrolling
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDataSource,
-          horizontalScrollPhysics: NeverScrollableScrollPhysics(),
-          verticalScrollPhysics: NeverScrollableScrollPhysics(),
-          columns: [
-        GridColumn(
-            columnName: 'id',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'name',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'designation',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
-            columnName: 'salary',
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfDataGrid(
+            source: _employeeDataSource,
+            horizontalScrollPhysics: NeverScrollableScrollPhysics(),
+            verticalScrollPhysics: NeverScrollableScrollPhysics(),
+            columns: [
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,64 +206,64 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToCell'),
-        onPressed: () {
-          _controller.scrollToCell(10, 1);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToCell'),
+          onPressed: () {
+            _controller.scrollToCell(10, 1);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -279,64 +279,64 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToRow'),
-        onPressed: () {
-           _controller.scrollToRow(10);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToRow'),
+          onPressed: () {
+            _controller.scrollToRow(10);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -350,64 +350,64 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToColumn'),
-        onPressed: () {
-          _controller.scrollToColumn(1);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToColumn'),
+          onPressed: () {
+            _controller.scrollToColumn(1);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -428,67 +428,67 @@ N> The default value of `DataGridScrollPosition` is `Start`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToCell'),
-        onPressed: () {
-          _controller.scrollToCell(10, 1,
-              canAnimate: true,
-              rowPosition: DataGridScrollPosition.start,
-              columnPosition: DataGridScrollPosition.start);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToCell'),
+          onPressed: () {
+            _controller.scrollToCell(10, 1,
+                canAnimate: true,
+                rowPosition: DataGridScrollPosition.start,
+                columnPosition: DataGridScrollPosition.start);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -502,64 +502,64 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToVerticalOffset'),
-        onPressed: () {
-          _controller.scrollToVerticalOffset(500);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToVerticalOffset'),
+          onPressed: () {
+            _controller.scrollToVerticalOffset(500);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -573,64 +573,64 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _controller = DataGridController();
+  final DataGridController _controller = DataGridController();
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: Column(children: [
-    TextButton(
-        child: Text('ScrollToHorizontalOffset'),
-        onPressed: () {
-          _controller.scrollToHorizontalOffset(400);
-        }),
-    Expanded(
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            defaultColumnWidth: 150,
-            gridLinesVisibility: GridLinesVisibility.both,
-            headerGridLinesVisibility: GridLinesVisibility.both,
-            controller: _controller,
-            columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ]))
-  ]));
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(children: [
+      TextButton(
+          child: Text('ScrollToHorizontalOffset'),
+          onPressed: () {
+            _controller.scrollToHorizontalOffset(400);
+          }),
+      Expanded(
+          child: SfDataGrid(
+              source: _employeeDataSource,
+              defaultColumnWidth: 150,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              controller: _controller,
+              columns: [
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ]))
+    ]));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -648,36 +648,36 @@ The following example demonstrates how to load more rows when vertical scrolling
 
 import 'package:intl/intl.dart';
 
-late EmployeeDataSource _employeeDataSource;
-late ScrollController verticalScrollController;
+  late EmployeeDataSource _employeeDataSource;
+  late ScrollController verticalScrollController;
 
-void verticalListener() {
-  if (_verticalScrollController.position.pixels >=
-      _verticalScrollController.position.maxScrollExtent * (70 / 100)) {
-    _employeeDataSource.loadMoreRows();
+  void verticalListener() {
+    if (_verticalScrollController.position.pixels >=
+        _verticalScrollController.position.maxScrollExtent * (70 / 100)) {
+      _employeeDataSource.loadMoreRows();
+    }
   }
-}
 
-@override
-void initState() {
-  super.initState();
-  _employeeDataSource = _EmployeeDataSource();
-  _verticalScrollController = ScrollController()..addListener(verticalListener);
-}
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = _EmployeeDataSource();
+    _verticalScrollController = ScrollController()..addListener(verticalListener);
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('Flutter DataGrid Sample'),
-    ),
-    body: SfDataGrid(
-        source: _employeeDataSource,
-        verticalScrollController: _verticalScrollController,
-        columnWidthMode: ColumnWidthMode.fill,
-        columns: _getColumns()),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter DataGrid Sample'),
+      ),
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          verticalScrollController: _verticalScrollController,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: _getColumns()),
+    );
+  }
 
 class _EmployeeDataSource extends DataGridSource {
   _EmployeeDataSource() {
@@ -822,7 +822,7 @@ The `rowsCacheExtent` property will create the additional rows internally with t
 If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the [shrinkWrapRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapRows.html) or [shrinkWrapColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapColumns.html) property, respectively.
 
 >**NOTE**
-       Shrink wrapping is significantly more expensive than setting the height and width manually.
+Shrink wrapping is significantly more expensive than setting the height and width manually.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -963,9 +963,9 @@ SfDataGrid allows you to set the scroll offset upon initial loading for both hor
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-late ScrollController _verticalScrollController;
-late ScrollController _horizontalScrollController;
+  late EmployeeDataSource _employeeDataSource;
+  late ScrollController _verticalScrollController;
+  late ScrollController _horizontalScrollController;
 
   @override
   void initState() {
@@ -980,8 +980,8 @@ late ScrollController _horizontalScrollController;
     );
   }
 
-@override
-Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return SfDataGrid(
       verticalScrollController: _verticalScrollController,
       horizontalScrollController: _horizontalScrollController,

@@ -213,7 +213,7 @@ Widget build(BuildContext context) {
 ![Blackout dates](images/monthview/blackout-dates.png)
 
 ## Hide leading and trailing dates
-You can hide the previous and next month dates of a calendar month view by using the [showLeadingAndTrailingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the `MonthViewSettings` of the calendar.
+You can hide the previous and next month dates of a calendar month view by using the [showTrailingAndLeadingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the `MonthViewSettings` of the calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

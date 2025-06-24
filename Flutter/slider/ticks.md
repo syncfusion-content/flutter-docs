@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tick in Flutter Slider widget | Syncfusion 
+title: Tick in Flutter Slider widget | Syncfusion
 description: Learn here all about adding the Tick feature of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
@@ -87,7 +87,7 @@ Widget build(BuildContext context) {
 
 ![Slider tick support](images/tick/vertical-major-tick.png)
 
-N> Refer the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/tickShape.html) and [`SfSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html) for customizing the major tick’s visual appearance.
+N> Refer the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/tickShape.html) and [`SfSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html) for customizing the major tick's visual appearance.
 
 ## Show minor ticks
 
@@ -169,7 +169,7 @@ Widget build(BuildContext context) {
 
 N>
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showTicks.html) to know about the rendering major ticks at given interval.
-* Refer the [`minorTickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/minorTickShape.html) and [`SfSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html) for customizing the minor tick’s visual appearance.
+* Refer the [`minorTickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/minorTickShape.html) and [`SfSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html) for customizing the minor tick's visual appearance.
 
 ## Major ticks color
 
