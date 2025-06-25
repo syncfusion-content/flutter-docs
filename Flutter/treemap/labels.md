@@ -18,113 +18,113 @@ You can add labels on the tiles using the [`TreemapLevel.labelBuilder`](https://
 {% tabs %}
 {% highlight Dart %}
 
-late List<JobVacancyModel> _source;
+  late List<JobVacancyModel> _source;
 
-@override
-void initState() {
-   _source = <JobVacancyModel>[
-      JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-      JobVacancyModel(
-          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 105),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-      JobVacancyModel(
-          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 155),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 60),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 100),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 30),
-      JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-      JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <JobVacancyModel>[
+        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+        JobVacancyModel(
+            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 105),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+        JobVacancyModel(
+            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 155),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 60),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 100),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 30),
+        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].vacancy;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].country,
-                color: Colors.pink,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].job,
-                color: Colors.green,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].group,
-                color: Colors.blue,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].vacancy;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].country,
+                  color: Colors.pink,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].job,
+                  color: Colors.green,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].group,
+                  color: Colors.blue,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class JobVacancyModel {
   const JobVacancyModel(
@@ -147,129 +147,129 @@ class JobVacancyModel {
 
 ## Overflow mode
 
-You can trim or fade the label when it is overflowed from the tile using the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html) property. The possible values are `visible`, `ellipsis`, `clip` and `fade`. The default value of the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html)property is `TextOverflow.visible`.
+You can trim or fade the label when it is overflowed from the tile using the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html) property. The possible values are [`visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible), [`ellipsis`](https://api.flutter.dev/flutter/painting/TextOverflow.html#ellipsis), [`clip`](https://api.flutter.dev/flutter/painting/TextOverflow.html#clip) and [`fade`](https://api.flutter.dev/flutter/painting/TextOverflow.html#fade). The default value of the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html)property is [`TextOverflow.visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible).
 
 By default, the labels will render even if it overflows from the tile.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<JobVacancyModel> _source;
+  late List<JobVacancyModel> _source;
 
-@override
-void initState() {
-   _source = <JobVacancyModel>[
-      JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-      JobVacancyModel(
-          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 105),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-      JobVacancyModel(
-          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 155),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 60),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 100),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 30),
-      JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-      JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <JobVacancyModel>[
+        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+        JobVacancyModel(
+            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 105),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+        JobVacancyModel(
+            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 155),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 60),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 100),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 30),
+        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-       body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].vacancy;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].country,
-                color: Colors.pink,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      tile.group,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].job,
-                color: Colors.green,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      tile.group,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].group,
-                color: Colors.blue,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      tile.group,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  );
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].vacancy;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].country,
+                  color: Colors.pink,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        tile.group,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].job,
+                  color: Colors.green,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        tile.group,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].group,
+                  color: Colors.blue,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        tile.group,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class JobVacancyModel {
   const JobVacancyModel(
@@ -297,113 +297,113 @@ You can change the labels alignment by wrapping the text widget in the [`Align`]
 {% tabs %}
 {% highlight Dart %}
 
-late List<JobVacancyModel> _source;
+  late List<JobVacancyModel> _source;
 
-@override
-void initState() {
-   _source = <JobVacancyModel>[
-      JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-      JobVacancyModel(
-          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 105),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-      JobVacancyModel(
-          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 155),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 60),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 100),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 30),
-      JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-      JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <JobVacancyModel>[
+        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+        JobVacancyModel(
+            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 105),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+        JobVacancyModel(
+            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 155),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 60),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 100),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 30),
+        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].vacancy;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].country,
-                color: Colors.pink,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Align(
-                    alignment: Alignment.center,
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].job,
-                color: Colors.green,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Align(
-                    alignment: Alignment.center,
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-              TreemapLevel(
-                groupMapper: (int index) => _source[index].group,
-                color: Colors.blue,
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Align(
-                    alignment: Alignment.center,
-                    child: Text(tile.group),
-                  );
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].vacancy;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].country,
+                  color: Colors.pink,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].job,
+                  color: Colors.green,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+                TreemapLevel(
+                  groupMapper: (int index) => _source[index].group,
+                  color: Colors.blue,
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Text(tile.group),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class JobVacancyModel {
   const JobVacancyModel(
