@@ -1267,7 +1267,7 @@ To retrieve the details of a row in the DataGrid, use the [controller](https://p
 
 * [dataGridRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html) – Provides the DataGridRow corresponding to the specified index.
 
-* isSelected – Indicates whether the row is currently selected.
+* [isSelected](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowDetails/isSelected.html) – Indicates whether the row is currently selected.
 
 {% tabs %}
 {% highlight Dart %}
