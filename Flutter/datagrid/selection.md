@@ -1261,7 +1261,7 @@ The Datagrid provides the following callbacks to handle interactions with the ce
 
 ### Getting row details
 
-To retrieve the details of a row in the DataGrid, use the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and assign it to the controller property of the DataGrid. To obtain the details of a row, use the `getRowDetails` method from the controller, providing the index as the parameter. This method returns a `DataGridRowDetails`, which includes the following properties:
+To retrieve the details of a row in the DataGrid, use the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and assign it to the controller property of the DataGrid. To obtain the details of a row, use the [getRowDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/getRowDetails.html) method from the controller, providing the index as the parameter. This method returns a [DataGridRowDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowDetails-class.html), which includes the following properties:
 
 * [rowType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowType.html) – Returns the type of the row (e.g., dataRow, headerRow).
 
