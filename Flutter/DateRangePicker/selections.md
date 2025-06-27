@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Selections in Flutter Date Range Picker (SfDateRangePicker)
-Dates can be selected by touching the month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as `Single`, `Multiple`, `Range` and `MultiRange` selection
+Dates can be selected by touching the month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) provides support to select dates in four modes such as `Single`, `Multiple`, `Range`, `MultiRange` and `ExtendableRange`selection.
 
 >**NOTE** When the `enableViewNavigation` property is set to false, the Date range picker allows you to select the cells in the year, decade, and century views of date range picker.
 
@@ -34,16 +34,18 @@ Widget build(BuildContext context) {
 ![SingleSelection Date Range Picker](images/selections/singleselection.png)
 
 >**NOTE**
-* The year, decade, and century view allow you to select cells only when the `enableViewNavigation` is set to false.
+* The year, decade, and century view allow you to select cells only when the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) is set to false.
 * In this scenario, the `selection changed` callback will return the first date of the month, year, or decade of the selected cell when the selection mode set to `single` and `multiple`.
-Eg: 
-* In the year view, when the May month cell is selected then the selected date value will be 01-05-2020.
-* In the decade view, when the (2025) year cell is selected then the selected date value will be 01-01-2025.
-* In the century view, when the (2020-2029) decade cell is selected then the selected date value will be 01-01-2020.
+
+Eg:
+
+  * In the year view, when the May month cell is selected then the selected date value will be 01-05-2020.
+  * In the decade view, when the (2025) year cell is selected then the selected date value will be 01-01-2025.
+  * In the century view, when the (2020-2029) decade cell is selected then the selected date value will be 01-01-2020.
 
 
 ## Multiple selection
-You can randomly select more than one date range picker cell by setting the `DateRangePickerSelectionMode` to `multiple`. By clicking again you can deselect the selected cells.
+You can randomly select more than one date range picker cell by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to `multiple`. By clicking again you can deselect the selected cells.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -64,7 +66,7 @@ Widget build(BuildContext context) {
 ![MultiSelection Date Range Picker](images/selections/multiselection.png)
 
 ## Range selection
-You can select a range of cells in any date range picker view by setting the `DateRangePickerSelectionMode` to the `range`.
+You can select a range of cells in any date range picker view by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to the `range`.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -85,8 +87,9 @@ Widget build(BuildContext context) {
 ![RangeSelection Date Range Picker](images/selections/range-selection.png)
 
 >**NOTE**
-* The year, decade, and century view allow you to select cells only when the `enableViewNavigation` set is as false.
+* The year, decade, and century view allow you to select cells only when the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) set is as false.
 * In this scenario, the `selection changed` callback will return the first and last date of the month, year, or decade of the selected cell when the selection mode is set to `range` and `multi-range`.
+
 Eg: 
 * In the year view, when the range is selected as May – June, then the range value will be 01-05-2020 to 30-06-2020.
 * In the decade view, when the range is selected as 2025 – 2030, then the range value will be 01-01-2025 to 31-12-2030.
@@ -94,7 +97,7 @@ Eg:
 
 
 ## Multi range selection
-You can select more than one range of cells in any of the date range picker views by setting the `DateRangePickerSelectionMode` to the `multiRange`.
+You can select more than one range of cells in any of the date range picker views by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to the `multiRange`.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -137,7 +140,7 @@ Extend the selected range with the new selected date in any date range picker vi
 ![Extendable Range Selection in Flutter Date Range Picker](images/selections/flutter-date-range-picker-extendable-range-selection.png)
 
 >**NOTE**
-* The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
+* The hovering effect which occurs while extending the range will not be displayed when the [DateRangePickerNavigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html) is set as `DateRangePickerNavigationMode.scroll`.
 
 ## Extendable range selection Direction
 It allows to extend the selection direction by using the [extendableRangeSelectionDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/extendableRangeSelectionDirection.html) property of the DateRangePicker. 
@@ -168,7 +171,7 @@ You can set the extendable range selection direction as forward, backward, both 
 * If it is set to backward direction, the end date will not be changed here.
 
 ## Selection radius
-Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
+Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -231,7 +234,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Toggle day selection
-You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the `SfDateRangePicker`.
+You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

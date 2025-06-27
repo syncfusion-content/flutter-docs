@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Multiple Picker Views in Flutter Date Range Picker (SfDateRangePicker)
-The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 ## Month view
 This view displays the entire dates of a particular month. By default, the current month will be displayed on loading. The current date is provided with a separate color different from the rest of the dates color in `month view`.
@@ -165,23 +165,24 @@ Widget build(BuildContext context) {
 ![Century view Date Range Picker](images/views/numberofweek-in-view.png)
 
 ## Multi-date picker view
-You can enable a multi-date range picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of `SfDateRangePicker`, which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of `SfDateRangePicker`.
+You can enable a multi-date range picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
 
 @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-          body: SfDateRangePicker(
-            enableMultiView: true,
-            viewSpacing: 20,
-            headerStyle: DateRangePickerHeaderStyle(
-              textAlign: TextAlign.center
-            ),
-        ));
-  }
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          enableMultiView: true,
+          viewSpacing: 20,
+          headerStyle: DateRangePickerHeaderStyle(
+            textAlign: TextAlign.center
+          ),
+        )
+      )
+  );
 }
 
 {% endhighlight %}
@@ -190,7 +191,7 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 ![Multi-date picker view](images/views/multi-picker-view.jpg)
 
 ## Vertical picker
-You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as `DateRangePickerNavigationDirection.vertical` in the `SfDateRangePicker`.`
+You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as `DateRangePickerNavigationDirection.vertical` in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).`
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
