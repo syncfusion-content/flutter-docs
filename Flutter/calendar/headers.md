@@ -17,7 +17,7 @@ You can customize the header of the calendar using the [headerStyle](https://pub
 
 ### Customize header height in calendar
 
-You can customize the height for header in calendar using the `headerHeight` property in calendar.
+You can customize the height for header in calendar using the [headerHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerHeight.html) property in calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 ![Customize header height in calendar](images/headers/header-height.png)
 
 ### Header appearance
-You can style the header using the [calendarHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle-class.html) in calendar. You can change the background color, textStyle, and textAlignement using the properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textAlign.html) of header using the `headerStyle` property in calendar. 
+You can style the header using the [calendarHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle-class.html) in calendar. You can change the background color, textStyle, and textAlignement using the properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textAlign.html) of header using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerStyle.html) property in calendar. 
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8 9 10 11 12 13 14" %}
@@ -55,7 +55,7 @@ Widget build(BuildContext context) {
               fontSize: 25,
               fontStyle: FontStyle.normal,
               letterSpacing: 5,
-              color: Color(0xFFff5eaea),
+              color: Color(0xFFffeaea),
               fontWeight: FontWeight.w500)),
     ),
   );
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
 
 ### Header date format
 
-You can customize the header date format by using the [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) property of the `SfCalendar`. The `headerDateFormat` can be specified with a pattern string.
+You can customize the header date format by using the [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) property of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). The [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) can be specified with a pattern string.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -96,7 +96,7 @@ You can customize the view header of the calendar using the [viewHeaderStyle](ht
 
 ### Customize view header height in calendar.
 
-You can customize the height for view header in calendar using the `viewHeaderHeight` property in calendar.
+You can customize the height for view header in calendar using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewHeaderHeight.html) property in calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
 
 ### View header appearance
 
-You can style the header using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle-class.html) properties in calendar. You can change the background color, dayTextStyle, and dateTextStyle using properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/backgroundColor.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dayTextStyle.html) and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dateTextStyle.html) of view header using the `viewHeaderStyle` property in calendar.
+You can style the header using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle-class.html) properties in calendar. You can change the background color, dayTextStyle, and dateTextStyle using properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/backgroundColor.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dayTextStyle.html) and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dateTextStyle.html) of view header using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewHeaderStyle.html) property in calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16" %}
@@ -132,11 +132,11 @@ Widget build(BuildContext context) {
           backgroundColor: Colors.grey,
           dayTextStyle: TextStyle(
               fontSize: 18,
-              color: Color(0xFFff5eaea),
+              color: Color(0xFFffeaea),
               fontWeight: FontWeight.w500),
           dateTextStyle: TextStyle(
               fontSize: 22,
-              color: Color(0xFFff5eaea),
+              color: Color(0xFFffeaea),
               letterSpacing: 2,
               fontWeight: FontWeight.w500)),
     ),
