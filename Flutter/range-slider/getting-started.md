@@ -281,9 +281,9 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+DateTime _min = DateTime(2008);
+DateTime _max = DateTime(2018);
+SfRangeValues _values = SfRangeValues(DateTime(2012), DateTime(2014));
 
 @override
 Widget build(BuildContext context) {
@@ -319,9 +319,9 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+DateTime _min = DateTime(2008);
+DateTime _max = DateTime(2018);
+SfRangeValues _values = SfRangeValues(DateTime(2012), DateTime(2014));
 
 @override
 Widget build(BuildContext context) {

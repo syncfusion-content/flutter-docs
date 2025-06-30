@@ -93,25 +93,25 @@ The type of date interval can range from years to seconds. It is mandatory for d
 
 For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is `DateTime(2002, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is `DateTime(2010, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is `2`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) is `DateFormat.y()` then the range selector will render the labels, major ticks, and dividers at 2002, 2004, 2006 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is `DateTime(2002)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is `DateTime(2010)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is `2`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) is `DateFormat.y()` then the range selector will render the labels, major ticks, and dividers at 2002, 2004, 2006 and so on.
 
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2004), DateTime(2008));
 
 final List<Data> chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01), y: 2.2),
-    Data(x: DateTime(2003, 01, 01), y: 3.4),
-    Data(x: DateTime(2004, 01, 01), y: 2.8),
-    Data(x: DateTime(2005, 01, 01), y: 1.6),
-    Data(x: DateTime(2006, 01, 01), y: 2.3),
-    Data(x: DateTime(2007, 01, 01), y: 2.5),
-    Data(x: DateTime(2008, 01, 01), y: 2.9),
-    Data(x: DateTime(2009, 01, 01), y: 3.8),
-    Data(x: DateTime(2010, 01, 01), y: 3.7),
+    Data(x: DateTime(2002), y: 2.2),
+    Data(x: DateTime(2003), y: 3.4),
+    Data(x: DateTime(2004), y: 2.8),
+    Data(x: DateTime(2005), y: 1.6),
+    Data(x: DateTime(2006), y: 2.3),
+    Data(x: DateTime(2007), y: 2.5),
+    Data(x: DateTime(2008), y: 2.9),
+    Data(x: DateTime(2009), y: 3.8),
+    Data(x: DateTime(2010), y: 3.7),
 ];
 
 @override
@@ -240,25 +240,25 @@ class Data {
 
 You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
 
-For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) is SliderDuration(years: 1, months: 6),the range selector will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is DateTime(2015) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is DateTime(2020) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) is SliderDuration(years: 1, months: 6),the range selector will move the thumbs at DateTime(2015), DateTime(2016, 07), DateTime(2018),and DateTime(2019, 07).
 
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2004), DateTime(2008));
 
 final List<Data> chartData = <Data>[
-  Data(x: DateTime(2002, 01, 01), y: 2.2),
-  Data(x: DateTime(2003, 01, 01), y: 3.4),
-  Data(x: DateTime(2004, 01, 01), y: 2.8),
-  Data(x: DateTime(2005, 01, 01), y: 1.6),
-  Data(x: DateTime(2006, 01, 01), y: 2.3),
-  Data(x: DateTime(2007, 01, 01), y: 2.5),
-  Data(x: DateTime(2008, 01, 01), y: 2.9),
-  Data(x: DateTime(2009, 01, 01), y: 3.8),
-  Data(x: DateTime(2010, 01, 01), y: 3.7),
+  Data(x: DateTime(2002), y: 2.2),
+  Data(x: DateTime(2003), y: 3.4),
+  Data(x: DateTime(2004), y: 2.8),
+  Data(x: DateTime(2005), y: 1.6),
+  Data(x: DateTime(2006), y: 2.3),
+  Data(x: DateTime(2007), y: 2.5),
+  Data(x: DateTime(2008), y: 2.9),
+  Data(x: DateTime(2009), y: 3.8),
+  Data(x: DateTime(2010), y: 3.7),
 ];
 
 @override
@@ -319,20 +319,20 @@ You can select a particular interval by tapping when setting the [`enableInterva
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2004), DateTime(2008));
 
 final List<Data> chartData = <Data>[
-  Data(x: DateTime(2002, 01, 01), y: 2.2),
-  Data(x: DateTime(2003, 01, 01), y: 3.4),
-  Data(x: DateTime(2004, 01, 01), y: 2.8),
-  Data(x: DateTime(2005, 01, 01), y: 1.6),
-  Data(x: DateTime(2006, 01, 01), y: 2.3),
-  Data(x: DateTime(2007, 01, 01), y: 2.5),
-  Data(x: DateTime(2008, 01, 01), y: 2.9),
-  Data(x: DateTime(2009, 01, 01), y: 3.8),
-  Data(x: DateTime(2010, 01, 01), y: 3.7),
+  Data(x: DateTime(2002), y: 2.2),
+  Data(x: DateTime(2003), y: 3.4),
+  Data(x: DateTime(2004), y: 2.8),
+  Data(x: DateTime(2005), y: 1.6),
+  Data(x: DateTime(2006), y: 2.3),
+  Data(x: DateTime(2007), y: 2.5),
+  Data(x: DateTime(2008), y: 2.9),
+  Data(x: DateTime(2009), y: 3.8),
+  Data(x: DateTime(2010), y: 3.7),
 ];
 
 @override

@@ -111,7 +111,7 @@ We have provided built-in support for selecting the chart segments based on the 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2010, 03, 01), DateTime(2010, 06, 01));
+SfRangeValues _values = SfRangeValues(DateTime(2010, 03), DateTime(2010, 06));
 RangeController _rangeController;
 
 @override
@@ -129,15 +129,15 @@ void dispose() {
 }
 
 final List<Data> chartData = <Data>[
-    Data(x: DateTime(2010, 01, 01), y: 2.2),
-    Data(x: DateTime(2010, 02, 01), y: 3.4),
-    Data(x: DateTime(2010, 03, 01), y: 2.8),
-    Data(x: DateTime(2010, 04, 01), y: 1.6),
-    Data(x: DateTime(2010, 05, 01), y: 2.3),
-    Data(x: DateTime(2010, 06, 01), y: 2.5),
-    Data(x: DateTime(2010, 07, 01), y: 2.9),
-    Data(x: DateTime(2010, 08, 01), y: 3.8),
-    Data(x: DateTime(2010, 09, 01), y: 3.7),
+    Data(x: DateTime(2010), y: 2.2),
+    Data(x: DateTime(2010, 02), y: 3.4),
+    Data(x: DateTime(2010, 03), y: 2.8),
+    Data(x: DateTime(2010, 04), y: 1.6),
+    Data(x: DateTime(2010, 05), y: 2.3),
+    Data(x: DateTime(2010, 06), y: 2.5),
+    Data(x: DateTime(2010, 07), y: 2.9),
+    Data(x: DateTime(2010, 08), y: 3.8),
+    Data(x: DateTime(2010, 09), y: 3.7),
 ];
 
 @override
@@ -145,8 +145,8 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
       child: SfRangeSelector(
-        min: DateTime(2010, 01, 01),
-        max: DateTime(2010, 09, 01),
+        min: DateTime(2010),
+        max: DateTime(2010, 09),
         interval: 2,
         dateIntervalType: DateIntervalType.months,
         dateFormat: DateFormat.yM(),
@@ -161,8 +161,8 @@ Widget build(BuildContext context) {
           child: SfCartesianChart(
             margin: EdgeInsets.zero,
             primaryXAxis: DateTimeAxis(
-              minimum: DateTime(2010, 01, 01),
-              maximum: DateTime(2010, 09, 01),
+              minimum: DateTime(2010),
+              maximum: DateTime(2010, 09),
               isVisible: false,
             ),
             primaryYAxis: const NumericAxis(isVisible: false),
@@ -360,27 +360,27 @@ void initState() {
     data = <Data>[
       Data(x: DateTime(2000, 01, 01, 0), y: 100),
       Data(x: DateTime(2000, 01, 15), y: 10),
-      Data(x: DateTime(2000, 02, 01), y: 40),
+      Data(x: DateTime(2000, 02), y: 40),
       Data(x: DateTime(2000, 02, 15), y: 34),
-      Data(x: DateTime(2000, 03, 01), y: 80),
+      Data(x: DateTime(2000, 03), y: 80),
       Data(x: DateTime(2000, 03, 15), y: 49),
-      Data(x: DateTime(2000, 04, 01), y: 56),
+      Data(x: DateTime(2000, 04), y: 56),
       Data(x: DateTime(2000, 04, 15), y: 26),
-      Data(x: DateTime(2000, 05, 01), y: 8),
+      Data(x: DateTime(2000, 05), y: 8),
       Data(x: DateTime(2000, 05, 15), y: 80),
-      Data(x: DateTime(2000, 06, 01), y: 42),
+      Data(x: DateTime(2000, 06), y: 42),
       Data(x: DateTime(2000, 06, 15), y: 12),
-      Data(x: DateTime(2000, 07, 01), y: 28),
+      Data(x: DateTime(2000, 07), y: 28),
       Data(x: DateTime(2000, 07, 15), y: 68),
-      Data(x: DateTime(2000, 08, 01), y: 94),
+      Data(x: DateTime(2000, 08), y: 94),
       Data(x: DateTime(2000, 08, 15), y: 24),
-      Data(x: DateTime(2000, 09, 01), y: 72),
+      Data(x: DateTime(2000, 09), y: 72),
       Data(x: DateTime(2000, 09, 15), y: 32),
-      Data(x: DateTime(2000, 10, 01), y: 48),
+      Data(x: DateTime(2000, 10), y: 48),
       Data(x: DateTime(2000, 10, 15), y: 4),
-      Data(x: DateTime(2000, 11, 01), y: 64),
+      Data(x: DateTime(2000, 11), y: 64),
       Data(x: DateTime(2000, 11, 15), y: 10),
-      Data(x: DateTime(2000, 12, 01), y: 85),
+      Data(x: DateTime(2000, 12), y: 85),
       Data(x: DateTime(2000, 12, 15), y: 96),
     ];
 

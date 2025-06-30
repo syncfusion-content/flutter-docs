@@ -178,7 +178,7 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -186,7 +186,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -215,7 +215,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -223,7 +223,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -253,7 +253,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 03, 01);
+DateTime _value = DateTime(2000, 03);
 
 @override
 Widget build(BuildContext context) {
@@ -261,7 +261,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2000, 09, 01, 24),
               value: _value,
               interval: 2,
@@ -290,7 +290,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 03, 01);
+DateTime _value = DateTime(2000, 03);
 
 @override
 Widget build(BuildContext context) {
@@ -298,7 +298,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2000, 09, 01, 24),
               value: _value,
               interval: 2,
@@ -409,7 +409,7 @@ The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -417,7 +417,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -447,7 +447,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -455,7 +455,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -479,6 +479,86 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Label placement support](images/label-and-divider/vertical-label-placement.png)
+
+## Edge Label placement
+
+The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property is used to place the edge labels either inside the major ticks or on the major ticks. The default value of the [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
+
+### Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _value = DateTime(2002);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfSlider(
+              min: DateTime(2000),
+              max: DateTime(2004, 12, 31, 24),
+              value: _value,
+              interval: 1,
+              showLabels: true,
+              showTicks: true,
+              edgeLabelPlacement: EdgeLabelPlacement.inside,
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              onChanged: (dynamic newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge Label placement support](images\label-and-divider\edge-label-placement.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _value = DateTime(2002);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfSlider.vertical(
+              min: DateTime(2000),
+              max: DateTime(2004, 12, 31, 24),
+              value: _value,
+              interval: 1,
+              showLabels: true,
+              showTicks: true,
+              edgeLabelPlacement: EdgeLabelPlacement.inside,
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              onChanged: (dynamic newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge Label placement support](images\label-and-divider\vertical-edge-label-placement.png)
 
 ## Customize label text
 

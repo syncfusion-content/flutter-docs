@@ -273,9 +273,9 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-DateTime _value = DateTime(2012, 01, 01);
+DateTime _min = DateTime(2008);
+DateTime _max = DateTime(2018);
+DateTime _value = DateTime(2012);
 
 @override
 Widget build(BuildContext context) {
@@ -309,9 +309,9 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-DateTime _value = DateTime(2012, 01, 01);
+DateTime _min = DateTime(2008);
+DateTime _max = DateTime(2018);
+DateTime _value = DateTime(2012);
 
 @override
 Widget build(BuildContext context) {

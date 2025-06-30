@@ -16,7 +16,7 @@ When `dragMode` is set to `SliderDragMode.onThumb`, only individual thumb can be
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2014, 01, 01), DateTime(2016, 01, 01));
+SfRangeValues _values = SfRangeValues(DateTime(2014), DateTime(2016));
 
 @override
 Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ Widget build(BuildContext context) {
       height: 400,
       width: 400,
       child: SfRangeSlider(
-        min: DateTime(2010, 01, 01),
-        max: DateTime(2020, 01, 01),
+        min: DateTime(2010),
+        max: DateTime(2020),
         dragMode: SliderDragMode.onThumb,
         showLabels: true,
         showTicks: true,
@@ -59,7 +59,7 @@ N> It is applicable for both horizontal and vertical range slider.
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2016, 01, 01));
+SfRangeValues _values = SfRangeValues(DateTime(2012), DateTime(2016));
 
 @override
 Widget build(BuildContext context) {
@@ -68,8 +68,8 @@ Widget build(BuildContext context) {
       height: 400,
       width: 400,
       child: SfRangeSlider(
-        min: DateTime(2010, 01, 01),
-        max: DateTime(2020, 01, 01),
+        min: DateTime(2010),
+        max: DateTime(2020),
         dragMode: SliderDragMode.betweenThumbs,
         showLabels: true,
         showTicks: true,
@@ -102,7 +102,7 @@ N> It is applicable for both horizontal and vertical range slider.
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2014, 01, 01), DateTime(2016, 01, 01));
+SfRangeValues _values = SfRangeValues(DateTime(2014), DateTime(2016));
 
 @override
 Widget build(BuildContext context) {
@@ -111,8 +111,8 @@ Widget build(BuildContext context) {
       height: 400,
       width: 400,
       child: SfRangeSlider(
-        min: DateTime(2010, 01, 01),
-        max: DateTime(2020, 01, 01),
+        min: DateTime(2010),
+        max: DateTime(2020),
         dragMode: SliderDragMode.both,
         showLabels: true,
         showTicks: true,
