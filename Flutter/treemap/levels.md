@@ -23,45 +23,45 @@ There will be a tile for each unique value returned in the [`TreemapLevel.groupM
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _source;
+  late List<PopulationModel> _source;
 
-@override
-void initState() {
-   _source = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <PopulationModel>[
+        PopulationModel('Asia', 25.4),
+        PopulationModel('South America', 19.11),
+        PopulationModel('North America', 13.3),
+        PopulationModel('Europe', 10.65),
+        PopulationModel('Africa', 7.54),
+        PopulationModel('Australia', 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].populationInMillions;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) {
-                  return _source[index].continent;
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].populationInMillions;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _source[index].continent;
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class PopulationModel {
   const PopulationModel(this.continent, this.populationInMillions);
@@ -92,87 +92,87 @@ The first level will work similarly to the flat level. From the next level in th
 {% tabs %}
 {% highlight Dart %}
 
-late List<JobVacancyModel> _source;
+  late List<JobVacancyModel> _source;
 
-@override
-void initState() {
-   _source = <JobVacancyModel>[
-      JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-      JobVacancyModel(
-          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 105),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-      JobVacancyModel(
-          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 155),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 60),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 100),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 30),
-      JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-      JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <JobVacancyModel>[
+        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+        JobVacancyModel(
+            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 105),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+        JobVacancyModel(
+            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 155),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 60),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 100),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 30),
+        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].vacancy;
-            },
-            levels: [
-              TreemapLevel(groupMapper: (int index) => _source[index].country),
-              TreemapLevel(groupMapper: (int index) => _source[index].job),
-              TreemapLevel(groupMapper: (int index) => _source[index].group),
-              TreemapLevel(groupMapper: (int index) => _source[index].role),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].vacancy;
+              },
+              levels: [
+                TreemapLevel(groupMapper: (int index) => _source[index].country),
+                TreemapLevel(groupMapper: (int index) => _source[index].job),
+                TreemapLevel(groupMapper: (int index) => _source[index].group),
+                TreemapLevel(groupMapper: (int index) => _source[index].role),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class JobVacancyModel {
   const JobVacancyModel(
@@ -214,121 +214,121 @@ You can customize the levels using the following properties:
 {% tabs %}
 {% highlight Dart %}
 
-late List<JobVacancyModel> _source;
+  late List<JobVacancyModel> _source;
 
-@override
-void initState() {
-   _source = <JobVacancyModel>[
-      JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-      JobVacancyModel(
-          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 105),
-      JobVacancyModel(
-          country: 'America',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-      JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-      JobVacancyModel(
-          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 155),
-      JobVacancyModel(
-          country: 'India',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 60),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-      JobVacancyModel(
-          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Windows',
-          vacancy: 100),
-      JobVacancyModel(
-          country: 'UK',
-          job: 'Technical',
-          group: 'Developers',
-          role: 'Web',
-          vacancy: 30),
-      JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-      JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <JobVacancyModel>[
+        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+        JobVacancyModel(
+            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 105),
+        JobVacancyModel(
+            country: 'America',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+        JobVacancyModel(
+            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 155),
+        JobVacancyModel(
+            country: 'India',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 60),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+        JobVacancyModel(
+            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Windows',
+            vacancy: 100),
+        JobVacancyModel(
+            country: 'UK',
+            job: 'Technical',
+            group: 'Developers',
+            role: 'Web',
+            vacancy: 30),
+        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].vacancy;
-        },
-        levels: [
-          TreemapLevel(
-             groupMapper: (int index) => _source[index].country,
-             color: Colors.blue,
-             border: RoundedRectangleBorder(
-               side: BorderSide(
-                 color: Colors.blue,
-                 width: 1,
-               ),
-             ),
-             padding: EdgeInsets.all(2.5),
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].job,
-            color: Colors.orangeAccent,
-            border: RoundedRectangleBorder(
-              side: BorderSide(
-                color: Colors.orangeAccent,
-                width: 1,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfTreemap(
+          dataCount: _source.length,
+          weightValueMapper: (int index) {
+            return _source[index].vacancy;
+          },
+          levels: [
+            TreemapLevel(
+              groupMapper: (int index) => _source[index].country,
+              color: Colors.blue,
+              border: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.blue,
+                  width: 1,
+                ),
               ),
+              padding: EdgeInsets.all(2.5),
             ),
-            padding: EdgeInsets.all(2.5),
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].group,
-            color: Colors.green[300],
-            border: RoundedRectangleBorder(
-              side: BorderSide(
-                color: Colors.green,
-                width: 1,
+            TreemapLevel(
+              groupMapper: (int index) => _source[index].job,
+              color: Colors.orangeAccent,
+              border: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.orangeAccent,
+                  width: 1,
+                ),
               ),
+              padding: EdgeInsets.all(2.5),
             ),
-            padding: EdgeInsets.all(5),
-          ),
-          TreemapLevel(
-             groupMapper: (int index) => _source[index].role,
-             color: Colors.pink[300],
-             border: RoundedRectangleBorder(
-               side: BorderSide(
-                 color: Colors.pink,
-                 width: 1,
-               ),
-             ),
-             padding: EdgeInsets.all(5),
-          ),
-        ],
-      ),
-   );
-}
+            TreemapLevel(
+              groupMapper: (int index) => _source[index].group,
+              color: Colors.green[300],
+              border: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.green,
+                  width: 1,
+                ),
+              ),
+              padding: EdgeInsets.all(5),
+            ),
+            TreemapLevel(
+              groupMapper: (int index) => _source[index].role,
+              color: Colors.pink[300],
+              border: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.pink,
+                  width: 1,
+                ),
+              ),
+              padding: EdgeInsets.all(5),
+            ),
+          ],
+        ),
+    );
+  }
 
 class JobVacancyModel {
   const JobVacancyModel(
