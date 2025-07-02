@@ -168,20 +168,20 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2000, 01, 01);
-final DateTime _max = DateTime(2008, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2006, 01, 01));
+final DateTime _min = DateTime(2000);
+final DateTime _max = DateTime(2008);
+SfRangeValues _values = SfRangeValues(DateTime(2002), DateTime(2006));
 
 final List<Data> _chartData = <Data>[
-    Data(x: DateTime(2000, 01, 01), y: 2.2),
-    Data(x: DateTime(2001, 01, 01), y: 3.4),
-    Data(x: DateTime(2002, 01, 01), y: 2.8),
-    Data(x: DateTime(2003, 01, 01), y: 1.6),
-    Data(x: DateTime(2004, 01, 01), y: 2.3),
-    Data(x: DateTime(2005, 01, 01), y: 2.5),
-    Data(x: DateTime(2006, 01, 01), y: 2.9),
-    Data(x: DateTime(2007, 01, 01), y: 3.8),
-    Data(x: DateTime(2008, 01, 01), y: 3.7),
+    Data(x: DateTime(2000), y: 2.2),
+    Data(x: DateTime(2001), y: 3.4),
+    Data(x: DateTime(2002), y: 2.8),
+    Data(x: DateTime(2003), y: 1.6),
+    Data(x: DateTime(2004), y: 2.3),
+    Data(x: DateTime(2005), y: 2.5),
+    Data(x: DateTime(2006), y: 2.9),
+    Data(x: DateTime(2007), y: 3.8),
+    Data(x: DateTime(2008), y: 3.7),
 ];
 
 @override
@@ -239,20 +239,20 @@ class Data {
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2000, 01, 01);
-final DateTime _max = DateTime(2000, 09, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2000, 05, 01), DateTime(2000, 07, 01));
+final DateTime _min = DateTime(2000);
+final DateTime _max = DateTime(2000, 09);
+SfRangeValues _values = SfRangeValues(DateTime(2000, 05), DateTime(2000, 07));
 
 final List<Data> chartData = <Data>[
-    Data(x: DateTime(2000, 01, 01), y: 2.2),
-    Data(x: DateTime(2000, 01, 01), y: 3.4),
-    Data(x: DateTime(2000, 01, 01), y: 2.8),
-    Data(x: DateTime(2000, 01, 01), y: 1.6),
-    Data(x: DateTime(2000, 01, 01), y: 2.3),
-    Data(x: DateTime(2000, 01, 01), y: 2.5),
-    Data(x: DateTime(2000, 01, 01), y: 2.9),
-    Data(x: DateTime(2000, 01, 01), y: 3.8),
-    Data(x: DateTime(2000, 01, 01), y: 3.7),
+    Data(x: DateTime(2000), y: 2.2),
+    Data(x: DateTime(2000), y: 3.4),
+    Data(x: DateTime(2000), y: 2.8),
+    Data(x: DateTime(2000), y: 1.6),
+    Data(x: DateTime(2000), y: 2.3),
+    Data(x: DateTime(2000), y: 2.5),
+    Data(x: DateTime(2000), y: 2.9),
+    Data(x: DateTime(2000), y: 3.8),
+    Data(x: DateTime(2000), y: 3.7),
 ];
 
 @override
@@ -385,20 +385,20 @@ The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2005), DateTime(2008));
 
 final List<Data> chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01), y: 2.2),
-    Data(x: DateTime(2003, 01, 01), y: 3.4),
-    Data(x: DateTime(2004, 01, 01), y: 2.8),
-    Data(x: DateTime(2005, 01, 01), y: 1.6),
-    Data(x: DateTime(2006, 01, 01), y: 2.3),
-    Data(x: DateTime(2007, 01, 01), y: 2.5),
-    Data(x: DateTime(2008, 01, 01), y: 2.9),
-    Data(x: DateTime(2009, 01, 01), y: 3.8),
-    Data(x: DateTime(2010, 01, 01), y: 3.7),
+    Data(x: DateTime(2002), y: 2.2),
+    Data(x: DateTime(2003), y: 3.4),
+    Data(x: DateTime(2004), y: 2.8),
+    Data(x: DateTime(2005), y: 1.6),
+    Data(x: DateTime(2006), y: 2.3),
+    Data(x: DateTime(2007), y: 2.5),
+    Data(x: DateTime(2008), y: 2.9),
+    Data(x: DateTime(2009), y: 3.8),
+    Data(x: DateTime(2010), y: 3.7),
 ];
 
 @override
@@ -451,6 +451,80 @@ class Data {
 {% endtabs %}
 
 ![Label placement support](images/label-and-divider/selector_label_placement.png)
+
+## Edge Label placement
+
+The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property is used to place the edge labels either inside the major ticks or on the major ticks. The default value of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2005), DateTime(2008));
+
+final List<Data> chartData = <Data>[
+    Data(x: DateTime(2002), y: 2.2),
+    Data(x: DateTime(2003), y: 3.4),
+    Data(x: DateTime(2004), y: 2.8),
+    Data(x: DateTime(2005), y: 1.6),
+    Data(x: DateTime(2006), y: 2.3),
+    Data(x: DateTime(2007), y: 2.5),
+    Data(x: DateTime(2008), y: 2.9),
+    Data(x: DateTime(2009), y: 3.8),
+    Data(x: DateTime(2010), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    showLabels: true,
+                    showTicks: true,
+                    interval: 1,
+                    dateFormat: DateFormat.y(),
+                    edgeLabelPlacement: EdgeLabelPlacement.inside,
+                    dateIntervalType: DateIntervalType.years,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: DateTimeAxis(
+                            minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, DateTime>>[
+                            SplineAreaSeries<Data, DateTime>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                xValueMapper: (Data sales, int index) => sales.x,
+                                yValueMapper: (Data sales, int index) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+class Data {
+  Data({required this.x, required this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge Label placement support](images/label-and-divider/selector-edge-label-placement.png)
 
 ## Customize label text
 

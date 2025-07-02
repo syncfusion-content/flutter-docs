@@ -103,20 +103,20 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
+final DateTime _min = DateTime(2002);
+final DateTime _max = DateTime(2010);
+SfRangeValues _values = SfRangeValues(DateTime(2005), DateTime(2008));
 
 final List<Data> _chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01), y: 2.2),
-    Data(x: DateTime(2003, 01, 01), y: 3.4),
-    Data(x: DateTime(2004, 01, 01), y: 2.8),
-    Data(x: DateTime(2005, 01, 01), y: 1.6),
-    Data(x: DateTime(2006, 01, 01), y: 2.3),
-    Data(x: DateTime(2007, 01, 01), y: 2.5),
-    Data(x: DateTime(2008, 01, 01), y: 2.9),
-    Data(x: DateTime(2009, 01, 01), y: 3.8),
-    Data(x: DateTime(2010, 01, 01), y: 3.7),
+    Data(x: DateTime(2002), y: 2.2),
+    Data(x: DateTime(2003), y: 3.4),
+    Data(x: DateTime(2004), y: 2.8),
+    Data(x: DateTime(2005), y: 1.6),
+    Data(x: DateTime(2006), y: 2.3),
+    Data(x: DateTime(2007), y: 2.5),
+    Data(x: DateTime(2008), y: 2.9),
+    Data(x: DateTime(2009), y: 3.8),
+    Data(x: DateTime(2010), y: 3.7),
 ];
 
 @override
@@ -237,14 +237,14 @@ The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/lates
 final SfRangeValues _initialValues = SfRangeValues(0.3, 0.7);
 
 final List<Data> _chartData = <Data>[
-  Data(x: DateTime(2003, 01, 01), y: 3.4),
-  Data(x: DateTime(2004, 01, 01), y: 2.8),
-  Data(x: DateTime(2005, 01, 01), y: 1.6),
-  Data(x: DateTime(2006, 01, 01), y: 2.3),
-  Data(x: DateTime(2007, 01, 01), y: 2.5),
-  Data(x: DateTime(2008, 01, 01), y: 2.9),
-  Data(x: DateTime(2009, 01, 01), y: 3.8),
-  Data(x: DateTime(2010, 01, 01), y: 2.0),
+  Data(x: DateTime(2003), y: 3.4),
+  Data(x: DateTime(2004), y: 2.8),
+  Data(x: DateTime(2005), y: 1.6),
+  Data(x: DateTime(2006), y: 2.3),
+  Data(x: DateTime(2007), y: 2.5),
+  Data(x: DateTime(2008), y: 2.9),
+  Data(x: DateTime(2009), y: 3.8),
+  Data(x: DateTime(2010), y: 2.0),
 ];
 
 @override

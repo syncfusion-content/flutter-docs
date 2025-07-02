@@ -97,14 +97,14 @@ The type of date interval. It can be years to seconds. It is mandatory for date 
 
 For date values, the slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for date values.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is `DateTime(2000, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is `DateTime(2005, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is `1`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) is `DateFormat.y()` then the slider will render the labels, major ticks, and dividers at 2000, 2001, 2002 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is `DateTime(2000)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is `DateTime(2005)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is `1`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) is `DateFormat.y()` then the slider will render the labels, major ticks, and dividers at 2000, 2001, 2002 and so on.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child:  SfSlider(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -141,7 +141,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -149,7 +149,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child:  SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
+              min: DateTime(2000),
               max: DateTime(2004, 12, 31, 24),
               value: _value,
               interval: 1,
@@ -253,14 +253,14 @@ Widget build(BuildContext context) {
 
 You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) property in the slider.
 
-For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) is SliderDuration(years: 1, months: 6),the slider will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is DateTime(2015) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is DateTime(2020) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) is SliderDuration(years: 1, months: 6),the slider will move the thumbs at DateTime(2015), DateTime(2016, 07), DateTime(2018),and DateTime(2019, 07).
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2004, 01, 01);
+DateTime _value = DateTime(2004);
 
 @override
 Widget build(BuildContext context) {
@@ -268,8 +268,8 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider(
-              min: DateTime(2000, 01, 01),
-              max: DateTime(2010, 01, 01),
+              min: DateTime(2000),
+              max: DateTime(2010),
               interval: 2,
               stepDuration: SliderStepDuration(years: 2),
               dateFormat: DateFormat.y(),
@@ -298,7 +298,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2004, 01, 01);
+DateTime _value = DateTime(2004);
 
 @override
 Widget build(BuildContext context) {
@@ -306,8 +306,8 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01),
-              max: DateTime(2010, 01, 01),
+              min: DateTime(2000),
+              max: DateTime(2010),
               interval: 2,
               stepDuration: SliderStepDuration(years: 2),
               dateFormat: DateFormat.y(),

@@ -107,7 +107,7 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
- SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2004, 01, 01));
+ SfRangeValues _values = SfRangeValues(DateTime(2002), DateTime(2004));
 
 @override
 Widget build(BuildContext context) {
@@ -115,7 +115,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSlider(
-                    min: DateTime(2000, 01, 01, 00),
+                    min: DateTime(2000),
                     max: DateTime(2004, 12, 31, 24),
                     values: _values,
                     interval: 1,
@@ -143,7 +143,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
- SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2004, 01, 01));
+ SfRangeValues _values = SfRangeValues(DateTime(2002), DateTime(2004));
 
 @override
 Widget build(BuildContext context) {
@@ -151,7 +151,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSlider.vertical(
-                    min: DateTime(2000, 01, 01, 00),
+                    min: DateTime(2000),
                     max: DateTime(2004, 12, 31, 24),
                     values: _values,
                     interval: 1,
@@ -407,7 +407,7 @@ Widget build(BuildContext context) {
                     max: 10.0,
                     values: _values,
                     activeColor: Colors.red,
-                    inactiveColor: Colors.red.withOpacity(0.2),
+                    inactiveColor: Colors.red.withAlpha((255.0 * 0.2).round()),
                     showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -442,7 +442,7 @@ Widget build(BuildContext context) {
                     max: 10.0,
                     values: _values,
                     activeColor: Colors.red,
-                    inactiveColor: Colors.red.withOpacity(0.2),
+                    inactiveColor: Colors.red.withAlpha((255.0 * 0.2).round()),
                     showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {

@@ -107,7 +107,7 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -115,7 +115,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfSlider(
-                min: DateTime(2000, 01, 01, 00),
+                min: DateTime(2000),
                 max: DateTime(2004, 12, 31, 24),
                 value: _value,
                 interval: 1,
@@ -143,7 +143,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+DateTime _value = DateTime(2002);
 
 @override
 Widget build(BuildContext context) {
@@ -151,7 +151,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfSlider.vertical(
-                min: DateTime(2000, 01, 01, 00),
+                min: DateTime(2000),
                 max: DateTime(2004, 12, 31, 24),
                 value: _value,
                 interval: 1,
@@ -412,7 +412,7 @@ Widget build(BuildContext context) {
                 value: _value,
                 interval: 2,
                 activeColor: Colors.red,
-                inactiveColor: Colors.red.withOpacity(0.2),
+                inactiveColor: Colors.red.withAlpha((255.0 * 0.2).round()),
                 showDividers: true,
                 showTicks: true,
                 showLabels: true,
@@ -432,7 +432,7 @@ Widget build(BuildContext context) {
 
 ![Inactive color support](images/basic-features/inactive-color.png)
 
-### Horizontal
+### Vertical
 
 {% tabs %}
 {% highlight Dart %}
@@ -450,7 +450,7 @@ Widget build(BuildContext context) {
                 value: _value,
                 interval: 2,
                 activeColor: Colors.red,
-                inactiveColor: Colors.red.withOpacity(0.2),
+                inactiveColor: Colors.red.withAlpha((255.0 * 0.2).round()),
                 showDividers: true,
                 showTicks: true,
                 showLabels: true,
