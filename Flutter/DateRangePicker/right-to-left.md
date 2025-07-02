@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 # Right to Left (RTL) in Flutter Date Range Picker (SfDateRangePicker)
-`SfDateRangePicker` supports Right to left rendering and all the date picker elements rendering direction will be changed.
+[SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) supports Right to left rendering and all the date picker elements rendering direction will be changed.
 
 ## RTL rendering ways
 Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfDateRangePicker with Directionality widget
-The `SfDateRangePicker` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and setting the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and setting the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
 {% highlight dart hl_lines="7 8" %}
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## RTL supported date range picker elements
-Right to left rendering is supported for all the elements in the `SfDateRangePicker`.
+Right to left rendering is supported for all the elements in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="7 8" %}
