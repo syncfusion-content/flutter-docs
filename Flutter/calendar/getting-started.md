@@ -78,7 +78,7 @@ Widget build(BuildContext context) {
 
 ## Change different calendar views
 
-The SfCalendar widget provides seven different types of views to display dates. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) property. By default, the widget is assigned day view. The current date will be displayed initially for all the calendar views.
+The SfCalendar widget provides nine different types of views to display dates. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) property. By default, the widget is assigned day view. The current date will be displayed initially for all the calendar views.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
@@ -356,7 +356,7 @@ Widget build(BuildContext context) {
 ![Background color](images/getting-started/calendar-background-color.png)
 
 ## Navigation arrow
-Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
+Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html), you can navigate to the next or previous views of the calendar without swiping.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -378,7 +378,7 @@ Widget build(BuildContext context) {
 
 
 >**NOTE** 
-* The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
+* The  [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property is not applicable when the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) is set to [CalendarView.schedule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarView.html).
 
 ## Cell end padding
 You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
@@ -430,7 +430,7 @@ Widget build(BuildContext context) {
 
 ## Week number
 
-Display the Week number of the year in all views except schedule view of the `SfCalendar` by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
+Display the Week number of the year in all views except schedule view of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
