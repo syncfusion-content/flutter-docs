@@ -65,51 +65,51 @@ To populate the data source, set its count to the [`dataCount`](https://pub.dev/
 {% tabs %}
 {% highlight Dart %}
 
-late List<SocialMediaUsers> _source;
+  late List<SocialMediaUsers> _source;
 
-@override
-void initState() {
-   _source = <SocialMediaUsers>[
-      SocialMediaUsers(
-          country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-      SocialMediaUsers(
-          country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-      SocialMediaUsers(
-          country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-      SocialMediaUsers(
-          country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-      SocialMediaUsers(
-          country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-      SocialMediaUsers(
-          country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <SocialMediaUsers>[
+        SocialMediaUsers(
+            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
+        SocialMediaUsers(
+            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
+        SocialMediaUsers(
+            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
+        SocialMediaUsers(
+            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
+        SocialMediaUsers(
+            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
+        SocialMediaUsers(
+            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].usersInMillions;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) {
-                  return _source[index].country;
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].usersInMillions;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _source[index].country;
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class SocialMediaUsers {
   const SocialMediaUsers({
@@ -139,58 +139,58 @@ You can add any type of custom widgets to the tiles as labels based on the index
 {% tabs %}
 {% highlight Dart %}
 
-late List<SocialMediaUsers> _source;
+  late List<SocialMediaUsers> _source;
 
-@override
-void initState() {
-   _source = <SocialMediaUsers>[
-      SocialMediaUsers(
-          country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-      SocialMediaUsers(
-          country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-      SocialMediaUsers(
-          country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-      SocialMediaUsers(
-          country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-      SocialMediaUsers(
-          country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-      SocialMediaUsers(
-          country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <SocialMediaUsers>[
+        SocialMediaUsers(
+            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
+        SocialMediaUsers(
+            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
+        SocialMediaUsers(
+            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
+        SocialMediaUsers(
+            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
+        SocialMediaUsers(
+            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
+        SocialMediaUsers(
+            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].usersInMillions;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) {
-                  return _source[index].country;
-                },
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child:
-                        Text(tile.group, style: TextStyle(color: Colors.black)),
-                  );
-                },
-              ),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].usersInMillions;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _source[index].country;
+                  },
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
+                      child:
+                          Text(tile.group, style: TextStyle(color: Colors.black)),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class SocialMediaUsers {
   const SocialMediaUsers({
@@ -216,31 +216,31 @@ You can enable tooltip for any tile in the treemap and able to return the comple
 {% tabs %}
 {% highlight Dart %}
 
-late List<SocialMediaUsers> _source;
+  late List<SocialMediaUsers> _source;
 
-@override
-void initState() {
-   _source = <SocialMediaUsers>[
-      SocialMediaUsers(
-          country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-      SocialMediaUsers(
-          country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-      SocialMediaUsers(
-          country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-      SocialMediaUsers(
-          country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-      SocialMediaUsers(
-          country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-      SocialMediaUsers(
-          country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <SocialMediaUsers>[
+        SocialMediaUsers(
+            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
+        SocialMediaUsers(
+            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
+        SocialMediaUsers(
+            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
+        SocialMediaUsers(
+            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
+        SocialMediaUsers(
+            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
+        SocialMediaUsers(
+            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
         child: Container(
           height: 400,
           width: 400,
@@ -257,17 +257,16 @@ Widget build(BuildContext context) {
                 labelBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child:
-                        Text(tile.group, style: TextStyle(color: Colors.black)),
+                    child: Text(tile.group, style: TextStyle(color: Colors.black)),
                   );
                 },
                 tooltipBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
-                    padding: const EdgeInsets.only(
-                        left: 5, right: 5, top: 2, bottom: 3),
+                    padding: const EdgeInsets.only(left: 5, right: 5, top: 2, bottom: 3),
                     child: Text(
-                        'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                        style: TextStyle(color: Colors.black)),
+                      'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   );
                 },
               ),
@@ -275,8 +274,8 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-   );
-}
+    );
+  }
 
 class SocialMediaUsers {
   const SocialMediaUsers({
@@ -302,68 +301,68 @@ You can show legend by initializing the [`legend`](https://pub.dev/documentation
 {% tabs %}
 {% highlight Dart %}
 
-late List<SocialMediaUsers> _source;
+  late List<SocialMediaUsers> _source;
 
-@override
-void initState() {
-   _source = <SocialMediaUsers>[
-      SocialMediaUsers(
-          country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-      SocialMediaUsers(
-          country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-      SocialMediaUsers(
-          country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-      SocialMediaUsers(
-          country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-      SocialMediaUsers(
-          country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-      SocialMediaUsers(
-          country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = <SocialMediaUsers>[
+        SocialMediaUsers(
+            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
+        SocialMediaUsers(
+            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
+        SocialMediaUsers(
+            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
+        SocialMediaUsers(
+            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
+        SocialMediaUsers(
+            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
+        SocialMediaUsers(
+            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _source.length,
-            weightValueMapper: (int index) {
-              return _source[index].usersInMillions;
-            },
-            levels: [
-              TreemapLevel(
-                groupMapper: (int index) {
-                  return _source[index].country;
-                },
-                labelBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child:
-                        Text(tile.group, style: TextStyle(color: Colors.black)),
-                  );
-                },
-                tooltipBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: const EdgeInsets.only(
-                        left: 5, right: 5, top: 2, bottom: 3),
-                    child: Text(
-                        'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                        style: TextStyle(color: Colors.black)),
-                  );
-                },
-              ),
-            ],
-            legend: TreemapLegend(),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _source.length,
+              weightValueMapper: (int index) {
+                return _source[index].usersInMillions;
+              },
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _source[index].country;
+                  },
+                  labelBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
+                      child:
+                          Text(tile.group, style: TextStyle(color: Colors.black)),
+                    );
+                  },
+                  tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                    return Padding(
+                      padding: const EdgeInsets.only(
+                          left: 5, right: 5, top: 2, bottom: 3),
+                      child: Text(
+                          'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                          style: TextStyle(color: Colors.black)),
+                    );
+                  },
+                ),
+              ],
+              legend: TreemapLegend(),
+            ),
           ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class SocialMediaUsers {
   const SocialMediaUsers({
