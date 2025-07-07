@@ -526,7 +526,7 @@ You can apply color to the inverted polygon by initializing the [`MapPolygonLaye
 You can customize the inverted polygon using the following properties:
 
 * **Stroke color** - Change the stroke color of the polygon using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeColor.html) property.
-* **Stroke width** - Change the stroke width of the polygon using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property. The default value of the `strokeWidth` property is `1`.
+* **Stroke width** - Change the stroke width of the polygon using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property. The default value of the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property is `1`.
 * **Overlay color** - Change the outer portion color of the polygon using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/color.html) property.
 * **Tooltip** - You can enable tooltip for the inverted polygon using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 

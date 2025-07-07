@@ -13,7 +13,7 @@ You can provide clear information on the data plotted on the map using legend.
 
 ## Shape legend
 
-You can show shape legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property as `MapLegend(MapElement.shape)`. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property is `null` and hence the legend will not be shown by default.
+You can show shape legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property as [`MapLegend(MapElement.shape)`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapElement.html). By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property is `null` and hence the legend will not be shown by default.
 
 {% tabs %}
 {% highlight Dart %}
@@ -62,7 +62,7 @@ N>
 
 ## Bubble legend
 
-You can show bubble legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property as `MapLegend(MapElement.bubble)`. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
+You can show bubble legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property as [`MapLegend(MapElement.bubble)`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapElement.html#bubble). By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -132,7 +132,7 @@ N>
 
 ## Bar shape legend
 
-You can show bar shape legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property as `MapLegend.bar(MapElement.shape)`. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
+You can show bar shape legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property as [`MapLegend.bar(MapElement.shape)`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapElement.html#shape). By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -181,7 +181,7 @@ N>
 
 ## Bar bubble legend
 
-You can show bar bubble legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property as `MapLegend.bar(MapElement.bubble)`. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
+You can show bar bubble legend by setting the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property as [`MapLegend.bar(MapElement.bubble)`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapElement.html#bubble). By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -251,7 +251,7 @@ N>
 
 ## Title
 
-You can add title to the legend using the `MapLegend.title` property.
+You can add title to the legend using the [`MapLegend.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/title.html) property.
 
 N> It is applicable for both shape and bar legend.
 
@@ -464,7 +464,7 @@ class DataModel {
 
 ## Position
 
-You can position the legend items in different directions using the [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is `MapLegendPosition.top`. The possible values are `left`, `right`, `top`, and `bottom`.
+You can position the legend items in different directions using the [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is [`MapLegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#top). The possible values are [`left`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#left), [`right`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#right), [`top`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#top), and [`bottom`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#bottom).
 
 {% tabs %}
 {% highlight Dart %}
@@ -638,7 +638,7 @@ class Model {
 
 <b>For default legend</b>
 
-You can wrap or scroll the legend items using the [`MapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property is `MapLegendOverflowMode.wrap`. The possible values are `scroll` and `wrap`.
+You can wrap or scroll the legend items using the [`MapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property is [`MapLegendOverflowMode.wrap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#wrap). The possible values are [`scroll`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#scroll) and [`wrap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#wrap).
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -727,7 +727,7 @@ class Model {
 
 <b>For bar legend</b>
 
-You can wrap or scroll the bar legend items using the [`MapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property is `MapLegendOverflowMode.scroll`. The possible values are `scroll` and `wrap`.
+You can wrap or scroll the bar legend items using the [`MapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/overflowMode.html) property is [`MapLegendOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#scroll). The possible values are [`scroll`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#scroll) and [`wrap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode.html#wrap).
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -1194,10 +1194,10 @@ class Model {
 
 You can customize the legend items using the following properties.
 
-* **iconType** - Used to change the icon shape. The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is `MapIconType.circle`. The possible values are `circle`, `rectangle`, `triangle`, and `diamond`.
+* **iconType** - Used to change the icon shape. The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is [`MapIconType.circle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapIconType.html#circle). The possible values are [`circle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapIconType.html#circle), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapIconType.html#rectangle), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapIconType.html#triangle), and [`diamond`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapIconType.html#diamond).
 * **iconSize** - Used to change the size of the icon. The default value of [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is `Size(12.0, 12.0)`.
 * **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is `10.0`.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `left` or `right`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is [`top`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#top), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#bottom) and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is [`left`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#left) or [`right`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#right).
 * **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
@@ -1291,7 +1291,7 @@ N>
 
 ### Solid
 
-You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle.html). By defaults [MapLegendPaintingStyle](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `solid`.
+You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle.html). By defaults [MapLegendPaintingStyle](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be [`solid`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle.html#solid).
 
 {% tabs %}
 {% highlight Dart %}
@@ -1459,11 +1459,11 @@ class Model {
 
 You can customize the legend items using the following properties.
 
-* **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, `segmentSize` argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will update the whole bar.
-* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `MapLabelOverflow.hide`.
-* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `MapLegendEdgeLabelsPlacement.inside`.
+* **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/segmentSize.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will update the whole bar.
+* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be [`MapLabelOverflow.hide`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow.html#hide).
+* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be [`MapLegendEdgeLabelsPlacement.inside`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendEdgeLabelsPlacement.html#inside).
 * **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/spacing.html) is `2.0`. This is not applicable for gradient legend.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is `left` or `right`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is [`top`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#top), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#bottom) and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is [`left`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#left) or [`right`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition.html#right).
 * **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/padding.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
@@ -1695,7 +1695,7 @@ class Model {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-with-text.png)
 
-The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement.html) property to `MapLegendLabelsPlacement.onItem`. The labels calculated based on the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. If the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property is null, labels calculated based on the values of [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
+The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement.html) property to [`MapLegendLabelsPlacement.onItem`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement.html#onItem). The labels calculated based on the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. If the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property is null, labels calculated based on the values of [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1769,7 +1769,7 @@ class Model {
 
 <b>Labels placement for equal color mapper</b>
 
-The `labelsPlacement` option is not applicable for the shape/bubble applied with equal color mapper. By default, the labels are positioned at center of the segment.
+The [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/labelsPlacement.html) option is not applicable for the shape/bubble applied with equal color mapper. By default, the labels are positioned at center of the segment.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1845,7 +1845,7 @@ class Model {
 
 ## Show pointer
 
-You may show a pointer on the solid or gradient bar legend while hovering over a shape or bubble using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
+You may show a pointer on the solid or gradient bar legend while hovering over a shape or bubble using the [`showPointerOnHover`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/showPointerOnHover.html) property. The default value of the [`showPointerOnHover`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/showPointerOnHover.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1925,7 +1925,7 @@ It returns a widget for the given value.
 
 The pointer is used to indicate the exact color of the hovering shape or bubble on the legend segment.
 
-The `pointerBuilder` will be called when the user interacts with the shapes or bubbles i.e., while tapping in touch devices and hovering in the mouse enabled devices.
+The [`pointerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/pointerBuilder.html) will be called when the user interacts with the shapes or bubbles i.e., while tapping in touch devices and hovering in the mouse enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -2004,7 +2004,7 @@ class Model {
 
 ## Pointer customization
 
-You can customize the size and color of the pointer using the `pointerSize` and `pointerColor` properties. The default value of the `pointerSize` property is `Size(16, 12)`.
+You can customize the size and color of the pointer using the [`pointerSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/pointerSize.html) and [`pointerColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/pointerColor.html) properties. The default value of the [`pointerSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/pointerSize.html) property is `Size(16, 12)`.
 
 {% tabs %}
 {% highlight Dart %}
