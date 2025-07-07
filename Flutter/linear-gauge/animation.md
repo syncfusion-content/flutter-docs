@@ -114,7 +114,29 @@ Both the shape and widget marker pointers have the same set of properties and be
 
 ![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
 
+## Event
 
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) called when the pointer animation is completed. The default value is null.
 
+{% highlight dart %} 
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            markerPointers:[
+              LinearShapePointer(
+                onAnimationCompleted: ()=> {
+                  printf("Shape Pointer animation is completed");
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
+{% endhighlight %}
