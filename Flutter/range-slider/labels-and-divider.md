@@ -481,6 +481,86 @@ Widget build(BuildContext context) {
 
 ![Label placement support](images/label-and-divider/vertical-label-placement.png)
 
+## Edge Label placement
+
+The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/edgeLabelPlacement.html) property is used to place the edge labels either inside the major ticks or on the major ticks. The default value of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
+
+### Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2003, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    edgeLabelPlacement: EdgeLabelPlacement.inside,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge Label placement support](images/label-and-divider/edge-label-placement.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2002), DateTime(2003));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    edgeLabelPlacement: EdgeLabelPlacement.inside,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Edge Label placement support](images/label-and-divider/vertical-edge-label-placement.png)
+
 ## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelFormatterCallback.html). Its arguments are,
@@ -489,7 +569,7 @@ You can format or change the whole numeric or date label text using the [`labelF
 * formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 >**NOTE**
-* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use `onLabelCreated` callback to customize both the text and text style of the label.
+* [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/labelFormatterCallback.html) has been deprecated, you can use [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onLabelCreated.html) callback to customize both the text and text style of the label.
 
 ### Horizontal
 
@@ -661,7 +741,7 @@ Widget build(BuildContext context) {
 
 ## Individual label style
 
-You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the `onLabelCreated` callback. This callback allows you to have complete control over the text and text style for each label.
+You can now customize the appearance of each label on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) individually by using the [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onLabelCreated.html) callback. This callback allows you to have complete control over the text and text style for each label.
 
 ## Horizontal
 
@@ -867,7 +947,7 @@ Widget build(BuildContext context) {
 
 ## Show dividers
 
-The `showDividers` property is used to render the dividers on the track. The default value of `showDividers` property is `false`. It is a shape which is used to represent the major interval points of the track.
+The [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDividers.html) property is used to render the dividers on the track. The default value of [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDividers.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
@@ -953,7 +1033,7 @@ Widget build(BuildContext context) {
 
 ## Divider radius
 
-You can change the active and inactive divider radius of the range slider using the `activeDividerRadius` and the `inactiveDividerRadius` properties respectively.
+You can change the active and inactive divider radius of the range slider using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerRadius.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -1043,9 +1123,9 @@ Widget build(BuildContext context) {
 
 ## Divider stroke width and stroke color
 
-You can change the active and inactive divider stroke width of the range slider using the `activeDividerStrokeWidth` and the `inactiveDividerStrokeWidth` properties respectively.
+You can change the active and inactive divider stroke width of the range slider using the [`activeDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeWidth.html) and the [`inactiveDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeWidth.html) properties respectively.
 
-Also, you can change the active and inactive divider stroke color of the range slider using the `activeDividerStrokeColor` and the `inactiveDividerStrokeColor` properties respectively.
+Also, you can change the active and inactive divider stroke color of the range slider using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -1143,7 +1223,7 @@ Widget build(BuildContext context) {
 
 ## Divider color
 
-You can change the active and inactive divider color of the range slider using the `activeDividerColor` and `inactiveDividerColor` properties respectively.
+You can change the active and inactive divider color of the range slider using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 

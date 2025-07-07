@@ -178,7 +178,7 @@ Widget build(BuildContext context) {
 
 **onChangeStart**
 
-The `onChangeStart` callback is called when the user begins to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range slider thumb.
+The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeStart.html) callback is called when the user begins to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -209,7 +209,7 @@ Widget build(BuildContext context) {
 
 **onChangeEnd**
 
-The `onChangeEnd` callback is called when the user stops to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range slider thumb.
+The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeEnd.html) callback is called when the user stops to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
