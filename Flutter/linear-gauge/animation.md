@@ -128,8 +128,8 @@ The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_ga
           child: SfLinearGauge(
             markerPointers:[
               LinearShapePointer(
-                onAnimationCompleted: ()=> {
-                  printf("Shape Pointer animation is completed");
+                onAnimationCompleted: () {
+                  print("Shape Pointer animation is completed");
                 },
               ),
             ],
