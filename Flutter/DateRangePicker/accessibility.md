@@ -10,7 +10,7 @@ documentation: ug
 # Accessibility in Flutter DateRangePicker (SfDateRangePicker)
 
 ## Screen reader support
-The `SfDateRangePicker` can easily be accessed by screen readers. Please find the following table to get spoken feedback about the inner element contents of the screen.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) can easily be accessed by screen readers. Please find the following table to get spoken feedback about the inner element contents of the screen.
 
 ### Month view
 
@@ -56,7 +56,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all the UI elements.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all the UI elements.
 
 The following APIs allows you to customize the colors of the following elements.
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 
@@ -75,7 +75,7 @@ The following APIs allows you to customize the colors of the following elements.
 
 ## Large fonts
 
-The `SfDateRangePicker` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. It also allows you to change the font size of all elements in date range picker.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [MediaQueryData.textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all elements in date range picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
@@ -89,7 +89,7 @@ The `SfDateRangePicker` font size can be adjusted automatically based on device 
 
 ## Keyboard navigation
 
-The following keyboard interactions are supported by the `SfDateRangePicker`.
+The following keyboard interactions are supported by the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 | Key                   | Description                     									  					                         |
 |-----------------------|----------------------------------------------------------------------------------------------------------------|
