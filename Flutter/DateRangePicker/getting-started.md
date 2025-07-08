@@ -60,6 +60,12 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range picker widget is added as a child of the scaffold widget.
 
+* [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialDisplayDate.html) - Sets the initially displayed date. Default is today's date `DateTime.now()`.
+* [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDate.html) - Specifies the initially selected date. Default is today's date `DateTime.now()`.
+* [initialSelectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDates.html) - Allows selection of multiple initial dates. Default can be `DateTime.now().subtract(Duration(days: 5))`, `DateTime.now()`.
+* [initialSelectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRange.html) - Sets an initial date range. Default can be `PickerDateRange(DateTime.now().subtract(Duration(days: 3)), DateTime.now().add(Duration(days: 3)))`.
+* [initialSelectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRanges.html) - Defines multiple initial date ranges. Default can be `[PickerDateRange(DateTime.now().subtract(Duration(days: 10)), DateTime.now().add(Duration(days: 10)))]`.
+
 {% tabs %}
 {% highlight dart hl_lines="5" %}
 
@@ -151,10 +157,38 @@ The selected date or range details can be obtained using the [onSelectionChanged
 {% endtabs %}
 
 ![Date selection Date Range Picker in Flutter.](images/getting-started/flutter-daterandepicker-range-selection.png)
-  
+
+## Today highlight color
+
+You can customize the color that highlights the today date cell border in month, year, decade, and century view by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/todayHighlightColor.html) in a date range picker.
+
+{% tabs %}
+{% highlight dart hl_lines="11" %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        todayHighlightColor: Colors.green,
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Action buttons
 
-You can display action buttons at the bottom of the date range picker by using the [showActionButtons](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showActionButtons.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It allows to confirm or cancel the selection values of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
+You can display action buttons at the bottom of the date range picker by using the [showActionButtons](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showActionButtons.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
+
+* [confirmText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/confirmText.html) - Customizes the text that display on the confirm button.
+
+* [cancelText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/cancelText.html) - Customizes the text that display on the cancel button.
+
+* [onCancel](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onCancel.html) - Callback function that is triggered when the cancel button is tapped within a date range picker.
+
+* [onSubmit](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSubmit.html) - Callback function that is triggered when the confirm button is tapped within a date range picker.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
