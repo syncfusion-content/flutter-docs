@@ -452,9 +452,9 @@ class Data {
 
 ![Label placement support](images/label-and-divider/selector_label_placement.png)
 
-## Edge Label placement
+## Edge label placement
 
-The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property is used to place the edge labels either inside the major ticks or on the major ticks. The default value of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
+The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property determines the positioning of edge labels, allowing them to be placed either inside the major ticks or directly on the major ticks. The default value of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
 
 {% tabs %}
 {% highlight Dart %}
