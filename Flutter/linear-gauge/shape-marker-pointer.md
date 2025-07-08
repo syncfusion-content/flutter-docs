@@ -235,7 +235,7 @@ In addition to position the shape pointer, it is also possible to change the off
 
 ## Drag behavior
 
-You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
+You can drag the pointers freely to any position when adding multiple pointers by setting the [`dragBehavior`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/dragBehavior.html) property to `LinearMarkerDragBehavior.free`.
 
 The `LinearMarkerDragBehavior.constrained` can be used to limit the active pointer dragging beyond the other pointers.
 
@@ -331,7 +331,7 @@ The `LinearMarkerDragBehavior.constrained` can be used to limit the active point
 
 ## Handle onChangeStart, onChanged, and onChangeEnd callbacks
 
-The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) provides the `onChangeStart`, `onChanged`, and `onChangeEnd` callbacks. The `onChangeStart` callback will be called when the user start dragging the pointer, the `onChanged` callback will be called when dragging the pointer and the `onChangeEnd` callback will be called when the user stops the pointer dragging.
+The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) provides the [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChangeStart.html), [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChanged.html), and [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChangeEnd.html) callbacks. The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChangeStart.html) callback will be called when the user start dragging the pointer, the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChanged.html) callback will be called when dragging the pointer and the [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onChangeEnd.html) callback will be called when the user stops the pointer dragging.
 
 {% highlight dart %}
 
