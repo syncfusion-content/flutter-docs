@@ -15,7 +15,7 @@ This section helps to learn about how to add tooltip in the range slider.
 
 You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
-I> By setting the value of `shouldAlwaysShowTooltip` to true, you can always show a tooltip without having to interact with the range slider thumb. The default value is `false` and it works independent of the `enableTooltip` behavior.
+I> By setting the value of [`shouldAlwaysShowTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/shouldAlwaysShowTooltip.html) to true, you can always show a tooltip without having to interact with the range slider thumb. The default value is `false` and it works independent of the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html) behavior.
 
 ### Horizontal
 
@@ -95,7 +95,7 @@ N>
 
 ## Tooltip shape
 
-You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property is `SfRectangularTooltipShape`.
+You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property is [`SfRectangularTooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRectangularTooltipShape-class.html).
 
 N> The paddle tooltip shape is not applicable for vertical orientation of the range sliders.
 

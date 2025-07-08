@@ -15,7 +15,7 @@ This section helps to learn about how to add tooltip in the range selector.
 
 You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
-I> By setting the value of `shouldAlwaysShowTooltip` to true, you can always show a tooltip without having to interact with the range selector thumb. The default value is `false` and it works independent of the `enableTooltip` behavior.
+I> By setting the value of [`shouldAlwaysShowTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/shouldAlwaysShowTooltip.html) to true, you can always show a tooltip without having to interact with the range selector thumb. The default value is `false` and it works independent of the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html) behavior.
 
 {% tabs %}
 {% highlight Dart %}
@@ -90,7 +90,7 @@ N>
 
 ## Tooltip shape
 
-You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tooltipShape.html) property is `SfRectangularTooltipShape`.
+You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tooltipShape.html) property is [`SfRectangularTooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRectangularTooltipShape-class.html).
 
 {% tabs %}
 {% highlight Dart %}
