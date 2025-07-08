@@ -383,7 +383,7 @@ The toolbar can be used to perform zoom in, zoom out, and reset operations in th
 
 You can customize the toolbar items using the following properties:
 
-* **Position** - Used to position the toolbar item at the four corners of the map visual bounds using the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property is `MapToolbarPosition.topRight`. The possible values are `topRight`, `topLeft`, `bottomLeft`, and `bottomRight`.
+* **Position** - Used to position the toolbar item at the four corners of the map visual bounds using the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property is `MapToolbarPosition.topRight`. The possible values are [`topRight`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarPosition.html#topRight), [`topLeft`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarPosition.html#topLeft), [`bottomLeft`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarPosition.html#bottomLeft), and [`bottomRight`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarPosition.html#bottomRight).
 
 * **Icon color** - Used to set color to the three icons using the [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/iconColor.html) property.
 

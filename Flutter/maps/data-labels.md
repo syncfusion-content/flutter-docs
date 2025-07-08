@@ -117,7 +117,7 @@ class Model {
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are `visible`, `ellipsis`, and `hide`. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflow.visible`.
+You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are [`visible`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow.html#visible), [`ellipsis`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow.html#ellipsis), and [`hide`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow.html#hide). The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is [`MapLabelOverflow.visible`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow.html#visible).
 
 By default, the data labels will render even if they overflows from the shape. 
 
@@ -141,10 +141,10 @@ void initState() {
 
     dataSource = MapShapeSource.asset(
       'assets/australia.json',
-       shapeDataField: 'STATE_NAME',
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].state,
-       dataLabelMapper: (int index) => data[index].dataLabel,
+      shapeDataField: 'STATE_NAME',
+      dataCount: data.length,
+      primaryValueMapper: (int index) => data[index].state,
+      dataLabelMapper: (int index) => data[index].dataLabel,
     );
     super.initState();
 }
@@ -206,11 +206,11 @@ void initState() {
     ];
 
     dataSource = MapShapeSource.asset(
-       'assets/australia.json',
-       shapeDataField: 'STATE_NAME',
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].state,
-       dataLabelMapper: (int index) => data[index].dataLabel,
+      'assets/australia.json',
+      shapeDataField: 'STATE_NAME',
+      dataCount: data.length,
+      primaryValueMapper: (int index) => data[index].state,
+      dataLabelMapper: (int index) => data[index].dataLabel,
     );
     super.initState();
 }

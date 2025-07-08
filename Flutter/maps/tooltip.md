@@ -404,9 +404,9 @@ You can customize the following aspects of the tooltip:
 * **Background color** - Change the background color of the tooltip using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
 * **Stroke color** - Change the stroke color of the tooltip using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
 * **Stroke width** - Change the stroke width of the tooltip using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
-* **Visibility** - Change the duration of the tooltip visibility using the `hideDelay` property. The default value of the `hideDelay` property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. You can increase or decrease the tooltip duration or show tooltip always by setting `double.infinity` to the `hideDelay` property.
+* **Visibility** - Change the duration of the tooltip visibility using the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/hideDelay.html) property. The default value of the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/hideDelay.html) property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. You can increase or decrease the tooltip duration or show tooltip always by setting `double.infinity` to the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/hideDelay.html) property.
 
-N> For mobile platforms, the `hideDelay` option is supported. When you hover over the shape, bubble, or marker on the web or desktop, a tooltip will appear. When you remove hover from the shape, it will disappear.
+N> For mobile platforms, the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/hideDelay.html) option is supported. When you hover over the shape, bubble, or marker on the web or desktop, a tooltip will appear. When you remove hover from the shape, it will disappear.
 
 {% tabs %}
 {% highlight Dart %}
