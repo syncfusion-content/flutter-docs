@@ -18,21 +18,19 @@ To display the input value of the barcode, enable its [`showValue`](https://pub.
 
 {% highlight dart %} 
 
-    @override
-        Widget build(BuildContext context) {
-            return Scaffold(
-                backgroundColor: Colors.white,
-                body: Center(
-                    child: Container(
-                        height: 150,
-                        width: 300,
-                        child: SfBarcodeGenerator(
-                            value: '12634388927',
-                            showValue: true)
-                    )
-                )
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 300,
+          child: SfBarcodeGenerator(value: '12634388927', showValue: true),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -44,24 +42,27 @@ The text style can be customized using the [`textStyle`](https://pub.dev/documen
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-            child: Container(
-                height: 150,
-                width: 300,
-                child: SfBarcodeGenerator(
-                    value: '12634388927',
-
-                    textStyle: TextStyle(fontFamily: 'Times',
-                        fontSize: 16, fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red),
-                    showValue: true)
-            )
-        )
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 300,
+          child: SfBarcodeGenerator(
+            value: '12634388927',
+            textStyle: TextStyle(
+              fontFamily: 'Times',
+              fontSize: 16,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              color: Colors.red,
+            ),
+            showValue: true,
+          ),
+        ),
+      ),
     );
   }
 
@@ -75,20 +76,21 @@ Control the space between the text and the barcode with the [`textSpacing`](http
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-            child: Container(
-                height: 150,
-                width: 300,
-                child: SfBarcodeGenerator(
-                    value: '12634388927',
-                    textSpacing: 25,
-                    showValue: true)
-            )
-        )
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 300,
+          child: SfBarcodeGenerator(
+            value: '12634388927',
+            textSpacing: 25,
+            showValue: true,
+          ),
+        ),
+      ),
     );
   }
 
@@ -98,26 +100,27 @@ Control the space between the text and the barcode with the [`textSpacing`](http
 
 **Horizontal text alignment**
 
-The horizontal text alignment can be managed with the [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property of barcode generator. Position the displayed text at the `start`, `center` or `end` of the control. The default value of [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property is center.
+The horizontal text alignment can be managed with the [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property of barcode generator. Position the displayed text at the [`start`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#start), [`center`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#center) or [`end`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#end) of the control. The default value of [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property is center.
 
 {% highlight dart %} 
   
-    @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-            backgroundColor: Colors.white,
-            body: Center(
-            child: Container(
-                height: 150,
-                width: 240,
-                child: SfBarcodeGenerator(
-                  value: '12634',
-                  textAlign: TextAlign.end,
-                  showValue: true)
-            )
-        )
-      );
-    }
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 240,
+          child: SfBarcodeGenerator(
+            value: '12634',
+            textAlign: TextAlign.end,
+            showValue: true,
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -135,23 +138,24 @@ The following code snippet shows the one dimensional barcode with [`module`](htt
 
 {% highlight dart %} 
 
-      @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
-            height: 150,
-            width: 230,
-            child: SfBarcodeGenerator(
-              backgroundColor:  Color.fromRGBO(193, 250, 250, 1),
-              value: '123456789',
-              showValue: true,
-              symbology: Codabar(module: 1)),
-          )
+        child: Container(
+          height: 150,
+          width: 230,
+          child: SfBarcodeGenerator(
+            backgroundColor: Color.fromRGBO(193, 250, 250, 1),
+            value: '123456789',
+            showValue: true,
+            symbology: Codabar(module: 1),
+          ),
         ),
-      );
-    }
+      ),
+    );
+  }
 
   {% endhighlight %}
 
@@ -163,20 +167,21 @@ Below code snippet shows the one dimensional barcode without the [`module`](http
 
 {% highlight dart %} 
 
-      @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
-            height: 150,
-            width: 230,
-            child: SfBarcodeGenerator(
-              backgroundColor: Color.fromRGBO(193, 250, 250, 1),
-              value: '123456789',
-              showValue: true,
-              symbology: Codabar()),
-          )
+        child: Container(
+          height: 150,
+          width: 230,
+          child: SfBarcodeGenerator(
+            backgroundColor: Color.fromRGBO(193, 250, 250, 1),
+            value: '123456789',
+            showValue: true,
+            symbology: Codabar(),
+          ),
+        ),
       ),
     );
   }
@@ -191,22 +196,23 @@ The following code snippet shows the two dimensional barcode with [`module`](htt
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
-            height: 150,
-            width: 230,
-            child: SfBarcodeGenerator(
-               backgroundColor: Color.fromRGBO(193, 250, 250, 1),
-              value: '123456789',
-              symbology: QRCode(module: 2),),
-          )
+        child: Container(
+          height: 150,
+          width: 230,
+          child: SfBarcodeGenerator(
+            backgroundColor: Color.fromRGBO(193, 250, 250, 1),
+            value: '123456789',
+            symbology: QRCode(module: 2),
+          ),
         ),
-      );
-    }
+      ),
+    );
+  }
 
   {% endhighlight %}
 
@@ -216,22 +222,23 @@ The following code snippet shows the two dimensional barcode with [`module`](htt
 
   {% highlight dart %} 
 
-     @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
-            height: 150,
-            width: 230,
-            child: SfBarcodeGenerator(
-              backgroundColor: Color.fromRGBO(193, 250, 250, 1),
-              value: '123456789',
-              symbology: QRCode(),),
-          )
+        child: Container(
+          height: 150,
+          width: 230,
+          child: SfBarcodeGenerator(
+            backgroundColor: Color.fromRGBO(193, 250, 250, 1),
+            value: '123456789',
+            symbology: QRCode(),
+          ),
         ),
-      );
-    }
+      ),
+    );
+  }
 
   {% endhighlight %}
 
@@ -243,22 +250,22 @@ Customize the barcode's bar color using the [`barColor`](https://pub.dev/documen
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-            child: Container(
-                height: 150,
-                width: 240,
-                child: SfBarcodeGenerator(
-                  value: '12634',
-                   barColor: Colors.deepPurple,
-                 )
-            )
-        )
-     );
-    }
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 240,
+          child: SfBarcodeGenerator(
+            value: '12634',
+            barColor: Colors.deepPurple,
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -270,24 +277,24 @@ You can customize the barcode's background color with the [`backgroundColor`](ht
 
 {% highlight dart %} 
 
-     @override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
-            height: 150,
-            width: 230,
-            child: SfBarcodeGenerator(
-              backgroundColor: Color.fromRGBO(193, 250, 250, 1),
-              value: '123456789',
-              symbology: Codabar(),),
-          )
-       ),
-      );
-     }
+        child: Container(
+          height: 150,
+          width: 230,
+          child: SfBarcodeGenerator(
+            backgroundColor: Color.fromRGBO(193, 250, 250, 1),
+            value: '123456789',
+            symbology: Codabar(),
+          ),
+        ),
+      ),
+    );
+  }
 
-  {% endhighlight %}
+{% endhighlight %}
 
-  ![background color](images/text-customization/background-color.jpg)
-
+![background color](images/text-customization/background-color.jpg)
