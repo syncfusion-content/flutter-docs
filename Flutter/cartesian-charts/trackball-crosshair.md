@@ -84,10 +84,10 @@ You can use the following properties to customize the appearance of trackball to
 
 The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) property is used to specify whether to display label for all the data points along the vertical line or display only single label. Following are the options you can set to this property,
 
-* [`TrackballDisplayMode.floatAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - displays label for all the data points along the tracker line.
-* [`TrackballDisplayMode.nearestPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - displays label for single data point that is nearer to the touch contact position.
-* [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - displays label for all the data points grouped and positioned at the top of the chart area.
-* [`TrackballDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html) - doesn't display the label.
+* [`TrackballDisplayMode.floatAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#floatAllPoints) - displays label for all the data points along the tracker line.
+* [`TrackballDisplayMode.nearestPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#nearestPoint) - displays label for single data point that is nearer to the touch contact position.
+* [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#groupAllPoints) - displays label for all the data points grouped and positioned at the top of the chart area.
+* [`TrackballDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#none) - doesn't display the label.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -134,11 +134,11 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 
 The position of trackball tooltip can be changed using the [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/trackballBehavior.html). The following options are available in [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html).
 
-* [`ChartAlignment.near`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html) - aligns the trackball tooltip to the top position of plot area.
-* [`ChartAlignment.far`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html) - aligns the trackball tooltip to the bottom position of plot area.
-* [`ChartAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html) - aligns the trackball tooltip to the center position of plot area. 
+* [`ChartAlignment.near`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html#near) - aligns the trackball tooltip to the top position of plot area.
+* [`ChartAlignment.far`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html#far) - aligns the trackball tooltip to the bottom position of plot area.
+* [`ChartAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html#center) - aligns the trackball tooltip to the center position of plot area. 
 
->**Note**: The [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) is only applicable for trackball display mode [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
+>**Note**: The [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) is only applicable for trackball display mode [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#groupAllPoints).
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -181,7 +181,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 ![Label alignment in Flutter Cartesian Charts.](images/trackball-crosshair/flutter-cartesian-charts-label-alignment.jpg)
 
->**Note**: This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
+>**Note**: This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html#groupAllPoints).
 
 ### Label format
 

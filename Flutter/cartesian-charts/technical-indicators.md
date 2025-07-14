@@ -234,7 +234,7 @@ Refer the following example,
 
 This is mostly using indicator having [`shortPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/shortPeriod.html) and [`longPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/longPeriod.html) for defining the motion of the indicator.
 
-Also you can draw [`MacdType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html), [`MacdType.histogram`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html) MACD or [`MacdType.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html) types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
+Also you can draw [`MacdType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#line), [`MacdType.histogram`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#histogram) MACD or [`MacdType.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#both) types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
 
 The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdLineColor.html) property is used to define the color for the MACD line and the [`histogramNegativeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramNegativeColor.html) and [`histogramPositiveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramPositiveColor.html) property is used to define the color for the MACD histogram.
 
@@ -607,7 +607,7 @@ Refer the following example,
 ## Legend for technical indicators
 
 
-Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/name.html) property is given to an indicator, the legend name is changed based on the indicator name.[`legendItemText`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendItemText.html) can also be provided for changing the name of the legend. In default rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendIconType.html) will be a horizontal line.
+Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/name.html) property is given to an indicator, the legend name is changed based on the indicator name. [`legendItemText`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendItemText.html) can also be provided for changing the name of the legend. In default rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendIconType.html) will be a horizontal line.
 
 The following code example can define the legend.
 
