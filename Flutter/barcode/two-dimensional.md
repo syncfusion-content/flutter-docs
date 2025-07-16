@@ -24,21 +24,20 @@ A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/b
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: SfBarcodeGenerator(
-            value: 'www.syncfusion.com',
-            showValue: true,
-            symbology: QRCode(),
-          ),
-        ),
-      ),
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: 'www.syncfusion.com',
+                  showValue: true,
+                  symbology: QRCode())
+            )
+        )
     );
   }
 
@@ -67,21 +66,20 @@ High - it recovers the data up to 30%
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: SfBarcodeGenerator(
-            value: 'www.syncfusion.com',
-            showValue: true,
-            symbology: QRCode(errorCorrectionLevel: ErrorCorrectionLevel.high),
-          ),
-        ),
-      ),
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: 'www.syncfusion.com',
+                  showValue: true,
+                  symbology: QRCode(errorCorrectionLevel: ErrorCorrectionLevel.high),)
+            )
+        )
     );
   }
 
@@ -103,21 +101,20 @@ binary - supports Shift JIS characters
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+        Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: SfBarcodeGenerator(
-            value: '1263438892737643894930872',
-            showValue: true,
-            symbology: QRCode(inputMode: QRInputMode.numeric),
-          ),
-        ),
-      ),
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: '1263438892737643894930872',
+                  showValue: true,
+                  symbology: QRCode(inputMode: QRInputMode.numeric),)
+            )
+        )
     );
   }
 
@@ -135,21 +132,20 @@ The number of modules increases in steps of 4 modules per side up to Version 40 
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+        Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: SfBarcodeGenerator(
-            value: 'www.syncfusion.com',
-            showValue: true,
-            symbology: QRCode(codeVersion: QRCodeVersion.version09),
-          ),
-        ),
-      ),
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: 'www.syncfusion.com',
+                  showValue: true,
+                  symbology: QRCode(codeVersion: QRCodeVersion.version09))
+            )
+        )
     );
   }
 
@@ -163,23 +159,22 @@ The number of modules increases in steps of 4 modules per side up to Version 40 
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+        Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: SfBarcodeGenerator(
-            value: 'www.syncfusion.com',
-            showValue: true,
-            symbology: DataMatrix(),
-          ),
-        ),
-      ),
-    );
-  }
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: 'www.syncfusion.com',
+                  showValue: true,
+                  symbology:  DataMatrix())
+            )
+        )
+    ); 
+    }
 
 {% endhighlight %}
 
@@ -223,3 +218,5 @@ When the encoding type is `ASCIINumeric`, then the code word will be calculated 
 Code word = numerical value pair + 130.
 
 The numerical value pair will be like 00, 01, 02,.....99
+
+

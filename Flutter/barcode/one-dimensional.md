@@ -34,19 +34,18 @@ One-dimensional barcodes represent data by varying the widths and spacings of pa
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 150,
-          child: SfBarcodeGenerator(
-            value: '123456789',
-            showValue: true,
-            symbology: Codabar(module: 2),
-          ),
-        ),
+    @override
+        Widget build(BuildContext context) {
+            return Scaffold(
+            backgroundColor: Colors.white,
+            body: Center(
+                child: Container(
+                    height: 150,
+                    child: SfBarcodeGenerator( 
+                        value: '123456789',
+                        showValue: true,
+                        symbology: Codabar(module: 2),),
+        )
       ),
     );
   }
@@ -64,22 +63,21 @@ One-dimensional barcodes represent data by varying the widths and spacings of pa
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 150,
-          child: SfBarcodeGenerator(
-            value: 'CODE39',
-            showValue: true,
-            symbology: Code39(module: 2),
-          ),
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Container(
+            height: 150,
+             child: SfBarcodeGenerator( 
+               value: 'CODE39',
+               showValue: true,
+                symbology: Code39(module: 2),),
+            )
         ),
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 
@@ -93,22 +91,22 @@ The [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          height: 150,
-          child: SfBarcodeGenerator(
-            value: '051091',
-            showValue: true,
-            symbology: Code39Extended(module: 2),
-          ),
-        ),
-      ),
-    );
-  }
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            backgroundColor: Colors.white,
+            body: Center(
+                child: Container(
+                    height: 150,
+                    child: SfBarcodeGenerator(
+                        value: '051091',
+                        showValue: true,
+                        symbology: Code39Extended(module: 2),
+                    )
+                ),
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -125,19 +123,17 @@ As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/lat
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '01234567',
+          child: SfBarcodeGenerator(value: '01234567',
             showValue: true,
-            symbology: Code93(module: 2),
-          ),
-        ),
+            symbology: Code93(module: 2),),
+        )
       ),
     );
   }
@@ -154,19 +150,17 @@ The [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: 'CODE128',
+          child: SfBarcodeGenerator(value: 'CODE128',
             showValue: true,
-            symbology: Code128(module: 2),
-          ),
-        ),
+            symbology: Code128(module: 2),),
+        )
       ),
     );
   }
@@ -181,19 +175,17 @@ The [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: 'CODE128A',
+          child: SfBarcodeGenerator(value: 'CODE128A',
             showValue: true,
-            symbology: Code128A(module: 2),
-          ),
-        ),
+            symbology: Code128A(module: 2),),
+        )
       ),
     );
   }
@@ -208,19 +200,17 @@ The [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: 'CODE128B',
+          child: SfBarcodeGenerator(value: 'CODE128B',
             showValue: true,
-            symbology: Code128B(module: 2),
-          ),
-        ),
+            symbology: Code128B(module: 2),),
+        )
       ),
     );
   }
@@ -235,19 +225,17 @@ The [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '1234567890',
+          child: SfBarcodeGenerator(value: '1234567890',
             showValue: true,
-            symbology: Code128C(module: 2),
-          ),
-        ),
+            symbology: Code128C(module: 2),),
+        )
       ),
     );
   }
@@ -268,19 +256,17 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '72527273070',
+          child: SfBarcodeGenerator(value: '72527273070',
             showValue: true,
-            symbology: UPCA(module: 2),
-          ),
-        ),
+            symbology: UPCA(module: 2),),
+        )
       ),
     );
   }
@@ -297,19 +283,17 @@ As like [`UPC-A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/late
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '310194',
+          child: SfBarcodeGenerator(value: '310194',
             showValue: true,
-            symbology: UPCE(module: 2),
-          ),
-        ),
+            symbology: UPCE(module: 2),),
+        )
       ),
     );
   }
@@ -326,19 +310,17 @@ As like [`UPC-A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/late
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+        Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '9735940564824',
+          child: SfBarcodeGenerator(value: '9735940564824',
             showValue: true,
-            symbology: EAN13(module: 2),
-          ),
-        ),
+            symbology: EAN13(module: 2),),
+        )
       ),
     );
   }
@@ -355,19 +337,17 @@ As like [`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/late
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 150,
-          child: SfBarcodeGenerator(
-            value: '11223344',
+          child: SfBarcodeGenerator(value: '11223344',
             showValue: true,
-            symbology: EAN8(module: 2),
-          ),
-        ),
+            symbology: EAN8(module: 2),),
+        )
       ),
     );
   }
