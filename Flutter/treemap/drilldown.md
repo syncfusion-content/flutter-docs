@@ -20,7 +20,7 @@ To learn more about how to deep dive into the drill down feature in Flutter Tree
 
 You can drill down the tiles by setting the [`enableDrilldown`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/enableDrilldown.html) property to `true`. In the UI, you can only see one level tiles at a time. When you tap a tile, it expands to the size of the viewport and loads its descendant tiles with smoother animation.
 
-The widget returned by the [`TreemapBreadcrumbs.builder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/enableDrilldown.html) will be added to the breadcrumbs item. While drilling down the tiles, it is called with the tapped tile details.
+The widget returned by the [`TreemapBreadcrumbs.builder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapBreadcrumbs/builder.html) will be added to the breadcrumbs item. While drilling down the tiles, it is called with the tapped tile details.
 
 Selection for touch and mouse enabled devices, and tooltip for touch devices will work only for the tiles which don’t have descendants.
 

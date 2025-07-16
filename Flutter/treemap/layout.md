@@ -262,7 +262,7 @@ class PopulationModel {
 
 ## Sorting
 
-You can sort the tiles either in ascending or descending order based on the [`sortAscending`] property. The default value of the [`sortAscending`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/sortAscending.html) property is `false`.
+You can sort the tiles either in ascending or descending order based on the [`sortAscending`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/sortAscending.html) property. The default value of the [`sortAscending`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/sortAscending.html) property is `false`.
 
 N> It is applicable for slice and dice treemap.
 
