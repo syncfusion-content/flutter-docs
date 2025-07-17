@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting in Flutter Funnel Chart (SfFunnelChart)
 
-[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the funnel chart as a PNG image or as PDF document.
+[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the funnel chart as a PNG image or as a PDF document.
 
 ## Export image
 
@@ -122,7 +122,7 @@ To export the funnel chart as a PNG image, we can get the image by calling [`toI
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered Funnel chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above method, we can also export the rendered Funnel chart as a PDF document. We create the pdf document using PDF component. This can be done at the application level itself. Please find the code snippet below.
 
 **Add dependency**
 
