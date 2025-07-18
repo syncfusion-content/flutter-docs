@@ -452,7 +452,7 @@ Widget build(BuildContext context) {
 
 ## Inverse the vertical slider
 
-You can invert the vertical slider using the `isInversed` property. The default value of the `isInversed` property is `false`.
+You can invert the vertical slider using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property. The default value of the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}

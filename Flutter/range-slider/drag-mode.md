@@ -11,7 +11,7 @@ documentation: ug
 
 ## On thumb
 
-When `dragMode` is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb. The default value of the `dragMode` property is `SliderDragMode.onThumb`.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dragMode.html) is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb. The default value of the [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dragMode.html) property is `SliderDragMode.onThumb`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,7 +52,7 @@ Widget build(BuildContext context) {
 
 ## Between thumbs
 
-When `dragMode` is set to `SliderDragMode.betweenThumbs`, both the thumbs can be moved at the same time by dragging in the area between start and end thumbs. The range between the start and end thumb will always be the same. Hence, it is not possible to move the individual thumb.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dragMode.html) is set to `SliderDragMode.betweenThumbs`, both the thumbs can be moved at the same time by dragging in the area between start and end thumbs. The range between the start and end thumb will always be the same. Hence, it is not possible to move the individual thumb.
 
 N> It is applicable for both horizontal and vertical range slider.
 
@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 
 ## Both thumbs
 
-When `dragMode` is set to `SliderDragMode.both`, individual thumb can be moved by dragging it, and also both the thumbs can be moved at the same time by dragging in the area between start and end thumbs.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dragMode.html) is set to `SliderDragMode.both`, individual thumb can be moved by dragging it, and also both the thumbs can be moved at the same time by dragging in the area between start and end thumbs.
 
 N> It is applicable for both horizontal and vertical range slider.
 
