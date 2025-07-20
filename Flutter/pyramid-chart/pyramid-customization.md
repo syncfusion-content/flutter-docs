@@ -11,10 +11,10 @@ documentation: ug
 
 To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/series.html) property of [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html). The following properties can be used to customize the appearance of a pyramid segment.
 
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/opacity.html) - controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/borderWidth.html) - changes the stroke width of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/borderColor.html) - changes the stroke color of the series.
-* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/pointColorMapper.html) - maps the color from data source.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) - maps the color from data source.
 
 {% tabs %}
 {% highlight dart %} 
@@ -32,7 +32,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
@@ -55,7 +55,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
 
 ## Pyramid modes
 
-You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) or [`PyramidMode.surface`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) mode. In linear mode, the height of the pyramid segment is based on the Y value, and in surface mode, area of the pyramid segment is based on the Y value. The default value of [`PyramidMode.pyramidMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) property is [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html).
+You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html#linear) or [`PyramidMode.surface`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html#surface) mode. In linear mode, the height of the pyramid segment is based on the Y value, and in surface mode, the area of the pyramid segment is based on the Y value. The default value of [`PyramidMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) property is [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html#linear).
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}  
@@ -74,7 +74,7 @@ You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/docu
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
@@ -111,7 +111,7 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
@@ -147,7 +147,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
@@ -164,7 +164,7 @@ You can control the gap between the two segments using the [`gapRatio`](https://
 
 ## Explode segments
 
-You can explode a pyramid segment using the [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/explodeIndex.html) property. The [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/explodeOffset.html) property is used to specify the exploded segment’s distance.
+You can explode a specific pyramid segment using the [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/explodeIndex.html) property. The [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/explodeOffset.html) property is used to specify the exploded segment’s distance.
 
 Also, the segments can be exploded by tapping the segment.
 
@@ -187,7 +187,7 @@ Also, the segments can be exploded by tapping the segment.
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
@@ -227,7 +227,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                                 ChartData('Soybeans', 446),
                                 ChartData('Black beans', 341),
                                 ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
+                                ChartData('Avocado', 160),
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)

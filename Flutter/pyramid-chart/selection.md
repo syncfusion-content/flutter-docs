@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Pyramid Chart (SfPyramidChart)
 
-The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
+The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you select either individual or cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -99,7 +99,7 @@ You can customize the segments using the below properties.
 
 ## Multi-selection
 
-Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) property of chart.
+Multiple segment selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) property of chart.
 
 {% tabs %}
 {% highlight dart %} 
@@ -166,7 +166,7 @@ Defaults to `true`.
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/initialSelectedDataIndexes.html) property of chart.
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/initialSelectedDataIndexes.html) property of chart.
 
 {% tabs %}
 {% highlight dart %} 
@@ -202,7 +202,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the point index value.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
 
->**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
+>**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) is also applicable for this, but it is based on the API values specified in the chart.
 
 {% tabs %}
 {% highlight dart %}
