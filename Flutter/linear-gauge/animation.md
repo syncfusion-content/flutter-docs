@@ -114,9 +114,9 @@ Both the shape and widget marker pointers have the same set of properties and be
 
 ![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
 
-## Event
+## Animation completed event
 
-The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) called when the pointer animation is completed. The default value is null.
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) called when the pointer animation is completed. The default value is `null`.
 
 {% highlight dart %} 
 
