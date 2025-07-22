@@ -73,7 +73,9 @@ However, to draw concave, convex and exponential-like shapes the [`midValue`](ht
 
 ## Customize edge style
 
-The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/edgeStyle.html) property of the gauge range. The edge style can be any of the `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options. The default value is `bothFlat`.
+The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/edgeStyle.html) property customizes how the edges of a range should be appear in linear gauge. The available options are `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options. 
+
+The default value is `bothFlat`.
 
 {% highlight dart %} 
 

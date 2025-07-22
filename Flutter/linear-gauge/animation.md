@@ -116,7 +116,7 @@ Both the shape and widget marker pointers have the same set of properties and be
 
 ## Animation completed event
 
-The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) called when the pointer animation is completed. The default value is `null`.
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) is triggered when the shape pointer animation is completed. The default value of the [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) callback is `null`.
 
 {% highlight dart %} 
 
