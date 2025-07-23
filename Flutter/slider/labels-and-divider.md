@@ -482,7 +482,9 @@ Widget build(BuildContext context) {
 
 ## Edge label placement
 
-The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property determines the positioning of edge labels, allowing them to be placed either inside the major ticks or directly on the major ticks. The default value of the [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
+The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property determines how the edge (first and last) labels are positioned on the slider. This property allows the edge labels to be placed either inside the major ticks or directly on the major ticks. 
+
+The default value of the [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/edgeLabelPlacement.html) property is `EdgeLabelPlacement.auto`.
 
 ### Horizontal
 
