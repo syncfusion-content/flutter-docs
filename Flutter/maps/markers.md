@@ -154,7 +154,7 @@ N>
 
 You can customize the built-in markers appearance using the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconType.html), [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconColor.html), [`iconStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeColor.html), [`iconStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeWidth.html), and [`size`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/size.html) properties of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
 
-* **Alignment** - You can change the position of the marker from the given coordinate using the `alignment` property. The default value is `Alignment.center`. The available alignment options are `topLeft`, `topRight`, `topCenter`, `centerLeft`, `center`, `centerRight`, `bottomLeft`, `bottomCenter`, `bottomRight`.
+* **Alignment** - You can change the position of the marker from the given coordinate using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/alignment.html) property. The default value is [`Alignment.center`](https://api.flutter.dev/flutter/painting/Alignment/center-constant.html). The available alignment options are [`topLeft`](https://api.flutter.dev/flutter/painting/Alignment/topLeft-constant.html), [`topRight`](https://api.flutter.dev/flutter/painting/Alignment/topRight-constant.html), [`topCenter`](https://api.flutter.dev/flutter/painting/Alignment/topCenter-constant.html), [`centerLeft`](https://api.flutter.dev/flutter/painting/Alignment/centerLeft-constant.html), [`center`](https://api.flutter.dev/flutter/painting/Alignment/center-constant.html), [`centerRight`](https://api.flutter.dev/flutter/painting/Alignment/centerRight-constant.html), [`bottomLeft`](https://api.flutter.dev/flutter/painting/Alignment/bottomLeft-constant.html), [`bottomCenter`](https://api.flutter.dev/flutter/painting/Alignment/bottomCenter-constant.html), [`bottomRight`](https://api.flutter.dev/flutter/painting/Alignment/bottomRight-constant.html).
 
 * **Offset** - You can adjust the marker position from the given coordinate using the `offset` property. The default value of the `offset` property is `Offset.zero`.
 
@@ -232,7 +232,7 @@ class Model {
 
 ## Adding custom markers
 
-You can show custom markers using the `child` property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html).
+You can show custom markers using the [`child`](https://api.flutter.dev/flutter/widgets/SingleChildRenderObjectWidget/child.html) property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -886,9 +886,9 @@ typedef MapTapCallback = void Function(Offset position);
 
 ## Zoom markers to fit bounds
 
-You can visualize a specific area on the map by specifying the northeast and southwest coordinate points to the `initialLatLngBounds` property in the `MapTileLayer` and `MapShapeLayer`. It renders the map by calculating the center coordinate and zoom level depending on the `initialLatLngBounds` value.
+You can visualize a specific area on the map by specifying the northeast and southwest coordinate points to the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). It renders the map by calculating the center coordinate and zoom level depending on the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) value.
 
-The `initialLatLngBounds` property can be set at load time alone. You can use the `latLngBounds` property of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to dynamically update the map bounds.
+The [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property can be set at load time alone. You can use the [`latLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/latLngBounds.html) property of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to dynamically update the map bounds.
 
 {% tabs %}
 {% highlight Dart %}
