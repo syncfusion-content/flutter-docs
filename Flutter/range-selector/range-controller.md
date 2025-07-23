@@ -216,7 +216,7 @@ class Data {
 
 ## Zooming with SfChart
 
-We have provided built-in support for updating the visible range of the chart based on the selected range in range selector. To update the visible range, you must set the `primaryYAxis.rangeController` property in the `SfCartesianChart`.
+We have provided built-in support for updating the visible range of the chart based on the selected range in range selector. To update the visible range, you must set the `primaryYAxis.rangeController` property in the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
 
 {% tabs %}
 {% highlight Dart %}
