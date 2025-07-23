@@ -190,10 +190,10 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ### Axis border customization
 
-The color and width of the axis border can be customized with [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderWidth.html) properties respectively. The border types can be changed using the [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) property and the default value is [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html). Another value of [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) is [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html).
+The color and width of the axis border can be customized with [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderWidth.html) properties respectively. The border types can be changed using the [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) property and the default value is [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html#rectangle). Another value of [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) is [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html#withoutTopAndBottom).
 
-* [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border as a rectangle around a label.
-* [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border without the top and bottom of a rectangle.
+* [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html#rectangle) - Renders the border as a rectangle around a label.
+* [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html#withoutTopAndBottom) - Renders the border without the top and bottom of a rectangle.
 
 {% tabs %}
 {% highlight dart %}
@@ -325,7 +325,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 ### Edge label placement
 
-Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is [`EdgeLabelPlacement.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html). Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. [`EdgeLabelPlacement.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html) option will move the edge labels inside the axis bounds, where the [`EdgeLabelPlacement.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html) option will hides the edge labels.
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is [`EdgeLabelPlacement.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html#none). Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. [`EdgeLabelPlacement.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html#shift) option will move the edge labels inside the axis bounds, where the [`EdgeLabelPlacement.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html#hide) option will hides the edge labels.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -531,11 +531,11 @@ The [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_c
 {% endhighlight %}
 {% endtabs %}
 
-Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an axis.
+Also refer [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) range of an axis.
 
 ### Initial visible maximum
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) property defines the highest data point finally displayed on an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property only works at load time. Use the controller to programmatically change the visible maximum.
+The [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) property defines the highest data point finally displayed on an axis. When panning is enabled, you can pan to the actual maximum range of an axis. This property only works at load time. Use the controller to programmatically change the visible maximum.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %} 
@@ -590,7 +590,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ### Plot offset start
 
-The [`plotOffsetStart`]() property is used to offset the rendering of the axis at start position. The following code snippet demonstrates how to apply the plot offset start of an axis.
+The [`plotOffsetStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffsetStart.html) property is used to offset the rendering of the axis at start position. The following code snippet demonstrates how to apply the plot offset start of an axis.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -618,7 +618,7 @@ The [`plotOffsetStart`]() property is used to offset the rendering of the axis a
 
 ### Plot offset end
 
-The [`plotOffsetEnd`]() property is used to offset the rendering of the axis at end position. The following code snippet demonstrates how to apply the plot offset end of an axis.
+The [`plotOffsetEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffsetEnd.html) property is used to offset the rendering of the axis at end position. The following code snippet demonstrates how to apply the plot offset end of an axis.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -646,7 +646,7 @@ The [`plotOffsetEnd`]() property is used to offset the rendering of the axis at 
 
 ## Smart axis labels
 
-Axis labels may overlap with each other based on chart dimensions and label size. The [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) property of axis is used to avoid overlapping of axis labels. The default value of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) is [`AxisLabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html). Other available values are [`AxisLabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.wrap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.multipleRows`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.rotate45`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html) and [`AxisLabelIntersectAction.rotate90`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html).
+Axis labels may overlap with each other based on chart dimensions and label size. The [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) property of axis is used to avoid overlapping of axis labels. The default value of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) is [`AxisLabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#hide). Other available values are [`AxisLabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#none), [`AxisLabelIntersectAction.wrap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#wrap), [`AxisLabelIntersectAction.multipleRows`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#multipleRows), [`AxisLabelIntersectAction.rotate45`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#rotate45) and [`AxisLabelIntersectAction.rotate90`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html#rotate90).
 
 {% tabs %}
 {% highlight dart hl_lines="9" %} 
@@ -1126,11 +1126,11 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`LabelAlignment.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - if it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+* [`LabelAlignment.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html#start) - if it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
-* [`LabelAlignment.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - if it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+* [`LabelAlignment.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html#end) - if it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
-* [`LabelAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - aligns the axis label to the center of the gridlines.
+* [`LabelAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html#center) - aligns the axis label to the center of the gridlines.
 
 ### Center
 
@@ -1220,7 +1220,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 ![end](images/axis-customization/end.png)
 
 ## Auto range calculation
-Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
+This feature determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
 By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`initialVisibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMinimum.html) and [`initialVisibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/initialVisibleMaximum.html) values.
   
@@ -1339,7 +1339,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
 
 ### AutoScrollingDeltaType
 
-In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis-class.html), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/autoScrollingDeltaType.html) property. Default value of this property is [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeIntervalType.html) and the delta will be calculated automatically based on range.
+In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis-class.html), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/autoScrollingDeltaType.html) property. Default value of this property is [`DateTimeIntervalType.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeIntervalType.html#auto) and the delta will be calculated automatically based on range.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -1444,9 +1444,9 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
 The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
 
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) - Represents the start value of an multi-level label.
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html)   - Represents the end value of an multi-level label.
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html)  - Represents the text which needs to be rendered for a multilevel label.
-* [`level`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html) - Represents the hierarchical structure of a multi level label.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) - Represents the end value of an multi-level label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html) - Represents the text which needs to be rendered for a multilevel label.
+* [`level`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/level.html) - Represents the hierarchical structure of a multi level label.
 
 ### Multi-level labels in numeric axis
 
@@ -1579,7 +1579,7 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
 {% endhighlight %}
 {% endtabs %}
 
-![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
+![Multi-level-labels](images/axis-customization/category_multi_level_label.jpg)
 
 ### Multi-level labels in date time axis
 
@@ -1865,10 +1865,10 @@ The border width, color and type of the multi-level label can be customized usin
 
 The different types of multi-level label's border are mentioned below,
 
-* [`MultiLevelBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle.
-* [`MultiLevelBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle without it's top and bottom.
-* [`MultiLevelBorderType.squareBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as square braces.
-* [`MultiLevelBorderType.curlyBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as curly braces.
+* [`MultiLevelBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html#rectangle) - Renders the multi-level label border as rectangle.
+* [`MultiLevelBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html#withoutTopAndBottom) - Renders the multi-level label border as rectangle without it's top and bottom.
+* [`MultiLevelBorderType.squareBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html#squareBrace) - Renders the multi-level label border as square braces.
+* [`MultiLevelBorderType.curlyBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html#curlyBrace) - Renders the multi-level label border as curly braces.
 
 {% tabs %}
 {% highlight dart %}

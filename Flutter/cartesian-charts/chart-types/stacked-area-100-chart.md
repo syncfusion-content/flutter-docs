@@ -15,13 +15,13 @@ To create a Flutter 100% stacked area chart quickly, you can check this video.
 <style>#flutter100stackedareaChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutter100stackedareaChartTutorial' src='https://www.youtube.com/embed/NCUDBD_ClHo'></iframe>
 
-To render a 100% stacked area chart, create an instance of `StackingArea100Series` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the 100% stacked area appearance.
+To render a 100% stacked area chart, create an instance of `StackedArea100Series` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the 100% stacked area appearance.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
-* [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedArea100Series/borderDrawMode.html) - specifies the type of the border mode and it defaults to [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html).
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/borderColor.html) - changes the stroke color of the series.
+* [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedArea100Series/borderDrawMode.html) - specifies the type of the border mode and it defaults to [`BorderDrawMode.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html#top).
 
 {% tabs %}
 {% highlight dart %} 

@@ -43,4 +43,4 @@ To get started quickly with our Flutter chart widget, you can check out this vid
 
 #### See Also
 
-* [Integrating syncfusion<sup>&reg;</sup> flutter charts in a flutter web application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
+* [Integrating Syncfusion<sup>&reg;</sup> flutter charts in a flutter web application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
