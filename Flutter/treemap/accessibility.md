@@ -16,56 +16,56 @@ The [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/lates
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _source;
-late String _semanticLabel = 'Asia is the most populated continent and Australia is the least populated continent';
+  late List<PopulationModel> _source;
+  late String _semanticLabel = 'Asia is the most populated continent and Australia is the least populated continent';
 
-@override
-void initState() {
-   _source = const <PopulationModel>[
-      PopulationModel('Asia', 456.07),
-      PopulationModel('Africa', 121.61),
-      PopulationModel('Europe', 74.64),
-      PopulationModel('North America', 57.9),
-      PopulationModel('South America', 42.25),
-      PopulationModel('Australia', 2.54),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _source = const <PopulationModel>[
+        PopulationModel('Asia', 456.07),
+        PopulationModel('Africa', 121.61),
+        PopulationModel('Europe', 74.64),
+        PopulationModel('North America', 57.9),
+        PopulationModel('South America', 42.25),
+        PopulationModel('Australia', 2.54),
+    ];
+    super.initState();
+  }
 
-@override
-void dispose() {
-  _source.clear();
-  super.dispose();
-}
+  @override
+  void dispose() {
+    _source.clear();
+    super.dispose();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Semantics(
-        label: 'Syncfusion Flutter Treemap',
-        value: _semanticLabel,
-        child: Column(
-          children: [
-            Expanded(
-              child: SfTreemap(
-                dataCount: _source.length,
-                weightValueMapper: (int index) {
-                  return _source[index].populationInCrores;
-                },
-                levels: [
-                  TreemapLevel(
-                    groupMapper: (int index) {
-                      return _source[index].continent;
-                    },
-                  ),
-                ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Semantics(
+          label: 'Syncfusion Flutter Treemap',
+          value: _semanticLabel,
+          child: Column(
+            children: [
+              Expanded(
+                child: SfTreemap(
+                  dataCount: _source.length,
+                  weightValueMapper: (int index) {
+                    return _source[index].populationInCrores;
+                  },
+                  levels: [
+                    TreemapLevel(
+                      groupMapper: (int index) {
+                        return _source[index].continent;
+                      },
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-   );
-}
+    );
+  }
 
 class PopulationModel {
   const PopulationModel(this.continent, this.populationInCrores);
