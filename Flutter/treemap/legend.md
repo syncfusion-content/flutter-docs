@@ -208,7 +208,9 @@ class SocialMediaUsers {
 
 ## First segment label customization
 
-You can customize the first segment label of the legend using the [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) value is placed at the starting position of first segment and the [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) value is placed at the ending position of the first segment.
+You can customize the first segment label of the legend by using the [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property with curly braces. The value inside the first pair of curly braces will be used as the start label for the segment, and the value inside the second pair will be used as the end label.
+
+By default, the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) value appears at the start of the first segment, and the [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) value appears at the end.
 
 {% tabs %}
 {% highlight Dart %}
@@ -276,9 +278,11 @@ class SocialMediaUsers {
 
 ![First label customization](images/legend/first-label-customization.png)
 
-## Should always show scrollbar
+## Scrollbar visibility
 
-You can control the visibility of the scrollbar in the treemap using the [`shouldAlwaysShowScrollbar`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/shouldAlwaysShowScrollbar.html) property. When set to true, the scrollbar will always be visible, allowing easy navigation through the treemap content even when content is fully within view. The default value is `false`, meaning the scrollbar will only appear when the content is scrollable.
+You can control the visibility of the scrollbar in the treemap legend using the [`shouldAlwaysShowScrollbar`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/shouldAlwaysShowScrollbar.html) property. When set to `true`, the scrollbar for the legend will always be visible, making it easier to see and navigate through legend items, even if all items fit within the available space. 
+
+The default value is `false`, so the scrollbar appears in legend only when the legend items exceed the available space and scrolling is needed.
 
 {% tabs %}
 {% highlight Dart %}
@@ -340,7 +344,9 @@ class SocialMediaUsers {
 
 ## Title
 
-You can set a title for the treemap using the [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property. This property allows you to provide a descriptive title that helps users understand the context or main focus of the treemap. By default, the [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) is `null`, indicating that no title is displayed unless specified explicitly.
+You can set a title specifically for the legend in the treemap by using the [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property. This property lets you display a descriptive heading for the legend, helping users understand what the legend represents within the treemap.
+
+By default, the value of the legend's [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property is `null`, indicating that no title is displayed for the legend, unless it is specified explicitly.
 
 {% tabs %}
 {% highlight Dart %}
@@ -821,7 +827,7 @@ N>
 
 ### Solid
 
-You can set solid color for the bar by using the [`TreemapLegendPaintingStyle.solid`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#solid). By defaults [`TreemapLegendPaintingStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html) will be [`solid`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#solid).
+You can set solid color for the legend bar by using the [`TreemapLegendPaintingStyle.solid`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#solid). By defaults [`TreemapLegendPaintingStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html) will be [`solid`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#solid).
 
 {% tabs %}
 {% highlight Dart %}
@@ -890,7 +896,7 @@ class SocialMediaUsers {
 
 ### Gradient
 
-You can set gradient color for the bar by using the [`TreemapLegendPaintingStyle.gradient`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#gradient).
+You can set gradient color for the legend bar by using the [`TreemapLegendPaintingStyle.gradient`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html#gradient).
 
 {% tabs %}
 {% highlight Dart %}
@@ -961,7 +967,7 @@ class SocialMediaUsers {
 
 You can customize the legend items using the following properties.
 
-* **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will update the whole bar. The default value of the [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `Size(80.0, 12.0)`.
+* **segmentSize** - Used to change the size of individual legend bar segments. When gradient paint style is applied, [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will update the whole legend bar. The default value of the [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `Size(80.0, 12.0)`.
 * **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will be `TreemapLabelOverflow.visible`.
 * **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will be `TreemapLegendEdgeLabelsPlacement.inside`.
 * **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) is `2.0`. This is not applicable for gradient legend.
