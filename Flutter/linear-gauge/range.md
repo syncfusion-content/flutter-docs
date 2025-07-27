@@ -71,6 +71,44 @@ However, to draw concave, convex and exponential-like shapes the [`midValue`](ht
 
 ![Draw linear gauge concave range](images/gauge-range/range-concave.png)
 
+## Customize edge style
+
+The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/edgeStyle.html) property defines the appearance of [`LinearGaugeRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange-class.html) with either sharp or curved edges. The available options are `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options. 
+
+The default value is `bothFlat`.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            width: 400,
+            height: 120,
+            child: SfLinearGauge(
+              ranges: [
+                LinearGaugeRange(
+                  startValue: 0,
+                  startWidth: 20,
+                  endWidth: 20,
+                  endValue: 70,  
+                  edgeStyle: LinearEdgeStyle.bothCurve,
+                  color: Colors.blue,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Change the gauge range edge style](images/gauge-range/edge_style.png)
+
 ## Customize color of a range
 
 The color of a range can be changed by setting the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/color.html) property of a range. The below code example demonstrates changing the color property of the range.
