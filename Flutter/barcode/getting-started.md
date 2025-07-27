@@ -56,19 +56,19 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                    child: Container(
-                         height: 150,
-                        child:SfBarcodeGenerator(value:'http://www.syncfusion.com')
-                        )
-                    )
-                )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 150,
+            child: SfBarcodeGenerator(value: 'http://www.syncfusion.com'),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -82,21 +82,23 @@ You can set the required symbology type to the barcode generator based on input 
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                    child: Container(
-                        height: 350,
-                        width: 350,
-                        child:SfBarcodeGenerator(value:'http://www.syncfusion.com',
-                         symbology: QRCode())
-                        )
-                    )
-                )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            width: 350,
+            child: SfBarcodeGenerator(
+              value: 'http://www.syncfusion.com',
+              symbology: QRCode(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -108,22 +110,25 @@ The provided input value can be displayed below the barcode by enabling the [`sh
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                    child: Container(
-                        height: 350,
-                        width: 350,
-                        child:SfBarcodeGenerator(value:'http://www.syncfusion.com',
-                         showValue: true, textSpacing: 15,
-                         symbology: QRCode())
-                        )
-                    )
-                )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            width: 350,
+            child: SfBarcodeGenerator(
+              value: 'http://www.syncfusion.com',
+              showValue: true,
+              textSpacing: 15,
+              symbology: QRCode(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
