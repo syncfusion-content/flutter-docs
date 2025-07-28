@@ -511,10 +511,10 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ### Formatting the labels
 
-The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/package-intl_intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
 
 {% tabs %}
-{% highlight dart hl_lines="11"%} 
+{% highlight dart hl_lines="11" %} 
 
     import 'package:intl/intl.dart';
 
@@ -767,7 +767,7 @@ Category axis can also be rendered based on the index values of data source by s
 The date-time axis uses date-time scale and displays date-time values as axis labels in specified format.
 
 {% tabs %}
-{% highlight dart hl_lines="14"%} 
+{% highlight dart hl_lines="14" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -813,7 +813,7 @@ The date-time axis uses date-time scale and displays date-time values as axis la
 To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). By default, nice range will be calculated automatically based on the provided data.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9"%} 
+{% highlight dart hl_lines="8 9" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -1180,7 +1180,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ### Formatting the labels
 
-The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
+The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/package-intl_intl/DateFormat-class.html), which depend on the given data source.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %} 
@@ -1442,7 +1442,7 @@ To customize the range of log axis, use the [`minimum`](https://pub.dev/document
 To customize the log base value, use the [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="8"%}
+{% highlight dart hl_lines="8" %}
 
     @override
     Widget build(BuildContext context) {
@@ -1469,7 +1469,7 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted. Axis gets rendered from the minimum value to the maximum value by default and can be inverted from the maximum value to the minimum value.
 
 {% tabs %}
-{% highlight dart hl_lines="18"%}
+{% highlight dart hl_lines="18" %}
 
     @override
     Widget build(BuildContext context) {
