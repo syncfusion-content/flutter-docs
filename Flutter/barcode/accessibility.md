@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfBarcodeGenerator` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to customize colors for all UI elements.
+The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to customize colors for all UI elements.
 
 You can customize colors for the following elements:
 * [Bar color](https://help.syncfusion.com/flutter/barcode/barcode-customization)
@@ -19,5 +19,5 @@ You can customize colors for the following elements:
 
 ## Large fonts
 
-The `SfBarcodeGenerator` automatically adjusts font size based on device settings and scales according to the `MediaQueryData.textScaleFactor`. It also allows you to change the font size of all text elements in the barcode generator.
+The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) automatically adjusts font size based on device settings and scales according to the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all text elements in the barcode generator.
 * [Input value of barcode](https://help.syncfusion.com/flutter/barcode/barcode-customization#text-customization)
