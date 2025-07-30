@@ -11,7 +11,7 @@ documentation: ug
 
 ## Screen reader support
 
-The `SfCalendar` can easily be accessed by screen readers. Please find the following table to get spoken feedback about the inner element contents of the screen.
+The [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). can easily be accessed by screen readers. Please find the following table to get spoken feedback about the inner element contents of the screen.
 
 ### Month view
 
@@ -54,7 +54,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 ## Sufficient contrast
 
-The `SfCalendar` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The following APIs allow you to customize the colors of the following elements.
 * [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
@@ -70,7 +70,7 @@ The following APIs allow you to customize the colors of the following elements.
 
 ## Large fonts
 
-The `SfCalendar` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all UI elements in the calendar.
+The [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all UI elements in the calendar.
 * [appointmentTextStyle](https://help.syncfusion.com/flutter/calendar/appointments#appearance-customization)
 * [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
 * [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
@@ -79,7 +79,7 @@ The `SfCalendar` font size can be adjusted automatically based on device setting
 
 ## Keyboard navigation
 
-The following keyboard interactions are supported by the `SfCalendar`.
+The following keyboard interactions are supported by the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 
 | Key               | Description                     														                                                                                                             |
