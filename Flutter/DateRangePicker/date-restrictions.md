@@ -124,7 +124,7 @@ In [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepick
 {% endtabs %}
 
 >**NOTE**
-* Applicable for year, decade and century views only when the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) set as false.
+* Applicable for year, decade and century views only when the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) set as `false`.
 * This callback is not applicable when the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) set as [DateRangePickerNavigationMode.scroll](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html#scroll). 
 
 ![selectable day predicate Range Picker](images/date-restrictions/selectableDayPredicate.jpg)
