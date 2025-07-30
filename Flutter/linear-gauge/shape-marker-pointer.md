@@ -363,3 +363,30 @@ The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gaug
   }
 
 {% endhighlight %}
+
+## Animation completed callback
+
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) callback in the [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) will be triggered when the shape pointer animation is completed. The default value of the [onAnimationCompleted](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onAnimationCompleted.html) callback is `null`.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            markerPointers:[
+              LinearShapePointer(
+                onAnimationCompleted: () {
+                  print("Shape Pointer animation is completed");
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
