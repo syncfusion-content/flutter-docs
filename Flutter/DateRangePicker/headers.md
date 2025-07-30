@@ -50,7 +50,8 @@ Widget build(BuildContext context) {
             fontSize: 25,
             letterSpacing: 5,
             color: Color(0xFFffeaea),
-          )),
+          ),
+      ),
     ),
   );
 }
