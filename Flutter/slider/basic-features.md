@@ -178,7 +178,7 @@ Widget build(BuildContext context) {
 
 **onChangeStart**
 
-The `onChangeStart` callback is called when the user begins to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the slider thumb.
+The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChangeStart.html) callback is called when the user begins to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -209,7 +209,7 @@ Widget build(BuildContext context) {
 
 **onChangeEnd**
 
-The `onChangeEnd` callback is called when the user stops to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the slider thumb.
+The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChangeEnd.html) callback is called when the user stops to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -432,7 +432,7 @@ Widget build(BuildContext context) {
 
 ![Inactive color support](images/basic-features/inactive-color.png)
 
-### Horizontal
+### Vertical
 
 {% tabs %}
 {% highlight Dart %}
