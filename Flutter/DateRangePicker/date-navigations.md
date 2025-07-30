@@ -76,7 +76,7 @@ class MyAppState extends State<MyApp> {
 
 ## Allow view navigation
 
-You can allow or restrict the built-in view navigation to any picker views by using the [enableViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
+You can allow or restrict the built-in view navigation to any picker views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
