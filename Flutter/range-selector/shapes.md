@@ -13,7 +13,7 @@ This section helps to learn about how to customize the shapes of the range selec
 
 ## Track shape
 
-You can change the size and shape of the track using the [`trackShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/trackShape.html) property in the `SfRangeSelector`.
+You can change the size and shape of the track using the [`trackShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/trackShape.html) property in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the track shape.
@@ -116,7 +116,7 @@ class _TrackShape extends SfTrackShape {
 
 ## Thumb shape
 
-You can change the size and shape of the thumb using the [`thumbShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/thumbShape.html) property in the `SfRangeSelector`.
+You can change the size and shape of the thumb using the [`thumbShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/thumbShape.html) property in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the thumb shape.
@@ -220,7 +220,7 @@ class _SfThumbShape extends SfThumbShape {
 
 ## Divider shape
 
-You can change the size and shape of the divider using the `dividerShape` property in the `SfRangeSelector`.
+You can change the size and shape of the divider using the [`dividerShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dividerShape.html) property in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the divider shape.
@@ -318,7 +318,7 @@ class _DividerShape extends SfDividerShape {
 
 ## Major and minor ticks shapes
 
-You can change the size and shape of the major and minor ticks using the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tickShape.html) and [`minorTickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/minorTickShape.html) properties in the `SfRangeSelector`.
+You can change the size and shape of the major and minor ticks using the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tickShape.html) and [`minorTickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/minorTickShape.html) properties in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the ticks shape.
