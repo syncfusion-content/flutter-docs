@@ -52,12 +52,12 @@ You can customize the header style of the [SfDateRangePicker](https://pub.dev/do
             fontStyle: FontStyle.normal,
             fontSize: 25,
             letterSpacing: 5,
-            color: Color(0xFFff5eaea),
+            color: Color(0xFFffeaea),
           ),
-        ),
       ),
-    );
-  }
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
