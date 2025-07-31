@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Cartesian Charts (SfCartesianChart)
 
-The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
+The selection feature in chart let you to select a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -131,9 +131,9 @@ You can customize the segments using the below properties.
 
 The selection features allows you to select segments in following modes using [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) property of chart.
 
-* [`SelectionType.Point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the individual data point.
-* [`SelectionType.Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the entire series.
-* [`SelectionType.Cluster`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html) - selects the cluster of points of different series i.e selects the points with same index in each series.
+* [`SelectionType.Point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html#point) - selects the individual data point.
+* [`SelectionType.Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html#series) - selects the entire series.
+* [`SelectionType.Cluster`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType.html#cluster) - selects the cluster of points of different series i.e selects the points with same index in each series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -149,34 +149,36 @@ The selection features allows you to select segments in following modes using [`
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-        ChartData('USA', 6, 8),
-        ChartData('China', 11, 7),
-        ChartData('UK', 9, 10),
-        ChartData('Japan', 14, 8),
-        ChartData('France', 10, 12),
+            ChartData('USA', 6, 8),
+            ChartData('China', 11, 7),
+            ChartData('UK', 9, 10),
+            ChartData('Japan', 14, 8),
+            ChartData('France', 10, 12),
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-        // Mode of selection
-        selectionType: SelectionType.cluster,
-        primaryXAxis: CategoryAxis(),
-        series: <CartesianSeries<ChartData, String>>[
-            ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                selectionBehavior: _selectionBehavior,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y),
-            ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                selectionBehavior: _selectionBehavior,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y1)],
-                 )
-              )
-           )
-       );
+                    // Mode of selection
+                    selectionType: SelectionType.cluster,
+                    primaryXAxis: CategoryAxis(),
+                    series: <CartesianSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                        dataSource: chartData,
+                        selectionBehavior: _selectionBehavior,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y
+                        ),
+                        ColumnSeries<ChartData, String>(
+                        dataSource: chartData,
+                        selectionBehavior: _selectionBehavior,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y1
+                        )],
+                    )
+                )
+            )
+        );
     }
 
     class ChartData {
@@ -243,7 +245,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/initialSelectedDataIndexes.html) property of the [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html).
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/initialSelectedDataIndexes.html) property of the [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html).
 
 {% tabs %}
 {% highlight dart %} 
@@ -304,7 +306,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 ## Toggle selection
 
-You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property `true` or `false`. If set to true, deselection will be performed else the point will not get deselected.
+You can decide, whether to deselect the selected data point/series or remain selected when interacted with again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property `true` or `false`. If set to true, deselection will be performed else the point will not get deselected.
 
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.

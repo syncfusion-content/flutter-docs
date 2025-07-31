@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in Flutter Cartesian Charts (SfCartesianChart)
 
-Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
+Chart supports annotations which, allows you to mark the specific area of interest in the chart area. You can add custom widgets using this annotations feature as depicted below.
 
 {% tabs %}
 {% highlight dart %} 
@@ -47,7 +47,7 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 ## Positioning the annotation
 
-The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units or percentage units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
+The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units or percentage units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values. When point is specified, the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
 
@@ -254,7 +254,7 @@ The following code example demonstrates how to set the [`horizontalAlignment`](h
 {% endhighlight %}
 {% endtabs %}
 
-## Adding multiple annotation
+## Adding multiple annotations
 
 You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/annotations.html) property as depicted in below code snippet.
 

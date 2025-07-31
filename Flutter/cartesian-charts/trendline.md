@@ -9,7 +9,7 @@ documentation: ug
 
 # Trendlines in Flutter Cartesian Charts (SfCartesianChart)
 
-Trendlines are used to show the direction and speed of price.
+Trendlines are used to show the direction and speed of price movement.
 
 Trendlines can be generated for the Cartesian type series (Line, Column, Scatter, Area, Candle, HiLo, etc.) except bar type series. You can add more than one trendline to a series.
 
@@ -22,7 +22,7 @@ You can use the following properties to customize the behavior and appearance of
 * [`forwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/forwardForecast.html) - used to specify the range of forward forecast for the trendline.
 * [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - used to provide the trendline intercept values
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) - used to determine the starting point for the trendline.
-* [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
+* [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) - used to provide the polynomial order for polynomial type trendlines.
 * [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
 * [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDelay.html) - Used to specify the delay duration of the trendline animation. This takes a millisecond value as input. By default, the trendline will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDelay.html) is specified, then the trendline will begin to animate after the specified duration.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - pattern of dashes and gaps used to stroke the trendline.
@@ -255,7 +255,7 @@ To render a power trendline, use trendline type as Power
 ![power trendline](images/trendline/power.png)
 
 ### Moving Average
-A moving average trendline smoothen out fluctuations in data to show a pattern or trend more clearly.
+A moving average trendline smooths out fluctuations in data to show a pattern or trend more clearly.
 
 To render a moving average trendline, use trendline type as MovingAverage 
 
@@ -275,7 +275,7 @@ To render a moving average trendline, use trendline type as MovingAverage
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
-                                type: TrendlineType.MovingAverage,
+                                type: TrendlineType.movingAverage,
                                 color: Colors.blue)
                                 ],
                             )
@@ -387,7 +387,7 @@ The value set for the backwardForecast is used to determine the past trends.
 {% endhighlight %}
 {% endtabs %}
 
-![forward forecast](images/trendline/backwardforecast.png)
+![backward forecast](images/trendline/backwardforecast.png)
 
 ## Legend for TrendLine
 
@@ -436,7 +436,7 @@ Legend for trendline gets rendered together with the series legend when the lege
 
 ## Markers
 
-Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/markerSettings.html) .
+Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point. Trendlines support markers that can be enabled using the property [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/markerSettings.html) .
 
 {% tabs %}
 {% highlight dart hl_lines="16" %}
@@ -480,7 +480,7 @@ Data markers are used to provide information about the data points in the series
 
 ## Tooltip for Trendline
 
-Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
+Chart will display details about the points through tooltip when user interaction occurs over the point. Trendline Tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}

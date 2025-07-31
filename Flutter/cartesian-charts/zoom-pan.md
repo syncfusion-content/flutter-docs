@@ -12,7 +12,7 @@ documentation: ug
 
 ## Pinch zooming
 
-Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to `false`. Pinching can be performed by moving two fingers over the chart.
+Pinch zooming can be enabled by setting the [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property to `true`. It defaults to `false`. Pinching can be performed by moving two fingers over the chart.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -96,7 +96,7 @@ The directional zooming feature improves the zoom experience by allowing users t
 
 ## Double tap zooming
 
-Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to `false`.
+Double tap zooming can be enabled by setting the [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property to `true`. It defaults to `false`.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -134,7 +134,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
 
 ## Selection zooming
 
-By specifying [`enableSelectionZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableSelectionZooming.html) property to true, you can long press and drag to select a range on the chart to be zoomed in.
+By setting the [`enableSelectionZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableSelectionZooming.html) property to true, you can long press and drag to select a range on the chart to be zoomed in.
 
 **Selection rectangle customization**
 
@@ -350,7 +350,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 Panning can be performed on a zoomed axis. You can pan the zoomed chart with [`enablePanning`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePanning.html) property. Defaults to `false`.
 
-If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#x) means you can only pan to the  horizontal direction, in case the [`zoomMode.y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#y) means you can pan only to the  vertical direction and [`zoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#xy) means you can pan to both horizontal and vertical directions on the chart.
+If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#x), you can only pan in the  horizontal direction, in case the [`zoomMode.y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#y), you can pan only in the vertical direction and [`zoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode.html#xy) means you can pan to both horizontal and vertical directions on the chart.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}  

@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Flutter Cartesian Charts (SfCartesianChart)
 
-The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html) contains list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
+The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html) contains a list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %} 
@@ -57,7 +57,6 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`padding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/padding.html) - used to add padding between the icon shape and the text.
 * [`iconHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconHeight.html) - used to change the height of the icon shape.
 * [`iconWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconWidth.html) - used to change the width of the icon shape.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/borderWidth.html) - used to change the stroke width of the legend icon shape.
 * [`iconBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconBorderColor.html) - used to change the stroke color of the legend icon shape.
 * [`itemPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/itemPadding.html) - used to add padding between the first legend text and the second legend icon shape.
 * [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/height.html) - the height of the legend.
@@ -369,7 +368,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
             child: SfCartesianChart(
               legend: Legend(
                 isVisible: true,
-                // Overflowing legend content will be wraped
+                // Overflowing legend content will be wrapped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
               series: <CartesianSeries<ChartData, int>>[
@@ -425,7 +424,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 ## Positioning the legend
 
-You can change the position of the legend inside the chart. The following properties can be used to customize the position of legend. auto position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
+You can change the position of the legend inside the chart. The following properties can be used to customize the position of legend. Auto position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html#auto).
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is auto. Also you can set [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html#horizontal) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html#vertical).
@@ -472,7 +471,7 @@ You can change the position of the legend inside the chart. The following proper
 ## Floating legend
 
 Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) is [`LegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html#top), then the legend will be placed in the top but in the position added to the actual top position. 
-Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
+Also, the legend will not take a dedicated position and will be drawn on top of the chart's plot area.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}

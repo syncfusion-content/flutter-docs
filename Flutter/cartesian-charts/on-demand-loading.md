@@ -18,9 +18,9 @@ To learn more about how to lazy load data while panning in Flutter Charts, you c
 
 ## Infinite scrolling
 
-The [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builds the widget at the top of the chart area (ex., loading indicator or load more button) when horizontal scrolling reaches the start or end of the chart and if the chart is transposed then, this will be called when the vertical scrolling reaches the top or bottom of the chart. this can be used to achieve the functionalities like infinite scrolling in the chart.
+The [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builds the widget at the top of the chart area (ex., loading indicator or load more button) when horizontal scrolling reaches the start or end of the chart and if the chart is transposed, then this will be called when the vertical scrolling reaches the top or bottom of the chart. This can be used to achieve functionalities like infinite scrolling in the chart.
 
-The below example demonstrates the infinite scrolling by showing the circular progress indicator until the data is loaded when horizontal scrolling reaches the end of the chart.
+The example below demonstrates the infinite scrolling by showing the circular progress indicator until the data is loaded when horizontal scrolling reaches the end of the chart.
 
 {% tabs %}
 {% highlight dart %}
