@@ -78,7 +78,7 @@ To change the chart rendering direction from right to left, you can change the [
 
 ### Legend
 
-Right to left rendering is effective for the legend in the chart. Legend items will be rendered from right to left direction. i.e. the legend text will appear on the left first, followed by the legend icon on the right.
+Right to left rendering is effective for the [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) in the chart. Legend items will be rendered from right to left direction. i.e. the legend text will appear on the left first, followed by the legend icon on the right.
 
 {% tabs %}
 {% highlight dart %}
