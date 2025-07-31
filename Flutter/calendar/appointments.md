@@ -53,21 +53,21 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ## Calendar data source and mapping
 
-`CalendarDataSource` is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar appointments in `CalendarDataSource`.
+[CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar appointments in [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [getStartTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html) | Maps the property name of custom class, which is equivalent for `startTime` of `Appointment`. |
-| [getEndTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html) | Maps the property name of custom class, which is equivalent for `endTime` of `Appointment`. |
-| [getStartTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html) | Maps the property name of custom class, which is equivalent for `startTimeZone` of `Appointment`. |
-| [getEndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html) | Maps the property name of custom class, which is equivalent for `endTimeZone` of `Appointment`. |
-| [getSubject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html) | Maps the property name of custom class, which is equivalent for `subject` of `Appointment`. |
-| [getColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html) | Maps the property name of custom class, which is equivalent for `color` of `Appointment`. |
-| [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html) | Maps the property name of custom class, which is equivalent for `isAllDay` of `Appointment`. |
-| [getRecurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html) | Maps the property name of custom class, which is equivalent for `recurrenceRule` of `Appointment`. |
-| [getNotes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html) | Maps the property name of custom class which is equivalent for `notes` of `Appointment`. |
+| [getStartTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html) | Maps the property name of custom class, which is equivalent for [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTime.html) of `Appointment`. |
+| [getEndTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html) | Maps the property name of custom class, which is equivalent for [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTime.html) of `Appointment`. |
+| [getStartTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html) | Maps the property name of custom class, which is equivalent for [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) of `Appointment`. |
+| [getEndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html) | Maps the property name of custom class, which is equivalent for [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) of `Appointment`. |
+| [getSubject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html) | Maps the property name of custom class, which is equivalent for [subject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/subject.html) of `Appointment`. |
+| [getColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html) | Maps the property name of custom class, which is equivalent for [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/color.html) of `Appointment`. |
+| [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html) | Maps the property name of custom class, which is equivalent for [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) of `Appointment`. |
+| [getRecurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html) | Maps the property name of custom class, which is equivalent for [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Appointment`. |
+| [getNotes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html) | Maps the property name of custom class which is equivalent for [notes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/notes.html)` of `Appointment`. |
 | [getLocation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html) | Maps the property name of custom class, which is equivalent for `location` of `Appointment`. |
-| [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent for `recurrenceExceptionDates` of `Appointment`. |
+| [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent for [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of `Appointment`. |
 
 >**NOTE**
 * Custom appointment class should contain two date time fields as mandatory.
@@ -119,7 +119,7 @@ class MeetingDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-You must call the notifier of the `CalendarDataSource` when the datasource collection is modified to reflect the changes on UI that is an appointment added to the datasource or removed from the datasource.
+You must call the notifier of the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) when the datasource collection is modified to reflect the changes on UI that is an appointment added to the datasource or removed from the datasource.
 
 {% tabs %}
 {% highlight Dart %}
@@ -273,7 +273,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-You can map those properties of `Meeting` class with our calendar widget by using the `CalendarDataSource` override methods properties.
+You can map those properties of `Meeting` class with our calendar widget by using the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) override methods properties.
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39 40" %}
@@ -322,7 +322,7 @@ class MeetingDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
+You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 24 25" %}
@@ -358,7 +358,7 @@ MeetingDataSource _getCalendarDataSource() {
 
 ## Get the business object data
 
-The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the `CalendarDataSource`.
+The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines=" 26 27 28 29 30 31 32 33 34 35" %}
@@ -473,7 +473,7 @@ Recurring appointment on a daily, weekly, monthly, or yearly interval. Recurring
 
 #### Recurrence rule
 
-The `recurrenceRule` is a string value (RRULE) that contains the details of the recurrence appointments such as repeat type - daily/weekly/monthly/yearly, how many times it needs to be repeated, the interval duration, also the time period to render the appointment, and more. The `recurrenceRule` has the following properties and based on this property value, the recurrence appointments are rendered in the SfCalendar widget with its respective time period.
+The [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) is a string value (RRULE) that contains the details of the recurrence appointments such as repeat type - daily/weekly/monthly/yearly, how many times it needs to be repeated, the interval duration, also the time period to render the appointment, and more. The [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) has the following properties and based on this property value, the recurrence appointments are rendered in the SfCalendar widget with its respective time period.
 
 | PropertyName | Purpose |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -488,7 +488,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 
 #### Adding recurrence appointment
 
-Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the `recurrenceRule` property of `Appointment`.
+Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="23" %}
@@ -548,7 +548,6 @@ To create recurring appointments on the last day of the month, use BYMONTHDAY=-1
           appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
     ));
   }
-}
 
 DataSource _getCalendarDataSource() {
   final List<Appointment> appointments = <Appointment>[];
@@ -574,7 +573,7 @@ class DataSource extends CalendarDataSource {
 
 #### Creating custom recurrence appointment
 
-For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and `recurrenceRule`.
+For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html).
 
 {% tabs %}
 {% highlight dart hl_lines="8 15" %}
@@ -599,7 +598,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-You can map those properties of `Meeting` class with our calendar widget by using `CalendarDataSource`.
+You can map those properties of `Meeting` class with our calendar widget by using [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="31 32 33 34" %}
@@ -643,7 +642,7 @@ class MeetingDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-You can schedule recurring meetings for daily, weekly, monthly, or yearly interval by setting `recurrenceRule` of `Meeting` class. Create meetings of type List <Meeting> and assign those appointments collection Meetings to the `appointments` property of `CalendarDataSource`.
+You can schedule recurring meetings for daily, weekly, monthly, or yearly interval by setting [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Meeting` class. Create meetings of type List <Meeting> and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -672,7 +671,7 @@ MeetingDataSource _getCalendarDataSource() {
       isAllDay: false,
       recurrenceRule: 'FREQ=WEEKLY;BYDAY=MO,WE,FR;INTERVAL=1;COUNT=10'));
   return MeetingDataSource(meetings);
-}}
+}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -766,7 +765,7 @@ List<DateTime> dateCollection = SfCalendar.getRecurrenceDateTimeCollection(
 The following occurrence dates can be retrieved from the given RRULE:
 var date0 = 3/15/2019;
 var date1 = 3/16/2019;
-var date2 = 3/16/2019;
+var date2 = 3/17/2019;
 
 ## Recurrence pattern exceptions
 
@@ -778,7 +777,7 @@ You can delete any occurrence appointment, which exception from the recurrence p
 
 #### Recurrence exception appointment
 
-You can also change any occurrence appointment, which exception from recurrence pattern appointment by adding the recurrence exception appointment to the calendar `dataSource`.
+You can also change any occurrence appointment, which exception from recurrence pattern appointment by adding the recurrence exception appointment to the calendar [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html).
 
 #### Create recurrence exceptions for calendar appointment
 
@@ -786,7 +785,7 @@ You can add the recurrence exception appointments and recurrence exception dates
 
 #### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
+You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
 {% tabs %}
 {% highlight dart hl_lines="25" %}
@@ -836,12 +835,12 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 #### Create recurrence exceptions for custom appointment
 
-You can add the recurrence exception appointments and recurrence exception dates to the CustomAppointment or remove them from CustomAppointment, you can create a custom class `Meeting` with mandatory field `RecurrenceExceptionDates`.
+You can add the recurrence exception appointments and recurrence exception dates to the CustomAppointment or remove them from CustomAppointment, you can create a custom class `Meeting` with mandatory field [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html).
 
 #### Delete occurrence from custom recurrence pattern appointment or adding exception dates to custom recurrence pattern appointment
 
-You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the `getRecurrenceExceptionDates` override method of `CalendarDataSource`, which is used to map the exception dates to the calendar recurrence appointment. The deleted occurrence date will be considered as recurrence exception dates.
-To add the exception dates in the recurrence series of custom appointment, add the `recurrenceExceptionDates` property to custom class Meeting.
+You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) override method of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which is used to map the exception dates to the calendar recurrence appointment. The deleted occurrence date will be considered as recurrence exception dates.
+To add the exception dates in the recurrence series of custom appointment, add the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property to custom class Meeting.
 
 {% tabs %}
 {% highlight dart hl_lines="18 26 66 67 68 69" %}
@@ -944,7 +943,7 @@ class Meeting {
 
 #### Add exception appointment to the recurrence series
 
-Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceId.html) of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/id.html). We can get the type of appointment from the [appointmentType](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/appointmentType.html) property. 
+Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the [dateSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceId.html) of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/id.html). We can get the type of appointment from the [appointmentType](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/appointmentType.html) property. 
 
 {% tabs %}
 {% highlight dart hl_lines="16 25 27 29 30 31 32 33 34 35 37" %}

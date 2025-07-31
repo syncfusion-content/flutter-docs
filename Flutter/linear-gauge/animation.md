@@ -113,8 +113,3 @@ Both the shape and widget marker pointers have the same set of properties and be
 ### Marker pointer with `bounceOut` animation
 
 ![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
-
-
-
-
-

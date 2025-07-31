@@ -16,48 +16,46 @@ The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _data;
-late MapShapeSource _dataSource;
-late String _semanticLabel = 'Asia is the most populated continent and Australia is the least populated continent';
+  late List<PopulationModel> _data;
+  late MapShapeSource _dataSource;
+  late String _semanticLabel = 'Asia is the most populated continent and Australia is the least populated continent';
 
-@override
-void initState() {
-   _data = const <PopulationModel>[
-      PopulationModel('Asia', 456.07),
-      PopulationModel('Africa', 121.61),
-      PopulationModel('Europe', 74.64),
-      PopulationModel('North America', 57.9),
-      PopulationModel('South America', 42.25),
-      PopulationModel('Australia', 2.54),
-   ];
+  @override
+  void initState() {
+    _data = const <PopulationModel>[
+        PopulationModel('Asia', 456.07),
+        PopulationModel('Africa', 121.61),
+        PopulationModel('Europe', 74.64),
+        PopulationModel('North America', 57.9),
+        PopulationModel('South America', 42.25),
+        PopulationModel('Australia', 2.54),
+    ];
 
-   _dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-      dataCount: _data.length,
-      primaryValueMapper: (int index) => _data[index].continent,
-   );
-   super.initState();
-}
+    _dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'continent',
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].continent,
+    );
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
         child: Semantics(
           label: 'Syncfusion Flutter Maps',
           value: _semanticLabel,
           child: SfMaps(
             layers: <MapLayer>[
-              MapShapeLayer(
-                source: _dataSource,
-              ),
-            ],
+              MapShapeLayer(source: _dataSource)
+            ]
           ),
         ),
       ),
-   );
-}
+    );
+  }
 
 class PopulationModel {
   const PopulationModel(this.continent, this.populationInCrores);

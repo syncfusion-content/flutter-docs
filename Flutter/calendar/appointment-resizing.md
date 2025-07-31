@@ -42,7 +42,7 @@ Widget build(BuildContext context) {
 
 ## onAppointmentResizeStart
 
-[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback is called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
+[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback is called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails-class.html) arguments contains the resizing appointment, and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/appointment.html) - Get the resizing appointment details.
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/resource.html) - Get the resource details.

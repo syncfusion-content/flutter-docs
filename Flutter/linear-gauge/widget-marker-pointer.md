@@ -126,7 +126,7 @@ In addition to position the widget marker pointer, it is also possible to change
 
 ## Drag behavior
 
-You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
+You can drag the pointers freely to any position when adding multiple pointers by setting the [`dragBehavior`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/dragBehavior.html) property to `LinearMarkerDragBehavior.free`.
 
 The `LinearMarkerDragBehavior.constrained` can be used to limit the active pointer dragging beyond the other pointers.
 
@@ -218,7 +218,7 @@ The `LinearMarkerDragBehavior.constrained` can be used to limit the active point
 
 ## Handle onChangeStart, onChanged, and onChangeEnd callbacks
 
-The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) provides the `onChangeStart`, `onChanged`, and `onChangeEnd` callbacks. The `onChangeStart` callback will be called when the user start dragging the pointer, the `onChanged` callback will be called when dragging the pointer and the `onChangeEnd` callback will be called when the user stops the pointer dragging.
+The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) provides the [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChangeStart.html), [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChanged.html), and [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChangeEnd.html) callbacks. The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChangeStart.html) callback will be called when the user start dragging the pointer, the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChanged.html) callback will be called when dragging the pointer and the [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onChangeEnd.html) callback will be called when the user stops the pointer dragging.
 
 {% highlight dart %}
 
@@ -245,6 +245,33 @@ The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gau
             child: Container(height: 14, width: 14, color: Colors.redAccent),
           ),
         ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+## Animation completed callback
+
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onAnimationCompleted.html) callback in the [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) will be triggered when the widget pointer animation is completed. The default value of the [onAnimationCompleted](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/onAnimationCompleted.html) callback is `null`.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            markerPointers:[
+              LinearWidgetPointer(
+                onAnimationCompleted: () {
+                  print("Widget Pointer animation is completed");
+                },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

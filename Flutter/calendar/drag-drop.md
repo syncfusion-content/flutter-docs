@@ -155,7 +155,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 
 ## Disabling navigation when dragging appointment
 
-You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of `DragAndDropSettings`. Default value of `allowNavigation` property is true.
+You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings-class.html). Default value of [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property is true.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
