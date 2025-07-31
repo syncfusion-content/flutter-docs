@@ -15,8 +15,8 @@ Chart renders based on the parent widget's size. If you need the chart to be ren
 
 You can also customize the following properties:
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/backgroundColor.html) - used to change the background color of the chart.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - used to change the border width.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - used to change the color of the chart border.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - used to change the border width.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/borderColor.html) - used to change the color of the chart border.
  
 {% tabs %}
 {% highlight dart hl_lines="8 10" %} 

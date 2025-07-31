@@ -1298,7 +1298,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/text.html) - specifies the multi-level label to be rendered.
 * [`actualLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/actualLevel.html) - specifies the re-ordered level value of the current multi-level label.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/axisName.html) - specifies the axis name.
-* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/multiLevelLabels.html) property.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
 
 {% tabs %}
