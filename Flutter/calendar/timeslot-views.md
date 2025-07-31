@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
 
 ## Change time interval height
 
-You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
+You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
 
 ## Change time interval width
 
-You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of `TimeSlotViewSettings`.
+You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -94,9 +94,9 @@ Widget build(BuildContext context) {
 
 ## Flexible working days and working hours
 
-The default values for [startHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/startHour.html) and [endHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/endHour.html) are 0 and 24 to show all the time slots in time slot views. You can set the `startHour` and `endHour` properties of `timeSlotViewSettings` to show only the required time duration for users. You can set `startHour` and `endHour` in time duration to show the required time duration in minutes.
+The default values for [startHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/startHour.html) and [endHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/endHour.html) are 0 and 24 to show all the time slots in time slot views. You can set the `startHour` and `endHour` properties of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/) to show only the required time duration for users. You can set `startHour` and `endHour` in time duration to show the required time duration in minutes.
 
-You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of `timeSlotViewSettings` to show only the required days for the users.
+You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/) to show only the required days for the users.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8 9" %}
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
 >**NOTE**
-* The `nonWorkingDays` property is applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
+* The [nonWorkingDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property is applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
 * Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
 * No need to specify the decimal point values for `startHour` and `endHour`, if you don’t want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
@@ -127,7 +127,7 @@ Widget build(BuildContext context) {
 * If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
 
 ## Number of days in view
-You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of `timeSlotViewSettings` in the calendar.
+You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/) in the calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -152,7 +152,7 @@ You can customize the days count by setting the [numberOfDaysInView](https://pub
 * It is applicable for day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 ## Special time regions
-You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialRegions](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/specialRegions.html) property of `SfCalendar`. You need to set the [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/startTime.html) and [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/endTime.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) to create a `specialTimeRegion`, you can use the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/timeZone.html) property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) or [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) property of `TimeRegion`.
+You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialRegions](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/specialRegions.html) property of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). You need to set the [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/startTime.html) and [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/endTime.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) to create a `specialTimeRegion`, you can use the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/timeZone.html) property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) or [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html).
 
 ![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
 
@@ -161,7 +161,7 @@ You can restrict the user interaction such as selection and highlights specific 
 * The `TimeRegion` is not applicable, when the calendar view is set to `timelineMonth`.
 
 ### Selection restriction in timeslots
-You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
+You can enable or disable the touch interaction of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html). By default, its value is true.
 
 {% tabs %}
 {% highlight dart hl_lines="6 11 12 13 14 15 16 17 18 20 21" %}
@@ -197,7 +197,7 @@ You can enable or disable the touch interaction of `TimeRegion` using the [enabl
 This property only restricts the interaction on region and it does not restrict the following:
 * Programmatic selection (if the user updates the selected date value dynamically)
 * Does not clear the selection when the user selects the region and dynamically change
-the `enablePointerInteraction` property to false
+the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property to false
 * It does not restrict appointment interaction when the appointment placed
 in the region
 * It does not restrict the appointment rendering on a region, when appointments are loaded from data services or adding programmatically.
@@ -205,7 +205,7 @@ in the region
 
 ### Recurring time region
 
-The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in `TimeRegion`.
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="17" %}
@@ -242,7 +242,7 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
 ### Recurrence exception dates
-You can delete any occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
+You can delete any occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html). The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -278,7 +278,7 @@ You can delete any occurrence that is an exception from the recurrence pattern t
 ![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
 
 ### Special time region customization
-The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of `TimeRegion` that is used to customize the text style for the `text` and `iconData` of the `specialTimeRegion`.
+The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) that is used to customize the text style for the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) and [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) of the `specialTimeRegion`.
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19" %}
@@ -314,7 +314,7 @@ The `specialTimeRegion` background color can be customized by using the [color](
 
 ## Full screen calendar
 
-The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
+The calendar time interval height and width can be adjusted based on the screen height by changing the value of the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) and [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -338,7 +338,7 @@ Widget build(BuildContext context) {
 
 ## Change time ruler size
 
-You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of `TimeSlotViewSettings`.
+You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -411,7 +411,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 ![Minimum appointment duration](images/timeslot-views/minimum-appointment-height.png)
 
 >**NOTE**
-* `minimumAppointmentDuration` value will be set, when an appointment duration value is lesser than `minimumAppointmentDuration`.
+* [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/minimumAppointmentDuration.html) value will be set, when an appointment duration value is lesser than `minimumAppointmentDuration`.
 * Appointment duration value will be set, when the appointment duration value is greater than `minimumAppointmentDuration`.
 * `timeInterval` value will be set, when `minimumAppointmentDuration` greater than `timeInterval` with lesser appointment duration.
 * All day Appointment does not support `minimumAppointmentDuration`.
@@ -419,7 +419,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ## Timeline appointment height
 
-You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of `TimeSlotViewSettings`.
+You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -446,7 +446,7 @@ Widget build(BuildContext context) {
 
 ## View header text formatting
 
-You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of `TimeSlotViewSettings`.
+You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -472,7 +472,7 @@ Widget build(BuildContext context) {
 ![View header text formatting](images/timeslot-views/viewheader-text-format.png)
 
 ## Time text formatting
-You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
+You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -499,7 +499,7 @@ Widget build(BuildContext context) {
 
 ## Time text appearance
 
-You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of `timeSlotViewSettings` in calendar.
+You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11 12 13 14" %}
@@ -530,7 +530,7 @@ Widget build(BuildContext context) {
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
 
 ## All day panel background color
-All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of `timeSlotViewSettings` in the calendar.
+All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in the calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="9 " %}

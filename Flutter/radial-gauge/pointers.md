@@ -136,4 +136,47 @@ Pointers can be dragged over the scale to change their values interactively. Thi
 
 {% endhighlight %}
 
+The [`onCreatePointerRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/onCreatePointerRenderer.html) callback allows you to create a custom pointer in the radial gauge. This callback is available for both the [`NeedlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) or [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) types.
 
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              pointers: <GaugePointer>[
+                MarkerPointer(
+                  value: 70,
+                  onCreatePointerRenderer: () {
+                    return _CustomPointerRenderer();
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  class _CustomPointerRenderer extends MarkerPointerRenderer {
+    @override
+    void drawPointer(
+      Canvas canvas,
+      PointerPaintingDetails pointerPaintingDetails,
+      SfGaugeThemeData gaugeThemeData,
+    ) {
+      canvas.drawCircle(
+        pointerPaintingDetails.startOffset,
+        10,
+        Paint()..color = Colors.red,
+      );
+    }
+  }
+
+{% endhighlight %}
+
+![create pointer callback](images/pointers/on-create-pointer-renderer.png)

@@ -741,7 +741,7 @@ You can apply color to the inverted circle by initializing the [`MapCircleLayer.
 You can customize the inverted circle using the following properties:
 
 * **Stroke color** - Change the stroke color of the circle using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeColor.html) property.
-* **Stroke width** - Change the stroke width of the circle using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property. The default value of the `strokeWidth` property is `1`.
+* **Stroke width** - Change the stroke width of the circle using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property. The default value of the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property is `1`.
 * **Overlay color** - Change the outer portion color of the circle using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/color.html) property.
 * **Tooltip** - Enable tooltip for the inverted circle using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 * **Animation** - Apply animation to the inverted circle using the [`animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) property and customize the animation curve and duration.
