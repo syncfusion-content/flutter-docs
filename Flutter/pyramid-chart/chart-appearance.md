@@ -11,7 +11,7 @@ documentation: ug
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
+The chart renders based on the parent widget's size. If you need the chart to be rendered in a specific size, then set the size(width/height) to the parent widget.
 
 {% tabs %}
 {% highlight dart hl_lines="13 14" %} 

@@ -11,10 +11,10 @@ documentation: ug
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
+Chart renders based on the parent widget's size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
 
 {% tabs %}
-{% highlight dart hl_lines="13 14" %} 
+{% highlight dart hl_lines="7 8" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/margin.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %} 
+{% highlight dart hl_lines="20" %} 
 
     @override
       Widget build(BuildContext context) {

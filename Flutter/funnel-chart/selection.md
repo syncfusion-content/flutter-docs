@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Funnel Chart (SfFunnelChart)
 
-The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
+The selection feature in chart lets you to select a segment in a series or the series itself. This feature allows you to select either individual or clusters of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -126,7 +126,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/initialSelectedDataIndexes.html) property of chart.
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/initialSelectedDataIndexes.html) property of chart.
 
 {% tabs %}
 {% highlight dart %} 
@@ -151,7 +151,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 ## Toggle selection
 
-You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property true or false. If set to true, deselection will be performed else the point will not get deselected.
+You can decide whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property true or false. If set to true, deselection will be performed else the point will not get deselected.
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
@@ -186,7 +186,7 @@ Defaults to `true`.
 {% endhighlight %}
 {% endtabs %}
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [selection event](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onselectionchanged) for customizing the selection further.
 
 ## Methods in SelectionBehavior
 
@@ -195,9 +195,9 @@ Also refer [selection event](./events#onselectionchanged) for customizing the se
 The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectDataPoints.html) method is used to select the data point programmatically. The required arguments are listed below.
 
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - index of the point which needs to be selected.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
 
->**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
+>**Note**: The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but it is based on the API values specified in the chart.
 
 {% tabs %}
 {% highlight dart %}
