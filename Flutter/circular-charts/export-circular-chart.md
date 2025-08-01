@@ -13,7 +13,7 @@ documentation: ug
 
 ## Export image
 
-To export the circular chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
+To export the circular chart as a PNG image, we can get the image by calling [`toImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChartState/toImage.html) method in repaint boundary.
 
 {% tabs %}
 {% highlight dart %}
