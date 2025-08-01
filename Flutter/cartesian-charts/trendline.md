@@ -9,7 +9,7 @@ documentation: ug
 
 # Trendlines in Flutter Cartesian Charts (SfCartesianChart)
 
-Trendlines are used to show the direction and speed of price movement.
+Trendlines are used to show the direction and speed of price.
 
 Trendlines can be generated for the Cartesian type series (Line, Column, Scatter, Area, Candle, HiLo, etc.) except bar type series. You can add more than one trendline to a series.
 

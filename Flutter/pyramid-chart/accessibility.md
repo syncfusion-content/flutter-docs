@@ -25,7 +25,7 @@ The customization of colors can be done for the following chart elements.
 
 ## Large fonts
 
-The [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html)  font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in the Pyramid chart.
+The [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html)  font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in the Pyramid chart.
 * [Chart title](https://help.syncfusion.com/flutter/pyramid-chart/chart-title)
 * [Data label](https://help.syncfusion.com/flutter/pyramid-chart/datalabel)
 * [Legend title](https://help.syncfusion.com/flutter/pyramid-chart/legend#legend-title)

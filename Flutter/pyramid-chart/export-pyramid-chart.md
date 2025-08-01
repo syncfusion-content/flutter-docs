@@ -13,7 +13,7 @@ documentation: ug
 
 ## Export image
 
-To export the pyramid chart as a PNG image, you can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
+To export the pyramid chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
 
 {% tabs %}
 {% highlight dart %} 
@@ -122,7 +122,7 @@ To export the pyramid chart as a PNG image, you can get the image by calling [`t
 
 ### Export PDF
 
-Similar to the above method, we can also export the rendered Pyramid chart as a PDF document. You create the PDF document using PDF component. This can be done at the application level itself. Please find the code snippet below.
+Similar to the above way, we can also export the rendered Pyramid chart as a PDF document. We create the PDF document using PDF component. This can be done in the application level itself. Please find the code snippet below.
 
 **Add dependency**
 
