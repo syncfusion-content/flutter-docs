@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
-To get start quickly with our Flutter chart widget, you can check out this video.
+To get started quickly with our Flutter chart widget, you can check out this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/t3Dczqj8-10'></iframe>
@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. The SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -81,11 +81,11 @@ Once the package has been imported, initialize the chart as a child of any widge
 {% endhighlight %}
 {% endtabs %}
 
-_note_ : An empty chart will be displayed.This is charts default behavior. 
+_note_ : An empty chart will be displayed. This is charts default behavior. 
 
 ## Bind data source
 
-Based on your data, initialize the series type. In the series, you need to map the data source and the fields for x and y data points. Here, pyramid series is rendered that is demonstrated in the following code snippet.
+Based on your data, initialize the series type. In the series, you need to map the data source and the fields for x and y data points. Here, a pyramid series is rendered as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -193,7 +193,7 @@ The legend provides information about the series rendered in the chart.
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}  
+{% highlight dart hl_lines="8" %}  
 
     @override
     Widget build(BuildContext context) {

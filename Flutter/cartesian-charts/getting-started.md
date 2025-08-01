@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
-To get start quickly with our Flutter chart widget, you can check out this video.
+To get started quickly with our Flutter chart widget, you can check out this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/JAAnmOfoqg8'></iframe>
@@ -65,7 +65,7 @@ Import the following package in your Dart code.
 Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
 {% tabs %}
-{% highlight dart hl_lines="2 7" %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -192,7 +192,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property.
+You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html) property.
 
 {% tabs %}
 {% highlight dart %} 
