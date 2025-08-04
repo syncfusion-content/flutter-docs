@@ -376,7 +376,7 @@ The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_ga
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-            barPointer:[
+            barPointers:[
               LinearBarPointer(
                 onAnimationCompleted: () {
                   print("Bar Pointer animation is completed");
