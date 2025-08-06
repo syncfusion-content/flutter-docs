@@ -44,7 +44,7 @@ See the links below for the recommended Flutter development environments:
     </tr>
     <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.29.0-stable.zip">3.32.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.32.0-stable.zip">3.32.0</a>
         </td>
         <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/30.1.37">30.1.37</a> <30.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
         </td>
