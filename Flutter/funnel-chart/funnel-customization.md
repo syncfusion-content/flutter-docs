@@ -11,10 +11,10 @@ documentation: ug
 
 To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). The following properties are used to customize the appearance of a funnel segment:
 
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/opacity.html) - controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderWidth.html) - changes the stroke width of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderColor.html) - changes the stroke color of the series.
-* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/pointColorMapper.html) - Maps the color from data source.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) - Maps the color from data source.
 
 {% tabs %}
 {% highlight dart %} 

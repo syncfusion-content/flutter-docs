@@ -156,7 +156,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onSelectionChanged.html) Callback contains the following arguments.
 
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current series index.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
 * [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedColor.html) - specifies color of the unselected data points or series.
@@ -204,7 +204,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelTapped.html) Callback contains the following arguments.
 
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
@@ -237,7 +237,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointTap.html) callback contains the following arguments.
+Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -268,7 +268,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointDoubleTap.html) callback contains the following arguments.
+Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointDoubleTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -299,7 +299,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointLongPress.html) callback contains the following arguments.
+Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointLongPress.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -395,7 +395,7 @@ Triggers when touched or clicked on the chart area. You can get the tapped regio
 
 ## onRendererCreated
 
-Triggers when the series renderer is created. This callback can be used to obtain the [`FunnelSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController-class.html) instance, which is used to access the the public methods in the series.
+Triggers when the series renderer is created. This callback can be used to obtain the [`FunnelSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController-class.html) instance, which is used to access the public methods in the series.
 
 {% tabs %}
 {% highlight dart %}
@@ -434,7 +434,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
                 chartData.removeAt(0);
                 //Added a point to the data source
                 chartData.add(ChartData(3, 23));
-                //Here accessed the public method of the series.
+                //Here we accessed the public method of the series.
                 funnelSeriesController!.updateDataSource(
                   addedDataIndexes: <int>[chartData.length - 1],
                   removedDataIndexes: <int>[0],

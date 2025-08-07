@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Flutter Pyramid Chart (SfPyramidChart)
 
-The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
+The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains a list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %} 
@@ -51,7 +51,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ## Customizing legend 
 
-The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/name.html) property of [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html) is used to define the label for the corresponding series legend item and for [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html) type chart by default values mapped with [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/xValueMapper.html) will be displayed. The appearance of the label can be customized using the below properties.
+The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property of [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html) is used to define the label for the corresponding series legend item and for [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html) type chart by default values mapped with [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/xValueMapper.html) will be displayed. The appearance of the label can be customized using the below properties.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/borderWidth.html) - used to change the stroke width of the legend shape.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/borderColor.html) - used to change the stroke color of the legend shape.
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/backgroundColor.html) - used to change the background color of legend shape.
@@ -213,7 +213,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ## Legend overflow
 
-The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`LegendItemOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode.html).
+The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`LegendItemOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode.html#scroll).
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
@@ -251,8 +251,8 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 You can change the position of the legend inside the chart. The following properties are used to customize the position of legend. **auto** position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html).
-* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is [`LegendItemOrientation.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html). Also you can set [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html).
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html#auto).
+* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is [`LegendItemOrientation.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html#auto). Also you can set [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html#horizontal) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html#vertical).
 
 {% tabs %}
 {% highlight dart hl_lines="11" %} 

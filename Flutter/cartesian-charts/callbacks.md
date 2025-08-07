@@ -9,7 +9,7 @@ documentation: ug
 
 # Callbacks in Flutter Cartesian Charts (SfCartesianChart)
 
-The below Callbacks are for Cartesian chart.
+This document describes the callbacks available for the Cartesian chart
 
 ## onTooltipRender
 
@@ -431,7 +431,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html) callback contains the following arguments.
+Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -464,7 +464,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) callback contains the following arguments.
+Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointDoubleTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -497,7 +497,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) callback contains the following arguments.
+Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointLongPress.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -649,7 +649,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
  
 Triggers when the indicator is rendering. Here you can customize the name, calculated data points, signal line color, signal line width, signal line dash array, and so on.
  
-The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/onRenderDetailsUpdate.html) contains following arguments.
+The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/onRenderDetailsUpdate.html) contains following arguments.
 
 * [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/name.html) - used to get and set the indicator name.
 * [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/calculatedDataPoints.html) - used to get the calculated indicator data points details.
@@ -797,14 +797,14 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 ## onRendererCreated (Axis)
 
-Triggers when the axis renderer is created and attached to its parent. It can be used to obtain the axis-wise [AxisController] which has the current visible range details and provides an option to change the visible range programmatically. Here, you can customize the following properties.
+Triggers when the axis renderer is created and attached to its parent. It can be used to obtain the axis-wise [ChartAxisController](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisController-class.html) which has the current visible range details and provides an option to change the visible range programmatically. Here, you can customize the following properties.
 
-* [`visibleMinimum`] - to gets and sets the visible minimum of the axis.
-* [`visibleMaximum`] - to gets and sets the visible maximum of the axis.
-* [`zoomFactor`] - to gets and sets the zoom factor of the axis.
-* [`zoomPosition`] - to gets and sets the zoom position of the axis.
-* [`previousZoomFactor`] - to gets the previous zoom factor of the axis.
-* [`previousZoomPosition`] - to gets the previous zoom position of the axis.
+* `visibleMinimum` - to gets and sets the visible minimum of the axis.
+* `visibleMaximum` - to gets and sets the visible maximum of the axis.
+* `zoomFactor` - to gets and sets the zoom factor of the axis.
+* `zoomPosition` - to gets and sets the zoom position of the axis.
+* `previousZoomFactor` - to gets the previous zoom factor of the axis.
+* `previousZoomPosition` - to gets the previous zoom position of the axis.
 
 {% tabs %}
 {% highlight dart %}
@@ -1011,13 +1011,13 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 ## onPlotAreaSwipe
 
-Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html#start) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html#end). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
 
 {% tabs %}
 {% highlight dart %}
 
     //Initialize the series controller
-    ChartSeriesController? SeriesController;
+    ChartSeriesController? seriesController;
     
     @override
     Widget build(BuildContext context) {
@@ -1298,7 +1298,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/text.html) - specifies the multi-level label to be rendered.
 * [`actualLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/actualLevel.html) - specifies the re-ordered level value of the current multi-level label.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/axisName.html) - specifies the axis name.
-* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/multiLevelLabels.html) property.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
 
 {% tabs %}

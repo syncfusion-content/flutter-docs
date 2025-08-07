@@ -9,9 +9,9 @@ documentation: ug
 
 # Chart title in Flutter Cartesian Charts (SfCartesianChart)
 
-You can define and customize the Chart title using [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the text for the title. 
+You can define and customize the Chart title using the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the text for the title. 
 
-Following properties can be used to customize its appearance.
+The following properties can be used to customize its appearance.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/backgroundColor.html) - used to change the background color.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderColor.html) - used to change the border color.
@@ -63,7 +63,7 @@ You can align the title text content horizontally to the near, center or far of 
                       ChartData('Apr', 32),
                       ChartData('May', 40)
                     ],
-                    xValueMapper: (ChartData data, _) =>   data.x,
+                    xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
                   )
                 ]
