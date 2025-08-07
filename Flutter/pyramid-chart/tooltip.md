@@ -167,7 +167,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 ## Tooltip positioning
 
-The tooltip can be configured to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html#auto).
+The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html#auto).
 
 {% tabs %}
 {% highlight dart %} 
@@ -259,8 +259,8 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The ActivationMode enum includes the following values:
 
-* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html) - activates tooltip only when performing the long press action.
-* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates tooltip only when performing single tap action.
+* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates tooltip only when performing the long press action.
+* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap) - activates tooltip only when performing single tap action.
 * [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#doubleTap) - activates tooltip only when performing double tap action.
 * [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the visibility of tooltip when setting activation mode to none.
 

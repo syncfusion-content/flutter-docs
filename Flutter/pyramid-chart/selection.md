@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Pyramid Chart (SfPyramidChart)
 
-The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you select either individual or cluster of segments in the chart series.
+The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -99,7 +99,7 @@ You can customize the segments using the below properties.
 
 ## Multi-selection
 
-Multiple segment selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) property of chart.
+Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/enableMultiSelection.html) property of chart.
 
 {% tabs %}
 {% highlight dart %} 

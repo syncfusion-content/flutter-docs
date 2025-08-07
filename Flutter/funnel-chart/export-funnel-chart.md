@@ -122,7 +122,7 @@ To export the funnel chart as a PNG image, we can get the image by calling [`toI
 
 ## Export PDF
 
-Similar to the above method, we can also export the rendered Funnel chart as a PDF document. We create the pdf document using PDF component. This can be done at the application level itself. Please find the code snippet below.
+Similar to the above way, we can also export the rendered Funnel chart as a PDF document. We create the PDF document using PDF component. This can be done in the application level itself. Please find the code snippet below.
 
 **Add dependency**
 
