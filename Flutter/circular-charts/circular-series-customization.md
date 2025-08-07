@@ -11,7 +11,7 @@ documentation: ug
 
 ## Animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %} 
@@ -43,7 +43,7 @@ documentation: ug
 
 ### Animation delay
 
-The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
+The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
 {% tabs %}
 {% highlight dart hl_lines="17" %}
@@ -84,7 +84,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Dynamic animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animate by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animate by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) value to 0, the series won't be animated. 
 
 
 ## Color Palette
@@ -124,7 +124,7 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ## Color mapping for data points   
 
-The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property is used to map the color field from the data source. 
+The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
 {% tabs %}
 {% highlight dart %} 
@@ -171,7 +171,7 @@ the data points and legend.
 
 ### Gradient fill
 
-The data points of pie, doughnut and radial bar charts can be filled with three types of [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) such as [`Gradient.linear`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.linear.html), [`Gradient.sweep`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html) and [`Gradient.radial`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.radial.html). All the data points in the circular chart are together considered as a single segment and the shader is applied commonly.
+The data points of pie, doughnut and radial bar charts can be filled with three types of [`Gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) such as [`Gradient.linear`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.linear.html), [`Gradient.sweep`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.sweep.html) and [`Gradient.radial`](https://api.flutter.dev/flutter/dart-ui/Gradient/Gradient.radial.html). All the data points in the circular chart are together considered as a single segment and the shader is applied commonly.
 
 #### Linear gradient
 
@@ -354,7 +354,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 ## Shader mapping for data points
 
-The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
+The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`Gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
 {% tabs %}
 {% highlight dart %}
@@ -504,9 +504,9 @@ The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
 
 The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) property is used to define the painting mode for the data points. The data points in the pie and doughnut chart can be filled either with solid colors or with sweep gradient by using this property. This property is not applicable for [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html).
 
-* If [`PointRenderMode.segment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointRenderMode.html) is specified, the data points are filled with solid colors from the palette or with the colors mentioned in [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property.
+* If [`PointRenderMode.segment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointRenderMode.html#segment) is specified, the data points are filled with solid colors from the palette or with the colors mentioned in [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property.
 
-*  If [`PointRenderMode.gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointRenderMode.html) is specified, a sweep gradient is formed with the solid colors and fills the data points.
+*  If [`PointRenderMode.gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointRenderMode.html#gradient) is specified, a sweep gradient is formed with the solid colors and fills the data points.
 
 >**Note**: This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
@@ -539,7 +539,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Empty points
 
-The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html).
+The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#gap), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#zero), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#drop) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#average). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#gap).
 
 {% tabs %}
 {% highlight dart %} 
@@ -579,7 +579,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 ### Empty point customization
 
-Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
+Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
 {% tabs %}
 {% highlight dart %} 
@@ -621,7 +621,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 ## Sorting
 
-The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) property specifies the data points in the series can be sorted in [`SortingOrder.ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) or [`SortingOrder.descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortingOrder.html) is set to [`SortingOrder.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
+The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/sortingOrder.html) property specifies the data points in the series can be sorted in [`SortingOrder.ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html#ascending) or [`SortingOrder.descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html#descending) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/sortingOrder.html) is set to [`SortingOrder.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder.html#none). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
 
 {% tabs %}
 {% highlight dart %} 
