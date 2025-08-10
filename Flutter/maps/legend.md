@@ -818,6 +818,189 @@ class Model {
 N>
 * Refer to [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for setting the size of the icon.
 
+## Scrollbar for legend
+
+<b>For default legend</b>
+
+You can scroll the legend items using the [`MapLegendOverflowMode.scroll`]() property. Basically, the scrollbar is not visible. Now using this [`shouldAlwaysShowScrollbar`] boolean property to make it visible. The possible values are `true` and `false`.
+
+If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
+
+If the legend position is `top` or `bottom`, then the default scroll direction is `horizontal`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<Model> _data;
+late MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   _data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
+                    position: MapLegendPosition.bottom,
+                    overflowMode: MapLegendOverflowMode.scroll,
+                    shouldAlwaysShowScrollbar: true,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Map default legend scroll](images/legend/map-default-legend-scroll.png)
+
+<b>For bar legend</b>
+
+You can scroll the legend items using the [`MapLegendOverflowMode.scroll`]() property. Basically, the scrollbar is not visible. Now using this [`shouldAlwaysShowScrollbar`] boolean property to make it visible. The possible values are `true` and `false`.
+
+If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
+
+If the legend position is `top` or `bottom`, then the default scroll direction is `horizontal`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<Model> _data;
+late MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   _data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    position: MapLegendPosition.bottom,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
+                    overflowMode: MapLegendOverflowMode.scroll,
+                    shouldAlwaysShowScrollbar: true
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Map bar legend scroll](images/legend/map-bar-legend-scroll.png)
+
 ## Legend toggling
 
 N> Legend toggling is not applicable for bar type legend.
