@@ -32,7 +32,7 @@ Add or edit the form data programmatically in the document using the [getFormFie
 
 ### Adding or Editing text box data
 
-Add or edit the text of the text box programmatically by changing the [text](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextFormField/text.html) property.
+Add or edit the text of the text box programmatically by changing the [text](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextFormField/text.html) property of the [PdfTextFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextFormField-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 
 ### Adding or Editing checkbox data
 
-Check or uncheck the checkbox programmatically by changing the [isChecked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfCheckboxFormField/isChecked.html) property.
+Check or uncheck the checkbox programmatically by changing the [isChecked](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfCheckboxFormField/isChecked.html) property of the [PdfCheckboxFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfCheckboxFormField-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -114,7 +114,7 @@ Widget build(BuildContext context) {
 
 ### Editing combo box data
 
-Select an item from the combo box programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField/selectedItem.html) property.
+Select an item from the combo box programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField/selectedItem.html) property of the [PdfComboBoxFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField-class.html). The item to be selected must be one of the available [items](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField/items.html) in the [PdfComboBoxFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfComboBoxFormField-class.html). 
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -155,7 +155,7 @@ Widget build(BuildContext context) {
 
 ### Editing radio button data
 
-Select an item from the radio buttons programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField/selectedItem.html) property.
+Select an item from the radio buttons programmatically using the [selectedItem](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField/selectedItem.html) property of the [PdfRadioFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField-class.html). The item to be selected must be one of the available [items](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField/items.html) in the [PdfRadioFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfRadioFormField-class.html). 
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -196,7 +196,7 @@ Widget build(BuildContext context) {
 
 ### Editing list box data
 
-Select one or more items from the list box programmatically using the [selectedItems](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField/selectedItems.html) property.
+Select one or more items from the list box programmatically using the [selectedItems](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField/selectedItems.html) property of the [PdfListBoxFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField-class.html). The selected items must be chosen from the available [items](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField/items.html) in the [PdfListBoxFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfListBoxFormField-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20" %}
@@ -237,7 +237,7 @@ Widget build(BuildContext context) {
 
 ### Adding or Editing signature data
 
-Add or remove the signature in a signature form field programmatically by assigning the image bytes or `null` to the [signature](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfSignatureFormField/signature.html) property.
+Add or remove the signature in a signature form field programmatically by assigning the image bytes or `null` to the [signature](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfSignatureFormField/signature.html) property of the [PdfSignatureFormField](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfSignatureFormField-class.html)
 
 {% tabs %}
 {% highlight dart hl_lines="17 18 19 20 21 22" %}

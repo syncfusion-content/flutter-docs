@@ -73,7 +73,7 @@ void lockUnderlineAnnotations() {
 
 ## Lock the Selected Annotation
 
-To lock the selected annotation, access the selected annotation instance and set the `isLocked` property to true. The selected annotation instance may be obtained from the `onAnnotationSelected` callback. The following example explains locking the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the `isLocked` property to true. The selected annotation instance may be obtained from the [onAnnotationSelected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationSelected.html) callback. The following example explains locking the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight dart %}

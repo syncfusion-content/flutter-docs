@@ -132,6 +132,9 @@ void editSelectedStickyNoteAnnotation(Annotation selectedAnnotation) {
 
     // Change the text of the selected sticky note annotation.
     selectedAnnotation.text = "Changed the comment to note.";
+
+    // Change the position of the selected sticky note annotation.
+    selectedAnnotation.position = const Offset(50, 50);
   }
 }
 
