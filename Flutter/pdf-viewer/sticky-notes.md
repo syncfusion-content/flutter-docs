@@ -88,23 +88,26 @@ void addStickyNoteAnnotation() {
 
 ## Sticky Note Annotation Settings
 
-In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using the [PdfViewerController.annotationSettings.stickyNote](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfAnnotationSettings/stickyNote.html). For that, you need to obtain the default sticky note annotation settings.
+In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using the [PdfViewerController.annotationSettings.stickyNote](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfAnnotationSettings/stickyNote.html).
 
-The following example explains how to obtain the default sticky note annotation settings and modify some of their properties. Similarly, you can modify all the other properties.
+The following example explains how to customize the default appearance of the sticky note annotations.
 
 {% tabs %}
 {% highlight dart %}
 
 void customizeDefaultStickyNoteSettings() {
-  // Obtain the default sticky note annotation settings from the PdfViewerController instance.
-  PdfStickyNoteAnnotationSettings stickyNoteSettings =
-      _pdfViewerController.annotationSettings.stickyNote;
+  // Obtain the default annotation settings from the PdfViewerController instance.
+  PdfAnnotationSettings annotationSettings =
+      _pdfViewerController.annotationSettings;
+
+  // Assign the customized appearance to the sticky note annotations
+  annotationSettings.stickyNote = PdfStickyNoteAnnotationSettings()
+    ..color = Colors.yellow; // Set the default color
 
   // Modify the default properties.
-  stickyNoteSettings.icon =
-      PdfStickyNoteIcon.comment; // Set the default icon to Comment.
-  stickyNoteSettings.color = Colors.yellow; // Stroke color
-  stickyNoteSettings.opacity = 0.75; // 75% Opacity
+  annotationSettings.stickyNote.icon =
+      PdfStickyNoteIcon.note; // Set the default icon to Note.
+  annotationSettings.stickyNote.opacity = 0.75; // 75% Opacity
 }
 
 {% endhighlight %}

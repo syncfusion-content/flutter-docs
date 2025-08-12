@@ -13,6 +13,61 @@ Navigate to the desired pages instantly either by using the page navigation dial
 
 ![Page navigation dialog](images/page-navigation/page_navigation_dialog.png)
 
+N> 
+To use the PdfViewerController methods or access properties, the controller must be attached to the SfPdfViewer widget using the [controller](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/controller.html) parameter.
+
+## Obtain the total page count and the current page number
+
+The [PdfViewerController.pageCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageCount.html) property returns the total number of pages in a PDF document. And the [PdfViewerController.pageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageNumber.html) property returns the current page number displayed in the PDF Viewer.
+
+{% tabs %}
+{% highlight dart hl_lines="34 35" %}
+
+late PdfViewerController _pdfViewerController;
+int _pageNumber = 0;
+int _pageCount = 0;
+
+@override
+initState() {
+  _pdfViewerController = PdfViewerController();
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Syncfusion Flutter PdfViewer'),
+        actions: <Widget>[
+          SizedBox(
+            width: 100,
+            height: 50,
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: '$_pageNumber / $_pageCount',
+              ),
+            ),
+          ),
+        ],
+      ),
+      body: SfPdfViewer.network(
+        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+        controller: _pdfViewerController,
+        onDocumentLoaded: (PdfDocumentLoadedDetails details) {
+          setState(() {
+            _pageNumber = _pdfViewerController.pageNumber;
+            _pageCount = _pdfViewerController.pageCount;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Navigate to the Desired Page Programmatically
 
 The [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html) controller method helps you to navigate to the specified page number in a PDF document. The following code example explains the same.
