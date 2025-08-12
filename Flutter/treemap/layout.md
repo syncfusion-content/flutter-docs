@@ -22,41 +22,41 @@ The [`squarified`](https://pub.dev/documentation/syncfusion_flutter_treemap/late
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _dataSource;
+  late List<PopulationModel> _dataSource;
 
-@override
-void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
-      PopulationModel(continent: 'South America', populationInMillions: 19.11),
-      PopulationModel(continent: 'North America', populationInMillions: 13.3),
-      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
-      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
-      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _dataSource = <PopulationModel>[
+        PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+        PopulationModel(continent: 'South America', populationInMillions: 19.11),
+        PopulationModel(continent: 'North America', populationInMillions: 13.3),
+        PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+        PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+        PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfTreemap(
-        dataCount: _dataSource.length,
-        weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-          ),
-        ],
-      ),
-   );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfTreemap(
+          dataCount: _dataSource.length,
+          weightValueMapper: (int index) {
+            return _dataSource[index].populationInMillions;
+          },
+          levels: [
+            TreemapLevel(
+              groupMapper: (int index) {
+                return _dataSource[index].continent;
+              },
+              color: Colors.teal[200],
+              padding: const EdgeInsets.all(1.5),
+            ),
+          ],
+        ),
+    );
+  }
 
 class PopulationModel {
   const PopulationModel({
@@ -80,41 +80,41 @@ The [`slice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/tr
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _dataSource;
+  late List<PopulationModel> _dataSource;
 
-@override
-void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
-      PopulationModel(continent: 'South America', populationInMillions: 19.11),
-      PopulationModel(continent: 'North America', populationInMillions: 13.3),
-      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
-      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
-      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _dataSource = <PopulationModel>[
+        PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+        PopulationModel(continent: 'South America', populationInMillions: 19.11),
+        PopulationModel(continent: 'North America', populationInMillions: 13.3),
+        PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+        PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+        PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfTreemap.slice(
-        dataCount: _dataSource.length,
-        weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-          ),
-        ],
-      ),
-   );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfTreemap.slice(
+          dataCount: _dataSource.length,
+          weightValueMapper: (int index) {
+            return _dataSource[index].populationInMillions;
+          },
+          levels: [
+            TreemapLevel(
+              groupMapper: (int index) {
+                return _dataSource[index].continent;
+              },
+              color: Colors.teal[200],
+              padding: const EdgeInsets.all(1.5),
+            ),
+          ],
+        ),
+    );
+  }
 
 class PopulationModel {
   const PopulationModel({
@@ -138,41 +138,41 @@ The [`dice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/tre
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _dataSource;
+  late List<PopulationModel> _dataSource;
 
-@override
-void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
-      PopulationModel(continent: 'South America', populationInMillions: 19.11),
-      PopulationModel(continent: 'North America', populationInMillions: 13.3),
-      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
-      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
-      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _dataSource = <PopulationModel>[
+        PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+        PopulationModel(continent: 'South America', populationInMillions: 19.11),
+        PopulationModel(continent: 'North America', populationInMillions: 13.3),
+        PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+        PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+        PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfTreemap.dice(
-        dataCount: _dataSource.length,
-        weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-          ),
-        ],
-      ),
-   );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfTreemap.dice(
+          dataCount: _dataSource.length,
+          weightValueMapper: (int index) {
+            return _dataSource[index].populationInMillions;
+          },
+          levels: [
+            TreemapLevel(
+              groupMapper: (int index) {
+                return _dataSource[index].continent;
+              },
+              color: Colors.teal[200],
+              padding: const EdgeInsets.all(1.5),
+            ),
+          ],
+        ),
+    );
+  }
 
 class PopulationModel {
   const PopulationModel({
@@ -191,59 +191,59 @@ class PopulationModel {
 
 ## Layout direction
 
-Tiles start to layout from the top-left to the bottom-right of the rectangle by default. The `layoutDirection` property allows you to start the layout from any corner of the rectangle. The possible `layoutDirection` values are `topLeft`, `topRight`, `bottomLeft`, and `bottomRight`.
+Tiles start to layout from the top-left to the bottom-right of the rectangle by default. The [`layoutDirection`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/layoutDirection.html) property allows you to start the layout from any corner of the rectangle. The possible [`layoutDirection`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/layoutDirection.html) values are [`topLeft`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLayoutDirection.html#topLeft), [`topRight`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLayoutDirection.html#topRight), [`bottomLeft`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLayoutDirection.html#bottomLeft), and [`bottomRight`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLayoutDirection.html#bottomRight).
 
 N> It is applicable for squarified treemap.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _dataSource;
+  late List<PopulationModel> _dataSource;
 
-@override
-void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
-      PopulationModel(continent: 'South America', populationInMillions: 19.11),
-      PopulationModel(continent: 'North America', populationInMillions: 13.3),
-      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
-      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
-      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _dataSource = <PopulationModel>[
+        PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+        PopulationModel(continent: 'South America', populationInMillions: 19.11),
+        PopulationModel(continent: 'North America', populationInMillions: 13.3),
+        PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+        PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+        PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap(
-            dataCount: _dataSource.length,
-            weightValueMapper: (int index) {
-              return _dataSource[index].populationInMillions;
-            },
-            layoutDirection: TreemapLayoutDirection.bottomRight,
-            levels: [
-              TreemapLevel(groupMapper: (int index) {
-                return _dataSource[index].continent;
-              }, labelBuilder: (BuildContext context, TreemapTile tile) {
-                return Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Text(
-                    tile.group,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                );
-              }),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _dataSource.length,
+              weightValueMapper: (int index) {
+                return _dataSource[index].populationInMillions;
+              },
+              layoutDirection: TreemapLayoutDirection.bottomRight,
+              levels: [
+                TreemapLevel(groupMapper: (int index) {
+                  return _dataSource[index].continent;
+                }, labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Text(
+                      tile.group,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  );
+                }),
+              ],
+            ),
           ),
-        ),
-     ),
-  );
-}
+      ),
+    );
+  }
 
 class PopulationModel {
   const PopulationModel({
@@ -262,59 +262,59 @@ class PopulationModel {
 
 ## Sorting
 
-You can sort the tiles either in ascending or descending order based on the `sortAscending` property. The default value of the `sortAscending` property is `false`.
+You can sort the tiles either in ascending or descending order based on the [`sortAscending`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/sortAscending.html) property. The default value of the [`sortAscending`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/sortAscending.html) property is `false`.
 
 N> It is applicable for slice and dice treemap.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<PopulationModel> _dataSource;
+  late List<PopulationModel> _dataSource;
 
-@override
-void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
-      PopulationModel(continent: 'South America', populationInMillions: 19.11),
-      PopulationModel(continent: 'North America', populationInMillions: 13.3),
-      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
-      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
-      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
-   ];
-   super.initState();
-}
+  @override
+  void initState() {
+    _dataSource = <PopulationModel>[
+        PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+        PopulationModel(continent: 'South America', populationInMillions: 19.11),
+        PopulationModel(continent: 'North America', populationInMillions: 13.3),
+        PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+        PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+        PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+    ];
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfTreemap.slice(
-            dataCount: _dataSource.length,
-            weightValueMapper: (int index) {
-              return _dataSource[index].populationInMillions;
-            },
-            sortAscending: true,
-            levels: [
-              TreemapLevel(groupMapper: (int index) {
-                return _dataSource[index].continent;
-              }, labelBuilder: (BuildContext context, TreemapTile tile) {
-                return Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Text(
-                    tile.group,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                );
-              }),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap.slice(
+              dataCount: _dataSource.length,
+              weightValueMapper: (int index) {
+                return _dataSource[index].populationInMillions;
+              },
+              sortAscending: true,
+              levels: [
+                TreemapLevel(groupMapper: (int index) {
+                  return _dataSource[index].continent;
+                }, labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Text(
+                      tile.group,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  );
+                }),
+              ],
+            ),
           ),
-        ),
-     ),
-  );
-}
+      ),
+    );
+  }
 
 class PopulationModel {
   const PopulationModel({

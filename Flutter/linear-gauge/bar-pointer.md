@@ -2,7 +2,7 @@
 layout: post
 title: Bar Pointer in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Bar Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -363,3 +363,30 @@ You can add multiple bar pointers in a [`LinearGauge`](https://pub.dev/documenta
 {% endhighlight %}
 
 ![Add multiple bar pointers in a linear gauge](images/bar-pointer/multiple_bar_pointer.PNG)
+
+## Animation completed callback
+
+The [`onAnimationCompleted`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/onAnimationCompleted.html) callback in the [`LinearBarPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer-class.html) will be triggered when the bar pointer animation is completed. The default value of the [onAnimationCompleted](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/onAnimationCompleted.html) callback is `null`.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            barPointers:[
+              LinearBarPointer(
+                onAnimationCompleted: () {
+                  print("Bar Pointer animation is completed");
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
