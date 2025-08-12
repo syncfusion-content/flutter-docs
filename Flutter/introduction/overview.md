@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Essential Studio<sup>&reg;</sup> Flutter | Syncfusion
+title: About Essential Studio® Flutter | Syncfusion
 description: Learn here all about introduction of Syncfusion Essential Studio<sup>&reg;</sup> Flutter, its elements, features and more.
 platform: flutter
 control: Overview
