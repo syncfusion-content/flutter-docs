@@ -22,7 +22,7 @@ The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBoo
 The following code example explains the opening of the built-in bookmark view programmatically.
 
 {% tabs %}
-{% highlight dart hl_lines="1 15" %}
+{% highlight dart hl_lines="1 25" %}
 
 final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 

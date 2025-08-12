@@ -66,3 +66,41 @@ void disableAnnotationMode() {
 Text markups can be added to a PDF document using text selection without enabling the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html). Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any text markup options to add an annotation to a text in the PDF document.
 
 ![Text selection context menu in Flutter PDF Viewer.](images/annotations/flutter-pdf-viewer-text-selection-context-menu.png)
+
+## Text Markup Annotation Settings
+
+Text markup annotations will be added with a default appearance specified in the [PdfViewerController.annotationSettings](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationSettings.html). You can modify the annotation after it has been added to the pages. However, if you want to define the appearance before adding text markup annotations to the document, you can update the default settings using the corresponding annotation settings in [PdfViewerController.annotationSettings](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationSettings.html). 
+
+The following example demonstrates how to customize the default appearance of all text markup annotations.
+
+{% tabs %}
+{% highlight dart %}
+
+void customizeDefaultTextMarkupSettings() {
+  // Obtain the default annotation settings from the PdfViewerController instance.
+  PdfAnnotationSettings annotationSettings =
+      _pdfViewerController.annotationSettings;
+
+  // Customize the default settings of Highlight annotations
+  annotationSettings.highlight = PdfTextMarkupAnnotationSettings()
+    ..color = Colors.green
+    ..opacity = 0.5;
+
+  // Customize the default settings of Underline annotations
+  annotationSettings.underline = PdfTextMarkupAnnotationSettings()
+    ..color = Colors.black
+    ..opacity = 0.6;
+
+  // Customize the default settings of Strikethrough annotations
+  annotationSettings.strikethrough = PdfTextMarkupAnnotationSettings()
+    ..color = Colors.red
+    ..opacity = 0.9;
+
+  // Customize the default settings of Squiggly annotations
+  annotationSettings.squiggly = PdfTextMarkupAnnotationSettings()
+    ..color = Colors.black
+    ..opacity = 0.4;
+}
+
+{% endhighlight %}
+{% endtabs %}

@@ -19,6 +19,10 @@ On mobile and desktop platforms, the search will be performed asynchronously, so
 
 Whereas on the web platform, the search will be performed synchronously, so the result will be returned only after completing the search on all the pages. This is because `isolate` is not supported for the web platform yet.
 
+The [isSearchCompleted](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/isSearchCompleted.html) property of [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) indicates whether the text search process has completed when it is performed asynchronously on mobile and desktop platforms.
+
+The [hasResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/hasResult.html) property of [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) indicates whether the text search yields any results.
+
 To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results.
 
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.

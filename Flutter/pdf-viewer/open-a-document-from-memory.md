@@ -12,13 +12,12 @@ documentation: ug
 The [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html) creates a widget that displays the PDF document obtained from the [Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html). The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="4 5" %}
+{% highlight dart hl_lines="4" %}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfPdfViewer.memory(
-              bytes));
+      body: SfPdfViewer.memory(bytes));
 }
 
 {% endhighlight %}

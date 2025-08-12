@@ -23,7 +23,7 @@ The `SfPdfViewer` supports the following constructor types:
 
 ## Load the Document with the Specified Page
 
-The `SfPdfViewer` allows you to load the document with the specified page using the `initialPageNumber` property. The following code example explains the same.
+The `SfPdfViewer` allows you to load the document with the specified page using the [initialPageNumber](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialPageNumber.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

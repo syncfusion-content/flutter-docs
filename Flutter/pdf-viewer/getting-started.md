@@ -96,4 +96,43 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Using the controller Property in SfPdfViewer
+
+The [controller](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/controller.html) property in the SfPdfViewer widget allows you to interact with the PDF document programmatically using the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html). This controller provides access to various methods and properties such as [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html), [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html), [pageCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/pageCount.html), and annotation management.
+
+he following code explains how to initialize, attach, and dispose the `PdfViewerController`.
+
+{% tabs %}
+{% highlight dart hl_lines="1 5 10 21" %}
+
+late PdfViewerController _pdfViewerController;
+
+@override
+initState() {
+  _pdfViewerController = PdfViewerController();
+  super.initState();
+}
+
+@override
+void dispose() {
+  _pdfViewerController.dispose();
+  super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('Syncfusion Flutter PdfViewer')),
+      body: SfPdfViewer.asset(
+        'assets/flutter-succinctly.pdf',
+        controller: _pdfViewerController,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 N> You can refer to our [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/flutter-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter PDF Viewer example](https://flutter.syncfusion.com/#/pdf-viewer/getting-started), which shows you how to render and configure the PDF Viewer.
