@@ -18,8 +18,8 @@ To render a range area chart, create an instance of `RangeAreaSeries` and add to
 
 Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
 
-* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
-* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeSeriesBase/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeSeriesBase/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
 {% tabs %}
 {% highlight dart %} 

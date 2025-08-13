@@ -10,7 +10,7 @@ documentation: ug
 # Technical indicators in Flutter Cartesian Charts (SfCartesianChart)
 
 
-The different types of technical indicators available in chart are follows:
+The different types of technical indicators available in the chart are as follows:
 
 * [`Accumulation distribution indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AccumulationDistributionIndicator-class.html) - AD
 *	[`Average true range indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AtrIndicator-class.html) - ATR
@@ -34,7 +34,7 @@ To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/d
 * [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/signalLineColor.html)- Used to defines the color for the respective indicator line.
 * [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/signalLineWidth.html) - Used to change the signal line width.
 * [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/seriesName.html) - Used to bind the data source of chart series to technical indicators, including x and y axis.
-* [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xAxisName.html),[`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/yAxisName.html) - Used to set the x and y axes 
+* [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xAxisName.html),[`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/yAxisName.html) - Used to set the x and y axes for the indicator.
 * [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/animationDuration.html) - To control the duration of animation.
 * [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/animationDelay.html) - Used to specify the delay duration of the indicator animation. This takes a millisecond value as input. By default, the indicator will get animated for the specified duration. If `animationDelay` is specified, then the indicator will begin to animate after the specified duration.
 * [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/dataSource.html) - Directly bind the values such as [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xValueMapper.html),[`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/lowValueMapper.html),[`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/highValueMapper.html),[`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/openValueMapper.html),[`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/closeValueMapper.html)
@@ -234,7 +234,7 @@ Refer the following example,
 
 This is mostly using indicator having [`shortPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/shortPeriod.html) and [`longPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/longPeriod.html) for defining the motion of the indicator.
 
-Also you can draw [`MacdType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html), [`MacdType.histogram`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html) MACD or [`MacdType.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html) types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
+Also you can draw [`MacdType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#line), [`MacdType.histogram`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#histogram) MACD or [`MacdType.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdType.html#both) types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
 
 The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdLineColor.html) property is used to define the color for the MACD line and the [`histogramNegativeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramNegativeColor.html) and [`histogramPositiveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramPositiveColor.html) property is used to define the color for the MACD histogram.
 
@@ -426,7 +426,7 @@ Refer the following example,
             legend: Legend(isVisible: true),
             indicators: [
           StochasticIndicator<dynamic, dynamic>(   
-              seriesName: 'HiloOpenClose',,
+              seriesName: 'HiloOpenClose',
               kPeriod: 2,
               dPeriod: 3)],
              series: <CartesianSeries<ChartData, DateTime>>[
@@ -607,7 +607,7 @@ Refer the following example,
 ## Legend for technical indicators
 
 
-Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/name.html) property is given to an indicator, the legend name is changed based on the indicator name.[`legendItemText`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendItemText.html) can also be provided for changing the name of the legend. In default rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendIconType.html) will be a horizontal line.
+Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/name.html) property is given to an indicator, the legend name is changed based on the indicator name. [`legendItemText`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendItemText.html) can also be provided for changing the name of the legend. In default rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/legendIconType.html) will be a horizontal line.
 
 The following code example can define the legend.
 
@@ -727,8 +727,8 @@ Refer the following example below
                 closeValueMapper: (ChartData data, _) => data.close,
               )
             ], 
-            series: <CartesianSeries<ChartData, num>>[
-              LineSeries<ChartData, num>(
+            series: <CartesianSeries<ChartData1, num>>[
+              LineSeries<ChartData1, num>(
                   color: Colors.purple,
                   dataSource: chartData,
                   xValueMapper: (ChartData1 data, _) => data.x,
