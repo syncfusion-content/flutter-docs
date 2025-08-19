@@ -8,7 +8,7 @@ documentation: ug
 keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter open pdf, flutter pdf view
 ---
 
-# How to Add Syncfusion<sup>&reg;</sup> PDF Viewer Widget in FlutterFlow?
+# How to Add Syncfusion<sup>&reg;</sup> PDF Viewer in FlutterFlow?
 
 ## Overview
 
