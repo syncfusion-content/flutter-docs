@@ -27,8 +27,8 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/highValueMapper.html) - used to get the high values from the series.
 * [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/openValueMapper.html) - used to get the open values from the series.
 * [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/closeValueMapper.html) - used to get the close values from the series.
-* [`bearFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
-* [`bullFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
+* [`bearColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FinancialSeriesBase/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
 
 
 
@@ -124,7 +124,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ## Rounded corners
 
-The [`borderRadius`]() property is used to add the rounded corners to the candle.
+The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/borderRadius.html) property is used to add the rounded corners to the candle.
 
 {% tabs %}
 {% highlight dart hl_lines="35" %}

@@ -9,11 +9,11 @@ documentation: ug
 
 # Exporting in Flutter Cartesian Charts (SfCartesianChart)
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to export the Cartesian chart as a PNG image or as PDF document.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to export the Cartesian chart as a PNG image or as a PDF document.
 
 ## Export image
 
-To export the Cartesian chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
+To export the Cartesian chart as a PNG image, we can get the image by calling the [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in the repaint boundary.
 
 {% tabs %}
 {% highlight dart %} 
@@ -107,7 +107,7 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
 
 ## Export PDF
 
-Similar to the above way, we can also export the rendered Cartesian chart as a PDF document. We create the pdf document using pdf component. This can be done in the application level itself and please find the code snippet below.
+Similar to the above way, we can also export the rendered Cartesian chart as a PDF document. We create the PDF document using the PDF component. This can be done at the application level itself. Please find the code snippet below.
 
 **Add dependency**
 

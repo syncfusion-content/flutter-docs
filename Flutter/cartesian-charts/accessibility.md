@@ -33,7 +33,7 @@ The customization of colors can be done for the following chart elements.
 
 ## Large fonts
 
-The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all elements in Cartesian chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in Cartesian chart.
 * [Chart title](https://help.syncfusion.com/flutter/cartesian-charts/chart-title)
 * [Axis title](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-title)
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-label-customization)
