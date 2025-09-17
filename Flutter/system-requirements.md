@@ -42,7 +42,7 @@ See the links below for the recommended Flutter development environments:
         <th style="text-align:center">Flutter SDK Stable Version</th>
         <th style="text-align:center">Syncfusion<sup>&reg;</sup> Compatible Package Version</th>
     </tr>
-        <tr>
+    <tr>
         <td style="text-align:center">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.35.1-stable.zip">3.35.1</a>
         </td>
