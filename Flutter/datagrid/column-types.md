@@ -11,17 +11,11 @@ documentation: ug
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column.
 
-[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column.
-
 ## GridColumn
 
 GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
 
-GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
-
 ### Mapping column to a property
-
-The column can be bound to a property in a data object using the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. The [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header.
 
 The column can be bound to a property in a data object using the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) property. The [label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/label.html) is used to display the required widget in a column header.
 
@@ -87,8 +81,6 @@ The column can be bound to a property in a data object using the [GridColumn.col
 {% endtabs %}
 
 ### Hiding a column
-
-[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
 [GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
@@ -232,10 +224,6 @@ By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flu
 
 The selection is applied to rows only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property other than `none.`
 
-By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as the first column.
-
-The selection is applied to rows only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property to a value other than `none`.
-
 {% tabs %}
 {% highlight Dart %} 
 
@@ -302,8 +290,6 @@ The selection is applied to rows only if you set the [SfDataGrid.selectionMode](
 ![flutter datagrid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
 
 ### Show text in the header cell
-
-Display widgets along with the checkbox in the header cell by adding a widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
 
 Display widgets along with the checkbox in the header cell by adding a widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
 
