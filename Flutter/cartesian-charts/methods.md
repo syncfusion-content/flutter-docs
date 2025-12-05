@@ -9,6 +9,263 @@ documentation: ug
 
 # Methods in Flutter Cartesian Charts (SfCartesianChart)
 
+## Methods in Plotband
+
+### drawRect method
+
+The `drawRect` method is used to customize the appearance of the plotband.
+
+This following code sample shows how to customize the appearance of the plotband by using drawRect method.
+
+{% tabs %}
+{% highlight dart %} 
+
+    late List<_SalesData> _data;
+
+    @override
+    void initState() {
+      _data = <_SalesData>[
+        _SalesData('Jan', 35),
+        _SalesData('Feb', 28),
+        _SalesData('Mar', 34),
+        _SalesData('Apr', 32),
+        _SalesData('May', 40),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      final int startIndex = 1; // Feb
+      final int endIndex = 3; // Apr
+
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: CategoryAxis(
+            plotBands: <PlotBand>[
+              CustomStripedPlotBand(
+                start: startIndex.toDouble(),
+                end: endIndex.toDouble(),
+                color: const Color(0xFFFFF3E0),
+                opacity: 0.9,
+                borderColor: Colors.deepOrange,
+                borderWidth: 1.2,
+                patternColor: Colors.deepOrange,
+                stripeOpacity: 0.45,
+                stripeWidth: 4.0,
+                stripeSpacing: 10.0,
+                shouldRenderAboveSeries: true,
+              ),
+            ],
+          ),
+          series: <CartesianSeries<_SalesData, String>>[
+            LineSeries<_SalesData, String>(),
+          ],
+        ),
+      );
+    }
+
+    class _SalesData {
+      _SalesData(this.year, this.sales);
+      final String year;
+      final double sales;
+    }
+
+    /// Custom striped plot band that draws vertical dashed stripes inside the band.
+    class CustomStripedPlotBand extends PlotBand {
+      const CustomStripedPlotBand({
+        super.isVisible,
+        super.start,
+        super.end,
+        super.color = const Color(0xFFE0E0E0),
+        super.opacity,
+        super.borderColor,
+        super.borderWidth = 0,
+        super.shouldRenderAboveSeries,
+
+        // Custom stripe properties
+        this.patternColor = const Color(0xFF000000),
+        this.stripeOpacity = 0.25,
+        this.stripeWidth = 4.0,
+        this.stripeSpacing = 6.0,
+      });
+
+      final Color patternColor;
+      final double stripeOpacity;
+      final double stripeWidth;
+      final double stripeSpacing;
+
+      @override
+      void drawRect(
+        Canvas canvas,
+        Rect rect,
+        Paint fillPaint, [
+        Paint? strokePaint,
+      ]) {
+        // Early return if bounds width is invalid
+        if (rect.width <= 0) {  
+          return;
+        }
+
+        final paint = Paint()
+          ..color = patternColor.withOpacity(stripeOpacity)
+          ..style = PaintingStyle.fill;
+
+        canvas.save();
+        canvas.clipRect(rect);
+  
+        // Fixed dash pattern based on stripe width
+        final double dashLength = stripeWidth * 2;
+        final double gapLength = stripeWidth;
+        // Calculate number of stripes based on width
+        final double totalWidth = rect.width;
+        final double stripeSpacing = (stripeWidth + this.stripeSpacing);
+        final int numberOfStripes = math.max(
+          1,
+          (totalWidth / stripeSpacing).floor(),
+        );
+
+        // Draw stripes
+        for (int i = 0; i < numberOfStripes; i++) {
+          final double x = rect.left + (i * stripeSpacing) + (stripeSpacing / 2);
+          if (x + stripeWidth > rect.right) break;
+          // Use absolute positioning for Y coordinates
+          final double yStart = math.min(rect.top, rect.bottom);
+          final double yEnd = math.max(rect.top, rect.bottom);
+          // Draw dashed pattern
+          double currentY = yStart;
+          bool drawDash = true;
+          while (currentY < yEnd) {
+            if (drawDash) {
+              final double segmentEnd = math.min(currentY + dashLength, yEnd);
+              canvas.drawRect(
+                Rect.fromLTWH(x, currentY, stripeWidth, segmentEnd - currentY),
+                paint,
+              );
+              currentY = segmentEnd;
+            } else {
+              currentY = math.min(currentY + gapLength, yEnd);
+            }
+            drawDash = !drawDash;
+          }
+        }
+        canvas.restore();
+      }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![custom plotband appearance](images\axis-customization\plotband_custom_rect.png)
+
+### drawText method
+
+The `drawText` method is used to customize the text and text style of the plotband.
+
+The following code sample shows how to customize the plotband text and text style using the drawText method.
+
+{% tabs %}
+{% highlight dart %}
+
+    late List<_SalesData> _data;
+
+    @override
+    void initState() {
+      _data = <_SalesData>[
+        _SalesData('Jan', 35),
+        _SalesData('Feb', 28),
+        _SalesData('Mar', 34),
+        _SalesData('Apr', 32),
+        _SalesData('May', 40),
+      ];
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      final int startIndex = 1; // Feb
+      final int endIndex = 3; // Apr
+
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: CategoryAxis(
+            plotBands: <PlotBand>[
+              CustomStripedPlotBand(
+                start: startIndex.toDouble(),
+                end: endIndex.toDouble(),
+                color: Colors.orange,
+                opacity: 0.8,
+                text: "Custom plotband text",
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+                shouldRenderAboveSeries: true,
+              ),
+            ],
+          ),
+          series: <CartesianSeries<_SalesData, String>>[
+            LineSeries<_SalesData, String>(),
+          ],
+        ),
+      );
+    }
+
+    class _SalesData {
+      _SalesData(this.year, this.sales);
+      final String year;
+      final double sales;
+    }
+
+    /// Custom striped plot band that draws vertical dashed stripes inside the band.
+    class CustomStripedPlotBand extends PlotBand {
+      const CustomStripedPlotBand({
+        super.isVisible,
+        super.start,
+        super.end,
+        super.color,
+        super.opacity,
+        super.textAngle,
+        super.text,
+        super.textStyle,
+        super.shouldRenderAboveSeries,
+      });
+
+      @override
+      void drawText(Canvas canvas, Offset position, TextStyle style, int angle) {
+        if (text == null || text!.isEmpty) {
+          return;
+        }
+        final TextSpan span = TextSpan(text: text, style: style);
+        final TextPainter textPainter = TextPainter(
+          text: span,
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.ltr,
+        );
+        textPainter.layout();
+        if (angle == 0) {
+          textPainter.paint(canvas, position);
+        } else {
+          final double halfWidth = textPainter.width / 2;
+          final double halfHeight = textPainter.height / 2;
+          canvas
+            ..save()
+            ..translate(position.dx + halfWidth, position.dy + halfHeight)
+            ..rotate(degreesToRadians(angle.toDouble()));
+          textPainter.paint(canvas, Offset(-halfWidth, -halfHeight));
+          canvas.restore();
+        }
+      }
+
+      double degreesToRadians(double deg) => deg * (pi / 180);
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Custom plotband text](images\axis-customization\plotband_custom_text.png)
+
 ## Methods in tooltipBehavior
 
 ### Show method in tooltipBehavior
