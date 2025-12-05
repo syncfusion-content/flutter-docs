@@ -9,13 +9,13 @@ documentation: ug
 
 # Methods in Flutter Cartesian Charts (SfCartesianChart)
 
-## Methods in Plotband
+## Methods in Plot band
 
 ### drawRect method
 
-The `drawRect` method is used to customize the appearance of the plotband.
+The `drawRect` method is used to customize the appearance of the plot band.
 
-This following code sample shows how to customize the appearance of the plotband by using drawRect method.
+This following code sample shows how to customize the appearance of the plot band by using drawRect method.
 
 {% tabs %}
 {% highlight dart %} 
@@ -160,9 +160,9 @@ This following code sample shows how to customize the appearance of the plotband
 
 ### drawText method
 
-The `drawText` method is used to customize the text and text style of the plotband.
+The `drawText` method is used to customize the text and text style of the plot band.
 
-The following code sample shows how to customize the plotband text and text style using the drawText method.
+The following code sample shows how to customize the plot band text and text style using the drawText method.
 
 {% tabs %}
 {% highlight dart %}
