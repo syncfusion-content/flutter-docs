@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 ![Visible resource count](images/resourceview/visible_resource_count.png)
 
 ## Height and Width
-You can customize the size of the resource view using the [height](#) and [width](#) properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+You can customize the size of the resource view using the `height` and `width` properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 - height controls the height of each resource.
 - width controls the width of the resource panel.
 
