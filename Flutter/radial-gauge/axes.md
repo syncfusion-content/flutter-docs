@@ -2,7 +2,7 @@
 layout: post
 title: Axis in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Axis of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
@@ -594,7 +594,7 @@ The following property of the axis allows to customize the axis label text:
 
 ![axis label format](images/axis/axis_labelFormat.jpg)
 
-* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html).
+* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html).
 
 {% highlight dart %}
 

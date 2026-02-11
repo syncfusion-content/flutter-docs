@@ -9,7 +9,7 @@ documentation: ug
 
 # Theme in Flutter AssistView (SfAIAssistViewTheme)
 
-This section explains the customization properties available in [`AssistThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/assistThemeData.html).
+This section explains the customization properties available in [`aiAssistViewThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/aiAssistViewThemeData.html).
 
 **Import the Chat library** 
 
@@ -984,7 +984,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
     );
   }
 
-{% endhighlight hl_lines="8" %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Response toolbar background color

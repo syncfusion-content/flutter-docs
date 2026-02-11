@@ -118,7 +118,7 @@ Customize the content of [response](https://pub.dev/documentation/syncfusion_flu
 
 ### Header
 
-The header displays the username of the message's author along with the time stamp of when the message was sent. Additionally, you can build a custom widget to display more information about messages.
+The [header](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messageHeaderBuilder.html) displays the username of the message's author along with the time stamp of when the message was sent. Additionally, you can build a custom widget to display more information about messages.
 
 {% tabs %}
 {% highlight dart hl_lines=" 38 39 42 43" %}
@@ -178,7 +178,7 @@ The header displays the username of the message's author along with the time sta
 
 ### Footer
 
-Showcases additional functionalities and information, including feedback options, AI model details, and more.
+The [footer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messageFooterBuilder.html) showcases additional functionalities and information, including feedback options, AI model details, and more.
 
 {% tabs %}
 {% highlight dart hl_lines="37" %}

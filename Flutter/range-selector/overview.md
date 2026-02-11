@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Range selector (SfRangeSelector) Overview
 
-Syncfusion<sup>&reg;</sup> Flutter Range Selector is a highly interactive UI widget for selecting a smaller range from a larger data set. It provides a rich set of features such as numeric and date values, labels, ticks, dividers, and tooltips. It also supports adding any type of widget as content.
+[Syncfusion<sup>&reg;</sup> Flutter Range Selector](https://pub.dev/packages/syncfusion_flutter_sliders/versions) is a highly interactive UI widget for selecting a smaller range from a larger data set. It provides a rich set of features such as numeric and date values, labels, ticks, dividers, and tooltips. It also supports adding any type of widget as content.
 
 ![Range selector overview](images/overview/range-selector-overview.png)
 

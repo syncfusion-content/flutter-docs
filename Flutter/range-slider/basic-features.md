@@ -2,7 +2,7 @@
 layout: post
 title: Basic features in Flutter Range Slider widget | Syncfusion
 description: Learn here all about adding the basic features in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -462,8 +462,8 @@ Widget build(BuildContext context) {
 
 ### For customizing individual items
 
-* Track - [`Link`](https://help.syncfusion.com/flutter/range-slider/track)
-* Ticks - [`Link`](https://help.syncfusion.com/flutter/range-slider/ticks)
-* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/range-slider/labels-and-divider)
-* Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-slider/tooltip)
-* Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay)
+*  [`Track`](https://help.syncfusion.com/flutter/range-slider/track)
+*  [`Ticks`](https://help.syncfusion.com/flutter/range-slider/ticks)
+*  [`Labels and dividers`](https://help.syncfusion.com/flutter/range-slider/labels-and-divider)
+*  [`Tooltips`](https://help.syncfusion.com/flutter/range-slider/tooltip)
+*  [`Thumb and overlay`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay)

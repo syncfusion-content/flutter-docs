@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Slider (SfSlider) Overview
 
-Syncfusion<sup>&reg;</sup> Flutter Slider is a highly interactive UI widget, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
+[Syncfusion<sup>&reg;</sup> Flutter Slider](https://pub.dev/packages/syncfusion_flutter_sliders/versions) is a highly interactive UI widget, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
 
 ![Slider overview](images/overview/slider-overview.png)
 
