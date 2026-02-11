@@ -984,7 +984,7 @@ The [`suggestionItemShape`](https://pub.dev/documentation/syncfusion_flutter_cor
     );
   }
 
-{% endhighlight hl_lines="8" %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Response toolbar background color
