@@ -2,7 +2,7 @@
 layout: post
 title: Axis in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Axis of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---

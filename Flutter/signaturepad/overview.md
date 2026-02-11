@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter Signature Pad widget | Syncfusion
 description: Learn here all about introduction of Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---

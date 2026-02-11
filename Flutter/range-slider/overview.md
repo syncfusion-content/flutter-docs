@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter Range Slider widget | Syncfusion
 description: Learn here all about the introduction of Syncfusion Flutter Range Slider (SfRangeSlider) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
