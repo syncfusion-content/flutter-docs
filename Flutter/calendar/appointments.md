@@ -53,21 +53,62 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ## Calendar data source and mapping
 
-[CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar appointments in [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
+[CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails/appointments.html) in [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
-| Property Name | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [getStartTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html) | Maps the property name of custom class, which is equivalent for [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTime.html) of `Appointment`. |
-| [getEndTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html) | Maps the property name of custom class, which is equivalent for [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTime.html) of `Appointment`. |
-| [getStartTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html) | Maps the property name of custom class, which is equivalent for [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) of `Appointment`. |
-| [getEndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html) | Maps the property name of custom class, which is equivalent for [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) of `Appointment`. |
-| [getSubject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html) | Maps the property name of custom class, which is equivalent for [subject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/subject.html) of `Appointment`. |
-| [getColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html) | Maps the property name of custom class, which is equivalent for [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/color.html) of `Appointment`. |
-| [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html) | Maps the property name of custom class, which is equivalent for [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) of `Appointment`. |
-| [getRecurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html) | Maps the property name of custom class, which is equivalent for [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Appointment`. |
-| [getNotes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html) | Maps the property name of custom class which is equivalent for [notes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/notes.html)` of `Appointment`. |
-| [getLocation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html) | Maps the property name of custom class, which is equivalent for `location` of `Appointment`. |
-| [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent for [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of `Appointment`. |
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html">getStartTime</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTime.html">startTime</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html">getEndTime</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTime.html">endTime</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html">getStartTimeZone</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html">startTimeZone</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html">getEndTimeZone</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html">endTimeZone</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html">getSubject</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/subject.html">subject</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html">getColor</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/color.html">color</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html">isAllDay</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html">isAllDay</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html">getRecurrenceRule</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html">recurrenceRule</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html">getNotes</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/notes.html">notes</a> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html">getLocation</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <code>location</code> of <code>Appointment</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html">getRecurrenceExceptionDates</a></td>
+      <td>Maps the property name of custom class, which is equivalent for <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html">recurrenceExceptionDates</a> of <code>Appointment</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 >**NOTE**
 * Custom appointment class should contain two date time fields as mandatory.

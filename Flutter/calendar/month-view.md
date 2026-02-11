@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
 ## Blackout dates
 
 You can disable the interaction for a certain date in the month view and timeline month view by using the [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDates.html) property of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). Using this, you can restrict user interaction for specific dates.
-You can customize the text style of blackout dates by using the [blackoutDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDatesTextStyle.html) property from the `SfCalendar.`
+You can customize the text style of [blackout dates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDates.html) by using the [blackoutDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDatesTextStyle.html) property from the `SfCalendar.`
 
 {% tabs %}
 {% highlight dart hl_lines="5 6 7 8 9 10 11 12 13 14 15 16" %}

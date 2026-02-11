@@ -147,7 +147,7 @@ class JobVacancyModel {
 
 ## Overflow mode
 
-You can trim or fade the label when it is overflowed from the tile using the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html) property. The possible values are [`visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible), [`ellipsis`](https://api.flutter.dev/flutter/painting/TextOverflow.html#ellipsis), [`clip`](https://api.flutter.dev/flutter/painting/TextOverflow.html#clip) and [`fade`](https://api.flutter.dev/flutter/painting/TextOverflow.html#fade). The default value of the [`Text.overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html)property is [`TextOverflow.visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible).
+You can trim or fade the label when it is overflowed from the tile using the [`overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html) property of [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) widget. The possible values are [`visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible), [`ellipsis`](https://api.flutter.dev/flutter/painting/TextOverflow.html#ellipsis), [`clip`](https://api.flutter.dev/flutter/painting/TextOverflow.html#clip) and [`fade`](https://api.flutter.dev/flutter/painting/TextOverflow.html#fade). The default value of the [`overflow`](https://api.flutter.dev/flutter/widgets/Text/overflow.html) property is [`TextOverflow.visible`](https://api.flutter.dev/flutter/painting/TextOverflow.html#visible).
 
 By default, the labels will render even if it overflows from the tile.
 

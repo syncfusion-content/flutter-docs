@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Range Slider (SfRangeSlider) Overview
 
-Syncfusion<sup>&reg;</sup> Flutter Range Slider is a highly interactive UI widget that allows users to select a smaller range from a larger data set. It provides rich features such as numeric and date values, labels, ticks, dividers, and tooltips.
+[Syncfusion<sup>&reg;</sup> Flutter Range Slider](https://pub.dev/packages/syncfusion_flutter_sliders/versions) is a highly interactive UI widget that allows users to select a smaller range from a larger data set. It provides rich features such as numeric and date values, labels, ticks, dividers, and tooltips.
 
 ![Range slider overview](images/overview/range-slider-overview.png)
 

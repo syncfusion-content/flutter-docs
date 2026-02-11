@@ -177,7 +177,7 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 
 ### Conversation Area
 
-Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, header and suggestions will render the widget in right to left direction. 
+Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) messages in the AIAssistView conversation area. In RTL mode, request and response message, header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
 {% highlight dart %}
