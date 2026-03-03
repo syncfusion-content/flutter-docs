@@ -131,8 +131,11 @@ Widget build(BuildContext context) {
 
 ## Height and Width
 You can customize the size of the resource view using the `height` and `width` properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
-- height controls the height of each resource.
-- width controls the width of the resource panel.
+
+- height — Row height value for each resource. When `visibleResourceCount` is set (> 0), that setting takes precedence and the calendar computes row height from the available viewport and the visible resource count (so an explicit `height` is ignored in that case).
+- width — Panel width value for the resource panel (left column). When `width` is provided, it overrides `size` for panel sizing.
+- size — Fallback panel size used only when `width` is not specified.
+- visibleResourceCount — When > 0, determines how many resource rows are visible and therefore overrides `height` by computing row height from available space.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -144,8 +147,10 @@ Widget build(BuildContext context) {
           body: SfCalendar(
         dataSource: _dataSource,
         resourceViewSettings: ResourceViewSettings(
-          height: 120,
-          width: 150,
+          height: 100,
+          width: 250,
+          // size: 120,          // used only when `width` is not provided
+          // visibleResourceCount: 2, // when set, determines row height instead of `height`
         ),
     )),
   );
@@ -154,7 +159,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-> When [size] is specified along with [height] or [width], [size] takes precedence. If neither [height] nor [width] is specified, [size] is used by default.
+![height and width](images/resourceview/height_width.png)
 
 ## Customization
 ### Show avatar
@@ -225,6 +230,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Resource panel size](images/resourceview/resource_panel_size.png)
+
+> When `width` is specified along with [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html), `width` takes precedence.
 
 ## See also
 
