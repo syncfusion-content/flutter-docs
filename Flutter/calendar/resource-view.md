@@ -130,12 +130,12 @@ Widget build(BuildContext context) {
 ![Visible resource count](images/resourceview/visible_resource_count.png)
 
 ## Height and Width
-You can customize the size of the resource view using the `height` and `width` properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+You can customize the height or width of the resource view individually using the `height` and `width` properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
-- height — Row height value for each resource. When `visibleResourceCount` is set (> 0), that setting takes precedence and the calendar computes row height from the available viewport and the visible resource count (so an explicit `height` is ignored in that case).
-- width — Panel width value for the resource panel (left column). When `width` is provided, it overrides `size` for panel sizing.
-- size — Fallback panel size used only when `width` is not specified.
-- visibleResourceCount — When > 0, determines how many resource rows are visible and therefore overrides `height` by computing row height from available space.
+- **height** — Sets the height of each individual resource item. Use this when you want fixed control over row height.
+- **width** — Sets the total width of the entire resource view panel. Use this when you want fixed control over panel width.
+- **size** — Applies the same value to both the height and width of resource view. The `height` or `width` property takes first precedence over `size` property when given explicitly.
+- **visibleResourceCount** — When `visibleResourceCount` is set (> 0), the calendar automatically calculates the height of each resource item based on the available space and the number of visible resources. In this case, an explicitly set `height` value is ignored.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
