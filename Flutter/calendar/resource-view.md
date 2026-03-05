@@ -129,6 +129,38 @@ Widget build(BuildContext context) {
 
 ![Visible resource count](images/resourceview/visible_resource_count.png)
 
+## Height and Width
+You can customize the height or width of the resource view individually using the `height` and `width` properties of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+
+- **height** — Sets the height of each individual resource item. Use this when you want fixed control over row height.
+- **width** — Sets the total width of the entire resource view panel. Use this when you want fixed control over panel width.
+- **size** — Applies the same value to both the height and width of resource view. The `height` or `width` property takes first precedence over `size` property when given explicitly.
+- **visibleResourceCount** — When `visibleResourceCount` is set (> 0), the calendar automatically calculates the height of each resource item based on the available space and the number of visible resources. In this case, an explicitly set `height` value is ignored.
+
+{% tabs %}
+{% highlight dart hl_lines="8" %}
+
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: SfCalendar(
+        dataSource: _dataSource,
+        resourceViewSettings: ResourceViewSettings(
+          height: 100,
+          width: 250,
+          // size: 120,          // used only when `width` is not provided
+          // visibleResourceCount: 2, // when set, determines row height instead of `height`
+        ),
+    )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![height and width](images/resourceview/height_width.png)
+
 ## Customization
 ### Show avatar
 You can disable the user profile image and the circle representation of the resource by setting `false` to the [showAvatar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/showAvatar.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html). This will display each resource with a resource name and the color assigned to the resource. 
@@ -198,6 +230,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Resource panel size](images/resourceview/resource_panel_size.png)
+
+> When `width` is specified along with [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html), `width` takes precedence.
 
 ## See also
 
