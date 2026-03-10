@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about spline chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Spline Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Spline Chart in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add spline series, configure appearance, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Spline Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Spline Chart Guide (SfCartesianChart)
 
 To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of the spline segment:
 

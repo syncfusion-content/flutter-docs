@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to show scrollbars always and programmatic scrolling in the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Scrolling in Flutter DataGrid | Syncfusion
+description: Step-by-step guide to customize scrolling in Syncfusion Flutter DataGrid (SfDataGrid)—learn to show or hide scrollbars, set scroll physics, and more key features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Scrolling in Flutter DataGrid (SfDataGrid)
+# Flutter DataGrid Scrolling Guide (SfDataGrid)
 
 SfDataGrid provides support to scroll the content in both horizontal and vertical directions. 
 

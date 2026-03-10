@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Legend feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Legend in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to customize legends in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to enable, position, style, toggle series visibility, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Legend in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Legend Guide (SfCartesianChart)
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html) contains a list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 

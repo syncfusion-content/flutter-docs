@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Types in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about available chart types of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Chart Types in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to explore all chart types in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget—compare, select, and navigate to detailed documentation for each chart type and their key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart Types in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Chart Types Guide (SfCartesianChart)
 
 This page helps to navigate to the Chart types available in the Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts widgets.
 

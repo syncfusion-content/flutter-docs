@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about column chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Column Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Column Chart in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add column series, configure width, spacing, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Column Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Column Chart Guide (SfCartesianChart)
 
 To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 

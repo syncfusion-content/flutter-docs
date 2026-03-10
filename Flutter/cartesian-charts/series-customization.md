@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Series customization of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Series Customization in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to customize series in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to enable animation, handle empty points, sort data, transpose series, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Series Customization Guide (SfCartesianChart)
 
 ## Animation
 

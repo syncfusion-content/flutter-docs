@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about bar chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Bar Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Bar Chart in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget—learn to add, style, and configure bar series, width, spacing, rounded corners, tracks, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Bar Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Bar Chart Guide (SfCartesianChart)
 
 To create a Flutter bar chart quickly, you can check this video.
 
