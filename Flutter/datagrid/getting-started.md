@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter DataGrid | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter DataGrid—add dependencies, import, create SfDataGrid, and configure key features.
+title: Getting started with Flutter DataGrid | DataTable | Syncfusion®
+description: Learn here about getting started with Syncfusion® Flutter DataGrid (SfDataGrid) widget, its basic features, and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Flutter DataGrid Getting Started Guide (SfDataGrid)
+# Getting started with Flutter DataGrid (SfDataGrid)
 
 This section explains the steps required to add the DataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
 

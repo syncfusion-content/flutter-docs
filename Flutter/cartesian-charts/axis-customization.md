@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize axes in Syncfusion Flutter Cartesian Charts—learn to configure axis titles, labels, grid lines, and more key features.
+description: Step-by-step guide to customize axes in Syncfusion Flutter Cartesian Charts—configure axis titles, labels, grid lines, and key features.
 platform: flutter
 control: Cartesian Charts
 documentation: ug

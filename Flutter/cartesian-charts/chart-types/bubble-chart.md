@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about bubble chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Bubble Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Bubble Chart in Syncfusion Flutter Cartesian Charts—add bubble series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Bubble Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Bubble Chart Guide (SfCartesianChart)
 
 To render a bubble chart, create an instance of [`BubbleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
 

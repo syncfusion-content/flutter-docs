@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Types in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to explore and configure all axis types in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget—learn about its types, and other key features.
+description: Step-by-step guide to explore axis types in Syncfusion Flutter Cartesian Charts—learn about numeric, category, date-time axes, and key features.
 platform: flutter
 control: Chart
 documentation: ug

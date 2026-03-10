@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Flutter DataGrid | Syncfusion
-description: Step-by-step guide to customize filtering in Syncfusion Flutter DataGrid (SfDataGrid)—learn to filter data rows programmatically and through UI, use advanced and checkbox filters, customize filter popup, and more key features.
+title: Filtering in Flutter DataGrid | DataTable | Syncfusion
+description: Learn all about how to filter the data rows in Syncfusion Flutter DataGrid (SfDataGrid) widget and more here.
 platform: flutter
 control: SfDataGrid
 documentation: ug
----
+--- 
 
-# Flutter DataGrid Filtering Guide (SfDataGrid)
+# Filtering in Flutter DataGrid (SfDataGrid)
 
 Filtering is the process of fetching the values from a collection that satisfy specified condition. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied both through the UI and programmatically.
 
@@ -1642,6 +1642,5 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endtabs %}
 
 <img alt="flutter datagrid shows filter popup menu with customized colors" src="images/filtering/flutter-datagrid-customized-filter-popup-menu.png" width="689"/>
-
 
 

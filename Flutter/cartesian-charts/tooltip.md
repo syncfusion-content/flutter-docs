@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize tooltips in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to enable, format, style tooltips, and more key features.
+description: Step-by-step guide to customize tooltips in Syncfusion Flutter Cartesian Charts—enable, format, style tooltips, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug

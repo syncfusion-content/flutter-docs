@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline area Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about spline area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Spline Area Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Spline Area Chart in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add spline area series, configure appearance, gradients, empty points, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Spline area Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Spline Area Chart Guide (SfCartesianChart)
 
 To render a spline area chart, create an instance of [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of the spline area chart:
 

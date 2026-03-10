@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointment in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize appointments in Syncfusion Flutter Event Calendar (SfCalendar)—learn to add appointments data source, handle recurrence, appearance, and more key features.
+description: Step-by-step guide to customize appointments in Syncfusion Flutter Event Calendar—add data source, handle recurrence, appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

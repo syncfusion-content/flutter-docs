@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pie Chart in Flutter Circular Charts | Syncfusion
-description: Step-by-step guide to create and customize Pie Chart in Syncfusion Flutter Circular Charts (SfCircularChart) widget—learn to add, style, and configure pie series, and more key features.
+description: Step-by-step guide to create and customize Pie Chart in Syncfusion Flutter Circular Charts—add, style, and configure pie series, and key features.
 platform: flutter
 control: Chart
 documentation: ug

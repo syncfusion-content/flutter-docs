@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styling in Flutter DataGrid | Syncfusion
-description: Step-by-step guide to customize styling in Syncfusion Flutter DataGrid (SfDataGrid)—learn to change header, row, cell, highlight rows, and more key features.
+title: Styling feature in Flutter DataGrid | DataTable | Syncfusion
+description: Learn here all about how to customize the appearance of DataGrid in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Flutter DataGrid Styling Guide (SfDataGrid)
+# Styling in Flutter DataGrid (SfDataGrid)
 
 The DataGrid supports to change the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
 

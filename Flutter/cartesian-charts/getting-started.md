@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Flutter Cartesian Charts | Syncfusion
-description:  Step-by-step guide to set up Syncfusion Flutter Cartesian Charts—add dependencies, import, create SfCartesianChart, and configure key features.
+description: Step-by-step guide to set up Syncfusion Flutter Cartesian Charts—add dependencies, import, create SfCartesianChart, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug

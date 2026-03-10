@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize legends in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to enable, position, style, toggle series visibility, and more key features.
+description: Step-by-step guide to customize legends in Syncfusion Flutter Cartesian Charts—enable, position, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug

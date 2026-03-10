@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Area Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Area Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Area Chart in Syncfusion Flutter Cartesian Charts—add area series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Area Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Area Chart Guide (SfCartesianChart)
 
 To create a Flutter area chart quickly, you can check this video.
 
