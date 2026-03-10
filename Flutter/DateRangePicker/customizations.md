@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizations in Flutter Date Range Picker widget | Syncfusion
-description: Learn here all about Customizations features of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more. 
+title: Customizations in Flutter Date Range Picker | Syncfusion
+description: Step-by-step guide to customize Syncfusion Flutter Date Range Picker (SfDateRangePicker)—month/year cells, selection styling, month formats, and special date decorations.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Customizations in Flutter Date Range Picker (SfDateRangePicker)
+# Flutter Date Range Picker Customizations Guide (SfDateRangePicker)
 
 You can customize the month and year cells, month format, and selection cells in [Flutter Date Range Picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) (SfDateRangePicker).
 

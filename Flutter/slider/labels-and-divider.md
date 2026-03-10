@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels and Dividers in Flutter Slider widget | Syncfusion
-description: Learn here all about the Labels and Dividers feature of Syncfusion Flutter Slider (SfSlider) widget and more.
+title: Labels and Dividers in Flutter Slider | Syncfusion
+description: Step-by-step guide to customize labels and dividers in Syncfusion Flutter Slider—show labels, format numeric/date labels, place edge labels, and style dividers.
 platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Labels and Dividers in Flutter Slider (SfSlider)
+# Flutter Slider Labels and Dividers Guide (SfSlider)
 This section explains about how to add the labels and dividers in the slider.
 
 ## Show labels

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Zooming and Panning  in Flutter Maps widget | Syncfusion
-description: Learn here all about the Zooming and Panning feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Zooming and Panning in Flutter Maps | Syncfusion
+description: Step-by-step guide to configure zooming and panning in Syncfusion Flutter Maps—enable zoom/pan, set focal point, customize toolbar, callbacks, and programmatic control.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Zooming and Panning in Flutter Maps (SfMaps)
+# Flutter Maps Zooming and Panning Guide (SfMaps)
 
 It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or trackpad, or using the toolbar on the web. You can also pan the map to navigate across regions and customize the zoom level and center point of the initial rendering.
 

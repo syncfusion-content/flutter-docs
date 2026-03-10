@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Headers in Flutter Date Range Picker widget | Syncfusion | Date Picker
-description: Learn here all about Headers feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
+title: Headers in Flutter Date Range Picker | Syncfusion
+description: Step-by-step guide to customize the header and view header in Syncfusion Flutter Date Range Picker (SfDateRangePicker)—`headerStyle`, `headerHeight`, `viewHeaderStyle`, and `dayFormat`.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Headers in Flutter Date Range Picker (SfDateRangePicker)
+# Flutter Date Range Picker Headers Guide (SfDateRangePicker)
 
 You can customize the header of the date range picker using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) properties in date range picker.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Flutter Maps widget | Syncfusion
-description: Learn here all about the Markers feature of Syncfusion Flutter Maps (SfMaps) widget to customize its appearance including text, icon and more.
+title: Markers in Flutter Maps | Syncfusion
+description: Step-by-step guide to customize markers in Syncfusion Flutter Maps—add markers, customize appearance, update dynamically, and position markers programmatically using controllers.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Markers in Flutter Maps (SfMaps)
+# Flutter Maps Markers Guide (SfMaps)
 
 Markers can be used to denote specific locations on a map. You can use built-in symbols or display custom widgets at specific latitude and longitude coordinates on the map.
 
