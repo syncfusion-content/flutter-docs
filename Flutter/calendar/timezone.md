@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Time Aone Guide (SfCalendar)
+# Flutter Event Calendar Time Zone Guide (SfCalendar)
 
 [Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
 

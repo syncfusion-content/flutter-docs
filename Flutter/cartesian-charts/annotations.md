@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize annotations in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add, position, align, and style annotations, and more key features.
+description: Step-by-step guide to customize annotations in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add, style annotations, and more key features.
 platform: flutter
 control: Chart
 documentation: ug

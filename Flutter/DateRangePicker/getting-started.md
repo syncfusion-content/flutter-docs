@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter Date Range Picker | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Date Range Picker—add dependencies, import, create SfDateRangePicker, and configure key features.
+title: Getting started with Flutter Date Range Picker widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget, its elements, and more.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Flutter Date Range Picker Getting Started Guide (SfDateRangePicker)
+# Getting started with Flutter Date Range Picker (SfDateRangePicker)
 
 This section explains the steps required to add the [date range picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> date range picker widget.
 

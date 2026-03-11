@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Callbacks in Flutter Event Calendar | Scheduler
+title: Callbacks in Flutter Event Calendar | Syncfusion
 description: Step-by-step guide to customize callbacks in Syncfusion Flutter Event Calendar—handle view changes, taps, long press, and key features.
 platform: flutter
 control: SfCalendar

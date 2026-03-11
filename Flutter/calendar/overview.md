@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Flutter Event Calendar | Scheduler
+title: About Flutter Event Calendar | Syncfusion
 description: Step-by-step guide to Syncfusion Flutter Event Calendar—explore features, views, appointments, customization, and key features.
 platform: flutter
 control: SfCalendar
