@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Technical indicators in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Technical indicators feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Technical Indicators in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to add technical indicators in Syncfusion Flutter Cartesian Charts—configure AD, ATR, EMA, MACD, RSI, and key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Technical indicators in Flutter Cartesian Charts (SfCartesianChart)
-
+# Flutter Cartesian Charts Technical Indicators Guide (SfCartesianChart)
 
 The different types of technical indicators available in the chart are as follows:
 

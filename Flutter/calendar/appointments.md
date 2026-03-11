@@ -1,13 +1,13 @@
 ---
-layout: post 
-title: Appointments in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about Appointments feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+layout: post
+title: Appointment in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to customize appointments in Syncfusion Flutter Event Calendar—add data source, handle recurrence, appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Appointments in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Appointments Guide (SfCalendar)
 
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 

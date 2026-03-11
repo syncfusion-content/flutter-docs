@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about Localization feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Localization in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to customize localization in Syncfusion Flutter Event Calendar—add localization packages, set languages, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Localization in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Localization Guide (SfCalendar)
 
 By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Month view in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about Month view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Time Zone in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to customize time zone in Syncfusion Flutter Event Calendar—create appointments in different time zones and configure key features.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Month view in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Time Zone Guide (SfCalendar)
 
 The `month` view of Flutter Event [Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) (SfCalendar) used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 

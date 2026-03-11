@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fast line Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about fast line chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Fast Line Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Fast Line Chart in Syncfusion Flutter Cartesian Charts—add fast line series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Fast line Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Fast Line Chart Guide (SfCartesianChart)
 
 [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) is a line chart that loads faster than [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html). You can use this when there are a large number of points to be loaded in a chart. To render a fast line chart, create an instance of [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of fast line segment:
 
