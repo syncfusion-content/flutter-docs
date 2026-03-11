@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tile Layer in Flutter Maps | Syncfusion
-description: Step-by-step guide to configure the Tile Layer in Syncfusion Flutter Maps—set URL templates, add providers (OSM, Bing, TomTom), and configure focal point and zoom.
-platform: Flutter
+description: Step-by-step guide to configure the Tile Layer in Syncfusion Flutter Maps—set URL templates, add providers (OSM, Bing, TomTom), and focal point and zoom.
+platform: flutter
 control: SfMaps
 documentation: ug
 ---

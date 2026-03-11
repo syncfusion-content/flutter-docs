@@ -2,7 +2,7 @@
 layout: post
 title: Tooltip in Flutter Slider | Syncfusion
 description: Step-by-step guide to configure tooltips in Syncfusion Flutter Slider—enable tooltips, format text, customize appearance, and control behavior.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Flutter Date Range Picker | Syncfusion
-description: Step-by-step guide to configure localization in Syncfusion Flutter Date Range Picker (SfDateRangePicker)—add `flutter_localizations`, set `localizationsDelegates`, and define supported locales.
+description: Step-by-step guide to configure localization in Syncfusion Flutter Date Range Picker—add flutter_localizations, set localizationsDelegates, and define locales.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug

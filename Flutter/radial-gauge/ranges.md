@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Ranges in Flutter Radial Gauge | Syncfusion
-description: Step-by-step guide to add and customize ranges in Syncfusion Flutter Radial Gauge (SfRadialGauge)—configure start/end values, colors, gradients, offsets, and labels.
-platform: Flutter
+description: Step-by-step guide to add and customize ranges in Syncfusion Flutter Radial Gauge—configure start/end values, colors, gradients, offsets, and labels.
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---

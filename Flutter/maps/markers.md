@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Markers in Flutter Maps | Syncfusion
-description: Step-by-step guide to customize markers in Syncfusion Flutter Maps—add markers, customize appearance, update dynamically, and position markers programmatically using controllers.
-platform: Flutter
+description: Step-by-step guide to add and customize markers in Syncfusion Flutter Maps (SfMaps)—use built-in icons or custom widgets, position and manage markers.
+platform: flutter
 control: SfMaps
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Builders in Flutter Date Range Picker | Syncfusion
 description: Step-by-step guide to use builders in Syncfusion Flutter Date Range Picker (SfDateRangePicker)—custom cell builders, view customization, and sample usage.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---

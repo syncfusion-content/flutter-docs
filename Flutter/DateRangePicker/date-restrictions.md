@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Date Restrictions in Flutter Date Range Picker | Syncfusion
-description: Step-by-step guide to configure date restrictions in Syncfusion Flutter Date Range Picker (SfDateRangePicker)—min/max dates, blackout dates, selectableDayPredicate, and past-date settings.
+description: Step-by-step guide to configure date restrictions in Syncfusion Flutter Date Range Picker—min/max dates, blackout dates, selectableDayPredicate, and past-date.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug

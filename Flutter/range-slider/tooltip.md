@@ -2,7 +2,7 @@
 layout: post
 title: Tooltip in Flutter Range Slider | Syncfusion
 description: Step-by-step guide to configure tooltips in Syncfusion Flutter Range Slider—enable tooltips, format text, customize appearance, and control behavior.
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---

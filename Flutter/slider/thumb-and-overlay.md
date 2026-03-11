@@ -2,7 +2,7 @@
 layout: post
 title: Thumb and Thumb Overlay in Flutter Slider | Syncfusion
 description: Step-by-step guide to customize thumb and overlay in Syncfusion Flutter Slider—thumb size, color, icon, overlay size/color, and styling.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---

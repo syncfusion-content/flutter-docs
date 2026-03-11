@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Selections in Flutter Date Range Picker | Syncfusion
-description: Step-by-step guide to configure selection behavior in Syncfusion Flutter Date Range Picker (SfDateRangePicker)—single, multiple, range, multi-range, extendable selections, and selection styling.
-platform: Flutter
+description: Step-by-step guide to configure selection behavior in Syncfusion Flutter Date Range Picker—single, multiple, range, multi-range, selections, and styling.
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
