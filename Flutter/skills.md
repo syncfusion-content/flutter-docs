@@ -50,9 +50,9 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 Once skills are installed, the assistant can be used to generate and update Syncfusion<sup style="font-size:70%">&reg;</sup> Flutter code for tasks such as:
 
-- "Add a DataGrid with paging, sorting, and filtering."
-- "Create a Calendar with week view and gesture support."
-- "Apply Material 3 theme and enable dark mode."
+- "Add a DataGrid with paging, sorting, and filtering"
+- "Add a Line Chart with markers"
+- "Create a Calendar with week view"
 
 ## See also
 
