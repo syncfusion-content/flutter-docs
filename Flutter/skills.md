@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion Flutter component guidance.
+description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion Flutter widget guidance.
 control: Skills
 platform: flutter
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This guide introduces **Syncfusion Flutter Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Flutter code using official APIs, patterns, and theming guidelines.
 
-These skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate component usage patterns, API structures, supported features, and project‑specific configuration.
+These skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate widget usage patterns, API structures, supported features, and project‑specific configuration.
 
 ## Prerequisites
 
