@@ -18,7 +18,7 @@ These skills eliminate common issues with generic AI suggestions by grounding th
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Flutter Agent Skills, ensure the following:
 
-- Required [Flutter SDK](https://flutter.dev/docs/get-started/install) version >= 3.0
+- Install the [latest Flutter SDK](https://flutter.dev/docs/get-started/install).
 - Flutter application (existing or new); see [Quick Start](https://help.syncfusion.com/flutter/introduction/overview)
 - A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, etc.)
 
