@@ -42,7 +42,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Flutter Agent
 
 ## Installation
 
-Install [Syncfusion<sup style="font-size:70%">&reg;</sup> Flutter widgets skills](https://github.com/syncfusion/flutter-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
+Install [Syncfusion<sup style="font-size:70%">&reg;</sup> Flutter widgets skills](https://github.com/syncfusion.com/flutter-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ### Install all skills
 
