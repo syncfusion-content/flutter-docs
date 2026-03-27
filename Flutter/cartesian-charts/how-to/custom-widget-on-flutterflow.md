@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Syncfusion Cartesian Charts Widget in FlutterFlow | Syncfusion
-description: Step-by-step guide to add and use Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget in FlutterFlow—learn to create a custom widget, add dependencies, import packages, use code snippets, and integrate charts visually.
+title: Flutter Cartesian Charts in FlutterFlow | Syncfusion
+description: Step-by-step guide to add and use Syncfusion Flutter Cartesian Charts widget in FlutterFlow—learn to create a custom widget, add dependencies, import packages, use code snippets, and integrate charts visually.
 platform: flutter
 control: Chart
 documentation: ug
