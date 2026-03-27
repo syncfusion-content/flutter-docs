@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Custom shapes in Flutter Slider widget | Syncfusion
-description: Learn here all about adding the custom shapes in Syncfusion Flutter Slider (SfSlider) widget and more.
-platform: Flutter
+title: Custom shapes in Flutter Slider | Syncfusion
+description: Step-by-step guide to customize shapes in Syncfusion Flutter Slider—track, thumb, divider, ticks, and more.
+platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Shapes in Flutter Slider (SfSlider)
+# Flutter Slider Shapes Guide (SfSlider)
 
-This section helps to learn about how to customize the shapes of the slider elements.
+This section explains how to customize slider shape elements—track, thumb, divider, and ticks.
 
 ## Track shape
 

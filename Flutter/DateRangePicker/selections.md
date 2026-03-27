@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selections in Flutter Date Range Picker widget | Syncfusion
-description: Learn here all about Selections feature in Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
-platform: Flutter
+title: Selections in Flutter Date Range Picker | Syncfusion
+description: Step-by-step guide to configure selection behavior in Syncfusion Flutter Date Range Picker—single, multiple, range, multi-range, selections, and styling.
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Selections in Flutter Date Range Picker (SfDateRangePicker)
+# Flutter Date Range Picker Selections Guide (SfDateRangePicker)
 
 Dates can be selected by touching the month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) provides support to select dates in five modes such as [Single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single), [Multiple](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiple), [Range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range) [MultiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange) and [ExtendableRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#extendableRange) selection
 

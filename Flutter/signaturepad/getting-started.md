@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Signature Pad widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its elements, and more.
+title: Getting Started with Flutter Signature Pad | Syncfusion
+description: Step-by-step guide to set up Syncfusion Flutter Signature Pad—add dependencies, import, create SfSignaturePad, and configure key features.
 platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Getting Started with Flutter SignaturePad (SfSignaturePad)
+# Flutter Signature Pad Getting Started Guide (SfSignaturePad)
 
 This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color, and background color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad, and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html) and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the SignaturePad widget.
 
