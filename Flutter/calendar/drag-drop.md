@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Drag and Drop in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize drag and drop in Syncfusion Flutter Event Calendar—enable drag, handle callbacks, appearance, and key features.
+description: Step-by-step guide to control drag and drop in Syncfusion Flutter Event Calendar—enable drag, handle callbacks, appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

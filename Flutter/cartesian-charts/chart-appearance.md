@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize chart appearance in Syncfusion Flutter Cartesian Charts—learn to set chart size, margin, border, and more key features.
+description: Step-by-step guide to control chart appearance in Syncfusion Flutter Cartesian Charts—learn to set chart size, margin, border, and more key features.
 platform: flutter
 control: Chart
 documentation: ug

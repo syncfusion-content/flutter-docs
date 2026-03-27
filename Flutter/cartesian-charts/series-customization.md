@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize series in Syncfusion Flutter Cartesian Charts—enable animation, handle empty points, and configure key features.
+description: Step-by-step guide to control series in Syncfusion Flutter Cartesian Charts—enable animation, handle empty points, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug

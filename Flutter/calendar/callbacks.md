@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Callbacks in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize callbacks in Syncfusion Flutter Event Calendar—handle view changes, taps, long press, and key features.
+description: Step-by-step guide to handle callbacks in Syncfusion Flutter Event Calendar—respond to view changes, taps, long press, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

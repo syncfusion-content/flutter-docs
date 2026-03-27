@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Headers in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize headers in Syncfusion Flutter Event Calendar—change header height, date format, appearance, and key features.
+description: Step-by-step guide to control headers in Syncfusion Flutter Event Calendar—change header height, date format, appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

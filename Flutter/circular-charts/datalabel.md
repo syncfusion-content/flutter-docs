@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Label in Flutter Circular Charts | Syncfusion
+title: Flutter Circular Charts Data Label Guide | Syncfusion
 description: Step-by-step guide to create and customize data labels in Syncfusion Flutter Circular Charts—add, style, and configure data labels, and key features.
 platform: flutter
 control: Chart

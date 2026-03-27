@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to Syncfusion Flutter Cartesian Charts—explore chart types, axis types, legends, and configure key features for Flutter apps.
+description: Step-by-step guide about Syncfusion Flutter Cartesian Charts—explore chart types, axis types, legends, and configure key features for Flutter apps.
 platform: flutter
 control: Chart
 documentation: ug

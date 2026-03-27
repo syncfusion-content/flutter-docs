@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize localization in Syncfusion Flutter Event Calendar—add localization packages, set languages, and key features.
+description: Step-by-step guide to control localization in Syncfusion Flutter Event Calendar—add localization packages, set languages, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

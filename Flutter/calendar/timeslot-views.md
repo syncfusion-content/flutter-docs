@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeslot Views in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize timeslot views in Syncfusion Flutter Event Calendar—change intervals, working days, special regions, and key features.
+description: Step-by-step guide to control timeslot views in Syncfusion Flutter Event Calendar—change intervals, working days, special regions, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

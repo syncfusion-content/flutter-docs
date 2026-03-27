@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Builders in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize builders in Syncfusion Flutter Event Calendar—add custom month cell, appointment, time region, and header views.
+description: Step-by-step guide to use builders in Syncfusion Flutter Event Calendar—add custom month cell, appointment, time region, and header views.
 platform: flutter
 control: SfCalendar
 documentation: ug

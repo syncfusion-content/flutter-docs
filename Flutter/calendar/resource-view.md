@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource view in the Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize resource view in Syncfusion Flutter Event Calendar—add resources, customize appearance, and key features.
+description: Step-by-step guide to control resource view in Syncfusion Flutter Event Calendar—add resources, customize appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

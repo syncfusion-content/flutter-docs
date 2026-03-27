@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Date Navigations in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize date navigation in Syncfusion Flutter Event Calendar—restrict date range, programmatically navigate, and key features.
+description: Step-by-step guide to control date navigation in Syncfusion Flutter Event Calendar—restrict date range, programmatically navigate, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

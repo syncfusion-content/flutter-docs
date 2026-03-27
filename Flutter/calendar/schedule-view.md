@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Schedule View in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to customize schedule view in Syncfusion Flutter Event Calendar—display appointments, customize headers, and key features.
+description: Step-by-step guide to control schedule view in Syncfusion Flutter Event Calendar—display appointments, customize headers, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug

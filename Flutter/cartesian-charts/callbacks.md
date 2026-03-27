@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Callback in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to customize callback events in Syncfusion Flutter Cartesian Charts—handle tooltip, data label, legend, and configure key features.
+description: Step-by-step guide to handle callback events in Syncfusion Flutter Cartesian Charts—handle tooltip, data label, legend, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
