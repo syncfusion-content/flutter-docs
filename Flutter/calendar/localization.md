@@ -57,7 +57,7 @@ return MaterialApp(
 {% endtabs %}
 
 ## Localize the custom text in Calendar
-Calendar custom text can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
+Calendar custom text can be localized using the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations/versions) package and specifying `localizationsDelegates` in `MaterialApp`.
 
 To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 

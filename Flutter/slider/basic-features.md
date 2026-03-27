@@ -472,11 +472,11 @@ Widget build(BuildContext context) {
 
 ### For customizing individual items
 
-* Track - [`Link`](https://help.syncfusion.com/flutter/slider/track)
-* Ticks - [`Link`](https://help.syncfusion.com/flutter/slider/ticks)
-* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/slider/labels-and-divider)
-* Tooltip - [`Link`](https://help.syncfusion.com/flutter/slider/tooltip)
-* Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay)
+* [`Track`](https://help.syncfusion.com/flutter/slider/track)
+* [`Ticks`](https://help.syncfusion.com/flutter/slider/ticks)
+* [`Labels and dividers`](https://help.syncfusion.com/flutter/slider/labels-and-divider)
+* [`Tooltip`](https://help.syncfusion.com/flutter/slider/tooltip)
+* [`Thumb and overlay`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay)
 
 To know more about how to customize both thumb and divider in the Flutter Slider, you can watch this video.
 

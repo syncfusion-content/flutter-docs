@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Chat (SfChat) Overview
 
-The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message content (header, footer, content, and avatar).
+The [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat/versions) widget displays conversations between two or more users and offers a wide range of customization options, including the [composer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html), action button, and message content (header, footer, content, and avatar).
 
 ![Chat overview](images/overview/chat-overview.gif)
 
@@ -17,7 +17,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations betwee
 
 * **Placeholder** - The [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) can be used to create a custom widget that appears when conversations are empty. This feature is especially useful for displaying a relevant or visually appealing message, indicating that the conversation currently has no messages.
 
-* **Composer** - The primary text editor where new chat messages can be composed. You can also integrate custom composer widgets.
+* **Composer** - The primary text editor where new chat messages can be composed. You can also integrate custom [composer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) widgets.
 
 * **Action Button** - Represents the send button. Pressing this action button invokes the [`onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback with the text entered in the default [`ChatComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer-class.html).
 

@@ -106,7 +106,7 @@ class Data {
 
 ## Selection with SfChart
 
-We have provided built-in support for selecting the chart segments based on the selected range in range selector. To achieve this segment selection, you must set the `SelectionSettings.selectionController` property in the `SfCartesianChart.series` property.
+We have provided built-in support for selecting the chart segments based on the selected range in range selector. To achieve this segment selection, you must set the `SelectionSettings.selectionController` property in the [`SfCartesianChart.series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) property.
 
 {% tabs %}
 {% highlight Dart %}

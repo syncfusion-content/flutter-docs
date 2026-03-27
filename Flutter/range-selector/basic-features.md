@@ -2,7 +2,7 @@
 layout: post
 title: Basic features in Flutter Range Selector widget | Syncfusion
 description: Learn here all about adding the Basic features in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -593,8 +593,8 @@ class Data {
 
 ### For customizing individual items
 
-* Track - [`Link`](https://help.syncfusion.com/flutter/range-selector/track)
-* Ticks - [`Link`](https://help.syncfusion.com/flutter/range-selector/ticks)
-* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider)
-* Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-selector/tooltip)
-* Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay)
+* [`Track`](https://help.syncfusion.com/flutter/range-selector/track)
+* [`Ticks`](https://help.syncfusion.com/flutter/range-selector/ticks)
+* [`Labels and dividers`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider)
+* [`Tooltips`](https://help.syncfusion.com/flutter/range-selector/tooltip)
+* [`Thumb and overlay`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay)

@@ -2,7 +2,7 @@
 layout: post
 title: Labels in Flutter Range Slider widget | Syncfusion
 description: Learn here all about adding the Labels feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more. 
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -399,7 +399,7 @@ Widget build(BuildContext context) {
 
 ![Hour date format support](images/label-and-divider/vertical-hour-date-format.png)
 
-N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
+N> Refer the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class for other date format.
 
 ## Label placement
 

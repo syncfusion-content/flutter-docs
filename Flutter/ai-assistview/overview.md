@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter AI AssistView (SfAIAssistView) Overview
 
-The Syncfusion<sup>&reg;</sup> Flutter AI AssistView widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
+The [Syncfusion<sup>&reg;</sup> Flutter AI AssistView](https://pub.dev/packages/syncfusion_flutter_chat/versions) widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
 
 ![AI AssistView overview](images/overview/ai-assistview.gif)
 
@@ -17,13 +17,13 @@ The Syncfusion<sup>&reg;</sup> Flutter AI AssistView widget is a powerful and cu
 
 * **Placeholder Builder** - The [`SfAIAssistView.placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) allows you to specify a custom widget to display when there are no messages in the chat. This is particularly useful for presenting users with a relevant or visually appealing message indicating that the conversation is currently empty.
 
-* **Composer** - This is the primary text editor where the user can compose new request messages.
+* **Composer** - The [composer](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) is the primary text editor where the user can compose new request messages.
 
 * **Action Button** - This represents the send button. Pressing this action button invokes the [`AssistActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/onPressed.html) callback with the text entered in the default [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html).
 
 * **Message Content** -  A list of [`AssistMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage-class.html) objects that will be displayed in the chat interface as either a request message from the user or a response message from AI. Each [`AssistMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage-class.html) includes details such as the message text, timestamp, and author information.
 
-* **Suggestions** - The response set for a message can be included with the response itself, and choosing this suggestion can be treated as a new request message.
+* **Suggestions** - The [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html) is response set for a message can be included with the response itself, and choosing this suggestion can be treated as a new request message.
 
 * **Footer items** - This is a collection action bar items for a response message. Particularly useful for adding action items such as like, dislike, copy, retry, etc.
 

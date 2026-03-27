@@ -11,12 +11,12 @@ documentation: ug
 
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
-* [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
+* [`QRCode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
 * [`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
 
 ## QR Code
 
-A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
+A [`QRCode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
 
 * The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40 that measures 177 modules x 177 modules. 
 * Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text.
@@ -49,7 +49,7 @@ A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/b
 The data that can be stored in the QR code depends upon the following property:
 
 * [`Error correction level`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/errorCorrectionLevel.html)
-* [`QR code version`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/codeVersion.html)
+* [`QRCode version`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/codeVersion.html)
 * [`Input mode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html)
 
 
@@ -95,7 +95,7 @@ The data can be read from the damaged image based on the error correction level,
 
 **Input mode**
 
-The [`inputMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html) property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as [`binaryMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRInputMode-class.html).
+The [`inputMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html) property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as [`QRInputMode.binary`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRInputMode.html).
 
 numeric - supports from 0 to 9
 alphaNumeric - supports 0 to 9, A to Z, space, $, %, *, +, -,., /, :

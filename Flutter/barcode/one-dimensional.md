@@ -57,7 +57,7 @@ One-dimensional barcodes represent data by varying the widths and spacings of pa
 
 ## Code39
 
-[`Code 39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html) is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
+[`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html) is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
 
 * Allows character set of digits (0-9), upper case alphabets (A-Z), and symbols like space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%).
 * Each character is encoded with 5 bars and 4 spaces where 3 are wide and 6 are narrow.
@@ -148,7 +148,7 @@ As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/lat
 
 ## Code128
 
-[`Code 128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html) is a highly efficient, high-density linear barcode symbology that allows the encoding of alphanumeric data. It is capable of encoding full ASCII character set and extended character sets. This symbology contains the checksum digit for verification and the barcode can also be verified character-by-character for the parity of each data byte.
+[`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html) is a highly efficient, high-density linear barcode symbology that allows the encoding of alphanumeric data. It is capable of encoding full ASCII character set and extended character sets. This symbology contains the checksum digit for verification and the barcode can also be verified character-by-character for the parity of each data byte.
 
 The [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html) symbology encodes the input symbols supported by [`Code128A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128A-class.html), [`Code128B`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128B-class.html), [`Code128C`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128C-class.html). The default symbology type of barcode generator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html)
 
