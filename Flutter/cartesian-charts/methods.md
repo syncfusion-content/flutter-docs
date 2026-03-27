@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about available Methods of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Methods in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to use methods in Syncfusion Flutter Cartesian Charts—show or hide tooltips, trackball, zoom, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Methods Guide (SfCartesianChart)
 
 ## Methods in Plot band
 

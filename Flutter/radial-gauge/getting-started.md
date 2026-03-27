@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Radial Gauge widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Radial Gauge (SfRadialGauge) control, its elements, and more. 
+title: Getting Started with Flutter Radial Gauge | Syncfusion
+description: Step-by-step guide to set up Syncfusion Flutter Radial Gauge—add dependencies, import, create SfRadialGauge, and configure key features.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Getting started with Flutter Radial Gauge (SfRadialGauge)
+# Flutter Radial Gauge Getting Started Guide (SfRadialGauge)
 
 This section explains the steps required to add the Flutter [Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) and its elements such as title, axis, range, pointer and annotation. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> radial gauge. 
 

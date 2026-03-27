@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Tooltip feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Tooltip in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to control tooltips in Syncfusion Flutter Cartesian Charts—enable, format, style tooltips, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Tooltip in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Tooltip Guide (SfCartesianChart)
 
 Chart provides tooltip support for all the series. It is used to show information about the segment when you tap on the segment. To enable the tooltip, you can set the [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/enable.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) to *true*. By default, the tooltip is set to *false*. You need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property to *true* to enable tooltip for a particular series alone.
 

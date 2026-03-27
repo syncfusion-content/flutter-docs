@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Builders in the Flutter Event Calendar widget | Syncfusion
-description: Learn here all about builders feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Builders in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to use builders in Syncfusion Flutter Event Calendar—add custom month cell, appointment, time region, and header views.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Builders in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Builders Guide (SfCalendar)
+
 The calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
 
 The calendar has two builders to create and assign your custom view:

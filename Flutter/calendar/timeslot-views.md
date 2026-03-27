@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Timeslot views in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about timeslot views feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Timeslot Views in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to control timeslot views in Syncfusion Flutter Event Calendar—change intervals, working days, special regions, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Timeslot views in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Timeslot View Guide (SfCalendar)
+
 [Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on their duration.
 
 * **Day view:** Displays a single day.

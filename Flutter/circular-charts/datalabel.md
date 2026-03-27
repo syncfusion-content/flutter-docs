@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data label in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Data label feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Flutter Circular Charts Data Label Guide | Syncfusion
+description: Step-by-step guide to create and customize data labels in Syncfusion Flutter Circular Charts—add, style, and configure data labels, and key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Data label in Flutter Circular Charts (SfCircularChart)
+# Flutter Circular Charts Data label Guide (SfCircularChart)
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) property in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 
