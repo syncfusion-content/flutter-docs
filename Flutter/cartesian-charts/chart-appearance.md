@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Customization feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Customization in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to customize chart appearance in Syncfusion Flutter Cartesian Charts—learn to set chart size, margin, border, and more key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Customization in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Customization Guide (SfCartesianChart)
 
 ## Chart sizing
 

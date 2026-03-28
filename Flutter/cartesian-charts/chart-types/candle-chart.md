@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Candle Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about candle chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Candle Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Candle Chart in Syncfusion Flutter Cartesian Charts—add candle series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Candle Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Candle Chart Guide (SfCartesianChart)
 
 To create a Flutter candle chart quickly, you can check this video.
 

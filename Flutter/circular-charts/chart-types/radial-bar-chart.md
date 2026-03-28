@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Radial bar Chart in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about radial bar chart of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Radial Bar Chart in Flutter Circular Charts | Syncfusion
+description: Step-by-step guide to create and customize Radial Bar Chart in Syncfusion Flutter Circular Charts—add, style, and configure radial bar series, and key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Radial bar Chart in Flutter Circular Charts (SfCircularChart)
+# Flutter Circular Charts Radial Bar Chart Guide (SfCircularChart)
+
 
 To create a Flutter radial bar chart quickly, you can check this video.
 

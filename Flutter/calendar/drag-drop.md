@@ -1,13 +1,13 @@
 ---
 layout: post 
-title: Drag and drop in Flutter Event Calendar widget | Syncfusion
-description: Learn here all about Drag and drop feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
+title: Drag and Drop in Flutter Event Calendar | Syncfusion
+description: Step-by-step guide to customize drag and drop in Syncfusion Flutter Event Calendar—enable drag, handle callbacks, appearance, and key features.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Appointment Drag and Drop in Flutter Event Calendar (SfCalendar)
+# Flutter Event Calendar Appointment Drag and Drop Guide (SfCalendar)
 
 Easily reschedule an appointment by dragging it from one time slot or month cell and dropping it into a different time slot or month cell.
 

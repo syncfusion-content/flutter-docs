@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scatter Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about scatter chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Scatter Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Scatter Chart in Syncfusion Flutter Cartesian Charts—add scatter series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Scatter Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Scatter Chart Guide (SfCartesianChart)
 
 To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the scatter segment appearance.
 

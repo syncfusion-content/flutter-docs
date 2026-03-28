@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Trackball and Crosshair in Flutter Cartesian Charts | Syncfusion 
-description: Learn here all about trackball and crosshair feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Trackball and Crosshair Customization in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to customize trackball and crosshair in Syncfusion Flutter Cartesian Charts—enable, format, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Trackball and Crosshair in Flutter Cartesian Charts (SfCartesianChart)
+# Flutter Cartesian Charts Trackball and Crosshair Guide (SfCartesianChart)
 
 ## Trackball
 
