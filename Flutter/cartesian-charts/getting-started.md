@@ -246,7 +246,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in corresponding legends.
+Additionally, the series [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in corresponding legends.
 
 {% tabs %}
 {% highlight dart %} 
