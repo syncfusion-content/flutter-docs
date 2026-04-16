@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Time Zone Guide (SfCalendar)
+# Flutter Event Calendar Time Zone (SfCalendar)
 
 The `month` view of Flutter Event [Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) (SfCalendar) used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 

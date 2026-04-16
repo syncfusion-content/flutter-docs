@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Stacked Column Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Stacked Column Chart (SfCartesianChart)
 
 To create a Flutter stacked column chart quickly, you can check this video.
 

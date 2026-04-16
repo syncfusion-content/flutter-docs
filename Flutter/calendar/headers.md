@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Headers Guide (SfCalendar)
+# Flutter Event Calendar Headers (SfCalendar)
 
 You can learn about the header and view header height, date format, and appearance support of SfCalendar.
 

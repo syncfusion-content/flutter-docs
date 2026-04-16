@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Timeslot View Guide (SfCalendar)
+# Flutter Event Calendar Timeslot View (SfCalendar)
 
 [Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on their duration.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Bar Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Bar Chart (SfCartesianChart)
 
 To create a Flutter bar chart quickly, you can check this video.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Axis Types Guide (SfCartesianChart)
+# Flutter Cartesian Charts Axis Types (SfCartesianChart)
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 

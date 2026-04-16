@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Legend Guide (SfCircularChart)
+# Flutter Circular Charts Legend (SfCircularChart)
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) contains list of data points in chart. The information provided in each legend item helps to identify the corresponding data points in chart.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Multiple Charts Guide (SfCartesianChart)
+# Flutter Cartesian Charts Multiple Charts (SfCartesianChart)
 
 ## Multiple series
 

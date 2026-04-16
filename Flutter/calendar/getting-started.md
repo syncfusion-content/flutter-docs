@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Getting Started Guide (SfCalendar)
+# Flutter Event Calendar Getting Started (SfCalendar)
 
 This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> calendar widget.
 

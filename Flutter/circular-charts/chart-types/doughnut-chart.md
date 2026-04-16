@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Doughnut Chart Guide (SfCircularChart)
+# Flutter Circular Charts Doughnut Chart (SfCircularChart)
 
 To create a Flutter doughnut chart quickly, you can check this video.
 

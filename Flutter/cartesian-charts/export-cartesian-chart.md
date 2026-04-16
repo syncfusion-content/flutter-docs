@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Exporting Guide (SfCartesianChart)
+# Flutter Cartesian Charts Exporting (SfCartesianChart)
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to export the Cartesian chart as a PNG image or as a PDF document.
 

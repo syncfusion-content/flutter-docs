@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Tooltip Guide (SfCartesianChart)
+# Flutter Cartesian Charts Tooltip (SfCartesianChart)
 
 Chart provides tooltip support for all the series. It is used to show information about the segment when you tap on the segment. To enable the tooltip, you can set the [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/enable.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) to *true*. By default, the tooltip is set to *false*. You need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property to *true* to enable tooltip for a particular series alone.
 

@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Date Navigations Guide (SfCalendar)
+# Flutter Event Calendar Date Navigations (SfCalendar)
 
 ## Range for visible dates
 Visible dates can be restricted between certain range of dates, using [minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) properties in [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). It is applicable in all the schedule views.

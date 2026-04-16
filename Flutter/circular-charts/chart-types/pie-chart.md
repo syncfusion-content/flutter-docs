@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Pie Chart Guide (SfCircularChart)
+# Flutter Circular Charts Pie Chart (SfCircularChart)
 
 To create a Flutter pie chart quickly, you can check this video.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Series customization Guide (SfCircularChart)
+# Flutter Circular Charts Series customization (SfCircularChart)
 
 ## Animation
 

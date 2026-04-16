@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Zooming and Panning Guide (SfCartesianChart)
+# Flutter Cartesian Charts Zooming and Panning (SfCartesianChart)
 
 
 ## Pinch zooming

@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Builders Guide (SfCalendar)
+# Flutter Event Calendar Builders (SfCalendar)
 
 The calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
 

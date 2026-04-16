@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Stacked Line Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Stacked Line Chart (SfCartesianChart)
 
 To create a Flutter stacked line chart quickly, you can check this video.
 

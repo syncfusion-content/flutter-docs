@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Callback Events Guide (SfCartesianChart)
+# Flutter Cartesian Charts Callback Events (SfCartesianChart)
 
 This document describes the callbacks available for the Cartesian chart
 

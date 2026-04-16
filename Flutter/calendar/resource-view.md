@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Resource View Guide (SfCalendar)
+# Flutter Event Calendar Resource View (SfCalendar)
 
 The timeline resource grouping is a discrete view integrated into our Event calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
 

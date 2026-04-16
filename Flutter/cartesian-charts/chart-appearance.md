@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Customization Guide (SfCartesianChart)
+# Flutter Cartesian Charts Customization (SfCartesianChart)
 
 ## Chart sizing
 

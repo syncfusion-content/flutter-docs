@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Schedule View Guide (SfCalendar)
+# Flutter Event Calendar Schedule View (SfCalendar)
 
 The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min and max dates, by default displaying the appointments from the current date. If the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) property of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) is null then the schedule view will display the month, week, and date headers alone in the view.
 

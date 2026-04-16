@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Methods Guide (SfCartesianChart)
+# Flutter Cartesian Charts Methods (SfCartesianChart)
 
 ## Methods in Plot band
 

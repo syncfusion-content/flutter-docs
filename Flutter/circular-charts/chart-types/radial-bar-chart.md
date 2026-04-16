@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Radial Bar Chart Guide (SfCircularChart)
+# Flutter Circular Charts Radial Bar Chart (SfCircularChart)
 
 
 To create a Flutter radial bar chart quickly, you can check this video.

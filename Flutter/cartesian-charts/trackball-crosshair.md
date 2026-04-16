@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Trackball and Crosshair Guide (SfCartesianChart)
+# Flutter Cartesian Charts Trackball and Crosshair (SfCartesianChart)
 
 ## Trackball
 

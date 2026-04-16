@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Getting Started Guide (SfCartesianChart)
+# Flutter Cartesian Charts Getting Started (SfCartesianChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 

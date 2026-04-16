@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Flutter Event Calendar Appointment Drag and Drop Guide (SfCalendar)
+# Flutter Event Calendar Appointment Drag and Drop (SfCalendar)
 
 Easily reschedule an appointment by dragging it from one time slot or month cell and dropping it into a different time slot or month cell.
 

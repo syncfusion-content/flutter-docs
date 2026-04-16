@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Annotation Guide (SfCartesianChart)
+# Flutter Cartesian Charts Annotation (SfCartesianChart)
 
 Chart supports annotations which, allows you to mark the specific area of interest in the chart area. You can add custom widgets using this annotations feature as depicted below.
 

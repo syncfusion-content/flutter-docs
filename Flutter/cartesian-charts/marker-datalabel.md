@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Marker and Data Label Guide (SfCartesianChart)
+# Flutter Cartesian Charts Marker and Data Label (SfCartesianChart)
 
 ## Marker
 

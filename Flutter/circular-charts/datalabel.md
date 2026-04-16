@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Data label Guide (SfCircularChart)
+# Flutter Circular Charts Data label (SfCircularChart)
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) property in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 

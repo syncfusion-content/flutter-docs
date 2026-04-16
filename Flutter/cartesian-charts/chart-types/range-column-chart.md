@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Range Column Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Range Column Chart (SfCartesianChart)
 
 To create a Flutter range column chart quickly, you can check this video.
 

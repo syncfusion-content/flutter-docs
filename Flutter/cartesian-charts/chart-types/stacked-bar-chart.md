@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Stacked Bar Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Stacked Bar Chart (SfCartesianChart)
 
 To create a Flutter stacked bar chart quickly, you can check this video.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Candle Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Candle Chart (SfCartesianChart)
 
 To create a Flutter candle chart quickly, you can check this video.
 

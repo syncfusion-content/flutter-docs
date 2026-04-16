@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Series Customization Guide (SfCartesianChart)
+# Flutter Cartesian Charts Series Customization (SfCartesianChart)
 
 ## Animation
 

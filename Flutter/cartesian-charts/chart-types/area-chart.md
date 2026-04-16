@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Area Chart Guide (SfCartesianChart)
+# Flutter Cartesian Charts Area Chart (SfCartesianChart)
 
 To create a Flutter area chart quickly, you can check this video.
 

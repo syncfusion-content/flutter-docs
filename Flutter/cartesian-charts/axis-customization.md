@@ -7,7 +7,7 @@ control: Cartesian Charts
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Axis Customization Guide (SfCartesianChart)
+# Flutter Cartesian Charts Axis Customization (SfCartesianChart)
 
 ## Common axis features
 
