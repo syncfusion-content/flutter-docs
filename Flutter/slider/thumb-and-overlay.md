@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Thumb and Thumb Overlay Guide (SfSlider)
+# Flutter Slider Thumb and Thumb Overlay (SfSlider)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the slider.
 

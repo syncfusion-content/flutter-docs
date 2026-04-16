@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Flutter Date Range Picker Getting Started Guide (SfDateRangePicker)
+# Flutter Date Range Picker Getting Started (SfDateRangePicker)
 
 This section explains the steps required to add the [date range picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> date range picker widget.
 

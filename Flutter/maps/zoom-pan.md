@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Flutter Maps Zooming and Panning Guide (SfMaps)
+# Flutter Maps Zooming and Panning (SfMaps)
 
 It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. You can also pan the map to navigate across regions and customize the zoom level and center point of the initial rendering.
 

@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Labels and Dividers Guide (SfSlider)
+# Flutter Slider Labels and Dividers (SfSlider)
 This section explains about how to add the labels and dividers in the slider.
 
 ## Show labels

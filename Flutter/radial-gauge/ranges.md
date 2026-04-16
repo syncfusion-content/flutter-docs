@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Flutter Radial Gauge Ranges Guide (SfRadialGauge)
+# Flutter Radial Gauge Ranges (SfRadialGauge)
 
 Gauge ranges are visual elements that help to quickly visualize where a value falls on the axis. Text can be easily annotated in ranges to improve readability.
 

@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Flutter Date Range Picker Date Restrictions Guide (SfDateRangePicker)
+# Flutter Date Range Picker Date Restrictions (SfDateRangePicker)
 
 ## Minimum display date
 

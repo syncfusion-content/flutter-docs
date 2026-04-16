@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Getting Started Guide (SfLinearGauge)
+# Flutter Linear Gauge Getting Started (SfLinearGauge)
 
 This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer, and also covers basic features needed to get started with the Linear Gauge widget.
 

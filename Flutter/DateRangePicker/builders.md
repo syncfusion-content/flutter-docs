@@ -6,7 +6,7 @@ platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
-# Flutter Date Range Picker Builders Guide (SfDateRangePicker)
+# Flutter Date Range Picker Builders (SfDateRangePicker)
 
 The date range picker allows you to create a responsive UI with the conditions based on a widget’s details, and to design and create your custom view to the month cells and year cells in the date range picker.
 

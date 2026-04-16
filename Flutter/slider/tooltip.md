@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Tooltip Guide (SfSlider)
+# Flutter Slider Tooltip (SfSlider)
 
 This section helps to learn about how to add tooltip in the slider.
 

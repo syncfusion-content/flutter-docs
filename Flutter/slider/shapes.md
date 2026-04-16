@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Shapes Guide (SfSlider)
+# Flutter Slider Shapes (SfSlider)
 
 This section explains how to customize slider shape elements—track, thumb, divider, and ticks.
 

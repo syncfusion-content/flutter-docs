@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Flutter Range Slider Tooltip Guide (SfRangeSlider)
+# Flutter Range Slider Tooltip (SfRangeSlider)
 
 This section helps to learn about how to add tooltip in the range slider.
 

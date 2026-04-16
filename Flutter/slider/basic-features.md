@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Basic Features Guide (SfSlider)
+# Flutter Slider Basic Features (SfSlider)
 This section explains how to add and configure numeric and date sliders, core properties, and callbacks.
 
 ## Minimum
