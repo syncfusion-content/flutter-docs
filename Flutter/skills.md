@@ -51,7 +51,7 @@ Use the following command to install all widget skills at once in the `.agents/s
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx skills add syncfusion/flutter-widgets-skills -y
+npx skills add syncfusion/flutter-ui-components-skills -y
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ Use the following command to install skills interactively:
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx skills add syncfusion/flutter-widgets-skills
+npx skills add syncfusion/flutter-ui-components-skills
 
 {% endhighlight %}
 {% endtabs %}
