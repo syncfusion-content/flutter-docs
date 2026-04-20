@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Cartesian Charts widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, its features, and more.
+title: Overview of Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide about Syncfusion Flutter Cartesian Charts—explore chart types, axis types, legends, and configure key features for Flutter apps.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts (SfCartesianChart) Overview
+# Flutter Cartesian Charts Overview (SfCartesianChart)
 
 Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts (SfCartesianChart) widget is written natively in Dart for creating beautiful and high-performance Cartesian charts, which are used to craft high-quality applications using Flutter.
 
