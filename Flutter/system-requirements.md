@@ -41,7 +41,14 @@ See the links below for the recommended Flutter development environments:
     <tr>
         <th style="text-align:center">Flutter SDK Stable Version</th>
         <th style="text-align:center">Syncfusion<sup>&reg;</sup> Compatible Package Version</th>
-    </tr>
+   </tr>
+      <tr>
+      <td style="text-align:center">
+         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.41.0-stable.zip">3.41.0</a>
+      </td>
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15">31.2.15</a> <33.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+      </td>
+   </tr>
    <tr>
        <td style="text-align:center">
            <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.38.1-stable.zip">3.38.1</a>
