@@ -11,7 +11,7 @@ documentation: UG
 
 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for Flutter is a comprehensive suite of Flutter widgets for building modern, cross-platform mobile, web, and desktop applications. It provides high-performance, feature-rich widgets like Charts, DataGrid, Calendar, and more to help developers create visually appealing and responsive applications with ease.
 
-![Syncfusion Flutter banner preview.](../images/flutter-banner.png){:width="900" height="500" loading="lazy" class="right-section-image" }
+![Syncfusion Flutter banner preview.](../Images/flutter-banner.png){:width="900" height="500" loading="lazy" class="right-section-image" }
 
 ## Supported Platforms
 
