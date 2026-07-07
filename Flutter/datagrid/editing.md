@@ -11,12 +11,6 @@ documentation: ug
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) supports editing the cell values by setting the [SfDataGrid.allowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property to true, [SfDataGrid.navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) to cell, and [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) to a value other than none.
 
->**NOTE**  
-  **Requirements**: Flutter 2.0 or later, `syncfusion_flutter_datagrid` package (latest version recommended). The `collection` package is required for the `firstWhereOrNull` helper method used in examples.
-
->**NOTE**  
-  The editing feature requires the `syncfusion_flutter_datagrid` package. Ensure you have added it to your `pubspec.yaml` file and imported it in your code.
-
 By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) does not load any widget when a cell enters edit mode. You must provide the required widget when a cell enters edit mode by returning it through the [DataGridSource.buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method in the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/DataGridSource.html) class.
 
 The following arguments are passed in the `buildEditWidget` method.
@@ -30,8 +24,7 @@ We recommend saving the edited value through the editor widgets in the [DataGrid
 
 The following example shows how to enable editing in Datagrid and commit the edited cell value in the `onCellSubmit` method.
 
->**NOTE**  
-  The `firstWhereOrNull` method is from the [collection](https://pub.dev/packages/collection) package. Add it to your `pubspec.yaml` dependencies and import with `import 'package:collection/collection.dart';`
+> **Note:** The `firstWhereOrNull` method is from the [collection](https://pub.dev/packages/collection) package. Add it to your `pubspec.yaml` dependencies and import with `import 'package:collection/collection.dart';`
 
 {% tabs %}
 {% highlight dart %}
@@ -54,47 +47,35 @@ import 'package:collection/collection.dart';
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
           ),
           GridColumn(
             columnName: 'name',
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
           ),
           GridColumn(
             columnName: 'designation',
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
           ),
           GridColumn(
             columnName: 'salary',
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
           ),
-        ]
-      )
+        ],
+      ),
     );
   }
 
@@ -108,24 +89,48 @@ class EmployeeDataSource extends DataGridSource {
   /// Controls the editable text in the [TextField] widget
   TextEditingController editingController = TextEditingController();
 
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employees = employeeData;
+
+    dataGridRows = _employees.map<DataGridRow>((Employee employee) {
+      return DataGridRow(
+        cells: <DataGridCell>[
+          DataGridCell<int>(columnName: 'id', value: employee.id),
+          DataGridCell<String>(columnName: 'name', value: employee.name),
+          DataGridCell<String>(
+            columnName: 'designation',
+            value: employee.designation,
+          ),
+          DataGridCell<int>(columnName: 'salary', value: employee.salary),
+        ],
+      );
+    }).toList();
+  }
+
   /// List to store DataGridRow objects
   late List<DataGridRow> dataGridRows;
 
   @override
-  Future<void> onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
-      GridColumn column) async {
-    final dynamic oldValue = dataGridRow
-        .getCells()
-        .firstWhereOrNull((DataGridCell dataGridCell) =>
-            dataGridCell.columnName == column.columnName)
-        ?.value ??
+  Future<void> onCellSubmit(
+    DataGridRow dataGridRow,
+    RowColumnIndex rowColumnIndex,
+    GridColumn column,
+  ) async {
+    final dynamic oldValue =
+        dataGridRow
+            .getCells()
+            .firstWhereOrNull(
+              (DataGridCell dataGridCell) =>
+                  dataGridCell.columnName == column.columnName,
+            )
+            ?.value ??
         '';
     final int dataRowIndex = dataGridRows.indexOf(dataGridRow);
-    
+
     if (newCellValue == null || oldValue == newCellValue) {
       return;
     }
-    
+
     if (column.columnName == 'id') {
       dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
           DataGridCell<int>(columnName: 'id', value: newCellValue);
@@ -146,25 +151,50 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   @override
-  Widget? buildEditWidget(DataGridRow dataGridRow,
-      RowColumnIndex rowColumnIndex, GridColumn column, CellSubmit submitCell) {
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+      cells: row.getCells().map<Widget>((DataGridCell cell) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: (cell.columnName == 'id' || cell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          child: Text(cell.value.toString()),
+        );
+      }).toList(),
+    );
+  }
+
+  @override
+  Widget? buildEditWidget(
+    DataGridRow dataGridRow,
+    RowColumnIndex rowColumnIndex,
+    GridColumn column,
+    CellSubmit submitCell,
+  ) {
     // Text going to display on editable widget
-    final String displayText = dataGridRow
-        .getCells()
-        .firstWhereOrNull((DataGridCell dataGridCell) =>
-            dataGridCell.columnName == column.columnName)
-        ?.value
-        ?.toString() ??
+    final String displayText =
+        dataGridRow
+            .getCells()
+            .firstWhereOrNull(
+              (DataGridCell dataGridCell) =>
+                  dataGridCell.columnName == column.columnName,
+            )
+            ?.value
+            ?.toString() ??
         '';
-        
+
     // The new cell value must be reset.
     // To avoid committing the [DataGridCell] value that was previously edited
     // into the current non-modified [DataGridCell].
     newCellValue = null;
-    
+
     final bool isNumericType =
         column.columnName == 'id' || column.columnName == 'salary';
-        
+
     return Container(
       padding: const EdgeInsets.all(8.0),
       alignment: isNumericType ? Alignment.centerRight : Alignment.centerLeft,
@@ -203,11 +233,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ![flutter datagrid editing](images/editing/datagrid_editing.gif)
 
->**NOTE**  
-  The `TextEditingController` used in the example should be disposed to free up resources. Consider implementing disposal in your State class: `@override void dispose() { editingController.dispose(); super.dispose(); }`
+> **Note:** The `TextEditingController` used in the example should be disposed to free up resources. Consider implementing disposal in your State class: `@override void dispose() { editingController.dispose(); super.dispose(); }`
 
->**NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
+> **Reference:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
 ## Disable the editing for the specific column
 
@@ -280,8 +308,7 @@ To disable the editing for a particular column, set the [GridColumn.allowEditing
 
 ![flutter datagrid disable the editing for specific column](images/editing/disable_editing.gif)
 
->**NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
+> **Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
 ## Entering edit mode
 
@@ -360,8 +387,7 @@ By default, a cell will enter edit mode when you double-tap it. To enable editin
 
 ## Methods
 
->**NOTE**  
-  The editing lifecycle consists of three key methods: `onCellBeginEdit` (called when entering edit mode), `canSubmitCell` (called before exiting edit mode for validation), and `onCellSubmit` (called when changes are confirmed). All methods are asynchronous-capable.
+> **Note:** The editing lifecycle consists of three key methods: `onCellBeginEdit` (called when entering edit mode), `canSubmitCell` (called before exiting edit mode for validation), and `onCellSubmit` (called when changes are confirmed). All methods are asynchronous-capable.
 
 ### onCellBeginEdit
 
@@ -422,15 +448,13 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**  
-  To display validation error messages to users, consider showing a snackbar or dialog in the `canSubmitCell` method when returning `false`, or use a validation field overlay on the edit widget in `buildEditWidget`.
+> **Note:** To display validation error messages to users, consider showing a snackbar or dialog in the `canSubmitCell` method when returning `false`, or use a validation field overlay on the edit widget in `buildEditWidget`.
 
 ### onCellSubmit
 
 The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method is called when the editing is completed and validation passes. This is an asynchronous method where you should save the edited values to your underlying data collection. The UI automatically refreshes after changes are committed.
 
->**NOTE**     
-   There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
+> **Note:** There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
 
 {% tabs %}
 {% highlight dart %}
@@ -479,8 +503,7 @@ class EmployeeDataSource extends DataGridSource {
 
 The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when editing is cancelled. This occurs when the `Esc` key is pressed on Web and Desktop platforms. When this method is called, the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) methods are not called. Focus returns to the DataGrid after cancellation.
 
->**NOTE**    
-  You do not need to call `notifyListeners` inside this method as the UI automatically handles state updates.
+> **Note:** You do not need to call `notifyListeners` inside this method as the UI automatically handles state updates.
 
 {% tabs %}
 {% highlight dart %}
@@ -583,8 +606,7 @@ The SfDataGrid allows moving the cell into edit mode programmatically by calling
 
 ![flutter datagrid begin edit](images/editing/begin_editing.gif)
 
->**NOTE**  
-  Download the complete programmatic editing demo from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
+> **Note:** Download the complete programmatic editing demo from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
 ### EndEdit
 
@@ -844,6 +866,7 @@ The following example shows how to display a loading indicator during asynchrono
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'dart:async';
+import 'package:collection/collection.dart';
 
 /// Global StreamController to manage loading state during async operations
 StreamController<bool> loadingController = StreamController<bool>();
@@ -974,5 +997,4 @@ class _MyHomePageState extends State<MyHomePage> {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**  
-  The `StreamController` pattern is used here to manage UI state during async operations. The loading indicator is shown/hidden by emitting values to the stream. You can also use state management solutions like `Provider`, `Riverpod`, or `Bloc` for more complex scenarios.
+> **Note:** The `StreamController` pattern is used here to manage UI state during async operations. The loading indicator is shown/hidden by emitting values to the stream. You can also use state management solutions like `Provider`, `Riverpod`, or `Bloc` for more complex scenarios.

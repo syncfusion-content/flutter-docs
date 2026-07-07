@@ -11,15 +11,11 @@ documentation: ug
 
 Filtering is the process of fetching values from a collection that satisfy specified conditions. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied both through the UI and programmatically.
 
-> **NOTE**  
-    This feature requires the `syncfusion_flutter_datagrid` package version 20.2.38 or later. Ensure that you have added the package to your `pubspec.yaml` file.
-
 ## Programmatic Filtering
 
 The SfDataGrid allows you to filter the data rows programmatically by adding filter conditions along with their respective column names to the [DataGridSource.filterConditions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/filterConditions.html) map collection. In the map collection, the `key` defines the [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and the `values` define the list of [FilterCondition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterCondition-class.html).
 
-> **NOTE**  
-    To use programmatic filtering, you must have a custom class that extends [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) with properly initialized data rows.
+> **Note:** To use programmatic filtering, you must have a custom class that extends [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) with properly initialized data rows.
 
 `DataGridSource.filterConditions` is an unmodifiable map collection. So, it doesn't allow us to perform CRUD operations directly in the `DataGridSource.filterConditions` property. However, it can be done by the following public methods:
 
@@ -535,8 +531,8 @@ After filtering, you can retrieve the rows in the same order as displayed in the
 
 `SfDataGrid` provides an Excel-like filtering UI and an advanced filter UI for easy data filtering. UI filtering can be enabled by setting the [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) property to `true`. This allows the filter UI to be opened by clicking the filter icon in the column header.
 
-> **NOTE**  
-    **Platform-specific behavior:** The filtering UI appears as a popup menu on desktop and web platforms, and as a new page on mobile platforms.
+> **Note:**
+> - **Platform-specific behavior:** The filtering UI appears as a popup menu on desktop and web platforms, and as a new page on mobile platforms.
 
 The `SfDataGrid` provides the following types of filter UI modes:
 
@@ -627,57 +623,47 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      allowFiltering: true,
-      source: employeeDataSource,
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: [
-        GridColumn(
-          allowFiltering: false,
-          columnName: 'ID',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
+    return Scaffold(
+      body: SfDataGrid(
+        allowFiltering: true,
+        source: _employeeDataSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: [
+          GridColumn(
+            allowFiltering: false,
+            columnName: 'ID',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'Name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'Designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'Salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -699,63 +685,53 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      allowFiltering: true,
-      source: employeeDataSource,
-      onFilterChanging: (DataGridFilterChangeDetails details) {
-        // Restrict filtering on the Salary column
-        if (details.column.columnName == 'Salary') {
-          return false;
-        }
-        return true;
-      },
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: [
-        GridColumn(
-          columnName: 'ID',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowFiltering: true,
+        onFilterChanging: (DataGridFilterChangeDetails details) {
+          // Restrict filtering on the Salary column
+          if (details.column.columnName == 'salary') {
+            return false;
+          }
+          return true;
+        },
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text('ID'),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name'),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary'),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -773,63 +749,53 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      allowFiltering: true,
-      source: employeeDataSource,
-      onFilterChanged: (DataGridFilterChangeDetails details) {
-        debugPrint('Column Name: ${details.column.columnName}');
-        if (details.filterConditions.isNotEmpty) {
-          debugPrint('Filter Type: ${details.filterConditions.last.type}');
-          debugPrint('Filter Value: ${details.filterConditions.last.value}');
-        }
-      },
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: [
-        GridColumn(
-          columnName: 'ID',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
+    return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowFiltering: true,
+        onFilterChanged: (DataGridFilterChangeDetails details) {
+          debugPrint('Column Name: ${details.column.columnName}');
+          if (details.filterConditions.isNotEmpty) {
+            debugPrint('Filter Type: ${details.filterConditions.last.type}');
+            debugPrint('Filter Value: ${details.filterConditions.last.value}');
+          }
+        },
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
+              child: Text('ID'),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Name'),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
             ),
           ),
-        ),
-        GridColumn(
-          columnName: 'Salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              child: Text('Salary'),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -840,8 +806,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 The `SfDataGrid` provides support to customize the behavior and appearance of the filter popup menu. The following subsections demonstrate how to customize various aspects of the filter UI.
 
-> **NOTE**  
-    Filter UI customization options like `filterMode`, `canShowSortingOptions`, and `canShowClearFilterOption` are available through the [FilterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions-class.html) class in the [GridColumn.filterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterPopupMenuOptions.html) property.
+> **Note:** Filter UI customization options like `filterMode`, `canShowSortingOptions`, and `canShowClearFilterOption` are available through the [FilterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/FilterPopupMenuOptions-class.html) class in the [GridColumn.filterPopupMenuOptions](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/filterPopupMenuOptions.html) property.
 
 ### Show checkbox or advanced filtering mode
 
@@ -1181,8 +1146,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 The `SfDataGrid` allows you to change the filter icon by using the [SfDataGridThemeData.filterIcon](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterIcon.html) property. The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
 
-> **NOTE**  
-    Wrap the `SfDataGrid` inside an `SfDataGridTheme` widget to apply custom filter icons. Use a [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget to return different icons based on filter states (filtered or not filtered).
+> **Note:** Wrap the `SfDataGrid` inside an `SfDataGridTheme` widget to apply custom filter icons. Use a [Builder](https://api.flutter.dev/flutter/widgets/Builder-class.html) widget to return different icons based on filter states (filtered or not filtered).
 
 {% tabs %}
 {% highlight Dart %}
@@ -1338,8 +1302,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 The text style of the filter popup menu can be customized by using the [SfDataGridThemeData.filterPopupTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupTextStyle.html) and [SfDataGridThemeData.filterPopupDisabledTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/filterPopupDisabledTextStyle.html) properties.
 
-> **NOTE**  
-    Wrap the `SfDataGrid` inside an `SfDataGridTheme` widget to apply text style customizations.
+> **Note:**  Wrap the `SfDataGrid` inside an `SfDataGridTheme` widget to apply text style customizations.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1362,7 +1325,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
           ),
         ),
         child: SfDataGrid(
-          source: employeeDataSource,
+          source: _employeeDataSource,
           allowFiltering: true,
           columnWidthMode: ColumnWidthMode.fill,
           columns: [
@@ -1371,10 +1334,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
                 alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
+                child: Text('ID', overflow: TextOverflow.ellipsis),
               ),
             ),
             GridColumn(
@@ -1382,10 +1342,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
+                child: Text('Name', overflow: TextOverflow.ellipsis),
               ),
             ),
             GridColumn(
@@ -1393,10 +1350,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
               label: Container(
                 padding: EdgeInsets.all(8.0),
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ),
+                child: Text('Designation', overflow: TextOverflow.ellipsis),
               ),
             ),
             GridColumn(
@@ -1564,8 +1518,7 @@ By default, the `FilterBehavior.strongDataType` applies to numeric, String, and 
 
 The `SfDataGrid` provides complete color customization support for the filter popup menu, allowing you to personalize its appearance and enhance its visual appeal.
 
-> **NOTE**  
-    The `SfDataGrid` must be wrapped inside an `SfDataGridTheme` widget for appearance customizations to take effect. The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
+> **Note:** The `SfDataGrid` must be wrapped inside an `SfDataGridTheme` widget for appearance customizations to take effect. The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
 
 
 | Properties                      | Description                                         |
@@ -1605,8 +1558,7 @@ The `SfDataGrid` provides complete color customization support for the filter po
 | `searchAreaFocusedBorderColor`     | Use the [SfDataGridThemeData.searchAreaFocusedBorderColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/searchAreaFocusedBorderColor.html) property to define the focused border color of the search area in the filter popup menu |
 | `searchIconColor`     | The color of the search icon in the search area of the filter popup menu can be customized using the [SfDataGridThemeData.searchIconColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/searchIconColor.html) property. |
 
-> **NOTE**  
-    The `cancelFilteringLabelColor`, `filterPopupBottomDividerColor`, and `okFilteringLabelColor` properties are supported only on desktop platforms.
+> **Note:** The `cancelFilteringLabelColor`, `filterPopupBottomDividerColor`, and `okFilteringLabelColor` properties are supported only on desktop platforms.
 
 The following example shows how to customize the filter popup menu using properties from `SfDataGridTheme`, such as `cancelFilteringLabelButtonColor`, `cancelFilteringLabelColor`, `okFilteringLabelButtonColor`, `okFilteringLabelColor`, `filterPopupCheckboxFillColor`, and `filterPopupDisabledIconColor`.
 

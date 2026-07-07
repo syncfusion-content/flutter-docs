@@ -31,8 +31,8 @@ The following code demonstrates how to apply grouping to a column:
 {% tabs %}
 {% highlight Dart %} 
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class SfDataGridDemoState extends State<SfDataGridDemo> {
   List<Employee> employees = <Employee>[];
@@ -139,28 +139,19 @@ To disable column grouping for a particular column, remove that `ColumnGroup` in
 {% highlight Dart %} 
 
 import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-class SfDataGridDemoState extends State<SfDataGridDemo> {
   List<Employee> employees = <Employee>[];
   late EmployeeDataSource employeeDataSource;
-
-  @override
-  void initState() {
-    super.initState();
-    employees = getEmployeeData();
-    employeeDataSource = EmployeeDataSource(employeeData: employees);
-    employeeDataSource
-        .addColumnGroup(ColumnGroup(name: 'Designation', sortGroupRows: true));
-    employeeDataSource
-        .addColumnGroup(ColumnGroup(name: 'Salary', sortGroupRows: false));
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-      body: Column(children: [
-        ElevatedButton(
+      body: Column(
+        children: [
+          ElevatedButton(
             onPressed: () {
               setState(() {});
               ColumnGroup? group = employeeDataSource.groupedColumns
@@ -169,39 +160,50 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
                 employeeDataSource.removeColumnGroup(group);
               }
             },
-            child: Text('Remove Salary Column Group')),
-        Expanded(
+            child: Text('Remove Salary Column Group'),
+          ),
+          Expanded(
             child: SfDataGrid(
-                source: employeeDataSource,
-                allowExpandCollapseGroup: true,
-                columns: <GridColumn>[
-              GridColumn(
+              source: employeeDataSource,
+              allowExpandCollapseGroup: true,
+              columns: <GridColumn>[
+                GridColumn(
                   columnName: 'ID',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: Text('ID'))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('ID'),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Name',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: Text('Name'))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Name'),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Designation',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: Text('Designation',
-                          overflow: TextOverflow.ellipsis))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Designation', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Salary',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: Text('Salary'))),
-            ])),
-      ]),
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Salary'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -215,6 +217,9 @@ To clear all the column groups, simply call the [DataGridSource.clearColumnGroup
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
 class SfDataGridDemoState extends State<SfDataGridDemo> {
   List<Employee> employees = <Employee>[];
   late EmployeeDataSource employeeDataSource;
@@ -224,55 +229,72 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
     super.initState();
     employees = getEmployeeData();
     employeeDataSource = EmployeeDataSource(employeeData: employees);
-    employeeDataSource
-        .addColumnGroup(ColumnGroup(name: 'Designation', sortGroupRows: true));
-    employeeDataSource
-        .addColumnGroup(ColumnGroup(name: 'Salary', sortGroupRows: false));
+    employeeDataSource.addColumnGroup(
+      ColumnGroup(name: 'Designation', sortGroupRows: true),
+    );
+    employeeDataSource.addColumnGroup(
+      ColumnGroup(name: 'Salary', sortGroupRows: false),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-      body: Column(children: [
-        ElevatedButton(
+      body: Column(
+        children: [
+          ElevatedButton(
             onPressed: () {
               setState(() {});
               employeeDataSource.clearColumnGroups();
             },
-            child: const Text('Clear all column groups')),
-        Expanded(
+            child: const Text('Clear all column groups'),
+          ),
+          Expanded(
             child: SfDataGrid(
-                source: employeeDataSource,
-                allowExpandCollapseGroup: true,
-                columns: <GridColumn>[
-              GridColumn(
+              source: employeeDataSource,
+              allowExpandCollapseGroup: true,
+              columns: <GridColumn>[
+                GridColumn(
                   columnName: 'ID',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: const Text('ID'))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: const Text('ID'),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Name',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: const Text('Name'))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: const Text('Name'),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Designation',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: const Text('Designation',
-                          overflow: TextOverflow.ellipsis))),
-              GridColumn(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+                GridColumn(
                   columnName: 'Salary',
                   label: Container(
-                      padding: EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      child: const Text('Salary'))),
-            ])),
-      ]),
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: const Text('Salary'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -584,8 +606,9 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
     super.initState();
     employees = getEmployeeData();
     employeeDataSource = EmployeeDataSource(employeeData: employees);
-    employeeDataSource
-        .addColumnGroup(ColumnGroup(name: 'Salary', sortGroupRows: true));
+    employeeDataSource.addColumnGroup(
+      ColumnGroup(name: 'Salary', sortGroupRows: true),
+    );
   }
 
   @override
@@ -593,35 +616,43 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
     return Scaffold(
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
       body: SfDataGrid(
-          source: employeeDataSource,
-          allowExpandCollapseGroup: true,
-          columns: <GridColumn>[
-            GridColumn(
-                columnName: 'ID',
-                label: Container(
-                    padding: EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child: Text('ID'))),
-            GridColumn(
-                columnName: 'Name',
-                label: Container(
-                    padding: EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child: Text('Name'))),
-            GridColumn(
-                columnName: 'Designation',
-                label: Container(
-                    padding: EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child:
-                        Text('Designation', overflow: TextOverflow.ellipsis))),
-            GridColumn(
-                columnName: 'Salary',
-                label: Container(
-                    padding: EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child: Text('Salary'))),
-          ]),
+        source: employeeDataSource,
+        allowExpandCollapseGroup: true,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'ID',
+            label: Container(
+              padding: EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Text('ID'),
+            ),
+          ),
+          GridColumn(
+            columnName: 'Name',
+            label: Container(
+              padding: EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Text('Name'),
+            ),
+          ),
+          GridColumn(
+            columnName: 'Designation',
+            label: Container(
+              padding: EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'Salary',
+            label: Container(
+              padding: EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Text('Salary'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -629,13 +660,19 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
     dataGridRows = employeeData
-        .map<DataGridRow>((e) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (e) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'ID', value: e.id),
               DataGridCell<String>(columnName: 'Name', value: e.name),
               DataGridCell<String>(
-                  columnName: 'Designation', value: e.designation),
+                columnName: 'Designation',
+                value: e.designation,
+              ),
               DataGridCell<double>(columnName: 'Salary', value: e.salary),
-            ]))
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -647,23 +684,25 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(8),
-        child: Text(
-          e.value.toString(),
-        ),
-      );
-    }).toList());
+      cells: row.getCells().map<Widget>((e) {
+        return Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(8),
+          child: Text(e.value.toString()),
+        );
+      }).toList(),
+    );
   }
 
   @override
   Widget? buildGroupCaptionCellWidget(
-      RowColumnIndex rowColumnIndex, String summaryValue) {
+    RowColumnIndex rowColumnIndex,
+    String summaryValue,
+  ) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
-        child: Text(summaryValue));
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+      child: Text(summaryValue),
+    );
   }
 
   @override
@@ -673,10 +712,11 @@ class EmployeeDataSource extends DataGridSource {
           .getCells()
           .whereType<DataGridCell<double>>()
           .firstWhereOrNull(
-              (DataGridCell cell) => cell.columnName == columnName);
-      
-      if (salaryCell != null) {
-        final double total = salaryCell.value;
+            (DataGridCell cell) => cell.columnName == columnName,
+          );
+
+      if (salaryCell != null && salaryCell.value != null) {
+        final double total = salaryCell.value!;
         if (total > 100000 && total <= 200000) {
           return '> 100 K & <= 200 K';
         } else if (total > 90000 && total <= 100000) {
@@ -837,80 +877,93 @@ The following code example demonstrates how to use these methods:
 {% tabs %}
 {% highlight Dart %}
 
-final DataGridController _dataGridController = DataGridController();
+  List<Employee> _employees = <Employee>[];
+  late EmployeeDataSource _employeeDataSource;
+  final DataGridController _dataGridController = DataGridController();
+  
+  @override
+  void initState() {
+    super.initState();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employeeData: _employees);
+    _employeeDataSource.addColumnGroup(
+      ColumnGroup(name: 'Designation', sortGroupRows: true),
+    );
+    _employeeDataSource.addColumnGroup(
+      ColumnGroup(name: 'Salary', sortGroupRows: false),
+    );
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
-    body: Column(children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: Column(
         children: [
-          ElevatedButton(
-            onPressed: () {
-              _dataGridController.expandAllGroup();
-            },
-            child: const Text('Expand All'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  _dataGridController.expandAllGroup();
+                },
+                child: const Text('Expand All'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  _dataGridController.collapseAllGroup();
+                },
+                child: const Text('Collapse All'),
+              ),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              _dataGridController.collapseAllGroup();
-            },
-            child: const Text('Collapse All'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              _dataGridController.expandGroupsAtLevel(0);
-            },
-            child: const Text('Expand Level 0'),
+          Expanded(
+            child: SfDataGrid(
+              controller: _dataGridController,
+              source: _employeeDataSource,
+              gridLinesVisibility: GridLinesVisibility.both,
+              headerGridLinesVisibility: GridLinesVisibility.both,
+              allowExpandCollapseGroup: true,
+              columns: <GridColumn>[
+                GridColumn(
+                  columnName: 'ID',
+                  label: Container(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('ID'),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'Name',
+                  label: Container(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Name'),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'Designation',
+                  label: Container(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Designation', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
+                GridColumn(
+                  columnName: 'Salary',
+                  label: Container(
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.center,
+                    child: Text('Salary'),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
-      Expanded(
-        child: SfDataGrid(
-          controller: _dataGridController,
-          source: employeeDataSource,
-          allowExpandCollapseGroup: true,
-          columns: <GridColumn>[
-            GridColumn(
-              columnName: 'ID',
-              label: Container(
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Text('ID'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'Name',
-              label: Container(
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Text('Name'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'Designation',
-              label: Container(
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Text('Designation', overflow: TextOverflow.ellipsis),
-              ),
-            ),
-            GridColumn(
-              columnName: 'Salary',
-              label: Container(
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Text('Salary'),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ]),
-  );
-}
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
