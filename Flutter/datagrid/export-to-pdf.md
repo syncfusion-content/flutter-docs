@@ -18,29 +18,29 @@ The following dependencies must be added to your `pubspec.yaml` file for exporti
 {% highlight dart %} 
 
 dependencies:
-
-syncfusion_flutter_datagrid_export: ^xx.x.xx
+  syncfusion_flutter_datagrid_export: ^24.1.41
+  syncfusion_flutter_pdf: ^24.1.41
 
 {% endhighlight %}
 
-  >**NOTE** Here, **xx.x.xx** denotes the current version of `Syncfusion® Flutter DataGrid Export` package.
+>**NOTE** Ensure that you have the latest version of the `syncfusion_flutter_datagrid_export` and `syncfusion_flutter_pdf` packages. For the latest available versions, refer to [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid_export).
 
 **Import package**
 
-Import the following package in your Dart code.
+Import the following packages in your Dart code.
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'dart:io';
 import 'package:syncfusion_flutter_datagrid_export/export.dart';
-
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 {% endhighlight %}
 {% endtabs %}
 
 
-You can export the `SfDataGrid` to PDF by using the following extension methods present in the [SfDataGridState]((https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html)) class:
+You can export the `SfDataGrid` to PDF by using the following extension methods present in the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class:
 
    * [exportToPdfDocument](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfDocument.html)
    * [exportToPdfGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfGrid.html)
@@ -54,87 +54,97 @@ Set the created `GlobalKey` to the `SfDataGrid`.
 {% tabs %}
 {% highlight Dart %}
 
-  final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
     
 {% endhighlight %}
 {% endtabs %}
+
+>**NOTE** The `_employeeDataSource` used in the examples should be a [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) implementation containing your data model. Ensure that your data model includes properties like 'ID', 'Name', 'Designation', and 'Salary' as shown in the columns.
 
 The following code illustrates how to create and display a `SfDataGrid` using the global key.
 
 {% tabs %}
 {% highlight Dart %}
 
-  GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          ElevatedButton(
-              child: Text('Export To Pdf'),
-              onPressed: () {
-                PdfDocument document = key.currentState!.exportToPdfDocument()
-                final List<int> bytes = document.saveSync();
-              }),
-          Expanded(
-            child: SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                GridColumn(
-                    columnName: 'ID',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'Name',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'Designation',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'Salary',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-              ],
-            ),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        ElevatedButton(
+            child: Text('Export To PDF'),
+            onPressed: () {
+              PdfDocument document = key.currentState!.exportToPdfDocument();
+              final List<int> bytes = document.saveSync();
+              File('DataGrid.pdf').writeAsBytes(bytes);
+            }),
+        Expanded(
+          child: SfDataGrid(
+            key: key,
+            source: _employeeDataSource,
+            columns: [
+              GridColumn(
+                  columnName: 'ID',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'Name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'Designation',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'Salary',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+            ],
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Save the PDF document as a file
 
-To save the file as a PDF document, it’s necessary to include [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile), [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) and desktop platform-specific file generating code.
+To save the exported PDF file, include platform-specific file generating code based on your target platform:
+
+- **Mobile (iOS/Android)**: Refer to [Save and open a PDF document in mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile)
+- **Web**: Refer to [Save and download a PDF document in web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web)
+- **Desktop (Windows/macOS/Linux)**: Use the `File` class from the `dart:io` package to write bytes to a file
+
+>**NOTE** The `File` class requires the `dart:io` package, which is already included in your imports from the previous section.
 
 ## Export DataGrid to PDF document
 
-Export the data to the [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) by using the `exportToPdfDocument` method from the `key.currentState` of the DataGrid.
+Use the [exportToPdfDocument](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfDocument.html) method to export the data to a [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -148,7 +158,9 @@ File('DataGrid.pdf').writeAsBytes(bytes);
 
 ## Export DataGrid to PDF Grid
 
-Export the data to the [PdfGrid](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) by using the `exportToPdfGrid` method from the `key.currentState` of the DataGrid.
+Use the [exportToPdfGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfGrid.html) method to export the data to a [PdfGrid](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html). This method is useful when you need more control over page settings or when combining the grid with other content.
+
+>**NOTE** The `exportToPdfGrid` method returns a `PdfGrid` that can be drawn onto a `PdfPage`, allowing for customization of page orientation, margins, and other page-level settings.
 
 {% tabs %}
 {% highlight Dart %}
@@ -166,11 +178,26 @@ File('DataGrid.pdf').writeAsBytes(bytes);
 {% endhighlight %}
 {% endtabs %}
 
-## Exporting options 
+## Exporting options
+
+The following table summarizes the available export options and their use cases:
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `excludeColumns` | List<String> | - | Columns to exclude from the export |
+| `canRepeatHeaders` | bool | true | Repeat column headers on each page |
+| `fitAllColumnsInOnePage` | bool | false | Fit all columns on a single page |
+| `exportTableSummaries` | bool | true | Include table summaries in export |
+| `exportStackedHeaders` | bool | true | Include stacked headers in export |
+| `autoColumnWidth` | bool | true | Automatically size column widths |
+| `rows` | List<DataGridRow> | null | Specific rows to export (null = all rows) |
+| `cellExport` | Function | null | Callback for cell customization |
+| `headerFooterExport` | Function | null | Callback for header/footer customization |
+| `converter` | DataGridToPdfConverter | null | Custom converter class for advanced customization |
 
 ### Exclude columns when exporting
 
-By default, all the columns in the SfDataGrid are exported to PDF. To exclude some particular columns while exporting to PDF, add those column names to the [excludeColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) parameter.
+By default, all columns in the SfDataGrid are exported to PDF. To exclude specific columns, add the column names to the [excludeColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/excludeColumns.html) parameter.
 
 {% tabs %}
 {% highlight Dart %}
@@ -198,7 +225,7 @@ final List<int> bytes = document.saveSync();
 
 ### Export all columns on one page
 
-Fit all the columns on one page by setting the [fitAllColumnsInOnePage](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/fitAllColumnsInOnePage.html) parameter as `true.`
+Fit all columns on a single page by setting the [fitAllColumnsInOnePage](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/fitAllColumnsInOnePage.html) parameter to `true`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -238,7 +265,7 @@ final List<int> bytes = document.saveSync();
 
 ### Auto-size column widths in PDF
 
-In order, to export the actual column width from `SfDataGrid` instead of the auto column width, set the [autoColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/autoColumnWidth.html) parameter as `false`.
+To export the actual column width from `SfDataGrid` instead of auto-sizing, set the [autoColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/autoColumnWidth.html) parameter to `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -249,8 +276,7 @@ final List<int> bytes = document.saveSync();
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
-       If you disabled the `autoColumnWidth`, then you must set `fitAllColumnsInOnePage` as false. Then only, the overflowing columns are drawn in next page. Because `fitAllColumnsInOnePage` has topmost priority.
+>**NOTE** If you disable `autoColumnWidth`, you must set `fitAllColumnsInOnePage` to `false`. In this configuration, overflowing columns will be drawn on the next page. The `fitAllColumnsInOnePage` parameter takes precedence over `autoColumnWidth`.
 
 
 ## Change the orientation of the PDF document
@@ -276,12 +302,14 @@ final List<int> bytes = document.saveSync();
 
 ## Export the selected rows to PDF
 
-By default, the entire grid is exported to PDF. Export the selected rows only by passing the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToPdfDocument` and `exportToPdfGrid` methods.
+By default, the entire grid is exported to PDF. To export only selected rows, pass the [dataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) to the [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) parameter in `exportToPdfDocument` or `exportToPdfGrid` methods.
+
+>**NOTE** Ensure that the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) is assigned to the SfDataGrid using the `controller` property and that row selection is enabled by setting `selectionMode` to an appropriate value (e.g., `SelectionMode.single` or `SelectionMode.multiple`).
 
 {% tabs %}
 {% highlight Dart %}
 
-PdfDocument document = key.currentState!.exportToPdfDocument(rows: dataGridController.selectedRows,);
+PdfDocument document = key.currentState!.exportToPdfDocument(rows: dataGridController.selectedRows);
 final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
@@ -318,7 +346,7 @@ final List<int> bytes = document.saveSync();
 
 ## Styling cells based on the cell type in PDF
 
-You can customize the cell styles based on cell type using the [cellExport](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/cellExport.html) parameter, which is a callback in `exportToPdfDocument` or `exportToPdfGrid` methods.
+Customize cell styles based on cell type using the [cellExport](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter/cellExport.html) callback parameter in `exportToPdfDocument` or `exportToPdfGrid` methods. The [DataGridExportCellType](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExportCellType.html) enum provides the following cell types: `columnHeader`, `row`, `stackedHeaderRow`, and `tableSummaryRow`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -326,9 +354,12 @@ You can customize the cell styles based on cell type using the [cellExport](http
 PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (details) {
     if (details.cellType == DataGridExportCellType.columnHeader) {
       details.pdfCell.style.backgroundBrush = PdfBrushes.pink;
-    }
-    if (details.cellType == DataGridExportCellType.row) {
+    } else if (details.cellType == DataGridExportCellType.row) {
       details.pdfCell.style.backgroundBrush = PdfBrushes.lightCyan;
+    } else if (details.cellType == DataGridExportCellType.stackedHeaderRow) {
+      details.pdfCell.style.backgroundBrush = PdfBrushes.lightGray;
+    } else if (details.cellType == DataGridExportCellType.tableSummaryRow) {
+      details.pdfCell.style.backgroundBrush = PdfBrushes.wheat;
     }
 });
 final List<int> bytes = document.saveSync();
@@ -342,7 +373,7 @@ final List<int> bytes = document.saveSync();
 
 ### Customize cell values while exporting
 
-The cell value can be customized while exporting to PDF by directly setting the cell value of a cell in the `PdfGrid` via the [PdfCell](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellPdfExportDetails/pdfCell.html) property available in the argument of the `cellExport` callback.
+Customize cell values during export by setting the [PdfCell](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellPdfExportDetails/pdfCell.html) value property in the `cellExport` callback. The [DataGridCellPdfExportDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridCellPdfExportDetails-class.html) provides cell information including `cellValue`, `columnName`, and `rowIndex`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -362,27 +393,27 @@ final List<int> bytes = document.saveSync();
 
 ![pdf document shows the cell customization](images/export-to-pdf/flutter-datagrid-pdf-cell-customization.png)
 
-### Customize the Cells based on Column Name
+### Customize cells based on column name
 
-You can customize the column style based on the column name while exporting to PDF by using the `cellExport` parameter.
+Customize cell styles based on the column name using the `cellExport` callback parameter.
 
 {% tabs %}
 {% highlight Dart %}
 
 PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (details) {
-    if (details.cellType == DataGridExportCellType.row && details.columnName == 'Customer Name') {
-     details.pdfCell.style.textBrush = PdfBrushes.red;
-    }
+  if (details.cellType == DataGridExportCellType.row && 
+      details.columnName == 'Customer Name') {
+    details.pdfCell.style.textBrush = PdfBrushes.red;
   }
-);
+});
 final List<int> bytes = document.saveSync();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Exporting Behavior 
+## Customize exporting behavior
 
-Customize the exporting behavior by overriding the available methods in the [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) class. Use the `converter` parameter in the `exportToPdfDocument` or `exportToPdfGrid` method.
+For advanced customization, override methods in the [DataGridToPdfConverter](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridToPdfConverter-class.html) class and use the `converter` parameter in `exportToPdfDocument` or `exportToPdfGrid` methods. This allows you to control how column headers, rows, and data are processed during export.
 
 {% tabs %}
 {% highlight Dart %}
@@ -391,31 +422,27 @@ class CustomDataGridToPdfConverter extends DataGridToPdfConverter {
   @override
   void exportColumnHeader(SfDataGrid dataGrid, GridColumn column,
       String columnName, PdfGrid pdfGrid) {
-    // TODO: Add your requirements column header
-
+    // Add custom column header export logic here
     super.exportColumnHeader(dataGrid, column, columnName, pdfGrid);
   }
 
   @override
   void exportColumnHeaders(
       SfDataGrid dataGrid, List<GridColumn> columns, PdfGrid pdfGrid) {
-    // TODO: Add your requirements column headers
-
+    // Add custom column headers export logic here
     super.exportColumnHeaders(dataGrid, columns, pdfGrid);
   }
 
   @override
   void exportRows(
       List<GridColumn> columns, List<DataGridRow> rows, PdfGrid pdfGrid) {
-    // TODO: Add your requirements in exportRows
-
+    // Add custom rows export logic here
     super.exportRows(columns, rows, pdfGrid);
   }
 
   @override
   void exportRow(List<GridColumn> columns, DataGridRow row, PdfGrid pdfGrid) {
-    // TODO: Add your requirements in exportRow
-
+    // Add custom row export logic here
     super.exportRow(columns, row, pdfGrid);
   }
 }

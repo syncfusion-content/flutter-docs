@@ -11,7 +11,9 @@ documentation: ug
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfDataGrid widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the SfDataGrid widget as a custom widget in FlutterFlow.
+
+>**Note**: You need an active FlutterFlow account and basic knowledge of Flutter development to follow this guide. Refer to the [SDK version compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility) to ensure your FlutterFlow's Flutter version is compatible with the Syncfusion Flutter DataGrid package.
 
 ### Create a new project
 
@@ -22,54 +24,62 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to the `Custom Code` section in the left side navigation menu.
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
-4. Click the `View Boilerplate Code` button on the right side, represented by this icon `[</>]`.
-5. A popup will appear with startup code; locate the button labeled `</> Copy to Editor` and click on it.
-6. Save the widget.
+4. Click the `View Boilerplate Code` button on the right side, represented by the code icon (`</>`).
+5. A popup will appear with startup code. Locate the button labeled `</> Copy to Editor` and click on it to load the boilerplate code into the editor.
+6. Click `Save` to save the custom widget.
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
 ### Add DataGrid widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid) on pub.dev and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: If you need a specific version instead of the latest, remove the caret (^) prefix in the version number. For example, change `^21.3.0` to `21.3.0` to lock to that exact version.
+
+>**Note**: The SfDataGrid package depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package. Make sure to add it as a dependency using the same steps above.
 
 ![Dependency](how-to-section-images/dependency.png)
 
->**Note**: If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
-
->**Note**: Since [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
-
 ### Import the package
 
-1. Navigate to the `Installing` tab on the [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) page. Under the `Import it` section, copy the package import statement.
+1. Navigate to the **Installing** tab on the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid) page. Under the **Import it** section, copy the package import statement.
 ![Package](how-to-section-images/copy-package.png)
-2. Paste the copied import statement into the code editor and then `Save` it.
+2. Paste the copied import statement into the code editor and click `Save`.
 ![Import](how-to-section-images/import-package-flutterflow.png)
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_DataGrid/example) tab in [Syncfusion Flutter DataGrid](https://pub.dev/packages/syncfusion_flutter_DataGrid) and copy the widget specific codes.
+1. Navigate to the **Example** tab in the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid/example) page and copy the widget code example.
 ![Code](how-to-section-images/code-snippet.png)
-2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
+2. Paste the copied code into the editor, click `Format Code` to format it to standard style, and then click `Save`.
 ![Code snippet](how-to-section-images/Adding-code-snippent.png)
 
-### Compiling the codes
+### Compiling the code
 
-1. Click the 'Compile Code' button located in the top right corner.
-2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
+1. Click the **Compile Code** button located in the top right corner.
+2. Wait for the compilation to complete (typically 2-3 minutes). The status will display at the top of the editor.
+3. Once compilation succeeds, a confirmation message will appear. If errors occur, review the error messages, fix the code, and compile again.
+4. Click `Save` after successful compilation.
 
 ![Compile code](how-to-section-images/compile-code.png)
 
->**Note**: The compilation progress takes 2 to 3 minutes to complete.
+>**Note**: Compilation typically takes 2 to 3 minutes. The editor will display compilation status and any errors encountered during the build process.
 
-### Utilizing the custom widget
+### Using the custom widget in your app
 
-1. Navigate to `Widget Palette` located in the left side navigation menu.
-2. Click on the `Components` tab.
-3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+1. Navigate to **Widget Palette** in the left side navigation menu.
+2. Click on the **Components** tab.
+3. Locate your custom widget under **Custom Code Widgets**. Drag and drop it onto your page.
+4. Configure the SfDataGrid properties and data source as needed. Refer to the [SfDataGrid API documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/) for detailed configuration options.
+5. Run your FlutterFlow app to verify the SfDataGrid widget displays correctly.
 
 ![Page](how-to-section-images/page.png)
+
+## See also
+
+- [Syncfusion Flutter DataGrid documentation](https://help.syncfusion.com/flutter/datagrid/overview)
+- [SfDataGrid GitHub examples](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/datagrid)
+- [Syncfusion Flutter DataGrid API reference](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/)

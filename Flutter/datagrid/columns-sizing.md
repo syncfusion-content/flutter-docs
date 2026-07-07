@@ -9,24 +9,38 @@ documentation: ug
 
 # Column sizing in Flutter DataGrid (SfDataGrid)
 
+> **NOTE**  
+    Ensure that SfDataGrid is installed and configured in your Flutter project. Refer to the [getting started guide](getting-started.md) for setup instructions.
+
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows setting the column widths based on certain logic using the [SfDataGrid.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthMode.html) or [GridColumn.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnWidthMode.html) property. The following is the list of predefined column sizing options available.
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
-| ColumnWidthMode.auto      | Calculates the width of column based on [GridColumn.columName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and [DataGridCell.value](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCell/value.html) properties. So, the header and cell contents are not truncated. |
+| ColumnWidthMode.auto      | Calculates the width of column based on [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and [DataGridCell.value](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCell/value.html) properties. So, the header and cell contents are not truncated. |
 | ColumnWidthMode.fitByCellValue | Calculates the width of column based on `DataGridCell.value` property. So, the cell contents are not truncated. |
 | ColumnWidthMode.fitByColumnName | Calculates the width of column based on `GridColumn.columName` property. So, the header contents are not truncated. |
 | ColumnWidthMode.lastColumnFill | Applies default Column width to all the columns except last column which is visible and the remaining width from total width of SfDataGrid is set to last column. |
 | ColumnWidthMode.fill      | Divides the total width equally for columns.         |
-| ColumnWidthMode.none      | No sizing. Default column width or defined width set to column. |
+| ColumnWidthMode.none      | No sizing. Default column width (80.0) or explicitly defined width is set to the column. |
 
 > **NOTE**  
-    [ColumnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnWidthMode.html) will not work when the column width defined explicitly. `columnWidthMode` calculates column width based on miniumWidth and maximumWidth properties.
+    [ColumnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnWidthMode.html) will not work when the column width is defined explicitly. `columnWidthMode` calculates column width based on `minimumWidth` and `maximumWidth` properties. For optimal performance with large datasets, consider using `ColumnWidthMode.none` or `ColumnWidthMode.fill` instead of `ColumnWidthMode.auto`.
 
 The following example shows how to set the width equally for columns based on the viewport size.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart'; 
+
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +82,7 @@ The following example shows how to set the width equally for columns based on th
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'city',
+                    'City',
                     overflow: TextOverflow.ellipsis,
                   ))),
           GridColumn(
@@ -96,7 +110,18 @@ The `GridColumn.columnWidthMode` takes higher priority than the `SfDataGrid.colu
 By default, the autofit calculation is performed for only visible rows. You can use the [SfDataGrid.columnWidthCalculationRange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthCalculationRange.html) property as [ColumnWidthCalculationRange.allRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnWidthCalculationRange.html) to perform the autofit calculation for all the available rows.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart'; 
+
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +131,7 @@ By default, the autofit calculation is performed for only visible rows. You can 
         columnWidthCalculationRange: ColumnWidthCalculationRange.allRows,
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'ID',
+              columnName: 'id',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerRight,
@@ -115,7 +140,7 @@ By default, the autofit calculation is performed for only visible rows. You can 
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'Name',
+              columnName: 'name',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerLeft,
@@ -124,7 +149,7 @@ By default, the autofit calculation is performed for only visible rows. You can 
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'Designation',
+              columnName: 'designation',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerLeft,
@@ -133,7 +158,7 @@ By default, the autofit calculation is performed for only visible rows. You can 
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'Salary',
+              columnName: 'salary',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerRight,
@@ -149,13 +174,24 @@ By default, the autofit calculation is performed for only visible rows. You can 
 
 ## Change the padding value for autofit calculation
 
-By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the [GridColumn.autoFitPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/autoFitPadding.html) property.
+By default, `EdgeInsets.all(16.0)` is added with the auto width or height value. You can change the padding for specific columns by using the [GridColumn.autoFitPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/autoFitPadding.html) property. You can also use asymmetric padding values (e.g., `EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0)`) for fine-grained control.
 
 >**NOTE** 
-`GridColumn.autoFitPadding` is applicable for header cell also.
+`GridColumn.autoFitPadding` is applicable for header cells as well.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart'; 
+
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -206,15 +242,24 @@ By default, the EdgeInsets.all(16.0) is added with the auto width or height valu
         ]);
   }
 
+class Employee {
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+
+  Employee({required this.id, required this.name, required this.designation, required this.salary});
+}
+
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
     _employeeData = employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'ID', value: e.id),
-              DataGridCell<String>(columnName: 'Name', value: e.name),
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
               DataGridCell<String>(
-                  columnName: 'Designation', value: e.designation),
-              DataGridCell<int>(columnName: 'Salary', value: e.salary),
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
             ]))
         .toList();
   }
@@ -238,6 +283,15 @@ class EmployeeDataSource extends DataGridSource {
   }
 }
 
+List<Employee> getEmployeeData() {
+  return [
+    Employee(id: 10001, name: 'James', designation: 'Project Manager', salary: 60000),
+    Employee(id: 10002, name: 'Kathryn', designation: 'Manager', salary: 30000),
+    Employee(id: 10003, name: 'Lara', designation: 'Developer', salary: 15000),
+    Employee(id: 10004, name: 'Michael', designation: 'Designer', salary: 15000),
+  ];
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -245,12 +299,22 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Autofit calculation based on different TextStyle
 
-By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellWidth.html) method for the header and [computeCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellWidth.html) method for the cell and return the super method with the required `TextStyle.`
+By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), override the [computeHeaderCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellWidth.html) method for the header and [computeCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellWidth.html) method for the cell, and return the super method with the required `TextStyle`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -260,7 +324,7 @@ By default, the cell width is calculated based on the default text style. To cal
         columnWidthMode: ColumnWidthMode.auto,
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'ID',
+              columnName: 'id',
               autoFitPadding: EdgeInsets.all(12.0),
               label: Container(
                   padding: EdgeInsets.all(12.0),
@@ -269,7 +333,7 @@ By default, the cell width is calculated based on the default text style. To cal
                     'ID',
                   ))),
           GridColumn(
-              columnName: 'Name',
+              columnName: 'name',
               autoFitPadding: EdgeInsets.all(12.0),
               label: Container(
                   padding: EdgeInsets.all(12.0),
@@ -280,7 +344,7 @@ By default, the cell width is calculated based on the default text style. To cal
                         fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
                   ))),
           GridColumn(
-              columnName: 'Designation',
+              columnName: 'designation',
               autoFitPadding: EdgeInsets.all(12.0),
               label: Container(
                   padding: EdgeInsets.all(12.0),
@@ -292,7 +356,7 @@ By default, the cell width is calculated based on the default text style. To cal
                         fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
                   ))),
           GridColumn(
-              columnName: 'Salary',
+              columnName: 'salary',
               autoFitPadding: EdgeInsets.all(12.0),
               label: Container(
                   padding: EdgeInsets.all(12.0),
@@ -301,15 +365,24 @@ By default, the cell width is calculated based on the default text style. To cal
         ]);
   }
 
+class Employee {
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+
+  Employee({required this.id, required this.name, required this.designation, required this.salary});
+}
+
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
     _employeeData = employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'ID', value: e.id),
-              DataGridCell<String>(columnName: 'Name', value: e.name),
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
               DataGridCell<String>(
-                  columnName: 'Designation', value: e.designation),
-              DataGridCell<int>(columnName: 'Salary', value: e.salary),
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
             ]))
         .toList();
   }
@@ -327,7 +400,7 @@ class EmployeeDataSource extends DataGridSource {
           alignment: Alignment.center,
           padding: EdgeInsets.all(12.0),
           child: Text(e.value.toString(),
-              style: (e.columnName == 'Name' || e.columnName == 'Designation')
+              style: (e.columnName == 'name' || e.columnName == 'designation')
                   ? TextStyle(
                       fontWeight: FontWeight.bold, fontStyle: FontStyle.italic)
                   : null));
@@ -338,7 +411,7 @@ class EmployeeDataSource extends DataGridSource {
 class CustomColumnSizer extends ColumnSizer {
   @override
   double computeHeaderCellWidth(GridColumn column, TextStyle style) {
-    if (column.columnName == 'Name' || column.columnName == 'Designation') {
+    if (column.columnName == 'name' || column.columnName == 'designation') {
       style =
           TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
     }
@@ -348,7 +421,7 @@ class CustomColumnSizer extends ColumnSizer {
   @override
   double computeCellWidth(GridColumn column, DataGridRow row, Object? cellValue,
       TextStyle textStyle) {
-    if (column.columnName == 'Name' || column.columnName == 'Designation') {
+    if (column.columnName == 'name' || column.columnName == 'designation') {
       textStyle =
           TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
     }
@@ -356,24 +429,39 @@ class CustomColumnSizer extends ColumnSizer {
   }
 }
 
-{% endhighlight %}
-{% endtabs %} 
+List<Employee> getEmployeeData() {
+  return [
+    Employee(id: 10001, name: 'James', designation: 'Project Manager', salary: 60000),
+    Employee(id: 10002, name: 'Kathryn', designation: 'Manager', salary: 30000),
+    Employee(id: 10003, name: 'Lara', designation: 'Developer', salary: 15000),
+    Employee(id: 10004, name: 'Michael', designation: 'Designer', salary: 15000),
+  ];
+}
 
-**NOTE**  
-  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-column-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
+{% endhighlight %}
+{% endtabs %}
 
 ![flutter datagrid shows autofit the columns based on different text style](images/autofit-columns/flutter-datagrid-textstyle-customization.png)
 
 ## Autofit calculation based on the formatted value 
 
-The cell width is calculated by default based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (This is, DateFormat and NumberFormat), simply override the `computeCellWidth` method and return the super method with the required `cellValue.`
+The cell width is calculated by default based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (that is, DateFormat and NumberFormat), override the `computeCellWidth` method and return the super method with the required `cellValue`.
 
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
   final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getFormattedEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -383,7 +471,7 @@ import 'package:intl/intl.dart';
         columnWidthMode: ColumnWidthMode.fitByCellValue,
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'ID',
+              columnName: 'id',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerRight,
@@ -392,7 +480,7 @@ import 'package:intl/intl.dart';
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'Name',
+              columnName: 'name',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerLeft,
@@ -401,7 +489,7 @@ import 'package:intl/intl.dart';
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'DOB',
+              columnName: 'dob',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerLeft,
@@ -410,7 +498,7 @@ import 'package:intl/intl.dart';
                     softWrap: false,
                   ))),
           GridColumn(
-              columnName: 'Salary',
+              columnName: 'salary',
               label: Container(
                   padding: EdgeInsets.all(16.0),
                   alignment: Alignment.centerRight,
@@ -421,14 +509,23 @@ import 'package:intl/intl.dart';
         ]);
   }
 
+class Employee {
+  final int id;
+  final String name;
+  final DateTime dob;
+  final int salary;
+
+  Employee({required this.id, required this.name, required this.dob, required this.salary});
+}
+
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
     _employeeData = employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'ID', value: e.id),
-              DataGridCell<String>(columnName: 'Name', value: e.name),
-              DataGridCell<DateTime>(columnName: 'DOB', value: e.dob),
-              DataGridCell<int>(columnName: 'Salary', value: e.salary),
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<DateTime>(columnName: 'dob', value: e.dob),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
             ]))
         .toList();
   }
@@ -443,9 +540,9 @@ class EmployeeDataSource extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((e) {
       late String cellValue;
-      if (e.columnName == 'DOB') {
+      if (e.columnName == 'dob') {
         cellValue = DateFormat.yMMMMd('en_US').format(e.value);
-      } else if (e.columnName == 'Salary') {
+      } else if (e.columnName == 'salary') {
         cellValue =
             NumberFormat.simpleCurrency(decimalDigits: 0).format(e.value);
       } else {
@@ -465,9 +562,9 @@ class CustomColumnSizer extends ColumnSizer {
   @override
   double computeCellWidth(GridColumn column, DataGridRow row, Object? cellValue,
       TextStyle textStyle) {
-    if (column.columnName == 'DOB') {
+    if (column.columnName == 'dob') {
       cellValue = DateFormat.yMMMMd('en_US').format(cellValue as DateTime);
-    } else if (column.columnName == 'Salary') {
+    } else if (column.columnName == 'salary') {
       cellValue =
           NumberFormat.simpleCurrency(decimalDigits: 0).format(cellValue);
     }
@@ -476,20 +573,37 @@ class CustomColumnSizer extends ColumnSizer {
   }
 }
 
-{% endhighlight %}
-{% endtabs %} 
+List<Employee> getFormattedEmployeeData() {
+  return [
+    Employee(id: 10001, name: 'James', dob: DateTime(1990, 5, 15), salary: 60000),
+    Employee(id: 10002, name: 'Kathryn', dob: DateTime(1992, 8, 22), salary: 30000),
+    Employee(id: 10003, name: 'Lara', dob: DateTime(1995, 3, 10), salary: 15000),
+    Employee(id: 10004, name: 'Michael', dob: DateTime(1993, 12, 5), salary: 15000),
+  ];
+}
 
-**NOTE**  
-  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-columns-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
+{% endhighlight %}
+{% endtabs %}
 
 ![flutter datagrid shows autofit the columns based on formatted cell value](images/autofit-columns/flutter-datagrid-formatted-cellvalue.png)
 
 ## Fill the remaining width for any column
 
-While setting `SfDataGrid.columnWidthMode` as `lastColumnFill`  the remaining width is applied to the last column. The remaining width of a specific column can be applied by setting the `GridColumn.columnWidthMode` property.
+While setting `SfDataGrid.columnWidthMode` as `lastColumnFill`, the remaining width is applied to the last column. The remaining width of a specific column can be applied by setting the `GridColumn.columnWidthMode` property.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart'; 
+
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -542,11 +656,22 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill`  the remaining wi
 
 ![The last column is filled in view in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-lastcolumn.png)
 
-The below example shows Name column is set as `lastColumnFill` mode.
+The following example shows Name column is set as `lastColumnFill` mode.
 
 {% tabs %}
-{% highlight Dart %} 
- 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
+
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -600,12 +725,25 @@ The below example shows Name column is set as `lastColumnFill` mode.
 
 ## Recalculating column widths when datasource is changed
 
-By default, column widths are calculated based on the `columnWidthMode` property on the initial loading of the Datagrid. When the data source is changed for the same datagrid at run time, the Datagrid does not recalculate the column widths. To recalculate the column widths at run time when the data source is changed or data is updated, override the [shouldRecalculateColumnWidths](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/shouldRecalculateColumnWidths.html) method and return `true.` 
- 
-Returning true may impact performance as the column widths are recalculated again (whenever the notifyListeners is called). If you know that column widths will be the same whenever underlying data changes, return `false` from this method.
+By default, column widths are calculated based on the `columnWidthMode` property on the initial loading of the DataGrid. When the data source is changed for the same DataGrid at run time, the DataGrid does not recalculate the column widths. To recalculate the column widths at run time when the data source is changed or data is updated, override the [shouldRecalculateColumnWidths](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/shouldRecalculateColumnWidths.html) method and return `true`. Then, call `notifyListeners()` to trigger the recalculation.
+
+> **NOTE**  
+Returning `true` may impact performance as the column widths are recalculated whenever `notifyListeners()` is called. If you know that column widths will be the same whenever underlying data changes, return `false` from this method.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart'; 
+
+class Employee {
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+
+  Employee({required this.id, required this.name, required this.designation, required this.salary});
+}
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
@@ -647,6 +785,30 @@ class EmployeeDataSource extends DataGridSource {
   bool shouldRecalculateColumnWidths() {
     return true;
   }
+
+  // Call this method when data is updated to recalculate column widths
+  void updateData(List<Employee> employees) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+    notifyListeners();
+  }
+}
+
+List<Employee> getEmployeeData() {
+  return [
+    Employee(id: 10001, name: 'James', designation: 'Project Manager', salary: 60000),
+    Employee(id: 10002, name: 'Kathryn', designation: 'Manager', salary: 30000),
+    Employee(id: 10003, name: 'Lara', designation: 'Developer', salary: 15000),
+    Employee(id: 10004, name: 'Michael', designation: 'Designer', salary: 15000),
+  ];
 }
 
 {% endhighlight %}

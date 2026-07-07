@@ -7,26 +7,68 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Load more in Flutter Datagrid (SfDataGrid)
+# Load more in Flutter DataGrid (SfDataGrid)
 
-The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) builder to display the view at bottom of datagrid. 
+The SfDataGrid widget provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use the [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) property to display a custom view at the bottom of the grid. 
 
-You should override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the [loadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function which is passed as a parameter to `loadMoreViewBuilder`.
+To implement load more functionality, override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load additional rows and notify the grid about the changes. The `handleLoadMoreRows` method is automatically called when the user scrolls to the bottom of the grid. Use the [LoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function, passed as a parameter to `loadMoreViewBuilder`, to trigger row loading.
+
+**NOTE**  
+Requires `syncfusion_flutter_datagrid` package. Refer to the [getting started](https://help.syncfusion.com/flutter/datagrid/getting-started) guide for setup instructions.
 
 ## Infinite scrolling
 
-Infinite Scrolling is an approach that can be used to load more rows to the datagrid whenever the datagrid reaches the bottom.
+Infinite scrolling automatically loads more rows as the user scrolls to the bottom of the grid, creating a seamless continuous data experience. This approach is ideal when you have a large dataset and want to load data progressively without user interaction.
 
-The following example demonstrates infinite scrolling by showing the circular progress indicator until the rows are loaded when the datagrid reaches the bottom,
+The following example demonstrates infinite scrolling by displaying a circular progress indicator while rows are being loaded:
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'dart:math';
+
+class Employee {
+  Employee(this.id, this.name, this.designation, this.salary);
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+}
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(home: Home());
+  }
+}
+
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
+    return Scaffold(
+      appBar: AppBar(title: const Text('Load More - Infinite Scrolling')),
+      body: SfDataGrid(
         source: _employeeDataSource,
         loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
           Future<String> loadRows() async {
@@ -96,10 +138,27 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                     'Salary',
                     overflow: TextOverflow.ellipsis,
                   )))
-        ]);
+        ]),
+      );
   }
+}
 
 class EmployeeDataSource extends DataGridSource {
+  static final List<Employee> _employees = <Employee>[
+    Employee(1001, 'James', 'Project Lead', 20000),
+    Employee(1002, 'Kathryn', 'Manager', 30000),
+    Employee(1003, 'Lara', 'Developer', 15000),
+    Employee(1004, 'Michael', 'Designer', 15000),
+    Employee(1005, 'Andrew', 'Developer', 15000),
+    Employee(1006, 'Gail', 'Manager', 25000),
+    Employee(1007, 'Nancy', 'CEO', 50000),
+    Employee(1008, 'Margaret', 'Developer', 15000),
+    Employee(1009, 'Steven', 'Developer', 15000),
+    Employee(1010, 'Michael', 'System Analyst', 20000),
+    Employee(1011, 'Robert', 'Developer', 15000),
+    Employee(1012, 'Laura', 'Developer', 15000),
+  ];
+
   EmployeeDataSource() {
     buildDataGridRows();
   }
@@ -118,7 +177,7 @@ class EmployeeDataSource extends DataGridSource {
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
@@ -128,7 +187,8 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   Future<void> handleLoadMoreRows() async {
-    await Future.delayed(Duration(seconds: 5));
+    // Simulate network delay for loading data
+    await Future.delayed(const Duration(seconds: 2));
     _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
@@ -148,15 +208,15 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   void _addMoreRows(List<Employee> employees, int count) {
-    final Random _random = Random();
+    final Random random = Random();
     final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
       employees.add(Employee(
         1000 + i,
-        _names[_random.nextInt(_names.length - 1)],
-        _designation[_random.nextInt(_designation.length - 1)],
-        10000 + _random.nextInt(10000),
+        _names[random.nextInt(_names.length)],
+        _designation[random.nextInt(_designation.length)],
+        10000 + random.nextInt(10000),
       ));
     }
   }
@@ -193,24 +253,63 @@ class EmployeeDataSource extends DataGridSource {
 {% endtabs %}
 
 **NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
+  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
 
 ![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
 
 ## Load more button
 
-Showing load more button is an approach that can be used to load more rows to the datagrid by tapping a button that you load from the `SfDataGrid.loadMoreViewBuilder` builder. The button will be loaded when vertical scrolling is reached at the end of the datagrid.
+You can display a load more button that the user can tap to load additional rows on demand. This approach gives users explicit control over data loading rather than automatic loading as with infinite scrolling.
 
-The following example demonstrates how to show the button when vertical scrolling is reached at the end of the datagrid and display the circular indicator until the rows are loaded when you tap that button. In the onPressed flat button callback, you can call the `loadMoreRows` function to add more rows,
+The following example demonstrates how to display a button when vertical scrolling reaches the end of the grid, show a loading indicator while rows are being fetched, and load more rows when the button is tapped by calling the `loadMoreRows` function:
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'dart:math';
+
+class Employee {
+  Employee(this.id, this.name, this.designation, this.salary);
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+}
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(home: Home());
+  }
+}
+
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  late EmployeeDataSource _employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
+    return Scaffold(
+      appBar: AppBar(title: const Text('Load More - Button')),
+      body: SfDataGrid(
         source: _employeeDataSource,
         loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
           bool showIndicator = false;
@@ -223,10 +322,10 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      border: BorderDirectional(
+                      border: const BorderDirectional(
                           top: BorderSide(
                               width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
             } else {
               return Container(
@@ -235,37 +334,31 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      border: BorderDirectional(
+                      border: const BorderDirectional(
                           top: BorderSide(
                               width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                  child: Container(
+                  child: SizedBox(
                       height: 36.0,
                       width: 142.0,
                       child: TextButton(
                           style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.purple)),
-                          child: Text('LOAD MORE',
+                          child: const Text('LOAD MORE',
                               style: TextStyle(color: Colors.white)),
                           onPressed: () async {
-                            // To avoid the "Error: setState() called after dispose():"
-                            // while scrolling the datagrid vertically and displaying the
-                            // load more view, current load more view is checked whether
-                            // loaded widget is mounted or not.
+                            // Check if the widget is still mounted to avoid
+                            // "setState() called after dispose()" errors
                             if (context is StatefulElement &&
                                 context.state.mounted) {
                               setState(() {
                                 showIndicator = true;
                               });
                             }
-                            // Call the loadMoreRows function to call the
-                            // DataGridSource.handleLoadMoreRows method. So, additional
-                            // rows can be added from handleLoadMoreRows method.
+                            // Call the loadMoreRows function to trigger
+                            // DataGridSource.handleLoadMoreRows method
                             await loadMoreRows();
-                            // To avoid the "Error: setState() called after dispose():"
-                            // while scrolling the datagrid vertically and displaying the
-                            // load more view, current load more view is checked whether
-                            // loaded widget is mounted or not.
+                            // Reset the indicator state when loading completes
                             if (context is StatefulElement &&
                                 context.state.mounted) {
                               setState(() {
@@ -313,10 +406,27 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                     'Salary',
                     overflow: TextOverflow.ellipsis,
                   )))
-        ]);
+        ]),
+      );
   }
+}
 
 class EmployeeDataSource extends DataGridSource {
+  static final List<Employee> _employees = <Employee>[
+    Employee(1001, 'James', 'Project Lead', 20000),
+    Employee(1002, 'Kathryn', 'Manager', 30000),
+    Employee(1003, 'Lara', 'Developer', 15000),
+    Employee(1004, 'Michael', 'Designer', 15000),
+    Employee(1005, 'Andrew', 'Developer', 15000),
+    Employee(1006, 'Gail', 'Manager', 25000),
+    Employee(1007, 'Nancy', 'CEO', 50000),
+    Employee(1008, 'Margaret', 'Developer', 15000),
+    Employee(1009, 'Steven', 'Developer', 15000),
+    Employee(1010, 'Michael', 'System Analyst', 20000),
+    Employee(1011, 'Robert', 'Developer', 15000),
+    Employee(1012, 'Laura', 'Developer', 15000),
+  ];
+
   EmployeeDataSource() {
     buildDataGridRows();
   }
@@ -335,7 +445,7 @@ class EmployeeDataSource extends DataGridSource {
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
@@ -345,7 +455,8 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   Future<void> handleLoadMoreRows() async {
-    await Future.delayed(Duration(seconds: 5));
+    // Simulate network delay for loading data
+    await Future.delayed(const Duration(seconds: 2));
     _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
@@ -365,15 +476,15 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   void _addMoreRows(List<Employee> employees, int count) {
-    final Random _random = Random();
+    final Random random = Random();
     final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
       employees.add(Employee(
         1000 + i,
-        _names[_random.nextInt(_names.length - 1)],
-        _designation[_random.nextInt(_designation.length - 1)],
-        10000 + _random.nextInt(10000),
+        _names[random.nextInt(_names.length)],
+        _designation[random.nextInt(_designation.length)],
+        10000 + random.nextInt(10000),
       ));
     }
   }
@@ -410,6 +521,32 @@ class EmployeeDataSource extends DataGridSource {
 {% endtabs %}
 
 **NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
+  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
 
 ![flutter datagrid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)
+
+## Choosing between infinite scrolling and button approach
+
+- **Infinite scrolling**: Best for continuous data browsing experiences where users don't need explicit control. Data loads automatically when they reach the bottom, creating a seamless experience.
+- **Load more button**: Best when you want to give users explicit control over when data loads, or when automatic loading might consume excessive network bandwidth.
+
+## Best practices
+
+- **Batch size**: Load rows in reasonable batches (e.g., 10-20 rows) to balance performance and user experience.
+- **Loading state**: Always provide visual feedback while loading to indicate that data is being fetched.
+- **Handling completion**: When all data is loaded, modify your data source to stop triggering load operations. You can implement a flag to track this:
+
+  ```dart
+  @override
+  Future<void> handleLoadMoreRows() async {
+    if (_hasMoreData) {
+      // Load rows
+      _hasMoreData = _employees.length < _totalRecords;
+    }
+  }
+  ```
+
+- **Error handling**: Implement proper error handling in your load more logic to gracefully handle network failures and retry options.
+
+**NOTE**  
+Refer to the [DataGridSource API documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) for more information about load more row handling.

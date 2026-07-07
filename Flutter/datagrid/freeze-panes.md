@@ -11,6 +11,8 @@ documentation: ug
 
 The rows and columns can freeze in view like in Excel. They can be frozen by setting the following properties.
 
+N> Before implementing freeze panes, ensure you have added the `syncfusion_flutter_datagrid` package to your project and created a `DataGridSource` for your data. For more details, refer to [DataGrid Getting Started](getting-started.md).
+
 <table>
 <tr>
 <th> Property Name </th>
@@ -29,7 +31,7 @@ Set the frozen rows count at the top of the <code>SfDataGrid</code>.
 footerFrozenRowsCount
 </td>
 <td>
-Set the footer rows count at the bottom of the <code>SfDataGrid</code>.
+Set the footer frozen rows count at the bottom of the <code>SfDataGrid</code>.
 </td>
 </tr>
 <tr>
@@ -45,7 +47,31 @@ Set the frozen columns count on the left side of the <code>SfDataGrid</code>.
 footerFrozenColumnsCount
 </td>
 <td>
-Set the footer columns on the right side of the <code>SfDataGrid</code>.
+Set the footer frozen columns on the right side of the <code>SfDataGrid</code>.
+</td>
+</tr>
+<tr>
+<td>
+frozenPaneElevation
+</td>
+<td>
+Customize the elevation effect applied to frozen panes. Default value is 5.0. Set to 0.0 to remove elevation and display only the frozen pane line.
+</td>
+</tr>
+<tr>
+<td>
+frozenPaneLineColor
+</td>
+<td>
+Customize the color of the line displayed at the edge of frozen panes.
+</td>
+</tr>
+<tr>
+<td>
+frozenPaneLineWidth
+</td>
+<td>
+Customize the width of the line displayed at the edge of frozen panes.
 </td>
 </tr>
 </table>
@@ -54,10 +80,13 @@ Set the footer columns on the right side of the <code>SfDataGrid</code>.
 
 The columns can be frozen in view at left and right like Excel by setting the [frozenColumnsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/frozenColumnsCount.html) and [footerFrozenColumnsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenColumnsCount.html) properties.
 
-The following code example shows how to freeze a column at left using `frozenColumnsCount`,
+The following code example shows how to freeze a column at left using `frozenColumnsCount`:
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -147,10 +176,13 @@ The following code example shows how to freeze a column at left using `frozenCol
 
 ![flutter datagrid shows frozen column at left](images/frozen-pane/flutter-datagrid-frozen-column.gif)
 
-The following code example shows how to freeze a column at right using the `footerFrozenColumnsCount.`
+The following code example shows how to freeze a column at right using the `footerFrozenColumnsCount`:
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -249,10 +281,13 @@ The following code example shows how to freeze a column at right using the `foot
 
 The rows can be frozen in view at the top and bottom like in Excel by setting the [frozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/frozenRowsCount.html) and [footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) properties.
 
-The following code example shows how to freeze a row at the top using the `frozenRowsCount`,
+The following code example shows how to freeze a row at the top using the `frozenRowsCount`:
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -341,10 +376,13 @@ The following code example shows how to freeze a row at the top using the `froze
 
 ![flutter datagrid shows frozen row at top](images/frozen-pane/flutter-datagrid-frozen-row.gif)
 
-The following code example shows how to freeze a row at the bottom using the `footerFrozenRowsCount.`
+The following code example shows how to freeze a row at the bottom using the `footerFrozenRowsCount`:
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -443,19 +481,20 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 ## Appearance
 
-The `SfDataGrid` allows customizing the appearance of the freeze pane through the [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The DataGrid should be wrapped inside the `SfDataGridTheme.` 
+The `SfDataGrid` allows customizing the appearance of frozen panes through the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The DataGrid should be wrapped inside the [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html) widget. 
 
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file.
+The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. Import the required packages:
 
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 {% endhighlight %}
 {% endtabs %}
 
-The frozen line will be shown only the [SfDataGridThemeData.frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property to 0. The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
+The frozen pane line will be shown only when the [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property is set to 0. The frozen pane line color and width can be customized using the [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html) properties. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -557,9 +596,11 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows freeze pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
+![flutter datagrid shows frozen pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
 
-The `SfDataGrid` allows customizing the appearance of the freeze pane elevation by using the `SfDataGridThemeData.frozenPaneElevation`. The default value of frozenPaneElevation is 5.0.
+### Customize frozen pane elevation
+
+The `SfDataGrid` allows customizing the appearance of the frozen pane elevation by using the [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property. The default value is 5.0.
 
 {% tabs %}
 {% highlight Dart %}
@@ -653,14 +694,18 @@ The `SfDataGrid` allows customizing the appearance of the freeze pane elevation 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of freeze pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
+![flutter datagrid shows customization of frozen pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
 
-## Hide freeze pane elevation
+### Customize frozen pane line appearance
 
-By default, the elevation effect is applied to frozen panes. If you want to hide the freeze pane elevation and show only the frozen pane line, simply set the `SfDataGridThemeData.frozenPaneElevation` property to 0. Customize the appearance of the frozen line by using the `SfDataGridThemeData.frozenPaneLineColor` and `SfDataGridThemeData.frozenPaneLineWidth` properties.
+By default, the elevation effect is applied to frozen panes. To hide the elevation and display only the frozen pane line, set the [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html) property to 0. Customize the line appearance using the [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -755,3 +800,9 @@ By default, the elevation effect is applied to frozen panes. If you want to hide
 {% endtabs %}
 
 ![flutter datagrid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)
+
+N> **Header row behavior** — The header row is frozen by default and remains frozen regardless of the `frozenRowsCount` property. This ensures the column headers remain visible while scrolling through data.
+
+N> **Interaction with other features** — Frozen panes work seamlessly with other DataGrid features including sorting, filtering, selection, and styling. Frozen rows and columns maintain their visual separation during these operations.
+
+N> **Sample applications** — Refer to the [DataGrid freeze panes sample](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/datagrid_freezepanes.dart) in the Syncfusion Flutter Examples repository for a complete working implementation.

@@ -11,15 +11,100 @@ documentation: ug
 
 The Flutter DataTable provides support to swipe a row by setting the [SfDataGrid.allowSwiping](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSwiping.html) property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the [SfDataGrid.swipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/swipeMaxOffset.html) property.
 
+> **Note:** Ensure the `syncfusion_flutter_datagrid` package is installed and imported in your project.
+
 ## Swipe action builders
 
 The Flutter DataTable enables you to load the desired widget behind the swiped row by using [SfDataGrid.startSwipeActionsBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/startSwipeActionsBuilder.html) and [SfDataGrid.endSwipeActionsBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/endSwipeActionsBuilder.html) properties. The swipe widget's width that loads from the actions builder is arranged based on the `SfDataGrid.swipeMaxOffset` property and it takes height based on the current swiping row height.
 
+The following code demonstrates how to implement swipe actions:
+
+**Employee Model and Helper Class**
+
+```dart
+class Employee {
+  Employee({
+    required this.id,
+    required this.name,
+    required this.designation,
+    required this.salary,
+  });
+
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+}
+
+List<Employee> getEmployeeData() {
+  return [
+    Employee(id: 1001, name: 'James', designation: 'Developer', salary: 15000),
+    Employee(id: 1002, name: 'Kathryn', designation: 'Manager', salary: 25000),
+    Employee(id: 1003, name: 'Lara', designation: 'Developer', salary: 15000),
+    Employee(id: 1004, name: 'Michael', designation: 'Manager', salary: 25000),
+  ];
+}
+```
+
+**DataSource Class**
+
+```dart
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<Employee> employees}) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ));
+    }).toList());
+  }
+
+  void updateDataGridSource() {
+    notifyListeners();
+  }
+}
+```
+
+**SfDataGrid with Swipe Actions**
+
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
+class SfDataGridExample extends StatefulWidget {
+  @override
+  State<SfDataGridExample> createState() => _SfDataGridExampleState();
+}
+
+class _SfDataGridExampleState extends State<SfDataGridExample> {
   late EmployeeDataSource _employeeDataSource;
   List<Employee> _employees = <Employee>[];
 
@@ -109,46 +194,6 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
       ],
     );
   }
-
-class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource({required List<Employee> employees}) {
-    dataGridRows = employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
-              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
-              DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(
-                  columnName: 'salary', value: dataGridRow.salary),
-            ]))
-        .toList();
-  }
-
-  List<DataGridRow> dataGridRows = [];
-
-  @override
-  List<DataGridRow> get rows => dataGridRows;
-
-  @override
-  DataGridRowAdapter? buildRow(DataGridRow row) {
-    return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
-                  dataGridCell.columnName == 'salary')
-              ? Alignment.centerRight
-              : Alignment.centerLeft,
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
-            dataGridCell.value.toString(),
-            overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
-  }
-
-  void updateDataGridSource() {
-    notifyListeners();
-  }
 }
 
 {% endhighlight %}
@@ -167,21 +212,35 @@ The data grid provides the following callbacks to notify the swiping stages:
 The swipe callbacks provide the following properties in their arguments:
 
 * [RowIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/rowIndex.html): Defines the swiping row index.
-* [SwipeDirection](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeDirection.html): Defines the swipe direction of the swiped row.
+* [SwipeDirection](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeDirection.html): Defines the swipe direction of the swiped row (`startToEnd` for left-to-right or `endToStart` for right-to-left).
 * [SwipeOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeOffset.html): Defines the current swipe offset of the row being swiped.
 
 By handling the swipe callbacks, you can use these property values from the arguments to perform any desired action, such as deleting the row, editing the data, and more.
 
-## Customized swipes delete functionality
+## Deleting rows on swipe
 
-You can perform customized swipe functionality using the swiping callbacks. The below example shows how to delete a row when swiping a data row from one to another end.
+You can perform customized swipe functionality using the swiping callbacks. The following example demonstrates how to delete a row when swiping beyond the center point.
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
+class SfDataGridSwipeDeleteExample extends StatefulWidget {
+  @override
+  State<SfDataGridSwipeDeleteExample> createState() => _SfDataGridSwipeDeleteExampleState();
+}
+
+class _SfDataGridSwipeDeleteExampleState extends State<SfDataGridSwipeDeleteExample> {
   late EmployeeDataSource _employeeDataSource;
+  bool isReachedCenter = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -204,11 +263,13 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                   child: Text('Delete', style: TextStyle(color: Colors.white))));
         },
         onSwipeUpdate: (details) {
-          isReachedCenter =
-              (details.swipeOffset >= constraints.maxWidth / 2) ? true : false;
+          setState(() {
+            isReachedCenter =
+                (details.swipeOffset >= constraints.maxWidth / 2) ? true : false;
+          });
           return true;
         },
-        onSwipeEnd: (details) async {
+        onSwipeEnd: (details) {
           if (isReachedCenter && _employeeDataSource.dataGridRows.isNotEmpty) {
             _employeeDataSource.dataGridRows.removeAt(details.rowIndex);
             _employeeDataSource.updateDataGridSource();
@@ -262,16 +323,29 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 ![flutter Datagrid shows customized swiping delete functionality](images/swiping/flutter-datagrid-customized-swiping-delete-funtionality.gif)
 
-## Set different swipe offsets for right and left swiping 
+## Set different swipe offsets for start and end directions
 
-Set the different swipe offsets based on swipe direction by using the `onSwipeStart` callback and passing the required swipe offset to the [setSwipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeStartDetails/setSwipeMaxOffset.html) method from the `onSwipeStart` callback argument. 
+The [swipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/swipeMaxOffset.html) property sets a fixed maximum offset for swiping. For directional control, use the [onSwipeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeStart.html) callback with the [setSwipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeStartDetails/setSwipeMaxOffset.html) method to set different offsets based on swipe direction.
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
+class SfDataGridDifferentSwipeOffsetsExample extends StatefulWidget {
+  @override
+  State<SfDataGridDifferentSwipeOffsetsExample> createState() => _SfDataGridDifferentSwipeOffsetsExampleState();
+}
+
+class _SfDataGridDifferentSwipeOffsetsExampleState extends State<SfDataGridDifferentSwipeOffsetsExample> {
   late EmployeeDataSource employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    employeeDataSource = EmployeeDataSource(employees: getEmployeeData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -291,7 +365,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             (BuildContext context, DataGridRow row, int rowIndex) {
           return GestureDetector(
               onTap: () {
-                employeeDataSource.dataGridRow.insert(
+                employeeDataSource.dataGridRows.insert(
                     rowIndex,
                     DataGridRow(cells: [
                       DataGridCell(value: 1011, columnName: 'id'),
@@ -312,7 +386,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             (BuildContext context, DataGridRow row, int rowIndex) {
           return GestureDetector(
               onTap: () {
-                employeeDataSource.dataGridRow.removeAt(rowIndex);
+                employeeDataSource.dataGridRows.removeAt(rowIndex);
                 employeeDataSource.updateDataGridSource();
               },
               child: Container(
@@ -362,8 +436,9 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
       );
     });
   }
+}
 
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ![flutter Datagrid shows swiping a row in both directions with different swiping offset](images/swiping/flutter-datagrid-individual-swiping.gif)

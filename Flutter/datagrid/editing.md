@@ -11,6 +11,12 @@ documentation: ug
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) supports editing the cell values by setting the [SfDataGrid.allowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property to true, [SfDataGrid.navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) to cell, and [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) to a value other than none.
 
+>**NOTE**  
+  **Requirements**: Flutter 2.0 or later, `syncfusion_flutter_datagrid` package (latest version recommended). The `collection` package is required for the `firstWhereOrNull` helper method used in examples.
+
+>**NOTE**  
+  The editing feature requires the `syncfusion_flutter_datagrid` package. Ensure you have added it to your `pubspec.yaml` file and imported it in your code.
+
 By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) does not load any widget when a cell enters edit mode. You must provide the required widget when a cell enters edit mode by returning it through the [DataGridSource.buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method in the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/DataGridSource.html) class.
 
 The following arguments are passed in the `buildEditWidget` method.
@@ -20,12 +26,19 @@ The following arguments are passed in the `buildEditWidget` method.
 * [column](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html): Gets the Grid Column of the SfDataGrid.
 * [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html): Programmatically call to end the editing. Typically, this method can be called when the widget completes its editing. For example, `TextField.onSubmitted` method is called whenever TextField ends its editing. So, you can simply call submitCell method. This will automatically call the DataGridSource.
 
-It is recommended to save the edited value through editors in the [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method. The `onCellSubmit` method will be called whenever the [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html) method from the [buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method is called, or when other cells are navigated while a cell is in edit mode.
+We recommend saving the edited value through the editor widgets in the [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method. The `onCellSubmit` method will be called whenever the [submitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/CellSubmit.html) method from the [buildEditWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildEditWidget.html) method is called, or when other cells are navigated while a cell is in edit mode.
 
 The following example shows how to enable editing in Datagrid and commit the edited cell value in the `onCellSubmit` method.
 
+>**NOTE**  
+  The `firstWhereOrNull` method is from the [collection](https://pub.dev/packages/collection) package. Add it to your `pubspec.yaml` dependencies and import with `import 'package:collection/collection.dart';`
+
 {% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:collection/collection.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -86,13 +99,17 @@ The following example shows how to enable editing in Datagrid and commit the edi
   }
 
 class EmployeeDataSource extends DataGridSource {
-  /// Helps to hold the new value of all editable widgets.
-  /// Based on the new value we will commit the new value into the corresponding
-  /// DataGridCell on the onCellSubmit method.
+  /// Holds the underlying data for the DataGrid
+  late List<Employee> _employees;
+
+  /// Stores the new value of the edited cell
   dynamic newCellValue;
 
-  /// Helps to control the editable text in the [TextField] widget.
+  /// Controls the editable text in the [TextField] widget
   TextEditingController editingController = TextEditingController();
+
+  /// List to store DataGridRow objects
+  late List<DataGridRow> dataGridRows;
 
   @override
   Future<void> onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
@@ -187,6 +204,9 @@ class EmployeeDataSource extends DataGridSource {
 ![flutter datagrid editing](images/editing/datagrid_editing.gif)
 
 >**NOTE**  
+  The `TextEditingController` used in the example should be disposed to free up resources. Consider implementing disposal in your State class: `@override void dispose() { editingController.dispose(); super.dispose(); }`
+
+>**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
 ## Disable the editing for the specific column
@@ -260,7 +280,16 @@ To disable the editing for a particular column, set the [GridColumn.allowEditing
 
 ![flutter datagrid disable the editing for specific column](images/editing/disable_editing.gif)
 
+>**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
+
 ## Entering edit mode
+
+The [SfDataGrid.editingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/editingGestureType.html) property controls how a cell enters edit mode. The available options are:
+
+* **doubleTap**: Cell enters edit mode on double-tap (default behavior)
+* **tap**: Cell enters edit mode on single tap
+* **longPress**: Cell enters edit mode on long press
 
 By default, a cell will enter edit mode when you double-tap it. To enable editing with a single tap, set the [SfDataGrid.editingGestureType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/editingGestureType.html) property to tap.
 
@@ -331,9 +360,12 @@ By default, a cell will enter edit mode when you double-tap it. To enable editin
 
 ## Methods
 
+>**NOTE**  
+  The editing lifecycle consists of three key methods: `onCellBeginEdit` (called when entering edit mode), `canSubmitCell` (called before exiting edit mode for validation), and `onCellSubmit` (called when changes are confirmed). All methods are asynchronous-capable.
+
 ### onCellBeginEdit
 
-The [DataGridSource.onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method is called when a cell enters edit mode. Return false if you don’t want specific cells to enter edit mode. The following arguments are passed in this method:
+The [DataGridSource.onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method is called when a cell enters edit mode. This is a synchronous method where you can prevent specific cells from entering edit mode by returning `false`. The following arguments are passed in this method:
 
 * [row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html): Gets the DataGridRow of the SfDataGrid.
 * [rowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html): Gets the current row and column index of the DataGrid.
@@ -360,7 +392,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### canSubmitCell
 
-The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) is called before the cell is ending its editing. If you want to restrict the cell from being end its editing, you can return false. [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) will be called only if the `canSubmitCell` returns true. The following arguments are passed in this method,
+The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method is called before the cell exits edit mode. This is an asynchronous method used for validating the edited value. If validation fails, return `false` to retain the cell in edit mode. The [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method will only be called if `canSubmitCell` returns `true`. The following arguments are passed in this method:
 
 * [row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html): Gets the DataGridRow of the SfDataGrid.
 * [rowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html): Gets the current row and column index of the DataGrid.
@@ -372,23 +404,30 @@ The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flut
 class EmployeeDataSource extends DataGridSource {
   @override
   Future<bool> canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
-      GridColumn column) {
+      GridColumn column) async {
     if (column.columnName == 'id' && newCellValue == null) {
-      // Return false, to retain in edit mode.
-      // To avoid null value for cell
+      // Return false to retain in edit mode and prevent null values
       return false;
-    } else {
-      return true;
+    } 
+    if (column.columnName == 'salary' && newCellValue is int) {
+      // Validate salary value is within acceptable range
+      if (newCellValue < 0 || newCellValue > 1000000) {
+        return false; // Invalid salary, retain edit mode
+      }
     }
+    return true;
   }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**  
+  To display validation error messages to users, consider showing a snackbar or dialog in the `canSubmitCell` method when returning `false`, or use a validation field overlay on the edit widget in `buildEditWidget`.
+
 ### onCellSubmit
 
-The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method is called when the editing is completed. You are recommended to save the edited values to the underlying collection in this method. It makes sense to handle the entire editing operation in this single method.
+The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method is called when the editing is completed and validation passes. This is an asynchronous method where you should save the edited values to your underlying data collection. The UI automatically refreshes after changes are committed.
 
 >**NOTE**     
    There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
@@ -438,10 +477,10 @@ class EmployeeDataSource extends DataGridSource {
 
 ### onCellCancelEdit
 
-The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when you press the `Esc` key from Web and Desktop platforms. The [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) will not be called when the `Esc` key is pressed.
+The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when editing is cancelled. This occurs when the `Esc` key is pressed on Web and Desktop platforms. When this method is called, the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) methods are not called. Focus returns to the DataGrid after cancellation.
 
 >**NOTE**    
-  No need to call the notifyListener inside it.
+  You do not need to call `notifyListeners` inside this method as the UI automatically handles state updates.
 
 {% tabs %}
 {% highlight dart %}
@@ -544,6 +583,9 @@ The SfDataGrid allows moving the cell into edit mode programmatically by calling
 
 ![flutter datagrid begin edit](images/editing/begin_editing.gif)
 
+>**NOTE**  
+  Download the complete programmatic editing demo from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
+
 ### EndEdit
 
 The [SfDataGrid.endEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/endEdit.html) method can be called to programmatically end the editing for a specific cell.
@@ -629,7 +671,7 @@ The [SfDataGrid.endEdit](https://pub.dev/documentation/syncfusion_flutter_datagr
 
 ## How to check whether the current cell is in editing mode
 
-You can check whether the current cell is in editing mode by using the [DataGridController.isCurrentCellInEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/isCurrentCellInEditing.html) property.
+You can check whether the current cell is in editing mode by using the [DataGridController.isCurrentCellInEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/isCurrentCellInEditing.html) property. This read-only boolean property returns `true` if a cell is currently in edit mode, and `false` otherwise.
 
 {% tabs %}
 {% highlight dart %}
@@ -721,9 +763,9 @@ You can check whether the current cell is in editing mode by using the [DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-## Restrict specific cell or column from being entered into edit mode at run time
+## Prevent editing for specific cells or columns
 
-To cancel the editing for a specific cell or column at run time, override the [onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method in the `DataGridSource` class and return false for a specific cell or column.
+To prevent editing for specific cells or columns at runtime, override the [onCellBeginEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellBeginEdit.html) method in the `DataGridSource` class and return `false` for the cells or columns you want to protect.
 
 {% tabs %}
 {% highlight dart %}
@@ -767,9 +809,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Cancel edited cell value from being committed
 
-You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) from the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return false based on your criteria.
-
-If you return a false from the `canSubmitCell` method, the Datagrid doesn't allow focus to move to other widgets outside the DataGrid. The focus will remain on the `currentCell`.
+You can override the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method from the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and return `false` based on your validation criteria. When `canSubmitCell` returns `false`, the edited cell retains focus and edit mode, preventing the user from navigating away until the input is corrected.
 
 {% tabs %}
 {% highlight dart %}
@@ -794,15 +834,18 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Perform editing asynchronously
 
-Editing can be performed asynchronously by handling the [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method, which is called before the cell ends its editing and [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html), which is called when the cell ends its editing.
+Editing can be performed asynchronously by implementing the [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) method for validation and [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method for saving data. Both methods support `async` operations, allowing you to perform network requests or database operations.
 
-The following example shows how to display a loading indicator for a specific amount of time when the cell ends its editing and also shows the loading indicator until the cell validates whether the entered value is valid.
+The following example shows how to display a loading indicator during asynchronous validation and data persistence operations:
 
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'dart:async';
 
+/// Global StreamController to manage loading state during async operations
 StreamController<bool> loadingController = StreamController<bool>();
 List<Employee> employees = <Employee>[];
 
@@ -917,14 +960,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<bool> canSubmitCell(DataGridRow dataGridRow,
       RowColumnIndex rowColumnIndex, GridColumn column) async {
     if (column.columnName == 'id' && newCellValue == 104) {
+      // Show loading indicator during validation
       loadingController.add(true);
+      // Simulate server-side validation
       await Future<void>.delayed(const Duration(seconds: 2));
       loadingController.add(false);
-      return false;
+      return false; // Reject this specific value
     } else {
-      return true;
+      return true; // Allow submission for other values
     }
   }
   
 {% endhighlight %}
 {% endtabs %}
+
+>**NOTE**  
+  The `StreamController` pattern is used here to manage UI state during async operations. The loading indicator is shown/hidden by emitting values to the stream. You can also use state management solutions like `Provider`, `Riverpod`, or `Bloc` for more complex scenarios.

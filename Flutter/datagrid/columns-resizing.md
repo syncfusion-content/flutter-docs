@@ -11,18 +11,25 @@ documentation: ug
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`.
 
+>**Note**  
+>Ensure you have added the `syncfusion_flutter_datagrid` package to your project. For setup instructions, refer to the [getting started](getting-started.md) documentation.
+
 `SfDataGrid` does not automatically resize the columns when you perform column resizing. You should maintain the column width collection at the application level and set the column width of the corresponding column using the [SfDataGrid.onColumnResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeUpdate.html) callback.
 
 The column resizing indicator appears based on the platform. In web and desktop platforms, the indicator appears when you hover over the right end of the column and drag it. In mobile platforms, the indicator comes into view when you long-press the corresponding column header.
 
 > **NOTE:**
-> Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties.
+> Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties. These limits are enforced to prevent columns from becoming too small or too large during resizing.
+
+## Basic Column Resizing
+
+The following example demonstrates the basic column resizing setup. The `columnWidths` map stores the width of each column. Using `double.nan` as initial values allows the DataGrid to use default column width sizing until the user manually resizes a column.
 
 {% tabs %}
 {% highlight Dart %} 
 
   late Map<String, double> columnWidths = {
-    'id': double.nan,
+    'id': double.nan,          // double.nan means use default width until resized
     'name': double.nan,
     'designation': double.nan,
     'salary': double.nan
@@ -99,8 +106,8 @@ The column resizing indicator appears based on the platform. In web and desktop 
 
 By default, the columns are resized by dragging the right end of the columns. `SfDataGrid` provides two modes to perform column resizing:
 
-* `onResize`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called when a column is resized.
-* `onResizeEnd`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called when you release the pointer.
+* `onResize`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called continuously as the user drags. Use this mode when you want real-time column width updates.
+* `onResizeEnd`: The resizing indicator moves based on the dragging gesture. `onColumnResizeUpdate` callback is called only when you release the pointer. Use this mode for better performance when handling expensive operations like persisting changes.
 
 The following example demonstrates how to resize a column by setting the [SfDataGrid.columnResizeMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnResizeMode.html) property to `onResizeEnd`.
 
@@ -186,9 +193,9 @@ The following example demonstrates how to resize a column by setting the [SfData
 
 The following callbacks are called when you perform column resizing:
 
-* [onColumnResizeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeStart.html): Called when column resizing is started. In mobile platforms, it will be called when the resizing indicator appears after you long-press the corresponding column header. In web and desktop platforms, it will be called when you click and drag the right end of the columns.
-* `onColumnResizeUpdate`: Called when a column is being resized. Typically, you should set the column width here.
-* [onColumnResizeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeEnd.html): Called when column resizing is ended. Typically, this will be called when you release the pointer.
+* [onColumnResizeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeStart.html): Called when column resizing is started. In mobile platforms, it will be called when the resizing indicator appears after you long-press the corresponding column header. In web and desktop platforms, it will be called when you click and drag the right end of the columns. Return `true` to allow resizing, or `false` to prevent it.
+* `onColumnResizeUpdate`: Called when a column is being resized. Typically, you should set the column width here. The callback provides `ColumnResizeUpdateDetails` with properties: `column` (the GridColumn being resized) and `width` (the new width). Return `true` to apply the change.
+* [onColumnResizeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeEnd.html): Called when column resizing is ended. This will be called when you release the pointer. The callback provides `ColumnResizeEndDetails` with the final column and width information.
 
 {% tabs %}
 {% highlight Dart %}
@@ -273,7 +280,7 @@ The following callbacks are called when you perform column resizing:
 
 ## Disable resizing for a particular column
 
-To disable resizing for a particular column, use the `SfDataGrid.onColumnResizeStart` callback and return `false` to the corresponding column. Return `true` for all other columns.
+To disable resizing for a particular column, return `false` in the `onColumnResizeStart` callback for that column. Return `true` for all other columns to allow resizing.
 
 {% tabs %}
 {% highlight Dart %}
@@ -359,7 +366,7 @@ To disable resizing for a particular column, use the `SfDataGrid.onColumnResizeS
 
 ## Disable resizing for the checkbox column
 
-The checkbox column is always added as the first column (index 0). To disable resizing for the checkbox column, use the `SfDataGrid.onColumnResizeStart` callback and return false when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeStartDetails/columnIndex.html) is 0. 
+When checkbox selection is enabled (`showCheckboxColumn: true`), the checkbox column is always added as the first column (index 0). To disable resizing for the checkbox column, return `false` in the `onColumnResizeStart` callback when the [ColumnResizeStartDetails.columnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnResizeStartDetails/columnIndex.html) is `0`. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -525,11 +532,25 @@ To prevent a column from being hidden while resizing, use the `GridColumn.minimu
 {% endhighlight %}
 {% endtabs %}
 
+## Troubleshooting
+
+**Column widths not persisting after app restart?**  
+Column width changes are stored in memory during the session. To persist widths across app restarts, save the `columnWidths` map to local storage (using packages like `shared_preferences` or `hive`) in the `onColumnResizeUpdate` callback, and restore the values when the widget initializes.
+
+**Columns not resizing visually?**  
+Ensure that `onColumnResizeUpdate` returns `true` and that `columnWidths` map is properly updated in `setState()`. Also verify that the column width is not set to a fixed value that overrides the resized width.
+
+**Resizing feels sluggish?**  
+Use `columnResizeMode: ColumnResizeMode.onResizeEnd` instead of the default `onResize` mode to reduce callback frequency and improve performance.
+
 ## Customize indicator appearance
 
 The column resizing indicator color and its width can be customized by using the [SfDataGridThemeData.columnResizeIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorColor.html) and [SfDataGridThemeData.columnResizeIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorStrokeWidth.html) properties.
 
-The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the following file:
+>**Note**  
+>The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. Ensure this package is added to your project dependencies.
+
+Import the following file:
 
 {% tabs %}
 {% highlight Dart %}
