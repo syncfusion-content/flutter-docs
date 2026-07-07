@@ -91,7 +91,7 @@ line-height: 1;
 .sf-icon-data-grid:before { content: "\e742"; }
 .sf-icon-signature-pad:before { content: "\e736"; }
 .sf-icon-chat:before { content: "\e701"; }
-.sf-icon-ai-assistview:before { content: "\e702"; }
+.sf-icon-ai-assist-view:before { content: "\e702"; }
 .sf-icon-tree-map:before { content: "\e700"; }
 </style>
 
@@ -207,7 +207,7 @@ line-height: 1;
 </div>
 <div class="controlanchorlink">
     <a target="_self" href="https://help.syncfusion.com/flutter/ai-assistview/overview">
-        <span class="sf-home-icon sf-icon-ai-assistview"></span>AI AssistView
+        <span class="sf-home-icon sf-icon-ai-assist-view"></span>AI AssistView
     </a>
 </div>
 </td>
@@ -407,7 +407,7 @@ Explore Features
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/section/1236" class="explore-link">
-Search KBs
+Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
