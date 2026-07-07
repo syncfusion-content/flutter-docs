@@ -12,9 +12,9 @@ This section explains how to enable selection in the Datagrid; modes, properties
 
 The Datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property of the SfDataGrid to a value other than `none`. The default value is `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
-N> The [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property must be initialized in the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). The `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
-
-N> Import the [SelectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SelectionMode.html) enum from the `syncfusion_flutter_datagrid` package to use different selection modes in your application.
+> **Note:**
+>- The [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property must be initialized in the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html). The `rows` is the collection of `DataGridRow` to populate the rows in DataGrid.
+>- Import the [SelectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SelectionMode.html) enum from the `syncfusion_flutter_datagrid` package to use different selection modes in your application.
 
 ## Selection modes 
 
@@ -220,7 +220,7 @@ When using `multiple`, you can select multiple rows by pressing the key modifier
 
 ![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-multiple-selection.png)
 
-N>  When the `selectionMode` is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selections, pressing the navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
+> **Note:**  When the `selectionMode` is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selections, pressing the navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
 
 ### Single deselect row selection
 
@@ -232,47 +232,45 @@ The `singleDeselect` mode allows selection of only one row at a time. Unlike the
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridColumn(
-                  columnName: 'id',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'ID',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'name',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Name',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'designation',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Designation',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'salary',
-                  label: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'Salary',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-            ],
-            selectionMode: SelectionMode.singleDeselect));
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        selectionMode: SelectionMode.singleDeselect,
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -336,13 +334,13 @@ The selection can be disabled by setting the `selectionMode` property as `none`.
 
 Selection on a particular row can be disabled by handling the [onCurrentCellActivating](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCurrentCellActivating.html) callback.
 
- N> You cannot select the header row of SfDataGrid.
+> **Note:**  You cannot select the header row of SfDataGrid.
 
 ## Getting selected rows
 
 Get the information of the selected rows by using the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and set it to the controller property. The [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) property returns the selected DataGridRow and the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html) property returns the index of the [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) in SfDataGrid. The [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) denotes the last selected row in multiple selections.
 
-N> [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) objects are expected to be long-lived, not re-created with each build. Instantiate the controller at the class level in your State class to maintain its state across widget rebuilds.
+> **Note:** [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) objects are expected to be long-lived, not re-created with each build. Instantiate the controller at the class level in your State class to maintain its state across widget rebuilds.
 
 {% tabs %}
 {% highlight Dart %}
@@ -920,7 +918,7 @@ The following code example shows how to clear selection when the `selectionMode`
 {% endhighlight %}
 {% endtabs %}
 
-N> Selected rows and selections will be cleared whenever the `dataSource` is changed at runtime.
+> **Note:** Selected rows and selections will be cleared whenever the `dataSource` is changed at runtime.
 
 ## Keyboard behavior
 
@@ -1109,65 +1107,64 @@ The following example shows how to cancel the selection when selecting a row tha
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-      selectionMode: SelectionMode.single,
-      onSelectionChanging:
-          (List<DataGridRow> addedRows, List<DataGridRow> removedRows) {
-        if (addedRows.isNotEmpty) {
-          final index = _employeeDataSource.dataGridRows.indexOf(addedRows.last);
-          if (index >= 0 && index < _employees.length) {
-            Employee employee = _employees[index];
-            if (employee.designation == 'Manager') {
-              return false;
-            }
-          }
-        }
-        return true;
-      },
-      onSelectionChanged:
-          (List<DataGridRow> addedRows, List<DataGridRow> removedRows) {
-        // Handle selection change
-      },
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        selectionMode: SelectionMode.single,
+        onSelectionChanging:
+            (List<DataGridRow> addedRows, List<DataGridRow> removedRows) {
+              if (addedRows.isNotEmpty) {
+                final index = _employeeDataSource._employeeData.indexOf(
+                  addedRows.last,
+                );
+                if (index >= 0 && index < _employees.length) {
+                  Employee employee = _employees[index];
+                  if (employee.designation == 'Manager') {
+                    return false;
+                  }
+                }
+              }
+              return true;
+            },
+        onSelectionChanged:
+            (List<DataGridRow> addedRows, List<DataGridRow> removedRows) {
+              // Handle selection change
+            },
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -1401,7 +1398,7 @@ To retrieve the details of a row in the DataGrid, use the [controller](https://p
 
 To perform custom actions beyond the default keyboard behavior mentioned in the keyboard behavior table, create a custom selection manager by overriding the [handleKeyEvent()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager/handleKeyEvent.html) method of the [RowSelectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager-class.html) class and assign it to the [SfDataGrid.selectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionManager.html) property.
 
-N> Import [services](https://api.flutter.dev/flutter/services/services-library.html) and [foundation](https://api.flutter.dev/flutter/foundation/foundation-library.html) packages from Flutter to use `LogicalKeyboardKey` and `HardwareKeyboard`.
+> **Note:** Import [services](https://api.flutter.dev/flutter/services/services-library.html) and [foundation](https://api.flutter.dev/flutter/foundation/foundation-library.html) packages from Flutter to use `LogicalKeyboardKey` and `HardwareKeyboard`.
 
 The following example demonstrates how to implement a custom action for the <kbd>Ctrl</kbd> + <kbd>A</kbd> key combination:
 
@@ -1409,7 +1406,7 @@ The following example demonstrates how to implement a custom action for the <kbd
 {% highlight Dart %}
 
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
 
@@ -1478,7 +1475,7 @@ class CustomSelectionManager extends RowSelectionManager {
 {% endhighlight %}
 {% endtabs %}   
 
-### Change Enter key behavior
+## Change Enter key behavior
 
 By default, pressing the <kbd>Enter</kbd> key moves the current cell to the next focused row of the same column. You can customize this behavior by overriding the `handleKeyEvent()` method in a custom [RowSelectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager-class.html).
 
@@ -1486,62 +1483,60 @@ By default, pressing the <kbd>Enter</kbd> key moves the current cell to the next
 {% highlight Dart %}
 
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-  final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
+  final CustomSelectionManager _customSelectionManager =
+      CustomSelectionManager();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'designation',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'salary',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-      selectionMode: SelectionMode.multiple,
-      navigationMode: GridNavigationMode.cell,
-      selectionManager: _customSelectionManager,
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        selectionMode: SelectionMode.multiple,
+        navigationMode: GridNavigationMode.cell,
+        selectionManager: _customSelectionManager,
+      ),
+    );
   }
 
 class CustomSelectionManager extends RowSelectionManager {
   @override
-  void handleKeyEvent(KeyEvent keyEvent) {
+  Future<void> handleKeyEvent(KeyEvent keyEvent) async {
     if (keyEvent.logicalKey == LogicalKeyboardKey.enter) {
       // Apply custom logic for Enter key
       return;
@@ -1558,7 +1553,7 @@ class CustomSelectionManager extends RowSelectionManager {
  
 You can customize the appearance of selected rows and the current cell by using the [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html) and [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) classes. All styles such as [selectionColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/selectionColor.html) and [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
 
-N> Import `package:syncfusion_flutter_core/theme.dart` to access the theming classes.
+> **Note:** Import `package:syncfusion_flutter_core/theme.dart` to access the theming classes.
 
 ### Selection
 
@@ -1753,4 +1748,4 @@ import 'package:syncfusion_flutter_core/theme.dart';
 
 ![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
 
-N> When [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) is set to [GridNavigationMode.row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridNavigationMode.html), the `currentCellStyle` property customizes the current row border's color instead of individual cell borders.  
+> **Note:** When [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) is set to [GridNavigationMode.row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridNavigationMode.html), the `currentCellStyle` property customizes the current row border's color instead of individual cell borders.  
