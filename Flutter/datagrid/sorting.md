@@ -13,11 +13,9 @@ The SfDataGrid provides built-in support to sort one or more columns by setting 
 
 By default, the SfDataGrid shows an unsorted icon on every column header to indicate that sorting is enabled in the column. When sorting is applied, the SfDataGrid shows a sort icon in the column header to indicate the sort direction.
 
-> **Note:** This feature requires `syncfusion_flutter_datagrid` package. Ensure the package is added to your `pubspec.yaml` file.
-
 ## Programmatic sorting
 
-The SfDataGrid provides support to sort columns programmatically by creating [SortColumnDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SortColumnDetails-class.html) objects and adding them to the [SfDataGrid.source.sortedColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/sortedColumns.html) collection. After adding the sort details, call the [SfDataGrid.source.sort()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/sort.html) method to apply the sort.
+The SfDataGrid provides support to sort columns programmatically by creating [SortColumnDetails](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SortColumnDetails-class.html) objects and adding them to the [DataGridSource.sortedColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/sortedColumns.html) collection. After adding the sort details, call the [DataGridSource.sort()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/sort.html) method to apply the sort.
 
 The `SortColumnDetails` object holds the following properties:
 
@@ -115,51 +113,47 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      allowMultiColumnSorting: true,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        allowMultiColumnSorting: true,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('City', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'freight',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,51 +171,49 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      allowMultiColumnSorting: true,
-      allowTriStateSorting: true,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        allowMultiColumnSorting: true,
+        allowTriStateSorting: true,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('City', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'freight',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -240,49 +232,46 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      sortingGestureType: SortingGestureType.doubleTap,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        sortingGestureType: SortingGestureType.doubleTap,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('City', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'freight',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -330,10 +319,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ),
+              child: Text('ID', overflow: TextOverflow.ellipsis),
             ),
           ),
           GridColumn(
@@ -341,10 +327,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ),
+              child: Text('Name', overflow: TextOverflow.ellipsis),
             ),
           ),
           GridColumn(
@@ -352,10 +335,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
-              child: Text(
-                'City',
-                overflow: TextOverflow.ellipsis,
-              ),
+              child: Text('City', overflow: TextOverflow.ellipsis),
             ),
           ),
           GridColumn(
@@ -363,16 +343,14 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
-              child: Text(
-                'Freight',
-                overflow: TextOverflow.ellipsis,
-              ),
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
             ),
           ),
         ],
       ),
     );
   }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -389,50 +367,47 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      allowMultiColumnSorting: true,
-      showSortNumbers: true,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        allowMultiColumnSorting: true,
+        showSortNumbers: true,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('City', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'freight',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
   
 {% endhighlight %}
@@ -458,41 +433,50 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
       appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
-            sortOrderNumberBackgroundColor: Colors.tealAccent,
-            sortOrderNumberColor: Colors.pink),
+          sortOrderNumberBackgroundColor: Colors.tealAccent,
+          sortOrderNumberColor: Colors.pink,
+        ),
         child: SfDataGrid(
-            source: employeeDataSource,
-            columnWidthMode: ColumnWidthMode.auto,
-            allowSorting: true,
-            allowMultiColumnSorting: true,
-            showSortNumbers: true,
-            columns: <GridColumn>[
-              GridColumn(
-                  columnName: 'id',
-                  label: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        'ID'))),
-              GridColumn(
-                  columnName: 'name',
-                  label: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      alignment: Alignment.center,
-                      child: const Text('Name'))),
-              GridColumn(
-                  columnName: 'city',
-                  label: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      alignment: Alignment.center,
-                      child: const Text('City'))),
-              GridColumn(
-                  columnName: 'freight',
-                  label: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      alignment: Alignment.center,
-                      child: const Text('Freight'))),
-            ]),
+          source: _employeeDataSource,
+          columnWidthMode: ColumnWidthMode.auto,
+          allowSorting: true,
+          allowMultiColumnSorting: true,
+          showSortNumbers: true,
+          columns: <GridColumn>[
+            GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: const Text('ID'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: const Text('Name'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'city',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: const Text('City'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'freight',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.center,
+                child: const Text('Freight'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -514,49 +498,46 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
-      source: _employeeDataSource,
-      allowSorting: true,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        allowSorting: true,
+        columns: [
+          GridColumn(
             columnName: 'id',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'name',
             allowSorting: false,
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'city',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('City', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
             columnName: 'freight',
             label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Freight',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-      ],
-    ));
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Freight', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
   
 {% endhighlight %}
@@ -575,52 +556,49 @@ import 'package:syncfusion_flutter_core/theme.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGridTheme(
-      data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
-      child: SfDataGrid(
-        source: _employeeDataSource,
-        allowSorting: true,
-        allowMultiColumnSorting: true,
-        columns: [
-          GridColumn(
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
+        child: SfDataGrid(
+          source: _employeeDataSource,
+          allowSorting: true,
+          allowMultiColumnSorting: true,
+          columns: [
+            GridColumn(
               columnName: 'id',
               label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('ID', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
               columnName: 'name',
               label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
               columnName: 'city',
               label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'City',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('City', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
               columnName: 'freight',
               label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Freight',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-        ],
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Freight', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 
 {% endhighlight %}
@@ -640,7 +618,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGrid(
+      body: SfDataGrid(
         source: _employeeDataSource,
         allowSorting: true,
         allowMultiColumnSorting: true,
@@ -648,40 +626,38 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
         headerGridLinesVisibility: GridLinesVisibility.both,
         columns: [
           GridColumn(
-              sortIconPosition: ColumnHeaderIconPosition.start,
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            sortIconPosition: ColumnHeaderIconPosition.start,
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.centerRight,
-                  child: Text('Salary'
-                  ))),
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.all(8.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary'),
+            ),
+          ),
         ],
       ),
     );
@@ -715,8 +691,8 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
               Widget? icon;
               String columnName = '';
               context.visitAncestorElements((element) {
-                if (element.widget is GridHeaderCell) {
-                  final headerCell = element.widget as GridHeaderCell;
+                if (element.widget is GridHeaderCellElement) {
+                  final headerCell = element.widget as GridHeaderCellElement;
                   columnName = headerCell.column.columnName;
                 }
                 return true;
@@ -725,9 +701,11 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
                   .where((element) => element.name == columnName)
                   .firstOrNull;
               if (sortedColumn != null) {
-                if (sortedColumn.sortDirection == DataGridSortDirection.ascending) {
+                if (sortedColumn.sortDirection ==
+                    DataGridSortDirection.ascending) {
                   icon = const Icon(Icons.arrow_circle_up_rounded, size: 16);
-                } else if (sortedColumn.sortDirection == DataGridSortDirection.descending) {
+                } else if (sortedColumn.sortDirection ==
+                    DataGridSortDirection.descending) {
                   icon = const Icon(Icons.arrow_circle_down_rounded, size: 16);
                 }
               }
@@ -740,31 +718,37 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
           allowSorting: true,
           columns: <GridColumn>[
             GridColumn(
-                columnName: 'id',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.centerRight,
-                    child: const Text(
-                      'ID',
-                    ))),
+              columnName: 'id',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: const Text('ID'),
+              ),
+            ),
             GridColumn(
-                columnName: 'name',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.centerLeft,
-                    child: const Text('Name'))),
+              columnName: 'name',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: const Text('Name'),
+              ),
+            ),
             GridColumn(
-                columnName: 'city',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.centerLeft,
-                    child: const Text('City'))),
+              columnName: 'city',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: const Text('City'),
+              ),
+            ),
             GridColumn(
-                columnName: 'freight',
-                label: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    alignment: Alignment.centerRight,
-                    child: const Text('Freight'))),
+              columnName: 'freight',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: const Text('Freight'),
+              ),
+            ),
           ],
         ),
       ),
@@ -790,18 +774,29 @@ Sort columns by string length instead of alphabetical order by overriding the `c
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary)
-            ]))
+                columnName: 'designation',
+                value: dataGridRow.designation,
+              ),
+              DataGridCell<int>(
+                columnName: 'salary',
+                value: dataGridRow.salary,
+              ),
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -813,9 +808,10 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
+      cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          alignment:
+              (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
@@ -823,27 +819,37 @@ class EmployeeDataSource extends DataGridSource {
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
+          ),
+        );
+      }).toList(),
+    );
   }
 
   @override
   int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
-    final String? value1 = a
-        ?.getCells()
-        .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-        ?.value as String?;
-    final String? value2 = b
-        ?.getCells()
-        .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-        ?.value as String?;
+    final String? value1 =
+        a
+                ?.getCells()
+                .firstWhereOrNull(
+                  (element) => element.columnName == sortColumn.name,
+                )
+                ?.value
+            as String?;
+    final String? value2 =
+        b
+                ?.getCells()
+                .firstWhereOrNull(
+                  (element) => element.columnName == sortColumn.name,
+                )
+                ?.value
+            as String?;
 
     if (value1 == null || value2 == null) {
       return 0;
     }
 
     final int lengthComparison = value1.length.compareTo(value2.length);
-    
+
     if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
       return lengthComparison;
     } else {
@@ -866,18 +872,29 @@ Sort string columns in a case-insensitive manner by overriding the `compare` met
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary)
-            ]))
+                columnName: 'designation',
+                value: dataGridRow.designation,
+              ),
+              DataGridCell<int>(
+                columnName: 'salary',
+                value: dataGridRow.salary,
+              ),
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -889,9 +906,10 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
+      cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          alignment:
+              (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
@@ -899,28 +917,40 @@ class EmployeeDataSource extends DataGridSource {
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
+          ),
+        );
+      }).toList(),
+    );
   }
 
   @override
   int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
     if (sortColumn.name == 'name') {
-      final String? value1 = a
-          ?.getCells()
-          .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-          ?.value as String?;
-      final String? value2 = b
-          ?.getCells()
-          .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-          ?.value as String?;
+      final String? value1 =
+          a
+                  ?.getCells()
+                  .firstWhereOrNull(
+                    (element) => element.columnName == sortColumn.name,
+                  )
+                  ?.value
+              as String?;
+      final String? value2 =
+          b
+                  ?.getCells()
+                  .firstWhereOrNull(
+                    (element) => element.columnName == sortColumn.name,
+                  )
+                  ?.value
+              as String?;
 
       if (value1 == null || value2 == null) {
         return 0;
       }
 
-      final int comparisonResult = value1.toLowerCase().compareTo(value2.toLowerCase());
-      
+      final int comparisonResult = value1.toLowerCase().compareTo(
+        value2.toLowerCase(),
+      );
+
       if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
         return comparisonResult;
       } else {
@@ -948,6 +978,9 @@ Use the [performSorting](https://pub.dev/documentation/syncfusion_flutter_datagr
 {% tabs %}
 {% highlight Dart %} 
 
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 final StreamController<bool> loadingController = StreamController<bool>();
@@ -962,11 +995,12 @@ class Employee {
 
 class _MyHomePageState extends State<MyHomePage> {
   late EmployeeDataSource employeeDataSource;
+  List<Employee> employees = <Employee>[];
 
   @override
   void initState() {
     super.initState();
-    final employees = getEmployeeData();
+    employees = getEmployeeData();
     employeeDataSource = EmployeeDataSource(employeeData: employees);
   }
 
@@ -1025,7 +1059,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void dispose() {
-    loadingController.dispose();
+    loadingController.close();
     super.dispose();
   }
 }
