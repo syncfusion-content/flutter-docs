@@ -11,8 +11,7 @@ documentation: ug
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column. The `SfDataGrid` supports two main column types: `GridColumn` for standard data binding and a `Checkbox` column for row selection. This document covers the features and customization options available for each column type.
 
->**NOTE**
->Ensure that you have added the `syncfusion_flutter_datagrid` package to your `pubspec.yaml` file. For more information, refer to the [getting started with Flutter DataGrid](getting-started.md) documentation.
+**Note:** Ensure that you have added the `syncfusion_flutter_datagrid` package to your `pubspec.yaml` file. For more information, refer to the [getting started with Flutter DataGrid](getting-started.md) documentation.
 
 ## GridColumn
 
@@ -87,8 +86,7 @@ The column can be bound to a property in a data object using the [GridColumn.col
 
 [GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
->**NOTE**  
->Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
+**Note:** Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -156,8 +154,7 @@ The column can be bound to a property in a data object using the [GridColumn.col
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. Specify the width value in logical pixels. By default, this property will not be assigned any value, and the column renders based on the [SfDataGrid.defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
->**NOTE**  
->Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
+**Note:** Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -225,8 +222,7 @@ The column can be bound to a property in a data object using the [GridColumn.col
 
 By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as the first column in the grid.
 
->**NOTE**
->Row selection is applied only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property to a value other than `none`. The checkbox state automatically synchronizes with the row selection state.
+**Note:** Row selection is applied only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property to a value other than `none`. The checkbox state automatically synchronizes with the row selection state.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -512,8 +508,7 @@ The background color of the entire checkbox column can be customized by using th
 
 Get the checked items by using the [DataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property. The checkbox state and row selection state are synchronized, so you can retrieve checked rows through the controller's selection properties.
 
->**NOTE**
->Ensure the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) is assigned to the `SfDataGrid.controller` property for programmatic access to selection information.
+**Note:** Ensure the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) is assigned to the `SfDataGrid.controller` property for programmatic access to selection information.
 
 {% tabs %}
 {% highlight Dart %}
@@ -603,7 +598,7 @@ Get the checked items by using the [DataGridController.selectedRows](https://pub
 
 ### Change the shape of the checkbox column
 
-By default, checkboxes in the DataGrid appear as a square shape. Change the checkbox shape by setting the required [`ShapeBorder`](https://api.flutter.dev/flutter/material/ShapeBorder-class.html) in the [SfDataGrid.checkboxShape](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/checkboxShape.html) property. You can use built-in shapes like `CircleBorder()`, `RoundedRectangleBorder()`, or create a custom shape.
+By default, checkboxes in the DataGrid appear as a square shape. Change the checkbox shape by setting the required [`ShapeBorder`](https://api.flutter.dev/flutter/painting/ShapeBorder-class.html) in the [SfDataGrid.checkboxShape](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/checkboxShape.html) property. You can use built-in shapes like `CircleBorder()`, `RoundedRectangleBorder()`, or create a custom shape.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -739,8 +734,7 @@ The following are the limitations of the checkbox column:
 
 To display column header icons, such as sort and filter icons, when the mouse hovers over a column header, set the [SfDataGrid.showColumnHeaderIconOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showColumnHeaderIconOnHover.html) property to `true`. This feature is available only on web and desktop platforms.
 
->**NOTE**
->This feature requires the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) or [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) properties to be enabled for the icons to appear.
+**Note:** This feature requires the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) or [SfDataGrid.allowFiltering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowFiltering.html) properties to be enabled for the icons to appear.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -812,9 +806,3 @@ To display column header icons, such as sort and filter icons, when the mouse ho
 {% endtabs %}
 
 <img alt="flutter datagrid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif" width="1177"/>
-
-## See also
-
-* [DataGrid getting started](getting-started.md)
-* [GitHub sample repository](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid)
-* [SfDataGrid API documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html)

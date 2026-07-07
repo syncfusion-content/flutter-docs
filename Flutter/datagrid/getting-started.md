@@ -479,13 +479,3 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 **Note:** `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.
-
-## Next steps
-
-* [Styling](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) - Customize the appearance of SfDataGrid
-* [Sorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) - Enable sorting on columns
-* [Filtering](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) - Filter rows based on conditions
-* [Editing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) - Enable cell editing functionality
-* [Export](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) - Export data to various formats
-
-For more information, refer to the complete [SfDataGrid documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) and the [GitHub samples repository](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
