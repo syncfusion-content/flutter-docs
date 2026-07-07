@@ -19,7 +19,7 @@ The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/lates
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
-N> Ensure the `columnName` property in `DataGridCell` matches the `columnName` in the corresponding `GridColumn` definitions. This alignment is essential for the DataGrid to correctly display and manage the data.
+**Note:** Ensure the `columnName` property in `DataGridCell` matches the `columnName` in the corresponding `GridColumn` definitions. This alignment is essential for the DataGrid to correctly display and manage the data.
 
 The following example shows how to create the `DataGridSource`,
 
@@ -151,15 +151,15 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> `ColumnWidthMode.lastColumnFill` automatically adjusts the width of the last column to fill any remaining space in the DataGrid.
+**Note:** `ColumnWidthMode.lastColumnFill` automatically adjusts the width of the last column to fill any remaining space in the DataGrid.
 
 ## Data manipulation in Flutter DataGrid (SfDataGrid)
 
 `SfDataGrid` provides support to update or refresh the DataGrid when underlying data is updated via CRUD operations.
 
-N> `notifyListeners` must be called from inside the `DataGridSource`. Since it is a protected method, wrap it in a public method like `updateDataGridSource` that can be called from the widget level.
-
-N> Requires `syncfusion_flutter_datagrid` package version 20.0.0 or later.
+**Note:**
+- `notifyListeners` must be called from inside the `DataGridSource`. Since it is a protected method, wrap it in a public method like `updateDataGridSource` that can be called from the widget level.
+- Requires `syncfusion_flutter_datagrid` package version 20.0.0 or later.
 
 If a row is added, removed, or replaced in an underlying data source, call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html) method to notify the DataGrid to refresh. 
 
@@ -176,12 +176,13 @@ List<Employee> getEmployeeData() {
   ];
 }
 
-final List<Employee> _employees = getEmployeeData();
+List<Employee> _employees = <Employee>[];
 final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 @override
 void initState() {
   super.initState();
+  _employees = getEmployeeData();
   _employeeDataSource.buildDataGridRows(_employees);
 }
 
@@ -296,12 +297,13 @@ List<Employee> getEmployeeData() {
   ];
 }
 
-final List<Employee> _employees = getEmployeeData();
+List<Employee> _employees = <Employee>[];
 final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 @override
 void initState() {
   super.initState();
+  _employees = getEmployeeData();
   _employeeDataSource.buildDataGridRows(_employees);
 }
 
@@ -416,4 +418,4 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-N> Use `notifyDataSourceListeners` with a specific `RowColumnIndex` for better performance when updating individual cells. Use `notifyListeners` only when the entire row or multiple cells need to be refreshed.
+**Note:** Use `notifyDataSourceListeners` with a specific `RowColumnIndex` for better performance when updating individual cells. Use `notifyListeners` only when the entire row or multiple cells need to be refreshed.
