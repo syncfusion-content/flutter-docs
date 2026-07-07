@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to add the SfDataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
 
-**Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+> **Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 To get started quickly with Flutter SfDataGrid, check out this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
@@ -33,7 +33,7 @@ Add the Syncfusion® Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% endhighlight %}
 
-**Note:** Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package. Refer to the [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) page to check the latest available version.
+> **Note:** Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package. Refer to the [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) page to check the latest available version.
 
 **Get packages**
 
@@ -185,7 +185,7 @@ List<Employee> getEmployeeData() {
 
 * **`buildRow`** - Returns a [DataGridRowAdapter](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter-class.html) that builds the widget for each cell in the row.
 
-**Note:** `DataGridSource` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridSource` once in the `initState()` method and reuse it.
+> **Note:** `DataGridSource` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridSource` once in the `initState()` method and reuse it.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -254,7 +254,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
+> **Note:** You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
 
 ## Defining columns
 
@@ -389,7 +389,7 @@ You can retrieve information about the selected rows using the [DataGridControll
 * [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) - Gets the currently selected row
 * [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) - Gets all selected rows
 
-**Note:** `DataGridController` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridController` once in your State class and reuse it.
+> **Note:** `DataGridController` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridController` once in your State class and reuse it.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -478,4 +478,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.
+> **Note:** `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.

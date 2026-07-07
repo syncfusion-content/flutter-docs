@@ -18,89 +18,81 @@ Each [StackedHeaderRow](https://pub.dev/documentation/syncfusion_flutter_datagri
 {% tabs %}
 {% highlight Dart %} 
 
-import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      gridLinesVisibility: GridLinesVisibility.both,
-      headerGridLinesVisibility: GridLinesVisibility.both,
-      source: _productDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'orderId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'customerName',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-      ],
-      stackedHeaderRows: <StackedHeaderRow>[
-        StackedHeaderRow(cells: [
-          StackedHeaderCell(
-            columnNames: ['orderId', 'customerName'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Customer Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
+    return Scaffold(
+      body: SfDataGrid(
+        gridLinesVisibility: GridLinesVisibility.both,
+        headerGridLinesVisibility: GridLinesVisibility.both,
+        source: _productDataSource,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'orderId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
           ),
-          StackedHeaderCell(
-            columnNames: ['productId', 'product'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Product Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
-          )
-        ])
-      ]
+          GridColumn(
+            columnName: 'customerName',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'productId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'product',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Product', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        stackedHeaderRows: <StackedHeaderRow>[
+          StackedHeaderRow(
+            cells: [
+              StackedHeaderCell(
+                columnNames: ['orderId', 'customerName'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Customer Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+              StackedHeaderCell(
+                columnNames: ['productId', 'product'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Product Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -109,7 +101,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 ![flutter datagrid shows stacked headers](images/stacked-headers/flutter-stacked-headers.png)
 
-> **Important:** The `columnNames` property must contain valid column names that exactly match the `columnName` properties defined in your grid columns. Column names are case-sensitive, and specifying non-existent column names will result in those columns not being grouped under the stacked header.
+> **Note:** The `columnNames` property must contain valid column names that exactly match the `columnName` properties defined in your grid columns. Column names are case-sensitive, and specifying non-existent column names will result in those columns not being grouped under the stacked header.
 
 ## Multi stacked headers
 
@@ -123,98 +115,97 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      gridLinesVisibility: GridLinesVisibility.both,
-      headerGridLinesVisibility: GridLinesVisibility.both,
-      source: _productDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'orderId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'customerName',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-      ],
-      stackedHeaderRows: <StackedHeaderRow>[
-        StackedHeaderRow(cells: [
-          StackedHeaderCell(
-            columnNames: ['orderId', 'customerName', 'productId', 'product'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Order Shipment Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
+    return Scaffold(
+      body: SfDataGrid(
+        gridLinesVisibility: GridLinesVisibility.both,
+        headerGridLinesVisibility: GridLinesVisibility.both,
+        source: _productDataSource,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'orderId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
           ),
-        ]),
-        StackedHeaderRow(cells: [
-          StackedHeaderCell(
-            columnNames: ['orderId', 'customerName'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Customer Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
+          GridColumn(
+            columnName: 'customerName',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
           ),
-          StackedHeaderCell(
-            columnNames: ['productId', 'product'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Product Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
-          )
-        ])
-      ]
+          GridColumn(
+            columnName: 'productId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'product',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Product', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        stackedHeaderRows: <StackedHeaderRow>[
+          StackedHeaderRow(
+            cells: [
+              StackedHeaderCell(
+                columnNames: [
+                  'orderId',
+                  'customerName',
+                  'productId',
+                  'product',
+                ],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Order Shipment Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          StackedHeaderRow(
+            cells: [
+              StackedHeaderCell(
+                columnNames: ['orderId', 'customerName'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Customer Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+              StackedHeaderCell(
+                columnNames: ['productId', 'product'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Product Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -238,12 +229,13 @@ Use the `onQueryRowHeight` callback to apply custom heights to specific stacked 
 {% tabs %}
 {% highlight Dart %} 
 
-import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
+    return Scaffold(
+      body: SfDataGrid(
         gridLinesVisibility: GridLinesVisibility.both,
         headerGridLinesVisibility: GridLinesVisibility.both,
         source: _productDataSource,
@@ -255,64 +247,70 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
         },
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'orderId',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'orderId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'customerName',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'customerName',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'productId',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'productId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'product',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Product',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'product',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Product', overflow: TextOverflow.ellipsis),
+            ),
+          ),
         ],
         stackedHeaderRows: <StackedHeaderRow>[
-          StackedHeaderRow(cells: [
-            StackedHeaderCell(
+          StackedHeaderRow(
+            cells: [
+              StackedHeaderCell(
                 columnNames: ['orderId', 'customerName'],
                 child: Container(
-                    color: const Color(0xFFF1F1F1),
-                    child: Center(
-                        child: Text(
-                          'Customer Details',
-                          overflow: TextOverflow.ellipsis,
-                        )))),
-            StackedHeaderCell(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Customer Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+              StackedHeaderCell(
                 columnNames: ['productId', 'product'],
                 child: Container(
-                    color: const Color(0xFFF1F1F1),
-                    child: Center(
-                        child: Text(
-                          'Product Details',
-                          overflow: TextOverflow.ellipsis,
-                        ))))
-          ])
-        ]);
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Product Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -327,90 +325,82 @@ You can set a uniform height for all stacked header rows and the column header r
 {% tabs %}
 {% highlight Dart %} 
 
-import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
-    return SfDataGrid(
-      gridLinesVisibility: GridLinesVisibility.both,
-      headerGridLinesVisibility: GridLinesVisibility.both,
-      headerRowHeight: 60.0,
-      source: _productDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'orderId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'customerName',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-        GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            )
-          )
-        ),
-      ],
-      stackedHeaderRows: <StackedHeaderRow>[
-        StackedHeaderRow(cells: [
-          StackedHeaderCell(
-            columnNames: ['orderId', 'customerName'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Customer Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
+    return Scaffold(
+      body: SfDataGrid(
+        gridLinesVisibility: GridLinesVisibility.both,
+        headerGridLinesVisibility: GridLinesVisibility.both,
+        headerRowHeight: 60.0,
+        source: _productDataSource,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'orderId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
           ),
-          StackedHeaderCell(
-            columnNames: ['productId', 'product'],
-            child: Container(
-              color: const Color(0xFFF1F1F1),
-              child: Center(
-                child: Text(
-                  'Product Details',
-                  overflow: TextOverflow.ellipsis,
-                )
-              )
-            )
-          )
-        ])
-      ]
+          GridColumn(
+            columnName: 'customerName',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'productId',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+          GridColumn(
+            columnName: 'product',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Product', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+        stackedHeaderRows: <StackedHeaderRow>[
+          StackedHeaderRow(
+            cells: [
+              StackedHeaderCell(
+                columnNames: ['orderId', 'customerName'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Customer Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+              StackedHeaderCell(
+                columnNames: ['productId', 'product'],
+                child: Container(
+                  color: const Color(0xFFF1F1F1),
+                  child: Center(
+                    child: Text(
+                      'Product Details',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 

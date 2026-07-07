@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion® Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-**Note:** The SfDataGrid widget is compatible with iOS, Android, Web, macOS, and Windows platforms. Ensure you have Flutter SDK 3.0 or later installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+> **Note:** The SfDataGrid widget is compatible with iOS, Android, Web, macOS, and Windows platforms. Ensure you have Flutter SDK 3.0 or later installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 ![Overview Flutter Datagrid](images/overview/flutter-datagrid-overview.png)
 
