@@ -76,7 +76,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 ### Changing the locale to RTL languages
 
-Change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) property of [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) to an RTL language such as Arabic (ar), Persian (fa), Hebrew (he), Pashto (ps), or Urdu (ur) to enable RTL rendering.
+Change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) property of [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) to an RTL language such as Arabic (`ar`), Persian (`fa`), Hebrew (`he`), Pashto (`ps`), or Urdu (`ur`) to enable RTL rendering.
 
 > **Note:** The `flutter_localizations` package is required. Add it to your `pubspec.yaml` file:
 > 

@@ -448,7 +448,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** To display validation error messages to users, consider showing a snackbar or dialog in the `canSubmitCell` method when returning `false`, or use a validation field overlay on the edit widget in `buildEditWidget`.
+> **Note:** To display validation error messages to users, consider showing an error message dialog in the `canSubmitCell` method when returning `false`, or use a validation field overlay on the edit widget in `buildEditWidget`.
 
 ### onCellSubmit
 

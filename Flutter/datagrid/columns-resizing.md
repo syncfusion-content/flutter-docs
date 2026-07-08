@@ -19,7 +19,7 @@ The column resizing indicator appears based on the platform. In web and desktop 
 
 ## Basic Column Resizing
 
-The following example demonstrates the basic column resizing setup. The `columnWidths` map stores the width of each column. Using `double.nan` as initial values allows the DataGrid to use default column width sizing until the user manually resizes a column.
+The following example demonstrates the basic column resizing setup. The `columnWidths` map stores the width of each column. Initially, the `DataGrid` applies its default column sizing behavior, and the column widths are updated when the user manually resizes a column.
 
 {% tabs %}
 {% highlight Dart %} 

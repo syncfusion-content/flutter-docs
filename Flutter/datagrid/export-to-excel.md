@@ -44,7 +44,7 @@ Export SfDataGrid by using the following extension methods present in the [SfDat
 * [exportToExcelWorksheet](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExcelExportExtensions/exportToExcelWorksheet.html) - Exports the grid to an existing Excel worksheet
 
 > **Note:** 
->- File export requires platform-specific permissions. Ensure write permissions are configured in AndroidManifest.xml (Android), Info.plist (iOS), and Entitlements (macOS).
+>- File export requires platform-specific permissions. Ensure write permissions are configured in AndroidManifest.xml (Android), the iOS app configuration file, and the macOS entitlements file.
 >- For web platforms, use web APIs instead of the `File` class. Consider using the `universal_html` package or browser download methods.
 >- Refer to [getting-started](https://help.syncfusion.com/flutter/xlsio/getting-started) for platform-specific file generation code.
 
