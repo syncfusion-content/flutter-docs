@@ -7,9 +7,9 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Placeholder in Flutter Datagrid (SfDataGrid)
+# Placeholder in Flutter DataGrid (SfDataGrid)
 
-The `SfDataGrid` provides built-in support for displaying a placeholder when the data source is empty by setting the [SfDataGrid.placeholder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/placeholder.html) property. When the `SfDataGrid.placeholder` is set, the DataGrid automatically shows the specified widget in the scroll view area. By default, the `SfDataGrid` does not display anything when the data source is empty.
+The `SfDataGrid` provides built-in support for displaying a placeholder when the data source is empty by setting the [SfDataGrid.placeholder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/placeholder.html) property. The `placeholder` property accepts a `Widget` that will be displayed in the scroll view area when the DataGrid has no data to show.
 
 The following example shows how to add a `placeholder` in SfDataGrid:
 
@@ -23,7 +23,7 @@ The following example shows how to add a `placeholder` in SfDataGrid:
         title: const Text('Syncfusion Flutter DataGrid'),
       ),
       body: SfDataGrid(
-        source: employeeDataSource,
+        source: _employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
         columns: <GridColumn>[
           GridColumn(
