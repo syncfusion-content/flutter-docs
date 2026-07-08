@@ -13,7 +13,6 @@ The Syncfusion® Flutter DataGrid is used to display and manipulate data in a ta
 
 ![Overview Flutter Datagrid](images/overview/flutter-datagrid-overview.png)
 
-
 ## Key Features
 
 ### Data Presentation

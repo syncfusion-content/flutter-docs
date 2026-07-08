@@ -33,7 +33,6 @@ Import the following packages in your Dart code.
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid_export/export.dart';
-import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
 {% endhighlight %}
 {% endtabs %}
