@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Flutter DataGrid | DataTable | Syncfusion
-description: Learn all about how to perform grouping and multi-grouping to the data source through column in the Syncfusion Flutter DataGrid (SfDataGrid) widget and more here.
+description: Learn all about grouping and multi-grouping data through columns in the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

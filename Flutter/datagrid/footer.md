@@ -191,12 +191,3 @@ By default, the footer row is displayed below the last data row. To keep the foo
 {% endtabs %}
 
 ![flutter datagrid shows footer always on bottom](images/footer/flutter-datagrid-footer-on-bottom.gif)
-
-## API reference
-
-Refer to the following API documentation for footer-related properties:
-
-* [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) — Sets the widget to display as the footer row.
-* [SfDataGrid.footerHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerHeight.html) — Sets the height of the footer row. Default value is 49.0.
-* [SfDataGrid.footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) — Sets the number of frozen footer rows. Set to 1 to keep the footer visible during vertical scrolling.
-* [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) — Base class for providing rows to SfDataGrid.

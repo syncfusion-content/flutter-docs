@@ -387,7 +387,7 @@ By default, a cell will enter edit mode when you double-tap it. To enable editin
 
 ## Methods
 
-> **Note:** The editing lifecycle consists of three key methods: `onCellBeginEdit` (called when entering edit mode), `canSubmitCell` (called before exiting edit mode for validation), and `onCellSubmit` (called when changes are confirmed). All methods are asynchronous-capable.
+> **Note:** The editing life cycle consists of three key methods: `onCellBeginEdit` (called when entering edit mode), `canSubmitCell` (called before exiting edit mode for validation), and `onCellSubmit` (called when changes are confirmed). All methods are asynchronous-capable.
 
 ### onCellBeginEdit
 
@@ -501,7 +501,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### onCellCancelEdit
 
-The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when editing is cancelled. This occurs when the `Esc` key is pressed on Web and Desktop platforms. When this method is called, the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) methods are not called. Focus returns to the DataGrid after cancellation.
+The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when editing is canceled. This occurs when the `Esc` key is pressed on Web and Desktop platforms. When this method is called, the [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) methods are not called. Focus returns to the DataGrid after cancellation.
 
 > **Note:** You do not need to call `notifyListeners` inside this method as the UI automatically handles state updates.
 
@@ -996,5 +996,3 @@ class _MyHomePageState extends State<MyHomePage> {
   
 {% endhighlight %}
 {% endtabs %}
-
-> **Note:** The `StreamController` pattern is used here to manage UI state during async operations. The loading indicator is shown/hidden by emitting values to the stream. You can also use state management solutions like `Provider`, `Riverpod`, or `Bloc` for more complex scenarios.

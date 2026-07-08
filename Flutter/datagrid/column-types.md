@@ -11,8 +11,6 @@ documentation: ug
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column. The `SfDataGrid` supports two main column types: `GridColumn` for standard data binding and a `Checkbox` column for row selection. This document covers the features and customization options available for each column type.
 
-> **Note:** Ensure that you have added the `syncfusion_flutter_datagrid` package to your `pubspec.yaml` file. For more information, refer to the [getting started with Flutter DataGrid](getting-started.md) documentation.
-
 ## GridColumn
 
 GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.

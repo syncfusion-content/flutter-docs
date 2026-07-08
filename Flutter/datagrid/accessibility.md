@@ -236,22 +236,3 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Testing accessibility
-
-To ensure your DataGrid implementation is accessible, follow these testing practices:
-
-* **Screen reader testing:** Use Android TalkBack or iOS VoiceOver to verify that cell content is properly announced.
-* **Keyboard navigation:** Test all keyboard interactions on desktop platforms (Windows, macOS, Linux) to ensure proper navigation flow.
-* **Color contrast:** Validate that all text meets WCAG 2.1 AA color contrast requirements (4.5:1 for normal text).
-* **Text scaling:** Test your grid with text scale factors of 1.0x, 1.25x, 1.5x, and 2.0x to ensure content remains readable.
-* **Automated testing:** Use accessibility scanning tools available in Android Studio and Xcode to detect potential accessibility issues.
-
-## Related resources
-
-For comprehensive information on implementing accessible DataGrid functionality, refer to the following resources:
-
-* [DataGrid selection guide](https://help.syncfusion.com/flutter/datagrid/selection)
-* [DataGrid API documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/)
-* [Flutter accessibility guide](https://flutter.dev/docs/development/accessibility-and-localization/accessibility)
-* [WCAG 2.1 accessibility standards](https://www.w3.org/WAI/WCAG21/quickref/)
-

@@ -34,8 +34,6 @@ Import the following packages in your Dart code.
 {% tabs %}
 {% highlight Dart %} 
 
-import 'dart:io';
-
 import 'package:syncfusion_flutter_datagrid_export/export.dart';
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
@@ -139,9 +137,9 @@ The following code illustrates how to create and display a `SfDataGrid` using th
 To save the file as a PDF document, platform-specific code is required based on the target platform:
 
 > **Note:** See the following documentation for platform-specific file saving implementations:
->- [Mobile platforms (Android/iOS)](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile)
->- [Web platform](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web)
->- [Desktop platforms (macOS/Windows/Linux)](https://help.syncfusion.com/flutter/pdf/getting-started#save-a-pdf-document-in-desktop)
+>- [Mobile platforms (Android/iOS)](https://help.syncfusion.com/flutter/pdf/getting-started/#save-and-open-a-pdf-document-in-mobile)
+>- [Web platform](https://help.syncfusion.com/flutter/pdf/getting-started/#save-and-download-a-pdf-document-in-web)
+>- [Desktop platforms (macOS/Windows/Linux)](https://help.syncfusion.com/flutter/pdf/getting-started/#save-a-pdf-document-in-desktop)
 
 ## Export DataGrid to PDF document
 

@@ -11,8 +11,6 @@ documentation: ug
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows customizing the style of individual cells and rows based on your requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
 
-> **Note:** Ensure you have added the `syncfusion_flutter_datagrid` package to your project's `pubspec.yaml` file. Refer to the [getting-started](getting-started.md) guide for installation instructions.
-
 ## Employee Model Class
 
 The following examples use an `Employee` model class. Define it as shown below:

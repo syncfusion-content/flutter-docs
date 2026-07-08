@@ -402,10 +402,3 @@ class EmployeeDataSource extends DataGridSource {
 > **Note:** After adding the packages, hot reload or restart your app to apply the localization changes. Supported locales include Chinese (zh), Arabic (ar), Japanese (ja), Hindi (hi), French (fr), German (de), Spanish (es), Portuguese (pt), Russian (ru), and more. See [SfGlobalLocalizations](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations-class.html) for the complete list.
 
 <img alt="flutter datagrid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
-
-## See also
-
-* [SfDataGrid API Documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html)
-* [SfDataPager API Documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager-class.html)
-* [Syncfusion Localizations Package](https://pub.dev/packages/syncfusion_localizations)
-* [Flutter Localizations Documentation](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html)
