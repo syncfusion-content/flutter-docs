@@ -13,7 +13,7 @@ documentation: ug
 
 [FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the SfDataGrid widget as a custom widget in FlutterFlow.
 
->**Note**: You need an active FlutterFlow account and basic knowledge of Flutter development to follow this guide. Refer to the [SDK version compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility) to ensure your FlutterFlow's Flutter version is compatible with the Syncfusion Flutter DataGrid package.
+> **Note:** You need an active FlutterFlow account and basic knowledge of Flutter development to follow this guide. Refer to the [SDK version compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility) to ensure your FlutterFlow's Flutter version is compatible with the Syncfusion Flutter DataGrid package.
 
 ### Create a new project
 
@@ -37,9 +37,9 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: If you need a specific version instead of the latest, remove the caret (^) prefix in the version number. For example, change `^21.3.0` to `21.3.0` to lock to that exact version.
-
->**Note**: The SfDataGrid package depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package. Make sure to add it as a dependency using the same steps above.
+>**Note**: 
+>- If you need a specific version instead of the latest, remove the caret (^) prefix in the version number. For example, change `^21.3.0` to `21.3.0` to lock to that exact version.
+>- The SfDataGrid package depends on the [Syncfusion Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package. Make sure to add it as a dependency using the same steps above.
 
 ![Dependency](how-to-section-images/dependency.png)
 
@@ -77,9 +77,3 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 5. Run your FlutterFlow app to verify the SfDataGrid widget displays correctly.
 
 ![Page](how-to-section-images/page.png)
-
-## See also
-
-- [Syncfusion Flutter DataGrid documentation](https://help.syncfusion.com/flutter/datagrid/overview)
-- [SfDataGrid GitHub examples](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/datagrid)
-- [Syncfusion Flutter DataGrid API reference](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/)

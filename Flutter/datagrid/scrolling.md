@@ -15,7 +15,7 @@ SfDataGrid provides support to scroll the content in both horizontal and vertica
 
 You can show horizontal and vertical scrollbars always by using the [SfDataGrid.isScrollbarAlwaysShown](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/isScrollbarAlwaysShown.html) property. When the `isScrollbarAlwaysShown` is set to `false`, the scrollbar will be shown during scrolling and will fade out otherwise. When it is `true`, the scrollbar will always be visible and never fade out even after scrolling.
 
-> **NOTE:** The default value of `isScrollbarAlwaysShown` is `false`. This ensures scrollbars appear only during active scrolling for a cleaner UI.
+> **Note:** The default value of `isScrollbarAlwaysShown` is `false`. This ensures scrollbars appear only during active scrolling for a cleaner UI.
 
 {% tabs %}
 {% highlight Dart %}
@@ -73,7 +73,7 @@ You can show horizontal and vertical scrollbars always by using the [SfDataGrid.
 
 You can control the visibility of horizontal and vertical scrollbars in the DataGrid by setting the [SfDataGrid.showVerticalScrollbar](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showVerticalScrollbar.html) and [SfDataGrid.showHorizontalScrollbar](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showHorizontalScrollbar.html) properties. To disable the default scrollbar of the `SingleChildScrollView`, wrap the `ScrollConfiguration` as the parent for the `SfDataGrid` and set the scrollbars to `false`. This prevents duplicate scrollbars from appearing.
 
-> **NOTE:** The default value of `showVerticalScrollbar` and `showHorizontalScrollbar` is `true`. Setting these to `false` disables only the DataGrid's internal scrollbars.
+> **Note:** The default value of `showVerticalScrollbar` and `showHorizontalScrollbar` is `true`. Setting these to `false` disables only the DataGrid's internal scrollbars.
 
 The following code snippets demonstrate how to hide the scrollbars in the DataGrid:
 
@@ -136,7 +136,7 @@ The following code snippets demonstrate how to hide the scrollbars in the DataGr
 
 SfDataGrid allows you to set the [ScrollPhysics](https://api.flutter.dev/flutter/widgets/ScrollPhysics-class.html) for horizontal and vertical scrollbars to control how the scroll view should respond to user input by using [horizontalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollPhysics.html) and [verticalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollPhysics.html) properties respectively.
 
-> **NOTE:** The default values of `horizontalScrollPhysics` and `verticalScrollPhysics` properties are `AlwaysScrollableScrollPhysics()`.
+> **Note:** The default values of `horizontalScrollPhysics` and `verticalScrollPhysics` properties are `AlwaysScrollableScrollPhysics()`.
 
 The following example shows how to disable the horizontal and vertical scrolling by setting `NeverScrollableScrollPhysics()`.
 
@@ -201,9 +201,9 @@ The Flutter DataTable provides support to scroll to a particular row and column 
 
 Scroll programmatically to a particular cell by passing the row and column index to the [DataGridController.scrollToCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToCell.html) method. SfDataGrid allows you to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter. 
 
-> **NOTE:** The default value of `canAnimate` is `false`. If you specify a rowIndex or columnIndex that exceeds the valid range, the scrolling will not occur.
-
-> **NOTE:** Ensure you have imported the required package: `import 'package:syncfusion_flutter_datagrid/datagrid.dart';`
+> **Note:**
+>- The default value of `canAnimate` is `false`. If you specify a rowIndex or columnIndex that exceeds the valid range, the scrolling will not occur.
+>- Ensure you have imported the required package: `import 'package:syncfusion_flutter_datagrid/datagrid.dart';`
 
 {% tabs %}
 {% highlight Dart %}
@@ -276,7 +276,7 @@ Scroll programmatically to a particular cell by passing the row and column index
 
 Scroll programmatically to a particular row by passing the row index to the [DataGridController.scrollToRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToRow.html) method. SfDataGrid allows you to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter.
 
-> **NOTE:** The default value of `canAnimate` is `false`. If the specified rowIndex exceeds the total number of rows, the scrolling will not occur.
+> **Note:** The default value of `canAnimate` is `false`. If the specified rowIndex exceeds the total number of rows, the scrolling will not occur.
 
 {% tabs %}
 {% highlight Dart %}
@@ -347,7 +347,7 @@ Scroll programmatically to a particular row by passing the row index to the [Dat
 
 Scroll programmatically to a particular column by passing the column index to the [DataGridController.scrollToColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToColumn.html) method. SfDataGrid allows you to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter.
 
-> **NOTE:** The default value of `canAnimate` is `false`. If the specified columnIndex exceeds the total number of columns, the scrolling will not occur.
+> **Note:** The default value of `canAnimate` is `false`. If the specified columnIndex exceeds the total number of columns, the scrolling will not occur.
 
 {% tabs %}
 {% highlight Dart %}
@@ -425,7 +425,7 @@ The `SfDataGrid` allows positioning of the scrolled row or column in view progra
 * `center` - Position the row/column at the center of the DataGrid.
 * `end` - Position the row/column at the end of the DataGrid.
 
-> **NOTE:** The default value of `DataGridScrollPosition` is `start`.
+> **Note:** The default value of `DataGridScrollPosition` is `start`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -570,7 +570,7 @@ The Flutter DataTable supports scrolling programmatically to a particular vertic
 
 The Flutter DataTable supports scrolling programmatically to a particular horizontal offset by passing the offset value to the [DataGridController.scrollToHorizontalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToHorizontalOffset.html) method. You can enable the scrolling animation by passing `true` to the `canAnimate` parameter.
 
-> **NOTE:** The default value of `canAnimate` is `false`. The offset value should be non-negative and not exceed the maximum scrollable extent.
+> **Note:** The default value of `canAnimate` is `false`. The offset value should be non-negative and not exceed the maximum scrollable extent.
 
 {% tabs %}
 {% highlight Dart %}
@@ -637,13 +637,13 @@ The Flutter DataTable supports scrolling programmatically to a particular horizo
 {% endhighlight %}
 {% endtabs %}
 
-> **NOTE:** The vertical and horizontal scroll offsets can be retrieved using the [DataGridController.verticalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/verticalOffset.html) and [DataGridController.horizontalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/horizontalOffset.html) properties respectively.
+> **Note:** The vertical and horizontal scroll offsets can be retrieved using the [DataGridController.verticalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/verticalOffset.html) and [DataGridController.horizontalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/horizontalOffset.html) properties respectively.
 
 ## Listen to scroll changes
 
 Listen to the vertical and horizontal scroll changes by using the [verticalScrollController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollController.html) and [horizontalScrollController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollController.html) properties respectively. Set listeners on these controllers using the `addListener` method to receive notifications when scrolling occurs.
 
-> **NOTE:** The `intl` package is required for number formatting. Add `intl: ^0.19.0` to your `pubspec.yaml` dependencies.
+> **Note:** The `intl` package is required for number formatting. Add `intl: ^0.19.0` to your `pubspec.yaml` dependencies.
 
 The following example demonstrates how to load more rows when vertical scrolling reaches 70% of the maximum scroll extent:
 
@@ -726,16 +726,6 @@ class _EmployeeDataSource extends DataGridSource {
     ]);
   }
 
-  final List<String> names = [
-    'Maria Anders', 'Francisco Chang', 'Roland Mendel', 'Yvonne Moncada',
-    'Dominique Perrier', 'Fran Wilson', 'Giovanni Rovelli', 'Catherine Dewey'
-  ];
-
-  final List<String> cities = [
-    'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
-    'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'
-  ];
-
   void loadEmployees(int count) {
     final Random random = Random();
     final int startIndex = employees.isNotEmpty ? employees.length : 0,
@@ -764,7 +754,7 @@ class _EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-> **NOTE:** Download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
+> **Note:** Download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
 
 ## Increase row cache limit
 
@@ -772,7 +762,7 @@ By default, rows are generated based on the viewport size, and these rows are re
 
 The `rowsCacheExtent` property creates additional rows internally alongside the visible rows allocated based on viewport size, increasing the number of rows available for reuse.
 
-> **NOTE:** Increasing `rowsCacheExtent` improves visual consistency but may impact performance with large datasets. Use this property judiciously based on your application's performance requirements.
+> **Note:** Increasing `rowsCacheExtent` improves visual consistency but may impact performance with large datasets. Use this property judiciously based on your application's performance requirements.
 
 {% tabs %}
 {% highlight Dart %}
@@ -838,7 +828,7 @@ The `rowsCacheExtent` property creates additional rows internally alongside the 
 
 If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the [shrinkWrapRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapRows.html) or [shrinkWrapColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapColumns.html) property, respectively.
 
-> **NOTE:** Shrink wrapping is significantly more expensive than setting the height and width manually. Use this property only when the number of rows and columns is small.
+> **Note:** Shrink wrapping is significantly more expensive than setting the height and width manually. Use this property only when the number of rows and columns is small.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -975,7 +965,7 @@ In the SfDataGrid, you can obtain the starting and ending indices of the visible
 
 SfDataGrid allows you to set the scroll offset upon initial loading for both horizontal and vertical scrollbars. This is achieved by assigning the offset value to the [initialScrollOffset](https://api.flutter.dev/flutter/widgets/ScrollController/initialScrollOffset.html) property of the [ScrollController](https://api.flutter.dev/flutter/widgets/ScrollController-class.html) for the required vertical or horizontal controller.
 
-> **NOTE:** Ensure you have imported the required package: `import 'package:syncfusion_flutter_datagrid/datagrid.dart';`
+> **Note:** Ensure you have imported the required package: `import 'package:syncfusion_flutter_datagrid/datagrid.dart';`
 
 {% tabs %}
 {% highlight Dart %} 

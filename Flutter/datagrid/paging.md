@@ -18,7 +18,7 @@ The Datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
 * Load the data for a specific page in the [handlePageChange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handlePageChange.html) method. This method returns a `Future<bool>` and is called when navigating between pages in the data pager.
 
-N> The `SfDataPager.visibleItemsCount` property default value is 5. Also, ensure that the [syncfusion_flutter_datagrid](https://pub.dev/packages/syncfusion_flutter_datagrid) and [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) packages are added to your `pubspec.yaml` file.
+> **Note:** The `SfDataPager.visibleItemsCount` property default value is 5. Also, ensure that the [syncfusion_flutter_datagrid](https://pub.dev/packages/syncfusion_flutter_datagrid) and [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) packages are added to your `pubspec.yaml` file.
 
 The following code example illustrates using the `SfDataPager` with the Datagrid control:
 
@@ -26,35 +26,12 @@ The following code example illustrates using the `SfDataPager` with the Datagrid
 {% highlight Dart %}
 
 import 'package:intl/intl.dart';
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-// OrderInfo model class
-class OrderInfo {
-  OrderInfo({
-    required this.orderID,
-    required this.customerID,
-    required this.orderDate,
-    required this.freight,
-  });
-
-  final int orderID;
-  final String customerID;
-  final DateTime orderDate;
-  final double freight;
-}
 
   final int _rowsPerPage = 15;
   final double _dataPagerHeight = 60.0;
-  List<OrderInfo> _orders = <OrderInfo>[]; // Populate with sample data
-  List<OrderInfo> _paginatedOrders = <OrderInfo>[];
-  late final OrderInfoDataSource _orderInfoDataSource;
-
-  @override
-  void initState() {
-    super.initState();
-    // Initialize the data source after populating _orders
-    _orderInfoDataSource = OrderInfoDataSource();
-  }
+  List<OrderInfo> _orders = [];
+  List<OrderInfo> _paginatedOrders = [];
+  final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +45,7 @@ class OrderInfo {
             height: _dataPagerHeight,
             child: SfDataPager(
               delegate: _orderInfoDataSource,
-              pageCount: (_orders.length / _rowsPerPage).ceil().toDouble(),
+              pageCount: _orders.length / _rowsPerPage,
               direction: Axis.horizontal,
             ))
       ]);
@@ -121,8 +98,7 @@ class OrderInfo {
 
 class OrderInfoDataSource extends DataGridSource {
   OrderInfoDataSource() {
-    int endIndex = _orders.length < _rowsPerPage ? _orders.length : _rowsPerPage;
-    _paginatedOrders = _orders.getRange(0, endIndex).toList(growable: false);
+    _paginatedOrders = _orders.getRange(0, 19).toList(growable: false);
     buildPaginatedDataGridRows();
   }
 
@@ -368,8 +344,7 @@ class OrderInfoDataSource extends DataGridSource {
 
 ![flutter datapager with asynchronous loading](images/paging/flutter-datapager-asynchronous-loading.gif)
 
->**NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-show-loading-indicator-on-loading-page-in-flutter-datatable).
+> **Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-show-loading-indicator-on-loading-page-in-flutter-datatable).
 
 
 ## Programmatic page navigation
@@ -436,8 +411,7 @@ Show the dropdown button option to select a different number of rows per page by
 
 Use the [availableRowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/availableRowsPerPage.html) property to define the list of numbers to be displayed in the drop-down. The default value of the `availableRowsPerPage` property is [10, 15, 20].
 
->**NOTE** 
-  You can view the dropdown button option by horizontally scrolling the DataPager. The dropdown button option is not supported if the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) is vertical. Also, only values that are present in the `availableRowsPerPage` list can be selected from the dropdown.
+> **Note:** You can view the dropdown button option by horizontally scrolling the DataPager. The dropdown button option is not supported if the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) is vertical. Also, only values that are present in the `availableRowsPerPage` list can be selected from the dropdown.
 
 {% tabs %}
 {% highlight Dart %}
@@ -685,7 +659,7 @@ The padding between the page items including navigation page items such as first
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The default value of `SfDataPager.itemPadding` is 5.0.
+**Note:** The default value of `SfDataPager.itemPadding` is `5.0`.
 
 ### Set the height and width of the page items
 

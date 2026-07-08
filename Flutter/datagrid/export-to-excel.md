@@ -21,11 +21,10 @@ dependencies:
 
 syncfusion_flutter_datagrid: ^xx.x.xx
 syncfusion_flutter_datagrid_export: ^xx.x.xx
-syncfusion_flutter_xlsio: ^xx.x.xx
 
 {% endhighlight %}
 
->**NOTE:** Replace **xx.x.xx** with the latest version of the packages from [pub.dev](https://pub.dev). Ensure all three packages have compatible versions. Requires Flutter 3.0 and above.
+> **Note:** Replace **xx.x.xx** with the latest version of the packages from [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid_export). Ensure all three packages have compatible versions. Requires Flutter 3.0 and above.
 
 **Import package**
 
@@ -34,7 +33,6 @@ Import the following packages in your Dart code.
 {% tabs %}
 {% highlight Dart %} 
 
-import 'dart:io';
 import 'package:syncfusion_flutter_datagrid_export/export.dart';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
@@ -45,32 +43,8 @@ Export the `SfDataGrid` by using the following extension methods present in the 
 
 * [exportToExcelWorkbook](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExcelExportExtensions/exportToExcelWorkbook.html)
 * [exportToExcelWorksheet](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridExcelExportExtensions/exportToExcelWorksheet.html)
-  
 
-**Create a helper method for saving files**
-
-Create a helper method to save and launch the exported Excel file. This method handles platform-specific file operations.
-
-{% tabs %}
-{% highlight Dart %}
-
-class FileHelper {
-  static Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
-    final String path = (await getApplicationDocumentsDirectory()).path;
-    final File file = File('$path/$fileName');
-    await file.writeAsBytes(bytes, flush: true);
-    
-    if (await file.exists()) {
-      // Open the file with the default application
-      await OpenFile.open('$path/$fileName');
-    }
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
->**NOTE:** You need to add the `path_provider` and `open_file` packages to your pubspec.yaml to use the helper method above.
+> **Note:** You need to add the `path_provider` and `open_file` packages to your pubspec.yaml to use the helper method above.
 
 **Add GlobalKey for the DataGrid**
  
@@ -292,7 +266,7 @@ await FileHelper.saveAndLaunchFile(bytes, 'SelectedRows.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE:** Ensure row selection is enabled in the SfDataGrid by setting the `selectionMode` property to `SelectionMode.multiple` or `SelectionMode.single`.
+> **Note:** Ensure row selection is enabled in the SfDataGrid by setting the `selectionMode` property to `SelectionMode.multiple` or `SelectionMode.single`.
 
 ## Row height and column width customization
 

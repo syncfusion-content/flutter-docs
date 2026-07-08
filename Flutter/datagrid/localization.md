@@ -22,7 +22,7 @@ To use `flutter_localizations` and `syncfusion_localizations`, add the package a
 dependencies:
 flutter_localizations:
   sdk: flutter
-syncfusion_localizations: ^24.2.7
+syncfusion_localizations: ^34.1.29
 
 {% endhighlight %}
 
@@ -48,13 +48,9 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        SfGlobalLocalizations.delegate
+        SfGlobalLocalizations.delegate,
       ],
-      supportedLocales: const [
-        Locale('zh'),
-        Locale('ar'),
-        Locale('ja'),
-      ],
+      supportedLocales: const [Locale('zh'), Locale('ar'), Locale('ja')],
       locale: const Locale('ar'),
       home: Scaffold(
         appBar: AppBar(
@@ -69,34 +65,40 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
           allowFiltering: true,
           columns: <GridColumn>[
             GridColumn(
-                columnName: 'id',
-                label: Container(
-                    padding: const EdgeInsets.all(16.0),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'ID',
-                    ))),
+              columnName: 'id',
+              label: Container(
+                padding: const EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: const Text('ID'),
+              ),
+            ),
             GridColumn(
-                columnName: 'name',
-                label: Container(
-                    padding: const EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: const Text('Name'))),
+              columnName: 'name',
+              label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Name'),
+              ),
+            ),
             GridColumn(
-                columnName: 'designation',
-                label: Container(
-                    padding: const EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'Designation',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'designation',
+              label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
             GridColumn(
-                columnName: 'salary',
-                label: Container(
-                    padding: const EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: const Text('Salary'))),
+              columnName: 'salary',
+              label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Salary'),
+              ),
+            ),
           ],
         ),
       ),
@@ -140,20 +142,75 @@ Next, import the `flutter_localizations` library and specify [localizationsDeleg
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-final int rowsPerPage = 15;
+  List<Employee> _employees = <Employee>[];
+  late EmployeeDataSource _employeeDataSource;
+  final int rowsPerPage = 15;
 
-class Employee {
-  Employee({
-    required this.id,
-    required this.name,
-    required this.designation,
-    required this.salary,
-  });
-  final int id;
-  final String name;
-  final String designation;
-  final double salary;
-}
+  @override
+  void initState() {
+    super.initState();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employeeData: _employees);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [Locale('zh'), Locale('ar'), Locale('ja')],
+      locale: const Locale('ar'),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('DataPager')),
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            return Column(
+              children: [
+                SizedBox(
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: SfDataGrid(
+                    source: _employeeDataSource,
+                    allowFiltering: true,
+                    columns: <GridColumn>[
+                      GridColumn(
+                        columnName: 'id',
+                        label: Center(child: Text('ID')),
+                      ),
+                      GridColumn(
+                        columnName: 'name',
+                        label: Center(child: Text('Name')),
+                      ),
+                      GridColumn(
+                        columnName: 'designation',
+                        label: Center(child: Text('Designation')),
+                      ),
+                      GridColumn(
+                        columnName: 'salary',
+                        label: Center(child: Text('Salary')),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 60,
+                  width: constraints.maxWidth,
+                  child: SfDataPager(
+                    delegate: _employeeDataSource,
+                    pageCount: _employeeDataSource.rows.length / rowsPerPage,
+                    visibleItemsCount: 5,
+                    direction: Axis.horizontal,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -164,12 +221,19 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   List<DataGridRow> get rows => _employeeData
-      .map<DataGridRow>((dataRow) => DataGridRow(cells: [
+      .map<DataGridRow>(
+        (dataRow) => DataGridRow(
+          cells: [
             DataGridCell<int>(columnName: 'id', value: dataRow.id),
             DataGridCell<String>(columnName: 'name', value: dataRow.name),
-            DataGridCell<String>(columnName: 'designation', value: dataRow.designation),
-            DataGridCell<double>(columnName: 'salary', value: dataRow.salary),
-          ]))
+            DataGridCell<String>(
+              columnName: 'designation',
+              value: dataRow.designation,
+            ),
+            DataGridCell<int>(columnName: 'salary', value: dataRow.salary),
+          ],
+        ),
+      )
       .toList();
 
   @override
@@ -184,76 +248,6 @@ class EmployeeDataSource extends DataGridSource {
       }).toList(),
     );
   }
-}
-
-@override
-Widget build(BuildContext context) {
-  final EmployeeDataSource _employeeDataSource = EmployeeDataSource(
-    employeeData: <Employee>[
-      Employee(id: 10001, name: 'James', designation: 'Project Lead', salary: 20000),
-      Employee(id: 10002, name: 'Kathryn', designation: 'Manager', salary: 30000),
-      Employee(id: 10003, name: 'Lara', designation: 'Developer', salary: 15000),
-      Employee(id: 10004, name: 'Michael', designation: 'Designer', salary: 15000),
-      Employee(id: 10005, name: 'Martin', designation: 'Developer', salary: 15000),
-    ],
-  );
-
-  return MaterialApp(
-    localizationsDelegates: const [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-    ],
-    supportedLocales: const [
-      Locale('zh'),
-      Locale('ar'),
-      Locale('ja'),
-    ],
-    locale: const Locale('zh'),
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text('DataPager'),
-      ),
-      body: LayoutBuilder(builder: (context, constraints) {
-        return Column(children: [
-          SizedBox(
-            height: constraints.maxHeight - 60,
-            width: constraints.maxWidth,
-            child: SfDataGrid(
-              source: _employeeDataSource,
-              columns: const <GridColumn>[
-                GridColumn(
-                  columnName: 'id',
-                  label: Center(child: Text('ID')),
-                ),
-                GridColumn(
-                  columnName: 'name',
-                  label: Center(child: Text('Name')),
-                ),
-                GridColumn(
-                  columnName: 'designation',
-                  label: Center(child: Text('Designation')),
-                ),
-                GridColumn(
-                  columnName: 'salary',
-                  label: Center(child: Text('Salary')),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 60,
-            width: constraints.maxWidth,
-            child: SfDataPager(
-              delegate: _employeeDataSource,
-              pageCount: _employeeDataSource.rows.length / rowsPerPage,
-              visibleItemsCount: 5,
-              direction: Axis.horizontal,
-            ),
-          )
-        ]);
-      }),
-    ),
-  );
 }
 
 {% endhighlight %}
@@ -274,7 +268,7 @@ To use `syncfusion_localizations`, add it as a dependency to the `pubspec.yaml` 
 dependencies:
 flutter_localizations:
   sdk: flutter
-syncfusion_localizations: ^24.2.7
+syncfusion_localizations: ^34.1.29
 
 {% endhighlight %}
 
@@ -297,17 +291,72 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
 final int rowsPerPage = 15;
 
 class Employee {
-  Employee({
-    required this.id,
-    required this.name,
-    required this.designation,
-    required this.salary,
-  });
+  Employee(this.id, this.name, this.designation, this.salary);
+
   final int id;
   final String name;
   final String designation;
-  final double salary;
+  final int salary;
 }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        SfGlobalLocalizations.delegate,
+      ],
+      supportedLocales: const [Locale('zh'), Locale('ar'), Locale('ja')],
+      locale: const Locale('zh'),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('DataPager')),
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            return Column(
+              children: [
+                SizedBox(
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: <GridColumn>[
+                      GridColumn(
+                        columnName: 'id',
+                        label: Center(child: Text('ID')),
+                      ),
+                      GridColumn(
+                        columnName: 'name',
+                        label: Center(child: Text('Name')),
+                      ),
+                      GridColumn(
+                        columnName: 'designation',
+                        label: Center(child: Text('Designation')),
+                      ),
+                      GridColumn(
+                        columnName: 'salary',
+                        label: Center(child: Text('Salary')),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 60,
+                  width: constraints.maxWidth,
+                  child: SfDataPager(
+                    delegate: _employeeDataSource,
+                    pageCount: _employeeDataSource.rows.length / rowsPerPage,
+                    visibleItemsCount: 5,
+                    direction: Axis.horizontal,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -318,12 +367,19 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   List<DataGridRow> get rows => _employeeData
-      .map<DataGridRow>((dataRow) => DataGridRow(cells: [
+      .map<DataGridRow>(
+        (dataRow) => DataGridRow(
+          cells: [
             DataGridCell<int>(columnName: 'id', value: dataRow.id),
             DataGridCell<String>(columnName: 'name', value: dataRow.name),
-            DataGridCell<String>(columnName: 'designation', value: dataRow.designation),
-            DataGridCell<double>(columnName: 'salary', value: dataRow.salary),
-          ]))
+            DataGridCell<String>(
+              columnName: 'designation',
+              value: dataRow.designation,
+            ),
+            DataGridCell<int>(columnName: 'salary', value: dataRow.salary),
+          ],
+        ),
+      )
       .toList();
 
   @override
@@ -338,77 +394,6 @@ class EmployeeDataSource extends DataGridSource {
       }).toList(),
     );
   }
-}
-
-@override
-Widget build(BuildContext context) {
-  final EmployeeDataSource _employeeDataSource = EmployeeDataSource(
-    employeeData: <Employee>[
-      Employee(id: 10001, name: 'James', designation: 'Project Lead', salary: 20000),
-      Employee(id: 10002, name: 'Kathryn', designation: 'Manager', salary: 30000),
-      Employee(id: 10003, name: 'Lara', designation: 'Developer', salary: 15000),
-      Employee(id: 10004, name: 'Michael', designation: 'Designer', salary: 15000),
-      Employee(id: 10005, name: 'Martin', designation: 'Developer', salary: 15000),
-    ],
-  );
-
-  return MaterialApp(
-    localizationsDelegates: const [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      SfGlobalLocalizations.delegate,
-    ],
-    supportedLocales: const [
-      Locale('zh'),
-      Locale('ar'),
-      Locale('ja'),
-    ],
-    locale: const Locale('zh'),
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text('DataPager'),
-      ),
-      body: LayoutBuilder(builder: (context, constraints) {
-        return Column(children: [
-          SizedBox(
-            height: constraints.maxHeight - 60,
-            width: constraints.maxWidth,
-            child: SfDataGrid(
-              source: _employeeDataSource,
-              columns: const <GridColumn>[
-                GridColumn(
-                  columnName: 'id',
-                  label: Center(child: Text('ID')),
-                ),
-                GridColumn(
-                  columnName: 'name',
-                  label: Center(child: Text('Name')),
-                ),
-                GridColumn(
-                  columnName: 'designation',
-                  label: Center(child: Text('Designation')),
-                ),
-                GridColumn(
-                  columnName: 'salary',
-                  label: Center(child: Text('Salary')),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 60,
-            width: constraints.maxWidth,
-            child: SfDataPager(
-              delegate: _employeeDataSource,
-              pageCount: _employeeDataSource.rows.length / rowsPerPage,
-              visibleItemsCount: 5,
-              direction: Axis.horizontal,
-            ),
-          )
-        ]);
-      }),
-    ),
-  );
 }
 
 {% endhighlight %}

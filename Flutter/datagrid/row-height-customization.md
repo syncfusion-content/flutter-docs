@@ -11,8 +11,6 @@ documentation: ug
 
 This section explains options to customize the header row height and the row height of all the grid rows or particular rows based on your requirements.
 
-> **NOTE:** Ensure you have imported the required package: `import 'package:syncfusion_flutter_datagrid/datagrid.dart';`
-
 ## Set the height for a specific row
 
 The row height of a particular row can be set by using the [SfDataGrid.onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback.
@@ -336,7 +334,7 @@ class CustomColumnSizer extends ColumnSizer {
 {% endhighlight %}
 {% endtabs %}
 
-> **NOTE:** The `CustomColumnSizer` is a custom class that should be added to your dart file. You can download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
+> **Note:** The `CustomColumnSizer` is a custom class that should be added to your dart file. You can download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
 
 ![flutter datagrid shows auto-fitting the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
 
@@ -352,8 +350,6 @@ dependencies:
   intl: ^0.19.0
 
 {% endhighlight %}
-
-> **NOTE:** Requires Flutter 2.0 or later and Dart 2.12 or later. The `intl` package provides internationalized message support for Dart and Flutter applications.
 
 Import the required packages:
 
@@ -487,7 +483,7 @@ class CustomColumnSizer extends ColumnSizer {
 {% endhighlight %}
 {% endtabs %}
 
-> **NOTE:** Download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
+> **Note:** Download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows auto-fitting the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
 
@@ -495,7 +491,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the height of the header row by using the [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
 
-> **NOTE:** The default value of `headerRowHeight` is `49.0`. You can set any double value to customize the header row height according to your requirements.
+> **Note:** The default value of `headerRowHeight` is `49.0`. You can set any double value to customize the header row height according to your requirements.
 
 {% tabs %}
 {% highlight dart %}
@@ -556,7 +552,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 You can customize the height of the grid rows in `SfDataGrid` by using the [rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) property.
 
-> **NOTE:** The default value of `rowHeight` is `49.0`. Use this property to set a uniform height for all data rows (excluding the header row). For variable heights based on content, use the `onQueryRowHeight` callback instead.
+> **Note:** The default value of `rowHeight` is `49.0`. Use this property to set a uniform height for all data rows (excluding the header row). For variable heights based on content, use the `onQueryRowHeight` callback instead.
 
 {% tabs %}
 {% highlight Dart %}
@@ -625,7 +621,7 @@ Refresh a specific row and its height by using the [DataGridController.refreshRo
 
 When you call the `refreshRow` method, the `onQueryRowHeight` callback will be invoked for that specific row, allowing auto-height calculation to be recalculated.
 
-> **NOTE:** When calling `refreshRow`, ensure the rowIndex is within the valid range (0 to dataGridRows.length - 1). Calling with an out-of-bounds rowIndex may not refresh the intended row. Use `recalculateRowHeight: true` to recalculate row heights based on updated content.
+> **Note:** When calling `refreshRow`, ensure the rowIndex is within the valid range (0 to dataGridRows.length - 1). Calling with an out-of-bounds rowIndex may not refresh the intended row. Use `recalculateRowHeight: true` to recalculate row heights based on updated content.
 
 In the following example, row data is updated when `refreshRow` is called in the `onPressed` callback of the `TextButton`:
 
@@ -781,73 +777,72 @@ In the following example, the row data is refreshed along with its row height wh
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
-        ),
-        body: Column(children: [
+      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      body: Column(
+        children: [
           TextButton(
-              child: const Text('Update cell value'),
-              onPressed: () {
-                _employees[0].id = 1010;
-                _employees[0].name = 'Maria Anders';
-                _employees[0].designation = 'Sales Representative';
-                _employees[0].salary = 25000;
-                _controller.refreshRow(0, recalculateRowHeight: true);
-                _employeeDataSource.buildDataGridSource(_employees);
-                _employeeDataSource.updateDataGridSource();
-              }),
+            child: const Text('Update cell value'),
+            onPressed: () {
+              _employees[0].id = 1010;
+              _employees[0].name = 'Maria Anders';
+              _employees[0].designation = 'Sales Representative';
+              _employees[0].salary = 25000;
+              _controller.refreshRow(0, recalculateRowHeight: true);
+              _employeeDataSource.buildDataGridSource(_employees);
+              _employeeDataSource.updateDataGridSource();
+            },
+          ),
           Expanded(
-              child: SfDataGrid(
-                  source: _employeeDataSource,
-                  controller: _controller,
-                  columnSizer: _columnSizer,
-                  columnWidthMode: ColumnWidthMode.auto,
-                  onQueryRowHeight: (RowHeightDetails details) {
-                    if (details.rowIndex == 0) {
-                      return 100.0;
-                    }
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              controller: _controller,
+              columnWidthMode: ColumnWidthMode.auto,
+              onQueryRowHeight: (RowHeightDetails details) {
+                if (details.rowIndex == 0) {
+                  return 100.0;
+                }
 
-                    return 50.0;
-                  },
-                  columns: <GridColumn>[
+                return 50.0;
+              },
+              columns: <GridColumn>[
                 GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'id',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text('ID', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
                 GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'name',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text('Name', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
                 GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
+                  columnName: 'designation',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text('Designation', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
                 GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-              ]))
-        ]));
+                  columnName: 'salary',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text('Salary', overflow: TextOverflow.ellipsis),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
 class EmployeeDataSource extends DataGridSource {
@@ -857,14 +852,22 @@ class EmployeeDataSource extends DataGridSource {
 
   void buildDataGridSource(List<Employee> employees) {
     dataGridRows = employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
+                columnName: 'designation',
+                value: dataGridRow.designation,
+              ),
               DataGridCell<int>(
-                  columnName: 'salary', value: dataGridRow.salary),
-            ]))
+                columnName: 'salary',
+                value: dataGridRow.salary,
+              ),
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -876,9 +879,10 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
+      cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          alignment:
+              (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
@@ -886,8 +890,10 @@ class EmployeeDataSource extends DataGridSource {
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
+          ),
+        );
+      }).toList(),
+    );
   }
 
   void updateDataGridSource() {

@@ -11,15 +11,13 @@ documentation: ug
 
 SfDataGrid supports right-to-left (RTL) rendering. When RTL is enabled, columns will be rendered in reverse order, scrollbars will appear on the left side, and text alignment will be mirrored accordingly.
 
-> **Note:** This feature requires Flutter 2.0+ and syncfusion_flutter_datagrid 19.1.0 or later.
-
 ## RTL rendering ways
 
 Right-to-left rendering can be switched in the following ways:
 
 ### Wrapping the SfDataGrid with the Directionality widget
 
-Wrap the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) widget inside the [Directionality](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [textDirection](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html) to enable RTL rendering.
+Wrap the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) widget inside the [Directionality](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [textDirection](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl) to enable RTL rendering.
 
 {% tabs %}
 {% highlight Dart %}
@@ -29,41 +27,48 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Directionality(
-        textDirection: TextDirection.rtl,
-        child: SfDataGrid(
-            source: _employeeDataSource,
-            columnWidthMode: ColumnWidthMode.fill,
-            columns: <GridColumn>[
-              GridColumn(
-                  columnName: 'id',
-                  label: Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'ID',
-                      ))),
-              GridColumn(
-                  columnName: 'name',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.center,
-                      child: Text('Name'))),
-              GridColumn(
-                  columnName: 'designation',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Designation',
-                        overflow: TextOverflow.ellipsis,
-                      ))),
-              GridColumn(
-                  columnName: 'salary',
-                  label: Container(
-                      padding: EdgeInsets.all(8.0),
-                      alignment: Alignment.center,
-                      child: Text('Salary'))),
-            ]));
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: <GridColumn>[
+            GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: Text('ID'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Name'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Designation', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Salary'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -91,68 +96,65 @@ Import the `flutter_localizations` library and configure [localizationsDelegates
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-        ],
-        supportedLocales: <Locale>[
-          Locale('en'),
-          Locale('ar'),
-          Locale('fa'),
-          Locale('he'),
-          Locale('ps'),
-          Locale('ur'),
-        ],
-        locale: Locale('ar'),
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('RTL DataGrid'),
-          ),
-          body: SfDataGrid(
-              source: _employeeDataSource,
-              columnWidthMode: ColumnWidthMode.fill,
-              columns: <GridColumn>[
-                GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: EdgeInsets.all(16.0),
-                        alignment: Alignment.center,
-                        child: Text('ID'))),
-                GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Name'))),
-                GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: Text('Salary'))),
-              ]),
-        ));
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: <Locale>[
+        Locale('en'),
+        Locale('ar'),
+        Locale('fa'),
+        Locale('he'),
+        Locale('ps'),
+        Locale('ur'),
+      ],
+      locale: Locale('ar'),
+      home: Scaffold(
+        appBar: AppBar(title: Text('RTL DataGrid')),
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: <GridColumn>[
+            GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: Text('ID'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Name'),
+              ),
+            ),
+            GridColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Designation', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+            GridColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Salary'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
-}
 
 {% endhighlight %}
 {% endtabs %}
