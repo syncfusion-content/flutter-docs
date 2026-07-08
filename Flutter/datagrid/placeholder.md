@@ -11,8 +11,6 @@ documentation: ug
 
 The `SfDataGrid` provides built-in support for displaying a placeholder when the data source is empty by setting the [SfDataGrid.placeholder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/placeholder.html) property. The `placeholder` property accepts a `Widget` that will be displayed in the scroll view area when the DataGrid has no data to show.
 
-N> **Note:** Ensure you have implemented a [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class and configured [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) objects before implementing the placeholder feature. For detailed setup instructions, refer to the [Getting Started with SfDataGrid](getting-started.md) documentation.
-
 The following example shows how to add a `placeholder` in SfDataGrid:
 
 {% tabs %}
@@ -101,10 +99,4 @@ The placeholder is automatically hidden when:
 * [SfDataGrid.placeholder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/placeholder.html) — Gets or sets the widget to display when the DataGrid is empty.
 * [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) — The data source for populating the DataGrid.
 
-**See Also**
-
-* [Getting Started with SfDataGrid](getting-started.md)
-* [Styling DataGrid Cells](styles.md)
-* [DataGrid Column Types](column-types.md)
-
-N> **Sample applications** — Refer to the [DataGrid placeholder sample](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid) in the Syncfusion Flutter Examples repository for a complete working implementation.
+> **Sample application:** — Refer to the [DataGrid placeholder sample](https://support.syncfusion.com/kb/article/19825/how-to-show-an-empty-message-in-flutter-datatable) in the Syncfusion Flutter Examples repository for a complete working implementation.

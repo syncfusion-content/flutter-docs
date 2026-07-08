@@ -11,15 +11,11 @@ documentation: ug
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`.
 
->**Note**  
->Ensure you have added the `syncfusion_flutter_datagrid` package to your project. For setup instructions, refer to the [getting started](getting-started.md) documentation.
-
 `SfDataGrid` does not automatically resize the columns when you perform column resizing. You should maintain the column width collection at the application level and set the column width of the corresponding column using the [SfDataGrid.onColumnResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnResizeUpdate.html) callback.
 
 The column resizing indicator appears based on the platform. In web and desktop platforms, the indicator appears when you hover over the right end of the column and drag it. In mobile platforms, the indicator comes into view when you long-press the corresponding column header.
 
-> **NOTE:**
-> Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties. These limits are enforced to prevent columns from becoming too small or too large during resizing.
+> **Note:** Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties. These limits are enforced to prevent columns from becoming too small or too large during resizing.
 
 ## Basic Column Resizing
 
@@ -532,23 +528,11 @@ To prevent a column from being hidden while resizing, use the `GridColumn.minimu
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
-
-**Column widths not persisting after app restart?**  
-Column width changes are stored in memory during the session. To persist widths across app restarts, save the `columnWidths` map to local storage (using packages like `shared_preferences` or `hive`) in the `onColumnResizeUpdate` callback, and restore the values when the widget initializes.
-
-**Columns not resizing visually?**  
-Ensure that `onColumnResizeUpdate` returns `true` and that `columnWidths` map is properly updated in `setState()`. Also verify that the column width is not set to a fixed value that overrides the resized width.
-
-**Resizing feels sluggish?**  
-Use `columnResizeMode: ColumnResizeMode.onResizeEnd` instead of the default `onResize` mode to reduce callback frequency and improve performance.
-
 ## Customize indicator appearance
 
 The column resizing indicator color and its width can be customized by using the [SfDataGridThemeData.columnResizeIndicatorColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorColor.html) and [SfDataGridThemeData.columnResizeIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/columnResizeIndicatorStrokeWidth.html) properties.
 
->**Note**  
->The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. Ensure this package is added to your project dependencies.
+> **Note:** The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. Ensure this package is added to your project dependencies.
 
 Import the following file:
 

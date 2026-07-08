@@ -11,8 +11,6 @@ documentation: ug
 
 The rows and columns can freeze in view like in Excel. They can be frozen by setting the following properties.
 
-N> Before implementing freeze panes, ensure you have added the `syncfusion_flutter_datagrid` package to your project and created a `DataGridSource` for your data. For more details, refer to [DataGrid Getting Started](getting-started.md).
-
 <table>
 <tr>
 <th> Property Name </th>
@@ -85,8 +83,8 @@ The following code example shows how to freeze a column at left using `frozenCol
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -181,8 +179,8 @@ The following code example shows how to freeze a column at right using the `foot
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -286,8 +284,8 @@ The following code example shows how to freeze a row at the top using the `froze
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -381,8 +379,8 @@ The following code example shows how to freeze a row at the bottom using the `fo
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -477,7 +475,7 @@ import 'package:flutter/material.dart';
 
 * SfDataGrid has support to freeze the number of rows from top or bottom. There is no support to freeze a specific row.
 
-N> Header row is frozen by default and works regardless of the `frozenRowsCount` property.
+> **Note:** Header row is frozen by default and works regardless of the `frozenRowsCount` property.
 
 ## Appearance
 
@@ -488,8 +486,8 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [sy
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 {% endhighlight %}
 {% endtabs %}
@@ -505,12 +503,13 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfDataGridTheme(
-      data: SfDataGridThemeData(
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
           frozenPaneElevation: 0.0,
           frozenPaneLineColor: Colors.red,
-          frozenPaneLineWidth: 1.5),
-      child: SfDataGrid(
+          frozenPaneLineWidth: 1.5,
+        ),
+        child: SfDataGrid(
           source: _orderDataGridSource,
           frozenRowsCount: 1,
           footerFrozenRowsCount: 1,
@@ -518,79 +517,73 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
           footerFrozenColumnsCount: 1,
           columns: <GridColumn>[
             GridColumn(
-                columnName: 'id',
-                label: Container(
-                    alignment: Alignment.centerRight,
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text(
-                      'ID',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text('ID', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'productId',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Product ID',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Product ID', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'name',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Customer Name',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Customer Name', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'product',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Product',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Product', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'orderDate',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Order Date',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Order Date', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'quantity',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Quantity',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Quantity', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'city',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'City',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('City', overflow: TextOverflow.ellipsis),
+              ),
+            ),
             GridColumn(
-                columnName: 'unitPrice',
-                label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Unit Price',
-                      overflow: TextOverflow.ellipsis,
-                    )))
-          ]),
-    ));
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Unit Price', overflow: TextOverflow.ellipsis),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
 {% endhighlight %}
@@ -703,9 +696,9 @@ By default, the elevation effect is applied to frozen panes. To hide the elevati
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:flutter/material.dart';
 
   @override
   Widget build(BuildContext context) {
@@ -801,8 +794,7 @@ import 'package:flutter/material.dart';
 
 ![flutter datagrid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)
 
-N> **Header row behavior** — The header row is frozen by default and remains frozen regardless of the `frozenRowsCount` property. This ensures the column headers remain visible while scrolling through data.
-
-N> **Interaction with other features** — Frozen panes work seamlessly with other DataGrid features including sorting, filtering, selection, and styling. Frozen rows and columns maintain their visual separation during these operations.
-
-N> **Sample applications** — Refer to the [DataGrid freeze panes sample](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/datagrid_freezepanes.dart) in the Syncfusion Flutter Examples repository for a complete working implementation.
+> **Note:** 
+>- **Header row behavior** — The header row is frozen by default and remains frozen regardless of the `frozenRowsCount` property. This ensures the column headers remain visible while scrolling through data.
+>- **Interaction with other features** — Frozen panes work seamlessly with other DataGrid features including sorting, filtering, selection, and styling. Frozen rows and columns maintain their visual separation during these operations.
+>- **Sample applications** — Refer to the [DataGrid freeze panes sample](https://support.syncfusion.com/kb/article/10748/how-to-add-fixed-header-freeze-panes-in-flutter-datatable-sfdatagrid) in the Syncfusion Flutter Examples repository for a complete working implementation.

@@ -11,7 +11,7 @@ documentation: ug
 
 The footer row is an additional row that displays below the last data row in the grid. Widgets can be displayed in the footer row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 
-> **NOTE:** Before implementing the footer functionality, ensure you have set up the SfDataGrid with a valid [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) and configured the necessary columns.
+> **Note:** Before implementing the footer functionality, ensure you have set up the SfDataGrid with a valid [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) and configured the necessary columns.
 
 {% tabs %}
 {% highlight Dart %}
@@ -192,60 +192,6 @@ By default, the footer row is displayed below the last data row. To keep the foo
 
 ![flutter datagrid shows footer always on bottom](images/footer/flutter-datagrid-footer-on-bottom.gif)
 
-## Updating footer content dynamically
-
-The footer content can be updated dynamically by rebuilding the widget when the data changes. Use a [StreamBuilder](https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html) or [ValueListenableBuilder](https://api.flutter.dev/flutter/foundation/ValueListenableBuilder-class.html) to reactively update the footer display based on data changes.
-
-{% tabs %}
-{% highlight Dart %}
-
-  @override
-  Widget build(BuildContext context) {
-    return SfDataGrid(
-        source: _employeeDataSource,
-        footer: StreamBuilder<int>(
-            stream: _employeeDataSource.rowCountStream,
-            builder: (context, snapshot) {
-              return Container(
-                  color: Colors.grey[400],
-                  child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Total Employees: ${snapshot.data ?? 0}',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )));
-            }),
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('ID'))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Name'))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Designation'))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Salary'))),
-        ]);
-  }
-
-{% endhighlight %}
-{% endtabs %}
-
 ## API reference
 
 Refer to the following API documentation for footer-related properties:
@@ -254,8 +200,3 @@ Refer to the following API documentation for footer-related properties:
 * [SfDataGrid.footerHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerHeight.html) — Sets the height of the footer row. Default value is 49.0.
 * [SfDataGrid.footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) — Sets the number of frozen footer rows. Set to 1 to keep the footer visible during vertical scrolling.
 * [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) — Base class for providing rows to SfDataGrid.
-
-## See also
-
-* [Header in Flutter DataGrid](https://help.syncfusion.com/flutter/datagrid/header)
-* [Frozen rows and columns in Flutter DataGrid](https://help.syncfusion.com/flutter/datagrid/frozen-pane)

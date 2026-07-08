@@ -13,9 +13,6 @@ The SfDataGrid widget provides support to display an interactive view when the g
 
 To implement load more functionality, override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load additional rows and notify the grid about the changes. The `handleLoadMoreRows` method is automatically called when the user scrolls to the bottom of the grid. Use the [LoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function, passed as a parameter to `loadMoreViewBuilder`, to trigger row loading.
 
-**NOTE**  
-Requires `syncfusion_flutter_datagrid` package. Refer to the [getting started](https://help.syncfusion.com/flutter/datagrid/getting-started) guide for setup instructions.
-
 ## Infinite scrolling
 
 Infinite scrolling automatically loads more rows as the user scrolls to the bottom of the grid, creating a seamless continuous data experience. This approach is ideal when you have a large dataset and want to load data progressively without user interaction.
@@ -31,43 +28,27 @@ import 'dart:math';
 
 class Employee {
   Employee(this.id, this.name, this.designation, this.salary);
+
   final int id;
   final String name;
   final String designation;
   final int salary;
 }
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: Home());
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
+class MyHomePageState extends State<MyHomePage> {
+  List<Employee> _employees = <Employee>[];
   late EmployeeDataSource _employeeDataSource;
 
   @override
   void initState() {
     super.initState();
-    _employeeDataSource = EmployeeDataSource();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employeeData: _employees);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Load More - Infinite Scrolling')),
       body: SfDataGrid(
         source: _employeeDataSource,
         loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
@@ -80,86 +61,92 @@ class _HomeState extends State<Home> {
           }
 
           return FutureBuilder<String>(
-              initialData: 'loading',
-              future: loadRows(),
-              builder: (context, snapShot) {
-                if (snapShot.data == 'loading') {
-                  return Container(
-                      height: 60.0,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: BorderDirectional(
-                              top: BorderSide(
-                                  width: 1.0,
-                                  color: Color.fromRGBO(0, 0, 0, 0.26)))),
-                      alignment: Alignment.center,
-                      child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
-                } else {
-                  return SizedBox.fromSize(size: Size.zero);
-                }
-              });
+            initialData: 'loading',
+            future: loadRows(),
+            builder: (context, snapShot) {
+              if (snapShot.data == 'loading') {
+                return Container(
+                  height: 60.0,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: BorderDirectional(
+                      top: BorderSide(
+                        width: 1.0,
+                        color: Color.fromRGBO(0, 0, 0, 0.26),
+                      ),
+                    ),
+                  ),
+                  alignment: Alignment.center,
+                  child: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation(Colors.deepPurple),
+                  ),
+                );
+              } else {
+                return SizedBox.fromSize(size: Size.zero);
+              }
+            },
+          );
         },
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  )))
-        ]),
-      );
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
-class EmployeeDataSource extends DataGridSource {
-  static final List<Employee> _employees = <Employee>[
-    Employee(1001, 'James', 'Project Lead', 20000),
-    Employee(1002, 'Kathryn', 'Manager', 30000),
-    Employee(1003, 'Lara', 'Developer', 15000),
-    Employee(1004, 'Michael', 'Designer', 15000),
-    Employee(1005, 'Andrew', 'Developer', 15000),
-    Employee(1006, 'Gail', 'Manager', 25000),
-    Employee(1007, 'Nancy', 'CEO', 50000),
-    Employee(1008, 'Margaret', 'Developer', 15000),
-    Employee(1009, 'Steven', 'Developer', 15000),
-    Employee(1010, 'Michael', 'System Analyst', 20000),
-    Employee(1011, 'Robert', 'Developer', 15000),
-    Employee(1012, 'Laura', 'Developer', 15000),
+List<Employee> getEmployeeData() {
+  return [
+    Employee(10001, 'James', 'Project Lead', 20000),
+    Employee(10002, 'Kathryn', 'Manager', 30000),
+    Employee(10003, 'Lara', 'Developer', 15000),
+    Employee(10004, 'Michael', 'Designer', 15000),
+    Employee(10005, 'Martin', 'Developer', 15000),
+    Employee(10006, 'Newberry', 'Developer', 15000),
+    Employee(10007, 'Balnc', 'Developer', 15000),
+    Employee(10008, 'Perry', 'Developer', 15000),
+    Employee(10009, 'Gable', 'Developer', 15000),
+    Employee(10010, 'Grimes', 'Developer', 15000),
   ];
+}
 
-  EmployeeDataSource() {
+class EmployeeDataSource extends DataGridSource {
+  static final List<Employee> _employees = <Employee>[];
+
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employees.addAll(employeeData);
     buildDataGridRows();
   }
 
@@ -171,9 +158,10 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
+      cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          alignment:
+              (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
@@ -181,8 +169,10 @@ class EmployeeDataSource extends DataGridSource {
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
+          ),
+        );
+      }).toList(),
+    );
   }
 
   @override
@@ -196,14 +186,22 @@ class EmployeeDataSource extends DataGridSource {
 
   void buildDataGridRows() {
     dataGridRows = _employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
+                columnName: 'designation',
+                value: dataGridRow.designation,
+              ),
               DataGridCell<int>(
-                  columnName: 'salary', value: dataGridRow.salary),
-            ]))
+                columnName: 'salary',
+                value: dataGridRow.salary,
+              ),
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -212,12 +210,14 @@ class EmployeeDataSource extends DataGridSource {
     final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employees.add(Employee(
-        1000 + i,
-        _names[random.nextInt(_names.length)],
-        _designation[random.nextInt(_designation.length)],
-        10000 + random.nextInt(10000),
-      ));
+      employees.add(
+        Employee(
+          1000 + i,
+          _names[random.nextInt(_names.length)],
+          _designation[random.nextInt(_designation.length)],
+          10000 + random.nextInt(10000),
+        ),
+      );
     }
   }
 
@@ -236,7 +236,7 @@ class EmployeeDataSource extends DataGridSource {
     'Riscu',
     'Seves',
     'Vaffe',
-    'Alfki'
+    'Alfki',
   ];
 
   final List<String> _designation = <String>[
@@ -245,15 +245,14 @@ class EmployeeDataSource extends DataGridSource {
     'Manager',
     'Designer',
     'System Analyst',
-    'CEO'
+    'CEO',
   ];
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**NOTE**  
-  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
+> **Note:** Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
 
 ![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
 
@@ -272,162 +271,162 @@ import 'dart:math';
 
 class Employee {
   Employee(this.id, this.name, this.designation, this.salary);
+
   final int id;
   final String name;
   final String designation;
   final int salary;
 }
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: Home());
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
+class MyHomePageState extends State<MyHomePage> {
+  List<Employee> _employees = <Employee>[];
   late EmployeeDataSource _employeeDataSource;
 
   @override
   void initState() {
     super.initState();
-    _employeeDataSource = EmployeeDataSource();
+    _employees = getEmployeeData();
+    _employeeDataSource = EmployeeDataSource(employeeData: _employees);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Load More - Button')),
       body: SfDataGrid(
         source: _employeeDataSource,
         loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
           bool showIndicator = false;
           return StatefulBuilder(
-              builder: (BuildContext context, StateSetter setState) {
-            if (showIndicator) {
-              return Container(
+            builder: (BuildContext context, StateSetter setState) {
+              if (showIndicator) {
+                return Container(
                   height: 60.0,
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: const BorderDirectional(
-                          top: BorderSide(
-                              width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
+                    color: Colors.white,
+                    border: const BorderDirectional(
+                      top: BorderSide(
+                        width: 1.0,
+                        color: Color.fromRGBO(0, 0, 0, 0.26),
+                      ),
+                    ),
+                  ),
                   child: const CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation(Colors.deepPurple)));
-            } else {
-              return Container(
+                    valueColor: AlwaysStoppedAnimation(Colors.deepPurple),
+                  ),
+                );
+              } else {
+                return Container(
                   height: 60.0,
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: const BorderDirectional(
-                          top: BorderSide(
-                              width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.26)))),
+                    color: Colors.white,
+                    border: const BorderDirectional(
+                      top: BorderSide(
+                        width: 1.0,
+                        color: Color.fromRGBO(0, 0, 0, 0.26),
+                      ),
+                    ),
+                  ),
                   child: SizedBox(
-                      height: 36.0,
-                      width: 142.0,
-                      child: TextButton(
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.purple)),
-                          child: const Text('LOAD MORE',
-                              style: TextStyle(color: Colors.white)),
-                          onPressed: () async {
-                            // Check if the widget is still mounted to avoid
-                            // "setState() called after dispose()" errors
-                            if (context is StatefulElement &&
-                                context.state.mounted) {
-                              setState(() {
-                                showIndicator = true;
-                              });
-                            }
-                            // Call the loadMoreRows function to trigger
-                            // DataGridSource.handleLoadMoreRows method
-                            await loadMoreRows();
-                            // Reset the indicator state when loading completes
-                            if (context is StatefulElement &&
-                                context.state.mounted) {
-                              setState(() {
-                                showIndicator = false;
-                              });
-                            }
-                          })));
-            }
-          });
+                    height: 36.0,
+                    width: 142.0,
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.purple),
+                      ),
+                      child: const Text(
+                        'LOAD MORE',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () async {
+                        // Check if the widget is still mounted to avoid
+                        // "setState() called after dispose()" errors
+                        if (context is StatefulElement &&
+                            context.state.mounted) {
+                          setState(() {
+                            showIndicator = true;
+                          });
+                        }
+                        // Call the loadMoreRows function to trigger
+                        // DataGridSource.handleLoadMoreRows method
+                        await loadMoreRows();
+                        // Reset the indicator state when loading completes
+                        if (context is StatefulElement &&
+                            context.state.mounted) {
+                          setState(() {
+                            showIndicator = false;
+                          });
+                        }
+                      },
+                    ),
+                  ),
+                );
+              }
+            },
+          );
         },
         columns: <GridColumn>[
           GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('ID', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Name', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text('Designation', overflow: TextOverflow.ellipsis),
+            ),
+          ),
           GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  )))
-        ]),
-      );
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text('Salary', overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
-class EmployeeDataSource extends DataGridSource {
-  static final List<Employee> _employees = <Employee>[
-    Employee(1001, 'James', 'Project Lead', 20000),
-    Employee(1002, 'Kathryn', 'Manager', 30000),
-    Employee(1003, 'Lara', 'Developer', 15000),
-    Employee(1004, 'Michael', 'Designer', 15000),
-    Employee(1005, 'Andrew', 'Developer', 15000),
-    Employee(1006, 'Gail', 'Manager', 25000),
-    Employee(1007, 'Nancy', 'CEO', 50000),
-    Employee(1008, 'Margaret', 'Developer', 15000),
-    Employee(1009, 'Steven', 'Developer', 15000),
-    Employee(1010, 'Michael', 'System Analyst', 20000),
-    Employee(1011, 'Robert', 'Developer', 15000),
-    Employee(1012, 'Laura', 'Developer', 15000),
+List<Employee> getEmployeeData() {
+  return [
+    Employee(10001, 'James', 'Project Lead', 20000),
+    Employee(10002, 'Kathryn', 'Manager', 30000),
+    Employee(10003, 'Lara', 'Developer', 15000),
+    Employee(10004, 'Michael', 'Designer', 15000),
+    Employee(10005, 'Martin', 'Developer', 15000),
+    Employee(10006, 'Newberry', 'Developer', 15000),
+    Employee(10007, 'Balnc', 'Developer', 15000),
+    Employee(10008, 'Perry', 'Developer', 15000),
+    Employee(10009, 'Gable', 'Developer', 15000),
+    Employee(10010, 'Grimes', 'Developer', 15000),
   ];
+}
 
-  EmployeeDataSource() {
+class EmployeeDataSource extends DataGridSource {
+  static final List<Employee> _employees = <Employee>[];
+
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employees.addAll(employeeData);
     buildDataGridRows();
   }
 
@@ -439,9 +438,10 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
+      cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          alignment:
+              (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
               ? Alignment.centerRight
               : Alignment.centerLeft,
@@ -449,8 +449,10 @@ class EmployeeDataSource extends DataGridSource {
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ));
-    }).toList());
+          ),
+        );
+      }).toList(),
+    );
   }
 
   @override
@@ -464,14 +466,22 @@ class EmployeeDataSource extends DataGridSource {
 
   void buildDataGridRows() {
     dataGridRows = _employees
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
+                columnName: 'designation',
+                value: dataGridRow.designation,
+              ),
               DataGridCell<int>(
-                  columnName: 'salary', value: dataGridRow.salary),
-            ]))
+                columnName: 'salary',
+                value: dataGridRow.salary,
+              ),
+            ],
+          ),
+        )
         .toList();
   }
 
@@ -480,12 +490,14 @@ class EmployeeDataSource extends DataGridSource {
     final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employees.add(Employee(
-        1000 + i,
-        _names[random.nextInt(_names.length)],
-        _designation[random.nextInt(_designation.length)],
-        10000 + random.nextInt(10000),
-      ));
+      employees.add(
+        Employee(
+          1000 + i,
+          _names[random.nextInt(_names.length)],
+          _designation[random.nextInt(_designation.length)],
+          10000 + random.nextInt(10000),
+        ),
+      );
     }
   }
 
@@ -504,7 +516,7 @@ class EmployeeDataSource extends DataGridSource {
     'Riscu',
     'Seves',
     'Vaffe',
-    'Alfki'
+    'Alfki',
   ];
 
   final List<String> _designation = <String>[
@@ -513,15 +525,14 @@ class EmployeeDataSource extends DataGridSource {
     'Manager',
     'Designer',
     'System Analyst',
-    'CEO'
+    'CEO',
   ];
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**NOTE**  
-  Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
+> **Note:** Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
 
 ![flutter datagrid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)
 
@@ -547,6 +558,3 @@ class EmployeeDataSource extends DataGridSource {
   ```
 
 - **Error handling**: Implement proper error handling in your load more logic to gracefully handle network failures and retry options.
-
-**NOTE**  
-Refer to the [DataGridSource API documentation](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) for more information about load more row handling.
