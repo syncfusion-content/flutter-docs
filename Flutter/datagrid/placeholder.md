@@ -83,5 +83,3 @@ The following example shows how to add a `placeholder` in SfDataGrid:
 {% endtabs %}
 
 <img alt="Flutter DataGrid displays a placeholder when there are no rows" src="images/placeholder/flutter-datagrid-placeholder.png" width="404" height="396"/>
-
-> **Sample application:** — Refer to the [DataGrid placeholder sample](https://support.syncfusion.com/kb/article/19825/how-to-show-an-empty-message-in-flutter-datatable) in the Syncfusion Flutter Examples repository for a complete working implementation.

@@ -134,12 +134,7 @@ The following code illustrates how to create and display a `SfDataGrid` using th
 
 ## Save the PDF document as a file
 
-To save the file as a PDF document, platform-specific code is required based on the target platform:
-
-> **Note:** See the following documentation for platform-specific file saving implementations:
->- [Mobile platforms (Android/iOS)](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile)
->- [Web platform](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web)
->- [Desktop platforms (macOS/Windows/Linux)](https://help.syncfusion.com/#save-a-pdf-document-in-desktop)
+To save the file as a PDF document, it’s necessary to include [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile), [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) and desktop platform-specific file generating code.
 
 ## Export DataGrid to PDF document
 
