@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conversation Area in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about Messages and its details of Syncfusion Flutter AI AssistView (SfAIAssistView) widget and more.
+description: Learn here all about the conversation area of Syncfusion Flutter AI AssistView (SfAIAssistView) widget and more.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
@@ -20,8 +20,17 @@ The AI AssistView displays the content of user requests and AI responses. Each m
 Customize the content of [request](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) messages by changing the `background color`, `background shape`, and other features based on the message, index, or specific conditions.
 
 {% tabs %}
-{% highlight dart hl_lines="29" %}
+{% highlight dart hl_lines="32" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class RequestMessageExample extends StatefulWidget {
+  @override
+  State<RequestMessageExample> createState() => _RequestMessageExampleState();
+}
+
+class _RequestMessageExampleState extends State<RequestMessageExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -59,6 +68,7 @@ Customize the content of [request](https://pub.dev/documentation/syncfusion_flut
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -70,8 +80,17 @@ Customize the content of [request](https://pub.dev/documentation/syncfusion_flut
 Customize the content of [response](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) messages by changing the `background color`, `background shape`, and other features based on the message, index, or specific conditions.
 
 {% tabs %}
-{% highlight dart hl_lines="29" %}
+{% highlight dart hl_lines="32" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ResponseMessageExample extends StatefulWidget {
+  @override
+  State<ResponseMessageExample> createState() => _ResponseMessageExampleState();
+}
+
+class _ResponseMessageExampleState extends State<ResponseMessageExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -110,6 +129,7 @@ Customize the content of [response](https://pub.dev/documentation/syncfusion_flu
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -121,8 +141,17 @@ Customize the content of [response](https://pub.dev/documentation/syncfusion_flu
 The header displays the username of the message's author along with the time stamp of when the message was sent. Additionally, you can build a custom widget to display more information about messages.
 
 {% tabs %}
-{% highlight dart hl_lines=" 38 39 42 43" %}
+{% highlight dart hl_lines="41 42 45 46" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class HeaderExample extends StatefulWidget {
+  @override
+  State<HeaderExample> createState() => _HeaderExampleState();
+}
+
+class _HeaderExampleState extends State<HeaderExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -170,6 +199,7 @@ The header displays the username of the message's author along with the time sta
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,8 +211,17 @@ The header displays the username of the message's author along with the time sta
 Showcases additional functionalities and information, including feedback options, AI model details, and more.
 
 {% tabs %}
-{% highlight dart hl_lines="37" %}
+{% highlight dart hl_lines="40" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class FooterExample extends StatefulWidget {
+  @override
+  State<FooterExample> createState() => _FooterExampleState();
+}
+
+class _FooterExampleState extends State<FooterExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -225,6 +264,7 @@ Showcases additional functionalities and information, including feedback options
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -236,8 +276,17 @@ Showcases additional functionalities and information, including feedback options
 The message author's [avatar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessageAuthor/avatar.html) displays either an image or the initials of their name. By default, if the avatar image source is not defined, the user's initials will be displayed. Additionally, you can create a custom widget that shows more information about the user.
 
 {% tabs %}
-{% highlight dart hl_lines="12" %}
+{% highlight dart hl_lines="15" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class AvatarExample extends StatefulWidget {
+  @override
+  State<AvatarExample> createState() => _AvatarExampleState();
+}
+
+class _AvatarExampleState extends State<AvatarExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -285,6 +334,7 @@ The message author's [avatar](https://pub.dev/documentation/syncfusion_flutter_c
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -293,11 +343,20 @@ The message author's [avatar](https://pub.dev/documentation/syncfusion_flutter_c
 
 ### Content area
 
-Customize the area where message content is displayed by changing its `background color`, `shape`, and functionalities based on the user or other specific conditions using the [requestMessageSettings](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestMessageSettings.html) and [responseMessageSettings](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseMessageSettings.html) properties.
+Customize the area where message content is displayed by changing its `background color`, `shape`, and functionalities based on the user or other specific conditions using the [requestMessageSettings](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestMessageSettings.html) and [responseMessageSettings](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseMessageSettings.html) properties. The following sample configures both the request and response message settings together.
 
 {% tabs %}
-{% highlight dart hl_lines="29 35" %}
+{% highlight dart hl_lines="32 38" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ContentAreaExample extends StatefulWidget {
+  @override
+  State<ContentAreaExample> createState() => _ContentAreaExampleState();
+}
+
+class _ContentAreaExampleState extends State<ContentAreaExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -341,6 +400,7 @@ Customize the area where message content is displayed by changing its `backgroun
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -349,11 +409,20 @@ Customize the area where message content is displayed by changing its `backgroun
 
 ### Suggestions
 
-Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized.
+Provide a list of response [suggestions](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/suggestions.html). When the user selects one, it is considered a new request message. Additionally, the layout, background colors, and other elements of the suggestions can be customized. The [`onSuggestionItemSelected`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/onSuggestionItemSelected.html) callback is invoked with the new `selected` state of the suggestion, the `messageIndex` of its parent message, the `AssistMessageSuggestion` instance, and the `suggestionIndex` of the tapped suggestion.
 
 {% tabs %}
-{% highlight dart hl_lines="8 41" %}
+{% highlight dart hl_lines="11 44" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class SuggestionsExample extends StatefulWidget {
+  @override
+  State<SuggestionsExample> createState() => _SuggestionsExampleState();
+}
+
+class _SuggestionsExampleState extends State<SuggestionsExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -411,6 +480,7 @@ Provide a list of response [suggestions](https://pub.dev/documentation/syncfusio
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -419,11 +489,20 @@ Provide a list of response [suggestions](https://pub.dev/documentation/syncfusio
 
 ### Loading indicator
 
-Indicates that the AI service's response is in progress after a request has been submitted. By default, the [response indicator](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseLoadingBuilder.html) is a shimmer effect that is displayed until the response is received.
+Indicates that the AI service's response is in progress after a request has been submitted. By default, the [response loading indicator](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseLoadingBuilder.html) is a shimmer effect that is displayed until the response is received.
 
 {% tabs %}
-{% highlight dart hl_lines="29" %}
+{% highlight dart hl_lines="32" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class LoadingIndicatorExample extends StatefulWidget {
+  @override
+  State<LoadingIndicatorExample> createState() => _LoadingIndicatorExampleState();
+}
+
+class _LoadingIndicatorExampleState extends State<LoadingIndicatorExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -458,6 +537,7 @@ Indicates that the AI service's response is in progress after a request has been
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -466,11 +546,20 @@ Indicates that the AI service's response is in progress after a request has been
 
 ### Toolbar items
 
-Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/toolbarItems.html) to response messages that provides options to perform various actions, such as rating the response, sharing it, copying it, and more.
+Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/toolbarItems.html) to response messages that provides options to perform various actions, such as rating the response, sharing it, copying it, and more. When a toolbar item is tapped, the [`onToolbarItemSelected`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/onToolbarItemSelected.html) callback is invoked with the new `selected` state, the `messageIndex` of the message, the `AssistMessageToolbarItem` instance, and the `toolbarItemIndex` of the tapped item.
 
 {% tabs %}
-{% highlight dart hl_lines="8 48" %}
+{% highlight dart hl_lines="11 51" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ToolbarItemsExample extends StatefulWidget {
+  @override
+  State<ToolbarItemsExample> createState() => _ToolbarItemsExampleState();
+}
+
+class _ToolbarItemsExampleState extends State<ToolbarItemsExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -485,7 +574,7 @@ Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
           ),
           const AssistMessageToolbarItem(
             content: Icon(Icons.thumb_down_outlined),
-            tooltip: 'DisLike',
+            tooltip: 'Dislike',
           ),
           const AssistMessageToolbarItem(
             content: Icon(Icons.copy_all),
@@ -526,6 +615,7 @@ Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -536,4 +626,4 @@ Append a [toolbar](https://pub.dev/documentation/syncfusion_flutter_chat/latest/
 
 #### See Also
 
-* You can also customize the message shapes and colors properties of both [`requestMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestMessageSettings.html) and [`responseMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseMessageSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping with [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html).
+* You can also customize the message shapes and colors properties of both [`requestMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/requestMessageSettings.html) and [`responseMessageSettings`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/responseMessageSettings.html) using [`SfAIAssistViewTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewTheme-class.html) by wrapping the [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/SfAIAssistView.html) with `SfAIAssistViewTheme`.
