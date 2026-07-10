@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with Flutter Treemap (SfTreemap)
 
-This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> treemap.
+This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> treemap.
 
-To get start quickly with our Flutter Treemap widget, you can check on this video.
+To get started quickly with our Flutter Treemap widget, you can refer to this video.
 
 <style>#FlutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterTreemapVideoTutorial' src='https://www.youtube.com/embed/HlWevbXU0Hs'></iframe>
@@ -24,32 +24,34 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion<sup>&reg;</sup> Flutter Treemap dependency to your pubspec.yaml file.
 
+{% tabs %}
 {% highlight dart %}
 
 dependencies:
-
-syncfusion_flutter_treemap: ^xx.x.xx
-
+  syncfusion_flutter_treemap: ^xx.x.xx
 {% endhighlight %}
+{% endtabs %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Treemap`](https://pub.dev/packages/syncfusion_flutter_treemap/versions) package.
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Treemap`](https://pub.dev/packages/syncfusion_flutter_treemap/versions) package. It is recommended to use the latest available version from pub.dev.
 
 **Get packages**
 
 Run the following command to get the required packages.
 
+{% tabs %}
 {% highlight dart %}
 
 $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_treemap/treemap.dart';
 
@@ -63,25 +65,54 @@ After importing the package, initialize the treemap widget as a child of any wid
 To populate the data source, set its count to the [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/dataCount.html) property of the treemap. The data will be grouped based on the values returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback. You can have more than one TreemapLevel in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback. Based on this value, every tile (rectangle) will have its size.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapExample extends StatefulWidget {
+  const TreemapExample({super.key});
+
+  @override
+  State<TreemapExample> createState() => _TreemapExampleState();
+}
+
+class _TreemapExampleState extends State<TreemapExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers(
-            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-        SocialMediaUsers(
-            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-        SocialMediaUsers(
-            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-        SocialMediaUsers(
-            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-        SocialMediaUsers(
-            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-        SocialMediaUsers(
-            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+      const SocialMediaUsers(
+        country: 'India',
+        socialMedia: 'Facebook',
+        usersInMillions: 25.4,
+      ),
+      const SocialMediaUsers(
+        country: 'USA',
+        socialMedia: 'Instagram',
+        usersInMillions: 19.11,
+      ),
+      const SocialMediaUsers(
+        country: 'Japan',
+        socialMedia: 'Facebook',
+        usersInMillions: 13.3,
+      ),
+      const SocialMediaUsers(
+        country: 'Germany',
+        socialMedia: 'Instagram',
+        usersInMillions: 10.65,
+      ),
+      const SocialMediaUsers(
+        country: 'France',
+        socialMedia: 'Twitter',
+        usersInMillions: 7.54,
+      ),
+      const SocialMediaUsers(
+        country: 'UK',
+        socialMedia: 'Instagram',
+        usersInMillions: 4.93,
+      ),
     ];
     super.initState();
   }
@@ -90,26 +121,27 @@ To populate the data source, set its count to the [`dataCount`](https://pub.dev/
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                ),
-              ],
-            ),
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers({
@@ -134,105 +166,57 @@ N>
 
 ## Add labels
 
-You can add any type of custom widgets to the tiles as labels based on the index using the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html) property.
+You can add any type of custom widgets to the tiles as labels based on the index using the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html) property. The following example extends the initial sample by adding a label builder.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-  late List<SocialMediaUsers> _source;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
 
-  @override
-  void initState() {
-    _source = <SocialMediaUsers>[
-        SocialMediaUsers(
-            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-        SocialMediaUsers(
-            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-        SocialMediaUsers(
-            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-        SocialMediaUsers(
-            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-        SocialMediaUsers(
-            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-        SocialMediaUsers(
-            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-    ];
-    super.initState();
-  }
+class TreemapExample extends StatefulWidget {
+  const TreemapExample({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                  labelBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                      child:
-                          Text(tile.group, style: TextStyle(color: Colors.black)),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
-    );
-  }
-
-class SocialMediaUsers {
-  const SocialMediaUsers({
-    required this.country,
-    required this.socialMedia,
-    required this.usersInMillions,
-  });
-
-  final String country;
-  final String socialMedia;
-  final double usersInMillions;
+  State<TreemapExample> createState() => _TreemapExampleState();
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-![Treemap labels](images/getting-started/labels.png)
-
-## Add tooltip
-
-You can enable tooltip for any tile in the treemap and able to return the completely customized widget using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) property.
-
-{% tabs %}
-{% highlight Dart %}
-
+class _TreemapExampleState extends State<TreemapExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers(
-            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-        SocialMediaUsers(
-            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-        SocialMediaUsers(
-            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-        SocialMediaUsers(
-            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-        SocialMediaUsers(
-            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-        SocialMediaUsers(
-            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+      const SocialMediaUsers(
+        country: 'India',
+        socialMedia: 'Facebook',
+        usersInMillions: 25.4,
+      ),
+      const SocialMediaUsers(
+        country: 'USA',
+        socialMedia: 'Instagram',
+        usersInMillions: 19.11,
+      ),
+      const SocialMediaUsers(
+        country: 'Japan',
+        socialMedia: 'Facebook',
+        usersInMillions: 13.3,
+      ),
+      const SocialMediaUsers(
+        country: 'Germany',
+        socialMedia: 'Instagram',
+        usersInMillions: 10.65,
+      ),
+      const SocialMediaUsers(
+        country: 'France',
+        socialMedia: 'Twitter',
+        usersInMillions: 7.54,
+      ),
+      const SocialMediaUsers(
+        country: 'UK',
+        socialMedia: 'Instagram',
+        usersInMillions: 4.93,
+      ),
     ];
     super.initState();
   }
@@ -256,16 +240,10 @@ You can enable tooltip for any tile in the treemap and able to return the comple
                 },
                 labelBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
-                    padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child: Text(tile.group, style: TextStyle(color: Colors.black)),
-                  );
-                },
-                tooltipBuilder: (BuildContext context, TreemapTile tile) {
-                  return Padding(
-                    padding: const EdgeInsets.only(left: 5, right: 5, top: 2, bottom: 3),
+                    padding: const EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
                     child: Text(
-                      'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                      style: TextStyle(color: Colors.black),
+                      tile.group,
+                      style: const TextStyle(color: Colors.black),
                     ),
                   );
                 },
@@ -276,6 +254,125 @@ You can enable tooltip for any tile in the treemap and able to return the comple
       ),
     );
   }
+}
+
+class SocialMediaUsers {
+  const SocialMediaUsers({
+    required this.country,
+    required this.socialMedia,
+    required this.usersInMillions,
+  });
+
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Treemap labels](images/getting-started/labels.png)
+
+## Add tooltip
+
+You can enable tooltip for any tile in the treemap and return a fully customized widget using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) property. The following example extends the initial sample by adding a tooltip builder.
+
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapExample extends StatefulWidget {
+  const TreemapExample({super.key});
+
+  @override
+  State<TreemapExample> createState() => _TreemapExampleState();
+}
+
+class _TreemapExampleState extends State<TreemapExample> {
+  late List<SocialMediaUsers> _source;
+
+  @override
+  void initState() {
+    _source = <SocialMediaUsers>[
+      const SocialMediaUsers(
+        country: 'India',
+        socialMedia: 'Facebook',
+        usersInMillions: 25.4,
+      ),
+      const SocialMediaUsers(
+        country: 'USA',
+        socialMedia: 'Instagram',
+        usersInMillions: 19.11,
+      ),
+      const SocialMediaUsers(
+        country: 'Japan',
+        socialMedia: 'Facebook',
+        usersInMillions: 13.3,
+      ),
+      const SocialMediaUsers(
+        country: 'Germany',
+        socialMedia: 'Instagram',
+        usersInMillions: 10.65,
+      ),
+      const SocialMediaUsers(
+        country: 'France',
+        socialMedia: 'Twitter',
+        usersInMillions: 7.54,
+      ),
+      const SocialMediaUsers(
+        country: 'UK',
+        socialMedia: 'Instagram',
+        usersInMillions: 4.93,
+      ),
+    ];
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
+                    child: Text(
+                      tile.group,
+                      style: const TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 5, right: 5, top: 2, bottom: 3),
+                    child: Text(
+                      'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                      style: const TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers({
@@ -296,28 +393,57 @@ class SocialMediaUsers {
 
 ## Add legend
 
-You can show legend by initializing the [`legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property in the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html). It is possible to customize the legend item's color and text using the [`SfTreemap.colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html) property.
+You can show legend by initializing the [`legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property in the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html). It is possible to customize the legend item's color and text using the [`SfTreemap.colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html) property. The following example extends the initial sample by adding legend support.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapExample extends StatefulWidget {
+  const TreemapExample({super.key});
+
+  @override
+  State<TreemapExample> createState() => _TreemapExampleState();
+}
+
+class _TreemapExampleState extends State<TreemapExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers(
-            country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
-        SocialMediaUsers(
-            country: 'USA', socialMedia: 'Instagram', usersInMillions: 19.11),
-        SocialMediaUsers(
-            country: 'Japan', socialMedia: 'Facebook', usersInMillions: 13.3),
-        SocialMediaUsers(
-            country: 'Germany', socialMedia: 'Instagram', usersInMillions: 10.65),
-        SocialMediaUsers(
-            country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
-        SocialMediaUsers(
-            country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
+      const SocialMediaUsers(
+        country: 'India',
+        socialMedia: 'Facebook',
+        usersInMillions: 25.4,
+      ),
+      const SocialMediaUsers(
+        country: 'USA',
+        socialMedia: 'Instagram',
+        usersInMillions: 19.11,
+      ),
+      const SocialMediaUsers(
+        country: 'Japan',
+        socialMedia: 'Facebook',
+        usersInMillions: 13.3,
+      ),
+      const SocialMediaUsers(
+        country: 'Germany',
+        socialMedia: 'Instagram',
+        usersInMillions: 10.65,
+      ),
+      const SocialMediaUsers(
+        country: 'France',
+        socialMedia: 'Twitter',
+        usersInMillions: 7.54,
+      ),
+      const SocialMediaUsers(
+        country: 'UK',
+        socialMedia: 'Instagram',
+        usersInMillions: 4.93,
+      ),
     ];
     super.initState();
   }
@@ -326,43 +452,46 @@ You can show legend by initializing the [`legend`](https://pub.dev/documentation
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                  labelBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                      child:
-                          Text(tile.group, style: TextStyle(color: Colors.black)),
-                    );
-                  },
-                  tooltipBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: const EdgeInsets.only(
-                          left: 5, right: 5, top: 2, bottom: 3),
-                      child: Text(
-                          'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                          style: TextStyle(color: Colors.black)),
-                    );
-                  },
-                ),
-              ],
-              legend: TreemapLegend(),
-            ),
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
+                    child: Text(
+                      tile.group,
+                      style: const TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 5, right: 5, top: 2, bottom: 3),
+                    child: Text(
+                      'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                      style: const TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
+              ),
+            ],
+            legend: TreemapLegend(),
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers({

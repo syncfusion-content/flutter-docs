@@ -2,35 +2,46 @@
 layout: post
 title: Tooltip in Flutter Treemap widget | Syncfusion
 description: Learn here all about adding the Tooltip feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
 
 # Tooltip in Flutter Treemap (SfTreemap)
 
-Tooltip is used to provide information about the tile during the tap, or click interaction. This section helps to learn about how to show tooltip on a tile and customize them.
+Tooltip is used to provide information about a tile during tap or click interaction. This section helps you learn how to show a tooltip on a tile and customize it.
 
 ## Tooltip for the tiles
 
-It is used to clearly indicate the tile information on the tap or click. To show tooltip for the tile, return a widget in [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
+Tooltips are used to clearly indicate tile information on tap or click. To show a tooltip for the tile, return a widget in [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html). This widget is then wrapped in the built-in shape with the nose at the bottom.
 
-The [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) will be called with the corresponding tile details every time you interact with the tile i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) callback is called with the corresponding tile details every time you interact with the tile, while tapping on touch devices and hover-enter on mouse-enabled devices.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TooltipExample extends StatefulWidget {
+  const TooltipExample({super.key});
+
+  @override
+  State<TooltipExample> createState() => _TooltipExampleState();
+}
+
+class _TooltipExampleState extends State<TooltipExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers('India', 'Facebook', 25.4),
-        SocialMediaUsers('USA', 'Instagram', 19.11),
-        SocialMediaUsers('Japan', 'Facebook', 13.3),
-        SocialMediaUsers('Germany', 'Instagram', 10.65),
-        SocialMediaUsers('France', 'Twitter', 7.54),
-        SocialMediaUsers('UK', 'Instagram', 4.93),
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
     ];
     super.initState();
   }
@@ -39,60 +50,61 @@ The [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flu
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                  tooltipBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Country          : ',
-                                  style: TextStyle(color: Colors.black)),
-                              Text(tile.group,
-                                  style: TextStyle(color: Colors.black)),
-                            ],
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Social media : ',
-                                  style: TextStyle(color: Colors.black)),
-                              Text(tile.weight.toString(),
-                                  style: TextStyle(color: Colors.black)),
-                            ],
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
+        child: SizedBox(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Country          : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.group,
+                                style: const TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Social media : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.weight.toString(),
+                                style: const TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
@@ -121,19 +133,31 @@ You can customize the appearance of the tooltip.
 * **Visibility** - Change the duration of the tooltip visibility using the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/hideDelay.html) property. The default value of the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/hideDelay.html) property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. Also, you can increase or decrease the tooltip duration or show tooltip always by setting double.infinity to the [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/hideDelay.html) property.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TooltipAppearanceExample extends StatefulWidget {
+  const TooltipAppearanceExample({super.key});
+
+  @override
+  State<TooltipAppearanceExample> createState() =>
+      _TooltipAppearanceExampleState();
+}
+
+class _TooltipAppearanceExampleState extends State<TooltipAppearanceExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers('India', 'Facebook', 25.4),
-        SocialMediaUsers('USA', 'Instagram', 19.11),
-        SocialMediaUsers('Japan', 'Facebook', 13.3),
-        SocialMediaUsers('Germany', 'Instagram', 10.65),
-        SocialMediaUsers('France', 'Twitter', 7.54),
-        SocialMediaUsers('UK', 'Instagram', 4.93),
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
     ];
     super.initState();
   }
@@ -142,67 +166,68 @@ You can customize the appearance of the tooltip.
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                  tooltipBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Country          : ',
-                                  style: TextStyle(color: Colors.black)),
-                              Text(tile.group,
-                                  style: TextStyle(color: Colors.black)),
-                            ],
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Social media : ',
-                                  style: TextStyle(color: Colors.black)),
-                              Text(tile.weight.toString(),
-                                  style: TextStyle(color: Colors.black)),
-                            ],
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ],
-              tooltipSettings: TreemapTooltipSettings(
-                color: Colors.orange[300],
-                borderColor: Colors.deepOrange[900],
-                borderWidth: 2,
-                borderRadius: BorderRadius.circular(10),
-                hideDelay: 6,
+        child: SizedBox(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Country          : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.group,
+                                style: const TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Social media : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.weight.toString(),
+                                style: const TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
+            ],
+            tooltipSettings: TreemapTooltipSettings(
+              color: Colors.orange[300],
+              borderColor: Colors.deepOrange[900],
+              borderWidth: 2,
+              borderRadius: BorderRadius.circular(10),
+              hideDelay: 6,
             ),
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);

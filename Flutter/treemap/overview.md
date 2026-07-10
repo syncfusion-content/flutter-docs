@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter Treemap widget | Syncfusion
 description: Learn here all about the introduction of Syncfusion Flutter Treemap (SfTreemap) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
@@ -11,7 +11,9 @@ documentation: ug
 
 Syncfusion<sup>&reg;</sup> Flutter Treemap is a powerful and customizable widget that allows you to create interactive treemaps in Flutter applications. It offers a rich feature set including selection, legends, labels, tooltips, color mapping, and more.
 
-### Features
+![Flutter Treemap](images/overview/treemap_overview.png)
+
+## Features
 
 * **Layouts** - Utilize various layouts based on algorithms such as squarified, slice, and dice to represent both flat and hierarchically-structured data.
 
@@ -28,3 +30,5 @@ Syncfusion<sup>&reg;</sup> Flutter Treemap is a powerful and customizable widget
 * **Tooltip** - Use customizable tooltips to display additional information about the tiles on the treemap.
 
 * **Custom background widgets** - Add custom widgets, such as image widgets, as backgrounds of the tiles to enrich the UI and easily visualize the data type that a particular tile represents.
+
+For step-by-step installation and setup instructions, see [Getting Started with Flutter Treemap](getting-started.md).

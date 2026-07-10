@@ -2,14 +2,14 @@
 layout: post
 title: Flat and Hierarchical Levels in Flutter Treemap | Syncfusion
 description: Learn here all about the Flat and Hierarchical Levels feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
 
 # Flat and Hierarchical Levels in Flutter Treemap (SfTreemap)
 
-The levels of the treemap can be categorized into the following two types,
+The levels of the treemap can be categorized into the following two types:
 
 * Flat level.
 * Hierarchical level.
@@ -18,22 +18,34 @@ The levels of the treemap can be categorized into the following two types,
 
 There will be a tile for each unique value returned in the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback which is added to the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection property of [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html).
 
-### Squarified
+### Squarified flat level example
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapFlatLevelExample extends StatefulWidget {
+  const TreemapFlatLevelExample({super.key});
+
+  @override
+  State<TreemapFlatLevelExample> createState() =>
+      _TreemapFlatLevelExampleState();
+}
+
+class _TreemapFlatLevelExampleState extends State<TreemapFlatLevelExample> {
   late List<PopulationModel> _source;
 
   @override
   void initState() {
     _source = <PopulationModel>[
-        PopulationModel('Asia', 25.4),
-        PopulationModel('South America', 19.11),
-        PopulationModel('North America', 13.3),
-        PopulationModel('Europe', 10.65),
-        PopulationModel('Africa', 7.54),
-        PopulationModel('Australia', 4.93),
+      const PopulationModel('Asia', 25.4),
+      const PopulationModel('South America', 19.11),
+      const PopulationModel('North America', 13.3),
+      const PopulationModel('Europe', 10.65),
+      const PopulationModel('Africa', 7.54),
+      const PopulationModel('Australia', 4.93),
     ];
     super.initState();
   }
@@ -42,26 +54,27 @@ There will be a tile for each unique value returned in the [`TreemapLevel.groupM
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].populationInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].continent;
-                  },
-                ),
-              ],
-            ),
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].populationInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].continent;
+                },
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class PopulationModel {
   const PopulationModel(this.continent, this.populationInMillions);
@@ -83,69 +96,82 @@ N>
 
 ## Hierarchical level
 
-Hierarchical level arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one [`TreemapLevel`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel-class.html) in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap.
+Hierarchical levels arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one [`TreemapLevel`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel-class.html) in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap.
 
 The first level will work similarly to the flat level. From the next level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection, the items returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) for the indices, will be placed inside the rectangle for the same indices returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) in the previous level. This will go on until the last level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection.
 
-### Squarified
+### Squarified hierarchical level example
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapHierarchicalLevelExample extends StatefulWidget {
+  const TreemapHierarchicalLevelExample({super.key});
+
+  @override
+  State<TreemapHierarchicalLevelExample> createState() =>
+      _TreemapHierarchicalLevelExampleState();
+}
+
+class _TreemapHierarchicalLevelExampleState
+    extends State<TreemapHierarchicalLevelExample> {
   late List<JobVacancyModel> _source;
 
   @override
   void initState() {
     _source = <JobVacancyModel>[
-        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-        JobVacancyModel(
-            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-        JobVacancyModel(
-            country: 'America',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 105),
-        JobVacancyModel(
-            country: 'America',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 40),
-        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-        JobVacancyModel(
-            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-        JobVacancyModel(
-            country: 'India',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 155),
-        JobVacancyModel(
-            country: 'India',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 60),
-        JobVacancyModel(
-            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-        JobVacancyModel(
-            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-        JobVacancyModel(
-            country: 'UK',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 100),
-        JobVacancyModel(
-            country: 'UK',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 30),
-        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+      const JobVacancyModel(
+          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+      const JobVacancyModel(
+          country: 'America',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 105),
+      const JobVacancyModel(
+          country: 'America',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+      const JobVacancyModel(
+          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+      const JobVacancyModel(
+          country: 'India',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 155),
+      const JobVacancyModel(
+          country: 'India',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 60),
+      const JobVacancyModel(
+          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+      const JobVacancyModel(
+          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+      const JobVacancyModel(
+          country: 'UK',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 100),
+      const JobVacancyModel(
+          country: 'UK',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 30),
+      const JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+      const JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
     ];
     super.initState();
   }
@@ -154,33 +180,36 @@ The first level will work similarly to the flat level. From the next level in th
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].vacancy;
-              },
-              levels: [
-                TreemapLevel(groupMapper: (int index) => _source[index].country),
-                TreemapLevel(groupMapper: (int index) => _source[index].job),
-                TreemapLevel(groupMapper: (int index) => _source[index].group),
-                TreemapLevel(groupMapper: (int index) => _source[index].role),
-              ],
-            ),
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
+            },
+            levels: [
+              TreemapLevel(groupMapper: (int index) => _source[index].country),
+              TreemapLevel(groupMapper: (int index) => _source[index].job),
+              TreemapLevel(groupMapper: (int index) => _source[index].group),
+              TreemapLevel(groupMapper: (int index) => _source[index].role),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class JobVacancyModel {
-  const JobVacancyModel(
-      {required this.country,
-      required this.job,
-      this.group,
-      this.role,
-      required this.vacancy});
+  const JobVacancyModel({
+    required this.country,
+    required this.job,
+    this.group,
+    this.role,
+    required this.vacancy,
+  });
+
   final String country;
   final String job;
   final String? group;
@@ -209,65 +238,77 @@ You can customize the levels using the following properties:
 
 * **Border** - Specifies the border color, border width and border radius for the group using the [`TreemapLevel.border`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/border.html) property.
 
-### Squarified
+### Squarified appearance example
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class TreemapAppearanceExample extends StatefulWidget {
+  const TreemapAppearanceExample({super.key});
+
+  @override
+  State<TreemapAppearanceExample> createState() =>
+      _TreemapAppearanceExampleState();
+}
+
+class _TreemapAppearanceExampleState extends State<TreemapAppearanceExample> {
   late List<JobVacancyModel> _source;
 
   @override
   void initState() {
     _source = <JobVacancyModel>[
-        JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
-        JobVacancyModel(
-            country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
-        JobVacancyModel(
-            country: 'America',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 105),
-        JobVacancyModel(
-            country: 'America',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 40),
-        JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
-        JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
-        JobVacancyModel(
-            country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
-        JobVacancyModel(
-            country: 'India',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 155),
-        JobVacancyModel(
-            country: 'India',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 60),
-        JobVacancyModel(
-            country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
-        JobVacancyModel(
-            country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
-        JobVacancyModel(
-            country: 'UK',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Windows',
-            vacancy: 100),
-        JobVacancyModel(
-            country: 'UK',
-            job: 'Technical',
-            group: 'Developers',
-            role: 'Web',
-            vacancy: 30),
-        JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
-        JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Sales', vacancy: 70),
+      const JobVacancyModel(
+          country: 'America', job: 'Technical', group: 'Testers', vacancy: 35),
+      const JobVacancyModel(
+          country: 'America',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 105),
+      const JobVacancyModel(
+          country: 'America',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Management', vacancy: 40),
+      const JobVacancyModel(country: 'America', job: 'Accounts', vacancy: 60),
+      const JobVacancyModel(
+          country: 'India', job: 'Technical', group: 'Testers', vacancy: 25),
+      const JobVacancyModel(
+          country: 'India',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 155),
+      const JobVacancyModel(
+          country: 'India',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 60),
+      const JobVacancyModel(
+          country: 'Germany', job: 'Sales', group: 'Executive', vacancy: 30),
+      const JobVacancyModel(
+          country: 'Germany', job: 'Sales', group: 'Analyst', vacancy: 40),
+      const JobVacancyModel(
+          country: 'UK',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Windows',
+          vacancy: 100),
+      const JobVacancyModel(
+          country: 'UK',
+          job: 'Technical',
+          group: 'Developers',
+          role: 'Web',
+          vacancy: 30),
+      const JobVacancyModel(country: 'UK', job: 'HR Executives', vacancy: 60),
+      const JobVacancyModel(country: 'UK', job: 'Marketing', vacancy: 40),
     ];
     super.initState();
   }
@@ -275,68 +316,77 @@ You can customize the levels using the following properties:
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfTreemap(
-          dataCount: _source.length,
-          weightValueMapper: (int index) {
-            return _source[index].vacancy;
-          },
-          levels: [
-            TreemapLevel(
-              groupMapper: (int index) => _source[index].country,
-              color: Colors.blue,
-              border: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.blue,
-                  width: 1,
+      body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].country,
+                color: Colors.blue,
+                border: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.blue,
+                    width: 1,
+                  ),
                 ),
+                padding: const EdgeInsets.all(2.5),
               ),
-              padding: EdgeInsets.all(2.5),
-            ),
-            TreemapLevel(
-              groupMapper: (int index) => _source[index].job,
-              color: Colors.orangeAccent,
-              border: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.orangeAccent,
-                  width: 1,
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].job,
+                color: Colors.orangeAccent,
+                border: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.orangeAccent,
+                    width: 1,
+                  ),
                 ),
+                padding: const EdgeInsets.all(2.5),
               ),
-              padding: EdgeInsets.all(2.5),
-            ),
-            TreemapLevel(
-              groupMapper: (int index) => _source[index].group,
-              color: Colors.green[300],
-              border: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.green,
-                  width: 1,
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].group,
+                color: Colors.green[300],
+                border: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.green,
+                    width: 1,
+                  ),
                 ),
+                padding: const EdgeInsets.all(5),
               ),
-              padding: EdgeInsets.all(5),
-            ),
-            TreemapLevel(
-              groupMapper: (int index) => _source[index].role,
-              color: Colors.pink[300],
-              border: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.pink,
-                  width: 1,
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].role,
+                color: Colors.pink[300],
+                border: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.pink,
+                    width: 1,
+                  ),
                 ),
+                padding: const EdgeInsets.all(5),
               ),
-              padding: EdgeInsets.all(5),
-            ),
-          ],
+            ],
+          ),
         ),
+      ),
     );
   }
+}
 
 class JobVacancyModel {
-  const JobVacancyModel(
-      {required this.country,
-      required this.job,
-      this.group,
-      this.role,
-      required this.vacancy});
+  const JobVacancyModel({
+    required this.country,
+    required this.job,
+    this.group,
+    this.role,
+    required this.vacancy,
+  });
+
   final String country;
   final String job;
   final String? group;
