@@ -1,4 +1,4 @@
-## Common Issues (Affecting All SignaturePad Getting Started UG Pages)
+## Common Issues
 
 | Issue | Pages Affected | Fix |
 |---------|---------------|-----|

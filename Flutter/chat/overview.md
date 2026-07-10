@@ -25,11 +25,11 @@ The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations betwee
 
 * **Suggestions** - The list of [`suggestions`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage/suggestions.html) can be added for a message in the message list. The selected suggestion item can be displayed in the chat interface as either incoming or outgoing messages based on the user who selected the suggestion item.
 
-* **Message Header** - Displays the sender's name and the timestamp associated with each message. Using the [`messageHeaderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageHeaderBuilder.html), a custom widget can be specified to display as a header for each chat message with required details about the respective message.
+* **Message Header** - Displays the sender's name and the timestamp associated with each message. Using the [`messageHeaderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageHeaderBuilder.html), a custom widget can be specified as the header for each message. For customization details, refer to the [Conversation Area](conversation-area.md) documentation.
 
-* **Message Footer** - By default, no footer is added to the message content. Using the [`messageFooterBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageFooterBuilder.html), a custom widget can be specified to display as a footer for each chat message with required details about the respective message.
+* **Message Footer** - By default, no footer is added to the message content. Using the [`messageFooterBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageFooterBuilder.html), a custom widget can be specified as the footer for each message. For customization details, refer to the [Conversation Area](conversation-area.md) documentation.
 
-* **Message Content** - The actual message content. Using the [`messageContentBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageContentBuilder.html), a custom widget can be specified to display as the content for each chat message with a customized layout.
+* **Custom Message Content** - The actual message content can be customized using the [`messageContentBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageContentBuilder.html), which lets you build a fully custom layout for each message. For customization details, refer to the [Conversation Area](conversation-area.md) documentation.
 
 * **Message Avatar** - Displays user avatars or profile pictures of the respective message. Using the [`messageAvatarBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageAvatarBuilder.html), a custom widget can be specified to display the chat message avatar with relevant details.
 
