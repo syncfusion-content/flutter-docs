@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Chat Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Chat ( SfChat Widget ) widget in FlutterFlow.
+title: Syncfusion Chat Widget in FlutterFlow | Syncfusion
+description: Learn how to add the Syncfusion Flutter Chat (SfChat) widget in FlutterFlow.
 platform: flutter
 control: SfChat
 documentation: ug
@@ -22,8 +22,8 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to the `Custom Code` section in the left side navigation menu.
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
-4. Click the `View Boilerplate Code` button on the right side, represented by this icon `[</>]`.
-5. A popup will appear with startup code; locate the button labeled `</> Copy to Editor` and click on it.
+4. Click the `View Boilerplate Code` button on the right side.
+5. A popup will appear with boilerplate code; locate the button labeled `</> Copy to Editor` and click it.
 6. Save the widget.
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
@@ -35,13 +35,13 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The current version of [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) targets the latest Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and choose the matching package version using [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
 >**Note**: If you are using an older version of a dependency instead of the latest one, remove the caret symbol (^) prefix in the version number after pasting the dependency. For example, change `^21.3.0` to `21.3.0`.
 
->**Note**: Since [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) depends on the [Syncfusion<sup>&reg;</sup> Flutter Core](https://pub.dev/packages/syncfusion_flutter_core) package, make sure to add it as a dependency following the same steps mentioned above.
+>**Note**: Since [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) depends on [Syncfusion<sup>&reg;</sup> Flutter Core](https://pub.dev/packages/syncfusion_flutter_core), add both packages as dependencies.
 
 ### Import the package
 
@@ -52,7 +52,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_chat/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_chat/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) and copy the widget-specific code sample.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
 ![Code snippet](how-to-section-images/adding-code-snippet.png)
@@ -66,10 +66,23 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: The compilation progress takes 2 to 3 minutes to complete.
 
+### Troubleshooting compile issues
+
+If compilation fails, check the following:
+
+1. Verify that both `syncfusion_flutter_chat` and `syncfusion_flutter_core` are added.
+2. Ensure imports are correct and do not contain duplicate/conflicting package names.
+3. If your sample uses date formatting, add the `intl` package dependency.
+4. Match dependency versions with FlutterFlow's Flutter SDK version.
+5. Re-run `Compile Code` after each fix to validate incrementally.
+
 ### Utilizing the custom widget
 
 1. Navigate to `Widget Palette` located in the left side navigation menu.
 2. Click on the `Components` tab.
-3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+3. Your custom widget will appear under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+4. Bind your custom widget inputs to FlutterFlow data sources (for example, pass a messages list, current user ID, and callbacks as widget parameters).
 
 ![Page](how-to-section-images/page.png)
+
+The screenshot above shows the custom widget added to a page layout. Use this placement to preview your chat with sample content.
