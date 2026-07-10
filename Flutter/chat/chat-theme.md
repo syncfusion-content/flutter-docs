@@ -302,13 +302,13 @@ class TextStyleThemeExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-## Outgoing message content shape
+## Outgoing message shape
 
-Use [`outgoingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageContentShape.html) to customize outgoing bubble shape.
+Use [`outgoingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/outgoingMessageShape.html) to customize outgoing bubble shape.
 
-## Incoming message content shape
+## Incoming message shape
 
-Use [`incomingMessageContentShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageContentShape.html) to customize incoming bubble shape.
+Use [`incomingMessageShape`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChatThemeData/incomingMessageShape.html) to customize incoming bubble shape.
 
 {% tabs %}
 {% highlight dart %}
@@ -329,10 +329,10 @@ class MessageShapeThemeExample extends StatelessWidget {
     return MaterialApp(
       home: SfChatTheme(
         data: SfChatThemeData(
-          outgoingMessageContentShape: RoundedRectangleBorder(
+          outgoingMessageShape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          incomingMessageContentShape: RoundedRectangleBorder(
+          incomingMessageShape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
         ),
