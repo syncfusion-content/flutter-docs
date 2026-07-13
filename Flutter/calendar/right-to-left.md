@@ -7,31 +7,44 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Right to left (RTL) in Flutter Event Calendar (SfCalendar)
-Event calendar supports Right to Left rendering and all the calendar elements rendering direction will be changed.
+# Right to Left (RTL) in Flutter Event Calendar (SfCalendar)
+The event calendar supports right-to-left rendering and all the calendar elements rendering direction will be changed.
 
 ## RTL rendering ways
 Right to Left rendering can be switched in the following ways:
 
 ### Wrapping the SfCalendar with Directionality widget
-[SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
+[SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="17 18" %}
 
-@override
-Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(
-               title: Text('Right to Left'),
-           ),
-           body: Directionality(
-               textDirection: TextDirection.rtl,
-               child: SfCalendar(
-               view: CalendarView.month,
-           ),
-       ),
-   );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Right to Left'),
+        ),
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCalendar(
+            view: CalendarView.month,
+          ),
+        ),
+      ),
+    );
+  }
 }
    
 {% endhighlight %}
@@ -41,26 +54,39 @@ Widget build(BuildContext context) {
 To change the event calendar rendering direction from right to left, change the locale to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
 {% tabs %}
-{% highlight dart hl_lines="4 5 6 7 8 9 10 11 12 13" %}
+{% highlight dart hl_lines="14 15 16 17 18 19 20 21 22 23" %}
 
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-	localizationsDelegates: [
-	  GlobalMaterialLocalizations.delegate,
-	  GlobalWidgetsLocalizations.delegate,
-	],
-	supportedLocales: <Locale>[
-	  Locale('en'),
-	  Locale('ar'),
-	  // ... other locales the app supports
-	],
-	locale: Locale('ar'),
-	home: Scaffold(
-	  body: SfCalendar(
-		  //...
-		  ),
-	));
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const <Locale>[
+        Locale('en'),
+        Locale('ar'),
+        // ... other locales the app supports
+      ],
+      locale: const Locale('ar'),
+      home: Scaffold(
+        body: SfCalendar(
+            //...
+            ),
+      ),
+    );
+  }
 }
 
 	
@@ -73,32 +99,45 @@ Right to Left rendering is supported for all the elements in the [SfCalendar](ht
 
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="17 18" %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('Right to Left'),
-    ),
-    body: Directionality(
-      textDirection: TextDirection.rtl,
-      child: SfCalendar(
-        view: CalendarView.month,
-        allowedViews: [
-          CalendarView.day,
-          CalendarView.week,
-          CalendarView.workWeek,
-          CalendarView.month,
-          CalendarView.schedule,
-          CalendarView.timelineDay,
-          CalendarView.timelineWeek,
-          CalendarView.timelineWorkWeek,
-          CalendarView.timelineMonth
-        ],
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Right to Left'),
+        ),
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfCalendar(
+            view: CalendarView.month,
+            allowedViews: const [
+              CalendarView.day,
+              CalendarView.week,
+              CalendarView.workWeek,
+              CalendarView.month,
+              CalendarView.schedule,
+              CalendarView.timelineDay,
+              CalendarView.timelineWeek,
+              CalendarView.timelineWorkWeek,
+              CalendarView.timelineMonth
+            ],
+          ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
    

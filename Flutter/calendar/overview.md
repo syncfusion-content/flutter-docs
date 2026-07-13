@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar Overview (SfCalendar)
 
-The Syncfusion<sup>&reg;</sup> Flutter Calendar library is written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
+The Syncfusion<sup>&reg;</sup> Flutter Calendar library is written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The calendar widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
 
 ![Calendar overview](images/overview/calendar_overview.png)
 
@@ -59,6 +59,10 @@ The Syncfusion<sup>&reg;</sup> Flutter Calendar library is written natively in D
 ![Appearance customization](images/overview/Appearance_customization.png)
 * **Custom start and end hours**: Display the event calendar timeslot views with specific time durations by hiding the unwanted hours. 
 * **Web layout**: The web layout improved for a better experience, and now, the mouse hovering effect has been applied to all the calendar elements.
+
+## Getting started
+
+To get started with the Syncfusion Flutter Calendar, refer to the [Getting Started with Flutter Event Calendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/getting-started.html) documentation.
 
 
 
