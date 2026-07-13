@@ -9,7 +9,7 @@ documentation: ug
 
 # Common Installation Errors
 
-This article describes the most common installation errors, along with their causes and solutions
+This article describes the most common installation errors, along with their causes and solutions.
 
 * [Unlocking the license installer using the trial key](https://help.syncfusion.com/flutter/installation/installation-errors#unlocking-the-license-installer-using-the-trial-key)
 * [License has expired](https://help.syncfusion.com/flutter/installation/installation-errors#license-has-expired)
@@ -31,7 +31,7 @@ You are attempting to use a trial unlock key to unlock the licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the licensed installer, use the licensed unlock key. To generate the licensed unlock key, refer to [this article](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
+Only a licensed unlock key can unlock a licensed installer. Use a licensed unlock key to unlock the licensed installer. To generate the licensed unlock key, refer to [this article](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
 
 ## License has expired
@@ -54,7 +54,7 @@ You can choose from the options listed below.
 
 1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals). 
 2. You can get a new license [here](https://www.syncfusion.com/sales/teamlicense). 
-3. You can reach out to our sales team by emailing <sales@syncfusion.com>. 
+3. You can reach out to our sales team by emailing sales@syncfusion.com. 
 4. You can also extend the 30-day trial period after your trial license has expired.
 
 
@@ -78,7 +78,7 @@ The following are possible causes of this error:
 
 * When your trial period expired
 * When you don't have a license or an active trial
-* You are not the license holder of your license 
+* You are not assigned as the license holder for this license. 
 * Your account administrator has not yet assigned you a license.
 
 ### Suggested solution
@@ -87,8 +87,8 @@ You can choose from the options listed below.
 
 1. You can get a new license [here](https://www.syncfusion.com/sales/teamlicense). 
 2. Contact your account administrator. 
-3. Send an email to  <clientrelations@syncfusion.com> to request a license. 
-4. You can reach out to our sales team by emailing  <sales@syncfusion.com>.
+3. Send an email to clientrelations@syncfusion.com to request a license. 
+4. You can reach out to our sales team by emailing sales@syncfusion.com.
 
 ## Unable to install because of another installation
 
@@ -100,17 +100,17 @@ You can choose from the options listed below.
 
 ### Reason
 
-You are trying to install when another installation is already running in your machine.
+You are trying to install when another installation is already running on your machine.
 
 ### Suggested solution
 
-Open and terminate the msiexec process in the task manager and then continue to install Syncfusion<sup>&reg;</sup>. If the problem is still present, restart the computer and try Syncfusion<sup>&reg;</sup> installer. 
+Open and terminate the msiexec process in the task manager and then continue to install Syncfusion<sup>&reg;</sup>. (Note: msiexec is the Windows Installer service. These steps apply to Windows only.) If the problem is still present, restart the computer and try Syncfusion<sup>&reg;</sup> installer. 
 
 1. Open the Windows Task Manager.
 
 2. Browse the Details tab.
 
-3. Select the msiexec.exe and click **End task**.
+3. Select the msiexec.exe process and click **End task**.
 
 ![Task Manager](Errors/Installation_Errors_img5.png)
 
@@ -132,15 +132,15 @@ Open and terminate the msiexec process in the task manager and then continue to 
 
 ### Reason
 
-You have enabled controlled folder access settings on your computer.
+You have enabled controlled folder access settings on your machine.
 
 ### Suggested solution
 
 **Suggestion 1:**
 
 1.	We will ship our demos in the public documents folder by default. 
-2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
-3.	You can enable this option after the installing our Syncfusion<sup>&reg;</sup> setup.
+2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the Documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
+3.	After installing our Syncfusion<sup>&reg;</sup> setup, re-enable controlled folder access if needed.
 
 **Suggestion 2:**
 
