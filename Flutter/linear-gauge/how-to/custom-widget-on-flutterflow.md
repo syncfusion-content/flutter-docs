@@ -35,7 +35,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The current version of [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
@@ -52,12 +52,12 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_gauges/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Gauges](https://pub.dev/packages/syncfusion_flutter_gauges) and copy the widget-specific code samples.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
-![Code snippet](how-to-section-images/Adding-code-snippent.png)
+![Code snippet](how-to-section-images/Adding-code-snippet.png)
 
-### Compiling the codes
+### Compiling the code
 
 1. Click the 'Compile Code' button located in the top right corner.
 2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
