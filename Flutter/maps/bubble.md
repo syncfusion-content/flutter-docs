@@ -18,44 +18,54 @@ You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-   super.initState();
-   data = <Model>[
-      Model('Asia', 51),
-      Model('Africa', 58),
-      Model('Europe', 48),
-      Model('North America', 41),
-      Model('South America', 14),
-      Model('Australia', 23),
-   ];
-
-   dataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-      shapeDataField: "continent",
-      dataCount: data.length,
-      primaryValueMapper: (int index) => data[index].continent,
-      bubbleSizeMapper: (int index) => data[index].count,
-   );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-          ),
-        ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+     super.initState();
+     data = <Model>[
+        Model('Asia', 51),
+        Model('Africa', 58),
+        Model('Europe', 48),
+        Model('North America', 41),
+        Model('South America', 14),
+        Model('Australia', 23),
+     ];
+
+     dataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+        shapeDataField: "continent",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].continent,
+        bubbleSizeMapper: (int index) => data[index].count,
+     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class Model {
@@ -77,57 +87,67 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBu
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  data = <Model>[
-    Model('Asia', 50, '44,579,000 sq. km.'),
-    Model('Africa', 54, '30,370,000 sq. km.'),
-    Model('Europe', 51, '10,180,000 sq. km.'),
-    Model('North America', 23, '24,709,000 sq. km.'),
-    Model('South America', 12, '17,840,000 sq. km.'),
-    Model('Australia', 14, '8,600,000 sq. km.'),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    "assets/world_map.json",
-     shapeDataField: "continent",
-     dataCount: data.length,
-     primaryValueMapper: (int index) => data[index].continent,
-     bubbleSizeMapper: (int index) => data[index].countriesCount,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  final ThemeData themeData = Theme.of(context);
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            bubbleTooltipBuilder: (BuildContext context, int index) {
-               return Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text('Continent : ' +
-                     data[index].continent +
-                     '\nTotal Countries : ' +
-                     data[index].countriesCount.toStringAsFixed(0),
-                     style: themeData.textTheme.caption!
-                        .copyWith(color: themeData.colorScheme.surface)),
-               );
-            },
-          ),
-        ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    data = <Model>[
+      Model('Asia', 50, '44,579,000 sq. km.'),
+      Model('Africa', 54, '30,370,000 sq. km.'),
+      Model('Europe', 51, '10,180,000 sq. km.'),
+      Model('North America', 23, '24,709,000 sq. km.'),
+      Model('South America', 12, '17,840,000 sq. km.'),
+      Model('Australia', 14, '8,600,000 sq. km.'),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+       shapeDataField: "continent",
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].continent,
+       bubbleSizeMapper: (int index) => data[index].countriesCount,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData themeData = Theme.of(context);
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              bubbleTooltipBuilder: (BuildContext context, int index) {
+                 return Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text('Continent : ' +
+                       data[index].continent +
+                       '\nTotal Countries : ' +
+                       data[index].countriesCount.toStringAsFixed(0),
+                       style: themeData.textTheme.labelSmall!
+                          .copyWith(color: themeData.colorScheme.surface)),
+                 );
+              },
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class Model {
@@ -154,50 +174,60 @@ If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_m
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  data = <Model>[
-    Model('Asia', 51, Colors.red[400]!),
-    Model('Africa', 58, Colors.green[400]!),
-    Model('Europe', 48, Colors.blue[400]!),
-    Model('North America', 41, Colors.purple[400]!),
-    Model('South America', 14, Colors.yellow[400]!),
-    Model('Australia', 23, Colors.orange[400]!),
-  ];
-
-  dataSource = MapShapeSource.asset(
-     "assets/world_map.json",
-     shapeDataField: "continent",
-     dataCount: data.length,
-     primaryValueMapper: (int index) => data[index].continent,
-     bubbleSizeMapper: (int index) => data[index].count,
-     bubbleColorValueMapper: (int index) => data[index].bubbleColor,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-     body: Padding(
-       padding: EdgeInsets.only(left: 15, right: 15),
-       child: SfMaps(
-         layers: [
-           MapShapeLayer(
-             source: dataSource,
-             bubbleSettings: MapBubbleSettings(
-               maxRadius: 30,
-               minRadius: 15,
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    data = <Model>[
+      Model('Asia', 51, Colors.red[400]!),
+      Model('Africa', 58, Colors.green[400]!),
+      Model('Europe', 48, Colors.blue[400]!),
+      Model('North America', 41, Colors.purple[400]!),
+      Model('South America', 14, Colors.yellow[400]!),
+      Model('Australia', 23, Colors.orange[400]!),
+    ];
+
+    dataSource = MapShapeSource.asset(
+       "assets/world_map.json",
+       shapeDataField: "continent",
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].continent,
+       bubbleSizeMapper: (int index) => data[index].count,
+       bubbleColorValueMapper: (int index) => data[index].bubbleColor,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+       body: Padding(
+         padding: EdgeInsets.only(left: 15, right: 15),
+         child: SfMaps(
+           layers: [
+             MapShapeLayer(
+               source: dataSource,
+               bubbleSettings: MapBubbleSettings(
+                 maxRadius: 30,
+                 minRadius: 15,
+               ),
              ),
-           ),
-         ],
+           ],
+         ),
        ),
-     ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -226,51 +256,61 @@ You can customize the following appearance properties of the bubbles:
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    data = <Model>[
-      Model('Asia', 51),
-      Model('Africa', 58),
-      Model('Europe', 48),
-      Model('North America', 41),
-      Model('South America', 14),
-      Model('Australia', 23),
-    ];
-
-    dataSource = MapShapeSource.asset(
-       "assets/world_map.json",
-       shapeDataField: "continent",
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].continent,
-       bubbleSizeMapper: (int index) => data[index].count,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              source: dataSource,
-              bubbleSettings: MapBubbleSettings(
-                maxRadius: 30,
-                minRadius: 15,
-                color: Colors.red[200],
-                strokeWidth: 2,
-                strokeColor: Colors.red[800],
-              ),
-            )
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      super.initState();
+      data = <Model>[
+        Model('Asia', 51),
+        Model('Africa', 58),
+        Model('Europe', 48),
+        Model('North America', 41),
+        Model('South America', 14),
+        Model('Australia', 23),
+      ];
+
+      dataSource = MapShapeSource.asset(
+         "assets/world_map.json",
+         shapeDataField: "continent",
+         dataCount: data.length,
+         primaryValueMapper: (int index) => data[index].continent,
+         bubbleSizeMapper: (int index) => data[index].count,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: dataSource,
+                bubbleSettings: MapBubbleSettings(
+                  maxRadius: 30,
+                  minRadius: 15,
+                  color: Colors.red[200],
+                  strokeWidth: 2,
+                  strokeColor: Colors.red[800],
+                ),
+              )
+            ],
+          ),
         ),
-      ),
-   );
+      );
+  }
 }
 
 class Model {
@@ -299,58 +339,69 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-void initState() {
-    super.initState();
-    data = <Model>[
-      Model('Asia', 51),
-      Model('Africa', 58),
-      Model('Europe', 48),
-      Model('North America', 41),
-      Model('South America', 14),
-      Model('Australia', 23),
-   ];
-
-   dataSource = MapShapeSource.asset(
-     "assets/world_map.json",
-      shapeDataField: "continent",
-      dataCount: data.length,
-      primaryValueMapper: (int index) => data[index].continent,
-      bubbleSizeMapper: (int index) => data[index].count,
-   );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMapsTheme(
-          data: SfMapsThemeData(
-            bubbleColor: Colors.red[200],
-            bubbleStrokeColor: Colors.red[800],
-            bubbleStrokeWidth: 2,
-            bubbleHoverColor: Colors.red[800],
-            bubbleHoverStrokeColor: Colors.black,
-            bubbleHoverStrokeWidth: 2,
-          ),
-          child: SfMaps(
-            layers: [
-              MapShapeLayer(
-                source: dataSource,
-                bubbleSettings: MapBubbleSettings(
-                  maxRadius: 30,
-                  minRadius: 15,
-                ),
-              )
-            ],
-          ),
-        )
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      super.initState();
+      data = <Model>[
+        Model('Asia', 51),
+        Model('Africa', 58),
+        Model('Europe', 48),
+        Model('North America', 41),
+        Model('South America', 14),
+        Model('Australia', 23),
+     ];
+
+     dataSource = MapShapeSource.asset(
+       "assets/world_map.json",
+        shapeDataField: "continent",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].continent,
+        bubbleSizeMapper: (int index) => data[index].count,
+     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMapsTheme(
+            data: SfMapsThemeData(
+              bubbleColor: Colors.red[200],
+              bubbleStrokeColor: Colors.red[800],
+              bubbleStrokeWidth: 2,
+              bubbleHoverColor: Colors.red[800],
+              bubbleHoverStrokeColor: Colors.black,
+              bubbleHoverStrokeWidth: 2,
+            ),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: dataSource,
+                  bubbleSettings: MapBubbleSettings(
+                    maxRadius: 30,
+                    minRadius: 15,
+                  ),
+                )
+              ],
+            ),
+          )
+        ),
+      );
+  }
 }
 
 class Model {

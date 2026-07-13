@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Maps Zooming and Panning (SfMaps)
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. You can also pan the map to navigate across regions and customize the zoom level and center point of the initial rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or trackpad, or using the toolbar on the web. You can also pan the map to navigate across regions and customize the zoom level and center point of the initial rendering.
 
 The procedure for zooming and panning is very similar for both layers.
 
@@ -18,31 +18,41 @@ The procedure for zooming and panning is very similar for both layers.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
-late MapShapeSource _dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  _zoomPanBehavior = MapZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfMaps(
-            layers: [
-                MapShapeLayer(
-                    source: _dataSource,
-                    zoomPanBehavior: _zoomPanBehavior,
-                ),
-            ],
-        ),
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+  late MapShapeSource _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
     );
+    _zoomPanBehavior = MapZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+          body: SfMaps(
+              layers: [
+                  MapShapeLayer(
+                      source: _dataSource,
+                      zoomPanBehavior: _zoomPanBehavior,
+                  ),
+              ],
+          ),
+      );
+  }
 }
 
 {% endhighlight %}
@@ -53,33 +63,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -96,35 +116,45 @@ To enable panning, set the instance of [`MapZoomPanBehavior`](https://pub.dev/do
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior(
-        focalLatLng: MapLatLng(27.1751, 50.0421),
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior(
+          focalLatLng: MapLatLng(27.1751, 50.0421),
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -141,49 +171,59 @@ N> This is applicable for both shape layer and tile layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
-late MapShapeSource _dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _dataSource = MapShapeSource.asset(
-     'assets/world_map.json',
-      shapeDataField: 'continent',
-  );
-
-  _zoomPanBehavior = MapZoomPanBehavior(
-    focalLatLng: MapLatLng(27.1751, 78.0421),
-    zoomLevel: 4,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Column(
-        children: [
-          Container(
-            height: 600,
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  source: _dataSource,
-                  zoomPanBehavior: _zoomPanBehavior,
-                ),
-              ],
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+  late MapShapeSource _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+        shapeDataField: 'continent',
+    );
+
+    _zoomPanBehavior = MapZoomPanBehavior(
+      focalLatLng: MapLatLng(27.1751, 78.0421),
+      zoomLevel: 4,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Column(
+          children: [
+            Container(
+              height: 600,
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                    source: _dataSource,
+                    zoomPanBehavior: _zoomPanBehavior,
+                  ),
+                ],
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          RaisedButton(
-            child: Text('Change focalLatLng'),
-            onPressed: () {
-               _zoomPanBehavior.focalLatLng = MapLatLng(56.1304, -106.3468);
-            },
-          ),
-        ],
-     ),
-  );
+            SizedBox(height: 20),
+            ElevatedButton(
+              child: Text('Change focalLatLng'),
+              onPressed: () {
+                 _zoomPanBehavior.focalLatLng = MapLatLng(56.1304, -106.3468);
+              },
+            ),
+          ],
+       ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -200,36 +240,46 @@ To enable zooming, set the instance of [`MapZoomPanBehavior`](https://pub.dev/do
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior(
-        focalLatLng: MapLatLng(27.1751, 78.0421),
-        zoomLevel: 5,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior(
+          focalLatLng: MapLatLng(27.1751, 78.0421),
+          zoomLevel: 5,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -246,48 +296,58 @@ N> This is applicable for both shape layer and tile layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
-late MapShapeSource _dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  _dataSource = MapShapeSource.asset(
-     'assets/world_map.json',
-     shapeDataField: 'continent',
-  );
-  _zoomPanBehavior = MapZoomPanBehavior(
-     focalLatLng: MapLatLng(27.1751, 78.0421),
-     zoomLevel: 2,
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Column(
-      children: [
-        Container(
-          height: 600,
-          child: SfMaps(
-            layers: [
-              MapShapeLayer(
-                source: _dataSource,
-                zoomPanBehavior: _zoomPanBehavior,
-              ),
-            ],
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+  late MapShapeSource _dataSource;
+
+  @override
+  void initState() {
+    _dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+       shapeDataField: 'continent',
+    );
+    _zoomPanBehavior = MapZoomPanBehavior(
+       focalLatLng: MapLatLng(27.1751, 78.0421),
+       zoomLevel: 2,
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            height: 600,
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _dataSource,
+                  zoomPanBehavior: _zoomPanBehavior,
+                ),
+              ],
+            ),
           ),
-        ),
-        SizedBox(height: 20),
-        RaisedButton(
-          child: Text('Change zoomLevel'),
-          onPressed: () {
-            _zoomPanBehavior.zoomLevel = 7;
-          },
-        ),
-      ],
-    ),
-  );
+          SizedBox(height: 20),
+          ElevatedButton(
+            child: Text('Change zoomLevel'),
+            onPressed: () {
+              _zoomPanBehavior.zoomLevel = 7;
+            },
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -302,38 +362,48 @@ However, for [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_m
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior(
-        focalLatLng: MapLatLng(27.1751, 78.0421),
-        zoomLevel: 5,
-        minZoomLevel: 3,
-        maxZoomLevel: 10,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior(
+          focalLatLng: MapLatLng(27.1751, 78.0421),
+          zoomLevel: 5,
+          minZoomLevel: 3,
+          maxZoomLevel: 10,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -348,26 +418,36 @@ N> This is applicable for both tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  _zoomPanBehavior = MapZoomPanBehavior(enableDoubleTapZooming: true);
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-       layers: [
-         MapTileLayer(
-           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-           zoomPanBehavior: _zoomPanBehavior,
-         ),
-       ],
-     ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+    _zoomPanBehavior = MapZoomPanBehavior(enableDoubleTapZooming: true);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+         layers: [
+           MapTileLayer(
+             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+             zoomPanBehavior: _zoomPanBehavior,
+           ),
+         ],
+       ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -394,40 +474,50 @@ You can customize the toolbar items using the following properties:
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  _zoomPanBehavior = MapZoomPanBehavior(
-    focalLatLng: MapLatLng(27.1751, 78.0421),
-    zoomLevel: 3,
-    showToolbar: true,
-    toolbarSettings: MapToolbarSettings(
-      position: MapToolbarPosition.topLeft,
-      iconColor: Colors.red,
-      itemBackgroundColor: Colors.green,
-      itemHoverColor: Colors.blue,
-    ),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Container(
-      height: 350,
-      width: 350,
-      child: SfMaps(
-        layers: [
-          MapTileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            zoomPanBehavior: _zoomPanBehavior,
-          ),
-        ],
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+    _zoomPanBehavior = MapZoomPanBehavior(
+      focalLatLng: MapLatLng(27.1751, 78.0421),
+      zoomLevel: 3,
+      showToolbar: true,
+      toolbarSettings: MapToolbarSettings(
+        position: MapToolbarPosition.topLeft,
+        iconColor: Colors.red,
+        itemBackgroundColor: Colors.green,
+        itemHoverColor: Colors.blue,
       ),
-    ),
-  );
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        height: 350,
+        width: 350,
+        child: SfMaps(
+          layers: [
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              zoomPanBehavior: _zoomPanBehavior,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -451,36 +541,46 @@ Whenever zooming happens, this callback is called. If it returns false, zooming 
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior()
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                            onWillZoom: (MapZoomDetails detail) {
-                                return true;
-                            },
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                              onWillZoom: (MapZoomDetails detail) {
+                                  return true;
+                              },
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -502,36 +602,46 @@ Whenever panning happens, this callback is called. If it returns false, panning 
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                            onWillPan: (MapPanDetails detail) {
-                                return true;
-                            },
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                              onWillPan: (MapPanDetails detail) {
+                                  return true;
+                              },
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 {% endhighlight %}
@@ -555,33 +665,43 @@ Whenever zooming happens, this method is called. Subclasses can override this me
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = _CustomZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 class _CustomZoomPanBehavior extends MapZoomPanBehavior {
@@ -615,33 +735,43 @@ Whenever panning happens, this method is called. Subclasses can override this me
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = _CustomZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 class _CustomZoomPanBehavior extends MapZoomPanBehavior {
@@ -666,43 +796,53 @@ You can [`reset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/m
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Column(
-        children: [
-            FutureBuilder(
-                future: getBingUrlTemplate(
-                    'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-                builder: (context, snapshot) {
-                    if (snapshot.hasData) {
-                        return SfMaps(
-                            layers: [
-                                MapTileLayer(
-                                    urlTemplate: snapshot.data as String,
-                                    zoomPanBehavior: _zoomPanBehavior,
-                                ),
-                            ],
-                        );
-                    }
-                    return CircularProgressIndicator();
-                },
-            ),
-            FlatButton(
-                onPressed: () {
-                    _zoomPanBehavior.reset();
-                },
-                child: Text('Reset Zoom Level'),
-            ),
-        ],
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = MapZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Column(
+          children: [
+              FutureBuilder(
+                  future: getBingUrlTemplate(
+                      'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+                  builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                          return SfMaps(
+                              layers: [
+                                  MapTileLayer(
+                                      urlTemplate: snapshot.data as String,
+                                      zoomPanBehavior: _zoomPanBehavior,
+                                  ),
+                              ],
+                          );
+                      }
+                      return CircularProgressIndicator();
+                  },
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                      _zoomPanBehavior.reset();
+                  },
+                  child: Text('Reset Zoom Level'),
+              ),
+          ],
+      );
+  }
 }
 
 {% endhighlight %}
@@ -715,33 +855,43 @@ You can override this method to handle pointer events that hit this render objec
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = _CustomZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 class _CustomZoomPanBehavior extends MapZoomPanBehavior {
@@ -763,33 +913,43 @@ You can paint this render object into the given context at the given offset.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data as String,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
-    );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+      super.initState();
+      _zoomPanBehavior = _CustomZoomPanBehavior();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return FutureBuilder(
+          future: getBingUrlTemplate(
+              'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+          builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                  return SfMaps(
+                      layers: [
+                          MapTileLayer(
+                              urlTemplate: snapshot.data as String,
+                              zoomPanBehavior: _zoomPanBehavior,
+                          ),
+                      ],
+                  );
+             }
+          return CircularProgressIndicator();
+          }
+      );
+  }
 }
 
 class _CustomZoomPanBehavior extends MapZoomPanBehavior {

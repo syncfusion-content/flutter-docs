@@ -22,47 +22,57 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                );
-              }).toSet(),
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -80,41 +90,51 @@ class DataModel {
 {% tabs %}
 {% highlight Dart %}
 
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapTileLayer(
-          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                );
-              }).toSet(),
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -136,48 +156,58 @@ You can apply the same color for all [`MapLine`](https://pub.dev/documentation/s
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), Colors.redAccent),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), Colors.deepPurpleAccent),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), Colors.blueAccent),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), Colors.teal),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                  color: data[index].color,
-                );
-              }).toSet(),
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), Colors.redAccent),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), Colors.deepPurpleAccent),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), Colors.blueAccent),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), Colors.teal),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                    color: data[index].color,
+                  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -200,48 +230,58 @@ You can apply the same width for all [`MapLine`](https://pub.dev/documentation/s
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), 2),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), 4),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), 5),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), 6),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                  width: data[index].width,
-                );
-              }).toSet(),
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), 2),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), 4),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), 5),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), 6),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                    width: data[index].width,
+                  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -264,48 +304,58 @@ You can apply the same stroke cap for all [`MapLine`](https://pub.dev/documentat
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), 3),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), 4),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), 6),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), 7),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                  width: data[index].width,
-                  strokeCap: StrokeCap.round,
-                );
-              }).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), 3),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), 4),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), 6),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), 7),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                    width: data[index].width,
+                    strokeCap: StrokeCap.round,
+                  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -330,49 +380,59 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                  dashArray: [8, 4, 2, 4],
-                );
-              }).toSet(),
-              color: Colors.blue,
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                    dashArray: [8, 4, 2, 4],
+                  );
+                }).toSet(),
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -396,67 +456,77 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late AnimationController animationController;
-late Animation animation;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-
-  animationController = AnimationController(
-    duration: Duration(seconds: 3),
-    vsync: this,
-  );
-  animation = CurvedAnimation(
-    parent: animationController,
-    curve: Curves.easeInOut,
-  );
-  animationController.forward(from: 0);
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-void dispose() {
-  animationController?.dispose();
-  super.dispose();
-}
+class _MapsExampleState extends State<MapsExample> with TickerProviderStateMixin {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late AnimationController animationController;
+  late Animation animation;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                );
-              }).toSet(),
-              color: Colors.blue,
-              animation: animation,
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+
+    animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+    animation = CurvedAnimation(
+      parent: animationController,
+      curve: Curves.easeInOut,
+    );
+    animationController.forward(from: 0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                }).toSet(),
+                color: Colors.blue,
+                animation: animation,
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -478,55 +548,65 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late int selectedIndex;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-
-  selectedIndex = -1;
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                    from: data[index].from,
-                    to: data[index].to,
-                    color: selectedIndex == index ? Colors.pink : Colors.blue,
-                    onTap: () {
-                      setState(() {
-                        selectedIndex = index;
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+
+    selectedIndex = -1;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                      from: data[index].from,
+                      to: data[index].to,
+                      color: selectedIndex == index ? Colors.pink : Colors.blue,
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = index;
+                        });
                       });
-                    });
-              }).toSet(),
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+                }).toSet(),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -548,76 +628,87 @@ You can show additional information about the line drawn using the [`tooltipBuil
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
- final ThemeData themeData = Theme.of(context);
-    final TextStyle textStyle = themeData.textTheme.caption!
-        .copyWith(color: themeData.colorScheme.surface);
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                );
-              }).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                return Container(
-                  padding: EdgeInsets.only(left: 5, top: 5),
-                  height: 40,
-                  width: 100,
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text('Flight   : ', style: textStyle),
-                          Text('Air India', style: textStyle),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text('Depart : ', style: textStyle),
-                          Text(random.nextInt(12).toString() + 'AM', style: textStyle),
-                        ],
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ]),
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late Random random;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+   final ThemeData themeData = Theme.of(context);
+      final TextStyle textStyle = themeData.textTheme.labelSmall!
+          .copyWith(color: themeData.colorScheme.surface);
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                }).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                  return Container(
+                    padding: EdgeInsets.only(left: 5, top: 5),
+                    height: 40,
+                    width: 100,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text('Flight   : ', style: textStyle),
+                            Text('Air India', style: textStyle),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text('Depart : ', style: textStyle),
+                            Text(random.nextInt(12).toString() + 'AM', style: textStyle),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -643,78 +734,89 @@ You can customize the appearance of the tooltip:
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(10),
-      child: SfMaps(layers: [
-        MapShapeLayer(
-          source: dataSource,
-          tooltipSettings: const MapTooltipSettings(
-            color: Colors.white,
-            strokeWidth: 2,
-            strokeColor: Colors.black,
-          ),
-          sublayers: [
-            MapLineLayer(
-              lines: List<MapLine>.generate(data.length, (int index) {
-                return MapLine(
-                  from: data[index].from,
-                  to: data[index].to,
-                );
-              }).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                return Container(
-                  padding: EdgeInsets.only(left: 5, top: 5),
-                  height: 40,
-                  width: 100,
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text('Flight   : '),
-                          Text('Air India'),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text('Depart : '),
-                          Text(random.nextInt(12).toString() + 'AM'),
-                        ],
-                      ),
-                    ],
-                  ),
-                );
-              },
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late Random random;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: SfMaps(layers: [
+          MapShapeLayer(
+            source: dataSource,
+            tooltipSettings: const MapTooltipSettings(
+              color: Colors.white,
+              strokeWidth: 2,
+              strokeColor: Colors.black,
             ),
-          ],
-        ),
-      ]),
-    ),
-  );
+            sublayers: [
+              MapLineLayer(
+                lines: List<MapLine>.generate(data.length, (int index) {
+                  return MapLine(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                }).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                  return Container(
+                    padding: EdgeInsets.only(left: 5, top: 5),
+                    height: 40,
+                    width: 100,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text('Flight   : '),
+                            Text('Air India'),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text('Depart : '),
+                            Text(random.nextInt(12).toString() + 'AM'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
 }
 
 class DataModel {

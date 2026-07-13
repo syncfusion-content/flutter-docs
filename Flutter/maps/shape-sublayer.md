@@ -20,37 +20,47 @@ The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/lat
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _sublayerSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-            MapTileLayer(
-              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-              sublayers: [
-                MapShapeSublayer(
-                  source: _sublayerSource,
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _sublayerSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+                MapTileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  sublayers: [
+                    MapShapeSublayer(
+                      source: _sublayerSource,
+                    ),
+                  ],
                 ),
               ],
-            ),
-          ],
-      ),
-    ),
-  );
+          ),
+        ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -70,42 +80,52 @@ The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/lat
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-      "assets/world_map.json",
-      shapeDataField: "continent",
-  );
-
-  _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-            MapShapeLayer(
-              source: _shapeSource,
-              sublayers: [
-                MapShapeSublayer(
-                  source: _sublayerSource,
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+        "assets/world_map.json",
+        shapeDataField: "continent",
+    );
+
+    _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  sublayers: [
+                    MapShapeSublayer(
+                      source: _sublayerSource,
+                    ),
+                  ],
                 ),
               ],
-            ),
-          ],
-      ),
-    ),
-  );
+          ),
+        ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -125,45 +145,55 @@ N> It is applicable for both tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-      "assets/world_map.json",
-      shapeDataField: "continent",
-  );
-
-  _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-            MapShapeLayer(
-              source: _shapeSource,
-              sublayers: [
-                MapShapeSublayer(
-                  source: _sublayerSource,
-                  color: Colors.blue[100],
-                  strokeWidth: 2,
-                  strokeColor: Colors.blue[800],
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+        "assets/world_map.json",
+        shapeDataField: "continent",
+    );
+
+    _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  sublayers: [
+                    MapShapeSublayer(
+                      source: _sublayerSource,
+                      color: Colors.blue[100],
+                      strokeWidth: 2,
+                      strokeColor: Colors.blue[800],
+                    ),
+                  ],
                 ),
               ],
-            ),
-          ],
-      ),
-    ),
-  );
+          ),
+        ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -178,60 +208,70 @@ You can apply color to the sublayer shape by comparing a value that returns from
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource sublayerDataSource;
-late MapShapeSource shapeDataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    data = <Model>[
-      Model('Algeria', "Low"),
-      Model('Nigeria', "High"),
-      Model('Libya', "High"),
-    ];
-
-    shapeDataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-      shapeDataField: 'continent',
-    );
-
-    sublayerDataSource = MapShapeSource.asset(
-      "assets/africa.json",
-      shapeDataField: "name",
-      dataCount: data.length,
-      primaryValueMapper: (int index) {
-        return data[index].state;
-      },
-      shapeColorValueMapper: (int index) {
-        return data[index].storage;
-      },
-      shapeColorMappers: [
-        MapColorMapper(value: "Low", color: Colors.red),
-        MapColorMapper(value: "High", color: Colors.green)
-      ],
-   );
-   super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: <MapShapeLayer>[
-            MapShapeLayer(
-              source: shapeDataSource,
-              sublayers: [
-                MapShapeSublayer(
-                  source: sublayerDataSource,
-                )
-              ],
-            ),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource sublayerDataSource;
+  late MapShapeSource shapeDataSource;
+
+  @override
+  void initState() {
+      data = <Model>[
+        Model('Algeria', "Low"),
+        Model('Nigeria', "High"),
+        Model('Libya', "High"),
+      ];
+
+      shapeDataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+        shapeDataField: 'continent',
+      );
+
+      sublayerDataSource = MapShapeSource.asset(
+        "assets/africa.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) {
+          return data[index].state;
+        },
+        shapeColorValueMapper: (int index) {
+          return data[index].storage;
+        },
+        shapeColorMappers: [
+          MapColorMapper(value: "Low", color: Colors.red),
+          MapColorMapper(value: "High", color: Colors.green)
+        ],
+     );
+     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: <MapShapeLayer>[
+              MapShapeLayer(
+                source: shapeDataSource,
+                sublayers: [
+                  MapShapeSublayer(
+                    source: sublayerDataSource,
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -253,58 +293,68 @@ You can apply color to the sublayer shape based on whether the value returned fr
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource sublayerDataSource;
-late MapShapeSource shapeDataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    data = <Model>[
-      Model('Algeria', 196),
-      Model('Nigeria', 280),
-      Model('Libya', 45),
-    ];
-
-    shapeDataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-      shapeDataField: 'continent',
-    );
-
-    sublayerDataSource = MapShapeSource.asset(
-      "assets/africa.json",
-      shapeDataField: "name",
-      dataCount: data.length,
-      primaryValueMapper: (int index) {
-        return data[index].state;
-      },
-      shapeColorValueMapper: (int index) => data[index].count,
-      shapeColorMappers: [
-        MapColorMapper(from: 0, to: 100, color: Colors.red),
-        MapColorMapper(from: 101, to: 300, color: Colors.green)
-      ],
-    );
-   super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: <MapShapeLayer>[
-            MapShapeLayer(
-              source: shapeDataSource,
-              sublayers: [
-                MapShapeSublayer(
-                  source: sublayerDataSource,
-                )
-              ],
-            ),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource sublayerDataSource;
+  late MapShapeSource shapeDataSource;
+
+  @override
+  void initState() {
+      data = <Model>[
+        Model('Algeria', 196),
+        Model('Nigeria', 280),
+        Model('Libya', 45),
+      ];
+
+      shapeDataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+        shapeDataField: 'continent',
+      );
+
+      sublayerDataSource = MapShapeSource.asset(
+        "assets/africa.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) {
+          return data[index].state;
+        },
+        shapeColorValueMapper: (int index) => data[index].count,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red),
+          MapColorMapper(from: 101, to: 300, color: Colors.green)
+        ],
+      );
+     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: <MapShapeLayer>[
+              MapShapeLayer(
+                source: shapeDataSource,
+                sublayers: [
+                  MapShapeSublayer(
+                    source: sublayerDataSource,
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -328,76 +378,83 @@ N> Refer to the [`DataLabels`](https://help.syncfusion.com/flutter/maps/data-lab
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
-late List<DataModel> _sublayerData;
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-     "assets/world_map.json",
-     shapeDataField: "continent",
-  );
-
-  _sublayerData = <DataModel>[
-    DataModel('Algeria', Colors.green, 'Algeria'),
-    DataModel('Libya', Colors.teal, 'Libya'),
-    DataModel('Egypt', Colors.blue, 'Egypt'),
-    DataModel('Mali', Colors.purple, 'Mali'),
-    DataModel('Niger', Colors.indigo, 'Niger'),
-    DataModel('Nigeria', Colors.purpleAccent, 'Nigeria'),
-    DataModel('Chad', Colors.lightGreen, 'Chad'),
-    DataModel('Sudan', Colors.redAccent, 'Sudan'),
-    DataModel('Mauritania', Colors.orange, 'Mauritania'),
-    DataModel('South Sudan', Colors.lime, 'South Sudan'),
-    DataModel('Ethiopia', Colors.greenAccent, 'Ethiopia')
-  ];
-
-  _sublayerSource = MapShapeSource.asset(
-    'assets/africa.json',
-    shapeDataField: 'name',
-    dataCount: _sublayerData.length,
-    primaryValueMapper: (int index) => _sublayerData[index].key,
-    dataLabelMapper: (int index) => _sublayerData[index].stateCode,
-  );
-  _zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(38.9637, 35.2433),
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: _shapeSource,
-          zoomPanBehavior: _zoomPanBehavior,
-          sublayers: [
-            MapShapeSublayer(
-              source: _sublayerSource,
-              showDataLabels: true,
-              dataLabelSettings: const MapDataLabelSettings(
-                overflowMode: MapLabelOverflow.ellipsis,
-                textStyle: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Times'),
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+  late List<DataModel> _sublayerData;
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+       "assets/world_map.json",
+       shapeDataField: "continent",
+    );
+
+    _sublayerData = <DataModel>[
+      DataModel('Algeria', Colors.green, 'Algeria'),
+      DataModel('Libya', Colors.teal, 'Libya'),
+      DataModel('Egypt', Colors.blue, 'Egypt'),
+      DataModel('Mali', Colors.purple, 'Mali'),
+      DataModel('Niger', Colors.indigo, 'Niger'),
+      DataModel('Nigeria', Colors.purpleAccent, 'Nigeria'),
+      DataModel('Chad', Colors.lightGreen, 'Chad'),
+      DataModel('Sudan', Colors.redAccent, 'Sudan'),
+      DataModel('Mauritania', Colors.orange, 'Mauritania'),
+      DataModel('South Sudan', Colors.lime, 'South Sudan'),
+      DataModel('Ethiopia', Colors.greenAccent, 'Ethiopia')
+    ];
+
+    _sublayerSource = MapShapeSource.asset(
+      'assets/africa.json',
+      shapeDataField: 'name',
+      dataCount: _sublayerData.length,
+      primaryValueMapper: (int index) => _sublayerData[index].key,
+      dataLabelMapper: (int index) => _sublayerData[index].stateCode,
+    );
+    _zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 3,
+      focalLatLng: MapLatLng(38.9637, 35.2433),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: _shapeSource,
+            zoomPanBehavior: _zoomPanBehavior,
+            sublayers: [
+              MapShapeSublayer(
+                source: _sublayerSource,
+                showDataLabels: true,
+                dataLabelSettings: const MapDataLabelSettings(
+                  overflowMode: MapLabelOverflow.ellipsis,
+                  textStyle: const TextStyle(
+                      color: Colors.red,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Times'),
+                ),
               ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
-}
-
-class DataModel {
+            ],
+          ),
+        ],
+      ),
+    );
+  }
   DataModel(this.key, this.color, this.stateCode);
 
   final String key;
@@ -421,95 +478,105 @@ N> Refer to the [`Bubbles`](https://help.syncfusion.com/flutter/maps/bubble#tool
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
-late List<DataModel> _sublayerData;
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-  );
-
-  _sublayerData = <DataModel>[
-    DataModel('Algeria', Colors.green, 36232),
-    DataModel('Libya', Colors.teal, 34121),
-    DataModel('Egypt', Colors.blue, 43453),
-    DataModel('Mali', Colors.purple, 28123),
-    DataModel('Niger', Colors.indigo, 40111),
-    DataModel('Nigeria', Colors.purpleAccent, 30232),
-    DataModel('Chad', Colors.lightGreen, 48132),
-    DataModel('Sudan', Colors.redAccent, 52654),
-    DataModel('Mauritania', Colors.orange, 42231),
-    DataModel('South Sudan', Colors.lime, 40421),
-    DataModel('Ethiopia', Colors.greenAccent, 27198)
-  ];
-
-  _sublayerSource = MapShapeSource.asset(
-    'assets/africa.json',
-    shapeDataField: 'name',
-    dataCount: _sublayerData.length,
-    primaryValueMapper: (int index) => _sublayerData[index].key,
-    bubbleColorValueMapper: (int index) => _sublayerData[index].color,
-    bubbleSizeMapper: (int index) => _sublayerData[index].size,
-  );
-  _zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(38.9637, 35.2433),
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-       layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            zoomPanBehavior: _zoomPanBehavior,
-            sublayers: [
-              MapShapeSublayer(
-                source: _sublayerSource,
-                bubbleSettings: const MapBubbleSettings(
-                  minRadius: 5,
-                  maxRadius: 20,
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+  late List<DataModel> _sublayerData;
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+    );
+
+    _sublayerData = <DataModel>[
+      DataModel('Algeria', Colors.green, 36232),
+      DataModel('Libya', Colors.teal, 34121),
+      DataModel('Egypt', Colors.blue, 43453),
+      DataModel('Mali', Colors.purple, 28123),
+      DataModel('Niger', Colors.indigo, 40111),
+      DataModel('Nigeria', Colors.purpleAccent, 30232),
+      DataModel('Chad', Colors.lightGreen, 48132),
+      DataModel('Sudan', Colors.redAccent, 52654),
+      DataModel('Mauritania', Colors.orange, 42231),
+      DataModel('South Sudan', Colors.lime, 40421),
+      DataModel('Ethiopia', Colors.greenAccent, 27198)
+    ];
+
+    _sublayerSource = MapShapeSource.asset(
+      'assets/africa.json',
+      shapeDataField: 'name',
+      dataCount: _sublayerData.length,
+      primaryValueMapper: (int index) => _sublayerData[index].key,
+      bubbleColorValueMapper: (int index) => _sublayerData[index].color,
+      bubbleSizeMapper: (int index) => _sublayerData[index].size,
+    );
+    _zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 3,
+      focalLatLng: MapLatLng(38.9637, 35.2433),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+         layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              zoomPanBehavior: _zoomPanBehavior,
+              sublayers: [
+                MapShapeSublayer(
+                  source: _sublayerSource,
+                  bubbleSettings: const MapBubbleSettings(
+                    minRadius: 5,
+                    maxRadius: 20,
+                  ),
+                  bubbleTooltipBuilder: (BuildContext context, int index) {
+                    return Container(
+                      height: 40,
+                      width: 120,
+                      padding: const EdgeInsets.all(5),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text('State           : ',
+                                  style: TextStyle(color: Colors.white)),
+                              Text(_sublayerData[index].key,
+                                  style: TextStyle(color: Colors.white)),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('Population : ',
+                                  style: TextStyle(color: Colors.white)),
+                              Text(_sublayerData[index].size.toStringAsFixed(0),
+                                  style: TextStyle(color: Colors.white)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
-                bubbleTooltipBuilder: (BuildContext context, int index) {
-                  return Container(
-                    height: 40,
-                    width: 120,
-                    padding: const EdgeInsets.all(5),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text('State           : ',
-                                style: TextStyle(color: Colors.white)),
-                            Text(_sublayerData[index].key,
-                                style: TextStyle(color: Colors.white)),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text('Population : ',
-                                style: TextStyle(color: Colors.white)),
-                            Text(_sublayerData[index].size.toStringAsFixed(0),
-                                style: TextStyle(color: Colors.white)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 class DataModel {
@@ -536,90 +603,100 @@ N> Refer to the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) se
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
-late List<DataModel> _sublayerData;
-late MapZoomPanBehavior _zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-  );
-
-  _sublayerData = <DataModel>[
-      DataModel('Algeria', Colors.green, 36232),
-      DataModel('Libya', Colors.teal, 34121),
-      DataModel('Egypt', Colors.blue, 43453),
-      DataModel('Mali', Colors.purple, 28123),
-      DataModel('Niger', Colors.indigo, 40111),
-      DataModel('Nigeria', Colors.purpleAccent, 30232),
-      DataModel('Chad', Colors.lightGreen, 48132),
-      DataModel('Sudan', Colors.redAccent, 52654),
-      DataModel('Mauritania', Colors.orange, 42231),
-      DataModel('South Sudan', Colors.lime, 40421),
-      DataModel('Ethiopia', Colors.greenAccent, 27198)
-  ];
-
-   _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-      dataCount: _sublayerData.length,
-      primaryValueMapper: (int index) => _sublayerData[index].key,
-      shapeColorValueMapper: (int index) => _sublayerData[index].color,
-   );
-   _zoomPanBehavior = MapZoomPanBehavior(
-      zoomLevel: 3,
-      focalLatLng: MapLatLng(38.9637, 35.2433),
-   );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            zoomPanBehavior: _zoomPanBehavior,
-            sublayers: [
-              MapShapeSublayer(
-                source: _sublayerSource,
-                shapeTooltipBuilder: (BuildContext context, int index) {
-                  return Container(
-                    height: 40,
-                    width: 120,
-                    padding: const EdgeInsets.all(5),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text('State           : ',
-                                style: TextStyle(color: Colors.white)),
-                            Text(_sublayerData[index].key,
-                                style: TextStyle(color: Colors.white)),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text('Population : ',
-                                style: TextStyle(color: Colors.white)),
-                            Text(_sublayerData[index].size.toStringAsFixed(0),
-                                style: TextStyle(color: Colors.white)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
-        ],
-     ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+  late List<DataModel> _sublayerData;
+  late MapZoomPanBehavior _zoomPanBehavior;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+    );
+
+    _sublayerData = <DataModel>[
+        DataModel('Algeria', Colors.green, 36232),
+        DataModel('Libya', Colors.teal, 34121),
+        DataModel('Egypt', Colors.blue, 43453),
+        DataModel('Mali', Colors.purple, 28123),
+        DataModel('Niger', Colors.indigo, 40111),
+        DataModel('Nigeria', Colors.purpleAccent, 30232),
+        DataModel('Chad', Colors.lightGreen, 48132),
+        DataModel('Sudan', Colors.redAccent, 52654),
+        DataModel('Mauritania', Colors.orange, 42231),
+        DataModel('South Sudan', Colors.lime, 40421),
+        DataModel('Ethiopia', Colors.greenAccent, 27198)
+    ];
+
+     _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+        dataCount: _sublayerData.length,
+        primaryValueMapper: (int index) => _sublayerData[index].key,
+        shapeColorValueMapper: (int index) => _sublayerData[index].color,
+     );
+     _zoomPanBehavior = MapZoomPanBehavior(
+        zoomLevel: 3,
+        focalLatLng: MapLatLng(38.9637, 35.2433),
+     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              zoomPanBehavior: _zoomPanBehavior,
+              sublayers: [
+                MapShapeSublayer(
+                  source: _sublayerSource,
+                  shapeTooltipBuilder: (BuildContext context, int index) {
+                    return Container(
+                      height: 40,
+                      width: 120,
+                      padding: const EdgeInsets.all(5),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text('State           : ',
+                                  style: TextStyle(color: Colors.white)),
+                              Text(_sublayerData[index].key,
+                                  style: TextStyle(color: Colors.white)),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('Population : ',
+                                  style: TextStyle(color: Colors.white)),
+                              Text(_sublayerData[index].size.toStringAsFixed(0),
+                                  style: TextStyle(color: Colors.white)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
+       ),
+     );
+  }
 }
 
 class DataModel {
@@ -650,75 +727,85 @@ N> Refer the [`Shape selection`](https://help.syncfusion.com/flutter/maps/select
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
-late List<DataModel> _sublayerData;
-late MapZoomPanBehavior _zoomPanBehavior;
-int _selectedIndex = 0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-  );
-
-  _sublayerData = <DataModel>[
-      DataModel('Algeria', Colors.green, 36232),
-      DataModel('Libya', Colors.teal, 34121),
-      DataModel('Egypt', Colors.blue, 43453),
-      DataModel('Mali', Colors.purple, 28123),
-      DataModel('Niger', Colors.indigo, 40111),
-      DataModel('Nigeria', Colors.purpleAccent, 30232),
-      DataModel('Chad', Colors.lightGreen, 48132),
-      DataModel('Sudan', Colors.redAccent, 52654),
-      DataModel('Mauritania', Colors.orange, 42231),
-      DataModel('South Sudan', Colors.lime, 40421),
-      DataModel('Ethiopia', Colors.greenAccent, 27198)
-  ];
-
-   _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-      dataCount: _sublayerData.length,
-      primaryValueMapper: (int index) => _sublayerData[index].key,
-      shapeColorValueMapper: (int index) => _sublayerData[index].color,
-   );
-   _zoomPanBehavior = MapZoomPanBehavior(
-      zoomLevel: 3,
-      focalLatLng: MapLatLng(38.9637, 35.2433),
-   );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            zoomPanBehavior: _zoomPanBehavior,
-            sublayers: [
-              MapShapeSublayer(
-                source: _sublayerSource,
-                selectedIndex: _selectedIndex,
-                onSelectionChanged: (int index) {
-                   setState(() {
-                      _selectedIndex = index;
-                   });
-                },
-                selectionSettings: const MapSelectionSettings(
-                   color: Colors.lime,
-                   strokeWidth: 3,
-                   strokeColor: Colors.black,
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+  late List<DataModel> _sublayerData;
+  late MapZoomPanBehavior _zoomPanBehavior;
+  int _selectedIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+    );
+
+    _sublayerData = <DataModel>[
+        DataModel('Algeria', Colors.green, 36232),
+        DataModel('Libya', Colors.teal, 34121),
+        DataModel('Egypt', Colors.blue, 43453),
+        DataModel('Mali', Colors.purple, 28123),
+        DataModel('Niger', Colors.indigo, 40111),
+        DataModel('Nigeria', Colors.purpleAccent, 30232),
+        DataModel('Chad', Colors.lightGreen, 48132),
+        DataModel('Sudan', Colors.redAccent, 52654),
+        DataModel('Mauritania', Colors.orange, 42231),
+        DataModel('South Sudan', Colors.lime, 40421),
+        DataModel('Ethiopia', Colors.greenAccent, 27198)
+    ];
+
+     _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+        dataCount: _sublayerData.length,
+        primaryValueMapper: (int index) => _sublayerData[index].key,
+        shapeColorValueMapper: (int index) => _sublayerData[index].color,
+     );
+     _zoomPanBehavior = MapZoomPanBehavior(
+        zoomLevel: 3,
+        focalLatLng: MapLatLng(38.9637, 35.2433),
+     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              zoomPanBehavior: _zoomPanBehavior,
+              sublayers: [
+                MapShapeSublayer(
+                  source: _sublayerSource,
+                  selectedIndex: _selectedIndex,
+                  onSelectionChanged: (int index) {
+                     setState(() {
+                        _selectedIndex = index;
+                     });
+                  },
+                  selectionSettings: const MapSelectionSettings(
+                     color: Colors.lime,
+                     strokeWidth: 3,
+                     strokeColor: Colors.black,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
-     ),
-   );
+              ],
+            ),
+          ],
+       ),
+     );
+  }
 }
 
 class DataModel {
@@ -749,96 +836,106 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource _shapeSource;
-late MapShapeSource _sublayerSource;
-late List<DataModel> _sublayerData;
-late MapZoomPanBehavior _zoomPanBehavior;
-late List<MapLatLng> _markerData;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-  );
-
-  _markerData = <MapLatLng>[
-     MapLatLng(28.0339, 1.6596),
-     MapLatLng(26.3351, 17.2283),
-     MapLatLng(26.8208, 30.8025),
-     MapLatLng(17.6078, 8.0817),
-     MapLatLng(9.0820, 8.6753),
-     MapLatLng(9.1450, 40.4897),
-     MapLatLng(15.4542, 18.7322),
-     MapLatLng(6.8770, 31.3070),
-     MapLatLng(21.0079, -10.9408),
-     MapLatLng(12.8628, 30.2176),
-  ];
-
-  _sublayerData = <DataModel>[
-      DataModel('Algeria', Colors.green, 36232),
-      DataModel('Libya', Colors.teal, 34121),
-      DataModel('Egypt', Colors.blue, 43453),
-      DataModel('Mali', Colors.purple, 28123),
-      DataModel('Niger', Colors.indigo, 40111),
-      DataModel('Nigeria', Colors.purpleAccent, 30232),
-      DataModel('Chad', Colors.lightGreen, 48132),
-      DataModel('Sudan', Colors.redAccent, 52654),
-      DataModel('Mauritania', Colors.orange, 42231),
-      DataModel('South Sudan', Colors.lime, 40421),
-      DataModel('Ethiopia', Colors.greenAccent, 27198)
-  ];
-
-   _sublayerSource = MapShapeSource.asset(
-      'assets/africa.json',
-      shapeDataField: 'name',
-      dataCount: _sublayerData.length,
-      primaryValueMapper: (int index) => _sublayerData[index].key,
-      shapeColorValueMapper: (int index) => _sublayerData[index].color,
-   );
-   _zoomPanBehavior = MapZoomPanBehavior(
-      zoomLevel: 3,
-      focalLatLng: MapLatLng(38.9637, 35.2433),
-   );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            zoomPanBehavior: _zoomPanBehavior,
-            sublayers: [
-              MapShapeSublayer(
-                source: _sublayerSource,
-                initialMarkersCount: _markerData.length,
-                markerBuilder: (BuildContext context, int index) {
-                   return MapMarker(
-                      latitude: _markerData[index].latitude,
-                      longitude: _markerData[index].longitude,
-                      iconColor: Colors.white,
-                      iconStrokeWidth: 2,
-                      iconStrokeColor: Colors.black,
-                      iconType: MapIconType.triangle,
-                      size: Size(15, 15),
-                   );
-                },
-                markerTooltipBuilder: (BuildContext context, int index) {
-                  return Padding(
-                     padding: EdgeInsets.all(10),
-                     child: Text(_sublayerData[index].key,
-                       style: TextStyle(color: Colors.white)),
-                  );
-                },
-              ),
-            ],
-          ),
-        ],
-     ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource _shapeSource;
+  late MapShapeSource _sublayerSource;
+  late List<DataModel> _sublayerData;
+  late MapZoomPanBehavior _zoomPanBehavior;
+  late List<MapLatLng> _markerData;
+
+  @override
+  void initState() {
+    super.initState();
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+    );
+
+    _markerData = <MapLatLng>[
+       MapLatLng(28.0339, 1.6596),
+       MapLatLng(26.3351, 17.2283),
+       MapLatLng(26.8208, 30.8025),
+       MapLatLng(17.6078, 8.0817),
+       MapLatLng(9.0820, 8.6753),
+       MapLatLng(9.1450, 40.4897),
+       MapLatLng(15.4542, 18.7322),
+       MapLatLng(6.8770, 31.3070),
+       MapLatLng(21.0079, -10.9408),
+       MapLatLng(12.8628, 30.2176),
+    ];
+
+    _sublayerData = <DataModel>[
+        DataModel('Algeria', Colors.green, 36232),
+        DataModel('Libya', Colors.teal, 34121),
+        DataModel('Egypt', Colors.blue, 43453),
+        DataModel('Mali', Colors.purple, 28123),
+        DataModel('Niger', Colors.indigo, 40111),
+        DataModel('Nigeria', Colors.purpleAccent, 30232),
+        DataModel('Chad', Colors.lightGreen, 48132),
+        DataModel('Sudan', Colors.redAccent, 52654),
+        DataModel('Mauritania', Colors.orange, 42231),
+        DataModel('South Sudan', Colors.lime, 40421),
+        DataModel('Ethiopia', Colors.greenAccent, 27198)
+    ];
+
+     _sublayerSource = MapShapeSource.asset(
+        'assets/africa.json',
+        shapeDataField: 'name',
+        dataCount: _sublayerData.length,
+        primaryValueMapper: (int index) => _sublayerData[index].key,
+        shapeColorValueMapper: (int index) => _sublayerData[index].color,
+     );
+     _zoomPanBehavior = MapZoomPanBehavior(
+        zoomLevel: 3,
+        focalLatLng: MapLatLng(38.9637, 35.2433),
+     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              zoomPanBehavior: _zoomPanBehavior,
+              sublayers: [
+                MapShapeSublayer(
+                  source: _sublayerSource,
+                  initialMarkersCount: _markerData.length,
+                  markerBuilder: (BuildContext context, int index) {
+                     return MapMarker(
+                        latitude: _markerData[index].latitude,
+                        longitude: _markerData[index].longitude,
+                        iconColor: Colors.white,
+                        iconStrokeWidth: 2,
+                        iconStrokeColor: Colors.black,
+                        iconType: MapIconType.triangle,
+                        size: Size(15, 15),
+                     );
+                  },
+                  markerTooltipBuilder: (BuildContext context, int index) {
+                    return Padding(
+                       padding: EdgeInsets.all(10),
+                       child: Text(_sublayerData[index].key,
+                         style: TextStyle(color: Colors.white)),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
+       ),
+     );
+  }
 }
 
 class DataModel {

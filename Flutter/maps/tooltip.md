@@ -20,57 +20,66 @@ The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusi
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> _data;
-late MapShapeSource _shapeSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _data = <Model>[
-    Model('Asia', 50, '44,579,000 sq. km.'),
-    Model('Africa', 54, '30,370,000 sq. km.'),
-    Model('Europe', 51, '10,180,000 sq. km.'),
-    Model('North America', 23, '24,709,000 sq. km.'),
-    Model('South America', 12, '17,840,000 sq. km.'),
-    Model('Australia', 14, '8,600,000 sq. km.'),
-  ];
-
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-    dataCount: _data.length,
-    primaryValueMapper: (int index) => _data[index].continent,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            shapeTooltipBuilder: (BuildContext context, int index) {
-              return Container(
-                width: 180,
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Stack(
-                      children: [
-                        Center(
-                          child: Text(
-                            _data[index].continent,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .fontSize),
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> _data;
+  late MapShapeSource _shapeSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _data = <Model>[
+      Model('Asia', 50, '44,579,000 sq. km.'),
+      Model('Africa', 54, '30,370,000 sq. km.'),
+      Model('Europe', 51, '10,180,000 sq. km.'),
+      Model('North America', 23, '24,709,000 sq. km.'),
+      Model('South America', 12, '17,840,000 sq. km.'),
+      Model('Australia', 14, '8,600,000 sq. km.'),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].continent,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              shapeTooltipBuilder: (BuildContext context, int index) {
+                return Container(
+                  width: 180,
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Stack(
+                        children: [
+                          Center(
+                            child: Text(
+                              _data[index].continent,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium!
+                                        .fontSize),
                           ),
                         ),
                         const Icon(
@@ -90,7 +99,7 @@ Widget build(BuildContext context) {
                       style: TextStyle(
                       color: Colors.white,
                       fontSize:
-                        Theme.of(context).textTheme.bodyText2!.fontSize),
+                        Theme.of(context).textTheme.bodyMedium!.fontSize),
                     ),
                   ],
                 ),
@@ -105,6 +114,7 @@ Widget build(BuildContext context) {
       ),
     ),
   );
+  }
 }
 
 class Model {
@@ -132,58 +142,67 @@ The [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfus
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> _data;
-late MapShapeSource _shapeSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _data = <Model>[
-    Model('Asia', 50, '44,579,000 sq. km.'),
-    Model('Africa', 54, '30,370,000 sq. km.'),
-    Model('Europe', 51, '10,180,000 sq. km.'),
-    Model('North America', 23, '24,709,000 sq. km.'),
-    Model('South America', 12, '17,840,000 sq. km.'),
-    Model('Australia', 14, '8,600,000 sq. km.'),
-  ];
-
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-    dataCount: _data.length,
-    primaryValueMapper: (int index) => _data[index].continent,
-    bubbleSizeMapper: (int index) => _data[index].countriesCount,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            bubbleTooltipBuilder: (BuildContext context, int index) {
-              return Container(
-                width: 150,
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Stack(
-                      children: [
-                        Center(
-                          child: Text(
-                            _data[index].continent,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .fontSize),
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> _data;
+  late MapShapeSource _shapeSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _data = <Model>[
+      Model('Asia', 50, '44,579,000 sq. km.'),
+      Model('Africa', 54, '30,370,000 sq. km.'),
+      Model('Europe', 51, '10,180,000 sq. km.'),
+      Model('North America', 23, '24,709,000 sq. km.'),
+      Model('South America', 12, '17,840,000 sq. km.'),
+      Model('Australia', 14, '8,600,000 sq. km.'),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].continent,
+      bubbleSizeMapper: (int index) => _data[index].countriesCount,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              bubbleTooltipBuilder: (BuildContext context, int index) {
+                return Container(
+                  width: 150,
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Stack(
+                        children: [
+                          Center(
+                            child: Text(
+                              _data[index].continent,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium!
+                                        .fontSize),
                           ),
                         ),
                         const Icon(
@@ -204,7 +223,7 @@ Widget build(BuildContext context) {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize:
-                          Theme.of(context).textTheme.bodyText2!.fontSize),
+                          Theme.of(context).textTheme.bodyMedium!.fontSize),
                     ),
                   ],
                 ),
@@ -223,6 +242,7 @@ Widget build(BuildContext context) {
       ),
     ),
   );
+  }
 }
 
 class Model {
@@ -250,129 +270,139 @@ The [`MapLayer.markerTooltipBuilder`](https://pub.dev/documentation/syncfusion_f
 {% tabs %}
 {% highlight Dart %}
 
-late List<WorldWonderModel> _data;
-late MapShapeSource _shapeSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _data = <WorldWonderModel>[
-    WorldWonderModel(
-          place: 'Chichen Itza',
-          country: 'Mexico',
-          latitude: 20.6843,
-          longitude: -88.5678),
-    WorldWonderModel(
-          place: 'Machu Picchu',
-          country: 'Peru',
-          latitude: -13.1631,
-          longitude: -72.5450),
-    WorldWonderModel(
-          place: 'Christ the Redeemer',
-          country: 'Brazil',
-          latitude: -22.9519,
-          longitude: -43.2105),
-    WorldWonderModel(
-          place: 'Colosseum',
-          country: 'Rome',
-          latitude: 41.8902,
-          longitude: 12.4922),
-    WorldWonderModel(
-          place: 'Petra',
-          country: 'Jordan',
-          latitude: 30.3285,
-          longitude: 35.4444),
-    WorldWonderModel(
-          place: 'Taj Mahal',
-          country: 'India',
-          latitude: 27.1751,
-          longitude: 78.0421),
-    WorldWonderModel(
-          place: 'Great Wall of China',
-          country: 'China',
-          latitude: 40.4319,
-          longitude: 116.5704)
-  ];
-
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "country",
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              source: _shapeSource,
-              initialMarkersCount: _data.length,
-              markerBuilder: (BuildContext context, int index) {
-                return MapMarker(
-                  latitude: _data[index].latitude,
-                  longitude: _data[index].longitude,
-                  child: const Icon(
-                    Icons.location_on,
-                    color: Colors.red,
-                  ),
-                );
-              },
-              markerTooltipBuilder: (BuildContext context, int index) {
-                return Container(
-                  width: 150,
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Stack(
-                        children: [
-                          Center(
-                            child: Text(
-                              _data[index].country,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .fontSize),
+class _MapsExampleState extends State<MapsExample> {
+  late List<WorldWonderModel> _data;
+  late MapShapeSource _shapeSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _data = <WorldWonderModel>[
+      WorldWonderModel(
+            place: 'Chichen Itza',
+            country: 'Mexico',
+            latitude: 20.6843,
+            longitude: -88.5678),
+      WorldWonderModel(
+            place: 'Machu Picchu',
+            country: 'Peru',
+            latitude: -13.1631,
+            longitude: -72.5450),
+      WorldWonderModel(
+            place: 'Christ the Redeemer',
+            country: 'Brazil',
+            latitude: -22.9519,
+            longitude: -43.2105),
+      WorldWonderModel(
+            place: 'Colosseum',
+            country: 'Rome',
+            latitude: 41.8902,
+            longitude: 12.4922),
+      WorldWonderModel(
+            place: 'Petra',
+            country: 'Jordan',
+            latitude: 30.3285,
+            longitude: 35.4444),
+      WorldWonderModel(
+            place: 'Taj Mahal',
+            country: 'India',
+            latitude: 27.1751,
+            longitude: 78.0421),
+      WorldWonderModel(
+            place: 'Great Wall of China',
+            country: 'China',
+            latitude: 40.4319,
+            longitude: 116.5704)
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "country",
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: _shapeSource,
+                initialMarkersCount: _data.length,
+                markerBuilder: (BuildContext context, int index) {
+                  return MapMarker(
+                    latitude: _data[index].latitude,
+                    longitude: _data[index].longitude,
+                    child: const Icon(
+                      Icons.location_on,
+                      color: Colors.red,
+                    ),
+                  );
+                },
+                markerTooltipBuilder: (BuildContext context, int index) {
+                  return Container(
+                    width: 150,
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Stack(
+                          children: [
+                            Center(
+                              child: Text(
+                                _data[index].country,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium!
+                                        .fontSize),
+                              ),
                             ),
-                          ),
-                          const Icon(
-                            Icons.tour,
-                            color: Colors.white,
-                            size: 16,
-                          ),
-                        ],
-                      ),
-                      const Divider(
-                        color: Colors.white,
-                        height: 10,
-                        thickness: 1.2,
-                      ),
-                      Text(
-                        _data[index].place,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize:
-                                Theme.of(context).textTheme.bodyText2!.fontSize),
-                      ),
-                    ],
-                  ),
-                );
-              },
-              tooltipSettings: const MapTooltipSettings(
-                  color: Colors.red,
-                  strokeColor: Colors.black,
-                  strokeWidth: 1.5),
-          ),
-        ],
+                            const Icon(
+                              Icons.tour,
+                              color: Colors.white,
+                              size: 16,
+                            ),
+                          ],
+                        ),
+                        const Divider(
+                          color: Colors.white,
+                          height: 10,
+                          thickness: 1.2,
+                        ),
+                        Text(
+                          _data[index].place,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:
+                                  Theme.of(context).textTheme.bodyMedium!.fontSize),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                tooltipSettings: const MapTooltipSettings(
+                    color: Colors.red,
+                    strokeColor: Colors.black,
+                    strokeWidth: 1.5),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 
@@ -411,85 +441,95 @@ N> For mobile platforms, the [`hideDelay`](https://pub.dev/documentation/syncfus
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> _data;
-late MapShapeSource _shapeSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _data = <Model>[
-    Model('Asia', 50, '44,579,000 sq. km.'),
-    Model('Africa', 54, '30,370,000 sq. km.'),
-    Model('Europe', 51, '10,180,000 sq. km.'),
-    Model('North America', 23, '24,709,000 sq. km.'),
-    Model('South America', 12, '17,840,000 sq. km.'),
-    Model('Australia', 14, '8,600,000 sq. km.'),
-  ];
-
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-    dataCount: _data.length,
-    primaryValueMapper: (int index) => _data[index].continent,
-    bubbleSizeMapper: (int index) => _data[index].countriesCount,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: _shapeSource,
-            shapeTooltipBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.all(7),
-                  child: Text(
-                    'Continent : ' +
-                        _data[index].continent +
-                        '\nArea : ' +
-                        _data[index].area,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Times',
-                  ),
-                ),
-              );
-            },
-            bubbleTooltipBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.all(7),
-                child: Text(
-                    'Continent : ' +
-                        _data[index].continent +
-                        '\nTotal Countries : ' +
-                        _data[index].countriesCount.toStringAsFixed(0),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Times',
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> _data;
+  late MapShapeSource _shapeSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _data = <Model>[
+      Model('Asia', 50, '44,579,000 sq. km.'),
+      Model('Africa', 54, '30,370,000 sq. km.'),
+      Model('Europe', 51, '10,180,000 sq. km.'),
+      Model('North America', 23, '24,709,000 sq. km.'),
+      Model('South America', 12, '17,840,000 sq. km.'),
+      Model('Australia', 14, '8,600,000 sq. km.'),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].continent,
+      bubbleSizeMapper: (int index) => _data[index].countriesCount,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              shapeTooltipBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(7),
+                    child: Text(
+                      'Continent : ' +
+                          _data[index].continent +
+                          '\nArea : ' +
+                          _data[index].area,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: 'Times',
                     ),
-                ),
-              );
-            },
-            tooltipSettings: const MapTooltipSettings(
-              color: const Color.fromRGBO(98, 0, 238, 1),
-              strokeColor: const Color.fromRGBO(252, 187, 15, 1),
-              strokeWidth: 3,
-              hideDelay: 10,
+                  ),
+                );
+              },
+              bubbleTooltipBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(7),
+                  child: Text(
+                      'Continent : ' +
+                          _data[index].continent +
+                          '\nTotal Countries : ' +
+                          _data[index].countriesCount.toStringAsFixed(0),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: 'Times',
+                      ),
+                  ),
+                );
+              },
+              tooltipSettings: const MapTooltipSettings(
+                color: const Color.fromRGBO(98, 0, 238, 1),
+                strokeColor: const Color.fromRGBO(252, 187, 15, 1),
+                strokeWidth: 3,
+                hideDelay: 10,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class Model {
@@ -517,64 +557,74 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> _data;
-late MapShapeSource _shapeSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-void initState() {
-  super.initState();
-
-  _data = <Model>[
-    Model('Asia', 50, '44,579,000 sq. km.'),
-    Model('Africa', 54, '30,370,000 sq. km.'),
-    Model('Europe', 51, '10,180,000 sq. km.'),
-    Model('North America', 23, '24,709,000 sq. km.'),
-    Model('South America', 12, '17,840,000 sq. km.'),
-    Model('Australia', 14, '8,600,000 sq. km.'),
-  ];
-
-  _shapeSource = MapShapeSource.asset(
-    "assets/world_map.json",
-    shapeDataField: "continent",
-    dataCount: _data.length,
-    primaryValueMapper: (int index) => _data[index].continent,
-    bubbleSizeMapper: (int index) => _data[index].countriesCount,
-  );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
-      child: SfMapsTheme(
-        data: SfMapsThemeData(
-          tooltipColor: const Color.fromRGBO(98, 0, 238, 1),
-          tooltipStrokeColor: const Color.fromRGBO(252, 187, 15, 1),
-          tooltipStrokeWidth: 3,
-          tooltipBorderRadius: const BorderRadiusDirectional.only(
-            topStart: Radius.circular(20),
-            bottomEnd: Radius.circular(20),
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> _data;
+  late MapShapeSource _shapeSource;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _data = <Model>[
+      Model('Asia', 50, '44,579,000 sq. km.'),
+      Model('Africa', 54, '30,370,000 sq. km.'),
+      Model('Europe', 51, '10,180,000 sq. km.'),
+      Model('North America', 23, '24,709,000 sq. km.'),
+      Model('South America', 12, '17,840,000 sq. km.'),
+      Model('Australia', 14, '8,600,000 sq. km.'),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].continent,
+      bubbleSizeMapper: (int index) => _data[index].countriesCount,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            tooltipColor: const Color.fromRGBO(98, 0, 238, 1),
+            tooltipStrokeColor: const Color.fromRGBO(252, 187, 15, 1),
+            tooltipStrokeWidth: 3,
+            tooltipBorderRadius: const BorderRadiusDirectional.only(
+              topStart: Radius.circular(20),
+              bottomEnd: Radius.circular(20),
+            ),
           ),
-        ),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              source: _shapeSource,
-              shapeTooltipBuilder: (BuildContext context, int index) {
-                  return Padding(
-                      padding: const EdgeInsets.all(7),
-                        child: Text(
-                          'Continent : ' +
-                            _data[index].continent +
-                          '\nArea : ' +
-                            _data[index].area,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontStyle: FontStyle.italic,
-                            fontFamily: 'Times',
-                      ),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: _shapeSource,
+                shapeTooltipBuilder: (BuildContext context, int index) {
+                    return Padding(
+                        padding: const EdgeInsets.all(7),
+                          child: Text(
+                            'Continent : ' +
+                              _data[index].continent +
+                            '\nArea : ' +
+                              _data[index].area,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontStyle: FontStyle.italic,
+                              fontFamily: 'Times',
+                        ),
                     ),
                 );
               },
@@ -601,6 +651,7 @@ Widget build(BuildContext context) {
       ),
     ),
   );
+  }
 }
 
 class Model {

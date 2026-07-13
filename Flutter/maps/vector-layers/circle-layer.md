@@ -22,60 +22,70 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -86,56 +96,66 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapTileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            initialFocalLatLng: MapLatLng(20.5937, 78.9629),
-            initialZoomLevel: 4,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              initialFocalLatLng: MapLatLng(20.5937, 78.9629),
+              initialZoomLevel: 4,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -150,61 +170,71 @@ You can change the size of the circles using the [`MapCircle.radius`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                      radius: 10,
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                        radius: 10,
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -219,54 +249,64 @@ You can apply the same color for all [`MapCircle`](https://pub.dev/documentation
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapCircleModel> circles;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapCircleModel>[
-      MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
-      MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
-      MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
-      MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
-      MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
-      MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
-      MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
-      MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index].center,
-                      radius: 10,
-                      color: circles[index].color,
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapCircleModel> circles;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      circles = <MapCircleModel>[
+        MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
+        MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
+        MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
+        MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
+        MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
+        MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
+        MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
+        MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index].center,
+                        radius: 10,
+                        color: circles[index].color,
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 class MapCircleModel {
@@ -290,55 +330,65 @@ You can apply the same stroke color for all [`MapCircle`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapCircleModel> circles;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapCircleModel>[
-      MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
-      MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
-      MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
-      MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
-      MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
-      MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
-      MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
-      MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index].center,
-                      radius: index % 2 == 0 ? 10 : 20,
-                      strokeWidth: 3,
-                      strokeColor: circles[index].color,
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapCircleModel> circles;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      circles = <MapCircleModel>[
+        MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
+        MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
+        MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
+        MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
+        MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
+        MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
+        MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
+        MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index].center,
+                        radius: index % 2 == 0 ? 10 : 20,
+                        strokeWidth: 3,
+                        strokeColor: circles[index].color,
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 class MapCircleModel {
@@ -362,80 +412,90 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
-late AnimationController animationController;
-late Animation animation;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-
-    animationController = AnimationController(
-      duration: Duration(seconds: 3),
-      vsync: this,
-    );
-    animation = CurvedAnimation(
-      parent: animationController,
-      curve: Curves.easeInOut,
-    );
-    animationController.forward(from: 0);
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-void dispose() {
-  animationController.dispose();
-  super.dispose();
-}
+class _MapsExampleState extends State<MapsExample> with TickerProviderStateMixin {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+  late AnimationController animationController;
+  late Animation animation;
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                      radius: 10,
-                    );
-                  },
-                ).toSet(),
-                animation: animation,
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+
+      animationController = AnimationController(
+        duration: Duration(seconds: 3),
+        vsync: this,
+      );
+      animation = CurvedAnimation(
+        parent: animationController,
+        curve: Curves.easeInOut,
+      );
+      animationController.forward(from: 0);
+      super.initState();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                        radius: 10,
+                      );
+                    },
+                  ).toSet(),
+                  animation: animation,
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -450,70 +510,80 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
-late int selectedIndex;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-
-    selectedIndex = -1;
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                      radius: 10,
-                      color: selectedIndex == index ? Colors.pink : Colors.blue,
-                      onTap: () {
-                         setState(() {
-                            selectedIndex = index;
-                         });
-                      },
-                    );
-                  },
-                ).toSet(),
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+
+      selectedIndex = -1;
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                        radius: 10,
+                        color: selectedIndex == index ? Colors.pink : Colors.blue,
+                        onTap: () {
+                           setState(() {
+                              selectedIndex = index;
+                           });
+                        },
+                      );
+                    },
+                  ).toSet(),
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -528,92 +598,102 @@ You can show additional information about the circles drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-
-    random = Random();
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   final ThemeData themeData = Theme.of(context);
-   final TextStyle textStyle = themeData.textTheme.caption!
-        .copyWith(color: themeData.colorScheme.surface);
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                      radius: 10,
-                    );
-                  },
-                ).toSet(),
-                tooltipBuilder: (BuildContext context, int index) {
-                   return Container(
-                      padding: EdgeInsets.all(10),
-                         child: Column(
-                             mainAxisSize: MainAxisSize.min,
-                             children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                     Text('Disease name  :', style: textStyle),
-                                     Text('  ' + 'Corona', style: textStyle),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text('Active cases    :', style: textStyle),
-                                    Text('  ' + random.nextInt(62342).toString(),
-                                         style: textStyle),
-                                  ],
-                               ),
-                         ],
-                      ),
-                   );
-                 }
-              ),
-            ],
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+  late Random random;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+
+      random = Random();
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     final ThemeData themeData = Theme.of(context);
+     final TextStyle textStyle = themeData.textTheme.labelSmall!
+          .copyWith(color: themeData.colorScheme.surface);
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                        radius: 10,
+                      );
+                    },
+                  ).toSet(),
+                  tooltipBuilder: (BuildContext context, int index) {
+                     return Container(
+                        padding: EdgeInsets.all(10),
+                           child: Column(
+                               mainAxisSize: MainAxisSize.min,
+                               children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                       Text('Disease name  :', style: textStyle),
+                                       Text('  ' + 'Corona', style: textStyle),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text('Active cases    :', style: textStyle),
+                                      Text('  ' + random.nextInt(62342).toString(),
+                                           style: textStyle),
+                                    ],
+                                 ],
+                           ),
+                        );
+                     }
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -632,101 +712,111 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> circles;
-late MapShapeSource dataSource;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    circles = <MapLatLng>[
-      MapLatLng(15.2993, 74.1240),
-      MapLatLng(15.5057, 80.0499),
-      MapLatLng(19.7515, 75.7139),
-      MapLatLng(23.0225, 72.5714),
-      MapLatLng(24.8607, 67.0011),
-      MapLatLng(27.0238, 74.2179),
-      MapLatLng(26.8467, 80.9462),
-      MapLatLng(21.2787, 85.2799),
-      MapLatLng(20.9517, 85.0985),
-      MapLatLng(25.0961, 85.3131),
-      MapLatLng(24.6637, 93.9063),
-      MapLatLng(26.2006, 92.9376),
-      MapLatLng(28.7041, 77.1025),
-      MapLatLng(29.0588, 76.0856),
-      MapLatLng(30.0668, 79.0193),
-      MapLatLng(31.1471, 75.3412),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/india.json',
-      shapeDataField: 'name',
-    );
-
-    random = Random();
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfMaps(
-        layers: [
-          MapShapeLayer(
-            source: dataSource,
-            tooltipSettings: const MapTooltipSettings(
-               color: Colors.white,
-               strokeWidth: 2,
-               strokeColor: Colors.black,
-            ),
-            sublayers: [
-              MapCircleLayer(
-                circles: List<MapCircle>.generate(
-                  circles.length,
-                  (int index) {
-                    return MapCircle(
-                      center: circles[index],
-                      radius: 10,
-                    );
-                  },
-                ).toSet(),
-                tooltipBuilder: (BuildContext context, int index) {
-                   return Container(
-                      padding: EdgeInsets.all(10),
-                         child: Column(
-                             mainAxisSize: MainAxisSize.min,
-                             children: [
-                               Row(
-                                 mainAxisSize: MainAxisSize.min,
-                                 children: [
-                                   Text('Disease name  :',
-                                      style: TextStyle(
-                                       color: Colors.black,
-                                        fontWeight: FontWeight.bold)),
-                                   Text('  ' + 'Corona',
-                                        style: TextStyle(color: Colors.black)),
-                                 ],
-                               ),
-                               Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                     Text('Active cases    :',
-                                          style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold)),
-                                     Text('  ' + random.nextInt(62342).toString(),
-                                          style: TextStyle(color: Colors.black)),
-                                  ],
-                               ),
-                         ],
-                      ),
-                   );
-                 }
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> circles;
+  late MapShapeSource dataSource;
+  late Random random;
+
+  @override
+  void initState() {
+      circles = <MapLatLng>[
+        MapLatLng(15.2993, 74.1240),
+        MapLatLng(15.5057, 80.0499),
+        MapLatLng(19.7515, 75.7139),
+        MapLatLng(23.0225, 72.5714),
+        MapLatLng(24.8607, 67.0011),
+        MapLatLng(27.0238, 74.2179),
+        MapLatLng(26.8467, 80.9462),
+        MapLatLng(21.2787, 85.2799),
+        MapLatLng(20.9517, 85.0985),
+        MapLatLng(25.0961, 85.3131),
+        MapLatLng(24.6637, 93.9063),
+        MapLatLng(26.2006, 92.9376),
+        MapLatLng(28.7041, 77.1025),
+        MapLatLng(29.0588, 76.0856),
+        MapLatLng(30.0668, 79.0193),
+        MapLatLng(31.1471, 75.3412),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/india.json',
+        shapeDataField: 'name',
+      );
+
+      random = Random();
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              tooltipSettings: const MapTooltipSettings(
+                 color: Colors.white,
+                 strokeWidth: 2,
+                 strokeColor: Colors.black,
               ),
-            ],
-          ),
-        ],
-      ),
-   );
+              sublayers: [
+                MapCircleLayer(
+                  circles: List<MapCircle>.generate(
+                    circles.length,
+                    (int index) {
+                      return MapCircle(
+                        center: circles[index],
+                        radius: 10,
+                      );
+                    },
+                  ).toSet(),
+                  tooltipBuilder: (BuildContext context, int index) {
+                     return Container(
+                        padding: EdgeInsets.all(10),
+                           child: Column(
+                               mainAxisSize: MainAxisSize.min,
+                               children: [
+                                 Row(
+                                   mainAxisSize: MainAxisSize.min,
+                                   children: [
+                                     Text('Disease name  :',
+                                        style: TextStyle(
+                                         color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                     Text('  ' + 'Corona',
+                                          style: TextStyle(color: Colors.black)),
+                                   ],
+                                 ),
+                                 Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                       Text('Active cases    :',
+                                            style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold)),
+                                       Text('  ' + random.nextInt(62342).toString(),
+                                            style: TextStyle(color: Colors.black)),
+                                    ],
+                                 ),
+                           ],
+                        );
+                     }
+                ),
+              ],
+            ),
+          ],
+        ),
+     );
+  }
 }
 
 {% endhighlight %}
@@ -753,43 +843,53 @@ I> The individual circle customization like [`MapCircle.color`](https://pub.dev/
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4, maxZoomLevel: 15);
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapTileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            initialFocalLatLng: MapLatLng(-14.2350, -51.9253),
-            sublayers: [
-              MapCircleLayer.inverted(
-                circles: List<MapCircle>.generate(
-                  1,
-                      (int index) {
-                    return MapCircle(
-                      center: MapLatLng(-14.2350, -51.9253),
-                      radius: 50,
-                    );
-                  },
-                ).toSet(),
-                color: Colors.black.withOpacity(0.3),
-                strokeColor: Colors.red,
-                strokeWidth: 1,
-              ),
-            ],
-            zoomPanBehavior: zoomPanBehavior,
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4, maxZoomLevel: 15);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfMaps(
+          layers: [
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              initialFocalLatLng: MapLatLng(-14.2350, -51.9253),
+              sublayers: [
+                MapCircleLayer.inverted(
+                  circles: List<MapCircle>.generate(
+                    1,
+                        (int index) {
+                      return MapCircle(
+                        center: MapLatLng(-14.2350, -51.9253),
+                        radius: 50,
+                      );
+                    },
+                  ).toSet(),
+                  color: Colors.black.withOpacity(0.3),
+                  strokeColor: Colors.red,
+                  strokeWidth: 1,
+                ),
+              ],
+              zoomPanBehavior: zoomPanBehavior,
+            ),
+          ],
+        ),
+    );
+  }
 }
 
 {% endhighlight %}

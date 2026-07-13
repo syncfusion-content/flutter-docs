@@ -22,59 +22,69 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(53.7596, 87.1216),
-      MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-      PolygonModel(polygon1),
-      PolygonModel(polygon2),
-    ];
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<PolygonModel> polygons;
+  late List<MapLatLng> polygon1;
+  late List<MapLatLng> polygon2;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      polygon1 = <MapLatLng>[
+        MapLatLng(55.7558, 37.6173),
+        MapLatLng(53.7596, 87.1216),
+        MapLatLng(61.5240, 105.3188),
+      ];
+
+      polygon2 = <MapLatLng>[
+        MapLatLng(64.2823, -135.0000),
+        MapLatLng(51.2538, -85.3232),
+        MapLatLng(48.4284, -123.3656),
+      ];
+
+      polygons = <PolygonModel>[
+        PolygonModel(polygon1),
+        PolygonModel(polygon2),
+      ];
+      dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'continent',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolygonModel {
@@ -90,54 +100,64 @@ class PolygonModel {
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    polygon1 = <MapLatLng>[
-       MapLatLng(55.7558, 37.6173),
-       MapLatLng(53.7596, 87.1216),
-       MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-      PolygonModel(polygon1),
-      PolygonModel(polygon2),
-    ];
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapTileLayer(
-          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<PolygonModel> polygons;
+  late List<MapLatLng> polygon1;
+  late List<MapLatLng> polygon2;
+
+  @override
+  void initState() {
+      polygon1 = <MapLatLng>[
+         MapLatLng(55.7558, 37.6173),
+         MapLatLng(53.7596, 87.1216),
+         MapLatLng(61.5240, 105.3188),
+      ];
+
+      polygon2 = <MapLatLng>[
+        MapLatLng(64.2823, -135.0000),
+        MapLatLng(51.2538, -85.3232),
+        MapLatLng(48.4284, -123.3656),
+      ];
+
+      polygons = <PolygonModel>[
+        PolygonModel(polygon1),
+        PolygonModel(polygon2),
+      ];
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolygonModel {
@@ -157,61 +177,71 @@ You can apply the same color for all [`MapPolygon`](https://pub.dev/documentatio
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(53.7596, 87.1216),
-      MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-       PolygonModel(polygon1, Colors.greenAccent),
-       PolygonModel(polygon2, Colors.pinkAccent),
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                    color: polygons[index].color,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<PolygonModel> polygons;
+  late List<MapLatLng> polygon1;
+  late List<MapLatLng> polygon2;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      polygon1 = <MapLatLng>[
+        MapLatLng(55.7558, 37.6173),
+        MapLatLng(53.7596, 87.1216),
+        MapLatLng(61.5240, 105.3188),
+      ];
+
+      polygon2 = <MapLatLng>[
+        MapLatLng(64.2823, -135.0000),
+        MapLatLng(51.2538, -85.3232),
+        MapLatLng(48.4284, -123.3656),
+      ];
+
+      polygons = <PolygonModel>[
+         PolygonModel(polygon1, Colors.greenAccent),
+         PolygonModel(polygon2, Colors.pinkAccent),
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'continent',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                      color: polygons[index].color,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolygonModel {
@@ -234,61 +264,71 @@ You can apply the same stroke color for all [`MapPolygon`](https://pub.dev/docum
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    polygon1 = <MapLatLng>[
-       MapLatLng(55.7558, 37.6173),
-       MapLatLng(53.7596, 87.1216),
-       MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-       PolygonModel(polygon1, 3),
-       PolygonModel(polygon2, 4),
-    ];
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                    strokeWidth: polygons[index].width,
-                    strokeColor: Colors.pink,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<PolygonModel> polygons;
+  late List<MapLatLng> polygon1;
+  late List<MapLatLng> polygon2;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      polygon1 = <MapLatLng>[
+         MapLatLng(55.7558, 37.6173),
+         MapLatLng(53.7596, 87.1216),
+         MapLatLng(61.5240, 105.3188),
+      ];
+
+      polygon2 = <MapLatLng>[
+        MapLatLng(64.2823, -135.0000),
+        MapLatLng(51.2538, -85.3232),
+        MapLatLng(48.4284, -123.3656),
+      ];
+
+      polygons = <PolygonModel>[
+         PolygonModel(polygon1, 3),
+         PolygonModel(polygon2, 4),
+      ];
+      dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'continent',
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                      strokeWidth: polygons[index].width,
+                      strokeColor: Colors.pink,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolygonModel {
@@ -309,68 +349,78 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
-late MapShapeSource dataSource;
-late int selectedIndex;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    polygon1 = <MapLatLng>[
-       MapLatLng(55.7558, 37.6173),
-       MapLatLng(53.7596, 87.1216),
-       MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-      PolygonModel(polygon1),
-      PolygonModel(polygon2),
-    ];
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-
-    selectedIndex = -1;
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                    color: selectedIndex == index ? Colors.pink : Colors.blue,
-                    onTap: () {
-                       setState(() {
-                         selectedIndex = index;
-                       });
-                    }
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<PolygonModel> polygons;
+  late List<MapLatLng> polygon1;
+  late List<MapLatLng> polygon2;
+  late MapShapeSource dataSource;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+      polygon1 = <MapLatLng>[
+         MapLatLng(55.7558, 37.6173),
+         MapLatLng(53.7596, 87.1216),
+         MapLatLng(61.5240, 105.3188),
+      ];
+
+      polygon2 = <MapLatLng>[
+        MapLatLng(64.2823, -135.0000),
+        MapLatLng(51.2538, -85.3232),
+        MapLatLng(48.4284, -123.3656),
+      ];
+
+      polygons = <PolygonModel>[
+        PolygonModel(polygon1),
+        PolygonModel(polygon2),
+      ];
+      dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'continent',
+      );
+
+      selectedIndex = -1;
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                      color: selectedIndex == index ? Colors.pink : Colors.blue,
+                      onTap: () {
+                         setState(() {
+                           selectedIndex = index;
+                         });
+                      }
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolygonModel {
@@ -390,56 +440,66 @@ You can show additional information about the polygon drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polygon;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-   polygon = <MapLatLng>[
-     MapLatLng(27.6648, -81.5158),
-     MapLatLng(32.3078, -64.7505),
-     MapLatLng(18.2208, -66.5901),
-   ];
-   super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfMaps(
-            layers: [
-              MapTileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                initialFocalLatLng: MapLatLng(27.6648, -81.5158),
-                initialZoomLevel: 3,
-                sublayers: [
-                  MapPolygonLayer(
-                    polygons: List<MapPolygon>.generate(
-                      1,
-                      (int index) {
-                        return MapPolygon(
-                          points: polygon,
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polygon;
+
+  @override
+  void initState() {
+     polygon = <MapLatLng>[
+       MapLatLng(27.6648, -81.5158),
+       MapLatLng(32.3078, -64.7505),
+       MapLatLng(18.2208, -66.5901),
+     ];
+     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfMaps(
+              layers: [
+                MapTileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  initialFocalLatLng: MapLatLng(27.6648, -81.5158),
+                  initialZoomLevel: 3,
+                  sublayers: [
+                    MapPolygonLayer(
+                      polygons: List<MapPolygon>.generate(
+                        1,
+                        (int index) {
+                          return MapPolygon(
+                            points: polygon,
+                          );
+                        },
+                      ).toSet(),
+                      tooltipBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text('Bermuda triangle',
+                              style: TextStyle(color: Colors.white)),
                         );
                       },
-                    ).toSet(),
-                    tooltipBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('Bermuda triangle',
-                            style: TextStyle(color: Colors.white)),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -458,60 +518,70 @@ You can customize the appearance of the tooltip:
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polygon;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-   polygon = <MapLatLng>[
-      MapLatLng(27.6648, -81.5158),
-      MapLatLng(32.3078, -64.7505),
-      MapLatLng(18.2208, -66.5901),
-   ];
-   super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: Container(
-          height: 400,
-          width: 400,
-          child: SfMaps(
-            layers: [
-              MapTileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                initialFocalLatLng: MapLatLng(27.6648, -81.5158),
-                initialZoomLevel: 3,
-                tooltipSettings: const MapTooltipSettings(
-                  color: Colors.white,
-                  strokeColor: Colors.teal,
-                  strokeWidth: 2,
-                ),
-                sublayers: [
-                  MapPolygonLayer(
-                    polygons: List<MapPolygon>.generate(
-                      1,
-                      (int index) {
-                        return MapPolygon(
-                          points: polygon,
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polygon;
+
+  @override
+  void initState() {
+     polygon = <MapLatLng>[
+        MapLatLng(27.6648, -81.5158),
+        MapLatLng(32.3078, -64.7505),
+        MapLatLng(18.2208, -66.5901),
+     ];
+     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfMaps(
+              layers: [
+                MapTileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  initialFocalLatLng: MapLatLng(27.6648, -81.5158),
+                  initialZoomLevel: 3,
+                  tooltipSettings: const MapTooltipSettings(
+                    color: Colors.white,
+                    strokeColor: Colors.teal,
+                    strokeWidth: 2,
+                  ),
+                  sublayers: [
+                    MapPolygonLayer(
+                      polygons: List<MapPolygon>.generate(
+                        1,
+                        (int index) {
+                          return MapPolygon(
+                            points: polygon,
+                          );
+                        },
+                      ).toSet(),
+                      tooltipBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text('Bermuda triangle'),
                         );
                       },
-                    ).toSet(),
-                    tooltipBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('Bermuda triangle'),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -537,49 +607,59 @@ I> The individual polygon customization like [`MapPolygon.color`](https://pub.de
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late List<MapLatLng> _polygon;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-   _polygon = <MapLatLng>[
-      MapLatLng(27.6648, -81.5158),
-      MapLatLng(32.3078, -64.7505),
-      MapLatLng(18.2208, -66.5901),
-   ];
-
-   zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4);
-   super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapTileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            initialFocalLatLng: MapLatLng(25.0119, -73.4842),
-            sublayers: [
-              MapPolygonLayer.inverted(
-                polygons: List<MapPolygon>.generate(
-                  1,
-                  (int index) {
-                    return MapPolygon(
-                      points: _polygon,
-                    );
-                  },
-                ).toSet(),
-                color: Colors.black.withOpacity(0.3),
-                strokeColor: Colors.red,
-                strokeWidth: 1,
-              ),
-            ],
-            zoomPanBehavior: zoomPanBehavior,
-          ),
-        ],
-      ),
-   );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late List<MapLatLng> _polygon;
+
+  @override
+  void initState() {
+     _polygon = <MapLatLng>[
+        MapLatLng(27.6648, -81.5158),
+        MapLatLng(32.3078, -64.7505),
+        MapLatLng(18.2208, -66.5901),
+     ];
+
+     zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4);
+     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfMaps(
+          layers: [
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              initialFocalLatLng: MapLatLng(25.0119, -73.4842),
+              sublayers: [
+                MapPolygonLayer.inverted(
+                  polygons: List<MapPolygon>.generate(
+                    1,
+                    (int index) {
+                      return MapPolygon(
+                        points: _polygon,
+                      );
+                    },
+                  ).toSet(),
+                  color: Colors.black.withOpacity(0.3),
+                  strokeColor: Colors.red,
+                  strokeWidth: 1,
+                ),
+              ],
+              zoomPanBehavior: zoomPanBehavior,
+            ),
+          ],
+        ),
+    );
+  }
 }
 
 {% endhighlight %}

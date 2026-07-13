@@ -11,6 +11,8 @@ documentation: ug
 
 [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) is a powerful data visualization component that displays statistical information for geographical areas. Its rich feature set includes tile rendering from OpenStreetMap, Bing Maps, and other tile providers with marker support, as well as shape layer capabilities such as selection, legends, labels, markers, tooltips, bubbles, color mapping, and much more.
 
+To get started with the Flutter Maps widget, refer to the [Getting Started with Flutter Maps](https://help.syncfusion.com/flutter/maps/getting-started) documentation.
+
 ## Shape layer
 
 Render GeoJSON data as geographical shapes or any custom shapes on a shape layer for powerful data visualization. Customize the appearance using built-in options to achieve your desired look. For example, you can render a map of the world or any particular country.

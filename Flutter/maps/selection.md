@@ -17,61 +17,71 @@ You can enable shape selection on a map using the [`MapShapeLayer.onSelectionCha
 
 The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is triggered when a user selects a shape by tapping or clicking, or when a shape is selected programmatically. It provides the index of the selected shape.
 
-N> You must call `setState()` in the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback to reflect the changes in the UI.
+N> You must update the selectedIndex in the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback to reflect the changes in the UI.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
-int selectedIndex = 1;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    data = const <Model>[
-        Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
-        Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
-        Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
-        Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
-        Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
-        Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
-    ];
-
-    dataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-       shapeDataField: "continent",
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].continent,
-       shapeColorValueMapper: (int index) => data[index].color,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                   source: dataSource,
-                   selectedIndex: selectedIndex,
-                   onSelectionChanged: (int index) {
-                     setState(() {
-                        selectedIndex = index;
-                     });
-                   },
-                ),
-              ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+  int selectedIndex = 1;
+
+  @override
+  void initState() {
+      super.initState();
+      data = const <Model>[
+          Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
+          Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
+          Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
+          Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
+          Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
+          Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
+      ];
+
+      dataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+         shapeDataField: "continent",
+         dataCount: data.length,
+         primaryValueMapper: (int index) => data[index].continent,
+         shapeColorValueMapper: (int index) => data[index].color,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                     source: dataSource,
+                     selectedIndex: selectedIndex,
+                     onSelectionChanged: (int index) {
+                       setState(() {
+                          selectedIndex = index;
+                       });
+                     },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -101,61 +111,71 @@ You can customize the following aspects of the selected shape:
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
-int selectedIndex = 5;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    super.initState();
-    data = const <Model>[
-        Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
-        Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
-        Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
-        Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
-        Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
-        Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
-    ];
-
-    dataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-       shapeDataField: "continent",
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].continent,
-       shapeColorValueMapper: (int index) => data[index].color,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                   source: dataSource,
-                   selectedIndex: selectedIndex,
-                   onSelectionChanged: (int index) {
-                     setState(() {
-                        selectedIndex = index;
-                     });
-                   },
-                   selectionSettings: MapSelectionSettings(
-                      color: Colors.orange,
-                      strokeColor: Colors.red[900],
-                      strokeWidth: 3,
-                   ),
-                ),
-              ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+  int selectedIndex = 5;
+
+  @override
+  void initState() {
+      super.initState();
+      data = const <Model>[
+          Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
+          Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
+          Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
+          Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
+          Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
+          Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
+      ];
+
+      dataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+         shapeDataField: "continent",
+         dataCount: data.length,
+         primaryValueMapper: (int index) => data[index].continent,
+         shapeColorValueMapper: (int index) => data[index].color,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                     source: dataSource,
+                     selectedIndex: selectedIndex,
+                     onSelectionChanged: (int index) {
+                       setState(() {
+                          selectedIndex = index;
+                       });
+                     },
+                     selectionSettings: MapSelectionSettings(
+                        color: Colors.orange,
+                        strokeColor: Colors.red[900],
+                        strokeWidth: 3,
+                     ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -182,63 +202,74 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
-int selectedIndex = 5;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-void initState() {
-    super.initState();
-    data = const <Model>[
-        Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
-        Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
-        Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
-        Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
-        Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
-        Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
-    ];
-
-    dataSource = MapShapeSource.asset(
-      "assets/world_map.json",
-       shapeDataField: "continent",
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].continent,
-       shapeColorValueMapper: (int index) => data[index].color,
-    );
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMapsTheme(
-              data: SfMapsThemeData(
-                selectionColor: Colors.orange,
-                selectionStrokeWidth: 3,
-                selectionStrokeColor: Colors.red[900],
-              ),
-              child: SfMaps(
-                layers: [
-                  MapShapeLayer(
-                     source: dataSource,
-                     selectedIndex: selectedIndex,
-                     onSelectionChanged: (int index) {
-                        setState(() {
-                           selectedIndex = index;
-                        });
-                     },
-                  ),
-                ],
-              ),
-            )
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+  int selectedIndex = 5;
+
+  @override
+  void initState() {
+      super.initState();
+      data = const <Model>[
+          Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
+          Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
+          Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
+          Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
+          Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
+          Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
+      ];
+
+      dataSource = MapShapeSource.asset(
+        "assets/world_map.json",
+         shapeDataField: "continent",
+         dataCount: data.length,
+         primaryValueMapper: (int index) => data[index].continent,
+         shapeColorValueMapper: (int index) => data[index].color,
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: SfMapsTheme(
+                data: SfMapsThemeData(
+                  selectionColor: Colors.orange,
+                  selectionStrokeWidth: 3,
+                  selectionStrokeColor: Colors.red[900],
+                ),
+                child: SfMaps(
+                  layers: [
+                    MapShapeLayer(
+                       source: dataSource,
+                       selectedIndex: selectedIndex,
+                       onSelectionChanged: (int index) {
+                          setState(() {
+                             selectedIndex = index;
+                          });
+                       },
+                    ),
+                  ],
+                ),
+              )
+            ),
           ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
