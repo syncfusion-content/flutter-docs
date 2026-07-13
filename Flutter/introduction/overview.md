@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion<sup>&reg;</sup> Flutter Widgets | Syncfusion
-description: Step‑by‑step guide to Syncfusion Flutter widgets, covering key features, documentation structure, API references, code examples, demos, video tutorials, and support resources for building high‑quality cross‑platform applications.
+description: Step-by-step guide to Syncfusion Flutter widgets, covering key features, documentation structure, API references, code examples, demos, video tutorials, and support resources for building high-quality cross-platform applications.
 platform: flutter
 control: Overview
 documentation: ug
@@ -31,12 +31,11 @@ The [widgets examples section](https://help.syncfusion.com/flutter/introduction/
 
 ### Knowledge Base
 
-The Knowledge Base section contains responses for some of the most common questions other customers had asked in the past. You can search for topics that are not covered in the user guide.
-Similar to the Knowledge Base, the [Forum section](https://www.syncfusion.com/forums/flutter) also contains responses for questions asked in the past.
+The [Knowledge Base](https://www.syncfusion.com/kb/flutter) contains responses for some of the most common questions other customers have asked. You can search for topics that are not covered in the user guide. The [Forum section](https://www.syncfusion.com/forums/flutter) also answers common user questions.
 
 ### Video Tutorials
 
-Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tutorial-videos).
+Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tutorial-videos/flutter).
 
 ## Demos
 
@@ -66,6 +65,6 @@ tr, td, th
 </table>
 
 
-## Create a support incident
-In case, you are not able to find the information that you are looking for in the self-help resources mentioned above, please [contact](https://www.syncfusion.com/support/directtrac/incidents) us by creating a support ticket.
+## Creating a support incident
+If you are unable to find the information you are looking for in the self-help resources mentioned above, please [contact](https://www.syncfusion.com/support/directtrac/incidents) us by creating a support ticket.
 
