@@ -2,13 +2,13 @@
 layout: post
 title: Interval in Flutter Slider widget | Syncfusion 
 description: Learn here all about adding the Interval feature of Syncfusion Flutter Slider (SfSlider) widget and more.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
 # Interval in Flutter Slider (SfSlider)
-This section explains about how to add the interval for numeric and date slider.
+This section explains how to set the interval for numeric and date sliders.
 
 ## Numeric interval
 
@@ -21,29 +21,39 @@ For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 4.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              showTicks: true,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class NumericIntervalPage extends StatefulWidget {
+  @override
+  _NumericIntervalPageState createState() => _NumericIntervalPageState();
+}
+
+class _NumericIntervalPageState extends State<NumericIntervalPage> {
+  double _value = 4.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                showTicks: true,
+                showLabels: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -56,29 +66,39 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 4.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              showTicks: true,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalNumericIntervalPage extends StatefulWidget {
+  @override
+  _VerticalNumericIntervalPageState createState() => _VerticalNumericIntervalPageState();
+}
+
+class _VerticalNumericIntervalPageState extends State<VerticalNumericIntervalPage> {
+  double _value = 4.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                showTicks: true,
+                showLabels: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -99,36 +119,49 @@ For date values, the slider does not have auto interval support. So, it is manda
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is `DateTime(2000, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is `DateTime(2005, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is `1`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) is `DateFormat.y()` then the slider will render the labels, major ticks, and dividers at 2000, 2001, 2002 and so on.
 
+N> You must import the [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child:  SfSlider(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class DateIntervalPage extends StatefulWidget {
+  @override
+  _DateIntervalPageState createState() => _DateIntervalPageState();
+}
+
+class _DateIntervalPageState extends State<DateIntervalPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child:  SfSlider(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -141,31 +174,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child:  SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalDateIntervalPage extends StatefulWidget {
+  @override
+  _VerticalDateIntervalPageState createState() => _VerticalDateIntervalPageState();
+}
+
+class _VerticalDateIntervalPageState extends State<VerticalDateIntervalPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child:  SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -182,31 +226,41 @@ You can move the thumb in discrete manner for numeric values using the [`stepSiz
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 4.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              stepSize: 2,
-              showTicks: true,
-              minorTicksPerInterval: 1,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class StepSizePage extends StatefulWidget {
+  @override
+  _StepSizePageState createState() => _StepSizePageState();
+}
+
+class _StepSizePageState extends State<StepSizePage> {
+  double _value = 4.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                stepSize: 2,
+                showTicks: true,
+                minorTicksPerInterval: 1,
+                showLabels: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -219,31 +273,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 4.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              stepSize: 2,
-              showTicks: true,
-              minorTicksPerInterval: 1,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalStepSizePage extends StatefulWidget {
+  @override
+  _VerticalStepSizePageState createState() => _VerticalStepSizePageState();
+}
+
+class _VerticalStepSizePageState extends State<VerticalStepSizePage> {
+  double _value = 4.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                stepSize: 2,
+                showTicks: true,
+                minorTicksPerInterval: 1,
+                showLabels: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -253,39 +317,52 @@ Widget build(BuildContext context) {
 
 You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) property in the slider.
 
-For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) is SliderDuration(years: 1, months: 6),the slider will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+N> You must import the [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is `DateTime(2015, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is `DateTime(2020, 01, 01)` and [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) is `SliderStepDuration(years: 1, months: 6)`, the slider will move the thumb at `DateTime(2015, 01, 01)`, `DateTime(2016, 07, 01)`, `DateTime(2018, 01, 01)`, and `DateTime(2019, 07, 01)`.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2004, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01),
-              max: DateTime(2010, 01, 01),
-              interval: 2,
-              stepDuration: SliderStepDuration(years: 2),
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              showTicks: true,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class StepDurationPage extends StatefulWidget {
+  @override
+  _StepDurationPageState createState() => _StepDurationPageState();
+}
+
+class _StepDurationPageState extends State<StepDurationPage> {
+  DateTime _value = DateTime(2004, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01),
+                max: DateTime(2010, 01, 01),
+                interval: 2,
+                stepDuration: SliderStepDuration(years: 2),
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                showTicks: true,
+                showLabels: true,
+                value: _value,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -298,32 +375,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2004, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01),
-              max: DateTime(2010, 01, 01),
-              interval: 2,
-              stepDuration: SliderStepDuration(years: 2),
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              showTicks: true,
-              showLabels: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalStepDurationPage extends StatefulWidget {
+  @override
+  _VerticalStepDurationPageState createState() => _VerticalStepDurationPageState();
+}
+
+class _VerticalStepDurationPageState extends State<VerticalStepDurationPage> {
+  DateTime _value = DateTime(2004, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01),
+                max: DateTime(2010, 01, 01),
+                interval: 2,
+                stepDuration: SliderStepDuration(years: 2),
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                showTicks: true,
+                showLabels: true,
+                value: _value,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
