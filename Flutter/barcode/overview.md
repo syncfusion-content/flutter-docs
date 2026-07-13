@@ -29,4 +29,4 @@ To quickly get started with our Flutter Barcode Generator widget, watch the tuto
 * **Barcode customization** - Customize the visual appearance of barcodes using the [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) and [`barColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/barColor.html) properties and adjust the size of smallest line or dot of the code using the [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property.
 * **Text customization** - Configure to display the barcode value and customize the position and style of the barcode text.
 
-You can get the barcode sample in the following link: [`Flutter Barcode Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/barcodes).
+You can get the barcode sample in the following link: [`Flutter Barcode Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/barcodes).

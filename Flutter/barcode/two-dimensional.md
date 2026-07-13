@@ -123,7 +123,7 @@ The data can be read from the damaged image based on the error correction level,
 
 **Input mode**
 
-The [`inputMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html) property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as [`binaryMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRInputMode-class.html).
+The [`inputMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html) property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as [`binaryMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRInputMode.html).
 
 Numeric - supports from 0 to 9
 AlphaNumeric - supports 0 to 9, A to Z, space, $, %, *, +, -,., /, :
