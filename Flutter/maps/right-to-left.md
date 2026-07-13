@@ -2,7 +2,7 @@
 layout: post
 title: RTL in Flutter Maps widget | Syncfusion
 description: This section explains about enabling the RTL rendering in the Syncfusion Flutter Maps (SfMaps) widget.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter Maps widget | Syncfusion 
 description: Learn here all about the introduction of Syncfusion Flutter Maps (SfMaps) widget, its features, and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
@@ -35,7 +35,7 @@ Render GeoJSON data as geographical shapes or any custom shapes on a shape layer
 
 * **Tooltip** - Display additional information about shapes and bubbles using customizable tooltips.
 
-* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or trackpad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.
+* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.
 
 ## Tile layer
 
@@ -47,4 +47,4 @@ The interactive tile layer allows you to load map tiles from web map tile servic
 
 * **Markers** - Denote specific locations using built-in symbols or display custom widgets at particular latitude and longitude coordinates on the map.
 
-* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or trackpad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.
+* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.

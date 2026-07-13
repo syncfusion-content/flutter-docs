@@ -2,7 +2,7 @@
 layout: post
 title: Bubbles in Flutter Maps widget | Syncfusion
 description: Learn here all about the Bubbles feature of Syncfusion Flutter Maps (SfMaps) widget to customize their appearances and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---

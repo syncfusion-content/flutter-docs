@@ -2,7 +2,7 @@
 layout: post
 title: Legend in Flutter Maps widget | Syncfusion
 description: Learn here all about the Legend feature of Syncfusion Flutter Maps (SfMaps) widget to customize its appearance including text, icon and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
