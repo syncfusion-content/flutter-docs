@@ -2,7 +2,7 @@
 layout: post
 title: Views in Flutter Date Range Picker widget | Syncfusion
 description: Learn here all about Views feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -16,16 +16,29 @@ The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepic
 This view displays the entire dates of a particular month. By default, the current month will be displayed on loading. The current date is provided with a separate color different from the rest of the dates color in `month view`.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -33,11 +46,21 @@ This view displays the entire dates of a particular month. By default, the curre
 ![Month view Date Range Picker](images/views/monthview.png)
 
 
-#### Week number
+### Week number
 
-Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html) as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
+Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html) as true, and by default it is false. Week numbers will be displayed based on the ISO 8601 standard.
 {% tabs %}
-{% highlight dart hl_lines="7 8 9" %}
+{% highlight dart hl_lines="15 16 17" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,18 +75,29 @@ Display the Week number of the year in the MonthView by setting the [showWeekNum
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
+![Week Number in Flutter Date Range Picker](images/views/flutter-date-range-picker-week-number.png)
 
-#### Week number appearance
+### Week number appearance
 
 Customize the Week number style by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/backgroundColor.html) properties of the [DateRangePickerWeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11" %}
+{% highlight dart hl_lines="16 17 18 19" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +116,7 @@ Customize the Week number style by using the [textStyle](https://pub.dev/documen
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,19 +126,32 @@ Customize the Week number style by using the [textStyle](https://pub.dev/documen
 
 ## Year view
 
-This displays the entire month of a particular year. By default, the current year will be displayed on loading. Navigate between the months quickly by selecting the particular month in a `year view`.
+This displays all months of a particular year. By default, the current year will be displayed on loading. Navigate between the months quickly by selecting the particular month in a `year view`.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.year
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.year,
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -112,19 +160,32 @@ This displays the entire month of a particular year. By default, the current yea
 
 ## Decade view
 
-This view displays the period of 10 years. By default, the current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from a  `decade view`.
+This view displays a period of 10 years. By default, the current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from a  `decade view`.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.decade
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.decade,
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,19 +194,32 @@ This view displays the period of 10 years. By default, the current year range of
 
 ## Century view
 
-This view displays the period of 100 years. By default, the current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to a decade view by selecting decade years in `century view`.
+This view displays a period of 100 years. By default, the current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to a decade view by selecting decade years in `century view`.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.century
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.century,
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,31 +231,54 @@ This view displays the period of 100 years. By default, the current year range o
 The number of weeks in the month view can be customized by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/numberOfWeeksInView.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7" %}
+{% highlight dart hl_lines="14 15" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(
-          numberOfWeeksInView: 2,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(
+            numberOfWeeksInView: 2,
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Century view Date Range Picker](images/views/numberofweek-in-view.png)
+![Week view Date Range Picker](images/views/numberofweek-in-view.png)
 
 ## Multi-date picker view
 
-You can enable a multi-date range picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
+You can enable a multi-date range picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). The default value of `viewSpacing` is `20`.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="15 16 17 18" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -190,8 +287,8 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
         body: SfDateRangePicker(
           enableMultiView: true,
           viewSpacing: 20,
-          headerStyle: DateRangePickerHeaderStyle(
-            textAlign: TextAlign.center
+          headerStyle: const DateRangePickerHeaderStyle(
+            textAlign: TextAlign.center,
           ),
         ),
       ),
@@ -205,10 +302,20 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 
 ## Vertical picker
 
-You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as [DateRangePickerNavigationDirection.vertical](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#vertical) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).`
+You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as [DateRangePickerNavigationDirection.vertical](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#vertical) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="15" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -222,6 +329,7 @@ You can arrange the two date range picker views in the vertical direction by set
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
