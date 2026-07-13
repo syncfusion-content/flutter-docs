@@ -2,7 +2,7 @@
 layout: post
 title: Pointers in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Pointers of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
@@ -22,9 +22,31 @@ All pointers can be customized to meet your specific requirement. You can add mu
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add any number of pointers to an axis by adding then to the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/pointers.html) collection.
+By default, no pointer is added to the axis. In addition to the default pointer, you can add any number of pointers to an axis by adding them to the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/pointers.html) collection.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const MultiplePointersExample(),
+    );
+  }
+}
+
+class MultiplePointersExample extends StatelessWidget {
+  const MultiplePointersExample();
 
   @override
   Widget build(BuildContext context) {
@@ -44,16 +66,40 @@ In addition to the default pointer, you can add any number of pointers to an axi
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![multiple pointers](images/pointers/multiple_pointer.jpg)
 
-## Pointer Dragging
+## Pointer dragging
 
 Pointers can be dragged over the scale to change their values interactively. This can be achieved by clicking and dragging the pointer. To enable or disable pointer dragging, use the [`enableDragging`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableDragging.html) property.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const PointerDraggingExample(),
+    );
+  }
+}
+
+class PointerDraggingExample extends StatelessWidget {
+  const PointerDraggingExample();
 
   @override
   Widget build(BuildContext context) {
@@ -83,8 +129,10 @@ Pointers can be dragged over the scale to change their values interactively. Thi
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![pointer dragging](images/pointers/pointer-interaction.gif)
 
@@ -98,8 +146,35 @@ Pointers can be dragged over the scale to change their values interactively. Thi
 
 [`onValueChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChangeEnd.html) - Occurs when the pointer dragging is completed.
 
+{% tabs %}
 {% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const EventExample(),
+    );
+  }
+}
+
+class EventExample extends StatefulWidget {
+  const EventExample();
+
+  @override
+  State<EventExample> createState() => _EventExampleState();
+}
+
+class _EventExampleState extends State<EventExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,12 +208,51 @@ Pointers can be dragged over the scale to change their values interactively. Thi
     // Handle the value change
     print('Pointer value changed to: $value');
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 The [`onCreatePointerRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/onCreatePointerRenderer.html) callback allows you to create a custom pointer in the radial gauge. This callback is available for both the [`NeedlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) or [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) types.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const CustomPointerExample(),
+    );
+  }
+}
+
+class _CustomPointerRenderer extends MarkerPointerRenderer {
+  @override
+  void drawPointer(
+    Canvas canvas,
+    PointerPaintingDetails pointerPaintingDetails,
+    SfGaugeThemeData gaugeThemeData,
+  ) {
+    canvas.drawCircle(
+      pointerPaintingDetails.startOffset,
+      10,
+      Paint()..color = Colors.red,
+    );
+  }
+}
+
+class CustomPointerExample extends StatelessWidget {
+  const CustomPointerExample();
 
   @override
   Widget build(BuildContext context) {
@@ -161,22 +275,9 @@ The [`onCreatePointerRenderer`](https://pub.dev/documentation/syncfusion_flutter
       ),
     );
   }
-
-  class _CustomPointerRenderer extends MarkerPointerRenderer {
-    @override
-    void drawPointer(
-      Canvas canvas,
-      PointerPaintingDetails pointerPaintingDetails,
-      SfGaugeThemeData gaugeThemeData,
-    ) {
-      canvas.drawCircle(
-        pointerPaintingDetails.startOffset,
-        10,
-        Paint()..color = Colors.red,
-      );
-    }
-  }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![create pointer callback](images/pointers/on-create-pointer-renderer.png)
