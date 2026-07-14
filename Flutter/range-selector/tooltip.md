@@ -2,75 +2,88 @@
 layout: post
 title: Tooltip in Flutter Range Selector widget | Syncfusion
 description: Learn here all about adding the Tooltip feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Tooltip in Flutter Range Selector (SfRangeSelector)
 
-This section helps to learn about how to add tooltip in the range selector.
+This section explains how to add tooltips in the range selector.
 
 ## Enable tooltips
 
-You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
+You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html) property. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
 I> By setting the value of [`shouldAlwaysShowTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/shouldAlwaysShowTooltip.html) to true, you can always show a tooltip without having to interact with the range selector thumb. The default value is `false` and it works independent of the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html) behavior.
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
+class TooltipSample extends StatefulWidget {
+  @override
+  _TooltipSampleState createState() => _TooltipSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class _TooltipSampleState extends State<TooltipSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    showLabels: true,
-                    showTicks: true,
-                    enableTooltip: true,
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            showLabels: true,
+            showTicks: true,
+            enableTooltip: true,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
               ),
-          )
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {
@@ -95,58 +108,71 @@ You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](h
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-  Data(x: 2.0, y: 2.2),
-  Data(x: 3.0, y: 3.4),
-  Data(x: 4.0, y: 2.8),
-  Data(x: 5.0, y: 1.6),
-  Data(x: 6.0, y: 2.3),
-  Data(x: 7.0, y: 2.5),
-  Data(x: 8.0, y: 2.9),
-  Data(x: 9.0, y: 3.8),
-  Data(x: 10.0, y: 3.7),
-];
+class TooltipShapeSample extends StatefulWidget {
+  @override
+  _TooltipShapeSampleState createState() => _TooltipShapeSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class _TooltipShapeSampleState extends State<TooltipShapeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: SfRangeSelector(
-              min: _min,
-              max: _max,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              enableTooltip: true,
-              tooltipShape: SfPaddleTooltipShape(),
-              initialValues: _values,
-              child: Container(
-                height: 130,
-                child: SfCartesianChart(
-                  margin: const EdgeInsets.all(0),
-                  primaryXAxis: NumericAxis(minimum: _min,
-                    maximum: _max,
-                    isVisible: false,),
-                  primaryYAxis: NumericAxis(isVisible: false),
-                  plotAreaBorderWidth: 0,
-                  series: <SplineAreaSeries<Data, double>>[
-                    SplineAreaSeries<Data, double>(
-                        color: Color.fromARGB(255, 126, 184, 253),
-                        dataSource: chartData,
-                        xValueMapper: (Data sales, int index) => sales.x,
-                        yValueMapper: (Data sales, int index) => sales.y)
-                  ],
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 1,
+            showLabels: true,
+            showTicks: true,
+            enableTooltip: true,
+            tooltipShape: SfPaddleTooltipShape(),
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
                 ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
               ),
             ),
-          )
-      )
-  );
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {
@@ -172,11 +198,23 @@ You can format or change the whole tooltip label text using the [`tooltipTextFor
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
-final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
-SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
+class TooltipTextFormatSample extends StatefulWidget {
+  @override
+  _TooltipTextFormatSampleState createState() => _TooltipTextFormatSampleState();
+}
+
+class _TooltipTextFormatSampleState extends State<TooltipTextFormatSample> {
+  final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
+  final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
+  SfRangeValues _values = SfRangeValues(
+      DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+
+  final List<Data> chartData = <Data>[
     Data(x: DateTime(2002, 01, 01, 09, 00, 00), y: 2.2),
     Data(x: DateTime(2002, 01, 01, 10, 00, 00), y: 3.4),
     Data(x: DateTime(2002, 01, 01, 11, 00, 00), y: 2.8),
@@ -186,49 +224,52 @@ final List<Data> chartData = <Data>[
     Data(x: DateTime(2002, 01, 01, 15, 00, 00), y: 2.9),
     Data(x: DateTime(2002, 01, 01, 16, 00, 00), y: 3.8),
     Data(x: DateTime(2002, 01, 01, 17, 00, 00), y: 3.7),
-];
+  ];
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    showLabels: true,
-                    showTicks: true,
-                    interval: 2,
-                    dateFormat: DateFormat('h:mm'),
-                    dateIntervalType: DateIntervalType.hours,
-                    enableTooltip: true,
-                    tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
-                        return DateFormat('h:mm a').format(actualValue);
-                    },
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(
-                            minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, DateTime>>[
-                            SplineAreaSeries<Data, DateTime>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                xValueMapper: (Data sales, int index) => sales.x,
-                                yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            showLabels: true,
+            showTicks: true,
+            interval: 2,
+            dateFormat: DateFormat('h:mm'),
+            dateIntervalType: DateIntervalType.hours,
+            enableTooltip: true,
+            tooltipTextFormatterCallback:
+                (dynamic actualValue, String formattedText) {
+              return DateFormat('h:mm a').format(actualValue);
+            },
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: DateTimeAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, DateTime>>[
+                  SplineAreaSeries<Data, DateTime>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
               ),
-          )
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {
@@ -244,69 +285,83 @@ class Data {
 
 ## Tooltip color
 
-You can change the background color of the tooltip in the range selector using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipBackgroundColor.html) property.
+You can change the background color of the tooltip in the range selector using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/tooltipBackgroundColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
+class TooltipColorSample extends StatefulWidget {
+  @override
+  _TooltipColorSampleState createState() => _TooltipColorSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class _TooltipColorSampleState extends State<TooltipColorSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelectorTheme(
-                    data: SfRangeSelectorThemeData(
-                        tooltipBackgroundColor: Colors.red[300],
-                    ),
-                    child:  SfRangeSelector(
-                        min: _min,
-                        max: _max,
-                        interval: 1,
-                        enableTooltip: true,
-                        showTicks: true,
-                        showLabels: true,
-                        initialValues: _values,
-                        child: Container(
-                        height: 130,
-                        child: SfCartesianChart(
-                            margin: const EdgeInsets.all(0),
-                            primaryXAxis: NumericAxis(minimum: _min,
-                                maximum: _max,
-                                isVisible: false),
-                            primaryYAxis: NumericAxis(isVisible: false),
-                            plotAreaBorderWidth: 0,
-                            series: <SplineAreaSeries<Data, double>>[
-                                SplineAreaSeries<Data, double>(
-                                    color: Color.fromARGB(255, 126, 184, 253),
-                                        dataSource: chartData,
-                                            xValueMapper: (Data sales, int index) => sales.x,
-                                            yValueMapper: (Data sales, int index) => sales.y)
-                                ],
-                            ),
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelectorTheme(
+            data: SfRangeSelectorThemeData(
+              tooltipBackgroundColor: Colors.red[300],
+            ),
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              interval: 1,
+              enableTooltip: true,
+              showTicks: true,
+              showLabels: true,
+              initialValues: _values,
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis: NumericAxis(
+                    minimum: _min,
+                    maximum: _max,
+                    isVisible: false,
+                  ),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, double>>[
+                    SplineAreaSeries<Data, double>(
+                      color: Color.fromARGB(255, 126, 184, 253),
+                      dataSource: chartData,
+                      xValueMapper: (Data sales, int index) => sales.x,
+                      yValueMapper: (Data sales, int index) => sales.y)
+                  ],
+                ),
               ),
-          )
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {
@@ -322,69 +377,86 @@ class Data {
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text in the range selector using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipTextStyle.html) property.
+You can change the appearance of the tooltip text in the range selector using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/tooltipTextStyle.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
+class TooltipLabelStyleSample extends StatefulWidget {
+  @override
+  _TooltipLabelStyleSampleState createState() => _TooltipLabelStyleSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class _TooltipLabelStyleSampleState extends State<TooltipLabelStyleSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelectorTheme(
-                    data: SfRangeSelectorThemeData(
-                        tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
-                    ),
-                    child:  SfRangeSelector(
-                        min: _min,
-                        max: _max,
-                        interval: 1,
-                        enableTooltip: true,
-                        showTicks: true,
-                        showLabels: true,
-                        initialValues: _values,
-                        child: Container(
-                        height: 130,
-                        child: SfCartesianChart(
-                            margin: const EdgeInsets.all(0),
-                            primaryXAxis: NumericAxis(minimum: _min,
-                                maximum: _max,
-                                isVisible: false),
-                            primaryYAxis: NumericAxis(isVisible: false),
-                            plotAreaBorderWidth: 0,
-                            series: <SplineAreaSeries<Data, double>>[
-                                SplineAreaSeries<Data, double>(
-                                    color: Color.fromARGB(255, 126, 184, 253),
-                                        dataSource: chartData,
-                                            xValueMapper: (Data sales, int index) => sales.x,
-                                            yValueMapper: (Data sales, int index) => sales.y)
-                                ],
-                            ),
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelectorTheme(
+            data: SfRangeSelectorThemeData(
+              tooltipTextStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic),
+            ),
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              interval: 1,
+              enableTooltip: true,
+              showTicks: true,
+              showLabels: true,
+              initialValues: _values,
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis: NumericAxis(
+                    minimum: _min,
+                    maximum: _max,
+                    isVisible: false,
+                  ),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, double>>[
+                    SplineAreaSeries<Data, double>(
+                      color: Color.fromARGB(255, 126, 184, 253),
+                      dataSource: chartData,
+                      xValueMapper: (Data sales, int index) => sales.x,
+                      yValueMapper: (Data sales, int index) => sales.y)
+                  ],
+                ),
               ),
-          )
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {
@@ -400,69 +472,84 @@ class Data {
 
 ## Tooltip overlap stroke color
 
-You can change the overlap stroke color of the tooltip in the range selector using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
+You can change the overlap stroke color of the tooltip in the range selector using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/overlappingTooltipStrokeColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
+class TooltipOverlapStrokeSample extends StatefulWidget {
+  @override
+  _TooltipOverlapStrokeSampleState createState() =>
+      _TooltipOverlapStrokeSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class _TooltipOverlapStrokeSampleState extends State<TooltipOverlapStrokeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelectorTheme(
-                    data: SfRangeSelectorThemeData(
-                        overlappingTooltipStrokeColor: Colors.white,
-                    ),
-                    child:  SfRangeSelector(
-                        min: _min,
-                        max: _max,
-                        interval: 1,
-                        enableTooltip: true,
-                        showTicks: true,
-                        showLabels: true,
-                        initialValues: _values,
-                        child: Container(
-                        height: 130,
-                        child: SfCartesianChart(
-                            margin: const EdgeInsets.all(0),
-                            primaryXAxis: NumericAxis(minimum: _min,
-                                maximum: _max,
-                                isVisible: false),
-                            primaryYAxis: NumericAxis(isVisible: false),
-                            plotAreaBorderWidth: 0,
-                            series: <SplineAreaSeries<Data, double>>[
-                                SplineAreaSeries<Data, double>(
-                                    color: Color.fromARGB(255, 126, 184, 253),
-                                        dataSource: chartData,
-                                            xValueMapper: (Data sales, int index) => sales.x,
-                                            yValueMapper: (Data sales, int index) => sales.y)
-                                ],
-                            ),
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelectorTheme(
+            data: SfRangeSelectorThemeData(
+              overlappingTooltipStrokeColor: Colors.white,
+            ),
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              interval: 1,
+              enableTooltip: true,
+              showTicks: true,
+              showLabels: true,
+              initialValues: _values,
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis: NumericAxis(
+                    minimum: _min,
+                    maximum: _max,
+                    isVisible: false,
+                  ),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, double>>[
+                    SplineAreaSeries<Data, double>(
+                      color: Color.fromARGB(255, 126, 184, 253),
+                      dataSource: chartData,
+                      xValueMapper: (Data sales, int index) => sales.x,
+                      yValueMapper: (Data sales, int index) => sales.y)
+                  ],
+                ),
               ),
-          )
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class Data {

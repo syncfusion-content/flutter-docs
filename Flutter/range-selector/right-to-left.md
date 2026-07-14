@@ -2,16 +2,18 @@
 layout: post
 title: RTL in Flutter Range Selector widget | Syncfusion
 description: Learn here all about the RTL rendering in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
+N> RTL is not applicable for the vertical orientation of the range selector.
+
 ## RTL rendering ways
 
-Right to left rendering can be achieved in the following ways:
+Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfRangeSelector with Directionality widget
 
@@ -20,31 +22,41 @@ The range selector can be wrapped inside the [`Directionality`](https://api.flut
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class RtlDirectionalitySample extends StatefulWidget {
+  @override
+  _RtlDirectionalitySampleState createState() => _RtlDirectionalitySampleState();
+}
+
+class _RtlDirectionalitySampleState extends State<RtlDirectionalitySample> {
+  SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Center(
-              child: SfRangeSelector(
-                min: 2.0,
-                max: 10.0,
-                interval: 1,
-                showLabels: true,
-                showTicks: true,
-                initialValues: _initialValues,
-                child: Container(
-                    color: Colors.pink[200],
-                    height: 150,
-                 ),
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Center(
+            child: SfRangeSelector(
+              min: 2.0,
+              max: 10.0,
+              interval: 1,
+              showLabels: true,
+              showTicks: true,
+              initialValues: _initialValues,
+              child: Container(
+                color: Colors.pink[200],
+                height: 150,
               ),
-            )
-         ),
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -67,35 +79,46 @@ dependencies:
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    localizationsDelegates: [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-    ],
-    supportedLocales: [
-      Locale("fa", "IR"),
-    ],
-    locale: Locale("fa", "IR"),
-    home: Scaffold(
-      backgroundColor: Colors.white,
-      body: SfRangeSelector(
-        min: 2.0,
-        max: 10.0,
-        interval: 1,
-        showLabels: true,
-        showTicks: true,
-        initialValues: _initialValues,
-        child: Container(
-          color: Colors.pink[200],
-          height: 150,
+class RtlLocaleSample extends StatefulWidget {
+  @override
+  _RtlLocaleSampleState createState() => _RtlLocaleSampleState();
+}
+
+class _RtlLocaleSampleState extends State<RtlLocaleSample> {
+  SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("fa", "IR"),
+      ],
+      locale: Locale("fa", "IR"),
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: SfRangeSelector(
+          min: 2.0,
+          max: 10.0,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          initialValues: _initialValues,
+          child: Container(
+            color: Colors.pink[200],
+            height: 150,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}

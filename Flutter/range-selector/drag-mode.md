@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Drag modes in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the multiple Drag modes in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
-platform: Flutter
+description: Learn here all about adding the multiple Drag modes in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -11,63 +11,14 @@ documentation: ug
 
 ## On thumb
 
-When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.onThumb`, only an individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb.
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    showTicks: true,
-                    showLabels: true,
-                    initialValues: _values,
-                    dragMode: SliderDragMode.onThumb,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
@@ -75,75 +26,137 @@ class Data {
   final double y;
 }
 
-{% endhighlight %}
+class DragModeOnThumbSample extends StatelessWidget {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  final SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            showTicks: true,
+            showLabels: true,
+            initialValues: _values,
+            dragMode: SliderDragMode.onThumb,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 {% endtabs %}
 
 ![Drag mode on thumb](images/drag-mode/drag-mode-on-thumb.gif)
 
 ## Between thumbs
 
-When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, both the thumbs can be moved at the same time by dragging in the area between start and end thumbs. The range between the start and end thumb will always be the same. Hence, it is not possible to move the individual thumb.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, both the thumbs can be moved at the same time by dragging in the area between start and end thumbs. The range between the start and end thumbs will always be the same. Hence, it is not possible to move an individual thumb.
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    showTicks: true,
-                    showLabels: true,
-                    initialValues: _values,
-                    dragMode: SliderDragMode.betweenThumbs,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final double x;
   final double y;
+}
+
+class DragModeBetweenThumbsSample extends StatelessWidget {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  final SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            showTicks: true,
+            showLabels: true,
+            initialValues: _values,
+            dragMode: SliderDragMode.betweenThumbs,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -158,63 +171,71 @@ When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/lates
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    showTicks: true,
-                    showLabels: true,
-                    initialValues: _values,
-                    dragMode: SliderDragMode.both,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final double x;
   final double y;
+}
+
+class DragModeBothSample extends StatelessWidget {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  final SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            showTicks: true,
+            showLabels: true,
+            initialValues: _values,
+            dragMode: SliderDragMode.both,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
