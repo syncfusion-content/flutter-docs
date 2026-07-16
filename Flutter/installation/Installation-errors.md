@@ -65,9 +65,6 @@ You can choose from the options listed below.
 3. Reach out to our sales team by emailing <sales@syncfusion.com>. 
 4. Extend the 30-day trial period after your trial license has expired (if eligible).
 
-After renewing, refer to the [license key generation instructions](https://help.syncfusion.com/flutter/licensing/how-to-generate) to apply the renewed key.
-
-
 ## Unable to find a valid license or trial
 
 ### Problem
@@ -152,7 +149,7 @@ Controlled folder access is enabled on your computer.
 
 **Solution 1:** Disable controlled folder access, then install to the default Documents folder.
 
-1. Verify that controlled folder access is currently enabled: open **Windows Security > Virus & threat protection > Manage ransomware protection**.
+1. Verify that Controlled folder access is enabled in Windows Security. Go to Virus & threat protection and ensure that Controlled folder access is turned on.
 2. Follow the steps in [Allow an app to access controlled folders](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable controlled folder access.
 3. Run the Syncfusion installer. Our demos are installed to the public Documents folder by default.
 4. After installation is complete, re-enable controlled folder access from the same Windows Security panel.
