@@ -19,7 +19,7 @@ Syncfusion Flutter widgets can be developed on Windows, macOS, or Linux and depl
 
 * Windows 10, 11
 * macOS Catalina (10.15) and later
-* Linux (Ubuntu 20.04 LTS to 24.04 LTS, Debian 10 to 13)
+* Linux (Ubuntu 20.04 LTS to 24.04 LTS)
 
 **Mobile deployment targets**
 
@@ -30,7 +30,7 @@ Syncfusion Flutter widgets can be developed on Windows, macOS, or Linux and depl
 
 * Windows: 10, 11 (Windows 8 and earlier unsupported)
 * macOS: Catalina (10.15) to Tahoe (26) (Mojave 10.14 and earlier unsupported)
-* Linux: Ubuntu 20.04 LTS to 24.04 LTS, Debian 10 to 13
+* Linux: Ubuntu 20.04 LTS to 24.04 LTS
 
 **Web deployment targets**
 
