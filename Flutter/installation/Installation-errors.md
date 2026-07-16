@@ -2,8 +2,8 @@
 layout: post
 title: Installation Errors in Flutter - Syncfusion
 description: Learn here about the common installation errors and solutions to those errors in Syncfusion Flutter Components installation.
-platform: Flutter
-control: Installation and Deployment
+platform: flutter
+control: Essential Studio
 documentation: ug
 ---
 

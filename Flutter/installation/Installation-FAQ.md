@@ -2,7 +2,7 @@
 layout: post
 title: Installation | Frequently Asked Questions | Syncfusion
 description: Learn here all about the Frequently Asked Questions (FAQs) about the doubts that might occur during the Installation.
-platform: Flutter
+platform: flutter
 control: Installation and Deployment
 documentation: ug
 
