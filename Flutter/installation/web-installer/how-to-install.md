@@ -24,7 +24,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
-    N> The installer wizard extracts the syncfusionessentialflutterwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
+    > N>The installer wizard extracts the syncfusionessentialflutterwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
 2. 	The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button.
 
@@ -33,17 +33,17 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
   
 3.  The Platform Selection Wizard will appear. From the **Available** tab, select the products to be installed. Select the **Install All** checkbox to install all platforms. 
     
-	<em>**Available**</em>
+	**Available**
 	
 	![Platform Selection wizard Available](images/Step-by-Step-Installation_img3.png)
 	
-	If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the Next button.
+	If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the **Next** button.
 	
-	<em>**Installed**</em>
+	**Installed**
 	
     ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img24.png)
 	
-	I> If the required software for the selected product isn't already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
+	> I> If the required software for the selected product isn't already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
 	
 	**Required Software**
 	
@@ -54,7 +54,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	> N>From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
 5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -66,7 +66,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+	> N>By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
 	
 
 7.  The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
@@ -75,9 +75,9 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 	
 	**Additional settings**
 	
-    * Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup> samples.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup> Control Panel.
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup> Control Panel.
+    * Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked if you do not want to install Syncfusion<sup>&reg;</sup> samples.
+    * Check the **Create Desktop Shortcut** check box to add a desktop shortcut for the Syncfusion<sup>&reg;</sup> Control Panel.
+    * Check the **Create Start Menu Shortcut** check box to add a shortcut to the start menu for the Syncfusion<sup>&reg;</sup> Control Panel.
 
 
 
@@ -87,19 +87,19 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
     ![Login wizard install](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your Syncfusion <sup>&reg;</sup> License (Trial or Licensed).
+	> I> The products you have chosen will be installed based on your Syncfusion <sup>&reg;</sup> License (Trial or Licensed).
 
 10. The download and installation\uninstallation progress will be displayed as shown below.
 
     ![Download and Installation progress install](images/Step-by-Step-Installation_img10.png)
 
-11. When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been installed successfully and those that have failed. To close the Summary wizard, click Finish. 
+11. When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been installed successfully and those that have failed. To close the **Summary** wizard, click **Finish**. 
 
     ![Installation Summary](images/Step-by-Step-Installation_img11.png)
 	
 	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two Syncfusion<sup>&reg;</sup> control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup> products installed in the same version, while the product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup>&reg;</sup> Control Panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup> products installed in the same version, while the product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -127,21 +127,21 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio<sup>&reg;</sup> Flutter alone will be removed and the below default MSI uninstallation window will be displayed.	
+> N>If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio<sup>&reg;</sup> Flutter alone will be removed and the below default MSI uninstallation window will be displayed.	
 
 1.  The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 
-2.  The Platform Selection Wizard will appear. From the **Installed** tab, select the products to be uninstalled. To select all products, check the **Uninstall All** checkbox. Click the Next button.
+2.  The Platform Selection Wizard will appear. From the **Installed** tab, select the products to be uninstalled. To select all products, check the **Uninstall All** checkbox. Click the **Next** button.
     
-	<em>**Installed**</em>
+	**Installed**
 	
 	![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
-	You can also select the products to be installed from the **Available** tab.Click the Next button.
+	You can also select the products to be installed from the **Available** tab. Click the **Next** button.
 	
-	<em>**Available**</em>
+	**Available**
 	
 	![Platform Selection wizard Available](images/Step-by-Step-Installation_img25.png)
 	
@@ -157,7 +157,7 @@ N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** 
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+	> N>By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
 	
 6.	The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 
@@ -169,13 +169,13 @@ N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** 
 
     ![Login wizard install/uninstall](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
+	> I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
 9.	The download, installation, and uninstallation progresses will be shown.
 
     ![Download and Installation progress install/uninstall](images/Step-by-Step-Installation_img17.png)
 
-10.	When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been successfully and unsuccessfully installed/uninstalled. To close the Summary wizard, click Finish.
+10.	When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been successfully and unsuccessfully installed/uninstalled. To close the **Summary** wizard, click **Finish**.
 
     ![Summary install/uninstall](images/Step-by-Step-Installation_img18.png)
 	
