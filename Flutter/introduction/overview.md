@@ -25,27 +25,27 @@ Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for Flutter is a comprehen
   <tbody>
     <tr>
       <td>Android</td>
-      <td>5.0 (API 21) or higher</td>
+      <td>24 or higher</td>
     </tr>
     <tr>
       <td>iOS</td>
-      <td>11.0 or higher</td>
+      <td>13.0 or higher</td>
     </tr>
     <tr>
       <td>Web</td>
-      <td>Latest Chrome, Firefox, Safari, Edge</td>
+      <td>Latest Chrome, Firefox, Edge, and Safari (15.6 or later)</td>
     </tr>
     <tr>
       <td>Windows</td>
-      <td>Windows 10 (v1809+) or higher</td>
+      <td>Windows 10 or higher</td>
     </tr>
     <tr>
       <td>macOS</td>
-      <td>macOS 10.14 or higher</td>
+      <td>macOS 10.15 or higher</td>
     </tr>
     <tr>
       <td>Linux</td>
-      <td>Latest stable distributions</td>
+      <td>Ubuntu 20.04 LTS to 24.04 LTS</td>
     </tr>
   </tbody>
 </table>
