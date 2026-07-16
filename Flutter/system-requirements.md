@@ -15,12 +15,6 @@ The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platfor
 
 Syncfusion Flutter widgets can be developed on Windows, macOS, or Linux and deployed to mobile, desktop, and web targets. The supported deployment platforms and versions follow the [Flutter supported platforms](https://docs.flutter.dev/reference/supported-platforms) matrix.
 
-**Development operating systems**
-
-* Windows 10, 11
-* macOS Catalina (10.15) and later
-* Linux (Ubuntu 20.04 LTS to 24.04 LTS)
-
 **Mobile deployment targets**
 
 * Android: API level 24 to 36 (API 23 and earlier unsupported)
@@ -44,14 +38,6 @@ Syncfusion Flutter widgets can be developed on Windows, macOS, or Linux and depl
 * Processor: x64 or Arm64
 * RAM: 8 GB (minimum), 16 GB (recommended)
 * Hard disk: up to 3 GB of free space required.
-
-## Development Environment
-
-Install one of the following IDEs along with the Flutter SDK:
-
-* **Android Studio** - Required for Android development (includes the Android SDK and emulator).
-* **Xcode** - Required for iOS development (available only on macOS).
-* **VS Code** - Recommended lightweight editor that supports all Flutter target platforms.
 
 See the links below for the recommended Flutter SDK installation guides:
 
@@ -182,8 +168,4 @@ N> All Syncfusion Flutter packages share the same version number. The version li
         </td>
     </tr>
 </table>
-
-### Supported Platforms
-
-Syncfusion Flutter packages are compatible with iOS, Android, Web, Windows, macOS, and Linux. The full list of supported platform versions is maintained by the Flutter team in the [supported deployment platforms](https://docs.flutter.dev/reference/supported-platforms) reference.
 
