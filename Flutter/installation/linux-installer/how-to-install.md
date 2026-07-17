@@ -29,7 +29,7 @@ The steps below show how to install the Flutter Linux installer.
 
    ![License Agreement](images/Linux_Installer2.png)   
    
-   > N> An unlock key is not required to install the Linux installer.
+   N> An unlock key is not required to install the Linux installer.
 
 
 3. You can launch the demo source and use the packages included in the Linux installer.

@@ -53,7 +53,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
    ![License confirmation wizard](images/Mac_Installer3.png)
    
-   > N> An unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio Flutter Mac installer can be used for development purposes without registering the unlock key.
+   N> An unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio Flutter Mac installer can be used for development purposes without registering the unlock key.
 
 
 4. Paste the copied file into the **Applications** folder.

@@ -47,7 +47,7 @@ You should initiate an evaluation if you have already obtained our components th
 2. To access this page, you must sign up or log in with your Syncfusion<sup>&reg;</sup> account.
 3. Begin your trial by selecting the Flutter product. 
 
-   > N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
+   N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
 4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/flutter/licensing/overview) here at any time before the trial period expires (as shown in the screenshot below).
 
