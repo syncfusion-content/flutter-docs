@@ -22,4 +22,4 @@ Syncfusion<sup>&reg;</sup> Flutter Radial Gauge is a powerful data visualization
 * **Pointer interaction** - Interactive functionality allows users to drag pointers from one value to another, enabling real-time value changes and user input directly through the gauge interface.
 * **[Annotations](annotation.md)** - Add multiple widgets such as text, images, or custom Flutter widgets as annotations at specific points of interest in the radial gauge to provide additional context or information.
 
-You can get the Radial Gauge sample in the following link: [`Flutter Gauges - Radial Gauge Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/gauge/radial_gauge).
+You can get the Radial Gauge sample in the following link: [`Flutter Gauges - Radial Gauge Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples).

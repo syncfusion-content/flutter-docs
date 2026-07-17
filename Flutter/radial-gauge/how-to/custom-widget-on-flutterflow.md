@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> Radial Gauge widget in FlutterFlow?
+# How to add Syncfusion<sup>&reg;</sup> Radial Gauge widget in Flutter?
 
 ## Overview
 
