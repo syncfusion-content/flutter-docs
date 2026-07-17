@@ -62,7 +62,7 @@ The Syncfusion<sup>&reg;</sup> Flutter Calendar library is written natively in D
 
 ## Getting started
 
-To get started with the Syncfusion Flutter Calendar, refer to the [Getting Started with Flutter Event Calendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/getting-started.html) documentation.
+To get started with the Syncfusion Flutter Calendar, refer to the [Getting Started with Flutter Event Calendar](https://help.syncfusion.com/flutter/calendar/getting-started) documentation.
 
 
 

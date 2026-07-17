@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Month view in Flutter Event Calendar | Syncfusion
-description: Step-by-step guide to control month view in Syncfusion Flutter Event Calendar—display appointments, agenda view, blackout dates, and customize month view appearance.
+description: Step-by-step guide to manage the Syncfusion Flutter Event Calendar month view, including appointments, agenda display, blackout dates, and custom styling.
 platform: flutter
 control: SfCalendar
 documentation: ug
