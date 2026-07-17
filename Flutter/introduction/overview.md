@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion<sup>&reg;</sup> Flutter Widgets | Syncfusion
-description: Step-by-step guide to Syncfusion Flutter widgets, covering key features, documentation structure, API references, code examples, demos, video tutorials, and support resources for building high-quality cross-platform applications.
+description: Complete guide to Syncfusion Flutter widgets with features, API docs, code samples, demos, video tutorials, and support for cross-platform app development.
 platform: flutter
 control: Overview
 documentation: ug
@@ -35,7 +35,7 @@ The [Knowledge Base](https://www.syncfusion.com/kb/flutter) contains responses f
 
 ### Video Tutorials
 
-Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tutorial-videos/flutter).
+Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tutorial-videos).
 
 ## Demos
 
