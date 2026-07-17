@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> Linear Gauge widget in FlutterFlow?
+# How to add Syncfusion<sup>&reg;</sup> Linear Gauge widget in Flutter?
 
 ## Overview
 
