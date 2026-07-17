@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Flutter installer - Syncfusion
-description: Learn here how to download the Syncfusion Flutter offline installer from the Syncfusion website.
+description: Learn how to download and install the Syncfusion Flutter offline installer from the Syncfusion website for seamless development setup.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
