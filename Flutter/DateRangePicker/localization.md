@@ -69,4 +69,4 @@ class MyApp extends StatelessWidget {
 ## See also
 
 * [Globalization in Flutter Date Range Picker](https://help.syncfusion.com/flutter/globalization)
-* [Right to left in Flutter Date Range Picker](https://help.syncfusion.com/flutter/date-range-picker/right-to-left)
+* [Right to left in Flutter Date Range Picker](https://help.syncfusion.com/flutter/daterangepicker/right-to-left)

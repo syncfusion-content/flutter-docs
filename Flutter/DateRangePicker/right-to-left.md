@@ -97,5 +97,3 @@ class MyApp extends StatelessWidget {
 ## RTL supported date range picker elements
 
 Right-to-left rendering is supported for all the elements in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). The calendar header, view header, month cells, year/decade/century cells, navigation arrows, today button, and selection view all render in the right-to-left direction.
-
-![RTL supported date range picker elements](images/rtl/rtl_supported_elements.png)
