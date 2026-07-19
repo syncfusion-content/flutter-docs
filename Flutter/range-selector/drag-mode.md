@@ -81,6 +81,9 @@ class DragModeOnThumbSample extends StatelessWidget {
       ),
     );
   }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![Drag mode on thumb](images/drag-mode/drag-mode-on-thumb.gif)

@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> RangeSelector widget in FlutterFlow?
+# How to add Syncfusion<sup>&reg;</sup> RangeSelector widget in Flutter?
 
 ## Overview
 
@@ -22,7 +22,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to the `Custom Code` section in the left side navigation menu.
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
-4. Click the `View Boilerplate Code` button on the right side, represented by the ![Boilerplate icon](how-to-section-images/boilerplate-icon.png) icon.
+4. Click the `View Boilerplate Code` button on the right side, represented by the `[</>]` icon.
 5. A popup will appear with boilerplate code; locate the button labeled `</> Copy to Editor` and click on it.
 6. Save the widget.
 
