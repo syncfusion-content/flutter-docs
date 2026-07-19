@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> DateRangePicker widget in Flutter?
+# How to add Syncfusion® DateRangePicker widget in Flutter?
 
 ## Overview
 
