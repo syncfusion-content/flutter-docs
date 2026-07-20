@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DateRangePicker Widget in FlutterFlow framework | Syncfusion
+title: DateRangePicker Widget in FlutterFlow | Syncfusion
 description: You can learn here all about adding Syncfusion Flutter DateRangePicker ( SfDateRangePicker ) widget in FlutterFlow framework.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> DateRangePicker widget in FlutterFlow?
+# How to add Syncfusion® DateRangePicker widget in Flutter?
 
 ## Overview
 
@@ -22,8 +22,8 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 1. Navigate to the `Custom Code` section in the left side navigation menu.
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
-4. Click the `View Boilerplate Code` button on the right side, represented by this icon `[</>]`.
-5. A popup will appear with startup code; locate the button labeled `</> Copy to Editor` and click on it.
+4. Click the `View Boilerplate Code` button on the right side, represented by the `</>` icon.
+5. A popup will appear with boilerplate code; locate the button labeled `</> Copy to Editor` and click on it.
 6. Save the widget.
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
@@ -35,7 +35,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The current version of [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
@@ -52,10 +52,10 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_datepicker/example) tab in [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) and copy the widget specific codes.
+1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_datepicker/example) tab in [Syncfusion<sup>&reg;</sup> Flutter DatePicker](https://pub.dev/packages/syncfusion_flutter_datepicker) and copy the widget-specific code sample.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
-![Code snippet](how-to-section-images/Adding-code-snippent.png)
+![Code snippet](how-to-section-images/Adding-code-snippet.png)
 
 ### Compiling the codes
 
@@ -66,10 +66,13 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 >**Note**: The compilation progress takes 2 to 3 minutes to complete.
 
+>**Troubleshooting**: Common errors include missing imports, version mismatches between the Syncfusion package and Flutter SDK, and incorrect property names. To resolve these, verify that all required imports are present, ensure the package version is compatible with the FlutterFlow Flutter version, and refer to the [SfDateRangePicker API reference](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) for correct property names.
+
 ### Utilizing the custom widget
 
 1. Navigate to `Widget Palette` located in the left side navigation menu.
 2. Click on the `Components` tab.
 3. Your custom widget will be under `Custom Code Widgets`. Drag and drop the custom widget to your page.
+4. To wire the custom widget to FlutterFlow data sources, use the widget's parameters (defined in the custom widget's constructor) and bind them to FlutterFlow state values or data source fields in the right-side properties panel.
 
 ![Page](how-to-section-images/page.png)
