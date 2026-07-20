@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Accessibility in Flutter Range Selector widget | Syncfusion
+title: Accessibility in Flutter Range Selector widget | Syncfusion
 description: Learn here all about the accessibility support in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Keyboard support
 
-This feature allows you to focus on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. By default, the start thumb receives focus first. The left and down arrow keys can be used to decrease the value of the focused thumb, while the right and up arrow keys can be used to increase it.
+This feature allows you to focus on the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. By default, the start thumb receives focus first. The left and down arrow keys can be used to decrease the value of the focused thumb, while the right and up arrow keys can be used to increase it. The value changes by [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) or [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) per key press.
 
 N> In [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html), keyboard accessibility is not supported when [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, as focus can only be applied to one thumb at a time.
 
@@ -26,36 +26,48 @@ For iOS, you can adjust the value of each thumb by moving the focus to the thumb
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-   return MaterialApp(
+class AccessibilityScreenReaderSample extends StatefulWidget {
+  @override
+  _AccessibilityScreenReaderSampleState createState() =>
+      _AccessibilityScreenReaderSampleState();
+}
+
+class _AccessibilityScreenReaderSampleState
+    extends State<AccessibilityScreenReaderSample> {
+  SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: SfRangeSelector(
-              min: 0.0,
-              max: 100.0,
-              initialValues: _values,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              semanticFormatterCallback: (dynamic value, SfThumb thumb){
-                return 'The $thumb value is $value';
-              },
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-              child: Container(
-                height: 200,
-                color: Colors.pink[200],
-              ),
+        body: Center(
+          child: SfRangeSelector(
+            min: 0.0,
+            max: 100.0,
+            initialValues: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            semanticFormatterCallback: (dynamic value, SfThumb thumb) {
+              return 'The $thumb value is $value';
+            },
+            onChanged: (SfRangeValues newValues) {
+              setState(() {
+                _values = newValues;
+              });
+            },
+            child: Container(
+              height: 200,
+              color: Colors.pink[200],
             ),
-          )
+          ),
+        ),
       ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -69,7 +81,7 @@ You can customize the color of the [`SfRangeSelector`](https://pub.dev/documenta
 * [`Major ticks`](https://help.syncfusion.com/flutter/range-selector/ticks#major-ticks-color)
 * [`Minor ticks`](https://help.syncfusion.com/flutter/range-selector/ticks#minor-ticks-color)
 * [`Labels`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#show-labels)
-* [`Dividers`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#show-dividers)
+* [`Dividers`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#divider-color)
 * [`Thumb`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay#thumb-color)
 * [`Thumb overlay`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay#thumb-overlay-color)
 * [`Active region color`](https://help.syncfusion.com/flutter/range-selector/basic-features#active-region-color)
@@ -82,6 +94,6 @@ The font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusio
 * [`Label style`](https://help.syncfusion.com/flutter/range-selector/labels-and-divider#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-selector/tooltip#tooltip-label-style)
 
-## Easier touch targets
+## Touch targets
 
-The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) has touch target as 48 * 48 as per the standard for all the elements.
+The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) provides touch targets of 48 × 48 pixels for all interactive elements.
