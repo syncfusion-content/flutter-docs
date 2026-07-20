@@ -9,19 +9,54 @@ documentation: ug
 
 # Flutter Event Calendar Resource View (SfCalendar)
 
-The timeline resource grouping is a discrete view integrated into our Event calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
+The timeline resource grouping is a discrete view integrated into our Event Calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
 
 You can create a resource view by setting the [displayName](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/displayName.html), [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/color.html), [id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/id.html), and [image](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/image.html) property of the [CalendarResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="1" %}
+{% highlight dart hl_lines="20" %}
 
-List<CalendarResource> resourceColl = <CalendarResource>[];
-    resourceColl.add(CalendarResource(
-      displayName: 'John',
-      id: '0001',
-      color: Colors.red,
-    ));
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.timelineWeek,
+          dataSource: _getCalendarDataSource(),
+        ),
+      ),
+    );
+  }
+}
+
+_AppointmentDataSource _getCalendarDataSource() {
+  List<Appointment> appointments = <Appointment>[];
+  List<CalendarResource> resourceColl = <CalendarResource>[];
+  resourceColl.add(CalendarResource(
+    displayName: 'John',
+    id: '0001',
+    color: Colors.red,
+  ));
+  return _AppointmentDataSource(appointments, resourceColl);
+}
+
+class _AppointmentDataSource extends CalendarDataSource {
+  _AppointmentDataSource(
+      List<Appointment> source, List<CalendarResource> resourceColl) {
+    appointments = source;
+    resources = resourceColl;
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -31,6 +66,7 @@ You can add resources that can be assigned to the appointments and time regions 
 {% tabs %}
 {% highlight dart hl_lines="2 3" %}
 
+/// Code fragment: assign `resourceColl` to the CalendarDataSource.
 class _AppointmentDataSource extends CalendarDataSource {
   _AppointmentDataSource(
       List<Appointment> source, List<CalendarResource> resourceColl) {
@@ -50,6 +86,9 @@ You can associate resources to the appointments by adding `id` of a resource to 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
 
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+/// Code fragment: `appointments` is a List<Appointment>.
 appointments.add(Appointment(
       startTime: DateTime(2020, 08, 25, 14, 0, 0),
       endTime: DateTime(2020, 08, 25, 14, 30, 0),
@@ -67,6 +106,8 @@ You can associate resources to custom business objects using the equivalent fiel
 
 {% tabs %}
 {% highlight dart hl_lines="3 5 8 9 10 11" %}
+
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class _AppointmentDataSource extends CalendarDataSource {
   _AppointmentDataSource(
@@ -93,12 +134,16 @@ You can add time regions to the resources by adding `id` of the resource in the 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+/// Code fragment: `_specialTimeRegions` is a List<TimeRegion>.
 List<TimeRegion> _specialTimeRegions = <TimeRegion>[];
     _specialTimeRegions.add(TimeRegion(
         startTime: DateTime(2020, 08, 20, 13, 0, 0),
         endTime: DateTime(2020, 08, 20, 14, 0, 0),
         text: 'Lunch',
-        color: Colors.green.withOpacity(0.2),
+        color: Colors.green.withValues(alpha: 0.2),
         recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
         resourceIds: <Object>['0001', '0001']));
 
@@ -109,19 +154,44 @@ List<TimeRegion> _specialTimeRegions = <TimeRegion>[];
 You can customize the number of visible resources in the current view using the [visibleResourceCount](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/visibleResourceCount.html) property of [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). By default, the value of this property is set to ‘-1.’ 
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="21" %}
 
-@override
-Widget build(BuildContext context) {
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  CalendarDataSource? _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = _getCalendarDataSource();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           body: SfCalendar(
+        view: CalendarView.timelineWeek,
         dataSource: _dataSource,
-        resourceViewSettings: ResourceViewSettings(
+        resourceViewSettings: const ResourceViewSettings(
           visibleResourceCount: 2,
         ),
     )),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -138,22 +208,47 @@ You can customize the height or width of the resource view individually using th
 - **visibleResourceCount** — When `visibleResourceCount` is set (> 0), the calendar automatically calculates the height of each resource item based on the available space and the number of visible resources. In this case, an explicitly set `height` value is ignored.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="21 22 23 24 25 26" %}
 
-@override
-Widget build(BuildContext context) {
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  CalendarDataSource? _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = _getCalendarDataSource();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           body: SfCalendar(
+        view: CalendarView.timelineWeek,
         dataSource: _dataSource,
-        resourceViewSettings: ResourceViewSettings(
+        resourceViewSettings: const ResourceViewSettings(
           height: 100,
           width: 250,
           // size: 120,          // used only when `width` is not provided
           // visibleResourceCount: 2, // when set, determines row height instead of `height`
         ),
     )),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -166,17 +261,43 @@ Widget build(BuildContext context) {
 You can disable the user profile image and the circle representation of the resource by setting `false` to the [showAvatar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/showAvatar.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html). This will display each resource with a resource name and the color assigned to the resource. 
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: SfCalendar(
-        dataSource: _dataSource,
-        resourceViewSettings: ResourceViewSettings(showAvatar: false),
-    )),
-  );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  CalendarDataSource? _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = _getCalendarDataSource();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.timelineWeek,
+          dataSource: _dataSource,
+          resourceViewSettings: const ResourceViewSettings(showAvatar: false),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -187,21 +308,47 @@ Widget build(BuildContext context) {
 ### Display name text style
 The display name text style for the resource view can be customized by setting an appropriate text style to the [displayNameTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/displayNameTextStyle.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html).
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11" %}
+{% highlight dart hl_lines="21 22 23 24" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: SfCalendar(
-        dataSource: _dataSource,
-        resourceViewSettings: ResourceViewSettings(
-            displayNameTextStyle: TextStyle(
-                fontSize: 11,
-                color: Colors.redAccent,
-                fontStyle: FontStyle.italic)),
-      )),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  CalendarDataSource? _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = _getCalendarDataSource();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.timelineWeek,
+          dataSource: _dataSource,
+          resourceViewSettings: const ResourceViewSettings(
+              displayNameTextStyle: TextStyle(
+                  fontSize: 11,
+                  color: Colors.redAccent,
+                  fontStyle: FontStyle.italic)),
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
@@ -213,17 +360,43 @@ Widget build(BuildContext context) {
 You can customize the size of the panel that displays the resource views in the calendar by setting an appropriate value to the [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="21" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: SfCalendar(
-		dataSource: _dataSource,
-        resourceViewSettings: ResourceViewSettings(size: 120),
-      )),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  CalendarDataSource? _dataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    _dataSource = _getCalendarDataSource();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.timelineWeek,
+          dataSource: _dataSource,
+          resourceViewSettings: const ResourceViewSettings(size: 120),
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
