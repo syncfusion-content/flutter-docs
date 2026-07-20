@@ -18,19 +18,28 @@ You can notify the user that the map is being loaded using the [`MapShapeLayer.l
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(15),
@@ -52,6 +61,7 @@ Widget build(BuildContext context) {
         ),
       ),
    );
+  }
 }
 
 {% endhighlight %}
@@ -66,19 +76,28 @@ You can apply color, stroke color and stroke width to the shapes using the [`Map
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(15),
@@ -94,6 +113,7 @@ Widget build(BuildContext context) {
         ),
       ),
    );
+  }
 }
 
 {% endhighlight %}
@@ -112,38 +132,49 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-void initState() {
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(15),
-      child: SfMapsTheme(
-        data: SfMapsThemeData(
-          layerColor: Colors.blue[100],
-          layerStrokeColor: Colors.blue,
-          layerStrokeWidth: 2,
-        ),
-        child: SfMaps(
-          layers: <MapLayer>[
-            MapShapeLayer(
-              source: dataSource,
-            ),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            layerColor: Colors.blue[100],
+            layerStrokeColor: Colors.blue,
+            layerStrokeWidth: 2,
+          ),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                source: dataSource,
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -160,38 +191,49 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-void initState() {
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Padding(
-      padding: EdgeInsets.all(15),
-      child: SfMapsTheme(
-        data: SfMapsThemeData(
-           shapeHoverColor: Colors.red[800],
-           shapeHoverStrokeColor: Colors.black,
-           shapeHoverStrokeWidth: 2,
-        ),
-        child: SfMaps(
-          layers: <MapLayer>[
-            MapShapeLayer(
-              source: dataSource,
-            ),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+             shapeHoverColor: Colors.red[800],
+             shapeHoverStrokeColor: Colors.black,
+             shapeHoverStrokeWidth: 2,
+          ),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                source: dataSource,
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -213,48 +255,58 @@ N> You can show legend using the [`MapShapeLayer.legend`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-    data = const <Model>[
-      Model('Asia', Color.fromRGBO(60, 120, 255, 0.8)),
-      Model('Africa', Color.fromRGBO(51, 102, 255, 0.8)),
-      Model('Europe', Color.fromRGBO(0, 57, 230, 0.8)),
-      Model('South America', Color.fromRGBO(0, 51, 204, 0.8)),
-      Model('Australia', Color.fromRGBO(0, 45, 179, 0.8)),
-      Model('North America', Color.fromRGBO(0, 38, 153, 0.8))
-    ];
-
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-       shapeDataField: 'continent',
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].country,
-       shapeColorValueMapper: (int index) => data[index].color,
-    );
-    super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Container(
-        height: 350,
-        child: Padding(
-          padding: EdgeInsets.only(left: 15, right: 15),
-          child: SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                source: dataSource,
-              ),
-            ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+      data = const <Model>[
+        Model('Asia', Color.fromRGBO(60, 120, 255, 0.8)),
+        Model('Africa', Color.fromRGBO(51, 102, 255, 0.8)),
+        Model('Europe', Color.fromRGBO(0, 57, 230, 0.8)),
+        Model('South America', Color.fromRGBO(0, 51, 204, 0.8)),
+        Model('Australia', Color.fromRGBO(0, 45, 179, 0.8)),
+        Model('North America', Color.fromRGBO(0, 38, 153, 0.8))
+      ];
+
+      dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+         shapeDataField: 'continent',
+         dataCount: data.length,
+         primaryValueMapper: (int index) => data[index].country,
+         shapeColorValueMapper: (int index) => data[index].color,
+      );
+      super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+            child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: <MapLayer>[
+                MapShapeLayer(
+                  source: dataSource,
+                ),
+              ],
+            ),
           ),
-        ),
-      )),
-   );
+        )),
+     );
+  }
 }
 
 class Model {
@@ -276,47 +328,57 @@ You can apply color to the shape by comparing a value that returns from the [`sh
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <Model>[
-    Model('India', "Low"),
-    Model('United States of America', "High"),
-    Model('Pakistan', "Low"),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    "assets/world_map.json",
-     shapeDataField: "name",
-     dataCount: data.length,
-     primaryValueMapper: (int index) {
-       return data[index].country;
-     },
-     shapeColorValueMapper: (int index) {
-       return data[index].storage;
-     },
-     shapeColorMappers: [
-       MapColorMapper(value: "Low", color: Colors.red),
-       MapColorMapper(value: "High", color: Colors.green)
-     ],
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: <MapShapeLayer>[
-            MapShapeLayer(source: dataSource),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    data = <Model>[
+      Model('India', "Low"),
+      Model('United States of America', "High"),
+      Model('Pakistan', "Low"),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+       shapeDataField: "name",
+       dataCount: data.length,
+       primaryValueMapper: (int index) {
+         return data[index].country;
+       },
+       shapeColorValueMapper: (int index) {
+         return data[index].storage;
+       },
+       shapeColorMappers: [
+         MapColorMapper(value: "Low", color: Colors.red),
+         MapColorMapper(value: "High", color: Colors.green)
+       ],
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: <MapShapeLayer>[
+              MapShapeLayer(source: dataSource),
+            ],
+          ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -338,43 +400,53 @@ You can apply color to the shape based on whether the value returned from [`shap
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <Model>[
-    Model('India', 280),
-    Model('United States of America', 190),
-    Model('Kazakhstan', 37),
-  ];
-
-  dataSource = MapShapeSource.asset(
-     "assets/world_map.json",
-      shapeDataField: "name",
-      dataCount: data.length,
-      primaryValueMapper: (int index) => data[index].country,
-      shapeColorValueMapper: (int index) => data[index].count,
-      shapeColorMappers: [
-        MapColorMapper(from: 0, to: 100, color: Colors.red),
-        MapColorMapper(from: 101, to: 300, color: Colors.green)
-      ],
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(source: dataSource),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+    ];
+
+    dataSource = MapShapeSource.asset(
+       "assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].count,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red),
+          MapColorMapper(from: 101, to: 300, color: Colors.green)
+        ],
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(source: dataSource),
+            ],
+          ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {
@@ -393,60 +465,70 @@ class Model {
 
 You can apply the maximum and minimum opacity to the shape or [`bubbles`](https://help.syncfusion.com/flutter/maps/bubble) while using [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
 
-The shapes or bubbles with lowest value which is [`from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) will be applied a [`minOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/minOpacity.html) and the shapes or bubbles with highest value which is [`to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) will be applied a [`maxOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/maxOpacity.html). The shapes or bubbles with values in-between the range will get an opacity based on their respective value.
+The shapes or bubbles with the lowest value (from) will be applied [`minOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/minOpacity.html) and the shapes or bubbles with the highest value (to) will be applied [`maxOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/maxOpacity.html). The shapes or bubbles with values in-between the range will get an opacity based on their respective value.
 
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model> data;
-late MapShapeSource dataSource;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <Model>[
-    Model('India', 280),
-    Model('United States of America', 190),
-    Model('Kazakhstan', 37),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    "assets/world_map.json",
-     shapeDataField: "name",
-     dataCount: data.length,
-     primaryValueMapper: (int index) => data[index].country,
-     shapeColorValueMapper: (int index) => data[index].count,
-     shapeColorMappers: [
-       MapColorMapper(
-          from: 0,
-          to: 100,
-          color: Colors.red,
-          minOpacity: 0.2,
-          maxOpacity: 0.4,
-       ),
-       MapColorMapper(
-          from: 101,
-          to: 300,
-          color: Colors.green,
-          minOpacity: 0.4,
-          maxOpacity: 0.6,
-       ),
-     ],
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(source: dataSource),
-          ],
+class _MapsExampleState extends State<MapsExample> {
+  late List<Model> data;
+  late MapShapeSource dataSource;
+
+  @override
+  void initState() {
+    data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+       shapeDataField: "name",
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].country,
+       shapeColorValueMapper: (int index) => data[index].count,
+       shapeColorMappers: [
+         MapColorMapper(
+            from: 0,
+            to: 100,
+            color: Colors.red,
+            minOpacity: 0.2,
+            maxOpacity: 0.4,
+         ),
+         MapColorMapper(
+            from: 101,
+            to: 300,
+            color: Colors.green,
+            minOpacity: 0.4,
+            maxOpacity: 0.6,
+         ),
+       ],
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(source: dataSource),
+            ],
+          ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class Model {

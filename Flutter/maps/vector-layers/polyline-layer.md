@@ -2,7 +2,7 @@
 layout: post
 title: Adding Polylines in Flutter Maps widget | Syncfusion
 description: Learn here all about adding the Polylines feature of Syncfusion Flutter Maps (SfMaps) widget and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
@@ -22,68 +22,73 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<List<MapLatLng>> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <List<MapLatLng>>[polyline];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-     shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-     zoomLevel: 2,
-     focalLatLng: MapLatLng(20.3173, 78.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index],
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
-}
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<List<MapLatLng>> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
 
-class PolylineModel {
-  PolylineModel(this.points);
-  final List<MapLatLng> points;
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <List<MapLatLng>>[polyline];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+       shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+       zoomLevel: 2,
+       focalLatLng: MapLatLng(20.3173, 78.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index],
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -94,62 +99,67 @@ class PolylineModel {
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<List<MapLatLng>> polylines;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <List<MapLatLng>>[polyline];
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 5,
-    focalLatLng: MapLatLng(20.3173, 78.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapTileLayer(
-          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index],
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
-}
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<List<MapLatLng>> polylines;
+  late MapZoomPanBehavior zoomPanBehavior;
 
-class PolylineModel {
-  PolylineModel(this.points);
-  final List<MapLatLng> points;
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <List<MapLatLng>>[polyline];
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 5,
+      focalLatLng: MapLatLng(20.3173, 78.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index],
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -164,66 +174,76 @@ You can apply the same color for all [`MapPolyline`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline, Colors.purple),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 1,
-    focalLatLng: MapLatLng(20.3173, 78.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                    color: polylines[index].color,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline, Colors.purple),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 1,
+      focalLatLng: MapLatLng(20.3173, 78.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                      color: polylines[index].color,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -244,66 +264,76 @@ You can apply the same width for all [`MapPolyline`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart;
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline, 3),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 2,
-    focalLatLng: MapLatLng(20.3173, 78.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                    width: polylines[index].width,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline, 3),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 2,
+      focalLatLng: MapLatLng(20.3173, 78.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                      width: polylines[index].width,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -324,66 +354,76 @@ You can apply the same stroke cap for all [`MapPolyline`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline, 5),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    focalLatLng: MapLatLng(20.3173, 78.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                    (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                    width: polylines[index].width,
-                    strokeCap: StrokeCap.round,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline, 5),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      focalLatLng: MapLatLng(20.3173, 78.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                      (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                      width: polylines[index].width,
+                      strokeCap: StrokeCap.round,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -407,67 +447,77 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 2,
-    focalLatLng: MapLatLng(18.3173, 77.7139),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                    dashArray: [8, 4, 2, 4],
-                  );
-                },
-              ).toSet(),
-              color: Colors.blue,
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 2,
+      focalLatLng: MapLatLng(18.3173, 77.7139),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                      dashArray: [8, 4, 2, 4],
+                    );
+                  },
+                ).toSet(),
+                color: Colors.blue,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -489,85 +539,95 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
-late AnimationController animationController;
-late Animation animation;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-     zoomLevel: 2,
-     focalLatLng: MapLatLng(19.3173, 76.7139),
-  );
-
-  animationController = AnimationController(
-     duration: Duration(seconds: 3),
-      vsync: this,
-  );
-  animation = CurvedAnimation(
-     parent: animationController,
-     curve: Curves.easeInOut,
-  );
-  animationController.forward(from: 0);
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-void dispose() {
-  animationController.dispose();
-  super.dispose();
-}
+class _MapsExampleState extends State<MapsExample> with TickerProviderStateMixin {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+  late AnimationController animationController;
+  late Animation animation;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                  );
-                },
-              ).toSet(),
-              color: Colors.blue,
-              animation: animation,
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+       zoomLevel: 2,
+       focalLatLng: MapLatLng(19.3173, 76.7139),
+    );
+
+    animationController = AnimationController(
+       duration: Duration(seconds: 3),
+        vsync: this,
+    );
+    animation = CurvedAnimation(
+       parent: animationController,
+       curve: Curves.easeInOut,
+    );
+    animationController.forward(from: 0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                    );
+                  },
+                ).toSet(),
+                color: Colors.blue,
+                animation: animation,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -587,74 +647,84 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
-late int selectedIndex;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 2,
-    focalLatLng: MapLatLng(19.3173, 76.7139),
-  );
-
-  selectedIndex = -1;
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                    color: selectedIndex == index ? Colors.pink: Colors.blue,
-                    onTap: () {
-                      setState(() {
-                        selectedIndex = index;
-                      });
-                    }
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 2,
+      focalLatLng: MapLatLng(19.3173, 76.7139),
+    );
+
+    selectedIndex = -1;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
+                      color: selectedIndex == index ? Colors.pink: Colors.blue,
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = index;
+                        });
+                      }
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class PolylineModel {
@@ -674,88 +744,98 @@ You can show additional information about the polyline drawn using the [`tooltip
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 2,
-    focalLatLng: MapLatLng(19.3173, 76.7139),
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  final ThemeData themeData = Theme.of(context);
-  final TextStyle textStyle = themeData.textTheme.caption!
-        .copyWith(color: themeData.colorScheme.surface);
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                  );
-                },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Container(
-                    padding: EdgeInsets.only(left: 15, top: 10),
-                       width: 150,
-                       height: 50,
-                       child: Column(
-                          children: [
-                              Row(
-                                children: [
-                                   Text('Order item  :  ', style: textStyle),
-                                   Text('Pizza', style: textStyle),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                   Text('Time left    :  ', style: textStyle),
-                                   Text(random.nextInt(30).toString() + ' mins',
-                                       style: textStyle),
-                                ],
-                             ),
-                          ],
-                       ),
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+  late Random random;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 2,
+      focalLatLng: MapLatLng(19.3173, 76.7139),
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData themeData = Theme.of(context);
+    final TextStyle textStyle = themeData.textTheme.labelSmall!
+          .copyWith(color: themeData.colorScheme.surface);
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
                     );
-                 },
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Container(
+                      padding: EdgeInsets.only(left: 15, top: 10),
+                         width: 150,
+                         height: 50,
+                         child: Column(
+                            children: [
+                                Row(
+                                  children: [
+                                     Text('Order item  :  ', style: textStyle),
+                                     Text('Pizza', style: textStyle),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                     Text('Time left    :  ', style: textStyle),
+                                     Text(random.nextInt(30).toString() + ' mins',
+                                         style: textStyle),
+                                  ],
+                               ),
+                            ],
+                         ),
+                      );
+                   },
             ),
           ],
           zoomPanBehavior: zoomPanBehavior,
@@ -763,6 +843,7 @@ Widget build(BuildContext context) {
       ],
     ),
   );
+  }
 }
 
 class PolylineModel {
@@ -786,90 +867,100 @@ You can customize the appearance of the tooltip:
 {% tabs %}
 {% highlight Dart %}
 
-late List<MapLatLng> polyline;
-late List<PolylineModel> polylines;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  polyline = <MapLatLng>[
-    MapLatLng(13.0827, 80.2707),
-    MapLatLng(13.1746, 79.6117),
-    MapLatLng(13.6373, 79.5037),
-    MapLatLng(14.4673, 78.8242),
-    MapLatLng(14.9091, 78.0092),
-    MapLatLng(16.2160, 77.3566),
-    MapLatLng(17.1557, 76.8697),
-    MapLatLng(18.0975, 75.4249),
-    MapLatLng(18.5204, 73.8567),
-    MapLatLng(19.0760, 72.8777),
-  ];
-
-  polylines = <PolylineModel>[
-    PolylineModel(polyline),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/india.json',
-    shapeDataField: 'name',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          tooltipSettings: MapTooltipSettings(
-            color: Colors.white,
-            strokeWidth: 2,
-            strokeColor: Colors.black,
-          ),
-          sublayers: [
-            MapPolylineLayer(
-              polylines: List<MapPolyline>.generate(
-                polylines.length,
-                (int index) {
-                  return MapPolyline(
-                    points: polylines[index].points,
-                  );
-                },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Container(
-                    padding: EdgeInsets.only(left: 15, top: 10),
-                       width: 150,
-                       height: 50,
-                       child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text('Order item :  ',
-                                   style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text('Pizza'),
-                              ],
-                            ),
-                            Row(
-                               children: [
-                                  Text('Time left    :  ',
-                                      style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(random.nextInt(30).toString() + ' mins'),
-                               ],
-                            ),
-                          ],
-                       ),
+class _MapsExampleState extends State<MapsExample> {
+  late List<MapLatLng> polyline;
+  late List<PolylineModel> polylines;
+  late MapShapeSource dataSource;
+  late MapZoomPanBehavior zoomPanBehavior;
+  late Random random;
+
+  @override
+  void initState() {
+    polyline = <MapLatLng>[
+      MapLatLng(13.0827, 80.2707),
+      MapLatLng(13.1746, 79.6117),
+      MapLatLng(13.6373, 79.5037),
+      MapLatLng(14.4673, 78.8242),
+      MapLatLng(14.9091, 78.0092),
+      MapLatLng(16.2160, 77.3566),
+      MapLatLng(17.1557, 76.8697),
+      MapLatLng(18.0975, 75.4249),
+      MapLatLng(18.5204, 73.8567),
+      MapLatLng(19.0760, 72.8777),
+    ];
+
+    polylines = <PolylineModel>[
+      PolylineModel(polyline),
+    ];
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 3,
+      focalLatLng: MapLatLng(15.3173, 76.7139),
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            tooltipSettings: MapTooltipSettings(
+              color: Colors.white,
+              strokeWidth: 2,
+              strokeColor: Colors.black,
+            ),
+            sublayers: [
+              MapPolylineLayer(
+                polylines: List<MapPolyline>.generate(
+                  polylines.length,
+                  (int index) {
+                    return MapPolyline(
+                      points: polylines[index].points,
                     );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Container(
+                      padding: EdgeInsets.only(left: 15, top: 10),
+                         width: 150,
+                         height: 50,
+                         child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text('Order item :  ',
+                                     style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text('Pizza'),
+                                ],
+                              ),
+                              Row(
+                                 children: [
+                                    Text('Time left    :  ',
+                                          style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text(random.nextInt(30).toString() + ' mins'),
+                                 ],
+                              ),
+                            ],
+                         ),
+                      );
                  },
             ),
           ],
@@ -878,6 +969,7 @@ Widget build(BuildContext context) {
       ],
     ),
   );
+  }
 }
 
 class PolylineModel {
