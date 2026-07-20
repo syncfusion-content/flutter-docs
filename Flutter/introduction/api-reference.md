@@ -9,9 +9,13 @@ documentation: ug
 
 # Syncfusion<sup>&reg;</sup> Flutter Widgets - API reference
 
-This page helps to navigate to the public API's available in the Syncfusion<sup>&reg;</sup> Flutter widgets.
+This page helps you navigate to the public APIs available in the Syncfusion<sup>&reg;</sup> Flutter widgets. Click the link to open the API reference for each widget. Use the search box on the API reference page to find specific classes and members.
 
 <table>
+    <tr>
+        <th>Widget</th>
+        <th>API Reference</th>
+    </tr>
     <tr>
         <td>
             AI AssistView
