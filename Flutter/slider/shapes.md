@@ -11,6 +11,8 @@ documentation: ug
 
 This section explains how to customize slider shape elements—track, thumb, divider, and ticks.
 
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html) in all the examples shown below. Define each custom shape class outside your widget class so the slider can reference it.
+
 ## Track shape
 
 You can change the size and shape of the track using the [`trackShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/trackShape.html) property in the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html).
@@ -25,31 +27,42 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: SfSliderTheme(
-          data: SfSliderThemeData(
-            activeTrackHeight: 10,
-            inactiveTrackHeight: 10,
-          ),
-          child: SfSlider(
-            min: 0.0,
-            max: 10.0,
-            value: _value,
-            trackShape: _SfTrackShape(),
-            onChanged: (dynamic newValue) {
-              setState(() {
-                _value = newValue;
-              });
-            },
+class TrackShapePage extends StatefulWidget {
+  @override
+  _TrackShapePageState createState() => _TrackShapePageState();
+}
+
+class _TrackShapePageState extends State<TrackShapePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Center(
+          child: SfSliderTheme(
+            data: SfSliderThemeData(
+              activeTrackHeight: 10,
+              inactiveTrackHeight: 10,
+            ),
+            child: SfSlider(
+              min: 0.0,
+              max: 10.0,
+              value: _value,
+              trackShape: _SfTrackShape(),
+              onChanged: (double newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
           ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class _SfTrackShape extends SfTrackShape {
@@ -94,31 +107,44 @@ N>
 * You must use the `currentValue` parameter of paint override method for customizing slider thumb.
 * You must use the `currentValues` parameter of paint override method for customizing range slider and range selector thumbs.
 
+I> The `themeData.activeTrackColor` may be `null`. The null assertion operator (`!`) is used here for brevity; in production code, prefer a fallback (e.g., `themeData.activeTrackColor ?? Colors.red`) to avoid null errors.
+
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 4.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: SfSliderTheme(
-          data: SfSliderThemeData(overlayRadius: 0),
-          child: SfSlider(
-            min: 2.0,
-            max: 10.0,
-            value: _value,
-            thumbShape: _SfThumbShape(),
-            onChanged: (dynamic newValue) {
-              setState(() {
-                _value = newValue;
-              });
-            },
+class ThumbShapePage extends StatefulWidget {
+  @override
+  _ThumbShapePageState createState() => _ThumbShapePageState();
+}
+
+class _ThumbShapePageState extends State<ThumbShapePage> {
+  double _value = 4.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: Center(
+          child: SfSliderTheme(
+            data: SfSliderThemeData(overlayRadius: 0),
+            child: SfSlider(
+              min: 2.0,
+              max: 10.0,
+              value: _value,
+              thumbShape: _SfThumbShape(),
+              onChanged: (double newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
           ),
         ),
-      ),
-   );
+     );
+  }
 }
 
 class _SfThumbShape extends SfThumbShape {
@@ -167,25 +193,35 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfSlider(
-        min: 2.0,
-        max: 10.0,
-        value: _value,
-        interval: 1,
-        showDividers: true,
-        dividerShape: _DividerShape(),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
-      ),
-   );
+class DividerShapePage extends StatefulWidget {
+  @override
+  _DividerShapePageState createState() => _DividerShapePageState();
+}
+
+class _DividerShapePageState extends State<DividerShapePage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfSlider(
+          min: 2.0,
+          max: 10.0,
+          value: _value,
+          interval: 1,
+          showDividers: true,
+          dividerShape: _DividerShape(),
+          onChanged: (double newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
+     );
+  }
 }
 
 class _DividerShape extends SfDividerShape {
@@ -199,7 +235,7 @@ class _DividerShape extends SfDividerShape {
       required Paint? paint,
       required Animation<double> enableAnimation,
       required TextDirection textDirection}) {
-    bool isActive;
+    bool isActive = false;
 
     switch (textDirection) {
       case TextDirection.ltr:
@@ -238,27 +274,39 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'dart:math' as math;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfSlider(
-        min: 0.0,
-        max: 10.0,
-        value: _value,
-        interval: 1,
-        showTicks: true,
-        minorTicksPerInterval: 3,
-        tickShape: _SfTickShape(),
-        minorTickShape: _SfMinorTickShape(),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
-      ),
-   );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+class TicksShapePage extends StatefulWidget {
+  @override
+  _TicksShapePageState createState() => _TicksShapePageState();
+}
+
+class _TicksShapePageState extends State<TicksShapePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       body: SfSlider(
+          min: 0.0,
+          max: 10.0,
+          value: _value,
+          interval: 1,
+          showTicks: true,
+          minorTicksPerInterval: 3,
+          tickShape: _SfTickShape(),
+          minorTickShape: _SfMinorTickShape(),
+          onChanged: (double newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
+     );
+  }
 }
 
 class _SfTickShape extends SfTickShape {
