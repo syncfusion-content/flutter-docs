@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Flutter Chat widget | Syncfusion 
-description: Learn here all about the introduction of Syncfusion Flutter Chat (SfChat) widget, its features, and more.
+description: Step-by-step overview of Syncfusion Flutter Chat (SfChat) features—composer, messages, suggestions, headers, footers, avatars.
 platform: flutter
 control: SfChat
 documentation: ug

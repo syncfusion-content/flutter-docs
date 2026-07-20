@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme in Flutter Chat widget | Syncfusion
-description: Learn here all about the Theme feature of Syncfusion Flutter Chat (SfChatTheme) widget and how it enhances user interaction and customization.
+description: Step-by-step guide to customize themes in Syncfusion Flutter Chat (SfChat)—colors, text styles, and component styling.
 platform: flutter
 control: SfChatTheme
 documentation: ug

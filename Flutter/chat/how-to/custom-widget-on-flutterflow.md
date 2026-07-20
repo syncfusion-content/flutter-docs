@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Chat Widget in FlutterFlow | Syncfusion
-description: Learn how to add the Syncfusion Flutter Chat (SfChat) widget in FlutterFlow.
+description: Step-by-step guide to add Syncfusion Flutter Chat (SfChat) as custom widget in FlutterFlow—set dependencies, import packages, and compile code.
 platform: flutter
 control: SfChat
 documentation: ug

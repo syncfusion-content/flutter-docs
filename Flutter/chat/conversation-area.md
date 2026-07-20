@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Message Content in Flutter Chat widget | Syncfusion
-description: Learn here all about Messages and User Support feature of Syncfusion Flutter Chat (SfChat) widget and more.
+description: Step-by-step guide to customize message content in Syncfusion Flutter Chat (SfChat)—builders, settings, suggestions, avatars.
 platform: flutter
 control: SfChat
 documentation: ug

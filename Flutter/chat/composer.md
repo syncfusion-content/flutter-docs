@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Composer in Flutter Chat widget | Syncfusion
-description: Learn here all about Composer feature of Syncfusion Flutter Chat (SfChat) widget, including its properties and more.
+description: Step-by-step guide to customize the message composer in Syncfusion Flutter Chat (SfChat)—input decoration and styling options.
 platform: flutter
 control: SfChat
 documentation: ug

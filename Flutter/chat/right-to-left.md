@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right to Left (RTL) in Flutter Chat widget | Syncfusion
-description: Learn here about Right-to-left (RTL) support in Syncfusion Flutter Chat (SfChat) widget and more.
+description: Step-by-step guide to enable Right-to-left (RTL) rendering in Syncfusion Flutter Chat (SfChat)—Directionality widget, locale setup, and RTL elements.
 platform: flutter
 control: SfChat
 documentation: ug

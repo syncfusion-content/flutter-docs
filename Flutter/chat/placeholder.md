@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Placeholder in Flutter Chat widget | Syncfusion
-description: Learn here all about Placeholder feature of Syncfusion Flutter Chat (SfChat) widget, including its properties and more.
+description: Step-by-step guide to add and customize the placeholder in Syncfusion Flutter Chat (SfChat)—display custom widgets when no messages.
 platform: flutter
 control: SfChat
 documentation: ug
