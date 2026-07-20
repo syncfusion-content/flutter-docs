@@ -2,7 +2,7 @@
 layout: post
 title: Date Navigations in Flutter Date Range Picker widget | Syncfusion
 description: Learn here all about Date navigations feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -11,28 +11,49 @@ documentation: ug
 
 ## Programmatic date navigation
 
-You can programmatically navigate dates in the calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/displayDate.html)  property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html)
+You can programmatically navigate to dates in the calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/displayDate.html)  property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html)
 
 {% tabs %}
-{% highlight dart hl_lines="2 6 16" %}
+{% highlight dart hl_lines="3 12 22" %}
 
-class MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _DisplayDateExample(),
+    );
+  }
+}
+
+class _DisplayDateExample extends StatefulWidget {
+  @override
+  State<_DisplayDateExample> createState() => _DisplayDateExampleState();
+}
+
+class _DisplayDateExampleState extends State<_DisplayDateExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
     _datePickerController.displayDate = DateTime(2022, 02, 05);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          controller: _datePickerController,
-        ),
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        controller: _datePickerController,
       ),
     );
   }
@@ -45,26 +66,47 @@ class MyAppState extends State<MyApp> {
 
 ## Programmatic view navigation
 
-You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html).
+You can programmatically navigate the view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="2 6 15" %}
+{% highlight dart hl_lines="3 12 21" %}
 
-class MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _ViewNavigationExample(),
+    );
+  }
+}
+
+class _ViewNavigationExample extends StatefulWidget {
+  @override
+  State<_ViewNavigationExample> createState() => _ViewNavigationExampleState();
+}
+
+class _ViewNavigationExampleState extends State<_ViewNavigationExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
     _datePickerController.view = DateRangePickerView.month;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfDateRangePicker(controller: _datePickerController),
-      ),
+    return Scaffold(
+      body: SfDateRangePicker(controller: _datePickerController),
     );
   }
 }
@@ -76,21 +118,32 @@ class MyAppState extends State<MyApp> {
 
 ## Allow view navigation
 
-You can allow or restrict the built-in view navigation to any picker views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
+You can allow or restrict the built-in view navigation to any picker views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/allowViewNavigation.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It allows you to restrict the built-in view switching through touch interaction and allows you to select the cells in the year, decade and century views.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SfDateRangePicker(
-          allowViewNavigation: false
-        )
+          allowViewNavigation: false,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,38 +151,54 @@ You can allow or restrict the built-in view navigation to any picker views by us
 
 ## Programmatic date selection
 
-You can programmatically select the dates in the calendar widget by using the  [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) property.
+You can programmatically select the dates in the calendar widget by using the  [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) class.
 
 ### Single selection
 
 Initially or during the run time, you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is set to [DateRangePickerSelectionMode.single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single).
 
 {% tabs %}
-{% highlight dart hl_lines="6 10 20 21" %}
+{% highlight dart hl_lines="3 14 18 28 29" %}
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
-    _datePickerController.selectedDate = DateTime.now().add(Duration(days: 2));
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _SingleSelectionExample(),
+    );
+  }
+}
+
+class _SingleSelectionExample extends StatefulWidget {
+  @override
+  State<_SingleSelectionExample> createState() => _SingleSelectionExampleState();
+}
+
+class _SingleSelectionExampleState extends State<_SingleSelectionExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
+    _datePickerController.selectedDate = DateTime.now().add(const Duration(days: 2));
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          selectionMode: DateRangePickerSelectionMode.single,
-          controller: _datePickerController,
-        ),
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.single,
+        controller: _datePickerController,
       ),
     );
   }
@@ -145,36 +214,52 @@ class _MyAppState extends State<MyApp> {
 Initially or during the run time, you can select the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is set to [DateRangePickerSelectionMode.multiple](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiple).
 
 {% tabs %}
-{% highlight dart hl_lines="6 10 11 12 13 14 15 25 26" %}
+{% highlight dart hl_lines="3 14 18 19 20 21 22 23 33 34" %}
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _MultiSelectionExample(),
+    );
+  }
+}
+
+class _MultiSelectionExample extends StatefulWidget {
+  @override
+  State<_MultiSelectionExample> createState() => _MultiSelectionExampleState();
+}
+
+class _MultiSelectionExampleState extends State<_MultiSelectionExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
     _datePickerController.selectedDates = <DateTime>[
-      DateTime.now().add(Duration(days: 2)),
-      DateTime.now().add(Duration(days: 4)),
-      DateTime.now().add(Duration(days: 7)),
-      DateTime.now().add(Duration(days: 11)),
+      DateTime.now().add(const Duration(days: 2)),
+      DateTime.now().add(const Duration(days: 4)),
+      DateTime.now().add(const Duration(days: 7)),
+      DateTime.now().add(const Duration(days: 11)),
     ];
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          selectionMode: DateRangePickerSelectionMode.multiple,
-          controller: _datePickerController,
-        ),
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.multiple,
+        controller: _datePickerController,
       ),
     );
   }
@@ -190,13 +275,36 @@ class _MyAppState extends State<MyApp> {
 Initially or during run time, you can select the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is set to [DateRangePickerSelectionMode.range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range).
 
 {% tabs %}
-{% highlight dart hl_lines="2 6 7 17 18" %}
+{% highlight dart hl_lines="3 12 16 17 27 28" %}
 
-class MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _RangeSelectionExample(),
+    );
+  }
+}
+
+class _RangeSelectionExample extends StatefulWidget {
+  @override
+  State<_RangeSelectionExample> createState() => _RangeSelectionExampleState();
+}
+
+class _RangeSelectionExampleState extends State<_RangeSelectionExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
     _datePickerController.selectedRange =
         PickerDateRange(DateTime(2020, 03, 01), DateTime(2020, 03, 05));
     super.initState();
@@ -204,13 +312,11 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          selectionMode: DateRangePickerSelectionMode.range,
-          controller: _datePickerController,
-        ),
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.range,
+        controller: _datePickerController,
       ),
     );
   }
@@ -219,43 +325,61 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic selectedrange Date Range Picker](images/date-navigations/programmatic-range selection.png)
+![Programmatic selectedrange Date Range Picker](images/date-navigations/programmatic-range-selection.png)
 
 ### Multi Range selection
 
 Initially or during run time, you can select more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is set to [DateRangePickerSelectionMode.multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange).
 
-{% tabs %}
-{% highlight dart hl_lines="6 10 11 12 13 14 15 25 26" %}
+N> The [PickerDateRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/PickerDateRange-class.html) class represents a date range with a start date and an optional end date.
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+{% tabs %}
+{% highlight dart hl_lines="3 14 18 19 20 21 22 23 24 34 35" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  initState() {
-    _datePickerController.selectedRanges =<PickerDateRange>[
-      PickerDateRange(DateTime.now().subtract(Duration(days: 4)),
-          DateTime.now().add(Duration(days: 4))),
-      PickerDateRange(DateTime.now().add(Duration(days: 11)),
-          DateTime.now().add(Duration(days: 16)))
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: _MultiRangeSelectionExample(),
+    );
+  }
+}
+
+class _MultiRangeSelectionExample extends StatefulWidget {
+  @override
+  State<_MultiRangeSelectionExample> createState() => _MultiRangeSelectionExampleState();
+}
+
+class _MultiRangeSelectionExampleState extends State<_MultiRangeSelectionExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  void initState() {
+    _datePickerController.selectedRanges = <PickerDateRange>[
+      PickerDateRange(DateTime.now().subtract(const Duration(days: 4)),
+          DateTime.now().add(const Duration(days: 4))),
+      PickerDateRange(DateTime.now().add(const Duration(days: 11)),
+          DateTime.now().add(const Duration(days: 16)))
     ];
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body:SfDateRangePicker(
-          view: DateRangePickerView.month,
-          selectionMode: DateRangePickerSelectionMode.multiRange,
-          controller: _datePickerController,
-        )
+    return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.multiRange,
+        controller: _datePickerController,
       ),
     );
   }
@@ -272,32 +396,54 @@ By default, the date can be navigated to next and previous views using the touch
 
 ### Forward
 
-You can use the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) method of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) for viewing the next immediate next visible dates in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It will move to next month if the calendar view is a month.
+You can use the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) method of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) for viewing the next visible dates in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It will move to next month if the calendar view is a month.
 
 {% tabs %}
-{% highlight dart hl_lines="2 13 20" %}
+{% highlight dart hl_lines="3 14 21" %}
 
-class MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('DateRangePicker Demo'),
-          actions: <Widget>[
-            IconButton(icon: Icon(Icons.arrow_forward),
-              onPressed: () {
-                _datePickerController.forward!();
-              },
-            ),
-          ],
-        ),
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          controller: _datePickerController,
-        ),
+      home: _ForwardExample(),
+    );
+  }
+}
+
+class _ForwardExample extends StatefulWidget {
+  @override
+  State<_ForwardExample> createState() => _ForwardExampleState();
+}
+
+class _ForwardExampleState extends State<_ForwardExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('DateRangePicker Demo'),
+        actions: <Widget>[
+          IconButton(icon: const Icon(Icons.arrow_forward),
+            onPressed: () {
+              // Use the null assertion operator because `forward` is a nullable method.
+              _datePickerController.forward!();
+            },
+          ),
+        ],
+      ),
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        controller: _datePickerController,
       ),
     );
   }
@@ -308,33 +454,55 @@ class MyAppState extends State<MyApp> {
 
 ### Backward
 
-You can use the [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) method of  [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) for viewing the previous immediate previous visible dates in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It will move to the previous month if the calendar view is in month.
+You can use the [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) method of  [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html) for viewing the previous visible dates in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It will move to the previous month if the calendar view is in month.
 
 {% tabs %}
-{% highlight dart hl_lines="2 14 21" %}
+{% highlight dart hl_lines="3 15 22" %}
 
-class MyAppState extends State<MyApp> {
-  DateRangePickerController _datePickerController = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('DateRangePicker Demo'),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () {
-                _datePickerController.backward!();
-              },
-            ),
-          ],
-        ),
-        body: SfDateRangePicker(
-          view: DateRangePickerView.month,
-          controller: _datePickerController,
-        ),
+      home: _BackwardExample(),
+    );
+  }
+}
+
+class _BackwardExample extends StatefulWidget {
+  @override
+  State<_BackwardExample> createState() => _BackwardExampleState();
+}
+
+class _BackwardExampleState extends State<_BackwardExample> {
+  final DateRangePickerController _datePickerController = DateRangePickerController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('DateRangePicker Demo'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              // Use the null assertion operator because `backward` is a nullable method.
+              _datePickerController.backward!();
+            },
+          ),
+        ],
+      ),
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        controller: _datePickerController,
       ),
     );
   }
@@ -349,17 +517,30 @@ class MyAppState extends State<MyApp> {
 You can navigate the Month, Year, Decade, and Century views either [Vertical](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#vertical) or [Horizontal](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#horizontal) directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        navigationDirection: DateRangePickerNavigationDirection.vertical,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          navigationDirection: DateRangePickerNavigationDirection.vertical,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -370,7 +551,17 @@ You can navigate the Month, Year, Decade, and Century views either [Vertical](ht
 You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -383,6 +574,7 @@ You can customize the navigation mode of the date range picker by using the [nav
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -390,7 +582,7 @@ You can customize the navigation mode of the date range picker by using the [nav
 ![navigationMode](images/date-navigations/navigation_mode.gif)
 
 >**NOTE**
-When the navigation mode is set to [DateRangePickerNavigationMode.scroll](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html#scroll).
+When the navigation mode is set to [DateRangePickerNavigationMode.scroll](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html#scroll):
 * Swipe selection is not supported when the range and multi-range are the selection modes.
 * The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onViewChanged.html) will be called when the view reaches the starting position of the date range picker view.
 * [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) is not supported.
@@ -401,17 +593,30 @@ When the navigation mode is set to [DateRangePickerNavigationMode.scroll](https:
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) property of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) you can move to the next or previous views of the picker without swiping.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        showNavigationArrow: true,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          showNavigationArrow: true,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
