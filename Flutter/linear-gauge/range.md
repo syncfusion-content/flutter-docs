@@ -2,7 +2,7 @@
 layout: post
 title: Range in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Range of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -11,7 +11,16 @@ documentation: ug
 
 A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +39,10 @@ A range is a visual element that helps you quickly visualize where a range falls
       ),
     );
   }
-	
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Initialize linear gauge for range](images/gauge-range/default-range.png)
 
@@ -42,7 +53,16 @@ A Linear Gauge range has three values to draw a range - [`startValue`](https://p
 
 However, to draw concave, convex and exponential-like shapes the [`midValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midValue.html) and [`midWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midWidth.html) properties are needed. For this, the [`rangeShapeType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/rangeShapeType.html) is used to create the curve. The below code snippet demonstrates how to create a concave shape for a range.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +86,10 @@ However, to draw concave, convex and exponential-like shapes the [`midValue`](ht
       ),
     );
   }
-	
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Draw linear gauge concave range](images/gauge-range/range-concave.png)
 
@@ -77,7 +99,16 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 The default value is `bothFlat`.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +135,10 @@ The default value is `bothFlat`.
       ),
     );
   }
-  
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Change the gauge range edge style](images/gauge-range/edge_style.png)
 
@@ -113,7 +146,16 @@ The default value is `bothFlat`.
 
 The color of a range can be changed by setting the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/color.html) property of a range. The below code example demonstrates changing the color property of the range.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -130,8 +172,10 @@ The color of a range can be changed by setting the [`color`](https://pub.dev/doc
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Set linear gauge range color](images/gauge-range/color_range.png)
 
@@ -139,7 +183,16 @@ The color of a range can be changed by setting the [`color`](https://pub.dev/doc
 
 The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/shaderCallback.html) property of a range. The below code example demonstrates applying a radial gradient to the range.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -166,16 +219,27 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
       ),
     );
   }
-  
-{% endhighlight %}
+}
 
-![Apply radial gradient to linear guage range](images/gauge-range/radial_gardient_range.png)
+{% endhighlight %}
+{% endtabs %}
+
+![Apply radial gradient to linear gauge range](images/gauge-range/radial_gardient_range.png)
 
 ## Apply linear gradient to a range
 
 The below code snippet demonstrates applying a linear gradient to the range.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -199,16 +263,27 @@ The below code snippet demonstrates applying a linear gradient to the range.
       ),
     );
   }
-  
-{% endhighlight %}
+}
 
-![Apply linear gradient to linear guage range](images/gauge-range/linear_gardient_range.png)
+{% endhighlight %}
+{% endtabs %}
+
+![Apply linear gradient to linear gauge range](images/gauge-range/linear_gardient_range.png)
 
 ## Apply sweep gradient to a range
 
 The below code snippet demonstrates applying a sweep gradient to the range.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -238,16 +313,27 @@ The below code snippet demonstrates applying a sweep gradient to the range.
       ),
     );
   }
-  
-{% endhighlight %}
+}
 
-![Apply sweep gradient to linear guage range](images/gauge-range/sweep_gradient_range.png)
+{% endhighlight %}
+{% endtabs %}
+
+![Apply sweep gradient to linear gauge range](images/gauge-range/sweep_gradient_range.png)
 
 ## Customize range position
 
 It is possible to position the ranges `inside`, `cross`, and `outside` the axis. By default, the range will be positioned `outside` the axis. The [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/position.html) property of the range is used to position the range. The below code snippet demonstrates the same.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -265,8 +351,10 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
       ),
     );
   }
-  
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Position the linear gauge range](images/gauge-range/range_position.png)
 
@@ -274,38 +362,58 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
 
 You can set range color to axis elements using the [`useRangeColorForAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/useRangeColorForAxis.html) property of axis.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
 
-  Container(
-    child: SfLinearGauge(
-      minorTicksPerInterval: 4,
-      useRangeColorForAxis: true,
-      animateAxis: true,
-      axisTrackStyle: LinearAxisTrackStyle(thickness: 1),
-      ranges: <LinearGaugeRange>[
-        LinearGaugeRange(
-          startValue: 0,
-          endValue: 33,
-          position: LinearElementPosition.outside,
-          color: Color(0xffF45656),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+              minorTicksPerInterval: 4,
+              useRangeColorForAxis: true,
+              animateAxis: true,
+              axisTrackStyle: LinearAxisTrackStyle(thickness: 1),
+              ranges: <LinearGaugeRange>[
+                LinearGaugeRange(
+                  startValue: 0,
+                  endValue: 33,
+                  position: LinearElementPosition.outside,
+                  color: Color(0xffF45656),
+                ),
+                LinearGaugeRange(
+                  startValue: 33,
+                  endValue: 66,
+                  position: LinearElementPosition.outside,
+                  color: Color(0xffFFC93E),
+                ),
+                LinearGaugeRange(
+                  startValue: 66,
+                  endValue: 100,
+                  position: LinearElementPosition.outside,
+                  color: Color(0xff0DC9AB),
+                ),
+              ],
+            ),
+          ),
         ),
-        LinearGaugeRange(
-          startValue: 33,
-          endValue: 66,
-          position: LinearElementPosition.outside,
-          color: Color(0xffFFC93E),
-        ),
-        LinearGaugeRange(
-          startValue: 66,
-          endValue: 100,
-          position: LinearElementPosition.outside,
-          color: Color(0xff0DC9AB),
-        ),
-      ],
-    )
-  )
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Set range color to axis element](images/gauge-range/range_userangeforaxis.png)
 
@@ -313,7 +421,16 @@ You can set range color to axis elements using the [`useRangeColorForAxis`](http
 
 You can add multiple ranges for an axis. The below code example demonstrates adding three ranges in a Linear Gauge.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -340,7 +457,9 @@ You can add multiple ranges for an axis. The below code example demonstrates add
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Add multiple ranges in a linear gauge](images/gauge-range/multiple_ranges.png)

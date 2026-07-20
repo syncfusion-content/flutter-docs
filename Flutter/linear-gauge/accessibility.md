@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Accessibility in Flutter Linear Gauge widget | Syncfusion
+title: Accessibility in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about the accessibility support in Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and how to customize it.
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -14,21 +14,33 @@ documentation: ug
 The [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can be made accessible to screen readers by wrapping it with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-  double _value = 50;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Semantics(
-        label: 'Syncfusion Flutter Linear Gauge',
-        value: _value.toString(),
-        child:
-            SfLinearGauge(markerPointers: [LinearShapePointer(value: _value)]),
+    double value = 50;
+    return MaterialApp(
+      title: 'Linear Gauge Demo',
+      home: Scaffold(
+        body: Semantics(
+          label: 'Syncfusion Flutter Linear Gauge',
+          value: value.toString(),
+          child: SfLinearGauge(
+            markerPointers: [LinearShapePointer(value: value)],
+          ),
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
