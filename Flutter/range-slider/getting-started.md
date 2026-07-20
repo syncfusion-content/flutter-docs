@@ -9,9 +9,9 @@ documentation: ug
 
 # Flutter Range Slider Getting Started (SfRangeSlider)
 
-This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> range slider.
+This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips, covering only the basic features needed to get started with the Syncfusion<sup>&reg;</sup> range slider.
 
-To get start quickly with our Flutter Range Slider widget, you can check out this video.
+To get started quickly with our Flutter Range Slider widget, check out this video.
 
 <style>#FlutterRangeSliderVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterRangeSliderVideoTutorial' src='https://www.youtube.com/embed/ndF9XToq4rI'></iframe>
@@ -23,6 +23,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion<sup>&reg;</sup> Flutter range slider dependency to your pubspec.yaml file.
 
+{% tabs %}
 {% highlight dart %}
 
 dependencies:
@@ -30,6 +31,7 @@ dependencies:
 syncfusion_flutter_sliders: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`](https://pub.dev/packages/syncfusion_flutter_sliders/versions) package.
 
@@ -37,18 +39,20 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`
 
 Run the following command to get the required packages.
 
+{% tabs %}
 {% highlight dart %}
 
-$ flutter pub get
+flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
@@ -57,37 +61,43 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range slider
 
-After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) properties of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) is 0.0 and 1.0 respectively. So, the [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) property must be given within the range.
+After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default values of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) properties of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) are 0.0 and 1.0 respectively. So, the [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) property must be given within the range.
 
-N> The range slider passes the new values to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the range slider with new values.
+N> The range slider passes the new values to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the range slider with the new values.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfRangeSlider(
-                    values: _values,
-                    onChanged: (dynamic values){
-                      setState(() {
-                        _values = values;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
 }
-	
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfRangeSlider(
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                )))));
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,26 +108,32 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfRangeSlider.vertical(
-                    values: _values,
-                    onChanged: (dynamic values){
-                      setState(() {
-                        _values = values;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfRangeSlider.vertical(
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                )))));
+  }
 }
 
 {% endhighlight %}
@@ -127,35 +143,42 @@ Widget build(BuildContext context) {
 
 ## Handle range change
 
-The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current value of the range slider when the user selects a value through interaction.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current values of the range slider when the user selects a value through interaction.
 
-N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
+N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with the new values.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -168,26 +191,33 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider.vertical(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -204,30 +234,40 @@ You can show numeric values in the range slider by setting `double` values to th
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showLabels: true,
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showLabels: true,
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -240,30 +280,40 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-       child: SfRangeSlider.vertical(
-                 min: _min,
-                 max: _max,
-                 values: _values,
-                 interval: 20,
-                 showLabels: true,
-                 onChanged: (SfRangeValues value) {
-                   setState(() {
-                     _values = value;
-                   });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider.vertical(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showLabels: true,
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -282,32 +332,44 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 2,
-          showLabels: true,
-          dateIntervalType: DateIntervalType.years,
-          dateFormat: DateFormat.y(),
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  DateTime _min = DateTime(2008, 01, 01);
+  DateTime _max = DateTime(2018, 01, 01);
+  SfRangeValues _values =
+      SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 2,
+            showLabels: true,
+            dateIntervalType: DateIntervalType.years,
+            dateFormat: DateFormat.y(),
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -320,32 +382,44 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider.vertical(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 2,
-          showLabels: true,
-          dateIntervalType: DateIntervalType.years,
-          dateFormat: DateFormat.y(),
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  DateTime _min = DateTime(2008, 01, 01);
+  DateTime _max = DateTime(2018, 01, 01);
+  SfRangeValues _values =
+      SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider.vertical(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 2,
+            showLabels: true,
+            dateIntervalType: DateIntervalType.years,
+            dateFormat: DateFormat.y(),
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -362,31 +436,41 @@ You can enable ticks in the range slider using the [`showTicks`](https://pub.dev
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showTicks: true,
-          showLabels: true,
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -399,31 +483,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider.vertical(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showTicks: true,
-          showLabels: true,
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider.vertical(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -433,33 +527,43 @@ Widget build(BuildContext context) {
 
 ## Inverse the horizontal range slider
 
-You can invert the horizontal range slider by wrapping the range slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
+You can invert the horizontal range slider by wrapping the range slider in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`. The [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget only affects horizontal sliders; to invert a vertical range slider, use the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/isInversed.html) property described in the [Inverse the vertical range slider](#inverse-the-vertical-range-slider) section.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(20.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body:  Directionality(
-      textDirection: TextDirection.rtl,
-      child: SfRangeSlider(
-        min: 0,
-        max: 100,
-        values: _values,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        onChanged: (SfRangeValues newValues) {
-          setState(() {
-            _values = newValues;
-          });
-        },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(20.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfRangeSlider(
+          min: 0,
+          max: 100,
+          values: _values,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          onChanged: (SfRangeValues newValues) {
+            setState(() {
+              _values = newValues;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -474,26 +578,36 @@ You can invert the vertical range slider using the [`isInversed`](https://pub.de
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(20.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body:  SfRangeSlider.vertical(
-      min: 0,
-      max: 100,
-      values: _values,
-      interval: 20,
-      isInversed: true,
-      showTicks: true,
-      showLabels: true,
-      onChanged: (SfRangeValues newValues) {
-        setState(() {
-          _values = newValues;
-        });
-      },
-    ),
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(20.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfRangeSlider.vertical(
+        min: 0,
+        max: 100,
+        values: _values,
+        interval: 20,
+        isInversed: true,
+        showTicks: true,
+        showLabels: true,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -514,32 +628,43 @@ I> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showTicks: true,
-          showLabels: true,
-          numberFormat: NumberFormat("\$"),
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            numberFormat: NumberFormat("\$"),
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -552,32 +677,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        child: SfRangeSlider.vertical(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showTicks: true,
-          showLabels: true,
-          numberFormat: NumberFormat("\$"),
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
-          },
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0;
+  final double _max = 100;
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider.vertical(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            numberFormat: NumberFormat("\$"),
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
