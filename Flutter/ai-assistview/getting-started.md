@@ -56,12 +56,18 @@ Import the library using the code provided below.
 
 ## Initialize AI AssistView widget
 
-Add an AI AssistView widget with the required [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) property. 
+Add an AI AssistView widget with the required [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="1 5" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class GettingStartedExample extends StatelessWidget {
+  const GettingStartedExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +77,7 @@ Add an AI AssistView widget with the required [`messages`](https://pub.dev/docum
       ),
     );
   }
+}
 	
 {% endhighlight %}
 {% endtabs %}
@@ -79,12 +86,18 @@ Add an AI AssistView widget with the required [`messages`](https://pub.dev/docum
 
 ## Add composer
 
-To add the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html) to the SfAIAssistView widget, use the composer property. The composer can be customized using the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/decoration.html) property, which is of type [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html). The hint text in the composer can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property within InputDecoration.
+To add the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer-class.html) to the SfAIAssistView widget, use the composer property. The composer can be customized using the [`decoration`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/decoration.html) property, which is of type [`InputDecoration`](https://api.flutter.dev/flutter/material/InputDecoration-class.html). The hint text in the composer can be added using the [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property within InputDecoration.
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="11" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ComposerExample extends StatelessWidget {
+  const ComposerExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -99,19 +112,31 @@ To add the [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_c
       ),
     );
   }
+}
 	
 {% endhighlight %}
 {% endtabs %}
 
-![Placeholder to composer](images/getting-started/add-placeholder-to-composer.png)
+![Add composer](images/getting-started/add-composer.png)
 
 ## Add placeholder to conversation area
 
 By default, conversation messages are empty. It’s a good idea to show a message or design to indicate this. You can use the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) property to create a custom widget that appears in the conversation area, which can be removed once messages start coming in.
 
-{% tabs %}
-{% highlight dart hl_lines="21" %}
+The following sample also adds an `AssistActionButton` so the composed message is added to the `messages` list via `setState`. The `_getAIResponse` method is a placeholder that returns an empty string until you connect it to your preferred AI service.
 
+{% tabs %}
+{% highlight dart hl_lines="22" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class PlaceholderExample extends StatefulWidget {
+  @override
+  State<PlaceholderExample> createState() => _PlaceholderExampleState();
+}
+
+class _PlaceholderExampleState extends State<PlaceholderExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -154,6 +179,7 @@ By default, conversation messages are empty. It’s a good idea to show a messag
       ),
     );
   }
+}
 	
 {% endhighlight %}
 {% endtabs %}
@@ -162,13 +188,24 @@ By default, conversation messages are empty. It’s a good idea to show a messag
 
 ## Add action button
 
-It represents the send button, which was not included by default. To add it, create an instance of [`AssistActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton-class.html) for the actionButton.
+The action button represents the send button, which is not included by default. To add it, create an instance of [`AssistActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton-class.html) for the actionButton.
 
 When the send button is clicked, the [`AssistActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistActionButton/onPressed.html) callback is invoked, which rebuilds the AI AssistView widget with the newly composed message.
 
-{% tabs %}
-{% highlight dart hl_lines="107" %}
+The following sample builds on the previous placeholder example and includes suggestion chips (such as "Travel Tips", "Recipe Ideas") inside the `placeholderBuilder`. These are part of the placeholder UI and are only displayed until the first message is added.
 
+{% tabs %}
+{% highlight dart hl_lines="104" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ActionButtonExample extends StatefulWidget {
+  @override
+  State<ActionButtonExample> createState() => _ActionButtonExampleState();
+}
+
+class _ActionButtonExampleState extends State<ActionButtonExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
 
   void _generativeResponse(String data) async {
@@ -286,6 +323,7 @@ When the send button is clicked, the [`AssistActionButton.onPressed`](https://pu
       ),
     );
   }
+}
 	
 {% endhighlight %}
 {% endtabs %}

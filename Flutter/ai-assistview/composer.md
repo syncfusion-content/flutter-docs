@@ -25,9 +25,15 @@ When the `composer` is `null`, no default text field is added to the AI AssistVi
 The default value for `minLines` is `1`, and the default value for `maxLines` is `6`.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10" %}
+{% highlight dart hl_lines="11 12" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class MinMaxLinesExample extends StatelessWidget {
+  const MinMaxLinesExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +47,7 @@ The default value for `minLines` is `1`, and the default value for `maxLines` is
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -60,6 +67,9 @@ The following are the major features available in [`InputDecoration`](https://ap
 * [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html)
 * [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html)
 * [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [`suffixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html)
+* [`filled`](https://api.flutter.dev/flutter/material/InputDecoration/filled.html) and [`fillColor`](https://api.flutter.dev/flutter/material/InputDecoration/fillColor.html)
+
+> All other properties of `InputDecoration` are also supported.
 
 #### Enabled
 
@@ -70,9 +80,15 @@ The [`enabled`](https://api.flutter.dev/flutter/material/InputDecoration/enabled
 The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.html) property defines the shape of the border that is drawn around the text field. By default, an [`OutlineInputBorder`](https://api.flutter.dev/flutter/material/OutlineInputBorder-class.html) is used.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="12" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class BorderExample extends StatelessWidget {
+  const BorderExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +105,7 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,12 +114,18 @@ The [`border`](https://api.flutter.dev/flutter/material/InputDecoration/border.h
 
 #### Content padding
 
-The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the `padding` is set to `16` horizontally and `18` vertically.
+The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/contentPadding.html) property defines the padding surrounding the text added inside the text field. By default, the `contentPadding` is set to `EdgeInsets.symmetric(horizontal: 16.0, vertical: 18.0)`.
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="13" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ContentPaddingExample extends StatelessWidget {
+  const ContentPaddingExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -118,6 +141,7 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,9 +153,15 @@ The [`contentPadding`](https://api.flutter.dev/flutter/material/InputDecoration/
 The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintText.html) property sets the placeholder text for the text field. By default, it is set to `null`.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="12" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class HintTextExample extends StatelessWidget {
+  const HintTextExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -146,6 +176,7 @@ The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,9 +188,15 @@ The [`hintText`](https://api.flutter.dev/flutter/material/InputDecoration/hintTe
 The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintStyle.html) property refers to the text style of the hint text.
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="13" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class HintTextStyleExample extends StatelessWidget {
+  const HintTextStyleExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -179,6 +216,7 @@ The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintS
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -190,9 +228,15 @@ The [`hintStyle`](https://api.flutter.dev/flutter/material/InputDecoration/hintS
 The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/prefixIcon.html) and [`suffixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/suffixIcon.html) properties are used to add icons at the beginning and end of the text field, respectively.
 
 {% tabs %}
-{% highlight dart hl_lines="10 14" %}
+{% highlight dart hl_lines="12 16" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class PrefixSuffixIconExample extends StatelessWidget {
+  const PrefixSuffixIconExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -214,6 +258,7 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -222,14 +267,20 @@ The [`prefixIcon`](https://api.flutter.dev/flutter/material/InputDecoration/pref
 
 ### Margin
 
-The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/margin.html) property defines the space around the text field, which is used to create space between the conversion area and the text field.
+The [`margin`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/margin.html) property defines the space around the text field, which is used to create space between the conversation area and the text field.
 
 By default, the top `margin` is set to `16`.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="11" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ComposerMarginExample extends StatelessWidget {
+  const ComposerMarginExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -242,6 +293,7 @@ By default, the top `margin` is set to `16`.
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -252,12 +304,18 @@ By default, the top `margin` is set to `16`.
 
 The [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/textStyle.html) property is used to set the style for the default [`AssistComposer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/AssistComposer.html) text.
 
-The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and `editorTextStyle` text styles.
+The specified text style will be merged with the [`bodyMedium`](https://api.flutter.dev/flutter/material/TextTheme/bodyMedium.html) and [`editorTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData/editorTextStyle.html) text styles.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="11" %}
 
-  final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class TextStyleExample extends StatelessWidget {
+  const TextStyleExample({super.key});
+
+  final List<AssistMessage> _messages = const <AssistMessage>[];
 
   @override
   Widget build(BuildContext context) {
@@ -272,6 +330,7 @@ The specified text style will be merged with the [`bodyMedium`](https://api.flut
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -280,13 +339,22 @@ The specified text style will be merged with the [`bodyMedium`](https://api.flut
 
 ## Builder
 
-The [AssistComposer.builder](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used to specify a custom widget for the composer, allowing you to enable multiple options for composing messages, such as text, voice, and image messages.
+The [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used to specify a custom widget for the composer, allowing you to enable multiple options for composing messages, such as text, voice, and image messages.
 
-If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used, the action button will always be enabled.
+If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistComposer/builder.html) is used, the action button will always be enabled. Since the action button's `onPressed` receives an empty string when using a custom builder, the composed text should be retrieved directly from the composer (for example, via a `TextEditingController`). After the message is sent, call `_controller.clear()` to clear the input field.
 
 {% tabs %}
-{% highlight dart hl_lines="15" %}
+{% highlight dart hl_lines="17" %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class ComposerBuilderExample extends StatefulWidget {
+  @override
+  State<ComposerBuilderExample> createState() => _ComposerBuilderExampleState();
+}
+
+class _ComposerBuilderExampleState extends State<ComposerBuilderExample> {
   final List<AssistMessage> _messages = <AssistMessage>[];
   late TextEditingController _controller;
 
@@ -302,6 +370,18 @@ If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_c
       body: SfAIAssistView(
         messages: _messages,
         composer: builderComposer(),
+        actionButton: AssistActionButton(
+          onPressed: (String data) {
+            final String composedText = _controller.text;
+            if (composedText.trim().isEmpty) {
+              return;
+            }
+            setState(() {
+              _messages.add(AssistMessage.request(data: composedText));
+              _controller.clear();
+            });
+          },
+        ),
       ),
     );
   }
@@ -326,7 +406,7 @@ If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_c
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                  color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: TextField(
@@ -366,6 +446,7 @@ If [`AssistComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_c
       },
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}

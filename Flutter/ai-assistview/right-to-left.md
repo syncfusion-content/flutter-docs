@@ -1,112 +1,127 @@
 ---
 layout: post
-title: Placeholder in Flutter AIAssistView widget | Syncfusion
-description: Learn here about the RTL support in Syncfusion Flutter AIAssistView (SfAIAssistView) widget and more.
+title: Right to left (RTL) in Flutter AI AssistView widget | Syncfusion
+description: Learn here about the RTL support in Syncfusion Flutter AI AssistView (SfAIAssistView) widget and more.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
 
-# Right To Left (RTL) in Flutter AIAssistView (SfAIAssistView)
+# Right to left (RTL) in Flutter AI AssistView (SfAIAssistView)
 
 
-AIAssistView supports the right to left rendering for all the elements in the AIAssistView widget. 
+The AI AssistView supports right-to-left rendering for all the elements in the AI AssistView widget. 
 
-## RTL rendering ways
+## Enable RTL rendering
 
-Right to left rendering can be switched in the following ways:
+Right-to-left rendering can be switched in the following ways:
 
 ### Wrapping the SfAIAssistView with Directionality widget
 
 To change the rendering direction from right to left, you can wrap the [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
+>For app-wide RTL support, configure the `MaterialApp` with the appropriate `locale` and `localizationsDelegates`, or set `builder` to wrap the app in a `Directionality` widget. See the Flutter [internationalization guide](https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization) for details.
+
 {% tabs %}
 {% highlight dart hl_lines="5" %}
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Directionality(
-          textDirection: TextDirection.rtl,
-          child: SfAIAssistView(
-              //...
-          ),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class RtlDirectionalityExample extends StatelessWidget {
+  const RtlDirectionalityExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfAIAssistView(
+          messages: const <AssistMessage>[],
         ),
-      );
-    }
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 
-## RTL supported AIAssistView elements
+## RTL supported AI AssistView elements
 
 ### Placeholder
 
-Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AIAssistView. The widget added in the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
+Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) in the AI AssistView. The widget added in the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/placeholderBuilder.html) will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
 
 {% tabs %}
-{% highlight dart hl_lines="5 10" %}
+{% highlight dart hl_lines="6 11" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: SfAIAssistView(
-                messages: _messages,
-                placeholderBuilder: (context) {
-                  return Column(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class RtlPlaceholderExample extends StatelessWidget {
+  const RtlPlaceholderExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: SfAIAssistView(
+            messages: const <AssistMessage>[],
+            placeholderBuilder: (context) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Ask AI Anything',
+                    style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Ask AI Anything',
-                        style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('Music'),
+                            SizedBox(width: 5),
+                            Icon(Icons.music_note)
+                          ],
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: const Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text('Music'),
-                                SizedBox(width: 5),
-                                Icon(Icons.music_note)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: const Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text('Movies'),
-                                SizedBox(width: 5),
-                                Icon(Icons.movie_creation_rounded)
-                              ],
-                            ),
-                          ),
-                        ],
+                      const SizedBox(width: 5),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('Movies'),
+                            SizedBox(width: 5),
+                            Icon(Icons.movie_creation_rounded)
+                          ],
+                        ),
                       ),
                     ],
-                  );
-                },
-              ),
-            ),
+                  ),
+                ],
+              );
+            },
           ),
-        );
-      }
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -116,27 +131,33 @@ Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https:
 
 ### Composer
 
-Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AIAssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
+Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AI AssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="5 8" %}
+{% highlight dart hl_lines="6 9" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              composer: const AssistComposer(
-                decoration: InputDecoration(
-                  hintText: 'Ask AI anything',
-                ),
-              ),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class RtlComposerExample extends StatelessWidget {
+  const RtlComposerExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfAIAssistView(
+          messages: const <AssistMessage>[],
+          composer: const AssistComposer(
+            decoration: InputDecoration(
+              hintText: 'Ask AI anything',
             ),
           ),
-        );
-      }
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,27 +168,33 @@ Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/
 
 ### Action Button
 
-Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AIAssistView. Action button will be rendered from right to left direction.
+Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AI AssistView. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="5 8" %}
+{% highlight dart hl_lines="6 9" %}
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              actionButton: AssistActionButton(
-                onPressed: (String value) {
-                  // Handle the send button click action here.
-                },
-              ),
-            ),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
+
+class RtlActionButtonExample extends StatelessWidget {
+  const RtlActionButtonExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfAIAssistView(
+          messages: const <AssistMessage>[],
+          actionButton: AssistActionButton(
+            onPressed: (String value) {
+              // Handle the send button click action here.
+            },
           ),
-        );
-      } 
+        ),
+      ),
+    );
+  } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -177,65 +204,77 @@ Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.
 
 ### Conversation Area
 
-Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AIAssistView conversation area. In RTL mode, request and response message, header and suggestions will render the widget in right to left direction. 
+Right to left (RTL) rendering is supported for both [`request`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.request.html) and [`response`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/AssistMessage/AssistMessage.response.html) [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messages.html) in the AI AssistView conversation area. In RTL mode, request and response message, header and suggestions will render the widget in right to left direction. 
 
 {% tabs %}
 {% highlight dart %}
 
-    final List<AssistMessage> _messages = <AssistMessage>[];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/assist_view.dart';
 
-      void _generativeResponse(String data) async {
-        final String response = await _getAIResponse(data);
-        setState(() {
-          _messages.add(
-            AssistMessage.response(
-              data: response,
-              time: DateTime.now(),
-              suggestions: [
-                const AssistMessageSuggestion(data: 'Provier'),
-                const AssistMessageSuggestion(data: 'Riverpoad'),
-                const AssistMessageSuggestion(data: 'Bloc'),
-                const AssistMessageSuggestion(data: 'GetX'),
-              ],
-            ),
-          );
-        });
-      }
+class RtlConversationAreaExample extends StatefulWidget {
+  @override
+  State<RtlConversationAreaExample> createState() =>
+      _RtlConversationAreaExampleState();
+}
 
-      Future<String> _getAIResponse(String data) async {
-        String response = '';
-        // Connect with your preferred AI to generate a response to the request.
-        return response;
-      }
+class _RtlConversationAreaExampleState
+    extends State<RtlConversationAreaExample> {
+  final List<AssistMessage> _messages = <AssistMessage>[];
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SfAIAssistView(
-              messages: _messages,
-              actionButton: AssistActionButton(
-                onPressed: (String data) {
-                  if (data.trim().isNotEmpty) {
-                    setState(() {
-                      _messages.add(
-                        AssistMessage.request(
-                          data: data,
-                          time: DateTime.now(),
-                          author: const AssistMessageAuthor(
-                              id: 'User ID', name: 'User name'),
-                        ),
-                      );
-                      _generativeResponse(data);
-                    });
-                  }
-                },
-              ),
-            ),
+  void _generativeResponse(String data) async {
+    final String response = await _getAIResponse(data);
+    setState(() {
+      _messages.add(
+        AssistMessage.response(
+          data: response,
+          time: DateTime.now(),
+          suggestions: [
+            const AssistMessageSuggestion(data: 'Provider'),
+            const AssistMessageSuggestion(data: 'Riverpod'),
+            const AssistMessageSuggestion(data: 'Bloc'),
+            const AssistMessageSuggestion(data: 'GetX'),
+          ],
+        ),
+      );
+    });
+  }
+
+  Future<String> _getAIResponse(String data) async {
+    String response = '';
+    // Connect with your preferred AI to generate a response to the request.
+    return response;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfAIAssistView(
+          messages: _messages,
+          actionButton: AssistActionButton(
+            onPressed: (String data) {
+              if (data.trim().isNotEmpty) {
+                setState(() {
+                  _messages.add(
+                    AssistMessage.request(
+                      data: data,
+                      time: DateTime.now(),
+                      author: const AssistMessageAuthor(
+                          id: 'User ID', name: 'User name'),
+                    ),
+                  );
+                  _generativeResponse(data);
+                });
+              }
+            },
           ),
-        );
-      }
+        ),
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
