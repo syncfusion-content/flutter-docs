@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Syncfusion Flutter installer - Syncfusion
-description: Learn here about the how to install Syncfusion Flutter offline installer after downloading from our syncfusion website.
+description: Learn here how to install the Syncfusion Flutter offline installer after downloading it from the Syncfusion website.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -32,14 +32,14 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
    
     **Login To Install**
    
-    You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>&reg;</sup> email and password, click Next.
+    You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>&reg;</sup> email and password, click Next.
 
     ![Login credentials](images/Step-by-Step-Installation_img2.png)   
 
 
     **Use Unlock Key**
    
-    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup>&reg;</sup> Flutter installer.
+    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer and are platform and version specific. You should use either a Syncfusion<sup>&reg;</sup> licensed or trial unlock key to unlock the Syncfusion<sup>&reg;</sup> Flutter installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
@@ -51,7 +51,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 3.	After reading the License Terms and Privacy Policy, check the **“I agree to the License Terms and Privacy Policy”** check box. Click the Next button.
 
 
-4.	Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
+4.	Change the install and sample locations here. You can also change the Additional settings. Click **Next** or **Install** to install with the default settings.
 
 
     ![Advanced options](images/Step-by-Step-Installation_img4.png)
@@ -65,7 +65,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
 
 
-5.	If any previous versions of the current product are installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
+6.	If any previous versions of the current product are installed, the Uninstall Previous Version(s) wizard will be opened. Select the **Uninstall** checkbox to uninstall the previous versions and then click the **Proceed** button.
 
 
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
@@ -92,10 +92,10 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	
-7.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
+7.	After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio<sup>&reg;</sup> Flutter platform.
+8.  Click the **Finish** button. Your system has been installed with the Syncfusion Essential Studio<sup>&reg;</sup> Flutter platform.
 
 ## Installing in silent mode
 
