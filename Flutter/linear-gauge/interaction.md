@@ -2,7 +2,7 @@
 layout: post
 title: Interaction in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about the interactions in Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -17,8 +17,18 @@ The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 The following code sample demonstrates how to update a simple marker pointer value based on swipe or drag gestures:
 
+{% tabs %}
 {% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+class LinearGaugeDemo extends StatefulWidget {
+  @override
+  State<LinearGaugeDemo> createState() => _LinearGaugeDemoState();
+}
+
+class _LinearGaugeDemoState extends State<LinearGaugeDemo> {
   double shapePointerValue = 25;
 
   @override
@@ -44,15 +54,27 @@ The following code sample demonstrates how to update a simple marker pointer val
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Simple pointer interaction in linear gauge](images/interaction/simple_interaction.gif)
 
 The following code sample demonstrates how to update multiple marker pointer values based on swipe or drag gestures:
 
+{% tabs %}
 {% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+class LinearGaugeDemo extends StatefulWidget {
+  @override
+  State<LinearGaugeDemo> createState() => _LinearGaugeDemoState();
+}
+
+class _LinearGaugeDemoState extends State<LinearGaugeDemo> {
   double shapePointerValue = 85;
   double barPointerValue = 85;
   double widgetPointerValue = 26;
@@ -169,7 +191,9 @@ The following code sample demonstrates how to update multiple marker pointer val
       )
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Shape pointer interaction in linear gauge](images/interaction/interaction.gif)
