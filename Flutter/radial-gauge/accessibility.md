@@ -2,7 +2,7 @@
 layout: post
 title:  Accessibility in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about the accessibility support in Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and how to customize it.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
@@ -14,8 +14,38 @@ documentation: ug
 The [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) can be made accessible to screen readers by wrapping it with the flutter [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget. This provides meaningful information about the gauge to assistive technologies.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Radial Gauge Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   double _value = 50;
 
   @override
@@ -30,13 +60,14 @@ The [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) elements using the following APIs for the sufficient contrast.
+You can customize the color of the [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) elements using the following APIs for a sufficient contrast.
 
 * [Title](https://help.syncfusion.com/flutter/radial-gauge/radial-gauge-title#text-alignment)
 * [Axis labels](https://help.syncfusion.com/flutter/radial-gauge/axes#label-style-customization)
