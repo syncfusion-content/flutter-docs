@@ -14,8 +14,7 @@ documentation: ug
 ## Prerequisites
 
 * You must have a valid licensed or trial unlock key. See [How to generate the unlock key](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
-* Close all running Visual Studio instances before starting the installation.
-* The Flutter platform requires Windows 10 version 1809 (build 17763) or later for the Windows tooling, and Flutter SDK 1.22 or later on the development machine.
+* The Flutter platform requires Windows 10 version 1809 (build 17763) or later for the Windows tooling, and Flutter SDK 3.0 or later on the development machine.
 
 ## Installing with UI
 
@@ -25,7 +24,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
-    > N>The Installer Wizard extracts the `syncfusionessentialflutter_{version}.exe` dialog, which displays the package's unzip operation.
+    > N> The Installer Wizard extracts the `syncfusionessentialflutter_{version}.exe` dialog, which displays the package's unzip operation.
 
 2. To unlock the Syncfusion<sup>&reg;</sup> offline installer, you have two options:
 
@@ -64,9 +63,9 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
 
-    > N>From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
+    > N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
 
-    > N>If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
+    > N> If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
 
     **Confirmation Alert**
 
@@ -80,13 +79,13 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
     ![Installing wizard](images/Step-by-Step-Installation_img5.png)
 
-    > N>The **Completed** screen is displayed once the Flutter product is installed. If any version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
+    > N> The **Completed** screen is displayed once the Flutter product is installed. If any version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
 
     ![Completed wizard](images/Step-by-Step-Installation_img10.png)
 
 6. After installation, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
-7. Click the **Finish** button. Your system has now been installed with the Syncfusion Essential Studio<sup>&reg;</sup> Flutter platform.
+7. Click the **Finish** button. The Syncfusion Essential Studio<sup>&reg;</sup> Flutter platform is now installed on your system.
 
 ## Installing in silent mode
 
@@ -101,31 +100,31 @@ To install through the Command Line in Silent mode, follow the steps below.
 3. Run `%temp%`. The Temp folder will open. The `syncfusionessentialflutter_{version}.exe` file will be located in one of the folders.
 4. Copy the extracted `syncfusionessentialflutter_{version}.exe` file to a local drive.
 5. Exit the Wizard.
-6. Run Command Prompt in administrator mode and enter the following arguments.
+6. Open Command Prompt in administrator mode (right-click **Command Prompt** and select **Run as administrator**) and enter the following arguments.
 
-    **Arguments:** `"installer file path\SyncfusionEssentialStudio(product)_{version}.exe" /Install silent /PIDKEY:"(product unlock key)" [/log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]`
+    **Arguments:** `"<installer_path>\syncfusionessentialflutter_{version}.exe" /Install silent /PIDKEY:"<product_unlock_key>" [/log "<log_file_path>"] [/InstallPath:<install_location>] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]`
 
-    > N>Arguments inside square brackets are optional.
+    > N> Arguments inside square brackets are optional.
 
-    **Example:** `"D:\Temp\syncfusionessentialflutter_x.x.x.x.exe" /Install silent /PIDKEY:"product unlock key" /log "C:\Temp\EssentialStudio_Platform.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /CreateStartMenuShortcut:true`
+    **Example:** `"D:\Temp\syncfusionessentialflutter_x.x.x.x.exe" /Install silent /PIDKEY:"product_unlock_key" /log "C:\Temp\EssentialStudio_Platform.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /CreateStartMenuShortcut:true`
 
 7. Essential Studio<sup>&reg;</sup> for Flutter is installed.
 
-    > N>`x.x.x.x` should be replaced with the Essential Studio<sup>&reg;</sup> version, and the Product Unlock Key should be replaced with the Unlock Key for that version.
+    > N> `x.x.x.x` should be replaced with the Essential Studio<sup>&reg;</sup> version, and the Product Unlock Key should be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
 
-Syncfusion Essential<sup>&reg;</sup> Flutter can be uninstalled silently using the Command Line.
+Syncfusion Essential Studio<sup>&reg;</sup> Flutter can be uninstalled silently using the Command Line.
 
 1. Run the Syncfusion<sup>&reg;</sup> Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2. The file `syncfusionessentialflutter_{version}.exe` will be extracted into the Temp directory.
 3. Run `%temp%`. The Temp folder will open. The `syncfusionessentialflutter_{version}.exe` file will be located in one of the folders.
 4. Copy the extracted `syncfusionessentialflutter_{version}.exe` file to a local drive.
 5. Exit the Wizard.
-6. Run Command Prompt in administrator mode and enter the following arguments.
+6. Open Command Prompt in administrator mode (right-click **Command Prompt** and select **Run as administrator**) and enter the following arguments.
 
-    **Arguments:** `"Copied installer file path\syncfusionessentialflutter_{version}.exe" /uninstall silent`
+    **Arguments:** `"<installer_path>\syncfusionessentialflutter_{version}.exe" /uninstall silent`
 
     **Example:** `"D:\Temp\syncfusionessentialflutter_x.x.x.x.exe" /uninstall silent`
 

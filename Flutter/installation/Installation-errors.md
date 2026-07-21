@@ -33,18 +33,18 @@ This article describes the most common installation errors, as well as the cause
 
 ### Reason
 
-You are attempting to use a trial unlock key to unlock the licensed installer.
+You used a trial unlock key for a licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the licensed installer, use the licensed unlock key. To generate the licensed unlock key, refer to [this article](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
+Only a licensed unlock key can unlock a licensed installer. So, to unlock the licensed installer, use the licensed unlock key. To generate the licensed unlock key, see [How to generate a Syncfusion setup unlock key](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
 
 ## License has expired
 
 ### Problem
 
-**Error Message:** Your license for Syncfusion Essential Studio<sup>&reg;</sup> for Flutter has been expired since *{date}*. Please renew your subscription and try again.
+**Error Message:** Your license for Syncfusion Essential Studio<sup>&reg;</sup> for Flutter expired on *{date}*. Please renew your subscription and try again.
 
 > **Note:** In the actual dialog, *{date}* is replaced with the exact expiration date of your license.
 
@@ -85,8 +85,8 @@ The following are possible causes of this error:
 
 * When your trial period has expired
 * When you don't have a license or an active trial
-* You are not the license holder
-* Your account administrator has not yet assigned you a license.
+* When you are not the license holder
+* When your account administrator has not yet assigned you a license.
 
 ### Suggested solution
 
@@ -113,13 +113,15 @@ You are trying to install when another MSI-based installation (for example, a Wi
 
 ### Suggested solution
 
-End the conflicting `msiexec.exe` process in Task Manager, then run the Syncfusion<sup>&reg;</sup> installer again. If the problem persists, restart the computer and try the Syncfusion<sup>&reg;</sup> installer.
+Follow the steps below to end the conflicting `msiexec.exe` process and rerun the Syncfusion<sup>&reg;</sup> installer. If the problem persists, restart the computer and try the Syncfusion<sup>&reg;</sup> installer again.
 
 1. Open the Windows Task Manager.
 
 2. Switch to the **Details** tab.
 
 3. Select `msiexec.exe` and click **End task**.
+
+4. Re-run the Syncfusion<sup>&reg;</sup> installer.
 
 ![Task Manager](Errors/Installation_Errors_img5.png)
 
@@ -149,7 +151,7 @@ Controlled folder access is enabled on your computer.
 
 **Solution 1:** Disable controlled folder access, then install to the default Documents folder.
 
-1. Verify that Controlled folder access is enabled in Windows Security. Go to Virus & threat protection and ensure that Controlled folder access is turned on.
+1. Check whether Controlled folder access is enabled in Windows Security. Go to Virus & threat protection and verify whether Controlled folder access is turned on.
 2. Follow the steps in [Allow an app to access controlled folders](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable controlled folder access.
 3. Run the Syncfusion installer. Our demos are installed to the public Documents folder by default.
 4. After installation is complete, re-enable controlled folder access from the same Windows Security panel.

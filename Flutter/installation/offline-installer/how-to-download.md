@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Flutter installer - Syncfusion
-description: Learn here about the how to download Syncfusion Flutter offline installer from our syncfusion website.
+description: Learn how to download the Syncfusion Flutter offline installer from the Syncfusion website.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -34,8 +34,9 @@ Our 30-day trial can be downloaded in two ways.
    
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
-3. With a trial license, only the latest version's trial installer can be downloaded.
-4. After downloading, the Syncfusion<sup>&reg;</sup> Flutter trial installer can be unlocked using either the trial unlock key or your Syncfusion<sup>&reg;</sup> registered login credential. For more information on generating an unlock key, see [this](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) article.
+   > N> With a trial license, only the latest version's trial installer can be downloaded.
+
+3. After downloading, the Syncfusion<sup>&reg;</sup> Flutter trial installer can be unlocked using either the trial unlock key or your Syncfusion<sup>&reg;</sup> registered login credential. For more information on generating an unlock key, see [this](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) article.
 5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in the screenshot below).
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
@@ -44,7 +45,7 @@ Our 30-day trial can be downloaded in two ways.
 
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-offline-installer.png)
    
-### Start Trials if using components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
+### Start Trials if using components through Pub.dev
 
 You should initiate an evaluation if you have already obtained our components through [Pub.dev](https://pub.dev/packages?q=Syncfusion).
 
@@ -71,7 +72,7 @@ You should initiate an evaluation if you have already obtained our components th
 3. Click the **Download** (element 1 in the screenshot below) button to download the respective product's installer.
 4. The most recent version of the installer will be downloaded from this page.
 5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
-6. You can download other platform or add-on installers by going to **More Downloads Options** (element 3 in the screenshot below).
+6. You can download other platform or add-on installers by going to **More Download Options** (element 3 in the screenshot below).
 
    ![License and downloads of Syncfusion Essential Studio](images/license-download.png)
    

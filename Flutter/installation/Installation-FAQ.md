@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation | Frequently Asked Questions | Syncfusion
-description: Learn here all about the Frequently Asked Questions (FAQs) about the doubts that might occur during the Installation.
+description: Frequently asked questions about installing Syncfusion Flutter Components.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -16,7 +16,7 @@ This page answers the most common questions about installing the Syncfusion<sup>
 
 ### Where can I download the Syncfusion Flutter installer?
 
-You can download the trial or licensed installer from the [Download Free Trial](https://www.syncfusion.com/downloads) or [License & Downloads](https://www.syncfusion.com/account/downloads) page. For platform-specific instructions, see the [offline installer](offline-installer/how-to-download.md), [web installer](web-installer/how-to-download.md), [Linux installer](linux-installer/how-to-download.md), or [Mac installer](mac-installer/how-to-download.md) guides.
+You can download the trial or licensed installer from the [Download Free Trial](https://www.syncfusion.com/downloads) or [License & Downloads](https://www.syncfusion.com/account/downloads) page. For platform-specific instructions, see the [offline installer](https://help.syncfusion.com/flutter/installation/offline-installer/how-to-download), [web installer](https://help.syncfusion.com/flutter/installation/web-installer/how-to-download), [Linux installer](https://help.syncfusion.com/flutter/installation/linux-installer/how-to-download), or [Mac installer](https://help.syncfusion.com/flutter/installation/mac-installer/how-to-download) guides.
 
 ### Do I need an unlock key to install the trial?
 
@@ -30,7 +30,18 @@ See [How to generate the Syncfusion unlock key](https://support.syncfusion.com/k
 
 ### How do I register the license key in my Flutter app?
 
-See the [Flutter licensing overview](https://help.syncfusion.com/flutter/licensing/overview) for details on registering the license key in the `main` method of your application.
+Register the license key in the `main` method of your application as shown below:
+
+```dart
+import 'package:syncfusion_flutter_core/core.dart';
+
+void main() {
+  SyncfusionLicenseProvider.registerLicense('YOUR_LICENSE_KEY');
+  runApp(const MyApp());
+}
+```
+
+For more details, see the [Flutter licensing overview](https://help.syncfusion.com/flutter/licensing/overview).
 
 ## Troubleshooting
 

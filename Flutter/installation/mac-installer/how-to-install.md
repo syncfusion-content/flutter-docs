@@ -15,8 +15,8 @@ The Essential Studio<sup>&reg;</sup> Flutter Mac installer provides the Syncfusi
 ## Prerequisites
 
 * You must have already downloaded the Syncfusion<sup>&reg;</sup> Flutter Mac installer (DMG) from the [Mac installer download page](how-to-download.md).
-* A Mac running macOS Catalina (10.15) or later.
-* Flutter SDK 1.22 or later installed on your development machine.
+* A Mac running macOS Catalina (10.15) or later (see [System Requirements](https://help.syncfusion.com/flutter/system-requirements) for the latest supported versions).
+* Flutter SDK 3.0 or later installed on your development machine.
 * You must have a Syncfusion account. If you do not have one, sign up at [Syncfusion Account](https://www.syncfusion.com/account/register).
 
 
@@ -26,7 +26,7 @@ The Essential Studio<sup>&reg;</sup> Flutter Mac installer provides the Syncfusi
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
      
-   If you receive this alert, follow the steps below for the easiest solution.   
+   If you receive this alert, follow the steps below to resolve this.   
 
    1.	Right-click the downloaded DMG file.
    2.	Select the **Open With** option and choose **DiskImageMounter (Default)**. The pop-up below appears.
@@ -41,40 +41,49 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Flutter
 
 1. Locate the downloaded DMG file and open it by double-clicking it.
 
-   ![Welcome wizard](images/Mac_Installer1.png)
+   ![Mounted DMG](images/Mac_Installer1.png)
    
 
 2. This action automatically mounts the disk image and creates a virtual drive on your desktop or in the Finder sidebar.
 
-   ![license wizard](images/Mac_Installer2.png)   
+   ![Mounted disk image](images/Mac_Installer2.png)   
    
 
-3. Copy the mounted disk file.
+3. In the mounted disk, drag the **Syncfusion Essential Studio Flutter** application to the **Applications** folder shortcut.
 
-   ![License confirmation wizard](images/Mac_Installer3.png)
+   ![Syncfusion Essential Studio Flutter in mounted disk](images/Mac_Installer3.png)
    
    > N> An unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio Flutter Mac installer can be used for development purposes without registering the unlock key.
 
 
-4. Paste the copied file into the **Applications** folder.
+4. Wait for the file copy to complete.
 
-   ![license wizard](images/Mac_Installer4.png)
-
-
-5. Open the folder to explore the Syncfusion<sup>&reg;</sup> Essential Studio Mac installer.
-
-   ![Installation type wizard](images/Mac_Installer5.png)
+   ![Copying to Applications](images/Mac_Installer4.png)
 
 
-6. To remove the DMG file, right-click the virtual drive on your desktop or in the Finder sidebar and select **Eject**. Then delete the folder from **Applications**.
+5. Open the **Applications** folder to explore the Syncfusion<sup>&reg;</sup> Essential Studio Mac installer.
 
-   ![Credential wizard](images/Mac_Installer6.png)
+   ![Applications folder](images/Mac_Installer5.png)
+
+
+6. To remove the DMG file, right-click the virtual drive on your desktop or in the Finder sidebar and select **Eject**.
+
+   ![Eject virtual drive](images/Mac_Installer6.png)
 
    
 ## License key registration in samples
 
 After installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the Flutter Mac installer, refer to the [licensing overview](https://help.syncfusion.com/flutter/licensing/overview).
 
-If you are using Syncfusion<sup>&reg;</sup> controls prior to version 18.3.0.x, follow the steps below to register your license key.
+Register the license key in the `main` method of your application by importing the license package and calling `SyncfusionLicenseProvider.registerLicense`:
 
-Register the license key in the `main` method of your example and import the `syncfusion_flutter_core/core.dart` library.
+```dart
+import 'package:syncfusion_flutter_core/core.dart';
+
+void main() {
+  SyncfusionLicenseProvider.registerLicense('YOUR_LICENSE_KEY');
+  runApp(const MyApp());
+}
+```
+
+> N> If you are using Syncfusion<sup>&reg;</sup> controls prior to version 18.3.0.x, refer to the [legacy licensing guide](https://help.syncfusion.com/flutter/licensing/overview) for older registration steps.
