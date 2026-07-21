@@ -11,7 +11,7 @@ documentation: ug
 
 The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min and max dates, by default displaying the appointments from the current date. If the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) property of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) is null then the schedule view will display the month, week, and date headers alone in the view.
 
-The schedule view display two different UI for mobile and web, for mobile it will display the month header, week header, and date header but for the web, it will display the appointments alone in the view.
+The schedule view displays two different UIs for mobile and web. For mobile, it will display the month header, week header, and date header, but for the web, it will display the appointments alone in the view.
 
 ![Schedule view in Flutter event calendar](images/scheduleview/Schedule-view.png)
 
@@ -22,19 +22,32 @@ The schedule view display two different UI for mobile and web, for mobile it wil
 You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-          appointmentItemHeight: 70,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+            appointmentItemHeight: 70,
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,20 +58,33 @@ You can customize the height of an appointment in a schedule view by using the [
 You can hide the weeks that do not have an appointment on it in schedule view, by using the [hideEmptyScheduleWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/hideEmptyScheduleWeek.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-          hideEmptyScheduleWeek: true,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+            hideEmptyScheduleWeek: true,
+          ),
         ),
       ),
     );
   }
-  
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,19 +94,32 @@ You can hide the weeks that do not have an appointment on it in schedule view, b
 The appointment text style of schedule view can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentTextStyle.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7 8" %}
+{% highlight dart hl_lines="17 18" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-            appointmentTextStyle: TextStyle(
-                fontSize: 12, fontWeight: FontWeight.w500, color: Colors.lime)),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+              appointmentTextStyle: TextStyle(
+                  fontSize: 12, fontWeight: FontWeight.w500, color: Colors.lime)),
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -93,27 +132,39 @@ The day header can be customized by using the [dayHeaderSettings](https://pub.de
 The [DayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings-class.html) contains the properties to customize the day format, width, day text style, and date text style of the day header by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayFormat.html), [width](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/width.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayTextStyle.html), and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dateTextStyle.html) of [DayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines=" 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight dart hl_lines="17 18 19 20 21 22 23 24 25 26 27 28 29" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-            dayHeaderSettings: DayHeaderSettings(
-                dayFormat: 'EEEE',
-                width: 70,
-                dayTextStyle: TextStyle(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.red,
-                ),
-                dateTextStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.red,
-                ))),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+              dayHeaderSettings: DayHeaderSettings(
+                  dayFormat: 'EEEE',
+                  width: 70,
+                  dayTextStyle: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.red,
+                  ),
+                  dateTextStyle: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.red,
+                  ))),
+        ),
       ),
     );
   }
@@ -129,25 +180,37 @@ The week header can be customized by using the [weekHeaderSettings](https://pub.
 The [WeekHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings-class.html) contains the properties to customize the start and end date format, height, Text alignment, background color, and week text style of the week header by using the [startDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/startDateFormat.html), [endDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/endDateFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/backgroundColor.html), and [weekTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/weekTextStyle.html) of `WeekHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17" %}
+{% highlight dart hl_lines="17 18 19 20 21 22 23 24 25 26 27" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-            weekHeaderSettings: WeekHeaderSettings(
-                startDateFormat: 'dd MMM ',
-                endDateFormat: 'dd MMM, yy',
-                height: 50,
-                textAlign: TextAlign.center,
-                backgroundColor: Colors.red,
-                weekTextStyle: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15,
-                ))),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+              weekHeaderSettings: WeekHeaderSettings(
+                  startDateFormat: 'dd MMM ',
+                  endDateFormat: 'dd MMM, yy',
+                  height: 50,
+                  textAlign: TextAlign.center,
+                  backgroundColor: Colors.red,
+                  weekTextStyle: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                  ))),
+        ),
       ),
     );
   }
@@ -164,23 +227,35 @@ The month header can be customized by using the [monthHeaderSettings](https://pu
 The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings-class.html) contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/backgroundColor.html), and [monthTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthTextStyle.html) of `MonthHeaderSettings`.
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 12  13 14 15" %}
+{% highlight dart hl_lines="17 18 19 20 21 22 23 24 25" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.schedule,
-        scheduleViewSettings: ScheduleViewSettings(
-            monthHeaderSettings: MonthHeaderSettings(
-                monthFormat: 'MMMM, yyyy',
-                height: 100,
-                textAlign: TextAlign.left,
-                backgroundColor: Colors.green,
-                monthTextStyle: TextStyle(
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.schedule,
+          scheduleViewSettings: const ScheduleViewSettings(
+              monthHeaderSettings: MonthHeaderSettings(
+                  monthFormat: 'MMMM, yyyy',
+                  height: 100,
+                  textAlign: TextAlign.left,
+                  backgroundColor: Colors.green,
+                  monthTextStyle: TextStyle(
                     color: Colors.red,
                     fontSize: 25,
                     fontWeight: FontWeight.w400))),
+        ),
       ),
     );
   }

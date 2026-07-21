@@ -13,38 +13,64 @@ documentation: ug
 Visible dates can be restricted between certain range of dates, using [minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) properties in [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). It is applicable in all the schedule views.
 
 ### Minimum display date
-[minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) will restrict date navigations features of  backward, also cannot swipe the control using touch gesture beyond the min date range.
+[minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) will restrict backward date navigation, and you cannot swipe the control using touch gesture beyond the min date range.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="16" %}
 
-@override
-Widget build(BuildContext context) {
-        return Scaffold(
-            body: SfCalendar(
-                view: CalendarView.month,
-                minDate: DateTime(2020, 03, 05, 10 , 0, 0),
-                )
-        );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          minDate: DateTime(2020, 03, 05, 10, 0, 0),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Maximum display date
-[maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) will restrict date navigations features of forward, and also cannot swipe the control using touch gesture beyond the max date range.
+[maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) will restrict forward date navigation, and you cannot swipe the control using touch gesture beyond the max date range.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="16" %}
 
-@override
-Widget build(BuildContext context) {
-        return Scaffold(
-            body: SfCalendar(
-            view: CalendarView.month,
-            maxDate: DateTime(2020, 03, 25, 10 , 0, 0),
-            )
-        );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          maxDate: DateTime(2020, 03, 25, 10, 0, 0),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -62,13 +88,27 @@ Widget build(BuildContext context) {
 You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="2 6 16" %}
+{% highlight dart hl_lines="3 12 22" %}
 
-class MyAppState extends State<MyApp> {
-  CalendarController _calendarController = CalendarController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
 
   @override
-  initState() {
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  final CalendarController _calendarController = CalendarController();
+
+  @override
+  void initState() {
     _calendarController.displayDate = DateTime(2022, 02, 05);
     super.initState();
   }
@@ -93,13 +133,27 @@ class MyAppState extends State<MyApp> {
 You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="2 6 16" %}
+{% highlight dart hl_lines="3 12 22" %}
 
-class MyAppState extends State<MyApp> {
-  CalendarController _calendarController = CalendarController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
 
   @override
-  initState() {
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  final CalendarController _calendarController = CalendarController();
+
+  @override
+  void initState() {
     _calendarController.selectedDate = DateTime(2020, 04, 10);
     super.initState();
   }
@@ -127,19 +181,33 @@ By default, the date can be navigated to next and previous views using touch ges
 You can use the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html) method of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html) for viewing the next immediate visible dates in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
-{% highlight dart hl_lines="2 13 20" %}
+{% highlight dart hl_lines="3 14 21" %}
 
-class MyAppState extends State<MyApp> {
-  CalendarController _calendarController = CalendarController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  final CalendarController _calendarController = CalendarController();
   
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Calendar Demo'),
+          title: const Text('Calendar Demo'),
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.arrow_forward),
+            IconButton(icon: const Icon(Icons.arrow_forward),
               onPressed: () {
                 _calendarController.forward!();
               },
@@ -162,20 +230,34 @@ class MyAppState extends State<MyApp> {
 You can use the [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) method of `controller` for viewing the previous immediate visible dates in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
 
 {% tabs %}
-{% highlight dart hl_lines="2 14 21" %}
+{% highlight dart hl_lines="3 15 22" %}
 
-class MyAppState extends State<MyApp> {
-  CalendarController _calendarController = CalendarController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  final CalendarController _calendarController = CalendarController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Calendar Demo'),
+          title: const Text('Calendar Demo'),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 _calendarController.backward!();
               },
@@ -198,14 +280,29 @@ class MyAppState extends State<MyApp> {
 You can enable the date picker for the calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property in the calendar, which displays the date picker in the header view. It allows you to quickly navigate to the different calendar views.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="15" %}
 
-@override
-Widget build(BuildContext context) {
-  return SfCalendar(
-      view: CalendarView.month,
-	  showDatePickerButton: true,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          showDatePickerButton: true,
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
@@ -222,14 +319,29 @@ To know more about how to customize the Date Picker's appearance in the Flutter 
 You can enable the today button by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showTodayButton.html) property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today's view.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="15" %}
 
-@override
-Widget build(BuildContext context) {
-  return SfCalendar(
-      view: CalendarView.month,
-	  showTodayButton: true,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          showTodayButton: true,
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
@@ -240,14 +352,29 @@ You can quickly navigate to the day view by a tap on the month cell and view hea
 
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="15" %}
 
-@override
-Widget build(BuildContext context) {
-  return SfCalendar(
-      view: CalendarView.month,
-	  allowViewNavigation: true,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          allowViewNavigation: true,
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
@@ -259,21 +386,35 @@ Widget build(BuildContext context) {
 You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
 
 {% tabs %}
-{% highlight dart hl_lines="5 6 7 8 9 10 11 12" %}
+{% highlight dart hl_lines="15 16 17 18 19 20 21 22" %}
 
-@override
-Widget build(BuildContext context) {
-    return SfCalendar(
-        view: CalendarView.month,
-        allowedViews: <CalendarView>
-        [
-          CalendarView.day,
-          CalendarView.week,
-          CalendarView.workWeek,
-          CalendarView.month,
-          CalendarView.schedule
-        ],
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          allowedViews: <CalendarView>[
+            CalendarView.day,
+            CalendarView.week,
+            CalendarView.workWeek,
+            CalendarView.month,
+            CalendarView.schedule
+          ],
+        ),
+      ),
     );
+  }
 }
 
 {% endhighlight %}
@@ -286,15 +427,28 @@ Widget build(BuildContext context) {
 You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict switching to the previous or next views using the swipe interaction of SfCalendar. By default, the view navigation mode is set to [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="16" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfCalendar(
-         view: CalendarView.day,
-        viewNavigationMode: ViewNavigationMode.snap,
-    ),);
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.day,
+          viewNavigationMode: ViewNavigationMode.snap,
+        ),
+      ),
+    );
   }
 
 {% endhighlight %}
