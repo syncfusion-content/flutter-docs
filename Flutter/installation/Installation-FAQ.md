@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation | Frequently Asked Questions | Syncfusion
-description: Frequently asked questions about installing Syncfusion Flutter Components.
+description: Learn here about frequently asked questions and answers about installing the Syncfusion Flutter Components.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

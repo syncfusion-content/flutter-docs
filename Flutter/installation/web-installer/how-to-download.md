@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Flutter web installer - Syncfusion
-description: Learn how to download the Syncfusion Flutter web installer from the Syncfusion website.
+description: Learn here all about how to download the Syncfusion Flutter web installer from the Syncfusion website.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
