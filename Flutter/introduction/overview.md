@@ -53,6 +53,40 @@ Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for Flutter is a comprehen
 ## Controls List
 
 <style>
+#table
+{
+border:0 !important;
+line-height: 160% !important;
+}
+#table tr {
+  border:0 !important;
+}
+#table td {
+  border:0 !important;
+  vertical-align: top;
+}
+.controlanchorlink {
+    font-size: 14px !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    padding: 2px 0px;
+}
+.category-topics {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+    line-height: 20px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+.category {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+    text-align: left !important;
+    line-height: 20px;
+    padding-top: 20px;
+}
 @font-face {
 font-family: 'UI Control Icons Flutter';
 src:
@@ -106,7 +140,7 @@ line-height: 1;
 </colgroup>
 <tr>
 <td>
-<!-- Data Visualization -->
+<!-- Column 1: Data Visualization -->
 <div>
     <p class="category-topics">DATA VISUALIZATION</p>
 </div>
@@ -160,15 +194,39 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-linear-gauge"></span>Linear Gauge
     </a>
 </div>
-
-<div><p class="category-topics">SLIDERS</p></div>
-
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/flutter/slider/overview"><span class="sf-home-icon sf-icon-slider"></span>Slider</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/flutter/range-slider/overview"><span class="sf-home-icon sf-icon-range-slider"></span>Range Slider</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/flutter/range-selector/overview"><span class="sf-home-icon sf-icon-range-selector"></span>Range Selector</a></div>
 </td>
 <td>
-<!-- Data Management -->
+<!-- Column 2: Sliders + Editors -->
+<div>
+    <p class="category-topics">SLIDERS</p>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/flutter/slider/overview">
+        <span class="sf-home-icon sf-icon-slider"></span>Slider
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/flutter/range-slider/overview">
+        <span class="sf-home-icon sf-icon-range-slider"></span>Range Slider
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/flutter/range-selector/overview">
+        <span class="sf-home-icon sf-icon-range-selector"></span>Range Selector
+    </a>
+</div>
+
+<div>
+    <p class="category-topics">EDITORS</p>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/flutter/signaturepad/overview">
+        <span class="sf-home-icon sf-icon-signature-pad"></span>Signature Pad
+    </a>
+</div>
+</td>
+<td>
+<!-- Column 3: Data Management + Conversational UI -->
 <div>
     <p class="category-topics">DATA MANAGEMENT</p>
 </div>
@@ -188,17 +246,6 @@ line-height: 1;
     </a>
 </div>
 
-<!-- Editors -->
-<div>
-    <p class="category-topics">EDITORS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/flutter/signaturepad/overview">
-        <span class="sf-home-icon sf-icon-signature-pad"></span>Signature Pad
-    </a>
-</div>
-
-<!-- Conversational UI -->
 <div>
     <p class="category-topics">CONVERSATIONAL UI</p>
 </div>
