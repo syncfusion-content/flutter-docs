@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Flutter web installer - Syncfusion
-description: Learn here about the how to download Syncfusion Flutter web installer from our syncfusion website with license.
+description: Learn here all about how to download the Syncfusion Flutter web installer from the Syncfusion website.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -36,13 +36,12 @@ Our 30-day trial can be downloaded in two ways.
    
 3. With a trial license, only the latest version's trial installer can be downloaded.
 4. After downloading, the Syncfusion<sup>&reg;</sup> Flutter trial installer can be unlocked using either the trial unlock key or your Syncfusion<sup>&reg;</sup> registered login credential. For more information on generating an unlock key, see [this](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) article.
-5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in the screenshot below).
-6. Click the **Download** (element 1 in the screenshot below) button to get the Syncfusion Essential Studio<sup>&reg;</sup> Flutter web installer.
+5. Before the trial expires, click the **Download** (element 1 in the screenshot below) button on your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the Syncfusion Essential Studio<sup>&reg;</sup> Flutter web installer at any time.
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
    
-### Start Trials if using components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
+### Start Trials if using components through Pub.dev
 
 You should initiate an evaluation if you have already obtained our components through [Pub.dev](https://pub.dev/packages?q=Syncfusion).
 
@@ -53,7 +52,7 @@ You should initiate an evaluation if you have already obtained our components th
 2. To access this page, you must sign up or log in with your Syncfusion<sup>&reg;</sup> account.
 3. Begin your trial by selecting the Flutter product. 
 
-   > N>If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
+   > N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
 4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/flutter/licensing/overview) here at any time before the trial period expires (as shown in the screenshot below).
 
@@ -67,7 +66,7 @@ You should initiate an evaluation if you have already obtained our components th
 1. Syncfusion<sup>&reg;</sup> licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup>&reg;</sup> account.
 2. You can view all licenses (both active and expired) associated with your account.
 3. Click the **Download** (element 1 in the screenshot below) button to download the respective product's installer.
-4. The most recent version of the installer will be downloaded from this page.
+4. This page always provides the most recent version of the installer.
 5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
 6. You can download other platform or add-on installers by going to **More Downloads Options** (element 3 in the screenshot below).
    
@@ -79,6 +78,6 @@ You should initiate an evaluation if you have already obtained our components th
    
 8. After downloading, the Syncfusion<sup>&reg;</sup> Flutter web installer can be unlocked using your Syncfusion<sup>&reg;</sup> registered login credential.
 
-   > N>For Syncfusion<sup>&reg;</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>&reg;</sup> trial or licensed products will be installed via the web installer.
+   > N> For Syncfusion<sup>&reg;</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>&reg;</sup> trial or licensed products will be installed via the web installer.
    
 Refer to the [**web installer**](https://help.syncfusion.com/flutter/installation/web-installer/how-to-install) link for step-by-step installation guidelines.	

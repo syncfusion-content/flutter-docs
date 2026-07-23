@@ -13,7 +13,7 @@ documentation: ug
 
 ## Overview
 
-For the Essential Studio<sup>&reg;</sup> Flutter product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer reduces  the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads).
+For the Essential Studio<sup>&reg;</sup> Flutter product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer reduces the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads).
  
 ## Installation
 
@@ -24,7 +24,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
-    > N>The installer wizard extracts the syncfusionessentialflutterwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
+    > N> The installer wizard extracts the syncfusionessentialflutterwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
 2. 	The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button.
 
@@ -54,7 +54,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	> N>From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	> N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
 5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -66,8 +66,8 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	> N>By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
-	
+	> N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation.
+
 
 7.  The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 
@@ -87,7 +87,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 
     ![Login wizard install](images/Step-by-Step-Installation_img9.png)
 	
-	> I> The products you have chosen will be installed based on your Syncfusion <sup>&reg;</sup> License (Trial or Licensed).
+	> I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
 10. The download and installation\uninstallation progress will be displayed as shown below.
 
@@ -107,29 +107,29 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Flutter Web
 	
 ## Uninstallation
 
-Syncfusion<sup>&reg;</sup> Flutter installer can be uninstalled in two ways.
+The Syncfusion<sup>&reg;</sup> Flutter installer can be uninstalled in two ways.
 
-   * Uninstall the Flutter using the Syncfusion<sup>&reg;</sup> Flutter web installer
-   * Uninstall the Flutter from Windows Control Panel
+   * Uninstall the Syncfusion<sup>&reg;</sup> Flutter installer using the Syncfusion<sup>&reg;</sup> Flutter web installer.
+   * Uninstall the Syncfusion<sup>&reg;</sup> Flutter installer from the Windows Control Panel.
 
 Follow either one of the option below to uninstall Syncfusion Essential Studio<sup>&reg;</sup> Flutter installer.
   
-**Option 1: Uninstall the Flutter using the Syncfusion<sup>&reg;</sup> Flutter web installer**
+**Option 1: Uninstall the Syncfusion<sup>&reg;</sup> Flutter installer using the Syncfusion<sup>&reg;</sup> Flutter web installer**
 
 Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 	
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
 	
-**Option 2: Uninstall the Flutter from Windows Control Panel**  
+**Option 2: Uninstall the Syncfusion<sup>&reg;</sup> Flutter installer from the Windows Control Panel**  
 	
 You can uninstall all the installed products by selecting the **Syncfusion Essential Studio<sup>&reg;</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Flutter alone by selecting the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-> N>If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio<sup>&reg;</sup> Flutter alone will be removed and the below default MSI uninstallation window will be displayed.	
+> N> If the **Syncfusion Essential Studio<sup>&reg;</sup> for Flutter {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio<sup>&reg;</sup> Flutter alone will be removed and the below default MSI uninstallation window will be displayed.	
 
-1.  The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button
+1.  The Syncfusion<sup>&reg;</sup> Flutter Web Installer's welcome wizard will be displayed. Click the Next button.
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 
@@ -157,7 +157,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	> N>By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+	> N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation.
 	
 6.	The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 

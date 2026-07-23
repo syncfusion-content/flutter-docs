@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Flutter Linux installer - Syncfusion
-description: Learn here about the how to download Syncfusion Flutter linux installer packages from syncfusion website.
+description: Learn here all about how to download the Syncfusion Flutter Linux installer from the Syncfusion website.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -24,7 +24,7 @@ The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion<
 Our 30-day trial can be downloaded in two ways.
 
 * Download Free Trial Setup
-* Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+* Start Trials if using components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
 
 
 ### Download Free Trial Setup
@@ -44,13 +44,13 @@ Our 30-day trial can be downloaded in two ways.
 
    ![License and downloads of Syncfusion Flutter](images/start-trial-download-offline-installer.png)
 
-### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start Trials if using components through Pub.dev
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
+You should initiate an evaluation if you have already obtained our components through [Pub.dev](https://pub.dev/packages?q=Syncfusion).
 
 1. Start your 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page in your account.
 
-   > N> You can generate the license key for your active trial products from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key is mandatory to use our trial products in your application. To learn more about license keys, refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+   > N> You can generate the license key for your active trial products from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key is mandatory to use our trial products in your application. To learn more about license keys, refer to the [Flutter licensing overview](https://help.syncfusion.com/flutter/licensing/overview).
 	
     ![Trial and downloads of Syncfusion Flutter](images/start-trial-download.png)
    
@@ -59,7 +59,7 @@ You should initiate an evaluation if you have already obtained our components th
 
    > N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires (as shown in the screenshot below).
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/flutter/licensing/overview) here at any time before the trial period expires (as shown in the screenshot below).
 
    ![License and downloads of Syncfusion Flutter](images/start-trial-download-installer.png)
 
@@ -70,7 +70,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 1. Syncfusion<sup>&reg;</sup> licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup>&reg;</sup> account.
 2. You can view all licenses (both active and expired) associated with your account.
-3. You can download the Flutter Linux licensed installer by going to **More Downloads Options** (element 3 in the screenshot below).
+3. You can download the Flutter Linux licensed installer by going to **More Download Options** (element 3 in the screenshot below).
 
    ![License and downloads of Syncfusion Flutter](images/license-download.png)
    
