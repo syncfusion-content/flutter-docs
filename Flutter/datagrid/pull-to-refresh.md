@@ -164,9 +164,11 @@ Download the demo application from [GitHub](https://github.com/SyncfusionExample
 
 ## Customizing the refresh indicator
 
-SfDataGrid displays the [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) for `pull to refresh` action. So, set the color and background color of the refresh indicator by using the [ThemeData.accentColor](https://api.flutter.dev/flutter/material/ThemeData/accentColor.html) and  [ThemeData.canvasColor](https://api.flutter.dev/flutter/material/ThemeData/canvasColor.html) properties.
+SfDataGrid displays Flutter's [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) during pull-to-refresh actions. You can customize the refresh indicator by using the [SfDataGrid.refreshIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorStrokeWidth.html) and [SfDataGrid.refreshIndicatorDisplacement](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorDisplacement.html) properties.
 
-Also, change the stroke width and displacement of the refresh indicator by using the [SfDataGrid.refreshIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorStrokeWidth.html) and [SfDataGrid.refreshIndicatorDisplacement](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorDisplacement.html) properties.
+To set the indicator's color and background color, use the [ColorScheme](https://api.flutter.dev/flutter/material/ColorScheme-class.html) properties within [ThemeData](https://api.flutter.dev/flutter/material/ThemeData-class.html). The `primary` color in ColorScheme controls the indicator's color.
+
+> **Note:** The deprecated `ThemeData.accentColor` property has been replaced with `ColorScheme.primary` in Flutter 3.0+. Use ColorScheme for modern Flutter applications.
 
 {% tabs %}
 {% highlight Dart %} 
