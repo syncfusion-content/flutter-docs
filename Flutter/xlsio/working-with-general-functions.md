@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel General Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply general function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Working with General Function Formulas | Syncfusion Flutter XlsIO
+description: Learn how to apply general function formulas and read calculated values in the cells of an Excel worksheet using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,208 +9,179 @@ documentation: ug
 
 # Working with General Function Formulas
 
-General Function Formulas includes the following functions:
+General function formulas are the most common Excel functions used to summarize numeric data. Syncfusion Flutter XlsIO supports the following general functions:
 
-* SUM
-* AVERAGE
-* MAX
-* MIN
-* COUNT
+* [SUM](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions#sum-function) — adds its arguments.
+* [AVERAGE](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions#average-function) — returns the average of its arguments.
+* [MAX](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions#max-function) — returns the largest value in its arguments.
+* [MIN](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions#min-function) — returns the smallest value in its arguments.
+* [COUNT](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions#count-function) — counts how many numbers are in its arguments.
 
-## SUM Function
+For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview). For background on formulas and how to enable calculation, see [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas).
 
-SUM function is used to add the arguments in the cells and returns the sum value.
+N> The code samples in this document use `await workbook.save()`. Always call `workbook.dispose()` after saving to release the XlsIO DOM memory, ideally inside a `try/finally` block. Each function sample calls `enableSheetCalculations()` so the calculated value is available through the `calculatedValue` property of a `Range`.
 
-The following code snippet illustrates on how to use SUM function formula.
+## Shared sample data
 
-{% highlight dart %}
-
-// Create a new Excel document.
-final Workbook workbook = Workbook();
-
-//Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-//set the value to the cell.
-sheet.getRangeByName('A1').setNumber(10);
-sheet.getRangeByName('A2').setNumber(20);
-sheet.getRangeByName('A3').setNumber(4);
-sheet.getRangeByName('A4').setNumber(12);
-sheet.getRangeByName('B1').setNumber(2);
-sheet.getRangeByName('B2').setNumber(16);
-sheet.getRangeByName('B3').setNumber(8);
-sheet.getRangeByName('B4').setNumber(11);
-
-//Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
-
-//Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=SUM(A1,A2)');
-sheet.getRangeByName('B6').setFormula('=SUM(A1:A4,B1:B4)');
-
-//Save and dispose a workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('SumFormula.xlsx').writeAsBytes(bytes);
-
-{% endhighlight %}
-
-## AVERAGE Function
-
-AVERAGE function is used to returns the average of the arguments in the cells.
-
-The following code snippet illustrates on how to use AVERAGE function formula.
+The samples in this page share the following data setup, which writes eight numbers into the worksheet:
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
+void populateSampleData(Worksheet sheet) {
+  // Column A.
+  sheet.getRangeByName('A1').setNumber(10);
+  sheet.getRangeByName('A2').setNumber(20);
+  sheet.getRangeByName('A3').setNumber(4);
+  sheet.getRangeByName('A4').setNumber(12);
 
-//Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-//set the value to the cell.
-sheet.getRangeByName('A1').setNumber(10);
-sheet.getRangeByName('A2').setNumber(20);
-sheet.getRangeByName('A3').setNumber(4);
-sheet.getRangeByName('A4').setNumber(12);
-sheet.getRangeByName('B1').setNumber(2);
-sheet.getRangeByName('B2').setNumber(16);
-sheet.getRangeByName('B3').setNumber(8);
-sheet.getRangeByName('B4').setNumber(11);
-
-//Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
-
-//Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=AVERAGE(A1,B1)');
-sheet.getRangeByName('B6').setFormula('=AVERAGE(A1:A4,B1:B4)');
-
-//Save and dispose a workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('AverageFormula.xlsx').writeAsBytes(bytes);
-
+  // Column B.
+  sheet.getRangeByName('B1').setNumber(2);
+  sheet.getRangeByName('B2').setNumber(16);
+  sheet.getRangeByName('B3').setNumber(8);
+  sheet.getRangeByName('B4').setNumber(11);
+}
 {% endhighlight %}
 
-## MAX Function
+## SUM function
 
-MAX function is used to returns maximum value from a list of arguments in the Cells.
-
-The following code snippet illustrates on how to use MAX function formula.
+The `SUM` function returns the sum of its arguments. Arguments can be individual cells (`SUM(A1, B1)`), ranges (`SUM(A1:A4)`), or a mix of both. Empty cells and text values are ignored.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
+Future<void> sumFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  populateSampleData(sheet);
+  sheet.enableSheetCalculations();
 
-//set the value to the cell.
-sheet.getRangeByName('A1').setNumber(10);
-sheet.getRangeByName('A2').setNumber(20);
-sheet.getRangeByName('A3').setNumber(4);
-sheet.getRangeByName('A4').setNumber(12);
-sheet.getRangeByName('B1').setNumber(2);
-sheet.getRangeByName('B2').setNumber(16);
-sheet.getRangeByName('B3').setNumber(8);
-sheet.getRangeByName('B4').setNumber(11);
+  // Sum of two individual cells.
+  sheet.getRangeByName('A6').setFormula('=SUM(A1,B1)');
 
-//Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  // Sum of two ranges.
+  sheet.getRangeByName('B6').setFormula('=SUM(A1:A4,B1:B4)');
 
-//Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=MAX(A1,B1)');
-sheet.getRangeByName('B6').setFormula('=MAX(A1:A4,B1:B4)');
-
-//Save and dispose a workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('MaxFormula.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## MIN Function
+`A6` evaluates to `12` (the sum of `A1` and `B1`). `B6` evaluates to `83` (the sum of all eight values).
 
-MIN function is used to returns minimum value from a list of arguments in the Cells.
+## AVERAGE function
 
-The following code snippet illustrates on how to use MIN function formula.
+The `AVERAGE` function returns the arithmetic mean of its arguments. Empty cells and text values are ignored; only numeric values are included in the calculation.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
+Future<void> averageFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  populateSampleData(sheet);
+  sheet.enableSheetCalculations();
 
-//set the value to the cell.
-sheet.getRangeByName('A1').setNumber(10);
-sheet.getRangeByName('A2').setNumber(20);
-sheet.getRangeByName('A3').setNumber(4);
-sheet.getRangeByName('A4').setNumber(12);
-sheet.getRangeByName('B1').setNumber(2);
-sheet.getRangeByName('B2').setNumber(16);
-sheet.getRangeByName('B3').setNumber(8);
-sheet.getRangeByName('B4').setNumber(11);
+  // Average of two individual cells.
+  sheet.getRangeByName('A6').setFormula('=AVERAGE(A1,B1)');
 
-//Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  // Average of two ranges.
+  sheet.getRangeByName('B6').setFormula('=AVERAGE(A1:A4,B1:B4)');
 
-//Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=MIN(A1,B1)');
-sheet.getRangeByName('B6').setFormula('=MIN(A1:A4,B1:B4)');
-
-//Save and dispose a workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('MinFormula.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## COUNT Function
+`A6` evaluates to `6` (the average of `A1` and `B1`). `B6` evaluates to `10.375` (the average of all eight values).
 
-COUNT function is used to count how many numbers are in the list of arguments.
+## MAX function
 
-The following code snippet illustrates on how to use COUNT function formula.
+The `MAX` function returns the largest value in its arguments. Empty cells and text values are ignored.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
+Future<void> maxFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  populateSampleData(sheet);
+  sheet.enableSheetCalculations();
 
-//set the value to the cell.
-sheet.getRangeByName('A1').setNumber(10);
-sheet.getRangeByName('A2').setNumber(20);
-sheet.getRangeByName('A3').setNumber(4);
-sheet.getRangeByName('A4').setNumber(12);
-sheet.getRangeByName('B1').setNumber(2);
-sheet.getRangeByName('B2').setNumber(16);
-sheet.getRangeByName('B3').setNumber(8);
-sheet.getRangeByName('B4').setNumber(11);
+  // Maximum of two individual cells.
+  sheet.getRangeByName('A6').setFormula('=MAX(A1,B1)');
 
-//Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  // Maximum of two ranges.
+  sheet.getRangeByName('B6').setFormula('=MAX(A1:A4,B1:B4)');
 
-//Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=COUNT(A1,B1)');
-sheet.getRangeByName('B6').setFormula('=COUNT(A1:A4,B1:B4)');
-
-//Save and dispose a workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('CountFormula.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
+`A6` evaluates to `10` (the larger of `A1` and `B1`). `B6` evaluates to `20` (the largest of all eight values).
 
+## MIN function
 
+The `MIN` function returns the smallest value in its arguments. Empty cells and text values are ignored.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> minFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  populateSampleData(sheet);
+  sheet.enableSheetCalculations();
+
+  // Minimum of two individual cells.
+  sheet.getRangeByName('A6').setFormula('=MIN(A1,B1)');
+
+  // Minimum of two ranges.
+  sheet.getRangeByName('B6').setFormula('=MIN(A1:A4,B1:B4)');
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+`A6` evaluates to `2` (the smaller of `A1` and `B1`). `B6` evaluates to `2` (the smallest of all eight values).
+
+## COUNT function
+
+The `COUNT` function counts the number of numeric values in its arguments. Empty cells, text values, and logical values are not counted. To count non-empty cells regardless of type, use `COUNTA`; to count cells that meet a condition, use `COUNTIF` or `COUNTIFS`.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> countFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  populateSampleData(sheet);
+  sheet.enableSheetCalculations();
+
+  // Count of two individual cells.
+  sheet.getRangeByName('A6').setFormula('=COUNT(A1,B1)');
+
+  // Count of two ranges.
+  sheet.getRangeByName('B6').setFormula('=COUNT(A1:A4,B1:B4)');
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+`A6` evaluates to `2` (both `A1` and `B1` are numeric). `B6` evaluates to `8` (all eight values are numeric).
+
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas)
+* [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
+* [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
+* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Text Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply Text function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Working with Text Function Formulas | Syncfusion Flutter XlsIO
+description: Learn how to apply text function formulas and read calculated values in the cells of an Excel worksheet using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,150 +9,139 @@ documentation: ug
 
 # Working with Text Function Formulas
 
-Text Function Formulas includes the following functions:
+Text function formulas manipulate text values: joining strings, trimming whitespace, and changing letter case. Syncfusion Flutter XlsIO supports the following text functions:
 
-* CONCATENATE
-* TRIM
-* LOWER
-* UPPER
+* [CONCATENATE](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-text-functions#concatenate-function) — joins two or more text strings into one string.
+* [TRIM](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-text-functions#trim-function) — removes leading and trailing spaces and collapses internal multiple spaces to a single space.
+* [LOWER](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-text-functions#lower-function) — converts all uppercase letters in a text string to lowercase.
+* [UPPER](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-text-functions#upper-function) — converts all lowercase letters in a text string to uppercase.
 
-## CONCATENATE Function
+For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview). For background on formulas and how to enable calculation, see [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas).
 
-CONCATENATE Function is a Text Function used to join two or more text strings into one string.
+N> The code samples in this document use `await workbook.save()`. Always call `workbook.dispose()` after saving to release the XlsIO DOM memory, ideally inside a `try/finally` block. Each function sample calls `enableSheetCalculations()` so the calculated value is available through the `calculatedValue` property of a `Range`.
 
-The following code snippet illustrates on how to use CONCATENATE function formula.
+## CONCATENATE function
 
-{% highlight dart %}
-
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
-
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-// set the value to the cell.
-sheet.getRangeByName('A1').setText('Syncfusion ');
-sheet.getRangeByName('A2').setText('Software');
-
-sheet.getRangeByName('B1').setText('Hello');
-sheet.getRangeByName('B2').setText('World');
-
-// Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
-
-// Setting formula in the cell.
-Range range = sheet.getRangeByName('A4');
-range.setFormula('=CONCATENATE(A1,A2)');
-range = sheet.getRangeByName('A6');
-range.setFormula('=CONCATENATE(B1,B2)');
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('CONCATENATEFunction.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
-{% endhighlight %}
-
-## TRIM Function
-
-TRIM Function is used to removes all spaces from text except for single spaces between words.
-
-The following code snippet illustrates on how to use TRIM function formula.
+The `CONCATENATE` function joins two or more text strings into one string. Its signature is `CONCATENATE(text1, text2, ...)`. To insert a separator between the joined parts, include a literal text argument, for example `CONCATENATE(text1, " ", text2)`. The modern Excel functions `CONCAT` and `TEXTJOIN` provide more flexible joining options and may be preferred for new code.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> concatenateFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // First pair: A1 already has a trailing space so the result reads naturally.
+  sheet.getRangeByName('A1').setText('Syncfusion ');
+  sheet.getRangeByName('A2').setText('Software');
 
-// set the value to the cell.
-sheet.getRangeByName('A1').setText('   Hello  ');
-sheet.getRangeByName('A2').setText('     World  Hi');
+  // Second pair: no trailing space, so the result is "HelloWorld".
+  sheet.getRangeByName('B1').setText('Hello');
+  sheet.getRangeByName('B2').setText('World');
 
-// Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  sheet.enableSheetCalculations();
 
-// Setting formula in the cell.
-Range range = sheet.getRangeByName('A4');
-range.setFormula('=TRIM(A1)');
-range = sheet.getRangeByName('A6');
-range.setFormula('=TRIM(A2)');
+  // Joins "Syncfusion " and "Software" -> "Syncfusion Software".
+  sheet.getRangeByName('A3').setFormula('=CONCATENATE(A1,A2)');
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('TRIMFunction.xlsx').writeAsBytes(bytes);
-workbook.dispose();
+  // Joins "Hello" and "World" -> "HelloWorld".
+  sheet.getRangeByName('B3').setFormula('=CONCATENATE(B1,B2)');
 
+  // Example with a separator: "Hello World".
+  sheet.getRangeByName('C3').setFormula(r'=CONCATENATE(B1, " ", B2)');
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## LOWER Function
+`A3` evaluates to `"Syncfusion Software"`. `B3` evaluates to `"HelloWorld"`. `C3` evaluates to `"Hello World"`.
 
-LOWER Function used to converts all uppercase letters in a text string to lowercase.
+## TRIM function
 
-The following code snippet illustrates on how to use LOWER function formula.
+The `TRIM` function removes leading and trailing spaces from a text string and collapses internal sequences of multiple spaces into a single space. Its signature is `TRIM(text)`. Numbers and punctuation are unaffected.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> trimFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('   Hello  ');
+  sheet.getRangeByName('A2').setText('     World  Hi');
 
-// set the value to the cell.
-sheet.getRangeByName('A1').setText('HELLO');
-sheet.getRangeByName('A2').setText('World HI');
+  sheet.enableSheetCalculations();
 
-// Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  // Trims the leading and trailing spaces and collapses the internal double space.
+  sheet.getRangeByName('A3').setFormula('=TRIM(A1)');
 
-// Setting formula in the cell.
-Range range = sheet.getRangeByName('A4');
-range.setFormula('=LOWER(A1)');
-range = sheet.getRangeByName('A6');
-range.setFormula('=LOWER(A2)');
+  // Trims the leading spaces and collapses the internal double space.
+  sheet.getRangeByName('B3').setFormula('=TRIM(A2)');
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('LOWERFunction.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## UPPER Function
+`A3` evaluates to `"Hello"`. `B3` evaluates to `"World Hi"`.
 
-LOWER Function used to converts all lowercase letters in a text string to uppercase.
+## LOWER function
 
-The following code snippet illustrates on how to use UPPER function formula.
+The `LOWER` function converts every uppercase letter in a text string to lowercase. Its signature is `LOWER(text)`. Numbers, punctuation, and existing lowercase letters are unaffected.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> lowerFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('HELLO');
+  sheet.getRangeByName('A2').setText('World HI');
 
-// set the value to the cell.
-sheet.getRangeByName('A1').setText('hello');
-sheet.getRangeByName('A2').setText('World hi');
+  sheet.enableSheetCalculations();
 
-// Formula calculation is enabled for the sheet.
-sheet.enableSheetCalculations();
+  sheet.getRangeByName('A3').setFormula('=LOWER(A1)');
+  sheet.getRangeByName('B3').setFormula('=LOWER(A2)');
 
-// Setting formula in the cell.
-Range range = sheet.getRangeByName('A4');
-range.setFormula('=UPPER(A1)');
-range = sheet.getRangeByName('A6');
-range.setFormula('=UPPER(A2)');
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('UPPERFunction.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
+`A3` evaluates to `"hello"`. `B3` evaluates to `"world hi"`.
 
+## UPPER function
+
+The `UPPER` function converts every lowercase letter in a text string to uppercase. Its signature is `UPPER(text)`. Numbers, punctuation, and existing uppercase letters are unaffected.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> upperFormula() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  sheet.getRangeByName('A1').setText('hello');
+  sheet.getRangeByName('A2').setText('World hi');
+
+  sheet.enableSheetCalculations();
+
+  sheet.getRangeByName('A3').setFormula('=UPPER(A1)');
+  sheet.getRangeByName('B3').setFormula('=UPPER(A2)');
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+`A3` evaluates to `"HELLO"`. `B3` evaluates to `"WORLD HI"`.
+
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas)
+* [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
+* [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
+* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

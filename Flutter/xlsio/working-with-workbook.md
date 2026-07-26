@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Workbook of Syncfusion Flutter XlsIO
-description: Learn how to save the created workbook using different ways and close the workbook using Syncfusion Flutter XlsIO.
+title: Working with Workbook in Syncfusion Flutter XlsIO | Syncfusion
+description: Learn how to save the created workbook in different ways and dispose of it using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,54 +9,94 @@ documentation: ug
 
 # Working with Workbook
 
-## Saving a Excel workbook to file system
+After creating or manipulating a workbook with the Syncfusion Flutter XlsIO library, you must save it to the file system and then dispose of the `Workbook` instance to release the memory consumed by the XlsIO DOM.
 
-You can save the created or manipulated workbook to file system using saveSync() method of Workbook. The workbook is saved in the XLSX format.
+## Saving an Excel workbook to the file system
+
+The Syncfusion Flutter XlsIO library provides both synchronous and asynchronous APIs to save a workbook in the XLSX format. Use the asynchronous `save()` method in production code to avoid blocking the UI thread.
+
+### Synchronous save
+
+The `saveAsStream()` method writes the workbook to an in-memory byte buffer synchronously.
 
 {% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Creates a new instance for workbook.
-final Workbook workbook = Workbook();
+Future<void> saveWorkbookSync() async {
+  // Create a new workbook.
+  final Workbook workbook = Workbook();
 
-// Save the workbook in file system as XLSX format.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
+  // Access the first worksheet and write a value.
+  final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('Hello, Syncfusion Flutter XlsIO!');
 
-File('Output.xlsx').writeAsBytes(bytes);
+  // Save the workbook as a byte array (XLSX format).
+  final List<int> bytes = workbook.saveAsStream();
 
+  // Dispose the workbook to release the XlsIO DOM memory.
+  workbook.dispose();
+
+  // Write the bytes to a file. The path is relative to the current working directory.
+  await File('Output.xlsx').writeAsBytes(bytes);
+}
 {% endhighlight %}
 
-Flutter XlsIO now supports saving an Excel document asynchronously using save() method of Workbook.
+### Asynchronous save
+
+The `save()` method writes the workbook to an in-memory byte buffer asynchronously and is preferred for long-running operations.
 
 {% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Creates a new instance for workbook.
-final Workbook workbook = Workbook();
+Future<void> saveWorkbookAsync() async {
+  // Create a new workbook.
+  final Workbook workbook = Workbook();
 
-// Save the workbook in file system as XLSX format.
-final List<int> bytes = await workbook.save();
-workbook.dispose();
+  // Access the first worksheet and write a value.
+  final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('Hello, Syncfusion Flutter XlsIO!');
 
-File('Output.xlsx').writeAsBytes(bytes);
+  // Save the workbook as a byte array (XLSX format).
+  final List<int> bytes = await workbook.save();
 
+  // Dispose the workbook to release the XlsIO DOM memory.
+  workbook.dispose();
+
+  // Write the bytes to a file. The path is relative to the current working directory.
+  await File('Output.xlsx').writeAsBytes(bytes);
+}
 {% endhighlight %}
 
 ## Closing a workbook
 
-Once after the workbook manipulation and save operation are completed, you should dispose the instance of Workbook, in order to release all the memory consumed by XlsIO’s DOM. The following code snippet illustrates how dispose the instance of Workbook.
+Always call `dispose()` on the `Workbook` instance after you finish saving it. Failing to dispose of the workbook keeps the XlsIO DOM in memory, which can lead to memory pressure, especially in long-running mobile or web applications. The following code illustrates the recommended try/finally pattern to ensure `dispose()` is always called, even when an error occurs.
 
 {% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Creates a new instance for workbook.
-final Workbook workbook = new Workbook();
+Future<void> saveAndDisposeWorkbook() async {
+  // Create a new workbook.
+  final Workbook workbook = Workbook();
 
-// Save the workbook in file system as XLSX format.
-final List<int> bytes = workbook.saveSync();
+  try {
+    // Save the workbook as a byte array (XLSX format).
+    final List<int> bytes = await workbook.save();
 
-// Dipose the workbook.
-workbook.dispose();
-
-File('Output.xlsx').writeAsBytes(bytes);
-
+    // Write the bytes to a file.
+    await File('Output.xlsx').writeAsBytes(bytes);
+  } finally {
+    // Dispose the workbook to release the XlsIO DOM memory.
+    workbook.dispose();
+  }
+}
 {% endhighlight %}
 
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-worksheet)
+* [Workbook API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html)
+* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)
