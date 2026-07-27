@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with the Flutter XlsIO Library | Syncfusion
-description: Learn how to create or generate a Excel file in Windows Forms with easy steps using Syncfusion .NET XlsIO library.
+title: Overview of the Flutter XlsIO Library | Syncfusion
+description: Learn how to create or generate an Excel file in Flutter using the Syncfusion Flutter XlsIO library.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,21 +9,29 @@ documentation: ug
 
 # Overview of Flutter XlsIO - Syncfusion file-format library
 
-The Syncfusion Flutter XlsIO is a library written natively in Dart for creating the Excel documents from scratch. The library can be used in Flutter Mobile and web platforms without the dependency of Microsoft Office COM libraries & Microsoft Office.
+The Syncfusion Flutter XlsIO is a native Dart library used to create Excel documents from scratch. It works on Flutter Mobile and Web platforms without requiring Microsoft Office COM libraries or a Microsoft Office installation.
+
+## Prerequisites
+
+Before getting started, ensure the following are installed:
+
+* [Flutter SDK](https://docs.flutter.dev/get-started/install) - version compatible with the current Syncfusion Flutter XlsIO release.
+* [Dart SDK](https://dart.dev/get-dart) - bundled with the Flutter SDK.
+* A code editor such as [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Key features of Syncfusion Flutter XlsIO
 
-* Support to create Excel documents from scratch.
-* Support to add text, number and datetime values.
-* Supports Excel Formulas.
-* Supports Cell Formatting.
-* Support to add images like JPEG and PNG formats.
-* Support to create and manipulate charts.
-* Support to add hyperlinks to texts and images.
-* Support to insert and delete rows and columns.
-* Supports Autofit rows and columns.
-* Supports Protect Excel workbooks and worksheets.
-* Supports Excel Conditional Formatting.
-* Support to import list data to Excel Worksheets.
+* Supports creating Excel documents from scratch.
+* Supports adding text, number, and date-time values.
+* Supports Excel formulas.
+* Supports cell formatting.
+* Supports adding images in JPEG and PNG formats.
+* Supports creating and manipulating charts.
+* Supports adding hyperlinks to text and images.
+* Supports inserting and deleting rows and columns.
+* Supports autofit for rows and columns.
+* Supports protecting Excel workbooks and worksheets.
+* Supports Excel conditional formatting.
+* Supports importing list data into Excel worksheets.
 
-You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)
+You�can�get�the�sample�from�this�link:�[`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)

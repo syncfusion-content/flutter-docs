@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel images of Syncfusion Flutter XlsIO.
-description: Learn how to add, format and remove the images from the Excel worksheet using Syncfusion Flutter XlsIO.
+title: Working with Images | Syncfusion Flutter XlsIO
+description: Learn how to add, format, and remove images in Excel worksheets with Syncfusion Flutter XlsIO, enhancing spreadsheet visuals effortlessly.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,66 +9,136 @@ documentation: ug
 
 # Working with Excel Images
 
-## Adding Images to worksheet
+Syncfusion Flutter XlsIO supports inserting JPEG and PNG images into a worksheet. Each image is represented by a `Picture` instance and is anchored to a top-left cell. The `Picture` class exposes properties for resizing, rotating, and flipping the image, and for moving it within the worksheet.
 
-Flutter XlsIO allows to insert images like JPEG and PNG formats into a worksheet. 
+For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview). For background on worksheets, see [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet).
 
-Refer to the following code snippet to add images to worksheet.
+N> The code samples in this document use `await workbook.save()`. Always call `workbook.dispose()` after saving to release the XlsIO DOM memory, ideally inside a `try/finally` block.
 
-{% highlight dart %}
+## Add an image
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
-
-// Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-// Adding an image.
-final List<int> imageBytes = File('image.jpeg').readAsBytesSync();
-sheet.pictures.addStream(1, 1, imageBytes);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('AddImage.xlsx').writeAsBytes(bytes);
-
-{% endhighlight %}
-
-
-## Re-Sizing, Flip and Rotation Images
-
-Pictures can be re-sized, flip and formatted using various properties of **Picture** class. Refer to the following code snippet.
+An image is added to a worksheet through the `sheet.pictures` collection. The `addStream` method accepts the 1-based row and column of the top-left anchor cell and the image bytes. The image bytes can be loaded from a file, an asset, or a `Uint8List` in memory.
 
 {% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
+Future<void> addImage() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Load the image bytes from a file. The path is relative to the current
+  // working directory; replace with an absolute path or an asset path as
+  // appropriate for your project.
+  final List<int> imageBytes = await File('image.jpeg').readAsBytes();
 
-// Add a image.
-final List<int> imageBytes = File('image.jpeg').readAsBytesSync();
-sheet.pictures.addStream(1, 1, imageBytes);
+  // Add the image to cell A1 (row 1, column 1).
+  sheet.pictures.addStream(1, 1, imageBytes);
 
-final Picture picture = sheet.pictures[0];
-
-// Re-size an image
-picture.height = 200;
-picture.width = 200;
-
-// rotate an image.
-picture.rotation = 100;
-
-// Flip an image.
-picture.horizontalFlip = true;
-
-// save and dispose workbook
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('Image.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
+| `addStream` variant | Description |
+|---------------------|-------------|
+| `addStream(row, column, bytes)` | Add an image from a `List<int>` of bytes (for example, the result of `File.readAsBytes`). |
+| `addBase64(row, column, base64String)` | Add an image from a base64-encoded string. |
+| `add(row, column, image)` | Add an image from an in-memory image object (for example, a `ui.Image`). |
+
+> The `addStream` and `addBase64` methods return the inserted `Picture`. Capture the return value if you need to modify the image (resize, rotate, hyperlink) later.
+
+## Resize, flip, and rotate an image
+
+The `Picture` class exposes the following properties for adjusting an image after it is added to the worksheet:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `height` | `double` | Height of the image in pixels. |
+| `width` | `double` | Width of the image in pixels. |
+| `rotation` | `int` | Rotation angle in degrees (0 to 360, clockwise). |
+| `horizontalFlip` | `bool` | Mirror the image along the vertical axis. |
+| `verticalFlip` | `bool` | Mirror the image along the horizontal axis. |
+
+{% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> transformImage() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  // Load the image bytes and capture the Picture reference.
+  final List<int> imageBytes = await File('image.jpeg').readAsBytes();
+  final Picture picture = sheet.pictures.addStream(1, 1, imageBytes);
+
+  // Resize the image to 200×200 pixels.
+  picture.height = 200;
+  picture.width = 200;
+
+  // Rotate the image by 100 degrees clockwise.
+  picture.rotation = 100;
+
+  // Mirror the image horizontally.
+  picture.horizontalFlip = true;
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+## Position an image
+
+The position of an image is set through the `topRow`, `bottomRow`, `leftColumn`, and `rightColumn` properties of the `Picture` class. These values are 1-based and define the cells that the image spans.
+
+{% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> positionImage() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  final List<int> imageBytes = await File('image.jpeg').readAsBytes();
+  final Picture picture = sheet.pictures.addStream(1, 1, imageBytes);
+
+  // Position the image across cells A1 to D5.
+  picture.topRow = 1;
+  picture.bottomRow = 5;
+  picture.leftColumn = 1;
+  picture.rightColumn = 4;
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+## Remove an image
+
+An image can be removed from the worksheet through the `removeAt` method of the `sheet.pictures` collection. The `Picture` instance is no longer valid after removal.
+
+{% highlight dart %}
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> removeImage() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
+
+  final List<int> imageBytes = await File('image.jpeg').readAsBytes();
+  sheet.pictures.addStream(1, 1, imageBytes);
+
+  // Remove the first image.
+  sheet.pictures.removeAt(0);
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet)
+* [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
+* [Picture API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Picture-class.html)

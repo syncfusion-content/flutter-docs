@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Cells using Syncfusion Flutter XlsIO
-description: Learn how to add text, number, datetime and values to Excel worksheet using Syncfusion Flutter XlsIO.
+title: Working with Cells | Syncfusion Flutter XlsIO
+description: Learn Syncfusion Flutter XlsIO to insert text, numbers, dates, and values in Excel cells, add hyperlinks, and apply data filters.
 platform: flutter
 control: Excel
 documentation: ug
@@ -9,577 +9,440 @@ documentation: ug
 
 # Working with Worksheet Cells
 
-## Adding a Text to Excel worksheet
+A `Range` represents one or more cells on a worksheet. Syncfusion Flutter XlsIO exposes dedicated methods for setting the most common value types on a `Range`, and a generic `setValue()` for cases where the value type is determined at runtime.
 
-You can add text to the Excel worksheet using setText() method of the Range class.
+For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview). For information on saving and disposing of a workbook, see [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook).
 
-The following code snippet shows how to add text to Excel worksheet.
+N> The code samples in this document use `await workbook.save()`. Always call `workbook.dispose()` after saving to release the XlsIO DOM memory, ideally inside a `try/finally` block.
+
+## Add a value to a cell
+
+The `setValue()` method assigns a value to a range. The value can be a number, a text, or a date-time value; the underlying data type is detected automatically.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> addValue() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Set a numeric value.
+  sheet.getRangeByName('A1').setValue(44);
 
-// Adding text using setText() method.
-sheet.getRangeByName('A1').setText('Hello World');
+  // Set a text value.
+  sheet.getRangeByName('A2').setValue('Hello');
 
-// Save and dispose workbook
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
+  // Set a date-time value.
+  sheet.getRangeByName('A3').setValue(DateTime(2020, 7, 7, 1, 0, 0));
 
-File('Output.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Adding a Number to Excel worksheet
+The dedicated methods documented below provide the same result with stronger typing and a clearer intent.
 
-You can add number to the Excel worksheet using setNumber() method of the Range class.
+## Add text to a cell
 
-The following code snippet shows how to add number to Excel worksheet.
+Use the `setText()` method to add a text value to a range. To add a text value without going through `setText()`, you can also assign a `String` to the `text` getter on the range; both have the same effect.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> addText() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Add a text value using setText().
+  sheet.getRangeByName('A1').setText('Hello World');
 
-// Adding text using setnumber() method.
-sheet.getRangeByName('A1').setNumber(4444);
-
-// Save workbook
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('Output.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Adding a DateTime to Excel worksheet
+## Add a number to a cell
 
-You can add number to the Excel worksheet using setDateTime() method of the Range class.
-
-The following code snippet shows how to add datetime to Excel worksheet.
+Use the `setNumber()` method to add a numeric value. The method accepts any `number` (including `int` and `double`).
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> addNumber() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Add a numeric value using setNumber().
+  sheet.getRangeByName('A1').setNumber(4444);
 
-// Adding text using setDateTime() method.
-sheet.getRangeByName('A1').setDateTime(DateTime(2020, 7, 7, 1, 0, 0));
-
-// Save workbook
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('Output.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Adding a value to Excel Worksheet
+## Add a date-time value to a cell
 
-You can add value to the Excel worksheet using setValue() method of the Range class. The value can be number, text or date time.
-
-The following code snippet shows how to add value to Excel worksheet.
+Use the `setDateTime()` method to add a `DateTime` value. The value is stored as an Excel date serial; the time component is preserved.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> addDateTime() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Add a date-time value using setDateTime().
+  sheet.getRangeByName('A1').setDateTime(DateTime(2020, 7, 7, 1, 0, 0));
 
-// Adding text using setValue() method.
-sheet.getRangeByName('A1').setValue(44);
-
-// Save and dispose workbook
-final List<int> bytes = workbook.saveSync();
-workbook.dispose();
-
-File('Output.xlsx').writeAsBytes(bytes);
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
 ## Hyperlinks
 
-You can create hyperlink in a workbook to provide quick access to web pages, places in your document and files. Hyperlink may target to any one of the following
+A hyperlink provides quick access to a web page, a location in the workbook, an e-mail address, or an external file. A hyperlink can be added to a cell range or to a picture.
 
-* Worksheet range
-* Web URL
-* E-mail
-* External files
+The supported `HyperlinkType` values are:
 
-A Hyperlink can be added to a worksheet range or an image. The following code example illustrates how to insert various hyperlinks to worksheet range.
+| Value | Description |
+|-------|-------------|
+| `HyperlinkType.url` | A web URL (also used for `mailto:` e-mail links). |
+| `HyperlinkType.workbook` | A cell reference within the workbook, formatted as `SheetName!CellAddress`. |
+| `HyperlinkType.file` | A path to an external file. |
+| `HyperlinkType.unc` | A UNC path to a file on a network share. |
 
-{% highlight dart %}
+Common properties on a `Hyperlink` include `textToDisplay` (the visible label) and `screenTip` (the tooltip shown on hover).
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
-
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-//Creating a Hyperlink for a Website.
-final Hyperlink hyperlink = sheet.hyperlinks.add(sheet.getRangeByName('A1'),
-    HyperlinkType.url, 'http://www.syncfusion.com');
-hyperlink.screenTip =
-    'To know more about Syncfusion products, go through this link.';
-hyperlink.textToDisplay = 'Syncfusion';
-
-//Creating a Hyperlink for e-mail.
-final Hyperlink hyperlink1 = sheet.hyperlinks.add(sheet.getRangeByName('A3'),
-    HyperlinkType.url, 'mailto:Username@syncfusion.com');
-hyperlink1.screenTip = 'Send Mail';
-
-//Creating a Hyperlink for Opening Files using type as File.
-final Hyperlink hyperlink2 = sheet.hyperlinks
-    .add(sheet.getRangeByName('A5'), HyperlinkType.file, 'C:\\Program files');
-hyperlink2.screenTip = 'File path';
-hyperlink2.textToDisplay = 'Hyperlink for files using File as type';
-
-// Creating a Hyperlink for Opening Files using type as Unc.
-final Hyperlink hyperlink3 = sheet.hyperlinks.add(sheet.getRangeByName('A7'),
-    HyperlinkType.unc, 'C:\\Documents and Settings');
-hyperlink3.screenTip = 'Click here for files';
-hyperlink3.textToDisplay = 'Hyperlink for files using Unc as type';
-
-//Creating a Hyperlink to another cell using type as Workbook.
-final Hyperlink hyperlink4 = sheet.hyperlinks
-    .add(sheet.getRangeByName('A9'), HyperlinkType.workbook, 'Sheet1!A15');
-hyperlink4.screenTip = 'Click Here';
-hyperlink4.textToDisplay = 'Hyperlink to cell A15';
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('Hyperlinks.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
-{% endhighlight %}
-
-### Hyperlink on Picture
-
-The following code example illustrates how to insert hyperlinks to pictures.
+### Hyperlinks on a cell range
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> addHyperlinks() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Hyperlink to a web URL.
+  final Hyperlink hyperlink = sheet.hyperlinks.add(
+    sheet.getRangeByName('A1'),
+    HyperlinkType.url,
+    'http://www.syncfusion.com',
+  );
+  hyperlink.screenTip = 'To know more about Syncfusion products, go through this link.';
+  hyperlink.textToDisplay = 'Syncfusion';
 
-//Adding hyperlink to picture.
-final Picture picture1 = sheet.pictures.addBase64(1, 1, image1jpg);
-final Hyperlink link = sheet.hyperlinks
-    .addImage(picture1, HyperlinkType.url, 'http://www.syncfusion.com');
-link.screenTip = 'About Syncfusion';
+  // Hyperlink to an e-mail address (use a mailto: URL with HyperlinkType.url).
+  final Hyperlink hyperlink1 = sheet.hyperlinks.add(
+    sheet.getRangeByName('A3'),
+    HyperlinkType.url,
+    'mailto:Username@syncfusion.com',
+  );
+  hyperlink1.screenTip = 'Send Mail';
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('HyperlinksPicture.xlsx').writeAsBytes(bytes);
-workbook.dispose();
+  // Hyperlink to an external file.
+  final Hyperlink hyperlink2 = sheet.hyperlinks.add(
+    sheet.getRangeByName('A5'),
+    HyperlinkType.file,
+    r'C:\Program files',
+  );
+  hyperlink2.screenTip = 'File path';
+  hyperlink2.textToDisplay = 'Hyperlink for files using File as type';
 
+  // Hyperlink to a UNC path.
+  final Hyperlink hyperlink3 = sheet.hyperlinks.add(
+    sheet.getRangeByName('A7'),
+    HyperlinkType.unc,
+    r'C:\Documents and Settings',
+  );
+  hyperlink3.screenTip = 'Click here for files';
+  hyperlink3.textToDisplay = 'Hyperlink for files using UNC as type';
+
+  // Hyperlink to another cell in the workbook.
+  final Hyperlink hyperlink4 = sheet.hyperlinks.add(
+    sheet.getRangeByName('A9'),
+    HyperlinkType.workbook,
+    'Sheet1!A15',
+  );
+  hyperlink4.screenTip = 'Click Here';
+  hyperlink4.textToDisplay = 'Hyperlink to cell A15';
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Data Filtering
+### Hyperlinks on a picture
 
-This feature allows filtering data to display only rows that meet criteria specified by the user and hide rows that do not. Syncfusion Flutter Excel creation library supports different filter types such as,
-
-* Text filter
-* Custom filter
-* Date filter
-* Dynamic filter
-* Color filter
-
-### Text Filter
-
-Text filter as the name says filters the rows that contain required text. This can be used applied through **addTextFilter** method of **AutoFilter** class. This filter is case sensitive and the following code snippet explains this.
+The `addBase64(row, column, base64String)` method of `Worksheet.pictures` adds a picture from a base64-encoded string. The first two arguments are the 1-based row and column of the picture's top-left corner.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+// Base64-encoded image used in this sample.
+const String image1jpg = '<BASE64_IMAGE_DATA>';
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+Future<void> addPictureHyperlink() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  // Add a picture at row 1, column 1 from a base64 string.
+  final Picture picture1 = sheet.pictures.addBase64(1, 1, image1jpg);
 
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
+  // Attach a hyperlink to the picture.
+  final Hyperlink link = sheet.hyperlinks.addImage(
+    picture1,
+    HyperlinkType.url,
+    'http://www.syncfusion.com',
+  );
+  link.screenTip = 'About Syncfusion';
 
-// Add text filter.
-final AutoFilter autofilter = worksheet.autoFilters[0];
-autofilter.addTextFilter(<String>{'Owner'});
-worksheet.getRangeByName('A1:C10').autoFitColumns();
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('TextFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-### Custom Filter
+## Data filtering
 
-Custom filters helps to filter data that satisfies either of the given conditions. The following code snippet explains how to apply a custom filter.
+Data filtering displays only the rows that meet user-specified criteria and hides the rest. Syncfusion Flutter XlsIO supports the following filter types: text, custom, date, dynamic, and color. All filter types are applied through the `AutoFilter` class after a filter range has been set on the worksheet.
+
+To avoid duplication, the samples in this section reuse the following helper that populates a worksheet with sample data and assigns the filter range:
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+void populateFilterSampleData(Worksheet worksheet) {
+  final List<String> titles = <String>[
+    'Title',
+    'Sales Representative',
+    'Owner',
+    'Owner',
+    'Sales Representative',
+    'Order Administrator',
+    'Sales Representative',
+    'Marketing Manager',
+    'Owner',
+    'Owner',
+  ];
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+  final List<DateTime> dojs = <DateTime>[
+    DateTime(2006, 9, 10),
+    DateTime(2000, 6, 10),
+    DateTime(2002, 9, 18),
+    DateTime(2009, 5, 23),
+    DateTime(2012, 1, 6),
+    DateTime(2007, 7, 19),
+    DateTime(2008, 6, 30),
+    DateTime(2002, 4, 16),
+    DateTime(2008, 11, 29),
+  ];
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  final List<String> cities = <String>[
+    'Berlin',
+    'Mexico D.F.',
+    'Mexico D.F.',
+    'London',
+    'Lulea',
+    'Mannheim',
+    'Strasbourg',
+    'Madrid',
+    'Marseille',
+  ];
 
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
-final AutoFilter autofilter = worksheet.autoFilters[0];
+  worksheet.getRangeByName('A1').setText('Title');
+  worksheet.getRangeByName('B1').setText('DOJ');
+  worksheet.getRangeByName('C1').setText('City');
 
-// First condition.
-final AutoFilterCondition firstCondition = autofilter.firstCondition;
-firstCondition.conditionOperator = ExcelFilterCondition.greaterOrEqual;
-firstCondition.numberValue = 10;
+  for (int i = 0; i < titles.length - 1; i++) {
+    worksheet.getRangeByName('A${i + 2}').setText(titles[i + 1]);
+    worksheet.getRangeByName('B${i + 2}').dateTime = dojs[i];
+    worksheet.getRangeByName('C${i + 2}').setText(cities[i]);
+  }
 
-// Second condition.
-final AutoFilterCondition secondCondition = autofilter.secondCondition;
-secondCondition.conditionOperator = ExcelFilterCondition.less;
-secondCondition.numberValue = 15;
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('CustomFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  // Set the filter range to A1:C10.
+  worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
+}
 {% endhighlight %}
 
-### Date Filter
+### Text filter
 
-Date filter as the name says filters the rows that contain required dates. Date filter can be applied through **addDateFilter** method of **AutoFilter** class. The following code snippet explains this.
+A text filter keeps only the rows that contain the specified text. The filter is case-sensitive and is applied through `addTextFilter()`.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+Future<void> textFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+  populateFilterSampleData(worksheet);
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  // Apply a text filter on the first column of the filter range.
+  final AutoFilter autofilter = worksheet.autoFilters[0];
+  autofilter.addTextFilter(<String>{'Owner'});
 
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
+  worksheet.getRangeByName('A1:C10').autoFitColumns();
 
-// Add date filter.
-final AutoFilter autofilter = worksheet.autoFilters[1];
-autofilter.addDateFilter(DateTime(2002), DateTimeFilterType.year);
-autofilter.addDateFilter(DateTime(2009, 5), DateTimeFilterType.year);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('DateFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-### Dynamic Filter
+### Custom filter
 
-Dynamic filter helps to filter data that satisfies the conditions based on calender. Dynamic filter can be applied through **addDynamicFilter** method of **AutoFilter** class. The following code snippet explains this.
+A custom filter keeps only the rows that match one or two numeric comparisons. The comparisons are configured through the `firstCondition` and `secondCondition` properties of the `AutoFilter`. Use the `logicalOperator` property to choose how the two conditions are combined (AND or OR).
+
+The supported `ExcelFilterCondition` operators include `equal`, `notEqual`, `greaterThan`, `greaterOrEqual`, `lessThan`, `less`, `between`, and `notBetween`.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+Future<void> customFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+  populateFilterSampleData(worksheet);
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  final AutoFilter autofilter = worksheet.autoFilters[1];
 
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
+  // First condition: date serial >= 10.
+  autofilter.firstCondition.conditionOperator = ExcelFilterCondition.greaterOrEqual;
+  autofilter.firstCondition.numberValue = 10;
 
-// Add dynamic filter.
-final AutoFilter autofilter = worksheet.autoFilters[1];
-autofilter.addDynamicFilter(DynamicFilterType.quarter2);
-worksheet.getRangeByName('A1:C10').autoFitColumns();
+  // Second condition: date serial < 15.
+  autofilter.secondCondition.conditionOperator = ExcelFilterCondition.less;
+  autofilter.secondCondition.numberValue = 15;
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('DynamicFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-### Color Filter
+### Date filter
 
-Color filter helps to filter the data based on color. **addColorFilter** method of **AutoFilter** class helps to achieve this. There are two types of color filters that can be used namely, font color filter and cell color filter.
-
-#### Font Color Filter
-
-Font color filter can be applied by selecting **fontColor** option of **ExcelColorFilterType** enumeration. The following code snippet explains this.
+A date filter keeps only the rows whose date values match a specific year, month, or day. The filter is applied through `addDateFilter()`, which reads the relevant part of the supplied `DateTime` value depending on the `DateTimeFilterType` (for example, `year` reads only the year, `month` reads the year and month).
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+Future<void> dateFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+  populateFilterSampleData(worksheet);
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  // Apply a date filter on the second column of the filter range (the DOJ column).
+  final AutoFilter autofilter = worksheet.autoFilters[1];
+  autofilter.addDateFilter(DateTime(2002), DateTimeFilterType.year);
 
-worksheet.getRangeByName('A2').cellStyle.backColor = '#008000';
-worksheet.getRangeByName('A3').cellStyle.backColor = '#0000FF';
-worksheet.getRangeByName('A4').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A5').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A6').cellStyle.backColor = '#FFFFFF';
-worksheet.getRangeByName('A7').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A8').cellStyle.backColor = '#FFFFFF';
-worksheet.getRangeByName('A9').cellStyle.backColor = '#0000FF';
-worksheet.getRangeByName('A10').cellStyle.backColor = '#008000';
-
-worksheet.getRangeByName('C2').cellStyle.fontColor = '#FF0000';
-worksheet.getRangeByName('C3').cellStyle.fontColor = '#008000';
-worksheet.getRangeByName('C4').cellStyle.fontColor = '#0000FF';
-worksheet.getRangeByName('C5').cellStyle.fontColor = '#000000';
-worksheet.getRangeByName('C6').cellStyle.fontColor = '#FF0000';
-worksheet.getRangeByName('C7').cellStyle.fontColor = '#008000';
-worksheet.getRangeByName('C8').cellStyle.fontColor = '#0000FF';
-worksheet.getRangeByName('C9').cellStyle.fontColor = '#000000';
-worksheet.getRangeByName('C10').cellStyle.fontColor = '#FF0000';
-
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
-
-// Add font color filter.
-final AutoFilter autofilter = worksheet.autoFilters[2];
-autofilter.addColorFilter('#0000FF', ExcelColorFilterType.fontColor);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('FontColorFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-#### Cell Color Filter
+### Dynamic filter
 
-Cell color filter can be applied by selecting **cellColor** option of **ExcelColorFilterType** enumeration. The following code snippet explains this.
+A dynamic filter keeps only the rows whose date values fall in a relative calendar range such as a quarter or a month. The filter is applied through `addDynamicFilter()`. The available `DynamicFilterType` values include `quarter1`, `quarter2`, `quarter3`, `quarter4`, `january`, `february`, and so on.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-final Workbook workbook = Workbook();
-final Worksheet worksheet = workbook.worksheets[0];
-worksheet.getRangeByName('A1').setText('Title');
-worksheet.getRangeByName('A2').setText('Sales Representative');
-worksheet.getRangeByName('A3').setText('Owner');
-worksheet.getRangeByName('A4').setText('Owner');
-worksheet.getRangeByName('A5').setText('Sales Representative');
-worksheet.getRangeByName('A6').setText('Order Administrator');
-worksheet.getRangeByName('A7').setText('Sales Representative');
-worksheet.getRangeByName('A8').setText('Marketing Manager');
-worksheet.getRangeByName('A9').setText('Owner');
-worksheet.getRangeByName('A10').setText('Owner');
+Future<void> dynamicFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
 
-worksheet.getRangeByName('B1').setText('DOJ');
-worksheet.getRangeByName('B2').dateTime = DateTime(2006, 9, 10);
-worksheet.getRangeByName('B3').dateTime = DateTime(2000, 6, 10);
-worksheet.getRangeByName('B4').dateTime = DateTime(2002, 9, 18);
-worksheet.getRangeByName('B5').dateTime = DateTime(2009, 5, 23);
-worksheet.getRangeByName('B6').dateTime = DateTime(2012, 1, 6);
-worksheet.getRangeByName('B7').dateTime = DateTime(2007, 7, 19);
-worksheet.getRangeByName('B8').dateTime = DateTime(2008, 6, 30);
-worksheet.getRangeByName('B9').dateTime = DateTime(2002, 4, 16);
-worksheet.getRangeByName('B10').dateTime = DateTime(2008, 11, 29);
+  populateFilterSampleData(worksheet);
 
-worksheet.getRangeByName('C1').setText('City');
-worksheet.getRangeByName('C2').setText('Berlin');
-worksheet.getRangeByName('C3').setText('Mexico D.F.');
-worksheet.getRangeByName('C4').setText('Mexico D.F.');
-worksheet.getRangeByName('C5').setText('London');
-worksheet.getRangeByName('C6').setText('Lulea');
-worksheet.getRangeByName('C7').setText('Mannheim');
-worksheet.getRangeByName('C8').setText('Strasbourg');
-worksheet.getRangeByName('C9').setText('Madrid');
-worksheet.getRangeByName('C10').setText('Marseille');
+  // Apply a dynamic filter on the second column of the filter range (the DOJ column).
+  final AutoFilter autofilter = worksheet.autoFilters[1];
+  autofilter.addDynamicFilter(DynamicFilterType.quarter2);
 
-worksheet.getRangeByName('A2').cellStyle.backColor = '#008000';
-worksheet.getRangeByName('A3').cellStyle.backColor = '#0000FF';
-worksheet.getRangeByName('A4').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A5').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A6').cellStyle.backColor = '#FFFFFF';
-worksheet.getRangeByName('A7').cellStyle.backColor = '#FF0000';
-worksheet.getRangeByName('A8').cellStyle.backColor = '#FFFFFF';
-worksheet.getRangeByName('A9').cellStyle.backColor = '#0000FF';
-worksheet.getRangeByName('A10').cellStyle.backColor = '#008000';
+  worksheet.getRangeByName('A1:C10').autoFitColumns();
 
-worksheet.getRangeByName('C2').cellStyle.fontColor = '#FF0000';
-worksheet.getRangeByName('C3').cellStyle.fontColor = '#008000';
-worksheet.getRangeByName('C4').cellStyle.fontColor = '#0000FF';
-worksheet.getRangeByName('C5').cellStyle.fontColor = '#000000';
-worksheet.getRangeByName('C6').cellStyle.fontColor = '#FF0000';
-worksheet.getRangeByName('C7').cellStyle.fontColor = '#008000';
-worksheet.getRangeByName('C8').cellStyle.fontColor = '#0000FF';
-worksheet.getRangeByName('C9').cellStyle.fontColor = '#000000';
-worksheet.getRangeByName('C10').cellStyle.fontColor = '#FF0000';
-
-// Intialize filter range.
-worksheet.autoFilters.filterRange = worksheet.getRangeByName('A1:C10');
-
-// Add cell color filter.
-final AutoFilter autofilter = worksheet.autoFilters[0];
-autofilter.addColorFilter('#FF0000', ExcelColorFilterType.cellColor);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('CellColorFilter.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
+
+### Color filter
+
+A color filter keeps only the rows whose cell color or font color matches the supplied color string. The color must already be set on the cell for the filter to match. The `ExcelColorFilterType` enum selects between `fontColor` and `cellColor`.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+void applyColorFormatting(Worksheet worksheet) {
+  // Cell background colors.
+  worksheet.getRangeByName('A2').cellStyle.backColor = '#008000';
+  worksheet.getRangeByName('A3').cellStyle.backColor = '#0000FF';
+  worksheet.getRangeByName('A4').cellStyle.backColor = '#FF0000';
+  worksheet.getRangeByName('A5').cellStyle.backColor = '#FF0000';
+  worksheet.getRangeByName('A6').cellStyle.backColor = '#FFFFFF';
+  worksheet.getRangeByName('A7').cellStyle.backColor = '#FF0000';
+  worksheet.getRangeByName('A8').cellStyle.backColor = '#FFFFFF';
+  worksheet.getRangeByName('A9').cellStyle.backColor = '#0000FF';
+  worksheet.getRangeByName('A10').cellStyle.backColor = '#008000';
+
+  // Font colors.
+  worksheet.getRangeByName('C2').cellStyle.fontColor = '#FF0000';
+  worksheet.getRangeByName('C3').cellStyle.fontColor = '#008000';
+  worksheet.getRangeByName('C4').cellStyle.fontColor = '#0000FF';
+  worksheet.getRangeByName('C5').cellStyle.fontColor = '#000000';
+  worksheet.getRangeByName('C6').cellStyle.fontColor = '#FF0000';
+  worksheet.getRangeByName('C7').cellStyle.fontColor = '#008000';
+  worksheet.getRangeByName('C8').cellStyle.fontColor = '#0000FF';
+  worksheet.getRangeByName('C9').cellStyle.fontColor = '#000000';
+  worksheet.getRangeByName('C10').cellStyle.fontColor = '#FF0000';
+}
+{% endhighlight %}
+
+#### Font color filter
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> fontColorFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
+
+  populateFilterSampleData(worksheet);
+  applyColorFormatting(worksheet);
+
+  // Apply a font color filter on the third column of the filter range (the City column).
+  final AutoFilter autofilter = worksheet.autoFilters[2];
+  autofilter.addColorFilter('#0000FF', ExcelColorFilterType.fontColor);
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+#### Cell color filter
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> cellColorFilter() async {
+  final Workbook workbook = Workbook();
+  final Worksheet worksheet = workbook.worksheets[0];
+
+  populateFilterSampleData(worksheet);
+  applyColorFormatting(worksheet);
+
+  // Apply a cell color filter on the first column of the filter range (the Title column).
+  final AutoFilter autofilter = worksheet.autoFilters[0];
+  autofilter.addColorFilter('#FF0000', ExcelColorFilterType.cellColor);
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+> The `autoFilters` index in the samples above corresponds to the column position within the filter range. `autoFilters[0]` is the first column, `autoFilters[1]` is the second, and so on.
+
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
+* [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
+* [AutoFilter API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/AutoFilter-class.html)
