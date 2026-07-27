@@ -28,7 +28,7 @@ N> In production code, use `await workbook.save()` and wrap workbook usage in a 
 
 ### Import Data from List
 
-Use the `importList` method to import a list of data with different data types (for example, `String`, `int`, `double`, `num`, `bool`, and `DateTime`) into a worksheet.
+Use the `importList` method to import a list of data with different data types (for example, `String`, `int`, `double`, `number`, `bool`, and `DateTime`) into a worksheet.
 
 The `importList` method accepts the following parameters:
 

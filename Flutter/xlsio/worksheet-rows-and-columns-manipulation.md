@@ -225,4 +225,3 @@ Future<void> hideRange() async {
 * [Working with Cell Formatting](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cell-formatting)
 * [Worksheet API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

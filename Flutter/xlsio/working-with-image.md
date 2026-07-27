@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Images | Syncfusion Flutter XlsIO
-description: Learn how to add, format, and remove images in an Excel worksheet using Syncfusion Flutter XlsIO.
+description: Learn how to add, format, and remove images in Excel worksheets with Syncfusion Flutter XlsIO, enhancing spreadsheet visuals effortlessly.
 platform: flutter
 control: Excel
 documentation: ug
@@ -19,7 +19,7 @@ N> The code samples in this document use `await workbook.save()`. Always call `w
 
 An image is added to a worksheet through the `sheet.pictures` collection. The `addStream` method accepts the 1-based row and column of the top-left anchor cell and the image bytes. The image bytes can be loaded from a file, an asset, or a `Uint8List` in memory.
 
-```dart
+{% highlight dart %}
 import 'dart:io';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
@@ -38,7 +38,7 @@ Future<void> addImage() async {
   final List<int> bytes = await workbook.save();
   workbook.dispose();
 }
-```
+{% endhighlight %}
 
 | `addStream` variant | Description |
 |---------------------|-------------|
@@ -60,7 +60,7 @@ The `Picture` class exposes the following properties for adjusting an image afte
 | `horizontalFlip` | `bool` | Mirror the image along the vertical axis. |
 | `verticalFlip` | `bool` | Mirror the image along the horizontal axis. |
 
-```dart
+{% highlight dart %}
 import 'dart:io';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
@@ -85,13 +85,13 @@ Future<void> transformImage() async {
   final List<int> bytes = await workbook.save();
   workbook.dispose();
 }
-```
+{% endhighlight %}
 
 ## Position an image
 
 The position of an image is set through the `topRow`, `bottomRow`, `leftColumn`, and `rightColumn` properties of the `Picture` class. These values are 1-based and define the cells that the image spans.
 
-```dart
+{% highlight dart %}
 import 'dart:io';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
@@ -111,13 +111,13 @@ Future<void> positionImage() async {
   final List<int> bytes = await workbook.save();
   workbook.dispose();
 }
-```
+{% endhighlight %}
 
 ## Remove an image
 
 An image can be removed from the worksheet through the `removeAt` method of the `sheet.pictures` collection. The `Picture` instance is no longer valid after removal.
 
-```dart
+{% highlight dart %}
 import 'dart:io';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
@@ -134,7 +134,7 @@ Future<void> removeImage() async {
   final List<int> bytes = await workbook.save();
   workbook.dispose();
 }
-```
+{% endhighlight %}
 
 ## See also
 
@@ -142,5 +142,3 @@ Future<void> removeImage() async {
 * [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet)
 * [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
 * [Picture API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Picture-class.html)
-* [Pictures collection API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Pictures-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

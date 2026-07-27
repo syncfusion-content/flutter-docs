@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Cells | Syncfusion Flutter XlsIO
-description: Learn how to add text, number, date-time, and generic values to Excel worksheet cells, work with hyperlinks, and apply data filters using Syncfusion Flutter XlsIO.
+description: Learn Syncfusion Flutter XlsIO to insert text, numbers, dates, and values in Excel cells, add hyperlinks, and apply data filters.
 platform: flutter
 control: Excel
 documentation: ug
@@ -63,7 +63,7 @@ Future<void> addText() async {
 
 ## Add a number to a cell
 
-Use the `setNumber()` method to add a numeric value. The method accepts any `num` (including `int` and `double`).
+Use the `setNumber()` method to add a numeric value. The method accepts any `number` (including `int` and `double`).
 
 {% highlight dart %}
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
@@ -444,8 +444,5 @@ Future<void> cellColorFilter() async {
 
 * [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
 * [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
-* [Working with Cell Formatting](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/cell-formatting)
-* [Working with Data Validation](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/data-validation)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
 * [AutoFilter API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/AutoFilter-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

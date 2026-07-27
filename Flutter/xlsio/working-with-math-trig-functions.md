@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Math and Trig Function Formulas | Syncfusion Flutter XlsIO
+title: Math and Trig Function Formulas | Syncfusion Flutter XlsIO
 description: Learn how to apply math and trig function formulas and read calculated values in the cells of an Excel worksheet using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
@@ -189,4 +189,3 @@ The following math and trig functions are also supported by Syncfusion Flutter X
 * [Working with Statistical Function Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-statistical-functions)
 * [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

@@ -204,11 +204,11 @@ Syncfusion Flutter XlsIO supports range references and the functions listed belo
 
 | Function | Description |
 |----------|-------------|
-| [SUMIF](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-conditional-functions#sumif-function) | Adds the cells specified by a given criteria. |
-| [SUMIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-conditional-functions#sumifs-function) | Adds all of its arguments that meet multiple criteria. |
-| [COUNTIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-conditional-functions#countifs-function) | Counts the number of times all criteria are met. |
-| [MAXIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-conditional-functions#maxifs-function) | Returns the maximum value among cells specified by a given set of conditions. |
-| [MINIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-conditional-functions#minifs-function) | Returns the minimum value among cells specified by a given set of conditions. |
+| [SUMIF](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-math-trig-functions#sumif-function) | Adds the cells specified by a given criteria. |
+| [SUMIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-math-trig-functions#sumifs-function) | Adds all of its arguments that meet multiple criteria. |
+| [COUNTIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-statistical-functions#countifs-function) | Counts the number of times all criteria are met. |
+| [MAXIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-statistical-functions#maxifs-function) | Returns the maximum value among cells specified by a given set of conditions. |
+| [MINIFS](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-statistical-functions#minifs-function) | Returns the minimum value among cells specified by a given set of conditions. |
 
 ## See also
 
@@ -217,4 +217,3 @@ Syncfusion Flutter XlsIO supports range references and the functions listed belo
 * [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
 * [Worksheet API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

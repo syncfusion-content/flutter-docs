@@ -97,6 +97,4 @@ Future<void> saveAndDisposeWorkbook() async {
 ## See also
 
 * [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
-* [Working with Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-worksheet)
 * [Workbook API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

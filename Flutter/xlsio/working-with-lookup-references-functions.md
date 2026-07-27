@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Lookup and References Function Formulas | Syncfusion Flutter XlsIO
+title: Lookup and Reference Formulas | Syncfusion Flutter XlsIO
 description: Learn how to apply lookup and references function formulas and read calculated values in the cells of an Excel worksheet using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
@@ -100,7 +100,7 @@ N> The original sample used `=MATCH(6,A1:A4,-1)`, which would return `#N/A` beca
 
 ## VLOOKUP function
 
-The `VLOOKUP` function searches the first column of a range for a value and returns a value from the same row in a specified column. Its signature is `VLOOKUP(lookupValue, tableArray, colIndexNum, [rangeLookup])`.
+The `VLOOKUP` function searches the first column of a range for a value and returns a value from the same row in a specified column.
 
 | `rangeLookup` | Behavior |
 |---------------|----------|
@@ -149,4 +149,3 @@ N> The horizontal counterpart of `VLOOKUP` is `HLOOKUP`, which searches the firs
 * [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas)
 * [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

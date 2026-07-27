@@ -380,4 +380,3 @@ The `BuiltInStyles` enum includes a wide range of values such as `good`, `bad`, 
 * [Style API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Style-class.html)
 * [Borders API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Borders-class.html)
 * [BuiltInStyles API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/BuiltInStyles.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

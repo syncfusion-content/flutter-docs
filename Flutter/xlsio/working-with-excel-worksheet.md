@@ -78,7 +78,7 @@ Future<void> accessWorksheet() async {
 }
 {% endhighlight %}
 
-If a name does not exist in the collection, the accessor returns `null`. The indexer throws `RangeError` if the index is out of range.
+If a name does not exist in the collection, it returns `null`. The indexer throws `RangeError` if the index is out of range.
 
 ## Worksheet tab color
 
@@ -565,6 +565,4 @@ Future<void> deleteNamedRange() async {
 * [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
 * [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
 * [Working with Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-formulas)
-* [Working with Cell Formatting](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/cell-formatting)
 * [Worksheet API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

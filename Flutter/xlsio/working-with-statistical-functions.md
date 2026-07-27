@@ -176,4 +176,3 @@ The supported comparison operators in criteria are `=`, `<>`, `<`, `<=`, `>`, an
 * [Working with General Function Formulas](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-general-functions)
 * [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
 * [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

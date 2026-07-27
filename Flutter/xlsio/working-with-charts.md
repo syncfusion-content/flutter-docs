@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Excel Charts
 
-Syncfusion Flutter XlsIO supports creating and modifying Excel charts inside a workbook. The chart model is provided by the `syncfusion_officechart` package, which extends the worksheet model with a `ChartCollection`. A chart is created by setting a chart type, a data range, and optional chart elements such as a title, a legend, axis labels, and data labels.
+Syncfusion Flutter XlsIO supports creating and modifying Excel charts inside a workbook. The chart model is provided by the `syncfusion office chart` package, which extends the worksheet model with a `ChartCollection`. A chart is created by setting a chart type, a data range, and optional chart elements such as a title, a legend, axis labels, and data labels.
 
 For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview).
 
@@ -17,7 +17,7 @@ N> The code samples in this document use `await workbook.save()`. Always call `w
 
 ## Installation
 
-To add chart support to a project that already uses `syncfusion_flutter_xlsio`, add the `syncfusion_officechart` dependency. The package is available on [pub.dev](https://pub.dev/packages/syncfusion_officechart).
+To add chart support to a project that already uses `syncfusion_flutter_xlsio`, add the `syncfusion office chart` dependency. The package is available on [pub.dev](https://pub.dev/packages/syncfusion_officechart).
 
 Add the dependency to `pubspec.yaml`:
 
@@ -33,7 +33,7 @@ Then run the following command to fetch the package:
 flutter pub get
 ```
 
-N> The `syncfusion_officechart` package depends on `syncfusion_flutter_xlsio`, so the XlsIO package is added automatically if it is not already in your dependencies.
+N> The `syncfusion office chart` package depends on `syncfusion_flutter_xlsio`, so the XlsIO package is added automatically if it is not already in your dependencies.
 
 Import the chart package in your Dart code:
 
@@ -319,4 +319,3 @@ The following chart types are supported by Syncfusion Flutter XlsIO. Chart types
 * [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet)
 * [Chart API reference](https://pub.dev/documentation/syncfusion_officechart/latest/officechart/Chart-class.html)
 * [ChartCollection API reference](https://pub.dev/documentation/syncfusion_officechart/latest/officechart/ChartCollection-class.html)
-* [Release notes](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/release-notes)

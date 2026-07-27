@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Data Validation Syncfusion Flutter XlsIO
-description: Learn how to use different types of data validations on Excel data using Syncfusion Flutter XlsIO.
+description: Learn to apply list, number, date, time, and custom data validations in Excel worksheets using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
