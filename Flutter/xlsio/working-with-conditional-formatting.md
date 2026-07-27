@@ -9,22 +9,31 @@ documentation: ug
 
 # Working with Conditional Formatting
 
-Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the **ConditionalFormat** class.
+Conditional formatting allows you to format the contents of a cell dynamically. It can be defined and applied in XlsIO through the `ConditionalFormat` class.
 
-## Create a Conditional Format 
+N> Before you begin, complete the [Getting Started with Flutter XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/getting-started) steps to add the package, then import it in your Dart file:
 
-The ConditionalFormats represents a collection of conditional formats for a single or multiple Range. One or more conditional formats can be added to the range as follows.
+{% highlight dart %}
+import 'dart:ui' show Color;
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+{% endhighlight %}
+
+N> In production code, use `await workbook.save()` and wrap workbook usage in a `try/finally` block to guarantee `workbook.dispose()`. The samples below use `saveSync()` for brevity.
+
+## Create a Conditional Format
+
+The `ConditionalFormats` collection represents one or more conditional formats applied to a single range. Add a condition to a range as follows.
 
 {% highlight dart %}
 
-//Applying conditional formatting to "A1".
+// Applying conditional formatting to "A1".
 final ConditionalFormats conditions =
   sheet.getRangeByName('A1').conditionalFormats;
 final ConditionalFormat condition1 = conditions.addCondition();
 
 {% endhighlight %}
 
-The target range should meet the criteria, which is set using the **ConditionalFormat** class. The desired format type is set through the **ExcelCFType** enumerator, which are the supported conditional format types in XlsIO. Refer to the following code.
+The target range is evaluated against the criteria you set on the `ConditionalFormat` instance. The desired rule type is set through the `ExcelCFType` enumerator, which lists every conditional-format type supported by XlsIO (for example, `cellValue`, `specificText`, `timePeriod`, `unique`, `duplicate`, `topBottom`, `aboveBelowAverage`, `colorScale`, `iconSet`, and `dataBar`). Refer to the following code.
 
 {% highlight dart %}
 
@@ -37,12 +46,14 @@ sheet.getRangeByIndex(1, 1).setText('Enter a number between 10 and 20');
 
 {% endhighlight %}
 
-When the criteria set for the target range is satisfied, the defined formats (like the one below) are applied in the order of priority. For more details about conditional format priority, see [Manage conditional formatting rule precedence](https://support.microsoft.com/en-us/office/video-manage-conditional-formatting-6b69364e-dc79-4fe4-bd94-1883e40848f9).
+When the criteria set for the target range is satisfied, the defined formats (like the ones below) are applied in the order of priority. For more details about conditional format priority, see [Manage conditional formatting rule precedence](https://support.microsoft.com/en-us/office/video-manage-conditional-formatting-6b69364e-dc79-4fe4-bd94-1883e40848f9).
+
+N> `formatType` must be set before `operator` and any formula properties, because the operator's valid values depend on the chosen `ExcelCFType`.
 
 {% highlight dart %}
 
-//Setting format properties to be applied when the above condition is met
-//set back color by hexa decimal.
+// Setting format properties to be applied when the above condition is met.
+// Set the background color using a hexadecimal value.
 condition1.backColor = '#209301';
 condition1.isBold = true;
 condition1.isItalic = true;
@@ -63,48 +74,48 @@ final Worksheet sheet = workbook.worksheets[0];
 ConditionalFormats conditions = sheet.getRangeByName('A1').conditionalFormats;
 final ConditionalFormat condition1 = conditions.addCondition();
 
-//Represents conditional format rule that the value in target range should be between 10 and 20
+// Represents a conditional-format rule that requires the value in the target range to be between 10 and 20.
 condition1.formatType = ExcelCFType.cellValue;
 condition1.operator = ExcelComparisonOperator.between;
 condition1.firstFormula = '10';
 condition1.secondFormula = '20';
 sheet.getRangeByIndex(1, 1).setText('Enter a number between 10 and 20');
 
-//Setting format properties to be applied when the above condition is met.
-//set back color by hexa decimal.
+// Setting format properties to be applied when the above condition is met.
+// Set the background color using a hexadecimal value.
 condition1.backColor = '#66FF99';
-//set font color by hexa decimal.
+// Set the font color using a hexadecimal value.
 condition1.fontColor = '#448EBC';
-//set font bold.
+// Set the font as bold.
 condition1.isBold = true;
-//set font italic.
+// Set the font as italic.
 condition1.isItalic = true;
 
 //Applying conditional formatting to "A3".
 conditions = sheet.getRangeByName('A3').conditionalFormats;
 final ConditionalFormat condition2 = conditions.addCondition();
 
-//Represents conditional format rule that the cell value should be 100.
+// Represents a conditional-format rule that requires the cell value to equal 100.
 condition2.formatType = ExcelCFType.cellValue;
 condition2.operator = ExcelComparisonOperator.equal;
 condition2.firstFormula = '100';
 sheet.getRangeByIndex(3, 1).setText('Enter the Number as 100');
 
-//Setting format properties to be applied when the above condition is met.
-//set font color by hexa decimal.
+// Setting format properties to be applied when the above condition is met.
+// Set the font color using a hexadecimal value.
 condition2.fontColor = '#FF1574';
-//set top border line style.
+// Set the top border line style.
 condition2.topBorderStyle = LineStyle.thick;
-//set top border color by hexa decimal.
+// Set the top border color using a hexadecimal value.
 condition2.topBorderColor = '#FFCC00';
-//set number format.
+// Set the number format.
 condition2.numberFormat = '0.0';
 
 //Applying conditional formatting to "A5".
 conditions = sheet.getRangeByName('A5').conditionalFormats;
 final ConditionalFormat condition3 = conditions.addCondition();
 
-//Represents conditional format rule that the cell value greater or equal to 50.
+// Represents a conditional-format rule that requires the cell value to be greater than or equal to 50.
 condition3.formatType = ExcelCFType.cellValue;
 condition3.operator = ExcelComparisonOperator.greaterOrEqual;
 condition3.firstFormula = '50';
@@ -112,20 +123,20 @@ sheet
   .getRangeByIndex(5, 1)
     .setText('Enter the number value greater than or equal to 50.');
 
-//Setting format properties to be applied when the above condition is met.
-//set back color by RGB values.
+// Setting format properties to be applied when the above condition is met.
+// Set the background color using RGB color values.
 condition3.backColorRgb = Color.fromARGB(255, 150, 200, 50);
-//set font color by RGB values.
+// Set the font color using RGB color values.
 condition3.fontColorRgb = Color.fromARGB(255, 200, 20, 100);
-//set font underline
+// Underline the font.
 condition3.underline = true;
-//set right border line style
+// Set the right border line style.
 condition3.rightBorderStyle = LineStyle.double;
-// set right border color by RGB values.
+// Set the right border color using RGB color values.
 condition3.rightBorderColorRgb = Color.fromARGB(240, 24, 160, 200);
-//set bottom border line style
+// Set the bottom border line style.
 condition3.bottomBorderStyle = LineStyle.thin;
-// set bottom border color by RGB values.
+// Set the bottom border color using RGB color values.
 condition3.bottomBorderColorRgb = Color.fromARGB(255, 240, 160, 200);
 
 //save and dispose.
@@ -135,7 +146,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-N> The conditional formats for a single range should be added in descending order in Flutter XlsIO.
+N> The conditional formats for a single range should be added in descending order of priority in Flutter XlsIO. Lower-priority rules are added first so the highest-priority rule is evaluated last.
 
 When proper criteria is met, the output file looks as follows:
 
@@ -143,7 +154,7 @@ When proper criteria is met, the output file looks as follows:
 
 ## Using FormulaR1C1 property in Conditional Formats
 
-Flutter XlsIO sets the formula for the conditional format in R1C1-style notation. 
+Flutter XlsIO can set the formula for a conditional format in R1C1-style notation using the `firstFormulaR1C1` and `secondFormulaR1C1` properties. R1C1 notation uses relative references of the form `R[r]C[c]`, where `R[1]` means "one row below the current cell" and `C[0]` means "the same column". For absolute references, drop the brackets (for example, `R1C1`).
 
 The following code example illustrates this.
 
@@ -183,13 +194,13 @@ workbook.dispose();
 
 ## Format Specific Text
 
-Specific text Conditional Formatting is used to format the Excel range contains given text using **ExcelCFType** enumeration and **text** property. 
+Specific-text conditional formatting is used to format an Excel range that contains a given text using the `ExcelCFType.specificText` value and the `text` property. The valid operators are `containsText`, `notContainsText`, `beginsWith`, and `endsWith`.
 
-The below code example shows how to format specific text using conditional formatting in Flutter XlsIO.
+The following code example shows how to format specific text using conditional formatting in Flutter XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -216,7 +227,7 @@ condition1.rightBorderColor = '#A44C9A';
 condition1.leftBorderStyle = LineStyle.thin;
 condition1.leftBorderColor = '#CC00CC';
 
-// Setting value in the cell.
+// Setting values in the cells.
 sheet.getRangeByIndex(1, 1).setText('John');
 sheet.getRangeByIndex(2, 1).setText('James');
 sheet.getRangeByIndex(3, 1).setText('Anne');
@@ -241,13 +252,13 @@ The following screenshot represents generated Excel file with specific text cond
 
 ## Format Date Occurring
 
-Date occurring Conditional Formatting is used to format the Excel range contains given date using **ExcelCFType** and **CFTimePeriods** enumeration. 
+Date-occurring conditional formatting is used to format an Excel range that contains a given date using the `ExcelCFType.timePeriod` value and the `CFTimePeriods` enumeration. The supported `CFTimePeriods` values are `today`, `yesterday`, `tomorrow`, `last7Days`, `lastWeek`, `thisWeek`, `nextWeek`, `lastMonth`, `thisMonth`, and `nextMonth`.
 
-The below code example shows how to format date occurring conditional formatting in Flutter XlsIO.
+The following code example shows how to format date-occurring conditional formatting in Flutter XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -258,11 +269,11 @@ final ConditionalFormats conditions =
   sheet.getRangeByName('A1:A10').conditionalFormats;
 final ConditionalFormat condition = conditions.addCondition();
 
-//Represents conditional format rule that the date occurring contains yesterday.
+// Represents a conditional-format rule for cells whose date matches the "yesterday" time period.
 condition.formatType = ExcelCFType.timePeriod;
 condition.timePeriodType = CFTimePeriods.yesterday;
 
-//Setting format properties to be applied when the above condition is met.
+// Setting format properties to be applied when the above condition is met.
 condition.backColor = '#FFFF00';
 condition.fontColor = '#FF33CC';
 condition.isItalic = true;
@@ -326,19 +337,19 @@ The following screenshot represents generated Excel file with date occurring con
 
 ## Format Unique and Duplicate Values
 
-Format unique and duplicate values of an Excel range using conditional formatting. The values, Unique and Duplicate of the enumeration **ExcelCFType** helps to achieve the requirement.
+Use conditional formatting to highlight unique and duplicate values in an Excel range. The `ExcelCFType.unique` and `ExcelCFType.duplicate` enumerator values produce these rules; no operator or formula is required.
 
-The below code example shows how to format unique and duplicate values using conditional formatting in XlsIO.
+The following code example shows how to format unique and duplicate values using conditional formatting in XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-// Setting value in the cell.
+// Setting values in the cells.
 sheet.getRangeByIndex(1, 1).setText('Country');
 sheet.getRangeByIndex(2, 1).setText('Northern America');
 sheet.getRangeByIndex(3, 1).setText('Southern Europe');
@@ -371,10 +382,10 @@ final ConditionalFormats conditions =
   sheet.getRangeByName('B1:B11').conditionalFormats;
 final ConditionalFormat condition = conditions.addCondition();
 
-//Represents conditional format rule that contains duplicate value.
+// Represents a conditional-format rule that highlights cells with duplicate values.
 condition.formatType = ExcelCFType.duplicate;
 
-//Setting format properties to be applied when the above condition is met.
+// Setting format properties to be applied when the above condition is met.
 condition.backColor = '#FF8C53';
 condition.isItalic = true;
 condition.bottomBorderStyle = LineStyle.medium;
@@ -387,7 +398,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents generated Excel file with date occurring conditional format in Flutter XlsIO.
+The following screenshot represents the generated Excel file with unique and duplicate conditional format in Flutter XlsIO.
 
 ![Unique Duplicate](images/CFUniqueDuplicate.jpg)
 
@@ -401,13 +412,13 @@ The properties of `TopBottom` class are:
 * **percent** - Specifies whether the rank is determined by a percentage value.
 * **rank** - Specifies the maximum number or percentage of cells to be highlighted.
 
-### Top/Bottom ‘n’ rank Values
+### Top/Bottom 'n' rank Values
 
-The below code example shows how to format top 8 rank values from the given data range using `TopBottom` `type` and `rank` properties in XlsIO.
+The following code example shows how to format the top 8 ranked values from the given data range using the `TopBottom` `type` and `rank` properties in XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -467,13 +478,13 @@ The following screenshot represents the Excel file generated with TopBottom cond
 
 N> `TopBottom` `rank` value should be in a range between 1 and 1000.
 
-### Top/Bottom ‘n’% rank Values
+### Top/Bottom 'n'% rank Values
 
-The below code example shows how to format top 50 percentage rank values from the given data range using `TopBottom` `type`, `rank` and `percent` properties in XlsIO
+The following code example shows how to format the bottom 50 percent of ranked values from the given data range using the `TopBottom` `type`, `rank`, and `percent` properties in XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -510,16 +521,16 @@ final ConditionalFormat condition = conditions.addCondition();
 condition.formatType = ExcelCFType.topBottom;
 final TopBottom topBottom = condition.topBottom!;
 
-//Set type as Top for TopBottom rule.
+// Set the rule type to Bottom for the TopBottom rule.
 topBottom.type = ExcelCFTopBottomType.bottom;
 
-//Set true to Percent property for TopBottom rule.
+// Set percent to true for the TopBottom rule so rank is treated as a percentage.
 topBottom.percent = true;
 
-//Set rank value for the TopBottom rule.
+// Set the rank value (as a percentage) for the TopBottom rule.
 topBottom.rank = 50;
 
-//Setting format properties to be applied when the above condition is met.
+// Setting format properties to be applied when the above condition is met.
 condition.backColor = '#934ADD';
 condition.isItalic = true;
 
@@ -538,18 +549,18 @@ N> `TopBottom` `Rank` value should be in a range between 1 and 100 when set true
 
 ## Format Above or Below Average Values
 
-Above/Below average rule in conditional formatting is used to highlight the cells which contains above/below the average values in a data range. Above/Below conditional formatting rule can be created and customized using the `AboveBelowAverage` class in Flutter XlsIO.
+The above/below-average rule in conditional formatting is used to highlight the cells whose values are above or below the average in a data range. This rule can be created and customized using the `AboveBelowAverage` class in Flutter XlsIO.
 
 The properties of `AboveBelowAverage` are:
 
 * **averageType** - Specifies whether the conditional formatting rule looks for cell values that are above average or below average or standard deviation.
 * **stdDevValue** - Specifies standard deviation number for `AboveBelowAverage` conditional formatting rule.
 
-The below code example shows how to format a range with values that are below average using `AboveBelowAverage` `AverageType` property in XlsIO.
+The following code example shows how to format a range with values that are below average using the `AboveBelowAverage` `averageType` property in XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -582,14 +593,14 @@ final ConditionalFormats conditions =
   sheet.getRangeByName('A1:A20').conditionalFormats;
 final ConditionalFormat condition = conditions.addCondition();
 
-//Applying above or below average rule in the conditional formatting.
+// Applying the above or below average rule in the conditional formatting.
 condition.formatType = ExcelCFType.aboveBelowAverage;
 final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage!;
 
-//Set AverageType as Below for AboveBelowAverage rule.
+// Set AverageType to Below for the AboveBelowAverage rule.
 aboveBelowAverage.averageType = ExcelCFAverageType.below;
 
-//Set color for Conditional Formattting.
+// Set the colors for the conditional formatting.
 condition.backColor = '#FF0D0D';
 condition.fontColor = '#FFFFFF';
 condition.isItalic = true;
@@ -608,11 +619,11 @@ The following screenshot represents the Excel file generated with `AboveBelowAve
 
 ### Above or Below Standard Deviation Values
 
-The below code example shows how to format a range with values above standard deviation, using `AboveBelowAverage` `averageType` and `stdDevValue` properties in XlsIO.
+The following code example shows how to format a range with values above the standard deviation, using the `AboveBelowAverage` `averageType` and `stdDevValue` properties in XlsIO.
 
 {% highlight dart %}
 
-// create a Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -645,17 +656,17 @@ final ConditionalFormats conditions =
     sheet.getRangeByName('A1:A20').conditionalFormats;
 final ConditionalFormat condition = conditions.addCondition();
 
-//Applying above or below average rule in the conditional formatting.
+// Applying the above or below average rule in the conditional formatting.
 condition.formatType = ExcelCFType.aboveBelowAverage;
 final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage!;
 
-//Set AverageType as AboveStdDev for AboveBelowAverage rule.
+// Set AverageType to AboveStdDev for the AboveBelowAverage rule.
 aboveBelowAverage.averageType = ExcelCFAverageType.aboveStdDev;
 
-//Set value to StdDevValue property for AboveBelowAverage rule.
+// Set the StdDevValue property for the AboveBelowAverage rule.
 aboveBelowAverage.stdDevValue = 1;
 
-//Set color for Conditional Formattting.
+// Set the colors for the conditional formatting.
 condition.backColor = '#FF0D0D';
 condition.fontColor = '#FFFFFF';
 condition.isItalic = true;
@@ -674,36 +685,36 @@ The following screenshot represents the Excel file generated with `AboveBelowAve
 
 N> `AboveBelowAverage` `stdDevValue` can be applied only if the `averageType` is `aboveStdDev` or `belowStdDev`. The `stdDevValue` value should be in a range between 1 and 3.
 
-## Advanced Conditional Format Types 
+## Advanced Conditional Format Types
 
-In conjunction with basic conditional formatting, the new formatting visualizations such as **Color** **Scales**, **Icon** **Sets** and **Data** **Bars**, are supported in Flutter XlsIO.
+In conjunction with basic conditional formatting, the modern formatting visualizations — **Color Scales**, **Icon Sets**, and **Data Bars** — are also supported in Flutter XlsIO.
 
-Color Scales let you create visual effects in your data to see how the value of a cell is compared with the values in a range of cells. A color scale uses cell shading, as opposed to bars, to communicate relative values, beyond the relative size of the value of a cell.
+Color scales let you create visual effects in your data to see how the value of a cell compares with the values in a range of cells. A color scale uses cell shading, as opposed to bars, to communicate relative values.
 
-Creation of color scales and its formatting rules using the **ColorScale** class in Flutter XlsIO is illustrated as follows.
+Creation of color scales and their formatting rules using the `ColorScale` class in Flutter XlsIO is illustrated as follows. The `ConditionValueType` enumeration values used here include `lowestValue`, `highestValue`, `percent`, `percentile`, `number`, and `formula`.
 
 {% highlight dart %}
 
-//Create color scales for the data in specified range
+// Create color scales for the data in the specified range.
 final ConditionalFormats conditionalFormats =
     sheet.getRangeByName('B1:B11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.colorScale;
 final ColorScale colorScale = conditionalFormat.colorScale!;
 
-//Sets 3 - color scale
+// Set a 3-color scale.
 colorScale.setConditionCount(3);
-//Set format color for colorscale by hexa decimal.
+// Set the format color for the color scale using a hexadecimal value.
 colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-//Set format color for colorscale by RGB values.
+// Set the format color for the color scale using RGB color values.
 colorScale.criteria[1].formatColorRgb = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
-//Set format color for colorscale by hexa decimal.
+// Set the format color for the color scale using a hexadecimal value.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
@@ -712,19 +723,19 @@ colorScale.criteria[2].value = '0';
 
 ### Icon Sets
 
-Icon sets present data in three to five categories that are distinguished by a threshold value. Each icon represents a range of values and each cell is annotated with the icon that represents that range.
+Icon sets present data in three to five categories that are distinguished by a threshold value. Each icon represents a range of values, and each cell is annotated with the icon that represents that range. The `ExcelIconSetType` enumeration includes preset styles such as `threeArrows`, `threeArrowsGray`, `threeFlags`, `threeTrafficLights1`, `threeTrafficLights2`, `threeSigns`, `threeSymbols`, `threeSymbols2`, `threeStars`, `fourArrows`, `fourArrowsGray`, `fourRedToBlack`, `fourRating`, `fourTrafficLights`, `fiveArrows`, `fiveArrowsGray`, `fiveRating`, and `fiveQuarters`.
 
 Icon sets can be created and customized in Flutter XlsIO as follows.
 
 {% highlight dart %}
 
-//Create icon sets for the data in specified range
+// Create icon sets for the data in the specified range.
 final ConditionalFormats conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.iconSet;
 final IconSet iconSet = conditionalFormat.iconSet!;
 
-//Apply three symbols icon and hide the data in the specified range
+// Apply a three-symbol icon and hide the data in the specified range.
 iconSet.iconSet = ExcelIconSetType.threeSymbols;
 iconSet.iconCriteria[1].type = ConditionValueType.percent;
 iconSet.iconCriteria[1].value = "50";
@@ -736,9 +747,9 @@ iconSet.showIconOnly = true;
 
 ### Custom Icon Sets
 
-You can customize the icon set by changing the IconSet and Index properties for each icon criteria.
+You can customize the icon set by changing the `iconSet` and `index` properties for each icon criterion. The `ConditionalFormatOperator` enumeration values used here include `greaterThan`, `greaterThanOrEqual`, `lessThan`, `lessThanOrEqual`, `equal`, `notEqual`, `between`, and `notBetween`.
 
-Custom Icon sets can be created and customized in Flutter XlsIO as follows.
+Custom icon sets can be created and customized in Flutter XlsIO as follows.
 
 {% highlight dart %}
 
@@ -757,14 +768,14 @@ sheet.getRangeByName('A6').setNumber(212);
 sheet.getRangeByName('A7').setNumber(131);
 sheet.getRangeByName('A8').setNumber(230);
 
-//Create iconset for the data in specified range.
+// Create icon set for the data in the specified range.
 final ConditionalFormats conditionalFormats =
   sheet.getRangeByName('A1:A10').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
-//Set FormatType as IconSet.
+// Set FormatType as IconSet.
 conditionalFormat.formatType = ExcelCFType.iconSet;
 final IconSet iconSet = conditionalFormat.iconSet!;
-//Set conditions for IconCriteria.
+// Set conditions for IconCriteria.
 iconSet.iconSet = ExcelIconSetType.threeFlags;
 
 final IconConditionValue iconValue1 = iconSet.iconCriteria[0] as IconConditionValue;
@@ -796,70 +807,70 @@ workbook.dispose();
 
 ### Data Bars
 
-Here, the values in each of the selected cells are compared, and a data bar is drawn in each cell representing the value of that cell relative to the other cells in the selected range. This bar provides a clear visual cue for users, making it easier to pick out larger and smaller values in a range.
+Here, the values in each of the selected cells are compared, and a data bar is drawn in each cell representing the value of that cell relative to the other cells in the selected range. This bar provides a clear visual cue for users, making it easier to pick out larger and smaller values in a range. The `DataBarAxisPosition` values are `automatic`, `middle`, and `none`; the `DataBarDirection` values are `leftToRight` and `rightToLeft`.
 
-This can be set and manipulated using the DataBar class as follows.
+This can be set and manipulated using the `DataBar` class as follows.
 
 {% highlight dart %}
 
-//Create data bars for the data in specified range.
+// Create data bars for the data in the specified range.
 final ConditionalFormats conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.dataBar;
 final DataBar dataBar = conditionalFormat.dataBar!;
 
-//Set the constraints
+// Set the constraints.
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar by hexa decimal.
+// Set the color for the DataBar using a hexadecimal value.
 dataBar.barColor = '#FF7C80';
 
-//Hide the data bar values
+// Hide the data bar values.
 dataBar.showValue = false;
 
-// set databar as border.
+// Show a border around the data bar.
 dataBar.hasBorder = true;
 
-// Set Gradient fill to false.
+// Disable the gradient fill.
 dataBar.hasGradientFill = false;
 
-//Set Bar Axis Position.
+// Set the bar axis position.
 dataBar.dataBarAxisPosition = DataBarAxisPosition.middle;
 
-//Set Bar Direction
+// Set the bar direction.
 dataBar.dataBarDirection = DataBarDirection.rightToLeft;
 
-//Set Negative Border color for DataBar in hexa value.
+// Set the negative border color for the DataBar using a hexadecimal value.
 dataBar.negativeBorderColor = '#ED7D31';
 
-//Set Negative Bar color for DataBar in hexa value.
+// Set the negative bar color for the DataBar using a hexadecimal value.
 dataBar.negativeFillColor = '#013461';
 
-//Set BarAxis color for DataBar in hexa value.
+// Set the bar axis color for the DataBar using a hexadecimal value.
 dataBar.barAxisColor = '#FFDD12';
 
-//Set Border color for DataBar in hexa value.
+// Set the border color for the DataBar using a hexadecimal value.
 dataBar.borderColor = '#12DD01';
 
-//Set bar color for DataBar by RGB values.
+// Set the bar color for the DataBar using RGB color values.
 dataBar.barColorRgb = Color.fromARGB(255, 200, 13, 145);
 
-//Set Negative Border color for DataBar by RGB values.
+// Set the negative border color for the DataBar using RGB color values.
 dataBar.negativeBorderColorRgb = Color.fromARGB(255, 200, 130, 0);
 
-// Set Negative Bar color for DataBar by RGB values.
+// Set the negative bar color for the DataBar using RGB color values.
 dataBar.negativeFillColorRgb = Color.fromARGB(230, 201, 230, 100);
 
-// Set BarAxis color for DataBar by RGB values.
+// Set the bar axis color for the DataBar using RGB color values.
 dataBar.barAxisColorRgb = Color.fromARGB(255, 134, 44, 224);
 
-//Set Border color for DataBar by RGB values.
+// Set the border color for the DataBar using RGB color values.
 dataBar.borderColorRgb = Color.fromARGB(245, 45, 244, 230);
 
 {% endhighlight %}
 
-The below code example show how to use the advanced conditional formats such as **Color Scale**, **Icon set** and **DataBar** in Flutter XlsIO.
+The following code example shows how to use the advanced conditional formats — **Color Scale**, **Icon Set**, and **Data Bar** — together in Flutter XlsIO.
 
 {% highlight dart %}
 
@@ -914,37 +925,37 @@ sheet.getRangeByName('D9').setNumber(65);
 sheet.getRangeByName('D10').setNumber(15);
 sheet.getRangeByName('D11').setNumber(70);
 
-//Create color scales for the data in specified range
+// Create color scales for the data in the specified range.
 ConditionalFormats conditionalFormats =
       sheet.getRangeByName('B1:B11').conditionalFormats;
 ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.colorScale;
 final ColorScale colorScale = conditionalFormat.colorScale!;
 
-//Sets 3 - color scale
+// Set a 3-color scale.
 colorScale.setConditionCount(3);
-//Set format color for colorscale by hexa decimal.
+// Set the format color for the color scale using a hexadecimal value.
 colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-//Set format color for colorscale by RGB values.
+// Set the format color for the color scale using RGB color values.
 colorScale.criteria[1].formatColorRgb = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
-//Set format color for colorscale by hexa decimal.
+// Set the format color for the color scale using a hexadecimal value.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
 
-//Create icon sets for the data in specified range.
+// Create icon sets for the data in the specified range.
 conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
 conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.iconSet;
 final IconSet iconSet = conditionalFormat.iconSet!;
 
-//Apply three symbols icon and hide the data in the specified range.
+// Apply a three-symbol icon and hide the data in the specified range.
 iconSet.iconSet = ExcelIconSetType.threeSymbols;
 iconSet.iconCriteria[1].type = ConditionValueType.percent;
 iconSet.iconCriteria[1].value = "40";
@@ -952,20 +963,20 @@ iconSet.iconCriteria[2].type = ConditionValueType.percent;
 iconSet.iconCriteria[2].value = "80";
 iconSet.showIconOnly = true;
 
-//Create data bars for the data in specified range.
+// Create data bars for the data in the specified range.
 conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
 conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.dataBar;
 final DataBar dataBar = conditionalFormat.dataBar!;
 
-//Set the constraints
+// Set the constraints.
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar by RGB values.
+// Set the color for the DataBar using RGB color values.
 dataBar.barColorRgb = Color.fromARGB(255, 244, 180, 10);
 
-//Hide the data bar values
+// Hide the data bar values.
 dataBar.showValue = false;
 
 // save and dispose.
@@ -975,7 +986,14 @@ workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents generated Excel file with advanced conditional format in Flutter XlsIO.
+The following screenshot represents the generated Excel file with advanced conditional format in Flutter XlsIO.
 
 ![Advanced CF](images/ConditionalFormats.jpg)
+
+## See also
+
+* [Getting Started with Flutter XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/getting-started)
+* [Working with Workbook](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-workbook)
+* [Working with Excel Worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet)
+* [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
 

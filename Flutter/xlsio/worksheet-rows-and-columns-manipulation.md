@@ -1,235 +1,227 @@
 ---
 layout: post
-title: Worksheet Rows and Columns Manipulation using Syncfusion Flutter XlsIO
-description: Learn how to apply and manipulate rows cells and columns cells in Excel Worksheet of workbook using Syncfusion Flutter XlsIO.
+title: Working with Rows and Columns | Syncfusion Flutter XlsIO
+description: Learn how to insert, delete, and resize rows and columns in an Excel worksheet using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
 ---
 
-# Worksheet Rows and Columns Manipulation
+# Working with Worksheet Rows and Columns
 
-The Flutter XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion and adjusting the dimensions.
+Syncfusion Flutter XlsIO provides row and column manipulation options equivalent to Microsoft Excel, including insertion, deletion, resizing, auto-fitting, and showing or hiding.
 
-## Insert Rows and Columns
+The following table summarizes the operations documented in this page:
 
-The following code snippet illustrates how to insert rows and columns in a worksheet.
+| Operation | Methods |
+|-----------|---------|
+| Insert rows and columns | `insertRow`, `insertColumn` |
+| Delete rows and columns | `deleteRow`, `deleteColumn` |
+| Resize a single row or column | `setRowHeightInPixels`, `setColumnWidthInPixels` |
+| Auto-fit a single row or column | `autoFitRow`, `autoFitColumn` |
+| Auto-fit a range of rows or columns | `Range.autoFitRows`, `Range.autoFitColumns` |
+| Show or hide rows and columns | `Range.showRows`, `Range.showColumns`, `Range.showRange` |
 
-{% highlight dart %} 
+N> All row and column indexes in this page are **1-based**: the first row is `1`, the first column is `1`.
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+For prerequisites and installation steps, see the [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview). For more information on worksheets, see [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet).
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+N> The code samples in this document use `await workbook.save()`. Always call `workbook.dispose()` after saving to release the XlsIO DOM memory, ideally inside a `try/finally` block.
 
-Range range = sheet.getRangeByName('A1');
-range.setText('Hello');
+## Insert rows and columns
 
-range = sheet.getRangeByName('B1');
-range.setText('World');
+Rows and columns can be inserted with the `insertRow` and `insertColumn` methods of the `Worksheet` class. Both methods accept the 1-based index at which to insert, the number of rows or columns to insert, and an `ExcelInsertOptions` value that controls the formatting of the inserted range:
 
-// Insert a row
-sheet.insertRow(1, 1, ExcelInsertOptions.formatAsAfter);
-
-// Insert a column.
-sheet.insertColumn(2, 1, ExcelInsertOptions.formatAsBefore);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('InsertRowandColumn.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
-{% endhighlight %}
-
-N> Row and Column indexes are "one based".
-
-## Delete Rows and Columns 
-
-The following code shows how to delete rows and columns.
-
-{% highlight dart %} 
-
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
-
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-Range range = sheet.getRangeByName('A2');
-range.setText('Hello');
-
-range = sheet.getRangeByName('C2');
-range.setText('World');
-
-// Delete a row
-sheet.deleteRow(1, 1);
-
-// Delete a column.
-sheet.deleteColumn(2, 1);
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('DeleteRowandColumn.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
-{% endhighlight %}
-
-## Auto-Fit Rows and Columns
-
-The Flutter XlsIO allows to auto-size the width and height of a cell to fit its content. This section demonstrates various methods to auto-fit rows and columns of a worksheet.
-
-### Auto-Fit a Single Row or Column
-
-The following code snippet shows how a row is re-sized to its content.
+| `ExcelInsertOptions` value | Description |
+|----------------------------|-------------|
+| `formatAsBefore` | The inserted range uses the formatting of the row or column immediately above (for rows) or to the left (for columns). |
+| `formatAsAfter` | The inserted range uses the formatting of the row or column immediately below (for rows) or to the right (for columns). |
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> insertRowsAndColumns() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('Hello');
+  sheet.getRangeByName('B1').setText('World');
 
-final Range range1 = sheet.getRangeByName('A1');
-range1.setText('WrapTextWrapTextWrapTextWrapText');
-range1.cellStyle.wrapText = true;
+  // Insert one row at index 1, formatted as the row after it.
+  sheet.insertRow(1, 1, ExcelInsertOptions.formatAsAfter);
 
-// AutoFit applied to a single row
-sheet.autoFitRow(1);
+  // Insert one column at index 2, formatted as the column before it.
+  sheet.insertColumn(2, 1, ExcelInsertOptions.formatAsBefore);
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('AutoFitRow.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-The following code snippet shows how a Column is re-sized to its content.
+## Delete rows and columns
+
+Rows and columns can be deleted with the `deleteRow` and `deleteColumn` methods. The first argument is the 1-based index of the first row or column to delete, and the second argument is the number of rows or columns to delete. Data, formulas, and merged cells in the deleted range are removed; data below (for rows) or to the right (for columns) shifts up or left to fill the gap.
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> deleteRowsAndColumns() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A2').setText('Hello');
+  sheet.getRangeByName('C2').setText('World');
 
-final Range range1 = sheet.getRangeByName('A1');
-range1.setText('This is long text');
+  // Delete one row at index 1.
+  sheet.deleteRow(1, 1);
 
-// AutoFit applied to a single Column.
-sheet.autoFitColumn(1);
+  // Delete one column at index 2.
+  sheet.deleteColumn(2, 1);
 
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('AutoFitColumn.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
+## Auto-fit rows and columns
 
-### Auto-Fit Multiple Rows or Columns
+Auto-fit resizes a row or column to match its content. A single row or column can be auto-fit through the `Worksheet.autoFitRow` and `Worksheet.autoFitColumn` methods. A range of rows or columns can be auto-fit through the `Range.autoFitRows` and `Range.autoFitColumns` methods.
 
-Multiple rows or columns can be auto fitted based on the range specified.
-
-The following code snippet shows how to use auto fit for multiple rows.
+### Auto-fit a single row
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> autoFitRow() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Set a long wrapped text in A1.
+  final Range range1 = sheet.getRangeByName('A1');
+  range1.setText('WrapTextWrapTextWrapTextWrapText');
+  range1.cellStyle.wrapText = true;
 
-// Assigning text to cells
-final Range range = sheet.getRangeByName('A1:A4');
-range.setText('This is Long Text');
-range.cellStyle.wrapText = true;
+  // Auto-fit the first row to the content.
+  sheet.autoFitRow(1);
 
-// Auto-Fit row the range
-range.autoFitRows();
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('AutoFitRows.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-
-The following code snippet shows how to use auto fit for multiple Columns.
+### Auto-fit a single column
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
+Future<void> autoFitColumn() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  sheet.getRangeByName('A1').setText('This is long text');
 
-// Assigning text to cells
-final Range range = sheet.getRangeByName('A1:D1');
-range.setText('This is Long Text');
+  // Auto-fit the first column to the content.
+  sheet.autoFitColumn(1);
 
-// Auto-Fit column the range
-range.autoFitColumns();
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveSync();
-File('AutoFitColumns.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Show or Hide Rows and Columns
-
-Visibility of rows and columns can be set by using the [showRows](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showRows.html) and [showColumns](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showColumns.html) methods as shown below.
+### Auto-fit a range of rows
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook(1);
+Future<void> autoFitRows() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Set wrapped text in A1:A4.
+  final Range range = sheet.getRangeByName('A1:A4');
+  range.setText('This is Long Text');
+  range.cellStyle.wrapText = true;
 
-// Show or hide rows in the given range. TRUE by default.
-sheet.getRangeByName('A1').showRows(false);    
-sheet.getRangeByName('A2:A5').showRows(false);   
+  // Auto-fit every row in the range.
+  range.autoFitRows();
 
-// Show or hide columns in the given range. TRUE by default.
-sheet.getRangeByName('C10').showColumns(false);
-sheet.getRangeByName('D10:E10').showColumns(false);
-       
-// Save and dispose workbook.
-final List<int>? bytes = workbook.saveSync();
-File('HideRowsAndColumns.xlsx').writeAsBytes(bytes!);
-workbook.dispose();
-
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
-## Show or Hide Specific Range
-
-The following code snippet shows how to set the visibility for a specific range through [showRange](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showRange.html) method .
+### Auto-fit a range of columns
 
 {% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
-// Create a new Excel Document.
-final Workbook workbook = Workbook(1);
+Future<void> autoFitColumns() async {
+  final Workbook workbook = Workbook();
+  final Worksheet sheet = workbook.worksheets[0];
 
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
+  // Set text in A1:D1.
+  final Range range = sheet.getRangeByName('A1:D1');
+  range.setText('This is Long Text');
 
-// Show or hide rows and columns in the given range. TRUE by default.
-sheet.getRangeByName('G15').showRange(false);
-sheet.getRangeByName('J22:J25').showRange(false);
-       
-// Save and dispose workbook.
-final List<int>? bytes = workbook.saveSync();
-File('HideRowsAndColumns.xlsx').writeAsBytes(bytes!);
-workbook.dispose();
+  // Auto-fit every column in the range.
+  range.autoFitColumns();
 
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
 {% endhighlight %}
 
+## Show or hide rows and columns
+
+The visibility of rows and columns can be toggled through the `showRows` and `showColumns` methods of the `Range` class. When called on a range that includes a full row or a full column, the method hides the entire row or column; when called on a smaller range, the visibility change is limited to that range.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> hideRowsAndColumns() async {
+  final Workbook workbook = Workbook(1);
+  final Worksheet sheet = workbook.worksheets[0];
+
+  // Hide row 1 and rows 2 to 5.
+  sheet.getRangeByName('A1').showRows(false);
+  sheet.getRangeByName('A2:A5').showRows(false);
+
+  // Hide column C and columns D to E.
+  sheet.getRangeByName('C10').showColumns(false);
+  sheet.getRangeByName('D10:E10').showColumns(false);
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+N> Hidden rows and columns are not displayed in the worksheet view, but the data they contain is preserved and can still be referenced by formulas.
+
+## Show or hide a specific range
+
+The `showRange` method of the `Range` class toggles the visibility of a range without restricting the change to a single row or column. This is useful when a range spans multiple rows and columns and only the cells within the range should be hidden.
+
+{% highlight dart %}
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+
+Future<void> hideRange() async {
+  final Workbook workbook = Workbook(1);
+  final Worksheet sheet = workbook.worksheets[0];
+
+  // Hide the cell G15 and the range J22:J25.
+  sheet.getRangeByName('G15').showRange(false);
+  sheet.getRangeByName('J22:J25').showRange(false);
+
+  final List<int> bytes = await workbook.save();
+  workbook.dispose();
+}
+{% endhighlight %}
+
+## See also
+
+* [Flutter XlsIO Overview](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/overview)
+* [Working with Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-excel-worksheet)
+* [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cells)
+* [Working with Cell Formatting](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/working-with-cell-formatting)
+* [Worksheet API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html)
+* [Range API reference](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range-class.html)
