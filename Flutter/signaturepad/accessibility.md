@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Accessibility in Flutter SignaturePad widget | Syncfusion
+title: Accessibility in Flutter SignaturePad widget | Syncfusion
 description: Learn here all about the accessibility support in Syncfusion Flutter SignaturePad (SfSignaturePad) widget and how to customize it.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
@@ -14,28 +14,33 @@ documentation: ug
 The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) can be accessed by screen readers by wrapping the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) widget with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Semantics(
-        label: 'Syncfusion Flutter SignaturePad',
-        hint: 'Mark your signature in this',
-        child: Container(
-          child: SfSignaturePad(
-            strokeColor: Colors.black,
-            backgroundColor: Colors.white,
-            maximumStrokeWidth: 5,
-            minimumStrokeWidth: 1,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
+
+class AccessibilityExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Semantics(
+          label: 'Syncfusion Flutter SignaturePad',
+          hint: 'Draw your signature here',
+          child: Container(
+            child: SfSignaturePad(
+              strokeColor: Colors.black,
+              backgroundColor: Colors.white,
+              maximumStrokeWidth: 5,
+              minimumStrokeWidth: 1,
+            ),
+            width: 200,
+            height: 200,
           ),
-          width: 200,
-          height: 200,
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -45,8 +50,8 @@ Widget build(BuildContext context) {
 
 You can customize the colors of the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) using the following APIs to ensure sufficient contrast:
 
-* [`Background`](https://help.syncfusion.com/flutter/signaturepad/getting-started#initialize-signaturepad)
-* [`Stroke`](https://help.syncfusion.com/flutter/signaturepad/getting-started#customize-signature-stroke-color)
+* [`Background`](getting-started.md#initialize-signaturepad)
+* [`Stroke`](getting-started.md#customize-signature-stroke-color)
 
 ## Easier touch targets
 
