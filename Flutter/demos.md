@@ -2,7 +2,7 @@
 layout: post
 title: Installation of Flutter Sample Browser App | Syncfusion®
 description: Describes how to access and install the Syncfusion® Flutter Sample Browser App on supported platforms and view source code samples.
-platform: Flutter
+platform: flutter
 control: Demo
 documentation: UG
 ---
