@@ -2,14 +2,14 @@
 layout: post
 title: Tile selection in Flutter Treemap widget | Syncfusion
 description: Learn here all about the Tile selection feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
-platform: Flutter
+platform: flutter
 control: SfTreemap
 documentation: ug
 ---
 
 # Tile selection in Flutter Treemap (SfTreemap)
 
-You can select a tile in order to highlight that area on a treemap. You can use the callback for performing any action during tile selection.
+You can select a tile to highlight that area on the treemap. You can use the callback to perform any action during tile selection.
 
 ## Enable tile selection
 
@@ -18,19 +18,30 @@ You can enable tile selection on a treemap using the [`SfTreemap.onSelectionChan
 The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) callback will be called with the details of the selected tile when the user is selecting a tile by tapping and you will be able to do any specific functionalities like showing pop-up or navigate to a different page.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class EnableSelectionExample extends StatefulWidget {
+  const EnableSelectionExample({super.key});
+
+  @override
+  State<EnableSelectionExample> createState() => _EnableSelectionExampleState();
+}
+
+class _EnableSelectionExampleState extends State<EnableSelectionExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers('India', 'Facebook', 25.4),
-        SocialMediaUsers('USA', 'Instagram', 19.11),
-        SocialMediaUsers('Japan', 'Facebook', 13.3),
-        SocialMediaUsers('Germany', 'Instagram', 10.65),
-        SocialMediaUsers('France', 'Twitter', 7.54),
-        SocialMediaUsers('UK', 'Instagram', 4.93),
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
     ];
     super.initState();
   }
@@ -39,27 +50,28 @@ The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_tree
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              onSelectionChanged: (TreemapTile) {},
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                ),
-              ],
-            ),
+        child: SizedBox(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            onSelectionChanged: (TreemapTile tile) {},
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
@@ -85,19 +97,31 @@ You can customize the below appearance of the selected tile.
 * **Border** - Change the border color, border stroke width using the [`BorderSide.color`](https://api.flutter.dev/flutter/painting/BorderSide/color.html) and [`BorderSide.width`](https://api.flutter.dev/flutter/painting/BorderSide/width.html) properties in the [`RoundedRectangleBorder`](https://api.flutter.dev/flutter/painting/RoundedRectangleBorder-class.html). Also apply rounded border using the [`RoundedRectangleBorder.borderRadius`](https://api.flutter.dev/flutter/painting/RoundedRectangleBorder/borderRadius.html) property.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class SelectionAppearanceExample extends StatefulWidget {
+  const SelectionAppearanceExample({super.key});
+
+  @override
+  State<SelectionAppearanceExample> createState() =>
+      _SelectionAppearanceExampleState();
+}
+
+class _SelectionAppearanceExampleState extends State<SelectionAppearanceExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers('India', 'Facebook', 25.4),
-        SocialMediaUsers('USA', 'Instagram', 19.11),
-        SocialMediaUsers('Japan', 'Facebook', 13.3),
-        SocialMediaUsers('Germany', 'Instagram', 10.65),
-        SocialMediaUsers('France', 'Twitter', 7.54),
-        SocialMediaUsers('UK', 'Instagram', 4.93),
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
     ];
     super.initState();
   }
@@ -106,37 +130,38 @@ You can customize the below appearance of the selected tile.
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              onSelectionChanged: (TreemapTile) {},
-              selectionSettings: TreemapSelectionSettings(
-                color: Colors.orange,
-                border: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: Colors.deepOrange,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
+        child: SizedBox(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            onSelectionChanged: (TreemapTile tile) {},
+            selectionSettings: TreemapSelectionSettings(
+              color: Colors.orange,
+              border: RoundedRectangleBorder(
+                side: const BorderSide(
+                  color: Colors.deepOrange,
+                  width: 1,
                 ),
+                borderRadius: BorderRadius.circular(10),
               ),
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                ),
-              ],
             ),
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
@@ -156,19 +181,30 @@ class SocialMediaUsers {
 You can customize the hovered tile color and border using the [`tileHoverColor`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/tileHoverColor.html) and [`tileHoverBorder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/tileHoverBorder.html) properties. The default value of the [`tileHoverColor`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/tileHoverColor.html) is `Colors.transparent`.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_treemap/treemap.dart';
+
+class HoveredTileExample extends StatefulWidget {
+  const HoveredTileExample({super.key});
+
+  @override
+  State<HoveredTileExample> createState() => _HoveredTileExampleState();
+}
+
+class _HoveredTileExampleState extends State<HoveredTileExample> {
   late List<SocialMediaUsers> _source;
 
   @override
   void initState() {
     _source = <SocialMediaUsers>[
-        SocialMediaUsers('India', 'Facebook', 25.4),
-        SocialMediaUsers('USA', 'Instagram', 19.11),
-        SocialMediaUsers('Japan', 'Facebook', 13.3),
-        SocialMediaUsers('Germany', 'Instagram', 10.65),
-        SocialMediaUsers('France', 'Twitter', 7.54),
-        SocialMediaUsers('UK', 'Instagram', 4.93),
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
     ];
     super.initState();
   }
@@ -176,43 +212,43 @@ You can customize the hovered tile color and border using the [`tileHoverColor`]
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-          child: Container(
-            height: 400,
-            width: 400,
-            child: SfTreemap(
-              dataCount: _source.length,
-              weightValueMapper: (int index) {
-                return _source[index].usersInMillions;
-              },
-              levels: [
-                TreemapLevel(
-                  groupMapper: (int index) {
-                    return _source[index].country;
-                  },
-                  labelBuilder: (BuildContext context, TreemapTile tile) {
-                    return Padding(
-                      padding: const EdgeInsets.all(4),
-                      child:
-                          Text(tile.group, style: TextStyle(color: Colors.black)),
-                    );
-                  },
-                ),
-              ],
-              onSelectionChanged: (TreemapTile tile) {},
-              tileHoverColor: Colors.tealAccent,
-              tileHoverBorder: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.teal,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.circular(10),
+      body: Center(
+        child: SizedBox(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Text(tile.group, style: const TextStyle(color: Colors.black)),
+                  );
+                },
               ),
+            ],
+            onSelectionChanged: (TreemapTile tile) {},
+            tileHoverColor: Colors.tealAccent,
+            tileHoverBorder: RoundedRectangleBorder(
+              side: const BorderSide(
+                color: Colors.teal,
+                width: 1,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
         ),
+      ),
     );
   }
+}
 
 class SocialMediaUsers {
   const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
