@@ -455,7 +455,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1236" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/79" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
@@ -518,10 +518,3 @@ Read Blogs
     </div>
 </div>
 </div>
-
-## See Also
-
-- [Getting Started with Syncfusion® Flutter DataGrid](../datagrid/getting-started.md)
-- [Getting Started with Syncfusion® Flutter Cartesian Chart](../cartesian-charts/getting-started.md)
-- [Getting Started with Syncfusion® Flutter Calendar](../calendar/getting-started.md)
-- [Getting Started with Syncfusion® Flutter Maps](../maps/getting-started.md)
