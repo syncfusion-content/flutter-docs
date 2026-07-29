@@ -8,7 +8,9 @@ documentation: ug
 ---
 
 # Flutter Slider Labels and Dividers (SfSlider)
-This section explains about how to add the labels and dividers in the slider.
+This section explains how to add labels and dividers to the slider.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html) for customizing label and divider appearance in the examples below. You must also import the [`intl`](https://pub.dev/packages/intl) package for formatting numeric and date labels.
 
 ## Show labels
 
@@ -19,29 +21,39 @@ The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/late
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              showLabels: true,
-              showTicks: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class ShowLabelsPage extends StatefulWidget {
+  @override
+  _ShowLabelsPageState createState() => _ShowLabelsPageState();
+}
+
+class _ShowLabelsPageState extends State<ShowLabelsPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                showLabels: true,
+                showTicks: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -54,29 +66,39 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: 0.0,
-              max: 10.0,
-              interval: 2,
-              showLabels: true,
-              showTicks: true,
-              value: _value,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalShowLabelsPage extends StatefulWidget {
+  @override
+  _VerticalShowLabelsPageState createState() => _VerticalShowLabelsPageState();
+}
+
+class _VerticalShowLabelsPageState extends State<VerticalShowLabelsPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                interval: 2,
+                showLabels: true,
+                showTicks: true,
+                value: _value,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -92,37 +114,46 @@ N>
 
 The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) property is used to format the numeric labels. The default value of [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) property is `null`.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting numeric slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: 0.0,
-              max: 10.0,
-              value: _value,
-              interval: 2,
-              showTicks: true,
-              showLabels: true,
-              numberFormat: NumberFormat("\$"),
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class NumberFormatPage extends StatefulWidget {
+  @override
+  _NumberFormatPageState createState() => _NumberFormatPageState();
+}
+
+class _NumberFormatPageState extends State<NumberFormatPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                interval: 2,
+                showTicks: true,
+                showLabels: true,
+                numberFormat: NumberFormat('\$'),
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -135,30 +166,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: 0.0,
-              max: 10.0,
-              value: _value,
-              interval: 2,
-              showTicks: true,
-              showLabels: true,
-              numberFormat: NumberFormat("\$"),
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalNumberFormatPage extends StatefulWidget {
+  @override
+  _VerticalNumberFormatPageState createState() => _VerticalNumberFormatPageState();
+}
+
+class _VerticalNumberFormatPageState extends State<VerticalNumberFormatPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                interval: 2,
+                showTicks: true,
+                showLabels: true,
+                numberFormat: NumberFormat('\$'),
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -168,9 +210,7 @@ Widget build(BuildContext context) {
 
 ## Date format
 
-The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) property is used to format the date labels. It is mandatory for date [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for date values. The default value of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) property is `null`.
-
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) property is used to format the date labels. It is mandatory for the date [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for date values. The default value of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) property is `null`.
 
 ### Year format
 #### Horizontal
@@ -178,31 +218,42 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class YearFormatPage extends StatefulWidget {
+  @override
+  _YearFormatPageState createState() => _YearFormatPageState();
+}
+
+class _YearFormatPageState extends State<YearFormatPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -215,31 +266,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalYearFormatPage extends StatefulWidget {
+  @override
+  _VerticalYearFormatPageState createState() => _VerticalYearFormatPageState();
+}
+
+class _VerticalYearFormatPageState extends State<VerticalYearFormatPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -253,31 +315,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 03, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2000, 09, 01, 24),
-              value: _value,
-              interval: 2,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.yM(),
-              dateIntervalType: DateIntervalType.months,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class MonthFormatPage extends StatefulWidget {
+  @override
+  _MonthFormatPageState createState() => _MonthFormatPageState();
+}
+
+class _MonthFormatPageState extends State<MonthFormatPage> {
+  DateTime _value = DateTime(2000, 03, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2000, 09, 02, 00),
+                value: _value,
+                interval: 2,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.yM(),
+                dateIntervalType: DateIntervalType.months,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -290,31 +363,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 03, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2000, 09, 01, 24),
-              value: _value,
-              interval: 2,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat.yM(),
-              dateIntervalType: DateIntervalType.months,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalMonthFormatPage extends StatefulWidget {
+  @override
+  _VerticalMonthFormatPageState createState() => _VerticalMonthFormatPageState();
+}
+
+class _VerticalMonthFormatPageState extends State<VerticalMonthFormatPage> {
+  DateTime _value = DateTime(2000, 03, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2000, 09, 02, 00),
+                value: _value,
+                interval: 2,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat.yM(),
+                dateIntervalType: DateIntervalType.months,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -329,31 +413,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 01, 01, 12, 00, 00);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01, 02, 00, 00),
-              max: DateTime(2000, 01, 01, 22, 00, 00),
-              value: _value,
-              interval: 5,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat('h:mm a'),
-              dateIntervalType: DateIntervalType.hours,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class HourFormatPage extends StatefulWidget {
+  @override
+  _HourFormatPageState createState() => _HourFormatPageState();
+}
+
+class _HourFormatPageState extends State<HourFormatPage> {
+  DateTime _value = DateTime(2000, 01, 01, 12, 00, 00);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01, 02, 00, 00),
+                max: DateTime(2000, 01, 01, 22, 00, 00),
+                value: _value,
+                interval: 5,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat('h:mm a'),
+                dateIntervalType: DateIntervalType.hours,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -366,31 +461,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2000, 01, 01, 12, 00, 00);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 02, 00, 00),
-              max: DateTime(2000, 01, 01, 22, 00, 00),
-              value: _value,
-              interval: 5,
-              showLabels: true,
-              showTicks: true,
-              dateFormat: DateFormat('h:mm a'),
-              dateIntervalType: DateIntervalType.hours,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalHourFormatPage extends StatefulWidget {
+  @override
+  _VerticalHourFormatPageState createState() => _VerticalHourFormatPageState();
+}
+
+class _VerticalHourFormatPageState extends State<VerticalHourFormatPage> {
+  DateTime _value = DateTime(2000, 01, 01, 12, 00, 00);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 02, 00, 00),
+                max: DateTime(2000, 01, 01, 22, 00, 00),
+                value: _value,
+                interval: 5,
+                showLabels: true,
+                showTicks: true,
+                dateFormat: DateFormat('h:mm a'),
+                dateIntervalType: DateIntervalType.hours,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -409,32 +515,43 @@ The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              labelPlacement: LabelPlacement.betweenTicks,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class LabelPlacementPage extends StatefulWidget {
+  @override
+  _LabelPlacementPageState createState() => _LabelPlacementPageState();
+}
+
+class _LabelPlacementPageState extends State<LabelPlacementPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                labelPlacement: LabelPlacement.betweenTicks,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -447,32 +564,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              labelPlacement: LabelPlacement.betweenTicks,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalLabelPlacementPage extends StatefulWidget {
+  @override
+  _VerticalLabelPlacementPageState createState() => _VerticalLabelPlacementPageState();
+}
+
+class _VerticalLabelPlacementPageState extends State<VerticalLabelPlacementPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                labelPlacement: LabelPlacement.betweenTicks,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -491,76 +619,98 @@ The default value of the [`edgeLabelPlacement`](https://pub.dev/documentation/sy
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              edgeLabelPlacement: EdgeLabelPlacement.inside,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class EdgeLabelPlacementPage extends StatefulWidget {
+  @override
+  _EdgeLabelPlacementPageState createState() => _EdgeLabelPlacementPageState();
+}
+
+class _EdgeLabelPlacementPageState extends State<EdgeLabelPlacementPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                edgeLabelPlacement: EdgeLabelPlacement.inside,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Edge Label placement support](images\label-and-divider\edge-label-placement.png)
+![Edge Label placement support](images/label-and-divider/edge-label-placement.png)
 
 ### Vertical
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _value = DateTime(2002, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: DateTime(2000, 01, 01, 00),
-              max: DateTime(2004, 12, 31, 24),
-              value: _value,
-              interval: 1,
-              showLabels: true,
-              showTicks: true,
-              edgeLabelPlacement: EdgeLabelPlacement.inside,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalEdgeLabelPlacementPage extends StatefulWidget {
+  @override
+  _VerticalEdgeLabelPlacementPageState createState() => _VerticalEdgeLabelPlacementPageState();
+}
+
+class _VerticalEdgeLabelPlacementPageState extends State<VerticalEdgeLabelPlacementPage> {
+  DateTime _value = DateTime(2002, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                edgeLabelPlacement: EdgeLabelPlacement.inside,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (DateTime newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Edge Label placement support](images\label-and-divider\vertical-edge-label-placement.png)
+![Edge Label placement support](images/label-and-divider/vertical-edge-label-placement.png)
 
 ## Customize label text
 
@@ -577,31 +727,41 @@ You can format or change the whole numeric or date label text using the [`labelF
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 9900.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: 100.0,
-              max: 10000.0,
-              value: _value,
-              showLabels: true,
-              interval: 9900,
-              labelFormatterCallback: (dynamic actualValue, String formattedText) {
-                return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
-              },
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class LabelFormatterPage extends StatefulWidget {
+  @override
+  _LabelFormatterPageState createState() => _LabelFormatterPageState();
+}
+
+class _LabelFormatterPageState extends State<LabelFormatterPage> {
+  double _value = 9900.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: 100.0,
+                max: 10000.0,
+                value: _value,
+                showLabels: true,
+                interval: 9900,
+                labelFormatterCallback: (dynamic actualValue, String formattedText) {
+                  return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
+                },
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -614,31 +774,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 9900.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: 100.0,
-              max: 10000.0,
-              value: _value,
-              showLabels: true,
-              interval: 9900,
-              labelFormatterCallback: (dynamic actualValue, String formattedText) {
-                return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
-              },
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalLabelFormatterPage extends StatefulWidget {
+  @override
+  _VerticalLabelFormatterPageState createState() => _VerticalLabelFormatterPageState();
+}
+
+class _VerticalLabelFormatterPageState extends State<VerticalLabelFormatterPage> {
+  double _value = 9900.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: 100.0,
+                max: 10000.0,
+                value: _value,
+                showLabels: true,
+                interval: 9900,
+                labelFormatterCallback: (dynamic actualValue, String formattedText) {
+                  return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
+                },
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -654,42 +824,51 @@ The active side of the slider is between the [`min`](https://pub.dev/documentati
 
 The inactive side of the slider is between the thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) value.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
-                  inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
-                ),
-                child:  SfSlider(
-                  min: 2.0,
-                  max: 10.0,
-                  value: _value,
-                  interval: 1,
-                  showLabels: true,
-                  showTicks: true,
-                  onChanged: (dynamic newValue){
-                    setState(() {
-                      _value = newValue;
-                    });
-                  },
-                ),
-              )
-          )
-      )
-  );
+class LabelStylePage extends StatefulWidget {
+  @override
+  _LabelStylePageState createState() => _LabelStylePageState();
+}
+
+class _LabelStylePageState extends State<LabelStylePage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                    inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                  ),
+                  child:  SfSlider(
+                    min: 2.0,
+                    max: 10.0,
+                    value: _value,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    onChanged: (double newValue){
+                      setState(() {
+                        _value = newValue;
+                      });
+                    },
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -702,35 +881,46 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
-                  inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
-                ),
-                child:  SfSlider.vertical(
-                  min: 2.0,
-                  max: 10.0,
-                  value: _value,
-                  interval: 1,
-                  showLabels: true,
-                  showTicks: true,
-                  onChanged: (dynamic newValue){
-                    setState(() {
-                      _value = newValue;
-                    });
-                  },
-                ),
-              )
-          )
-      )
-  );
+class VerticalLabelStylePage extends StatefulWidget {
+  @override
+  _VerticalLabelStylePageState createState() => _VerticalLabelStylePageState();
+}
+
+class _VerticalLabelStylePageState extends State<VerticalLabelStylePage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                    inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                  ),
+                  child:  SfSlider.vertical(
+                    min: 2.0,
+                    max: 10.0,
+                    value: _value,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    onChanged: (double newValue){
+                      setState(() {
+                        _value = newValue;
+                      });
+                    },
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -747,6 +937,15 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+class IndividualLabelPage extends StatefulWidget {
+  @override
+  _IndividualLabelPageState createState() => _IndividualLabelPageState();
+}
+
+class _IndividualLabelPageState extends State<IndividualLabelPage> {
   double _value = 6.0;
 
   @override
@@ -760,7 +959,7 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
           interval: 1,
           showLabels: true,
           showTicks: true,
-          onChanged: (dynamic value) {
+          onChanged: (double value) {
             setState(() {
               _value = value;
             });
@@ -788,6 +987,7 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -799,6 +999,15 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+class VerticalIndividualLabelsPage extends StatefulWidget {
+  @override
+  _VerticalIndividualLabelsPageState createState() => _VerticalIndividualLabelsPageState();
+}
+
+class _VerticalIndividualLabelsPageState extends State<VerticalIndividualLabelsPage> {
   double _value = 6.0;
 
   @override
@@ -812,7 +1021,7 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
           interval: 1,
           showLabels: true,
           showTicks: true,
-          onChanged: (dynamic value) {
+          onChanged: (double value) {
             setState(() {
               _value = value;
             });
@@ -840,6 +1049,7 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -850,8 +1060,6 @@ You can customize the appearance of each label on the [`SfSlider`](https://pub.d
 
 You can adjust the space between ticks and labels of the slider using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property is `Offset(0.0, 13.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showTicks.html) property is `false`.
@@ -860,34 +1068,45 @@ The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_fl
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  labelOffset: Offset(0.0, 10.0),
-                ),
-                child:  SfSlider(
-                  min: 2.0,
-                  max: 10.0,
-                  value: _value,
-                  interval: 2,
-                  showTicks: true,
-                  showLabels: true,
-                  onChanged: (dynamic newValue){
-                    setState(() {
-                      _value = newValue;
-                    });
-                  },
-                ),
-              )
-          )
-      )
-  );
+class LabelOffsetPage extends StatefulWidget {
+  @override
+  _LabelOffsetPageState createState() => _LabelOffsetPageState();
+}
+
+class _LabelOffsetPageState extends State<LabelOffsetPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    labelOffset: Offset(0.0, 10.0),
+                  ),
+                  child:  SfSlider(
+                    min: 2.0,
+                    max: 10.0,
+                    value: _value,
+                    interval: 2,
+                    showTicks: true,
+                    showLabels: true,
+                    onChanged: (double newValue){
+                      setState(() {
+                        _value = newValue;
+                      });
+                    },
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -903,34 +1122,45 @@ The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_fl
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  labelOffset: Offset(10.0, 0.0),
-                ),
-                child:  SfSlider.vertical(
-                  min: 2.0,
-                  max: 10.0,
-                  value: _value,
-                  interval: 2,
-                  showTicks: true,
-                  showLabels: true,
-                  onChanged: (dynamic newValue){
-                    setState(() {
-                      _value = newValue;
-                    });
-                  },
-                ),
-              )
-          )
-      )
-  );
+class VerticalLabelOffsetPage extends StatefulWidget {
+  @override
+  _VerticalLabelOffsetPageState createState() => _VerticalLabelOffsetPageState();
+}
+
+class _VerticalLabelOffsetPageState extends State<VerticalLabelOffsetPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    labelOffset: Offset(10.0, 0.0),
+                  ),
+                  child:  SfSlider.vertical(
+                    min: 2.0,
+                    max: 10.0,
+                    value: _value,
+                    interval: 2,
+                    showTicks: true,
+                    showLabels: true,
+                    onChanged: (double newValue){
+                      setState(() {
+                        _value = newValue;
+                      });
+                    },
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -949,34 +1179,45 @@ For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSliderTheme(
-              data: SfSliderThemeData(
-                activeTrackHeight: 5,
-                inactiveTrackHeight: 5,
+class ShowDividersPage extends StatefulWidget {
+  @override
+  _ShowDividersPageState createState() => _ShowDividersPageState();
+}
+
+class _ShowDividersPageState extends State<ShowDividersPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSliderTheme(
+                data: SfSliderThemeData(
+                  activeTrackHeight: 5,
+                  inactiveTrackHeight: 5,
+                ),
+                child: SfSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  interval: 2,
+                  showDividers: true,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                ),
               ),
-              child: SfSlider(
-                min: 0.0,
-                max: 10.0,
-                interval: 2,
-                showDividers: true,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              ),
-            ),
-          )
-      )
-  );
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -989,34 +1230,45 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSliderTheme(
-              data: SfSliderThemeData(
-                activeTrackHeight: 5,
-                inactiveTrackHeight: 5,
+class VerticalShowDividersPage extends StatefulWidget {
+  @override
+  _VerticalShowDividersPageState createState() => _VerticalShowDividersPageState();
+}
+
+class _VerticalShowDividersPageState extends State<VerticalShowDividersPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSliderTheme(
+                data: SfSliderThemeData(
+                  activeTrackHeight: 5,
+                  inactiveTrackHeight: 5,
+                ),
+                child: SfSlider.vertical(
+                  min: 0.0,
+                  max: 10.0,
+                  interval: 2,
+                  showDividers: true,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                ),
               ),
-              child: SfSlider.vertical(
-                min: 0.0,
-                max: 10.0,
-                interval: 2,
-                showDividers: true,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              ),
-            ),
-          )
-      )
-  );
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1028,43 +1280,52 @@ Widget build(BuildContext context) {
 
 You can change the active and inactive divider radius of the slider using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerRadius.html) properties respectively.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 10,
-                    inactiveTrackHeight: 10,
-                    activeDividerRadius: 5,
-                    inactiveDividerRadius: 5,
-                  ),
-                  child: SfSlider(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class DividerRadiusPage extends StatefulWidget {
+  @override
+  _DividerRadiusPageState createState() => _DividerRadiusPageState();
+}
+
+class _DividerRadiusPageState extends State<DividerRadiusPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 10,
+                      inactiveTrackHeight: 10,
+                      activeDividerRadius: 5,
+                      inactiveDividerRadius: 5,
+                    ),
+                    child: SfSlider(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1077,36 +1338,47 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 10,
-                    inactiveTrackHeight: 10,
-                    activeDividerRadius: 5,
-                    inactiveDividerRadius: 5,
-                  ),
-                  child: SfSlider.vertical(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class VerticalDividerRadiusPage extends StatefulWidget {
+  @override
+  _VerticalDividerRadiusPageState createState() => _VerticalDividerRadiusPageState();
+}
+
+class _VerticalDividerRadiusPageState extends State<VerticalDividerRadiusPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 10,
+                      inactiveTrackHeight: 10,
+                      activeDividerRadius: 5,
+                      inactiveDividerRadius: 5,
+                    ),
+                    child: SfSlider.vertical(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1121,45 +1393,54 @@ You can change the active and inactive divider stroke width of the slider using 
 
 Also, you can change the active and inactive divider stroke color of the slider using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeColor.html) properties respectively.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 10,
-                    inactiveTrackHeight: 10,
-                    activeDividerStrokeColor: Colors.red,
-                    activeDividerStrokeWidth: 2,
-                    inactiveDividerStrokeWidth: 2,
-                    inactiveDividerStrokeColor: Colors.red,
-                  ),
-                  child: SfSlider(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class DividerStrokePage extends StatefulWidget {
+  @override
+  _DividerStrokePageState createState() => _DividerStrokePageState();
+}
+
+class _DividerStrokePageState extends State<DividerStrokePage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 10,
+                      inactiveTrackHeight: 10,
+                      activeDividerStrokeColor: Colors.red,
+                      activeDividerStrokeWidth: 2,
+                      inactiveDividerStrokeWidth: 2,
+                      inactiveDividerStrokeColor: Colors.red,
+                    ),
+                    child: SfSlider(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1172,38 +1453,49 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 10,
-                    inactiveTrackHeight: 10,
-                    activeDividerStrokeColor: Colors.red,
-                    activeDividerStrokeWidth: 2,
-                    inactiveDividerStrokeWidth: 2,
-                    inactiveDividerStrokeColor: Colors.red,
-                  ),
-                  child: SfSlider.vertical(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class VerticalDividerStrokePage extends StatefulWidget {
+  @override
+  _VerticalDividerStrokePageState createState() => _VerticalDividerStrokePageState();
+}
+
+class _VerticalDividerStrokePageState extends State<VerticalDividerStrokePage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 10,
+                      inactiveTrackHeight: 10,
+                      activeDividerStrokeColor: Colors.red,
+                      activeDividerStrokeWidth: 2,
+                      inactiveDividerStrokeWidth: 2,
+                      inactiveDividerStrokeColor: Colors.red,
+                    ),
+                    child: SfSlider.vertical(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1216,43 +1508,52 @@ Widget build(BuildContext context) {
 
 You can change the active and inactive divider color of the slider using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerColor.html) properties respectively.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 5,
-                    inactiveTrackHeight: 5,
-                    activeDividerColor: Colors.red,
-                    inactiveDividerColor: Colors.red[200],
-                  ),
-                  child: SfSlider(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class DividerColorPage extends StatefulWidget {
+  @override
+  _DividerColorPageState createState() => _DividerColorPageState();
+}
+
+class _DividerColorPageState extends State<DividerColorPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 5,
+                      inactiveTrackHeight: 5,
+                      activeDividerColor: Colors.red,
+                      inactiveDividerColor: Colors.red[200],
+                    ),
+                    child: SfSlider(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -1265,36 +1566,47 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                  data: SfSliderThemeData(
-                    activeTrackHeight: 5,
-                    inactiveTrackHeight: 5,
-                    activeDividerColor: Colors.red,
-                    inactiveDividerColor: Colors.red[200],
-                  ),
-                  child: SfSlider.vertical(
-                    min: 2.0,
-                    max: 10.0,
-                    interval: 1,
-                    showDividers: true,
-                    value: _value,
-                    onChanged: (dynamic newValue){
-                      setState(() {
-                        _value = newValue;
-                      });
-                    },
-                  )
-              )
-          )
-      )
-  );
+class VerticalDividerColorPage extends StatefulWidget {
+  @override
+  _VerticalDividerColorPageState createState() => _VerticalDividerColorPageState();
+}
+
+class _VerticalDividerColorPageState extends State<VerticalDividerColorPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackHeight: 5,
+                      inactiveTrackHeight: 5,
+                      activeDividerColor: Colors.red,
+                      inactiveDividerColor: Colors.red[200],
+                    ),
+                    child: SfSlider.vertical(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDividers: true,
+                      value: _value,
+                      onChanged: (double newValue){
+                        setState(() {
+                          _value = newValue;
+                        });
+                      },
+                    )
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
