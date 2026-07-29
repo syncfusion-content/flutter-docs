@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder in Flutter Chat widget | Syncfusion
-description: Learn here about the Right to Left(RTL) support in Syncfusion Flutter Chat (SfChat) widget and more.
+title: Right to Left (RTL) in Flutter Chat widget | Syncfusion
+description: Step-by-step guide to enable Right-to-left (RTL) rendering in Syncfusion Flutter Chat (SfChat)—Directionality widget, locale setup, and RTL elements.
 platform: flutter
 control: SfChat
 documentation: ug
@@ -9,206 +9,347 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Chat (SfChat)
 
-Chat supports the right to left rendering for all the elements in the Chat widget.
+Chat supports right-to-left rendering for all elements in the chat widget.
 
 ## RTL rendering ways
 
-Right to left rendering can be switched in the following ways:
+Right-to-left rendering can be enabled in the following ways.
 
-### Wrapping the SfChat with Directionality widget
+### Wrapping SfChat with Directionality widget
 
-To change the rendering direction from right to left, you can wrap the [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
+To change rendering direction to RTL, wrap [`SfChat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat-class.html) in [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) and set [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) to [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLDirectionalityExample());
+}
+
+class RTLDirectionalityExample extends StatelessWidget {
+  const RTLDirectionalityExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfChat(
-              //...
+            outgoingUser: '1010',
+            messages: <ChatMessage>[
+              ChatMessage(
+                text: 'Hello',
+                time: DateTime(2025, 03, 21, 10, 2),
+                author: const ChatAuthor(id: '1010', name: 'Johnathan Wick'),
+              ),
+            ],
           ),
         ),
-      );
-    }
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
+### Setting locale to an RTL language
+
+You can also enable RTL layout by configuring `MaterialApp` with an RTL locale and localization delegates.
+
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLLocaleExample());
+}
+
+class RTLLocaleExample extends StatelessWidget {
+  const RTLLocaleExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const <Locale>[Locale('ar')],
+      locale: const Locale('ar'),
+      home: Scaffold(
+        body: SfChat(
+          outgoingUser: '1010',
+          messages: <ChatMessage>[
+            ChatMessage(
+              text: 'Hello',
+              time: DateTime(2025, 03, 21, 10, 2),
+              author: const ChatAuthor(id: '1010', name: 'Johnathan Wick'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## RTL supported chat elements
 
+RTL rendering is supported for placeholder, composer, action button, message content, message header, and message footer.
+
 ### Placeholder
 
-Right to left (RTL) rendering is supported for the [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html) in the chat. The widget added in the placeholderBuilder will be rendered from right to left direction. But, the text widget or text entered in the widget will render from left to right direction.
+RTL rendering is supported for [`placeholderBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/placeholderBuilder.html). The placeholder widget layout follows RTL direction.
 
 {% tabs %}
-{% highlight dart hl_lines="5 9" %}
+{% highlight dart %}
 
-     @override
-     Widget build(BuildContext context) {
-       return Scaffold(
-         body: Directionality(
-           textDirection: TextDirection.rtl,
-           child: SfChat(
-             outgoingUser: '1010',
-             messages: _messages,
-             placeholderBuilder: (context) {
-               return const Center(
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.center,
-                   children: [
-                     SizedBox(width: 10),
-                     Icon(
-                       size: 30,
-                       Icons.emoji_people_rounded,
-                       color: Colors.red,
-                     ),
-                     SizedBox(width: 5),
-                     Text(
-                    'Start a conversation',
-                       style: TextStyle(
-                         color: Colors.deepPurple,
-                         fontSize: 16,
-                         fontWeight: FontWeight.bold,
-                       ),
-                     ),
-                   ],
-                 ),
-               );
-             },
-           ),
-         ),
-       );
-     } 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLPlaceholderExample());
+}
+
+class RTLPlaceholderExample extends StatelessWidget {
+  const RTLPlaceholderExample({super.key});
+
+  final List<ChatMessage> _messages = const <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfChat(
+            outgoingUser: '1010',
+            messages: _messages,
+            placeholderBuilder: (BuildContext context) {
+              return const Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(width: 10),
+                    Icon(
+                      Icons.emoji_people_rounded,
+                      size: 30,
+                      color: Colors.red,
+                    ),
+                    SizedBox(width: 5),
+                    Text(
+                      'Start a conversation',
+                      style: TextStyle(
+                        color: Colors.deepPurple,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![PlaceHolder RTL](images/rtl/placeholder_rtl.png)
 
 ### Composer
 
-Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) in the chat. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
+RTL rendering is supported for [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html). The composer container follows RTL layout.
+
+>In RTL mode, the caret and typed text flow follow the active text-direction and keyboard/language settings.
 
 {% tabs %}
-{% highlight dart hl_lines="5 9" %}
+{% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLComposerExample());
+}
+
+class RTLComposerExample extends StatelessWidget {
+  const RTLComposerExample({super.key});
+
+  final List<ChatMessage> _messages = const <ChatMessage>[];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfChat(
             outgoingUser: '1010',
             messages: _messages,
             composer: const ChatComposer(
-                decoration: InputDecoration(
-              hintText: 'Enter Message here',
-            )),
+              decoration: InputDecoration(
+                hintText: 'Enter message here',
+              ),
+            ),
           ),
         ),
-      );
-    }  
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-
 ![Composer RTL](images/rtl/composer_rtl.png)
-
 
 ### Action Button
 
-Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/actionButton.html) in the chat. Action button will be rendered from right to left direction.
+RTL rendering is supported for [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/actionButton.html). The action button is rendered from right to left.
 
 {% tabs %}
-{% highlight dart hl_lines="5 9" %}
+{% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLActionButtonExample());
+}
+
+class RTLActionButtonExample extends StatefulWidget {
+  const RTLActionButtonExample({super.key});
+
+  @override
+  State<RTLActionButtonExample> createState() => _RTLActionButtonExampleState();
+}
+
+class _RTLActionButtonExampleState extends State<RTLActionButtonExample> {
+  late List<ChatMessage> _messages;
+
+  @override
+  void initState() {
+    super.initState();
+    _messages = <ChatMessage>[];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SfChat(
             outgoingUser: '1010',
             messages: _messages,
             actionButton: ChatActionButton(
-              onPressed: (value) {
+              onPressed: (String value) {
+                if (value.trim().isEmpty) {
+                  return;
+                }
                 setState(() {
-                  _messages.add(
+                  _messages = <ChatMessage>[
+                    ..._messages,
                     ChatMessage(
                       text: value,
                       time: DateTime.now(),
-                      author: const ChatAuthor(
-                          id: '1010', name: 'Johnathan wick'),
+                      author: const ChatAuthor(id: '1010', name: 'Johnathan Wick'),
                     ),
-                  );
+                  ];
                 });
               },
             ),
           ),
         ),
-      );
-    }  
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Action Button RTL](images/rtl/action_button_rtl.gif)
 
-
 ### Message Content
 
-Right to left (RTL) rendering is supported for [`Messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the chat conversation area. In RTL mode, message content, header and suggestions will render the widget in right to left direction.
+Right-to-left rendering is supported for [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) in the conversation area.
+
+In RTL mode, message content, header, footer, and suggestions render from right to left.
 
 {% tabs %}
-{% highlight dart hl_lines="5 8" %}
+{% highlight dart %}
 
-     @override
-     Widget build(BuildContext context) {
-       return Scaffold(
-         body: Directionality(
-           textDirection: TextDirection.rtl,
-           child: SfChat(
-             outgoingUser: '1010',
-             messages: <ChatMessage>[
-               ChatMessage(
-                 text: 'Hey, Any plans for today?',
-                 time: DateTime.parse('2025-03-21T10:02:00Z'),
-                 author: const ChatAuthor(
-                   id: '1010',
-                   name: 'Johnathan wick',
-                   avatar: AssetImage('assets/images/People_Circle23.png'),
-                 ),
-               ),
-               ChatMessage(
-                 text:
-                     "I'm thinking of watching a web series. Can you suggest some?",
-                 time: DateTime.parse('2025-03-21T10:03:00Z'),
-                 author: const ChatAuthor(
-                   id: '1020',
-                   name: 'John carter',
-                   avatar: AssetImage('assets/images/People_Circle5.png'),
-                 ),
-                 suggestions: [
-                   const ChatMessageSuggestion(data: 'Peaky Blinders'),
-                   const ChatMessageSuggestion(data: 'Breaking Bad'),
-                   const ChatMessageSuggestion(data: 'Prison Break'),
-                   const ChatMessageSuggestion(data: 'Blacklist'),
-                 ],
-               ),
-             ],
-           ),
-         ),
-       );
-     }
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_chat/chat.dart';
+
+void main() {
+  runApp(const RTLMessageContentExample());
+}
+
+class RTLMessageContentExample extends StatelessWidget {
+  const RTLMessageContentExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: SfChat(
+            outgoingUser: '1010',
+            messages: <ChatMessage>[
+              ChatMessage(
+                text: 'Hey, any plans for today?',
+                time: DateTime.parse('2025-03-21T10:02:00Z'),
+                author: const ChatAuthor(
+                  id: '1010',
+                  name: 'Johnathan Wick',
+                  avatar: AssetImage('assets/images/People_Circle23.png'),
+                ),
+              ),
+              ChatMessage(
+                text: 'I am thinking of watching a web series. Can you suggest some?',
+                time: DateTime.parse('2025-03-21T10:03:00Z'),
+                author: const ChatAuthor(
+                  id: '1020',
+                  name: 'John Carter',
+                  avatar: AssetImage('assets/images/People_Circle5.png'),
+                ),
+                suggestions: const <ChatMessageSuggestion>[
+                  ChatMessageSuggestion(data: 'Peaky Blinders'),
+                  ChatMessageSuggestion(data: 'Breaking Bad'),
+                  ChatMessageSuggestion(data: 'Prison Break'),
+                  ChatMessageSuggestion(data: 'Blacklist'),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+>Note: The `AssetImage` paths shown above are sample paths. Add matching image assets in your application and register them in `pubspec.yaml`.
 
 ![Message Content RTL](images/rtl/message_content_rtl.png)
 
