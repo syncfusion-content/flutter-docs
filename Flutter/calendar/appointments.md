@@ -12,20 +12,31 @@ documentation: ug
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 23 24 26 27 29 30 31 32 33" %}
+{% highlight dart hl_lines="16 23 24 25 26 27 28 29 30 31 32 34 35 37 38 39 40 41" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 _AppointmentDataSource _getCalendarDataSource() {
@@ -57,23 +68,26 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [getStartTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html) | Maps the property name of custom class, which is equivalent for [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTime.html) of `Appointment`. |
-| [getEndTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html) | Maps the property name of custom class, which is equivalent for [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTime.html) of `Appointment`. |
-| [getStartTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html) | Maps the property name of custom class, which is equivalent for [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) of `Appointment`. |
-| [getEndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html) | Maps the property name of custom class, which is equivalent for [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) of `Appointment`. |
-| [getSubject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html) | Maps the property name of custom class, which is equivalent for [subject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/subject.html) of `Appointment`. |
-| [getColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html) | Maps the property name of custom class, which is equivalent for [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/color.html) of `Appointment`. |
-| [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html) | Maps the property name of custom class, which is equivalent for [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) of `Appointment`. |
-| [getRecurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html) | Maps the property name of custom class, which is equivalent for [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Appointment`. |
-| [getNotes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html) | Maps the property name of custom class which is equivalent for [notes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/notes.html)` of `Appointment`. |
-| [getLocation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html) | Maps the property name of custom class, which is equivalent for `location` of `Appointment`. |
-| [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent for [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of `Appointment`. |
+| [getStartTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTime.html) | Maps the property name of custom class, which is equivalent to [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTime.html) of `Appointment`. |
+| [getEndTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTime.html) | Maps the property name of custom class, which is equivalent to [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTime.html) of `Appointment`. |
+| [getStartTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getStartTimeZone.html) | Maps the property name of custom class, which is equivalent to [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) of `Appointment`. |
+| [getEndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getEndTimeZone.html) | Maps the property name of custom class, which is equivalent to [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) of `Appointment`. |
+| [getSubject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getSubject.html) | Maps the property name of custom class, which is equivalent to [subject](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/subject.html) of `Appointment`. |
+| [getColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getColor.html) | Maps the property name of custom class, which is equivalent to [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/color.html) of `Appointment`. |
+| [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/isAllDay.html) | Maps the property name of custom class, which is equivalent to [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) of `Appointment`. |
+| [getRecurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceRule.html) | Maps the property name of custom class, which is equivalent to [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Appointment`. |
+| [getNotes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getNotes.html) | Maps the property name of custom class which is equivalent to [notes](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/notes.html)` of `Appointment`. |
+| [getLocation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html) | Maps the property name of custom class, which is equivalent to `location` of `Appointment`. |
+| [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent to [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of `Appointment`. |
 
 >**NOTE**
 * Custom appointment class should contain two date time fields as mandatory.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -119,11 +133,12 @@ class MeetingDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-You must call the notifier of the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) when the datasource collection is modified to reflect the changes on UI that is an appointment added to the datasource or removed from the datasource.
+You must call the notifier of the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) when the datasource collection is modified to reflect the changes on UI. For example, when an appointment is added to the datasource or removed from the datasource.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
+/// Code fragment: `events` is a CalendarDataSource instance.
 events.dataSource.clear();
 events.notifyListeners(CalendarDataSourceAction.reset, null);
 
@@ -139,9 +154,33 @@ Whenever the datasource changes, to notify the datasource action (add, remove, a
 When dynamically adding appointments to a data source, we must notify the data source for the add action.
 
 {% tabs %}
-{% highlight dart hl_lines="8 9 10 11 12 13 14 15 16" %}
+{% highlight dart hl_lines="17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatefulWidget {
+  const CalendarApp({super.key});
+
+  @override
+  State<CalendarApp> createState() => _CalendarAppState();
+}
+
+class _CalendarAppState extends State<CalendarApp> {
+  final CalendarController _controller = CalendarController();
+  _AppointmentDataSource? _events;
+
+  @override
+  void initState() {
+    super.initState();
+    _events = _getCalendarDataSource();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -167,6 +206,18 @@ When dynamically adding appointments to a data source, we must notify the data s
     );
   }
 
+  _AppointmentDataSource _getCalendarDataSource() {
+    List<Appointment> appointments = <Appointment>[];
+    return _AppointmentDataSource(appointments);
+  }
+}
+
+class _AppointmentDataSource extends CalendarDataSource {
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,6 +228,7 @@ When we remove appointments from a data source dynamically, we must notify the d
 {% tabs %}
 {% highlight dart hl_lines="1 2 3 4" %}
 
+/// Code fragment: `_events` is a CalendarDataSource instance.
 final Appointment removeAppointment = _events?.appointments![0];
 _events?.appointments!.remove(removeAppointment);
 _events?.notifyListeners(CalendarDataSourceAction.remove,
@@ -192,6 +244,7 @@ When we replace appointments in a data source dynamically, we must notify the da
 {% tabs %}
 {% highlight dart hl_lines="1 2 3" %}
 
+/// Code fragment: `_events` is a CalendarDataSource instance.
 _events?.appointments!.clear();
 _events?.notifyListeners(
     CalendarDataSourceAction.reset, _events!.appointments!);
@@ -206,6 +259,7 @@ When dynamically adding resource to a data source, we must notify the data sourc
 {% tabs %}
 {% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
 
+/// Code fragment: `_events` is a CalendarDataSource instance.
 final CalendarResource resource = CalendarResource(
 displayName: 'Sophia',
 color: Colors.red,
@@ -225,6 +279,7 @@ When we remove resource from a data source dynamically, we must notify the data 
 {% tabs %}
 {% highlight dart hl_lines="1 2 3 4 5" %}
 
+/// Code fragment: `_events` is a CalendarDataSource instance.
 final CalendarResource resource = _events!.resources![0];
 _events!.resources!.remove(resource);
 _events!.notifyListeners(
@@ -241,6 +296,7 @@ When we replace resource in a data source dynamically, we must notify the data s
 {% tabs %}
 {% highlight dart hl_lines="1 2 3 4 5 6 7 8" %}
 
+/// Code fragment: `_events` is a CalendarDataSource instance.
 final List<CalendarResource> collection =
     <CalendarResource>[];
 collection.add(CalendarResource(
@@ -276,7 +332,10 @@ class Meeting {
 You can map those properties of `Meeting` class with our calendar widget by using the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) override methods properties.
 
 {% tabs %}
-{% highlight dart hl_lines="1 2 3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39 40" %}
+{% highlight dart hl_lines="3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39 40" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(List<Meeting> source){
@@ -325,20 +384,31 @@ class MeetingDataSource extends CalendarDataSource {
 You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="8 15 16 17 18 19 20 21 22 24 25" %}
+{% highlight dart hl_lines="16 23 24 25 26 27 28 29 30 31 32 33" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 MeetingDataSource _getCalendarDataSource() {
@@ -645,7 +715,10 @@ class MeetingDataSource extends CalendarDataSource {
 You can schedule recurring meetings for daily, weekly, monthly, or yearly interval by setting [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) of `Meeting` class. Create meetings of type List <Meeting> and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 @override
 Widget build(BuildContext context) {

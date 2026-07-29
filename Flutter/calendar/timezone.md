@@ -16,7 +16,7 @@ documentation: ug
 * Display appointments based on calendar time zone.
 * Display appointments at the same time everywhere regardless of client’s time zone.
 
-We have added the following Time Zone’s for the respective countries to cover all the time zone regions, you can use any of the time zones from the following list for calendar time zone.
+We have added the following Time Zones for the respective countries to cover all time zone regions. You can use any of the time zones from the following list for calendar time zone.
 
 <table>
 <tr>
