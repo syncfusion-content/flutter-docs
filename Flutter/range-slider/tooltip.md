@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Range Slider Tooltip (SfRangeSlider)
 
-This section helps to learn about how to add tooltip in the range slider.
+This section explains how to add tooltips to the range slider.
 
 ## Enable tooltips
 
-You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
+You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html) property. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 I> By setting the value of [`shouldAlwaysShowTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/shouldAlwaysShowTooltip.html) to true, you can always show a tooltip without having to interact with the range slider thumb. The default value is `false` and it works independent of the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html) behavior.
 
@@ -22,30 +22,37 @@ I> By setting the value of [`shouldAlwaysShowTooltip`](https://pub.dev/documenta
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    interval: 2,
-                    showTicks: true,
-                    showLabels: true,
-                    enableTooltip: true,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                   },
-              ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 6.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      interval: 2,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -58,30 +65,37 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider.vertical(
-                    min: 0.0,
-                    max: 10.0,
-                    interval: 2,
-                    showTicks: true,
-                    showLabels: true,
-                    enableTooltip: true,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                   },
-              ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 6.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: 0.0,
+      max: 10.0,
+      interval: 2,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -104,31 +118,38 @@ N> The paddle tooltip shape is not applicable for vertical orientation of the ra
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfRangeSlider(
-              min: 0.0,
-              max: 100.0,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              enableTooltip: true,
-              tooltipShape: SfPaddleTooltipShape(),
-              values: _values,
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-            ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: 0.0,
+      max: 100.0,
+      interval: 20,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      tooltipShape: const SfPaddleTooltipShape(),
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -145,31 +166,38 @@ You can show tooltip in left or right positions using the [`tooltipPosition`](ht
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfRangeSlider.vertical(
-              min: 0.0,
-              max: 100.0,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              enableTooltip: true,
-              tooltipPosition: SliderTooltipPosition.right,
-              values: _values,
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-            ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: 0.0,
+      max: 100.0,
+      interval: 20,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      tooltipPosition: SliderTooltipPosition.right,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -191,35 +219,45 @@ You can format or change the whole tooltip label text using the [`tooltipTextFor
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2010, 01, 01, 12, 00, 00), DateTime(2010, 01, 01, 18, 00, 00));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: DateTime(2010, 01, 01, 9, 00, 00),
-                    max: DateTime(2010, 01, 01, 21, 05, 00),
-                    values: _values,
-                    interval: 3,
-                    showTicks: true,
-                    showLabels: true,
-                    enableTooltip: true,
-                    dateFormat: DateFormat('h:mm'),
-                    dateIntervalType: DateIntervalType.hours,
-                    tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
-                        return DateFormat('h:mm a').format(actualValue);
-                    },
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                    },
-              ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = SfRangeValues(
+      DateTime(2010, 01, 01, 12, 00, 00), DateTime(2010, 01, 01, 18, 00, 00));
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: DateTime(2010, 01, 01, 9, 00, 00),
+      max: DateTime(2010, 01, 01, 21, 05, 00),
+      values: _values,
+      interval: 3,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      dateFormat: DateFormat('h:mm'),
+      dateIntervalType: DateIntervalType.hours,
+      tooltipTextFormatterCallback:
+          (dynamic actualValue, String formattedText) {
+        return DateFormat('h:mm a').format(actualValue);
+      },
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -232,35 +270,45 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2010, 01, 01, 12, 00, 00), DateTime(2010, 01, 01, 18, 00, 00));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider.vertical(
-                    min: DateTime(2010, 01, 01, 9, 00, 00),
-                    max: DateTime(2010, 01, 01, 21, 05, 00),
-                    values: _values,
-                    interval: 3,
-                    showTicks: true,
-                    showLabels: true,
-                    enableTooltip: true,
-                    dateFormat: DateFormat('h:mm'),
-                    dateIntervalType: DateIntervalType.hours,
-                    tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
-                        return DateFormat('h:mm a').format(actualValue);
-                    },
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                    },
-              ),
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = SfRangeValues(
+      DateTime(2010, 01, 01, 12, 00, 00), DateTime(2010, 01, 01, 18, 00, 00));
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: DateTime(2010, 01, 01, 9, 00, 00),
+      max: DateTime(2010, 01, 01, 21, 05, 00),
+      values: _values,
+      interval: 3,
+      showTicks: true,
+      showLabels: true,
+      enableTooltip: true,
+      dateFormat: DateFormat('h:mm'),
+      dateIntervalType: DateIntervalType.hours,
+      tooltipTextFormatterCallback:
+          (dynamic actualValue, String formattedText) {
+        return DateFormat('h:mm a').format(actualValue);
+      },
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -272,42 +320,50 @@ Widget build(BuildContext context) {
 
 You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipBackgroundColor.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html). This applies to all the remaining code examples in this section that use `SfRangeSliderThemeData`.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        tooltipBackgroundColor: Colors.red[300],
-                    ),
-                    child:  SfRangeSlider(
-                        min: 2.0,
-                        max: 10.0,
-                        interval: 1,
-                        showTicks: true,
-                        showLabels: true,
-                        enableTooltip: true,
-                        values: _values,
-                        onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        tooltipBackgroundColor: Colors.red[300],
+      ),
+      child: SfRangeSlider(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -320,35 +376,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        tooltipBackgroundColor: Colors.red[300],
-                    ),
-                    child:  SfRangeSlider.vertical(
-                        min: 2.0,
-                        max: 10.0,
-                        interval: 1,
-                        showTicks: true,
-                        showLabels: true,
-                        enableTooltip: true,
-                        values: _values,
-                        onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        tooltipBackgroundColor: Colors.red[300],
+      ),
+      child: SfRangeSlider.vertical(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -360,42 +424,49 @@ Widget build(BuildContext context) {
 
 You can change the appearance of the tooltip text in the range slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipTextStyle.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
-                    ),
-                    child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     enableTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        tooltipTextStyle: const TextStyle(
+            color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
+      ),
+      child: SfRangeSlider(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -408,35 +479,44 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
-                    ),
-                    child:  SfRangeSlider.vertical(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     enableTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        tooltipTextStyle: const TextStyle(
+            color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
+      ),
+      child: SfRangeSlider.vertical(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -448,42 +528,48 @@ Widget build(BuildContext context) {
 
 You can change the overlap stroke color of the tooltip in the range slider using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        overlappingTooltipStrokeColor: Colors.white,
-                    ),
-                    child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     enableTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        overlappingTooltipStrokeColor: Colors.white,
+      ),
+      child: SfRangeSlider(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -496,35 +582,43 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        overlappingTooltipStrokeColor: Colors.white,
-                    ),
-                    child:  SfRangeSlider.vertical(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     enableTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
-                            setState(() {
-                                _values = newValues;
-                            });
-                        },
-                    ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        overlappingTooltipStrokeColor: Colors.white,
+      ),
+      child: SfRangeSlider.vertical(
+        min: 2.0,
+        max: 10.0,
+        interval: 1,
+        showTicks: true,
+        showLabels: true,
+        enableTooltip: true,
+        values: _values,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
