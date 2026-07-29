@@ -2,14 +2,14 @@
 layout: post
 title: Custom shapes in Flutter Range Selector widget | Syncfusion
 description: Learn here all about adding the custom shapes in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Shapes in Flutter Range Selector (SfRangeSelector)
 
-This section helps to learn about how to customize the shapes of the range selector elements.
+This section explains how to customize the shapes of the range selector elements.
 
 ## Track shape
 
@@ -18,64 +18,78 @@ You can change the size and shape of the track using the [`trackShape`](https://
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the track shape.
 
-N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider track.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector track.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector track.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 2.0;
-double _max = 10.0;
-SfRangeValues _values = SfRangeValues(3.0, 8.0);
+import 'dart:math' as math;
 
- final List<Data> chartData = <Data>[
-   Data(x: 2.0, y: 2.2),
-   Data(x: 3.0, y: 3.4),
-   Data(x: 4.0, y: 2.8),
-   Data(x: 5.0, y: 1.6),
-   Data(x: 6.0, y: 2.3),
-   Data(x: 7.0, y: 2.5),
-   Data(x: 8.0, y: 2.9),
-   Data(x: 9.0, y: 3.8),
-   Data(x: 10.0, y: 3.7),
- ];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Center(
-        child: SfRangeSelectorTheme(
-          data: SfRangeSelectorThemeData(
-            activeTrackHeight: 10,
-            inactiveTrackHeight: 10,
-          ),
-          child: SfRangeSelector(
-            min: 0.0,
-            max: 10.0,
-            initialValues: _values,
-            trackShape: _TrackShape(),
-            child: Container(
-              height: 130,
-              child: SfCartesianChart(
-                margin: const EdgeInsets.all(0),
-                primaryXAxis:
-                    NumericAxis(minimum: _min, maximum: _max, isVisible: false),
-                primaryYAxis: NumericAxis(isVisible: false),
-                plotAreaBorderWidth: 0,
-                series: <SplineAreaSeries<Data, double>>[
-                  SplineAreaSeries<Data, double>(
-                      color: Color.fromARGB(255, 126, 184, 253),
-                      dataSource: chartData,
-                      xValueMapper: (Data sales, int index) => sales.x,
-                      yValueMapper: (Data sales, int index) => sales.y)
-                ],
+class TrackShapeSample extends StatefulWidget {
+  @override
+  _TrackShapeSampleState createState() => _TrackShapeSampleState();
+}
+
+class _TrackShapeSampleState extends State<TrackShapeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(3.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelectorTheme(
+            data: SfRangeSelectorThemeData(
+              activeTrackHeight: 10,
+              inactiveTrackHeight: 10,
+            ),
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              initialValues: _values,
+              trackShape: _TrackShape(),
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis:
+                      NumericAxis(minimum: _min, maximum: _max, isVisible: false),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, double>>[
+                    SplineAreaSeries<Data, double>(
+                        color: Color.fromARGB(255, 126, 184, 253),
+                        dataSource: chartData,
+                        xValueMapper: (Data sales, int index) => sales.x,
+                        yValueMapper: (Data sales, int index) => sales.y)
+                  ],
+                ),
               ),
             ),
           ),
         ),
       ),
-   );
+    );
+  }
 }
 
 class Data {
@@ -85,6 +99,7 @@ class Data {
 }
 
 class _TrackShape extends SfTrackShape {
+  @override
   void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
       Offset? startThumbCenter, Offset? endThumbCenter,
       {required RenderBox parentBox,
@@ -121,33 +136,42 @@ You can change the size and shape of the thumb using the [`thumbShape`](https://
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the thumb shape.
 
-N>
-* You must use the `currentValue` parameter of paint override method for customizing slider thumb.
-* You must use the `currentValues` parameter of paint override method for customizing range slider and range selector thumbs.
+N> You must use the `currentValues` parameter of the paint override method for customizing the range selector thumbs.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 2.0;
-double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-  Data(x: 2.0, y: 2.2),
-  Data(x: 3.0, y: 3.4),
-  Data(x: 4.0, y: 2.8),
-  Data(x: 5.0, y: 1.6),
-  Data(x: 6.0, y: 2.3),
-  Data(x: 7.0, y: 2.5),
-  Data(x: 8.0, y: 2.9),
-  Data(x: 9.0, y: 3.8),
-  Data(x: 10.0, y: 3.7),
-];
+class ThumbShapeSample extends StatefulWidget {
+  @override
+  _ThumbShapeSampleState createState() => _ThumbShapeSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-     home: Scaffold(
+class _ThumbShapeSampleState extends State<ThumbShapeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
         body: Center(
           child: SfRangeSelectorTheme(
             data: SfRangeSelectorThemeData(overlayColor: Colors.transparent),
@@ -177,7 +201,8 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-   );
+    );
+  }
 }
 
 class Data {
@@ -187,30 +212,30 @@ class Data {
 }
 
 class _SfThumbShape extends SfThumbShape {
-   @override
-   void paint(PaintingContext context, Offset center,
-        {required RenderBox parentBox,
-        required RenderBox? child,
-        required SfSliderThemeData themeData,
-        SfRangeValues? currentValues,
-        dynamic currentValue,
-        required Paint? paint,
-        required Animation<double> enableAnimation,
-        required TextDirection textDirection,
-        required SfThumb? thumb}) {
-      final Path path = Path();
+  @override
+  void paint(PaintingContext context, Offset center,
+      {required RenderBox parentBox,
+      required RenderBox? child,
+      required SfSliderThemeData themeData,
+      SfRangeValues? currentValues,
+      dynamic currentValue,
+      required Paint? paint,
+      required Animation<double> enableAnimation,
+      required TextDirection textDirection,
+      required SfThumb? thumb}) {
+    final Path path = Path();
 
-      path.moveTo(center.dx, center.dy);
-      path.lineTo(center.dx + 10, center.dy - 15);
-      path.lineTo(center.dx - 10, center.dy - 15);
-      path.close();
-      context.canvas.drawPath(
-          path,
-          Paint()
-            ..color = themeData.activeTrackColor!
-            ..style = PaintingStyle.fill
-            ..strokeWidth = 2);
-   }
+    path.moveTo(center.dx, center.dy);
+    path.lineTo(center.dx + 10, center.dy - 15);
+    path.lineTo(center.dx - 10, center.dy - 15);
+    path.close();
+    context.canvas.drawPath(
+        path,
+        Paint()
+          ..color = themeData.activeTrackColor!
+          ..style = PaintingStyle.fill
+          ..strokeWidth = 2);
+  }
 }
 
 {% endhighlight %}
@@ -225,34 +250,42 @@ You can change the size and shape of the divider using the [`dividerShape`](http
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the divider shape.
 
-N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider divider.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector divider.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector divider.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 2.0;
-double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
-  Data(x: 2.0, y: 2.2),
-  Data(x: 3.0, y: 3.4),
-  Data(x: 4.0, y: 2.8),
-  Data(x: 5.0, y: 1.6),
-  Data(x: 6.0, y: 2.3),
-  Data(x: 7.0, y: 2.5),
-  Data(x: 8.0, y: 2.9),
-  Data(x: 9.0, y: 3.8),
-  Data(x: 10.0, y: 3.7),
-];
+class DividerShapeSample extends StatefulWidget {
+  @override
+  _DividerShapeSampleState createState() => _DividerShapeSampleState();
+}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-       body: Center(
+class _DividerShapeSampleState extends State<DividerShapeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
           child: SfRangeSelector(
             min: _min,
             max: _max,
@@ -280,7 +313,8 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-   );
+    );
+  }
 }
 
 class Data {
@@ -323,34 +357,44 @@ You can change the size and shape of the major and minor ticks using the [`tickS
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the ticks shape.
 
-N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider ticks.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector ticks.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector ticks.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 2.0;
-double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'dart:math' as math;
 
-final List<Data> chartData = <Data>[
-  Data(x: 2.0, y: 2.2),
-  Data(x: 3.0, y: 3.4),
-  Data(x: 4.0, y: 2.8),
-  Data(x: 5.0, y: 1.6),
-  Data(x: 6.0, y: 2.3),
-  Data(x: 7.0, y: 2.5),
-  Data(x: 8.0, y: 2.9),
-  Data(x: 9.0, y: 3.8),
-  Data(x: 10.0, y: 3.7),
-];
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-     home: Scaffold(
-       body: Center(
+class TicksShapeSample extends StatefulWidget {
+  @override
+  _TicksShapeSampleState createState() => _TicksShapeSampleState();
+}
+
+class _TicksShapeSampleState extends State<TicksShapeSample> {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
           child: SfRangeSelector(
             min: _min,
             max: _max,
@@ -380,7 +424,8 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-   );
+    );
+  }
 }
 
 class Data {
@@ -390,92 +435,92 @@ class Data {
 }
 
 class _TickShape extends SfTickShape {
-   @override
-   void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
-        Offset? startThumbCenter, Offset? endThumbCenter,
-        {required RenderBox parentBox,
-        required SfSliderThemeData themeData,
-        SfRangeValues? currentValues,
-        dynamic currentValue,
-        required Animation<double> enableAnimation,
-        required TextDirection textDirection}) {
-      final Size tickSize = getPreferredSize(themeData);
-      final bool isTickRightOfThumb = endThumbCenter == null
-          ? offset.dx > thumbCenter!.dx
-          : offset.dx < startThumbCenter!.dx || offset.dx > endThumbCenter.dx;
-      final Color begin = isTickRightOfThumb
-          ? themeData.disabledInactiveTickColor
-          : themeData.disabledActiveTickColor;
-      final Color end = isTickRightOfThumb
-          ? themeData.inactiveTickColor
-          : themeData.activeTickColor;
-      final Paint paint = Paint()
-        ..isAntiAlias = true
-        ..strokeWidth = tickSize.width
-        ..color = ColorTween(begin: begin, end: end).evaluate(enableAnimation)!;
-      context.canvas.drawLine(
-          offset, Offset(offset.dx, offset.dy + tickSize.height), paint);
-      context.canvas.drawLine(
-          Offset(
-              offset.dx,
-              offset.dy -
-                  2 -
-                  math.max(themeData.activeTrackHeight,
-                      themeData.inactiveTrackHeight)),
-          Offset(
-              offset.dx,
-              offset.dy -
-                  2 -
-                  math.max(themeData.activeTrackHeight,
-                      themeData.inactiveTrackHeight) -
-                  tickSize.height),
-          paint);
-   }
+  @override
+  void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
+      Offset? startThumbCenter, Offset? endThumbCenter,
+      {required RenderBox parentBox,
+      required SfSliderThemeData themeData,
+      SfRangeValues? currentValues,
+      dynamic currentValue,
+      required Animation<double> enableAnimation,
+      required TextDirection textDirection}) {
+    final Size tickSize = getPreferredSize(themeData);
+    final bool isTickRightOfThumb = endThumbCenter == null
+        ? offset.dx > thumbCenter!.dx
+        : offset.dx < startThumbCenter!.dx || offset.dx > endThumbCenter!.dx;
+    final Color begin = isTickRightOfThumb
+        ? themeData.disabledInactiveTickColor
+        : themeData.disabledActiveTickColor;
+    final Color end = isTickRightOfThumb
+        ? themeData.inactiveTickColor
+        : themeData.activeTickColor;
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = tickSize.width
+      ..color = ColorTween(begin: begin, end: end).evaluate(enableAnimation)!;
+    context.canvas.drawLine(
+        offset, Offset(offset.dx, offset.dy + tickSize.height), paint);
+    context.canvas.drawLine(
+        Offset(
+            offset.dx,
+            offset.dy -
+                2 -
+                math.max(themeData.activeTrackHeight,
+                    themeData.inactiveTrackHeight)),
+        Offset(
+            offset.dx,
+            offset.dy -
+                2 -
+                math.max(themeData.activeTrackHeight,
+                    themeData.inactiveTrackHeight) -
+                tickSize.height),
+        paint);
+  }
 }
 
 class _MinorTickShape extends SfTickShape {
-   @override
-   void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
-        Offset? startThumbCenter, Offset? endThumbCenter,
-        {required RenderBox parentBox,
-        required SfSliderThemeData themeData,
-        SfRangeValues? currentValues,
-        dynamic currentValue,
-        required Animation<double> enableAnimation,
-        required TextDirection textDirection}) {
-      final Size minorTickSize = getPreferredSize(themeData);
-      final bool isMinorTickRightOfThumb = endThumbCenter == null
-          ? offset.dx > thumbCenter!.dx
-          : offset.dx < startThumbCenter!.dx || offset.dx > endThumbCenter.dx;
+  @override
+  void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
+      Offset? startThumbCenter, Offset? endThumbCenter,
+      {required RenderBox parentBox,
+      required SfSliderThemeData themeData,
+      SfRangeValues? currentValues,
+      dynamic currentValue,
+      required Animation<double> enableAnimation,
+      required TextDirection textDirection}) {
+    final Size minorTickSize = getPreferredSize(themeData);
+    final bool isMinorTickRightOfThumb = endThumbCenter == null
+        ? offset.dx > thumbCenter!.dx
+        : offset.dx < startThumbCenter!.dx || offset.dx > endThumbCenter!.dx;
 
-      final Color begin = isMinorTickRightOfThumb
-          ? themeData.disabledInactiveMinorTickColor
-          : themeData.disabledActiveMinorTickColor;
-      final Color end = isMinorTickRightOfThumb
-          ? themeData.inactiveMinorTickColor
-          : themeData.activeMinorTickColor;
-      final Paint paint = Paint()
-        ..isAntiAlias = true
-        ..strokeWidth = minorTickSize.width
-        ..color = ColorTween(begin: begin, end: end).evaluate(enableAnimation)!;
-      context.canvas.drawLine(
-          offset, Offset(offset.dx, offset.dy + minorTickSize.height), paint);
-      context.canvas.drawLine(
-          Offset(
-              offset.dx,
-              offset.dy -
-                  2 -
-                  math.max(themeData.activeTrackHeight,
-                      themeData.inactiveTrackHeight)),
-          Offset(
-              offset.dx,
-              offset.dy -
-                  2 -
-                  math.max(themeData.activeTrackHeight,
-                      themeData.inactiveTrackHeight) -
-                  minorTickSize.height),
-          paint);
-   }
+    final Color begin = isMinorTickRightOfThumb
+        ? themeData.disabledInactiveMinorTickColor
+        : themeData.disabledActiveMinorTickColor;
+    final Color end = isMinorTickRightOfThumb
+        ? themeData.inactiveMinorTickColor
+        : themeData.activeMinorTickColor;
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = minorTickSize.width
+      ..color = ColorTween(begin: begin, end: end).evaluate(enableAnimation)!;
+    context.canvas.drawLine(
+        offset, Offset(offset.dx, offset.dy + minorTickSize.height), paint);
+    context.canvas.drawLine(
+        Offset(
+            offset.dx,
+            offset.dy -
+                2 -
+                math.max(themeData.activeTrackHeight,
+                    themeData.inactiveTrackHeight)),
+        Offset(
+            offset.dx,
+            offset.dy -
+                2 -
+                math.max(themeData.activeTrackHeight,
+                    themeData.inactiveTrackHeight) -
+                minorTickSize.height),
+        paint);
+  }
 }
 
 {% endhighlight %}

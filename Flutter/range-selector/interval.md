@@ -2,79 +2,87 @@
 layout: post
 title: Interval in Flutter Range Selector widget | Syncfusion
 description: Learn here all about adding the Interval feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Interval in Flutter Range Selector (SfRangeSelector)
-This section explains about how to add the intervals for numeric and date range selector.
+This section explains how to set intervals for numeric and date range selectors.
 
 ## Numeric interval
 
-Range selector elements like labels, ticks and dividers are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties. The default value of the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null` and it must be greater than 0.
+Range selector elements like labels, ticks, and dividers are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties. The default value of the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null`, and it must be greater than 0.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 2.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the labels, major ticks, and dividers at 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 2.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the labels, major ticks, and dividers at 2.0, 4.0, and so on.
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    showLabels: true,
-                    showTicks: true,
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <ColumnSeries<Data, double>>[
-                            ColumnSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final double x;
   final double y;
+}
+
+class NumericIntervalSample extends StatelessWidget {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  final SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            showLabels: true,
+            showTicks: true,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <ColumnSeries<Data, double>>[
+                  ColumnSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -98,11 +106,24 @@ For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-final List<Data> chartData = <Data>[
+class Data {
+  Data({required this.x, required this.y});
+  final DateTime x;
+  final double y;
+}
+
+class DateIntervalSample extends StatelessWidget {
+  final DateTime _min = DateTime(2002, 01, 01);
+  final DateTime _max = DateTime(2010, 01, 01);
+  final SfRangeValues _values =
+      SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+
+  final List<Data> chartData = <Data>[
     Data(x: DateTime(2002, 01, 01), y: 2.2),
     Data(x: DateTime(2003, 01, 01), y: 3.4),
     Data(x: DateTime(2004, 01, 01), y: 2.8),
@@ -112,51 +133,47 @@ final List<Data> chartData = <Data>[
     Data(x: DateTime(2008, 01, 01), y: 2.9),
     Data(x: DateTime(2009, 01, 01), y: 3.8),
     Data(x: DateTime(2010, 01, 01), y: 3.7),
-];
+  ];
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    showLabels: true,
-                    showTicks: true,
-                    interval: 2,
-                    dateFormat: DateFormat.y(),
-                    dateIntervalType: DateIntervalType.years,
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(
-                            minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <ColumnSeries<Data, DateTime>>[
-                            ColumnSeries<Data, DateTime>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                xValueMapper: (Data sales, int index) => sales.x,
-                                yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            showLabels: true,
+            showTicks: true,
+            interval: 2,
+            dateFormat: DateFormat.y(),
+            dateIntervalType: DateIntervalType.years,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: DateTimeAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <ColumnSeries<Data, DateTime>>[
+                  ColumnSeries<Data, DateTime>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
               ),
-          )
-      )
-  );
-}
-
-class Data {
-  Data({required this.x, required this.y});
-  final DateTime x;
-  final double y;
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -171,64 +188,72 @@ You can move the thumb in discrete manner for numeric values using the [`stepSiz
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 2,
-                    stepSize: 1,
-                    showLabels: true,
-                    showTicks: true,
-                    minorTicksPerInterval: 1,
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, int index) => sales.x,
-                                    yValueMapper: (Data sales, int index) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final double x;
   final double y;
+}
+
+class StepSizeSample extends StatelessWidget {
+  final double _min = 2.0;
+  final double _max = 10.0;
+  final SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+  final List<Data> chartData = <Data>[
+    Data(x: 2.0, y: 2.2),
+    Data(x: 3.0, y: 3.4),
+    Data(x: 4.0, y: 2.8),
+    Data(x: 5.0, y: 1.6),
+    Data(x: 6.0, y: 2.3),
+    Data(x: 7.0, y: 2.5),
+    Data(x: 8.0, y: 2.9),
+    Data(x: 9.0, y: 3.8),
+    Data(x: 10.0, y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            interval: 2,
+            stepSize: 1,
+            showLabels: true,
+            showTicks: true,
+            minorTicksPerInterval: 1,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: NumericAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, double>>[
+                  SplineAreaSeries<Data, double>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -240,71 +265,80 @@ class Data {
 
 You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
 
-For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) is SliderDuration(years: 1, months: 6),the range selector will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is `DateTime(2015, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is `DateTime(2020, 01, 01)` and [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) is `SliderStepDuration(years: 1, months: 6)`, the range selector will move the thumbs to `DateTime(2015, 01, 01)`, `DateTime(2016, 07, 01)`, `DateTime(2018, 01, 01)`, `DateTime(2019, 07, 01)`, and so on.
 
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
-
-final List<Data> chartData = <Data>[
-  Data(x: DateTime(2002, 01, 01), y: 2.2),
-  Data(x: DateTime(2003, 01, 01), y: 3.4),
-  Data(x: DateTime(2004, 01, 01), y: 2.8),
-  Data(x: DateTime(2005, 01, 01), y: 1.6),
-  Data(x: DateTime(2006, 01, 01), y: 2.3),
-  Data(x: DateTime(2007, 01, 01), y: 2.5),
-  Data(x: DateTime(2008, 01, 01), y: 2.9),
-  Data(x: DateTime(2009, 01, 01), y: 3.8),
-  Data(x: DateTime(2010, 01, 01), y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfRangeSelector(
-              min: _min,
-              max: _max,
-              showLabels: true,
-              showTicks: true,
-              interval: 2,
-              stepDuration: SliderStepDuration(years: 2),
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              initialValues: _values,
-              child: Container(
-                height: 130,
-                child: SfCartesianChart(
-                  margin: const EdgeInsets.all(0),
-                  primaryXAxis: DateTimeAxis(
-                    minimum: _min,
-                    maximum: _max,
-                    isVisible: false,),
-                  primaryYAxis: NumericAxis(isVisible: false),
-                  plotAreaBorderWidth: 0,
-                  series: <SplineAreaSeries<Data, DateTime>>[
-                    SplineAreaSeries<Data, DateTime>(
-                       color: Color.fromARGB(255, 126, 184, 253),
-                       dataSource: chartData,
-                       xValueMapper: (Data sales, int index) => sales.x,
-                       yValueMapper: (Data sales, int index) => sales.y)
-                  ],
-                ),
-              ),
-            ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final DateTime x;
   final double y;
+}
+
+class StepDurationSample extends StatelessWidget {
+  final DateTime _min = DateTime(2015, 01, 01);
+  final DateTime _max = DateTime(2020, 01, 01);
+  final SfRangeValues _values =
+      SfRangeValues(DateTime(2016, 07, 01), DateTime(2018, 01, 01));
+
+  final List<Data> chartData = <Data>[
+    Data(x: DateTime(2015, 01, 01), y: 2.2),
+    Data(x: DateTime(2016, 01, 01), y: 3.4),
+    Data(x: DateTime(2016, 07, 01), y: 2.8),
+    Data(x: DateTime(2017, 01, 01), y: 1.6),
+    Data(x: DateTime(2018, 01, 01), y: 2.3),
+    Data(x: DateTime(2018, 07, 01), y: 2.5),
+    Data(x: DateTime(2019, 01, 01), y: 2.9),
+    Data(x: DateTime(2019, 07, 01), y: 3.8),
+    Data(x: DateTime(2020, 01, 01), y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            showLabels: true,
+            showTicks: true,
+            interval: 2,
+            stepDuration: SliderStepDuration(years: 1, months: 6),
+            dateFormat: DateFormat.y(),
+            dateIntervalType: DateIntervalType.years,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: DateTimeAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, DateTime>>[
+                  SplineAreaSeries<Data, DateTime>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -314,71 +348,80 @@ class Data {
 
 ## Enable interval selection
 
-You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableIntervalSelection.html) property as `true`. Both the thumbs will be moved to the current interval with animation.
+You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableIntervalSelection.html) property as `true`. Both thumbs will be moved to the current interval with animation.
 
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01);
-final DateTime _max = DateTime(2010, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
-
-final List<Data> chartData = <Data>[
-  Data(x: DateTime(2002, 01, 01), y: 2.2),
-  Data(x: DateTime(2003, 01, 01), y: 3.4),
-  Data(x: DateTime(2004, 01, 01), y: 2.8),
-  Data(x: DateTime(2005, 01, 01), y: 1.6),
-  Data(x: DateTime(2006, 01, 01), y: 2.3),
-  Data(x: DateTime(2007, 01, 01), y: 2.5),
-  Data(x: DateTime(2008, 01, 01), y: 2.9),
-  Data(x: DateTime(2009, 01, 01), y: 3.8),
-  Data(x: DateTime(2010, 01, 01), y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfRangeSelector(
-              min: _min,
-              max: _max,
-              showLabels: true,
-              showTicks: true,
-              interval: 2,
-              enableIntervalSelection: true,
-              dateFormat: DateFormat.y(),
-              dateIntervalType: DateIntervalType.years,
-              initialValues: _values,
-              child: Container(
-                height: 130,
-                child: SfCartesianChart(
-                  margin: const EdgeInsets.all(0),
-                  primaryXAxis: DateTimeAxis(
-                    minimum: _min,
-                    maximum: _max,
-                    isVisible: false,),
-                  primaryYAxis: NumericAxis(isVisible: false),
-                  plotAreaBorderWidth: 0,
-                  series: <SplineAreaSeries<Data, DateTime>>[
-                    SplineAreaSeries<Data, DateTime>(
-                        color: Color.fromARGB(255, 126, 184, 253),
-                        dataSource: chartData,
-                        xValueMapper: (Data sales, int index) => sales.x,
-                        yValueMapper: (Data sales, int index) => sales.y)
-                  ],
-                ),
-              ),
-            ),
-          )
-      )
-  );
-}
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class Data {
   Data({required this.x, required this.y});
   final DateTime x;
   final double y;
+}
+
+class IntervalSelectionSample extends StatelessWidget {
+  final DateTime _min = DateTime(2002, 01, 01);
+  final DateTime _max = DateTime(2010, 01, 01);
+  final SfRangeValues _values =
+      SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+
+  final List<Data> chartData = <Data>[
+    Data(x: DateTime(2002, 01, 01), y: 2.2),
+    Data(x: DateTime(2003, 01, 01), y: 3.4),
+    Data(x: DateTime(2004, 01, 01), y: 2.8),
+    Data(x: DateTime(2005, 01, 01), y: 1.6),
+    Data(x: DateTime(2006, 01, 01), y: 2.3),
+    Data(x: DateTime(2007, 01, 01), y: 2.5),
+    Data(x: DateTime(2008, 01, 01), y: 2.9),
+    Data(x: DateTime(2009, 01, 01), y: 3.8),
+    Data(x: DateTime(2010, 01, 01), y: 3.7),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRangeSelector(
+            min: _min,
+            max: _max,
+            showLabels: true,
+            showTicks: true,
+            interval: 2,
+            enableIntervalSelection: true,
+            dateFormat: DateFormat.y(),
+            dateIntervalType: DateIntervalType.years,
+            initialValues: _values,
+            child: Container(
+              height: 130,
+              child: SfCartesianChart(
+                margin: const EdgeInsets.all(0),
+                primaryXAxis: DateTimeAxis(
+                  minimum: _min,
+                  maximum: _max,
+                  isVisible: false,
+                ),
+                primaryYAxis: NumericAxis(isVisible: false),
+                plotAreaBorderWidth: 0,
+                series: <SplineAreaSeries<Data, DateTime>>[
+                  SplineAreaSeries<Data, DateTime>(
+                    color: Color.fromARGB(255, 126, 184, 253),
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, int index) => sales.x,
+                    yValueMapper: (Data sales, int index) => sales.y)
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
