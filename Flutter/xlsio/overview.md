@@ -34,4 +34,4 @@ Before getting started, ensure the following are installed:
 * Supports Excel conditional formatting.
 * Supports importing list data into Excel worksheets.
 
-You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)
+You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)
