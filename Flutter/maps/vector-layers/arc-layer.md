@@ -2,7 +2,7 @@
 layout: post
 title: Adding Arc layer in Flutter Maps widget | Syncfusion
 description: Learn here all about adding the Arc Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
-platform: Flutter
+platform: flutter
 control: SfMaps
 documentation: ug
 ---
@@ -22,57 +22,67 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -87,55 +97,67 @@ class DataModel {
 
 <b>In the tile layer</b>
 
+N> The only difference between the shape layer and tile layer code below is the layer type and the zoom level — `MapShapeLayer` vs `MapTileLayer`. The arc sublayer configuration is identical.
+
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapTileLayer(
-          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 3,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -159,57 +181,67 @@ By default, the arc will always render above the [`MapArc.from`](https://pub.dev
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    heightFactor: -0.2,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      heightFactor: -0.2,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -233,57 +265,67 @@ By default, the arc will bend at the center between the [`MapArc.from`](https://
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(13.0827, 80.2707), MapLatLng(22.3193, 114.1694)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    controlPointFactor: 0.2,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(13.0827, 80.2707), MapLatLng(22.3193, 114.1694)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      controlPointFactor: 0.2,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -305,57 +347,67 @@ You can apply the same color for all [`MapArc`](https://pub.dev/documentation/sy
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
- data = <DataModel>[
-   DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), Colors.redAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), Colors.purpleAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepPurple),
-   DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), Colors.blueAccent),
-   DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), Colors.teal),
- ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    color: data[index].color,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+   data = <DataModel>[
+     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), Colors.redAccent),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), Colors.purpleAccent),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepPurple),
+     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), Colors.blueAccent),
+     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), Colors.teal),
+   ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      color: data[index].color,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -378,58 +430,68 @@ You can apply the same width for all [`MapArc`](https://pub.dev/documentation/sy
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), 2),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), 3),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644), 2),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), 4),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), 5),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), 6),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    width: data[index].width,
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), 2),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), 3),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644), 2),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), 4),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), 5),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), 6),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      width: data[index].width,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -454,58 +516,68 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    dashArray: [8, 4, 2, 4],
-                  );
-                },
-              ).toSet(),
-              color: Colors.blue,
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      dashArray: [8, 4, 2, 4],
+                    );
+                  },
+                ).toSet(),
+                color: Colors.blue,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -528,6 +600,9 @@ By default, there will not be any animation.
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
 class AnimationSample extends StatefulWidget {
   const AnimationSample({Key? key}) : super(key: key);
@@ -629,66 +704,76 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late int selectedIndex;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-
-  selectedIndex = -1;
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
-                    color: selectedIndex == index ? Colors.pink : Colors.blue,
-                    onTap: () {
-                       setState(() {
-                         selectedIndex = index;
-                       });
-                    }
-                  );
-                },
-              ).toSet(),
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+
+    selectedIndex = -1;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                      color: selectedIndex == index ? Colors.pink : Colors.blue,
+                      onTap: () {
+                         setState(() {
+                           selectedIndex = index;
+                         });
+                      }
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -710,85 +795,96 @@ You can show additional information about an arc using the [`tooltipBuilder`](ht
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
- final ThemeData themeData = Theme.of(context);
-    final TextStyle textStyle = themeData.textTheme.caption!
-        .copyWith(color: themeData.colorScheme.surface);
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late Random random;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+       DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+       DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+       DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+       DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+   final ThemeData themeData = Theme.of(context);
+      final TextStyle textStyle = themeData.textTheme.labelSmall!
+          .copyWith(color: themeData.colorScheme.surface);
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                    );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Container(
+                      padding: EdgeInsets.only(left: 5, top: 5),
+                      height: 40,
+                      width: 100,
+                      child: Column(
+                         children: [
+                            Row(
+                              children: [
+                                 Text('Flight   : ', style: textStyle),
+                                 Text('Air India', style: textStyle),
+                              ],
+                            ),
+                            Row(
+                               children: [
+                                  Text('Depart : ', style: textStyle),
+                                  Text(random.nextInt(12).toString() + 'AM', style: textStyle),
+                               ],
+                            ),
+                         ],
+                      ),
                   );
                 },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Container(
-                    padding: EdgeInsets.only(left: 5, top: 5),
-                    height: 40,
-                    width: 100,
-                    child: Column(
-                       children: [
-                          Row(
-                            children: [
-                               Text('Flight   : ', style: textStyle),
-                               Text('Air India', style: textStyle),
-                            ],
-                          ),
-                          Row(
-                             children: [
-                                Text('Depart : ', style: textStyle),
-                                Text(random.nextInt(12).toString() + 'AM', style: textStyle),
-                             ],
-                          ),
-                       ],
-                    ),
-                );
-              },
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
@@ -814,89 +910,100 @@ You can customize the appearance of the tooltip:
 {% tabs %}
 {% highlight Dart %}
 
-late MapZoomPanBehavior zoomPanBehavior;
-late MapShapeSource dataSource;
-late List<DataModel> data;
-late Random random;
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
-@override
-void initState() {
-  data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
-  ];
-
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-  zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
-    focalLatLng: MapLatLng(22.9734, 90.6569),
-  );
-
-  random = Random();
-  super.initState();
+class MapsExample extends StatefulWidget {
+  @override
+  _MapsExampleState createState() => _MapsExampleState();
 }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          tooltipSettings: MapTooltipSettings(
-             color: Colors.white,
-             strokeColor: Colors.black,
-             strokeWidth: 2,
-          ),
-          sublayers: [
-            MapArcLayer(
-              arcs: List<MapArc>.generate(
-                data.length,
-                    (int index) {
-                  return MapArc(
-                    from: data[index].from,
-                    to: data[index].to,
+class _MapsExampleState extends State<MapsExample> {
+  late MapZoomPanBehavior zoomPanBehavior;
+  late MapShapeSource dataSource;
+  late List<DataModel> data;
+  late Random random;
+
+  @override
+  void initState() {
+    data = <DataModel>[
+      DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+      DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+      DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+    );
+    zoomPanBehavior = MapZoomPanBehavior(
+      zoomLevel: 4,
+      focalLatLng: MapLatLng(22.9734, 90.6569),
+    );
+
+    random = Random();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            tooltipSettings: MapTooltipSettings(
+               color: Colors.white,
+               strokeColor: Colors.black,
+               strokeWidth: 2,
+            ),
+            sublayers: [
+              MapArcLayer(
+                arcs: List<MapArc>.generate(
+                  data.length,
+                      (int index) {
+                    return MapArc(
+                      from: data[index].from,
+                      to: data[index].to,
+                    );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text('Flight   : '),
+                              Text('Air India'),
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text('Depart : '),
+                              Text(random.nextInt(12).toString() + 'AM'),
+                            ],
+                          ),
+                        ],
+                      ),
                   );
                 },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('Flight   : '),
-                            Text('Air India'),
-                          ],
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('Depart : '),
-                            Text(random.nextInt(12).toString() + 'AM'),
-                          ],
-                        ),
-                      ],
-                    ),
-                );
-              },
-            ),
-          ],
-          zoomPanBehavior: zoomPanBehavior,
-        ),
-      ],
-    ),
-  );
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class DataModel {
