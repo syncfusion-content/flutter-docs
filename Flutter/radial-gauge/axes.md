@@ -11,28 +11,41 @@ documentation: ug
 
 The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks, and axis line can be easily customized with built-in properties.
 
-## Axis Customization
+## Axis customization
 
 **Axis minimum and maximum** 
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) is 100.
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) properties of an axis can be used to customize the axis range. The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) is 100.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(minimum: -60, maximum: 60)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(minimum: -60, maximum: 60)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis range](images/axis/axis_range.jpg)
 
@@ -40,22 +53,35 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
 
 The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html) properties.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(startAngle: 180, endAngle: 90)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(startAngle: 180, endAngle: 90)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis angle customization](images/axis/axis_angle.jpg)
 
@@ -63,23 +89,36 @@ The start and end angles of radial axis can be customized using the [`startAngle
 
 The radius of the radial axis can be customized using the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) property. The default value of the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) is 0.95. The value of [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) ranges from 0 to 1. For example, When the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 1, the full radius will be considered for rendering the axis, and when the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 0.5, then half of the radius value will be considered for rendering the circle.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(),
-            RadialAxis(radiusFactor: 0.5)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(),
+              RadialAxis(radiusFactor: 0.5)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis radius customization](images/axis/axis_radius.jpg)
 
@@ -87,58 +126,84 @@ The radius of the radial axis can be customized using the [`radiusFactor`](https
 
 The position of the [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized using the [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) values. The default value of [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) properties is 0.5. Therefore, the axis will be positioned in the center of provided size of gauge.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(startAngle: 270, endAngle: 270, interval: 10),
-            RadialAxis(
-              centerY: 0.55, 
-              centerX: 0.35,
-              radiusFactor: 0.3, 
-              startAngle: 270,
-              endAngle: 270, 
-              interval: 20
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(startAngle: 270, endAngle: 270, interval: 10),
+              RadialAxis(
+                centerY: 0.55, 
+                centerX: 0.35,
+                radiusFactor: 0.3, 
+                startAngle: 270,
+                endAngle: 270, 
+                interval: 20
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis position customization](images/axis/axis_center.jpg)
 
 **Positioning axis based on its angle**
 
-The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) property of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the axis and its features based on the provided [`start`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`end angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html). By default, the [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) is false, therefore the axis will be positioned based on the [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) value. 
+The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) property of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to position the axis and its features based on the provided [`start`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`end angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html). By default, the [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) is false, therefore the axis will be positioned based on the [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) value. 
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              startAngle: 180, 
-              endAngle: 0,
-              interval: 10,
-              canScaleToFit: true
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                startAngle: 180, 
+                endAngle: 0,
+                interval: 10,
+                canScaleToFit: true
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis fit to scale](images/axis/axis_fitToScale.png)
 
@@ -147,22 +212,35 @@ The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 
 The axis label can be rotated based on its current angle using the [`canRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canRotateLabels.html) property of axis. The default value of [`canRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canRotateLabels.html) is false.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(canRotateLabels: true)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(canRotateLabels: true)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label rotation](images/axis/axis_rotate.jpg)
 
@@ -175,29 +253,42 @@ The visibility of the first and last labels of an axis can be customized using t
 
 The default value of both the [`showFirstLabel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showFirstLabel.html) and the [`showLastLabel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showLastLabel.html) properties is true.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              interval: 1, 
-              showFirstLabel: false,
-              startAngle: 270, 
-              endAngle: 270, 
-              minimum: 0, 
-              maximum: 12
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                interval: 1, 
+                showFirstLabel: false,
+                startAngle: 270, 
+                endAngle: 270, 
+                minimum: 0, 
+                maximum: 12
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis edge label](images/axis/axis_showfirstlabel.jpg)
 
@@ -205,43 +296,69 @@ The default value of both the [`showFirstLabel`](https://pub.dev/documentation/s
 
 The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property.
 
-When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is true, the axis can be placed in counter-clockwise direction. When the  [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is set to false, the axis will be positioned in clockwise direction.
+When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is true, the axis can be placed in a counter-clockwise direction. When the  [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is set to false, the axis will be positioned in a clockwise direction.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis( isInversed: true)]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis( isInversed: true)]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis direction](images/axis/axis_inversed.jpg)
 
 **Maximum number of labels per 100 logical pixels**
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximumLabels.html) property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximumLabels.html) property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis( maximumLabels: 5)]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis( maximumLabels: 5)]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis maximum labels](images/axis/axis_maximumlabels.jpg)
 
@@ -249,22 +366,35 @@ By default, a maximum of three labels are displayed for each 100 logical pixels 
 
 The interval between labels can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/interval.html) property of axis.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(interval: 20)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(interval: 20)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label interval](images/axis/axis_interval.jpg)
 
@@ -279,28 +409,41 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
 * [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/gradient.html) - Allows to apply the gradient for axis line.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              axisLineStyle: AxisLineStyle(
-                thickness: 0.1,
-                thicknessUnit: GaugeSizeUnit.factor, 
-                color: Colors.deepPurple
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                axisLineStyle: AxisLineStyle(
+                  thickness: 0.1,
+                  thicknessUnit: GaugeSizeUnit.factor, 
+                  color: Colors.deepPurple
+                )
               )
-            )
-          ]
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis line customization](images/axis/axis_color.jpg)
 
@@ -308,27 +451,40 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 
 The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) specifies the corner type for axis line. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              axisLineStyle: AxisLineStyle(
-                thickness: 15,              
-                cornerStyle: CornerStyle.bothCurve
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                axisLineStyle: AxisLineStyle(
+                  thickness: 15,              
+                  cornerStyle: CornerStyle.bothCurve
+                )
               )
-            )
-          ]
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis corner](images/axis/axis_corner.jpg)
 
@@ -336,24 +492,37 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html)  allows to render the dashed axis line.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              axisLineStyle: AxisLineStyle(dashArray: <double>[5, 5])
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                axisLineStyle: AxisLineStyle(dashArray: <double>[5, 5])
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![dashed axis line](images/axis/axis_dasharray.jpg)
 
@@ -361,31 +530,44 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/gradient.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to specify the smooth color transition to the axis line by specifying the different colors based on provided factor value.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              axisLineStyle: AxisLineStyle(
-                thickness: 0.1,
-                thicknessUnit: GaugeSizeUnit.factor,
-                gradient: const SweepGradient(
-                  colors: <Color>[Color(0xFFFF7676), Color(0xFFF54EA2)],
-                  stops: <double>[0.25, 0.75]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                axisLineStyle: AxisLineStyle(
+                  thickness: 0.1,
+                  thicknessUnit: GaugeSizeUnit.factor,
+                  gradient: const SweepGradient(
+                    colors: <Color>[Color(0xFFFF7676), Color(0xFFF54EA2)],
+                    stops: <double>[0.25, 0.75]
+                  )
                 )
               )
-            )
-          ]
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis gradient line](images/axis/axis_gradient.jpg)
 
@@ -393,22 +575,35 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/
 
 The visibility of the axis line can be customized using the [`showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showAxisLine.html) property of axis. By default, this property is set to true.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(showAxisLine: false)
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(showAxisLine: false)
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis line visibility](images/axis/axis_showline.jpg)
 
@@ -416,21 +611,34 @@ The visibility of the axis line can be customized using the [`showAxisLine`](htt
 
 [`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows customizing its background color using [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/backgroundColor.html) property.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          backgroundColor: Colors.lightBlue,
-          axes: <RadialAxis>[RadialAxis()]
-        )
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            backgroundColor: Colors.lightBlue,
+            axes: <RadialAxis>[RadialAxis()]
+          )
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axisbackground color](images/axis/axis_backgroundColor.png)
 
@@ -438,76 +646,121 @@ The visibility of the axis line can be customized using the [`showAxisLine`](htt
 
 [`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/backgroundImage.html) property.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
           child: SfRadialGauge(
             axes: <RadialAxis>[
               RadialAxis(
-                showAxisLine: false,
-                radiusFactor: 1,
-                showLastLabel: false,
-                canRotateLabels: true,
-                tickOffset: 0.32,
-                offsetUnit: GaugeSizeUnit.factor,
-                onLabelCreated: axisLabelCreated,
-                startAngle: 270,
-                endAngle: 270,
-                labelOffset: 0.05,
-                maximum: 360,
-                minimum: 0,
-                interval: 30,
-                minorTicksPerInterval: 4,
-                axisLabelStyle: GaugeTextStyle(color: const Color(0xFF949494)),
-                minorTickStyle: MinorTickStyle(
-                  color: const Color(0xFF616161),
-                  thickness: 1.6,
-                  length: 0.058,
-                  lengthUnit: GaugeSizeUnit.factor
-                ),
-                majorTickStyle: MajorTickStyle(
-                  color: const Color(0xFF949494),
-                  thickness: 2.3,
-                  length: 0.087,
-                  lengthUnit: GaugeSizeUnit.factor
-                ),
-                backgroundImage: const AssetImage('images/dark_theme_gauge.png'),
-                pointers: <GaugePointer>[
-                  MarkerPointer(
-                    value: 90,
-                    color: const Color(0xFFDF5F2D),
-                    enableAnimation: true,
-                    animationDuration: 1200,
-                    markerOffset: 0.71,
-                    offsetUnit: GaugeSizeUnit.factor,
-                    markerType: MarkerType.triangle,
-                    markerHeight: 10,
-                    markerWidth: 15
-                  )
-                ],
-                annotations: <GaugeAnnotation>[
-                  GaugeAnnotation(
-                    angle: 270,
-                    positionFactor: 0.025,
-                    widget: Text(
-                      '90',
-                      style: TextStyle(
-                        color: const Color(0xFFDF5F2D),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 22
-                      )
-                    )
-                  )
-                ]
+                backgroundImage: const AssetImage('images/gauge_background.png'),
               )
             ],
           ),
-        )
+        ),
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following example demonstrates a more advanced usage with background image, custom styling, pointers, and annotations:
+
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: SfRadialGauge(
+              axes: <RadialAxis>[
+                RadialAxis(
+                  showAxisLine: false,
+                  radiusFactor: 1,
+                  showLastLabel: false,
+                  canRotateLabels: true,
+                  tickOffset: 0.32,
+                  offsetUnit: GaugeSizeUnit.factor,
+                  onLabelCreated: axisLabelCreated,
+                  startAngle: 270,
+                  endAngle: 270,
+                  labelOffset: 0.05,
+                  maximum: 360,
+                  minimum: 0,
+                  interval: 30,
+                  minorTicksPerInterval: 4,
+                  axisLabelStyle: const GaugeTextStyle(color: Color(0xFF949494)),
+                  minorTickStyle: const MinorTickStyle(
+                    color: Color(0xFF616161),
+                    thickness: 1.6,
+                    length: 0.058,
+                    lengthUnit: GaugeSizeUnit.factor
+                  ),
+                  majorTickStyle: const MajorTickStyle(
+                    color: Color(0xFF949494),
+                    thickness: 2.3,
+                    length: 0.087,
+                    lengthUnit: GaugeSizeUnit.factor
+                  ),
+                  backgroundImage: const AssetImage('images/dark_theme_gauge.png'),
+                  pointers: <GaugePointer>[
+                    MarkerPointer(
+                      value: 90,
+                      color: const Color(0xFFDF5F2D),
+                      enableAnimation: true,
+                      animationDuration: 1200,
+                      markerOffset: 0.71,
+                      offsetUnit: GaugeSizeUnit.factor,
+                      markerType: MarkerType.triangle,
+                      markerHeight: 10,
+                      markerWidth: 15
+                    )
+                  ],
+                  annotations: <GaugeAnnotation>[
+                    GaugeAnnotation(
+                      angle: 270,
+                      positionFactor: 0.025,
+                      widget: const Text(
+                        '90',
+                        style: TextStyle(
+                          color: Color(0xFFDF5F2D),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22
+                        )
+                      )
+                    )
+                  ]
+                )
+              ],
+            ),
+          )
+        ),
       ),
     );
   }
@@ -515,7 +768,7 @@ The visibility of the axis line can be customized using the [`showAxisLine`](htt
   void axisLabelCreated(AxisLabelCreatedArgs args) {
     if (args.text == '90') {
       args.text = 'E';
-      args.labelStyle = GaugeTextStyle(color: const Color(0xFFDF5F2D));
+      args.labelStyle = const GaugeTextStyle(color: Color(0xFFDF5F2D));
     } else {
       if (args.text == '0') {
         args.text = 'N';
@@ -524,11 +777,13 @@ The visibility of the axis line can be customized using the [`showAxisLine`](htt
       } else if (args.text == '270') {
         args.text = 'W';
       }
-      args.labelStyle = GaugeTextStyle(color: const Color(0xFFFFFFFF));
+      args.labelStyle = const GaugeTextStyle(color: Color(0xFFFFFFFF));
     }
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis background image](images/axis/axis_background.png)
 
@@ -542,30 +797,43 @@ The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/d
 * [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontWeight.html) – Allows to specify the font weight for labels.
 * [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontSize.html) – Allows to specify the font size for labels.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              axisLabelStyle: GaugeTextStyle(
-                color: Colors.red, 
-                fontSize: 15,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold, 
-                fontFamily: 'Times'
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                axisLabelStyle: const GaugeTextStyle(
+                  color: Colors.red, 
+                  fontSize: 15,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold, 
+                  fontFamily: 'Times'
+                )
               )
-            )
-          ]
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label customization](images/axis/axis_label.jpg)
 
@@ -575,43 +843,70 @@ The following property of the axis allows to customize the axis label text:
 
 * [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelFormat.html) - Allows to add prefix or suffix with the axis labels.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(labelFormat: '{value}m')
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(labelFormat: '{value}m')
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label format](images/axis/axis_labelFormat.jpg)
 
 * [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html).
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+import 'package:intl/intl.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(numberFormat: NumberFormat.compactSimpleCurrency())
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(numberFormat: NumberFormat.compactSimpleCurrency())
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis number format](images/axis/axis_numberFormat.jpg)
 
@@ -619,20 +914,33 @@ The following property of the axis allows to customize the axis label text:
 
 The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showLabels.html) property of axis allows to enable or disable the visibility of labels. The default value of the property is true.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(showLabels: false ),]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(showLabels: false )]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label visibility](images/axis/axis_showLabels.jpg)
 
@@ -650,35 +958,48 @@ The major and minor tick lines of an axis can be customized using the [`majorTic
 
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/dashArray.html) – Specify the dash array to draw the dashed tick line.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              majorTickStyle: MajorTickStyle(
-                length: 0.1,
-                lengthUnit: GaugeSizeUnit.factor, 
-                thickness: 1.5, 
-                color: Colors.black
-              ),
-              minorTickStyle: MinorTickStyle(
-                length: 0.05,
-                lengthUnit: GaugeSizeUnit.factor, 
-                thickness: 1.5, 
-                color: Colors.black
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                majorTickStyle: const MajorTickStyle(
+                  length: 0.1,
+                  lengthUnit: GaugeSizeUnit.factor, 
+                  thickness: 1.5, 
+                  color: Colors.black
+                ),
+                minorTickStyle: const MinorTickStyle(
+                  length: 0.05,
+                  lengthUnit: GaugeSizeUnit.factor, 
+                  thickness: 1.5, 
+                  color: Colors.black
+                )
               )
-            )
-          ]
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis tick customization](images/axis/axis_ticks.jpg)
 
@@ -686,25 +1007,38 @@ The major and minor tick lines of an axis can be customized using the [`majorTic
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/dashArray.html) property of both the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minorTickStyle.html) allows to draw the tick line as dashed line.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              majorTickStyle: MajorTickStyle(length: 20, dashArray: <double>[5, 2.5]),
-              minorTickStyle: MinorTickStyle(length: 15, dashArray: <double>[3, 2.5])
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                majorTickStyle: const MajorTickStyle(length: 20, dashArray: <double>[5, 2.5]),
+                minorTickStyle: const MinorTickStyle(length: 15, dashArray: <double>[3, 2.5])
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![dashed tick lines](images/axis/axis_tickdash.jpg)
 
@@ -712,22 +1046,34 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/interval.html) property. Like major ticks, the minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minorTicksPerInterval.html) property of axis. By default, the value of this property is 1.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(minorTicksPerInterval: 4
-            ),
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(minorTicksPerInterval: 4),
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![minor tick line](images/axis/axis_minortick.jpg)
 
@@ -735,20 +1081,33 @@ The major ticks are generated based on the [`interval`](https://pub.dev/document
 
 The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showTicks.html) property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(showTicks: false)]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(showTicks: false)]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![tick line visibility](images/axis/axis_showticks.jpg)
 
@@ -756,22 +1115,35 @@ The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the labels and ticks either inside or outside the axis line using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelsPosition.html) and [`ticksPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/ticksPosition.html) properties. By default, both labels and ticks are positioned inside the axis.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(
-            labelsPosition: ElementsPosition.outside,
-          ticksPosition: ElementsPosition.outside)]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(
+              labelsPosition: ElementsPosition.outside,
+            ticksPosition: ElementsPosition.outside)]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![label and tick placement](images/axis/axis_outside.jpg)
 
@@ -781,46 +1153,72 @@ The ticks can be moved near or far to the axis line using the [`tickOffset`](htt
 
 The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(
-            tickOffset: 20)]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(
+              tickOffset: 20)]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis tick offset](images/axis/axis_tickOffset.jpg)
 
 The following code example shows how to add tick offset with the [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) property of axis.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              tickOffset: 0.2,
-              labelOffset: 0.2, 
-              offsetUnit: GaugeSizeUnit.factor
-            )
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                tickOffset: 0.2,
+                labelOffset: 0.2, 
+                offsetUnit: GaugeSizeUnit.factor
+              )
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis tick and label offset](images/axis/axis_bothOffset.jpg)
 
@@ -828,23 +1226,36 @@ The following code example shows how to add tick offset with the [`offsetUnit`](
 
 The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelOffset.html) property allows to adjust the distance between the tick end and the labels. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) property of axis allows to specify the label offset either in factor or logical pixels. By default, the value of the label offset is 15.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(
-            labelOffset: 0.3, offsetUnit: GaugeSizeUnit.factor
-            ),
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(
+              labelOffset: 0.3, offsetUnit: GaugeSizeUnit.factor
+              ),
+            ]
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label offset](images/axis/axis_labelOffset.jpg)
 
@@ -856,44 +1267,56 @@ N> [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
 
 The [`Radial Gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the [`axes`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/axes.html) collection.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes: <RadialAxis>[ RadialAxis(minimum:  0 , maximum: 100, interval: 10,
-          ticksPosition: ElementsPosition.outside,
-          labelsPosition: ElementsPosition.outside,
-          minorTicksPerInterval: 5,
-          radiusFactor: 0.9, labelOffset: 15,
-          minorTickStyle: MinorTickStyle(thickness: 1.5,
-            color: Color.fromARGB(255, 143, 20, 2),
-            length: 0.07, lengthUnit: GaugeSizeUnit.factor),
-          majorTickStyle: MinorTickStyle(thickness: 1.5,
-            color: Color.fromARGB(255, 143, 20, 2),
-            length: 0.15, lengthUnit: GaugeSizeUnit.factor,),
-          axisLineStyle: AxisLineStyle( thickness: 3, 
-            color: Color.fromARGB(255, 143, 20, 2), ),
-          axisLabelStyle: GaugeTextStyle(fontSize: 12,
-            color:Color.fromARGB(255, 143, 20, 2),),),
-          RadialAxis(minimum:  0 , maximum: 60, interval: 10,
-            radiusFactor:  0.6, labelOffset: 15, isInversed: true,
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes: <RadialAxis>[ RadialAxis(minimum:  0 , maximum: 100, interval: 10,
+            ticksPosition: ElementsPosition.outside,
+            labelsPosition: ElementsPosition.outside,
             minorTicksPerInterval: 5,
-            minorTickStyle: MinorTickStyle(color: Colors.black, thickness: 1.5,
-                lengthUnit: GaugeSizeUnit.factor, length: 0.07),
-            majorTickStyle: MajorTickStyle(color: Colors.black, thickness: 1.5,
-                lengthUnit: GaugeSizeUnit.factor, length: 0.15),
-            axisLineStyle: AxisLineStyle(color: Colors.black, thickness: 3, ),
-            axisLabelStyle: GaugeTextStyle(color:  Colors.black, fontSize: 12)),
-          ],
-        )
-      ),
-    );
+            radiusFactor: 0.9, labelOffset: 15,
+            minorTickStyle: const MinorTickStyle(thickness: 1.5,
+              color: Color.fromARGB(255, 143, 20, 2),
+              length: 0.07, lengthUnit: GaugeSizeUnit.factor),
+            majorTickStyle: const MinorTickStyle(thickness: 1.5,
+              color: Color.fromARGB(255, 143, 20, 2),
+              length: 0.15, lengthUnit: GaugeSizeUnit.factor,),
+            axisLineStyle: const AxisLineStyle( thickness: 3, 
+              color: Color.fromARGB(255, 143, 20, 2), ),
+            axisLabelStyle: const GaugeTextStyle(fontSize: 12,
+              color:Color.fromARGB(255, 143, 20, 2),),),
+            RadialAxis(minimum:  0 , maximum: 60, interval: 10,
+              radiusFactor:  0.6, labelOffset: 15, isInversed: true,
+              minorTicksPerInterval: 5,
+              minorTickStyle: const MinorTickStyle(color: Colors.black, thickness: 1.5,
+                  lengthUnit: GaugeSizeUnit.factor, length: 0.07),
+              majorTickStyle: const MajorTickStyle(color: Colors.black, thickness: 1.5,
+                  lengthUnit: GaugeSizeUnit.factor, length: 0.15),
+              axisLineStyle: const AxisLineStyle(color: Colors.black, thickness: 3, ),
+              axisLabelStyle: const GaugeTextStyle(color:  Colors.black, fontSize: 12)),
+            ],
+          )
+        ),
+      );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label offset](images/axis/axis_multiplescale.jpg)
 
@@ -909,16 +1332,27 @@ The [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_gauges/l
 
 N> If both [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLabelStyle.html) property of radial axis and [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/labelStyle.html) property of the [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onLabelCreated.html) event args are set, the values of the [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/labelStyle.html) property of the event args will take precedence.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(
-            onLabelCreated:axisLabelCreated,),
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(
+              onLabelCreated:axisLabelCreated,),
+            ]
+          ),
         ),
       ),
     );
@@ -926,14 +1360,16 @@ N> If both [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_g
 
   void axisLabelCreated(AxisLabelCreatedArgs args){
     if(args.text == '100'){
-      args.labelStyle = GaugeTextStyle(color: Colors.red,fontStyle: FontStyle.italic,
+      args.labelStyle = const GaugeTextStyle(color: Colors.red,fontStyle: FontStyle.italic,
           fontFamily: 'Times', fontWeight: FontWeight.bold, fontSize: 15);
       args.canRotate = true;
       args.text = '100 %';
     }
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![axis label offset](images/axis/axis_labelCreated.jpg)
 
@@ -941,118 +1377,144 @@ N> If both [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_g
 
 The [`onAxisTapped`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onAxisTapped.html) event is called when an axis is tapped. The corresponding axis value at the tapped position will be got from the event.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-      child: SfRadialGauge(
-        axes:<RadialAxis>[RadialAxis(
-            onAxisTapped: axisTapped),
-          ]
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+        child: SfRadialGauge(
+          axes:<RadialAxis>[RadialAxis(
+              onAxisTapped: axisTapped),
+            ]
+          ),
         ),
       ),
     );
   }
 
-  void axisTapped(double _tappedValue){
+  void axisTapped(double tappedValue){
     // Handle the tapped value
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Custom scale
 
 [`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event of the axis. The [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const RadialGaugeDemo());
+
+class RadialGaugeDemo extends StatelessWidget {
+  const RadialGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfRadialGauge(axes: <RadialAxis>[
-          RadialAxis(
-            minimum: 0,
-            maximum: 150,
-            onCreateAxisRenderer: () {
-              final CustomAxisRenderer renderer = CustomAxisRenderer();
-              return renderer;
-            },
-          )
-        ]),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfRadialGauge(axes: <RadialAxis>[
+            RadialAxis(
+              minimum: 0,
+              maximum: 150,
+              onCreateAxisRenderer: () {
+                final CustomAxisRenderer renderer = CustomAxisRenderer();
+                return renderer;
+              },
+            )
+          ]),
+        ),
       ),
     );
   }
+}
 
-  class _CustomAxisRenderer extends RadialAxisRenderer {
-    _CustomAxisRenderer() : super();
+class CustomAxisRenderer extends RadialAxisRenderer {
+  CustomAxisRenderer() : super();
 
-    /// Generated the 9 non-linear interval labels from 0 to 150
-    /// instead of actual generated labels.
-    @override
-    List<CircularAxisLabel> generateVisibleLabels() {
-      final List<CircularAxisLabel> _visibleLabels = <CircularAxisLabel>[];
-      for (num i = 0; i < 9; i++) {
-        final double _value = _calculateLabelValue(i);
-        final CircularAxisLabel label = CircularAxisLabel(
-            this.axis.axisLabelStyle, _value.toInt().toString(), i, false);
-        label.value = _value;
-        _visibleLabels.add(label);
-      }
-
-      return _visibleLabels;
+  /// Generated the 9 non-linear interval labels from 0 to 150
+  /// instead of actual generated labels.
+  @override
+  List<CircularAxisLabel> generateVisibleLabels() {
+    final List<CircularAxisLabel> visibleLabels = <CircularAxisLabel>[];
+    for (num i = 0; i < 9; i++) {
+      final double value = _calculateLabelValue(i);
+      final CircularAxisLabel label = CircularAxisLabel(
+          axis.axisLabelStyle, value.toInt().toString(), i, false);
+      label.value = value;
+      visibleLabels.add(label);
     }
 
-    /// Returns the factor(0 to 1) from value to place the labels in an axis.
-    @override
-    double valueToFactor(double value) {
-      if (value >= 0 && value <= 2) {
-        return (value * 0.125) / 2;
-      } else if (value > 2 && value <= 5) {
-        return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
-      } else if (value > 5 && value <= 10) {
-        return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
-      } else if (value > 10 && value <= 20) {
-        return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
-      } else if (value > 20 && value <= 30) {
-        return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
-      } else if (value > 30 && value <= 50) {
-        return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
-      } else if (value > 50 && value <= 100) {
-        return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
-      } else if (value > 100 && value <= 150) {
-        return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
-      } else {
-        return 1;
-      }
-    }
+    return visibleLabels;
+  }
 
-    /// To return the label value based on interval
-    double _calculateLabelValue(num value) {
-      if (value == 0) {
-        return 0;
-      } else if (value == 1) {
-        return 2;
-      } else if (value == 2) {
-        return 5;
-      } else if (value == 3) {
-        return 10;
-      } else if (value == 4) {
-        return 20;
-      } else if (value == 5) {
-        return 30;
-      } else if (value == 6) {
-        return 50;
-      } else if (value == 7) {
-        return 100;
-      } else {
-        return 150;
-      }
+  /// Returns the factor(0 to 1) from value to place the labels in an axis.
+  @override
+  double valueToFactor(double value) {
+    if (value >= 0 && value <= 2) {
+      return (value * 0.125) / 2;
+    } else if (value > 2 && value <= 5) {
+      return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
+    } else if (value > 5 && value <= 10) {
+      return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
+    } else if (value > 10 && value <= 20) {
+      return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
+    } else if (value > 20 && value <= 30) {
+      return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
+    } else if (value > 30 && value <= 50) {
+      return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
+    } else if (value > 50 && value <= 100) {
+      return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
+    } else if (value > 100 && value <= 150) {
+      return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
+    } else {
+      return 1;
     }
   }
 
+  /// To return the label value based on interval
+  double _calculateLabelValue(num value) {
+    if (value == 0) {
+      return 0;
+    } else if (value == 1) {
+      return 2;
+    } else if (value == 2) {
+      return 5;
+    } else if (value == 3) {
+      return 10;
+    } else if (value == 4) {
+      return 20;
+    } else if (value == 5) {
+      return 30;
+    } else if (value == 6) {
+      return 50;
+    } else if (value == 7) {
+      return 100;
+    } else {
+      return 150;
+    }
+  }
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![custom scale](images/axis/custom_scale.jpg)
