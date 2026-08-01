@@ -20,6 +20,8 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion<sup>&reg;</sup> Flutter Barcode dependency to your pubspec.yaml file.
 
+{% tabs %}
+
 {% highlight dart %} 
 
     dependencies:
@@ -28,11 +30,15 @@ Add the Syncfusion<sup>&reg;</sup> Flutter Barcode dependency to your pubspec.ya
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package.
+{% endtabs %}
+
+N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes/versions) package. You can check the latest version available on [pub.dev](https://pub.dev/packages/syncfusion_flutter_barcodes/install).
 
 **Get packages**
 
 Run the following command to get the required packages.
+
+{% tabs %}
 
 {% highlight dart %} 
 
@@ -40,9 +46,13 @@ Run the following command to get the required packages.
 
 {% endhighlight %}
 
+{% endtabs %}
+
 **Import package**
 
 Import the following package in your Dart code.
+
+{% tabs %}
 
 {% highlight dart %} 
 
@@ -50,27 +60,42 @@ Import the following package in your Dart code.
 
 {% endhighlight %}
 
+{% endtabs %}
+
 ## Initialize the barcode
 
-Add the Barcode Generator widget as a child of any widget. Here, the widget is added as a child of the container widget and the height to the container is specified (otherwise it will take full container height).
+Add the Barcode Generator widget as a child of any widget. Here, the widget is added as a child of the container widget and the height to the container is specified (otherwise, it will occupy the full available height).
+
+{% tabs %}
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            height: 150,
-            child: SfBarcodeGenerator(value: 'http://www.syncfusion.com'),
+  import 'package:flutter/material.dart';
+  import 'package:syncfusion_flutter_barcodes/barcodes.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 150,
+              child: SfBarcodeGenerator(value: 'http://www.syncfusion.com'),
+            ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 N> The default symbology of SfBarcodeGenerator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html).
 
@@ -80,57 +105,83 @@ N> The default symbology of SfBarcodeGenerator is [`Code128`](https://pub.dev/do
 
 You can set the required symbology type to the barcode generator based on input value by initializing the [`symbology`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology-class.html) property. In the following code snippet, the QR code is set as the barcode symbology.
 
+{% tabs %}
+
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            height: 350,
-            width: 350,
-            child: SfBarcodeGenerator(
-              value: 'http://www.syncfusion.com',
-              symbology: QRCode(),
+  import 'package:flutter/material.dart';
+  import 'package:syncfusion_flutter_barcodes/barcodes.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 350,
+              width: 350,
+              child: SfBarcodeGenerator(
+                value: 'http://www.syncfusion.com',
+                symbology: QRCode(),
+              ),
             ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ![symbology to barcode](images/getting-started/getting_started2.jpg)
 
 ## Display input value
 
-The provided input value can be displayed below the barcode by enabling the [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property of barcode as like the following code snippet,
+The provided input value can be displayed below the barcode by enabling the [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property of barcode as shown in the following code snippet.
+
+{% tabs %}
 
 {% highlight dart %} 
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            height: 350,
-            width: 350,
-            child: SfBarcodeGenerator(
-              value: 'http://www.syncfusion.com',
-              showValue: true,
-              textSpacing: 15,
-              symbology: QRCode(),
+  import 'package:flutter/material.dart';
+  import 'package:syncfusion_flutter_barcodes/barcodes.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 350,
+              width: 350,
+              child: SfBarcodeGenerator(
+                value: 'http://www.syncfusion.com',
+                showValue: true,
+                textSpacing: 15,
+                symbology: QRCode(),
+              ),
             ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ![Text to barcode](images/getting-started/getting_started3.jpg)
 
