@@ -13,57 +13,90 @@ You can quickly change an appointment’s start and end times by resizing the ap
 
 ## Allow Appointment resize
 
-[allowAppointmentResize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowAppointmentResize.html) property allows to reschedule the appointment by resizing the appointment in desktop platforms.
+[allowAppointmentResize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowAppointmentResize.html) property allows you to reschedule the appointment by resizing the appointment in desktop platforms.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-            view: CalendarView.week,
-            dataSource: _getCalendarDataSource(),
-            allowAppointmentResize: true),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+              view: CalendarView.week,
+              dataSource: _getCalendarDataSource(),
+              allowAppointmentResize: true),
+        ),
       ),
-    ),
-  );
+    );
+  }
+}
+
+_AppointmentDataSource _getCalendarDataSource() {
+  List<Appointment> appointments = <Appointment>[];
+  return _AppointmentDataSource(appointments);
+}
+
+class _AppointmentDataSource extends CalendarDataSource {
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![appointment_resizing](images/appointments/appointment_resize.gif)
+![appointment resizing](images/appointments/appointment_resize.gif)
 
 >**NOTE**
 * This feature is not applicable for mobile platforms.
 
 ## onAppointmentResizeStart
 
-[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback is called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails-class.html) arguments contains the resizing appointment, and resource details. 
+[onAppointmentResizeStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeStart.html) callback is called whenever the appointment starts resizing in SfCalendar. The [AppointmentResizeStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails-class.html) arguments contains the resizing appointment, and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/appointment.html) - Get the resizing appointment details.
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeStartDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10 17 18 19 20" %}
+{% highlight dart hl_lines="12 19 20 21 22" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowAppointmentResize: true,
-          onAppointmentResizeStart: resizeStart,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowAppointmentResize: true,
+            onAppointmentResizeStart: resizeStart,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
@@ -75,7 +108,7 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 {% endtabs %}
 
 ## onAppointmentResizeUpdate
-[onAppointmentResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeUpdate.html) callback is called whenever the appointment resizing in SfCalendar. The [AppointmentResizeUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails-class.html) arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
+[onAppointmentResizeUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeUpdate.html) callback is called whenever the appointment is being resized in SfCalendar. The [AppointmentResizeUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails-class.html) arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/appointment.html) - Get the resize appointment.
 * [resizingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/resizingTime.html) - Get the resize appointment time.
@@ -83,22 +116,33 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeUpdateDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10 17 18 19 20 21 22" %}
+{% highlight dart hl_lines="12 19 20 21 22 23 24" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowAppointmentResize: true,
-          onAppointmentResizeUpdate: resizeUpdate,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowAppointmentResize: true,
+            onAppointmentResizeUpdate: resizeUpdate,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails) {
@@ -112,7 +156,7 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 {% endtabs %}
 
 ## onAppointmentResizeEnd
-[onAppointmentResizeEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeEnd.html) callback is called whenever the appointment resizing end in the SfCalendar. The [AppointmentResizeEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails-class.html) arguments contains the resized appointment, start time, end time and resource details. 
+[onAppointmentResizeEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onAppointmentResizeEnd.html) callback is called whenever the appointment resizing ends in the SfCalendar. The [AppointmentResizeEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails-class.html) arguments contains the resized appointment, start time, end time and resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/appointment.html) - Get the resized appointment details.
 * [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/startTime.html) -  Get the start time.
@@ -120,22 +164,33 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentResizeEndDetails/resource.html) - Get the resource details.
 
 {% tabs %}
-{% highlight dart hl_lines="10 17 18 19 20 21 22" %}
+{% highlight dart hl_lines="12 19 20 21 22 23 24" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowAppointmentResize: true,
-          onAppointmentResizeEnd: resizeEnd,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowAppointmentResize: true,
+            onAppointmentResizeEnd: resizeEnd,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void resizeEnd(AppointmentResizeEndDetails appointmentResizeEndDetails) {
