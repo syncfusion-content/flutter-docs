@@ -16,21 +16,43 @@ Easily reschedule an appointment by dragging it from one time slot or month cell
 To perform drag-and-drop operations within the calendar, enable the [allowDragAndDrop](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowDragAndDrop.html) property of SfCalendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-            view: CalendarView.week,
-            dataSource: _getCalendarDataSource(),
-            allowDragAndDrop: true
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+              view: CalendarView.week,
+              dataSource: _getCalendarDataSource(),
+              allowDragAndDrop: true
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
+}
+
+_AppointmentDataSource _getCalendarDataSource() {
+  List<Appointment> appointments = <Appointment>[];
+  return _AppointmentDataSource(appointments);
+}
+
+class _AppointmentDataSource extends CalendarDataSource {
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
 }
 
 {% endhighlight %}
@@ -43,7 +65,7 @@ Widget build(BuildContext context) {
 
 ## onDragStart
 
-[onDragStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragStart.html) callback was called whenever the appointment starts to drag in the SfCalendar. The [AppointmentDragStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails-class.html) arguments contains the dragging appointment and associated resource details. 
+[onDragStart](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragStart.html) callback is called whenever the appointment starts to drag in the SfCalendar. The [AppointmentDragStartDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails-class.html) arguments contains the dragging appointment and associated resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/appointment.html) - Get the dragged appointment details. 
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragStartDetails/resource.html) - Get the resource details.
@@ -51,20 +73,31 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-		  allowDragAndDrop: true,
-		  onDragStart: dragStart,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            onDragStart: dragStart,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
@@ -77,10 +110,10 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 
 ## onDragUpdate
 
-[onDragUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragUpdate.html) callback was called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails-class.html) arguments contains the dragging appointment, dragging time, dragging offset, source resource and target resource details. 
+[onDragUpdate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragUpdate.html) callback is called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails-class.html) arguments contains the dragging appointment, dragging time, dragging offset, source resource, and target resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/appointment.html) - Get the dragged appointment details. 
-* [draggingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingTime.html) - Get the resource details.
+* [draggingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingTime.html) - Get the dragging time.
 * [draggingPosition](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/draggingPosition.html) - Get the drag position.
 * [sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/sourceResource.html) - Get the source resource details.
 * [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragUpdateDetails/targetResource.html) - Get the resource details.
@@ -88,20 +121,31 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20 21 22 23" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          onDragUpdate: dragUpdate,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            onDragUpdate: dragUpdate,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
@@ -117,30 +161,41 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 
 ## onDragEnd
 
-[onDragEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragEnd.html) callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails-class.html) arguments contains the dropped appointment, dropping time, source and target resource details. 
+[onDragEnd](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onDragEnd.html) callback is called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails-class.html) arguments contains the dropped appointment, dropping time, source and target resource details. 
 
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/appointment.html) - Get the dragged appointment details. 
-* [droppingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/droppingTime.html) - Get the resource details.
+* [droppingTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/droppingTime.html) - Get the dropping time.
 * [sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/sourceResource.html) - Get the resource details.
 * [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) - Get the target resource details.
 
 {% tabs %}
 {% highlight dart hl_lines="10 17 18 19 20 21 22" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-		  allowDragAndDrop: true,
-		  onDragEnd: dragEnd,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            onDragEnd: dragEnd,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
@@ -158,24 +213,35 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings-class.html). Default value of [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property is true.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(allowNavigation: true),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            dragAndDropSettings: const DragAndDropSettings(allowNavigation: true),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-	
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -184,24 +250,35 @@ Widget build(BuildContext context) {
 You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(allowScroll: true),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            dragAndDropSettings: const DragAndDropSettings(allowScroll: true),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-	
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -210,24 +287,35 @@ Widget build(BuildContext context) {
 [showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) - This property handles whether to show the time indicator or not, which shows the dragging appointment current time position in time ruler. Default value of the [showTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/showTimeIndicator.html) property is true.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(showTimeIndicator: true),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            dragAndDropSettings: const DragAndDropSettings(showTimeIndicator: true),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-	
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,30 +324,41 @@ Widget build(BuildContext context) {
 Using [timeIndicatorStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/timeIndicatorStyle.html) property you can customize the text style of the time indicator. Also using [indicatorTimeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/indicatorTimeFormat.html) property you can customize the indicator time format.
 
 {% tabs %}
-{% highlight dart hl_lines="10 11 12 13 14 15 16 17" %}
+{% highlight dart hl_lines="20 21 22 23 24 25 26 27" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(
-            indicatorTimeFormat: 'hh:mm',
-            showTimeIndicator: true,
-            timeIndicatorStyle: TextStyle(
-              backgroundColor: Color(0xFFCEE5D0),
-              color: Colors.black,
-              fontSize: 15,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            dragAndDropSettings: const DragAndDropSettings(
+              indicatorTimeFormat: 'hh:mm',
+              showTimeIndicator: true,
+              timeIndicatorStyle: TextStyle(
+                backgroundColor: Color(0xFFCEE5D0),
+                color: Colors.black,
+                fontSize: 15,
+              ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -272,24 +371,35 @@ Widget build(BuildContext context) {
 Using [autoNavigateDelay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/autoNavigateDelay.html) property you can handle the navigation time when navigating to next/previous view while dragging the appointment.
 
 {% tabs %}
-{% highlight dart hl_lines="10 11" %}
+{% highlight dart hl_lines="20 21" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          allowDragAndDrop: true,
-          dragAndDropSettings:
-              DragAndDropSettings(autoNavigateDelay: Duration(seconds: 1)),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true,
+            dragAndDropSettings: const DragAndDropSettings(
+                autoNavigateDelay: Duration(seconds: 1)),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-	
+
 {% endhighlight %}
 {% endtabs %}

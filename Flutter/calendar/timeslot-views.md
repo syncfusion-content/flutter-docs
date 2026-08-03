@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Event Calendar Timeslot View (SfCalendar)
 
-[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on their duration.
+[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display dates, and the views will show based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on their duration.
 
 * **Day view:** Displays a single day.
-* **Week view:** Views all days of a week.
-* **Work week view:** Views only working days of a week. By default, Saturday and Sunday are the non-working days. You can customize it with any days of a week.
+* **Week view:** Displays all days of a week.
+* **Work week view:** Displays only working days of a week. By default, Saturday and Sunday are the non-working days. You can customize it with any days of a week.
 * **Timeline day view:** Displays the single day in horizontal time axis.
 * **Timeline week view:** Displays the days of a week in horizontal time axis. You can see the past or future dates by scrolling to right or left.
 * **Timeline work week view:** Views only working days of a week in horizontal axis. By default, Saturday and Sunday are the non-working days. You can customize it with any days of a week.
@@ -24,17 +24,30 @@ documentation: ug
 You can customize the interval of timeslots in all the timeslots view by using the [timeInterval](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeInterval.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight dart hl_lines=" 6 7" %}
+{% highlight dart hl_lines="16 17" %}
 
-@override
-Widget build(BuildContext context) {
-  return Container(
-    child: SfCalendar(
-      view: CalendarView.week,
-      timeSlotViewSettings:
-          TimeSlotViewSettings(timeInterval: Duration(hours: 2)),
-    ),
-  );
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: const TimeSlotViewSettings(
+              timeInterval: Duration(hours: 2)),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -50,18 +63,31 @@ Widget build(BuildContext context) {
 You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
-Widget build(BuildContext context) {
-  return Container(
-    child: SfCalendar(
-      view: CalendarView.week,
-      timeSlotViewSettings: TimeSlotViewSettings(
-        timeIntervalHeight: 100,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: const TimeSlotViewSettings(
+            timeIntervalHeight: 100,
+          ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -74,18 +100,31 @@ Widget build(BuildContext context) {
 You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
-Widget build(BuildContext context) {
-  return Container(
-    child: SfCalendar(
-      view: CalendarView.timelineDay,
-      timeSlotViewSettings: TimeSlotViewSettings(
-        timeIntervalWidth: 100,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.timelineDay,
+          timeSlotViewSettings: const TimeSlotViewSettings(
+            timeIntervalWidth: 100,
+          ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -100,18 +139,32 @@ The default values for [startHour](https://pub.dev/documentation/syncfusion_flut
 You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/) to show only the required days for the users.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9" %}
+{% highlight dart hl_lines="16 17 18 19" %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfCalendar(
-    view: CalendarView.workWeek,
-    timeSlotViewSettings: TimeSlotViewSettings(
-        startHour: 9,
-        endHour: 16,
-        nonWorkingDays: <int>[DateTime.friday, DateTime.saturday]),
-  ));
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.workWeek,
+          timeSlotViewSettings: const TimeSlotViewSettings(
+              startHour: 9,
+              endHour: 16,
+              nonWorkingDays: <int>[DateTime.friday, DateTime.saturday]),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -131,18 +184,30 @@ Widget build(BuildContext context) {
 You can customize the days count by setting the [numberOfDaysInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/numberOfDaysInView.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/) in the calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: SfCalendar(
-        view: CalendarView.week,
-        timeSlotViewSettings: const TimeSlotViewSettings(numberOfDaysInView: 3),
-      )),
+        body: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: const TimeSlotViewSettings(numberOfDaysInView: 3),
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,14 +230,26 @@ You can restrict the user interaction such as selection and highlights specific 
 You can enable or disable the touch interaction of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html). By default, its value is true.
 
 {% tabs %}
-{% highlight dart hl_lines="6 11 12 13 14 15 16 17 18 20 21" %}
+{% highlight dart hl_lines="16 21 22 23 24 25 26 27 28 29 30 31" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.week,
-        specialRegions: _getTimeRegions(),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          specialRegions: _getTimeRegions(),
+        ),
       ),
     );
   }
@@ -181,13 +258,14 @@ You can enable or disable the touch interaction of [TimeRegion](https://pub.dev/
     final List<TimeRegion> regions = <TimeRegion>[];
     regions.add(TimeRegion(
         startTime: DateTime.now(),
-        endTime: DateTime.now().add(Duration(hours: 1)),
+        endTime: DateTime.now().add(const Duration(hours: 1)),
         enablePointerInteraction: false,
-        color: Colors.grey.withOpacity(0.2),
+        color: Colors.grey.withValues(alpha: 0.2),
         text: 'Break'));
 
     return regions;
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -209,14 +287,26 @@ in the region
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="17" %}
+{% highlight dart hl_lines="27" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.week,
-        specialRegions: _getTimeRegions(),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          specialRegions: _getTimeRegions(),
+        ),
       ),
     );
   }
@@ -225,11 +315,11 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
     final List<TimeRegion> regions = <TimeRegion>[];
     regions.add(TimeRegion(
         startTime: DateTime.now(),
-        endTime: DateTime.now().add(Duration(hours: 1)),
+        endTime: DateTime.now().add(const Duration(hours: 1)),
         enablePointerInteraction: false,
         recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
-        color: Colors.grey.withOpacity(0.2),
+        textStyle: const TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withValues(alpha: 0.2),
         text: 'Break'));
 
     return regions;
@@ -246,14 +336,26 @@ You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointment
 You can delete any occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html). The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
-{% highlight dart hl_lines="20" %}
+{% highlight dart hl_lines="30" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.week,
-        specialRegions: _getTimeRegions(),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          specialRegions: _getTimeRegions(),
+        ),
       ),
     );
   }
@@ -262,12 +364,12 @@ You can delete any occurrence that is an exception from the recurrence pattern t
     final List<TimeRegion> regions = <TimeRegion>[];
     regions.add(TimeRegion(
         startTime: DateTime.now(),
-        endTime: DateTime.now().add(Duration(hours: 1)),
+        endTime: DateTime.now().add(const Duration(hours: 1)),
         enablePointerInteraction: false,
         recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
-        color: Colors.grey.withOpacity(0.2),
-        recurrenceExceptionDates: [DateTime.now().add(Duration(days: 2))],
+        textStyle: const TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withValues(alpha: 0.2),
+        recurrenceExceptionDates: [DateTime.now().add(const Duration(days: 2))],
         text: 'Break'));
 
     return regions;
@@ -282,14 +384,26 @@ You can delete any occurrence that is an exception from the recurrence pattern t
 The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) that is used to customize the text style for the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) and [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) of the `specialTimeRegion`.
 
 {% tabs %}
-{% highlight dart hl_lines="17 18 19" %}
+{% highlight dart hl_lines="27 28 29" %}
 
-@override
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.week,
-        specialRegions: _getTimeRegions(),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          specialRegions: _getTimeRegions(),
+        ),
       ),
     );
   }
@@ -298,10 +412,10 @@ The `specialTimeRegion` background color can be customized by using the [color](
     final List<TimeRegion> regions = <TimeRegion>[];
     regions.add(TimeRegion(
         startTime: DateTime.now(),
-        endTime: DateTime.now().add(Duration(hours: 1)),
+        endTime: DateTime.now().add(const Duration(hours: 1)),
         enablePointerInteraction: false,
-        textStyle: TextStyle(color: Colors.red, fontSize: 15),
-        color: Color.fromRGBO(255, 236, 179, 1.0),
+        textStyle: const TextStyle(color: Colors.red, fontSize: 15),
+        color: const Color.fromRGBO(255, 236, 179, 1.0),
         iconData: Icons.group));
 
     return regions;
@@ -318,18 +432,31 @@ The `specialTimeRegion` background color can be customized by using the [color](
 The calendar time interval height and width can be adjusted based on the screen height by changing the value of the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) and [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
-{% highlight dart hl_lines="7" %}
+{% highlight dart hl_lines="17" %}
 
-@override
-Widget build(BuildContext context) {
-  return Container(
-    child: SfCalendar(
-      view: CalendarView.week,
-      timeSlotViewSettings: TimeSlotViewSettings(
-        timeIntervalHeight: -1,
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: const TimeSlotViewSettings(
+            timeIntervalHeight: -1,
+          ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -342,20 +469,31 @@ Widget build(BuildContext context) {
 You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
 {% tabs %}
-{% highlight dart hl_lines="8" %}
+{% highlight dart hl_lines="18" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          timeSlotViewSettings: TimeSlotViewSettings(timeRulerSize: 100),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            timeSlotViewSettings: const TimeSlotViewSettings(timeRulerSize: 100),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -368,29 +506,40 @@ Widget build(BuildContext context) {
 The [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/minimumAppointmentDuration.html) property in timeSlotViewSettings is to set an arbitrary height to appointments when it has minimum duration, in timeslot views, so that the subject can be readable.
 
 {% tabs %}
-{% highlight dart hl_lines="10" %}
+{% highlight dart hl_lines="20" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-          timeSlotViewSettings: TimeSlotViewSettings(
-              minimumAppointmentDuration: Duration(minutes: 30)),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                minimumAppointmentDuration: Duration(minutes: 30)),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 _AppointmentDataSource _getCalendarDataSource() {
   List<Appointment> appointments = <Appointment>[];
   appointments.add(Appointment(
     startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
+    endTime: DateTime.now().add(const Duration(minutes: 10)),
     subject: 'Meeting',
     color: Colors.blue,
     startTimeZone: '',
@@ -423,21 +572,32 @@ class _AppointmentDataSource extends CalendarDataSource {
 You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="19" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.timelineWeek,
-          timeSlotViewSettings:
-              TimeSlotViewSettings(timelineAppointmentHeight: 100),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.timelineWeek,
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                timelineAppointmentHeight: 100),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -450,21 +610,32 @@ Widget build(BuildContext context) {
 You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="19" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          timeSlotViewSettings:
-              TimeSlotViewSettings(dateFormat: 'd', dayFormat: 'EEE'),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                dateFormat: 'd', dayFormat: 'EEE'),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -476,21 +647,32 @@ Widget build(BuildContext context) {
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9" %}
+{% highlight dart hl_lines="19" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          timeSlotViewSettings: TimeSlotViewSettings(
-              timeInterval: Duration(minutes: 30), timeFormat: 'h:mm'),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                timeInterval: Duration(minutes: 30), timeFormat: 'h:mm'),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -503,17 +685,27 @@ Widget build(BuildContext context) {
 You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9 10 11 12 13 14" %}
+{% highlight dart hl_lines="19 20 21 22 23 24" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          timeSlotViewSettings: TimeSlotViewSettings(
-              timeTextStyle: TextStyle(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                timeTextStyle: TextStyle(
             fontWeight: FontWeight.w500,
             fontStyle: FontStyle.italic,
             fontSize: 15,
@@ -521,8 +713,8 @@ Widget build(BuildContext context) {
           )),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -534,21 +726,32 @@ Widget build(BuildContext context) {
 All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html) in the calendar.
 
 {% tabs %}
-{% highlight dart hl_lines="9 " %}
+{% highlight dart hl_lines="19" %}
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          timeSlotViewSettings:
-              TimeSlotViewSettings(allDayPanelColor: Colors.green),
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+void main() {
+  runApp(const CalendarApp());
+}
+
+class CalendarApp extends StatelessWidget {
+  const CalendarApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            timeSlotViewSettings: const TimeSlotViewSettings(
+                allDayPanelColor: Colors.green),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
