@@ -2,14 +2,14 @@
 layout: post
 title: Custom shapes in Flutter Range Slider widget | Syncfusion
 description: Learn here all about adding the custom shapes in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
 # Shapes in Flutter Range Slider (SfRangeSlider)
 
-This section helps to learn about how to customize the shapes of the range slider elements.
+This section explains how to customize the shapes of the range slider elements.
 
 ## Track shape
 
@@ -19,19 +19,29 @@ You can change the size and shape of the track using the [`trackShape`](https://
 * paint() - Used to change the track shape.
 
 N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider track.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector track.
+* For the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html), use the `thumbCenter` and `currentValue` parameters of the `paint` override method when customizing the track.
+* For the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) and `SfRangeSelector`, use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the `paint` override method when customizing the track.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfRangeSliderTheme(
-        data: SfRangeSliderThemeData(
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfRangeSliderTheme(
+        data: const SfRangeSliderThemeData(
           activeTrackHeight: 10,
           inactiveTrackHeight: 10,
         ),
@@ -47,10 +57,12 @@ Widget build(BuildContext context) {
           },
         ),
       ),
-   );
+    );
+  }
 }
 
 class _TrackShape extends SfTrackShape {
+  @override
   void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
       Offset? startThumbCenter, Offset? endThumbCenter,
       {required RenderBox parentBox,
@@ -88,20 +100,29 @@ You can change the size and shape of the thumb using the [`thumbShape`](https://
 * paint() - Used to change the thumb shape.
 
 N>
-* You must use the `currentValue` parameter of paint override method for customizing slider thumb.
-* You must use the `currentValues` parameter of paint override method for customizing range slider and range selector thumbs.
+* For the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html), use the `currentValue` parameter of the `paint` override method when customizing the thumb.
+* For the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) and `SfRangeSelector`, use the `currentValues` parameter of the `paint` override method when customizing the thumbs.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 0.0;
-double _max = 10.0;
-SfRangeValues _values = SfRangeValues(2.0, 6.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfRangeSlider(
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final double _min = 0.0;
+  final double _max = 10.0;
+  SfRangeValues _values = const SfRangeValues(2.0, 6.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfRangeSlider(
         min: _min,
         max: _max,
         values: _values,
@@ -112,7 +133,8 @@ Widget build(BuildContext context) {
           });
         },
       ),
-   );
+    );
+  }
 }
 
 class _SfThumbShape extends SfThumbShape {
@@ -155,18 +177,27 @@ You can change the size and shape of the divider using the [`dividerShape`](http
 * paint() - Used to change the divider shape.
 
 N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider divider.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector divider.
+* For the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html), use the `thumbCenter` and `currentValue` parameters of the `paint` override method when customizing the divider.
+* For the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) and `SfRangeSelector`, use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the `paint` override method when customizing the divider.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(2.0, 6.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfRangeSlider(
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(2.0, 6.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfRangeSlider(
         min: 0.0,
         max: 10.0,
         values: _values,
@@ -179,29 +210,30 @@ Widget build(BuildContext context) {
           });
         },
       ),
-   );
+    );
+  }
 }
 
 class _DividerShape extends SfDividerShape {
-   @override
-   void paint(PaintingContext context, Offset center, Offset? thumbCenter,
-        Offset? startThumbCenter, Offset? endThumbCenter,
-        {required RenderBox parentBox,
-        required SfSliderThemeData themeData,
-        SfRangeValues? currentValues,
-        dynamic currentValue,
-        required Paint? paint,
-        required Animation<double> enableAnimation,
-        required TextDirection textDirection}) {
-      final bool isActive =
-          center.dx >= startThumbCenter!.dx && center.dx <= endThumbCenter!.dx;
-      context.canvas.drawRect(
-          Rect.fromCenter(center: center, width: 5.0, height: 10.0),
-          Paint()
-            ..isAntiAlias = true
-            ..style = PaintingStyle.fill
-            ..color = isActive ? themeData.activeTrackColor! : Colors.white);
-   }
+  @override
+  void paint(PaintingContext context, Offset center, Offset? thumbCenter,
+      Offset? startThumbCenter, Offset? endThumbCenter,
+      {required RenderBox parentBox,
+      required SfSliderThemeData themeData,
+      SfRangeValues? currentValues,
+      dynamic currentValue,
+      required Paint? paint,
+      required Animation<double> enableAnimation,
+      required TextDirection textDirection}) {
+    final bool isActive =
+        center.dx >= startThumbCenter!.dx && center.dx <= endThumbCenter!.dx;
+    context.canvas.drawRect(
+        Rect.fromCenter(center: center, width: 5.0, height: 10.0),
+        Paint()
+          ..isAntiAlias = true
+          ..style = PaintingStyle.fill
+          ..color = isActive ? themeData.activeTrackColor! : Colors.white);
+  }
 }
 
 {% endhighlight %}
@@ -217,18 +249,29 @@ You can change the size and shape of the major and minor ticks using the [`tickS
 * paint() - Used to change the ticks shape.
 
 N>
-* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider ticks.
-* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector ticks.
+* For the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html), use the `thumbCenter` and `currentValue` parameters of the `paint` override method when customizing the ticks.
+* For the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) and `SfRangeSelector`, use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the `paint` override method when customizing the ticks.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(2.0, 6.0);
+import 'dart:math' as math;
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: SfRangeSlider(
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(2.0, 6.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfRangeSlider(
         min: 0.0,
         max: 10.0,
         values: _values,
@@ -243,7 +286,8 @@ Widget build(BuildContext context) {
           });
         },
       ),
-   );
+    );
+  }
 }
 
 class _TickShape extends SfTickShape {

@@ -157,7 +157,10 @@ The placeholder can [`scroll`](https://pub.dev/documentation/syncfusion_flutter_
   // Replace the placeholderBehavior value in the previous sample to
   // make the placeholder scroll along with messages.
   placeholderBehavior: AssistPlaceholderBehavior.scrollWithMessage,
-  
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 

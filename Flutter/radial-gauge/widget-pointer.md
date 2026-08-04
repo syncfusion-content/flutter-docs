@@ -2,7 +2,7 @@
 layout: post
 title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
@@ -11,7 +11,32 @@ documentation: ug
 
 [`WidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer-class.html) allows you to point to a desired value with any Flutter widget in a gauge scale. You can set the desired widget to its [`child`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/child.html) property to annotate the pointer value.
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Widget Pointer')),
+        body: const MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +67,7 @@ documentation: ug
                           height: 30.00,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: ExactAssetImage('images/sun.png'),
+                              image: AssetImage('images/sun.png'),
                               fit: BoxFit.fitHeight,
                             ),
                           )
@@ -70,8 +95,10 @@ documentation: ug
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![default widget pointer](images/widget-pointer/widget_pointer.png)
 
@@ -79,9 +106,36 @@ documentation: ug
 
 The widget pointer can be moved near or far from its actual position using the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offset.html) and [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) properties.
 
-When you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to logical pixel, then the widget pointer will be moved based on the logical pixel value. If you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
+When you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to logical pixel, the widget pointer will be moved based on the logical pixel value. If you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to factor, the provided factor will be multiplied by the axis radius value, and the pointer will be moved to the corresponding value. The default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit.html).
 
+**Note:** Add the image to your pubspec.yaml assets section.
+
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Widget Pointer with Offset')),
+        body: const MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +167,7 @@ When you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gau
                           height: 30.00,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: ExactAssetImage('images/sun.png'),
+                              image: AssetImage('images/sun.png'),
                               fit: BoxFit.fitHeight,
                             ),
                           )
@@ -141,7 +195,9 @@ When you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gau
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![widget pointer position](images/widget-pointer/widget_pointer_position.png)

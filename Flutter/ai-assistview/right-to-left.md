@@ -24,7 +24,7 @@ To change the rendering direction from right to left, you can wrap the [`SfAIAss
 >For app-wide RTL support, configure the `MaterialApp` with the appropriate `locale` and `localizationsDelegates`, or set `builder` to wrap the app in a `Directionality` widget. See the Flutter [internationalization guide](https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization) for details.
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="5" %}
 
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_chat/assist_view.dart';
@@ -122,7 +122,6 @@ class RtlPlaceholderExample extends StatelessWidget {
       ),
     );
   }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,7 +134,7 @@ class RtlPlaceholderExample extends StatelessWidget {
 Right to left (RTL) rendering is supported for the [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/composer.html) in the AI AssistView. Composer will be rendered from right to left direction. But, the text entered in the composer will render from the left to right in the composer.
 
 {% tabs %}
-{% highlight dart hl_lines="7 11" %}
+{% highlight dart hl_lines="6 9" %}
 
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_chat/assist_view.dart';
@@ -159,7 +158,6 @@ class RtlComposerExample extends StatelessWidget {
       ),
     );
   }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +171,7 @@ class RtlComposerExample extends StatelessWidget {
 Right to left (RTL) rendering is supported for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/actionButton.html) in the AI AssistView. Action button will be rendered from right to left direction.
 
 {% tabs %}
-{% highlight dart hl_lines="7 11" %}
+{% highlight dart hl_lines="6 9" %}
 
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_chat/assist_view.dart';
@@ -196,8 +194,7 @@ class RtlActionButtonExample extends StatelessWidget {
         ),
       ),
     );
-  }
-} 
+  } 
 
 {% endhighlight %}
 {% endtabs %}
