@@ -9,9 +9,11 @@ documentation: ug
 
 # Styling in Flutter DataGrid (SfDataGrid)
 
-The DataGrid supports to change the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
+The DataGrid supports changing the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
 The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. So, import the below file,
+
+> **Note:** The `SfDataGridTheme` is optional. If not provided, the DataGrid uses default styling values.
 
 {% tabs %}
 {% highlight Dart %}
@@ -23,7 +25,9 @@ import 'package:syncfusion_flutter_core/theme.dart';
 
 ## Change the header background color
 
-Change the header background color by using [SfDataGridThemeData.headerColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerColor.html) property.
+Change the header background color by using [SfDataGridThemeData.headerColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerColor.html) property. The default header background color is based on the platform's theme (light or dark).
+
+> **Note:** This property applies to all column headers in the grid.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -81,7 +85,7 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
 
 Change the color of the header on hovering by using the [headerHoverColor]( https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerHoverColor.html) property.
 
-N> This is applicable for web and desktop platforms.
+> **Note:** This is applicable for web and desktop platforms.
 
 {% tabs %}
 {% highlight Dart %}
@@ -137,7 +141,9 @@ N> This is applicable for web and desktop platforms.
 
 ## Change the row background color
 
-The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
+The DataGrid supports changing the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
+
+> **Note:** You must implement a custom [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) and override the [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildRow.html) method to apply row background colors.
 
 {% tabs %}
 {% highlight Dart %}
@@ -191,6 +197,8 @@ class EmployeeDataSource extends DataGridSource {
 ## Styling grid lines
 
 The color and thickness of the grid lines can be changed by using the [SfDataGridThemeData.gridLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/gridLineColor.html) and [SfDataGridThemeData.gridLineStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/gridLineStrokeWidth.html) properties.
+
+> **Note:** Default `gridLineColor` is based on the platform theme. Default `gridLineStrokeWidth` is 1.0. Both properties apply to grid lines controlled by `gridLinesVisibility` and `headerGridLinesVisibility` properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -246,19 +254,19 @@ The color and thickness of the grid lines can be changed by using the [SfDataGri
 
 ![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
 
-## Show vertical and horizontal grid lines
+## Configure grid line visibility
 
-To show the vertical and horizontal gridlines, use the following properties. 
+To customize grid line visibility, use the following properties. 
 
-* [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): To set the border lines for the cells other than a header and stacked header cells. 
-* [SfDataGrid.headerGridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerGridLinesVisibility.html): To set the border lines only for header and stacked header cells.
+* [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): Controls border lines for cells (excluding header and stacked header cells). 
+* [SfDataGrid.headerGridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerGridLinesVisibility.html): Controls border lines for header and stacked header cells.
 
-The following is the list of options available to customize gridlines.
+The following [GridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridLinesVisibility.html) enum values are available:
 
-* Vertical
-* Horizontal
-* Both
-* None
+* `GridLinesVisibility.vertical`: Shows only vertical grid lines
+* `GridLinesVisibility.horizontal`: Shows only horizontal grid lines
+* `GridLinesVisibility.both`: Shows both vertical and horizontal grid lines
+* `GridLinesVisibility.none`: Hides all grid lines
 
 The following code describes how to show vertical and horizontal grid lines for the `SfDataGrid`.
 
@@ -322,7 +330,7 @@ The following code describes how to show vertical and horizontal grid lines for 
 
 By default, the row highlighting on hovering support is enabled for the web and desktop platforms. Disable the row highlighting by setting the [SfDataGrid.highlightRowOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/highlightRowOnHover.html) property to `false`.
 
-N> This is applicable for web and desktop platforms.
+> **Note:** Row highlighting on hover is only applicable for web and desktop platforms. On mobile platforms (iOS, Android), row highlighting is not shown.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -371,6 +379,8 @@ N> This is applicable for web and desktop platforms.
 ## Change the row highlighting background color and text style
 
 Change the row highlighting color and text style by using the [SfDataGridThemeData.rowHoverColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/rowHoverColor.html) and the [SfDataGridThemeData.rowHoverTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/rowHoverTextStyle.html) properties.
+
+> **Note:** Both properties work together to customize the hover appearance. Setting only `rowHoverColor` applies the background color while keeping the default text style. Setting only `rowHoverTextStyle` applies the text styling while keeping the default hover background. These properties are applicable for web and desktop platforms only.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -424,7 +434,9 @@ Change the row highlighting color and text style by using the [SfDataGridThemeDa
 
 ## Change the cell value color
 
-The DataGrid requires a widget for each cell from the user end. Typically, users load the [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) widget to display the cell values. So that, text color can be changed by setting the [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html) to the style property of the `Text` widget.
+The DataGrid requires a widget for each cell from the user end. Typically, users load the [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) widget to display the cell values. Text color can be changed by setting the [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html) to the style property of the `Text` widget.
+
+> **Note:** Cell customization requires overriding the [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildRow.html) method in [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html). This is the recommended approach for per-cell styling.
 
 {% tabs %}
 {% highlight Dart %}
