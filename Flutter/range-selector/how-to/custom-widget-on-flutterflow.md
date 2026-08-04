@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> RangeSelector widget in Flutter?
+# How to add Syncfusion® RangeSelector widget in FlutterFlow?
 
 ## Overview
 
