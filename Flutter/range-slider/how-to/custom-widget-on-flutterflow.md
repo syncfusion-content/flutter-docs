@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> RangeSlider widget in Flutter?
+# How to add Syncfusion® RangeSlider widget in FlutterFlow?
 
 ## Overview
 
@@ -74,4 +74,4 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Page](how-to-section-images/page.png)
 
->**Note**: To wire the custom widget to data, use FlutterFlow's [component parameters](https://docs.flutterflow.io/components/custom-components#adding-parameters) to expose the `values`, `min`, `max`, `onChanged`, and other properties from the custom widget, then bind those parameters to a [FlutterFlow state variable](https://docs.flutterflow.io/actions/backend/backend-actions) or [supabase/firebase data source](https://docs.flutterflow.io/data) from the right-hand properties panel. The custom widget's properties appear in the properties panel once they have been exposed as component parameters, allowing you to bind the slider's selected range to your page state.
+>**Note**: To wire the custom widget to data, use FlutterFlow's [component parameters](https://docs.flutterflow.io/resources/ui/components/creating-components/) to expose the `values`, `min`, `max`, `onChanged`, and other properties from the custom widget, then bind those parameters to a [FlutterFlow state variable](https://docs.flutterflow.io/resources/data-representation/app-state/) or [supabase/firebase data source](https://docs.flutterflow.io/integrations/supabase/setup/) from the right-hand properties panel. The custom widget's properties appear in the properties panel once they have been exposed as component parameters, allowing you to bind the slider's selected range to your page state.
