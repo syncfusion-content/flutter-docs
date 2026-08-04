@@ -9,15 +9,17 @@ documentation: ug
 
 # Getting started with Flutter DataGrid (SfDataGrid)
 
-This section explains the steps required to add the DataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
+This section explains the steps required to add the SfDataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
 
-To get started quickly with Flutter DataGrid, check out this video:
+> **Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+
+To get started quickly with Flutter SfDataGrid, check out this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
 <iframe id='FlutterDataGridVideoTutorial' src='https://www.youtube.com/embed/-ULsEfjxFuY'></iframe>
 
-## Add Flutter DataGrid to an application
+## Add Flutter SfDataGrid to an application
 
-Create a simple project using the instruction given in the  [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instruction given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
@@ -31,7 +33,7 @@ Add the Syncfusion® Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package.
+> **Note:** Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package. Refer to the [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) page to check the latest available version.
 
 **Get packages**
 
@@ -55,9 +57,9 @@ Import the following package in your Dart code.
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize DataGrid
+## Initialize SfDataGrid
 
-Add the SfDataGrid widget as a child of any widget. The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) and [columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) properties. Find more details on these properties in further topics.
+Add the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) widget as a child of any widget. The `SfDataGrid` widget requires the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) and [columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) properties. The `source` property is required to provide the data to display, and `columns` is required to define the grid structure. Find more details on these properties in further topics.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -119,9 +121,11 @@ Add the SfDataGrid widget as a child of any widget. The [SfDataGrid](https://pub
 
 {% endhighlight %}
 {% endtabs %}
-## Creating Data for an Application
+## Creating data for an application
 
-The `SfDataGrid` requires data to display. Create a simple data source for the `SfDataGrid` as shown in the following code example.
+The `SfDataGrid` requires data to display. Create a data model class and populate it with sample data as shown in the following code example.
+
+**Create the Employee model class:**
 
 {% tabs %}
 {% highlight Dart %} 
@@ -137,7 +141,9 @@ class Employee {
 {% endhighlight %}
 {% endtabs %}
 
-Create the collection of Employee data with the required number of data objects. Here, the `getEmployeeData` method which is used to populate the data objects is initialized in `initState()`.
+**Create sample employee collection:**
+
+Create a collection of `Employee` objects in your StatefulWidget. The following code example shows how to initialize the employee data collection in `initState()` method. You will use this data source in the next step.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -171,15 +177,15 @@ List<Employee> getEmployeeData() {
 {% endhighlight %}
 {% endtabs %}
 
-## Creating DataSource for DataGrid
+## Creating data source for SfDataGrid
 
-[DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
+[DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. Create a custom `DataGridSource` by extending `DataGridSource` and override the following required properties:
 
-* **`rows`** - Fetches the rows available for data population. Also, it is used to fetch the corresponding data object to process the selection. This contains the collection of the `DataGridRow` where each row contains the collection of the `DataGridCell`. Each cell should have the cell value in the `value` property. The `value` is used to perform the sorting for columns.
+* **`rows`** - Returns a list of [DataGridRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRow-class.html) objects. Each `DataGridRow` contains a collection of [DataGridCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCell-class.html) objects with cell values. The cell `value` property is used for sorting and selection operations.
 
-* **`buildRow`** - Fetches the widget for each cell with `DataGridRowAdapter`.
+* **`buildRow`** - Returns a [DataGridRowAdapter](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter-class.html) that builds the widget for each cell in the row.
 
-`DataGridSource` objects are expected to be long-lived, not recreated with each build.
+> **Note:** `DataGridSource` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridSource` once in the `initState()` method and reuse it.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -224,7 +230,9 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-Create an instance of the `DataGridSource` and set this object to the `source` property of the `SfDataGrid`.
+**Use the data source in SfDataGrid:**
+
+Set the initialized `DataGridSource` to the `source` property of the `SfDataGrid` widget in the `build()` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -234,20 +242,23 @@ late EmployeeDataSource _employeeDataSource;
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfDataGrid(
+    body: SfDataGrid(
       source: _employeeDataSource,
-  ));
+      columns: [
+        // Define columns here
+      ],
+    ),
+  );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**  
-  You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
+> **Note:** You can download the demo application from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-flutter-datagrid).
 
 ## Defining columns
 
-The `SfDataGrid` supports adding any widget in a column using the `GridColumn` property. Add the column collection to the `columns` property.
+The `SfDataGrid` supports adding any widget in a column using the [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) widget. Add the column collection to the `columns` property. Each `GridColumn` requires a `columnName` that matches the cell names in your data source and a `label` widget to display the column header.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -302,144 +313,169 @@ The `SfDataGrid` supports adding any widget in a column using the `GridColumn` p
 
 ## Selection
 
-The `SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether the user can select a single row or multiple rows. 
+The `SfDataGrid` allows you to select one or more rows. Use the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property to specify the selection behavior: single row or multiple rows.
+
+**Enable row selection:**
 
 {% tabs %}
 {% highlight Dart %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: [
-          GridColumn(
-            columnName: 'id',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
-          GridColumn(
-            columnName: 'name',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+        ),
+        GridColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
-          GridColumn(
-            columnName: 'designation',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+        ),
+        GridColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
-          GridColumn(
-            columnName: 'salary',
-            label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              )
-            )
+        ),
+        GridColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
-        ],
-        selectionMode: SelectionMode.multiple,
-      )
-    );
-  }
+        ),
+      ],
+      selectionMode: SelectionMode.multiple,
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html), [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) and [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) properties in [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html). You need to initialize the `DataGridController` object to the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property of `SfDataGrid.`
+**Retrieve selection information:**
 
-`DataGridController` objects are expected to be long-lived, not recreated with each build.
+You can retrieve information about the selected rows using the [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html). Initialize a `DataGridController` and assign it to the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property of `SfDataGrid` to access selection properties:
+
+* [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html) - Gets the index of the selected row
+* [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) - Gets the currently selected row
+* [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) - Gets all selected rows
+
+> **Note:** `DataGridController` objects are expected to be long-lived, not recreated with each build. Initialize the `DataGridController` once in your State class and reuse it.
 
 {% tabs %}
 {% highlight Dart %} 
 
-  final DataGridController _controller = DataGridController();
+final DataGridController _controller = DataGridController();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Column(children: [
-      TextButton(
-          child: Text('Get Selection Information'),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        TextButton(
           onPressed: () {
             int selectedIndex = _controller.selectedIndex;
-            DataGridRow selectedRow = _controller.selectedRow!;
+            DataGridRow? selectedRow = _controller.selectedRow;
             List<DataGridRow> selectedRows = _controller.selectedRows;
-            print(selectedIndex);
-            print(selectedRow);
-            print(selectedRows);
-          }),
-      Expanded(
+            
+            if (selectedRow != null) {
+              debugPrint('Selected Index: $selectedIndex');
+              debugPrint('Selected Row: $selectedRow');
+              debugPrint('All Selected Rows: $selectedRows');
+            } else {
+              debugPrint('No row selected');
+            }
+          },
+          child: const Text('Get Selection Information'),
+        ),
+        Expanded(
           child: SfDataGrid(
-        source: _employeeDataSource,
-        columns: [
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+            source: _employeeDataSource,
+            columns: [
+              GridColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
-                  child: Text(
+                  child: const Text(
                     'ID',
                     overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
-                  child: Text(
+                  child: const Text(
                     'Name',
                     overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
-                  child: Text(
+                  child: const Text(
                     'Designation',
                     overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
-                  child: Text(
+                  child: const Text(
                     'Salary',
                     overflow: TextOverflow.ellipsis,
-                  ))),
-        ],
-        controller: _controller,
-        selectionMode: SelectionMode.multiple,
-      ))
-    ]));
-  }
+                  ),
+                ),
+              ),
+            ],
+            controller: _controller,
+            selectionMode: SelectionMode.multiple,
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**  
-  `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.
+> **Note:** `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.
