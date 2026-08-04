@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Flutter Date Range Picker Builders (SfDateRangePicker)
 
-The date range picker allows you to create a responsive UI with the conditions based on a widget’s details, and to design and create your custom view to the month cells and year cells in the date range picker.
+The date range picker allows you to design custom views for month and year cells based on cell details.
 
 ## Cell builder
 
@@ -16,69 +16,92 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 
 [DateRangePickerCellDetails](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerCellDetails-class.html): Returns the details of the cell.
 
-* `date`: The date associate with the cell.
+* `date`: The date associated with the cell.
 * `bound`: Returns the cell bounds.
 * `visibleDates`: The visible dates of the current view.
 
 {% tabs %}
-{% highlight dart hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 3 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63" %}
+{% highlight dart hl_lines="11 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65" %}
 
-class MyAppState extends State<MyApp> {
-  final DateRangePickerController _controller = DateRangePickerController();
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SafeArea(
-          child: SfDateRangePicker(
-            controller: _controller,
-            cellBuilder: (
-              BuildContext context,
-              DateRangePickerCellDetails details,
-            ) {
-              final bool isToday = isSameDate(details.date, DateTime.now());
-              final bool isBlackOut = isBlackedDate(details.date);
-              final bool isSpecialDate = isSpecialDay(details.date);
-              return Container(
-                margin: EdgeInsets.all(2),
-                padding: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border:
-                      isToday
-                          ? Border.all(color: Colors.black, width: 2)
-                          : null,
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Text(
-                      details.date.day.toString(),
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold,
-                      ),
+      home: const PickerCellBuilder(),
+    );
+  }
+}
+
+class PickerCellBuilder extends StatefulWidget {
+  const PickerCellBuilder({super.key});
+
+  @override
+  State<PickerCellBuilder> createState() => _PickerCellBuilderState();
+}
+
+class _PickerCellBuilderState extends State<PickerCellBuilder> {
+  final DateRangePickerController _controller = DateRangePickerController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: SfDateRangePicker(
+          controller: _controller,
+          cellBuilder: (
+            BuildContext context,
+            DateRangePickerCellDetails details,
+          ) {
+            final bool isToday = isSameDate(details.date, DateTime.now());
+            final bool isBlackOut = isBlackoutDate(details.date);
+            final bool isSpecialDate = isSpecialDay(details.date);
+            return Container(
+              margin: const EdgeInsets.all(2),
+              padding: const EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                border:
+                    isToday
+                        ? Border.all(color: Colors.black, width: 2)
+                        : null,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text(
+                    details.date.day.toString(),
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
                     ),
-                    isBlackOut
-                        ? Icon(Icons.block_sharp, size: 13)
-                        : isSpecialDate
-                        ? Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.cake, size: 13),
-                            Icon(Icons.celebration, size: 13),
-                            Icon(Icons.audiotrack, size: 13),
-                          ],
-                        )
-                        : Container(),
-                  ],
-                ),
-              );
-            },
-          ),
+                  ),
+                  isBlackOut
+                      ? const Icon(Icons.block_sharp, size: 13)
+                      : isSpecialDate
+                      ? const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.cake, size: 13),
+                          Icon(Icons.celebration, size: 13),
+                          Icon(Icons.audiotrack, size: 13),
+                        ],
+                      )
+                      : Container(),
+                ],
+              ),
+            );
+          },
         ),
       ),
     );
@@ -101,7 +124,7 @@ class MyAppState extends State<MyApp> {
     return false;
   }
 
-  bool isBlackedDate(DateTime date) {
+  bool isBlackoutDate(DateTime date) {
     if (date.day == 17 || date.day == 18) {
       return true;
     }
@@ -114,7 +137,7 @@ class MyAppState extends State<MyApp> {
 
 ![Cell builder](images/builders/cell-builder.jpg)
 
->**NOTE** 
+>**NOTE**
 * Use [HijriDateRangePickerCellDetails](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDateRangePickerCellDetails-class.html) for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
 
 

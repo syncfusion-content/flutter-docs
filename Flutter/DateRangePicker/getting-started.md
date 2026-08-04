@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to add the [date range picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> date range picker widget.
 
-To get start quickly with our Flutter date range picker widget, you can check on this video.
+To get started quickly with our Flutter date range picker widget, you can refer to this video.
 
 <style>#flutterDateRangePickerVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterDateRangePickerVideoTutorial' src='https://www.youtube.com/embed/3TyuUVExuPs'></iframe>
@@ -24,32 +24,35 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion<sup>&reg;</sup> Flutter date range picker dependency to your `pubspec.yaml` file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight yaml %}
 
 dependencies:
-
-syncfusion_flutter_datepicker: ^xx.x.xx
+  syncfusion_flutter_datepicker: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Date Picker`](https://pub.dev/packages/syncfusion_flutter_datepicker/versions) package.
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Date Picker`](https://pub.dev/packages/syncfusion_flutter_datepicker/versions) package. It is recommended to use the latest available version from pub.dev.
 
 **Get packages** 
 
 Run the following command to get the required packages.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight bash %}
 
-$ flutter pub get
+flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
@@ -58,20 +61,33 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 ## Initialize date range picker
 
-After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range picker widget is added as a child of the scaffold widget.
+After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range picker widget is added as a child of the `Scaffold` widget.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: SfDateRangePicker()
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfDateRangePicker(),
+        ),
+      ),
     );
   }
-	
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,16 +98,29 @@ After importing the package, initialize the date range picker widget as a child 
 The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.year
-      )
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.year,
+        ),
+      ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -103,19 +132,32 @@ The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepic
 The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/firstDayOfWeek.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="15" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(
-          firstDayOfWeek: 1
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(
+            firstDayOfWeek: 1,
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,11 +169,17 @@ The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepic
 The selected date or range details can be obtained using the [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback of date range picker. The callback will return the [DateRangePickerSelectionChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionChangedArgs-class.html) which contains the selected date or range details.
 
 {% tabs %}
-{% highlight dart hl_lines="1 2 3 11" %}
+{% highlight dart hl_lines="15 16 17 26" %}
 
-  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-    // TODO: implement your code here
-  }
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -147,6 +195,11 @@ The selected date or range details can be obtained using the [onSelectionChanged
     );
   }
 
+  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
+    // TODO: implement your code here
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,17 +211,30 @@ You can highlight the today’s date by customizing its color in the date range 
 
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        todayHighlightColor: Colors.green,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          todayHighlightColor: Colors.green,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -177,41 +243,53 @@ You can highlight the today’s date by customizing its color in the date range 
 
 You can display action buttons at the bottom of the date range picker by using the [showActionButtons](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showActionButtons.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
-* [confirmText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/confirmText.html) - Customizes the text that display on the confirm button.
+* [confirmText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/confirmText.html) - Customizes the text displayed on the confirm button.
 
-* [cancelText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/cancelText.html) - Customizes the text that display on the cancel button.
+* [cancelText](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/cancelText.html) - Customizes the text displayed on the cancel button.
 
-* [onCancel](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onCancel.html) - Callback function that is triggered when the cancel button is tapped within a date range picker.
+* [onCancel](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onCancel.html) - Callback function that is triggered when the cancel button is tapped within the date range picker.
 
-* [onSubmit](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSubmit.html) - Callback function that is triggered when the confirm button is tapped within a date range picker.
+* [onSubmit](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSubmit.html) - Callback function that is triggered when the confirm button is tapped within the date range picker.
 
 {% tabs %}
-{% highlight dart hl_lines="11" %}
+{% highlight dart hl_lines="16" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: TextButton(
-        child: Text('Show picker'),
-        onPressed: () {
-          showDialog<Widget>(
-            context: context,
-            builder: (BuildContext context) {
-              return SfDateRangePicker(
-                showActionButtons: true,
-                onSubmit: (Object value) {
-                  Navigator.pop(context);
-                },
-                onCancel: () {
-                  Navigator.pop(context);
-                },
-              );
-            },
-          );
-        },
+    return MaterialApp(
+      home: Scaffold(
+        body: TextButton(
+          child: const Text('Show picker'),
+          onPressed: () {
+            showDialog<Widget>(
+              context: context,
+              builder: (BuildContext context) {
+                return SfDateRangePicker(
+                  showActionButtons: true,
+                  onSubmit: (Object value) {
+                    Navigator.pop(context);
+                  },
+                  onCancel: () {
+                    Navigator.pop(context);
+                  },
+                );
+              },
+            );
+          },
+        ),
       ),
     );
-  }     
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -220,20 +298,33 @@ You can display action buttons at the bottom of the date range picker by using t
   
 ## Today button
 
-The today button can be displayed at the bottom of the date range picker by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showTodayButton.html) property of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). It easily moves to the current date of the picker view.
+The today button can be displayed at the bottom of the date range picker by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showTodayButton.html) property of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). The today button moves the view to the current date.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        showTodayButton: true,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          showTodayButton: true,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}

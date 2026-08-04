@@ -16,17 +16,30 @@ You can customize the header of the date range picker using the [headerStyle](ht
 You can customize the height of the header of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="13" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        headerHeight: 100,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          headerHeight: 100,
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,25 +51,38 @@ You can customize the height of the header of [SfDateRangePicker](https://pub.de
 You can customize the header style of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textAlign.html) properties of [DateRangePickerHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14" %}
+{% highlight dart hl_lines="14 15 16 17 18 19 20 21 22 23" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        headerStyle: DateRangePickerHeaderStyle(
-          backgroundColor: Color(0xFF7fcd91),
-          textAlign: TextAlign.center,
-          textStyle: TextStyle(
-            fontStyle: FontStyle.normal,
-            fontSize: 25,
-            letterSpacing: 5,
-            color: Color(0xFFffeaea),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          headerStyle: const DateRangePickerHeaderStyle(
+            backgroundColor: Color(0xFF7fcd91),
+            textAlign: TextAlign.center,
+            textStyle: TextStyle(
+              fontStyle: FontStyle.normal,
+              fontSize: 25,
+              letterSpacing: 5,
+              color: Color(0xFFffeaea),
+            ),
           ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -73,19 +99,32 @@ You can customize the view header of the [SfDateRangePicker](https://pub.dev/doc
 You can customize the view header height of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7" %}
+{% highlight dart hl_lines="14 15" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(
-          viewHeaderHeight: 100,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(
+            viewHeaderHeight: 100,
+          ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,22 +136,35 @@ You can customize the view header height of [SfDateRangePicker](https://pub.dev/
 You can customize the view header style of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of [DateRangePickerViewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9" %}
+{% highlight dart hl_lines="16 17 18" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(
-          viewHeaderStyle: DateRangePickerViewHeaderStyle(
-            backgroundColor: Color(0xFF7fcd91),
-            textStyle: TextStyle(fontSize: 20, letterSpacing: 5),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(
+            viewHeaderStyle: DateRangePickerViewHeaderStyle(
+              backgroundColor: Color(0xFF7fcd91),
+              textStyle: TextStyle(fontSize: 20, letterSpacing: 5),
+            ),
           ),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,17 +176,30 @@ You can customize the view header style of [SfDateRangePicker](https://pub.dev/d
 You can customize the view header of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(dayFormat: 'EEE'),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(dayFormat: 'EEE'),
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
