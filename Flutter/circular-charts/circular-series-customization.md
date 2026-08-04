@@ -11,7 +11,7 @@ documentation: ug
 
 ## Animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default. You can also control the duration of the animation using the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property. You can disable the animation by setting the value to 0.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %} 
@@ -43,7 +43,7 @@ documentation: ug
 
 ### Animation delay
 
-The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
+The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series animates for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) is specified, then the series begins to animate after the specified duration. Defaults to `0`.
 
 {% tabs %}
 {% highlight dart hl_lines="17" %}
@@ -84,12 +84,12 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Dynamic animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animate by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) value to 0, the series won't be animated. 
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provides dynamic animation support for the series. The series can be dynamically added to the chart, and it animates by setting the timer value. When you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) value to 0, the series is not animated. 
 
 
 ## Color Palette
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for a color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series is rendered with an appropriate palette color. Ten colors are available by default.
 
 
 {% tabs %}
@@ -164,8 +164,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Gradient and image shader
 
-The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering
-the data points and legend.
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering the data points and legend.
 
 >**Note**: All the data points of the circular chart are considered together as a single segment and the shader is applied commonly.
 
@@ -540,7 +539,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 ## Empty points
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#gap), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#zero), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#drop) and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#average). Default mode of the empty point is [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#gap).
-
+Data points that have null values are considered empty points. Empty data points are ignored and not plotted in the chart. By using the [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/emptyPointSettings.html) property in a series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html) are [`EmptyPointMode.gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#gap), [`EmptyPointMode.zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#zero), [`EmptyPointMode.drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#drop), and [`EmptyPointMode.average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode.html#average). The d
 {% tabs %}
 {% highlight dart %} 
 

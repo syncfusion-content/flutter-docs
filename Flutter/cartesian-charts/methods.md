@@ -15,7 +15,7 @@ documentation: ug
 
 The `drawRect` method is used to customize the appearance of the plot band.
 
-This following code sample shows how to customize the appearance of the plot band by using drawRect method.
+The following code sample shows how to customize the appearance of the plot band by using the drawRect method.
 
 {% tabs %}
 {% highlight dart %} 

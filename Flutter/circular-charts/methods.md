@@ -73,7 +73,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method is used to display the tooltip at the specified series and point index.
 
-The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
+The following arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
 
 [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - index of the series for which the pointIndex is specified.
 
@@ -136,7 +136,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to display the tooltip at the specified x and y-positions.
 
-x & y - logical pixel values to position the tooltip.
+x and y are logical pixel values used to position the tooltip.
 
 {% tabs %}
 {% highlight dart %} 
@@ -192,7 +192,7 @@ x & y - logical pixel values to position the tooltip.
 
 ### Hide method in tooltipBehavior
 
-The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
+The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displayed tooltip programmatically.
 
 {% tabs %}
 {% highlight dart %} 
@@ -313,9 +313,9 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## PixelToPoint 
 
-Converts logical pixel value to the data point value.
+Converts a logical pixel value to the data point value.
   
-The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
+The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeriesController/pixelToPoint.html) method takes a logical pixel value as input and returns a chart data point.
 
 >**Note**: The method will return the center value of the segment.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Pyramid Chart (SfPyramidChart)
 
-The selection feature in chart lets you to select in a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
+The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either individual segments or a cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 
@@ -125,7 +125,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Toggle selection
 
-You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property true or false. If set to true, deselection will be performed else the point will not get deselected.
+You can decide whether to deselect the selected data point or series, or keep it selected when interacted with again, by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property to `true` or `false`. If set to `true`, deselection will be performed; otherwise, the point will remain selected.
 
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.

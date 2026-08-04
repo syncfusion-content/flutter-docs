@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Cartesian Charts Candle Chart (SfCartesianChart)
 
-To create a Flutter candle chart quickly, you can check this video.
+To create a Flutter candle chart quickly, you can watch this video.
 
 <style>#flutterCandleChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterCandleChartTutorial' src='https://www.youtube.com/embed/g5cniDExpRw'></iframe>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Callbacks in Flutter Pyramid Chart (SfPyramidChart)
 
-The below Callbacks are for Pyramid chart.
+The following callbacks are available for the pyramid chart.
 
 ## onLegendItemRender
 

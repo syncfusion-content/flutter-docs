@@ -9,12 +9,12 @@ documentation: ug
 
 # Flutter Circular Charts Doughnut Chart (SfCircularChart)
 
-To create a Flutter doughnut chart quickly, you can check this video.
+To create a Flutter doughnut chart quickly, you can watch this video.
 
 <style>#flutterDoughnutChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterDoughnutChartTutorial' src='https://www.youtube.com/embed/VJxPp7-2nGk'></iframe>
 
-To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of doughnut segment:
+To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of a doughnut segment:
 
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/opacity.html) - controls the transparency of the chart series.
 * [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderWidth.html) - changes the stroke width of the series.
@@ -101,7 +101,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## Doughnut with center elevation
 
-You can use the Annotations property in charts, to provide center elevation text in doughnut charts as shown below:
+You can use the annotations property in charts to provide center elevation text in doughnut charts, as shown below:
 
 {% tabs %}
 {% highlight dart %} 
@@ -150,7 +150,7 @@ You can use the Annotations property in charts, to provide center elevation text
 
 ## Doughnut with color mapping
 
-You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
+You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to doughnut charts, as shown below:
 
 {% tabs %}
 {% highlight dart %} 
@@ -185,7 +185,7 @@ You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_fl
 
 ## Changing the doughnut size
 
-You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the doughnut chart with respect to the plot area. The default value of this property is 80%.
+You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the doughnut chart with respect to the plot area. The default value of this property is `80%`.
 
 {% tabs %}
 {% highlight dart hl_lines="13" %}
@@ -219,7 +219,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 ## Changing doughnut inner radius
 
-You can change the inner radius of doughnut chart using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) property with respect to the plot area. The value ranges from 0% to 100%.
+You can change the inner radius of the doughnut chart using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) property with respect to the plot area. The value ranges from `0%` to `100%`.
 
 {% tabs %}
 {% highlight dart hl_lines="13" %} 
@@ -362,7 +362,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Grouping data points
 
-The small segments in the doughnut chart can be grouped into **others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is used to specify the grouping type based on the actual data point value or by points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is used to set the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is null, and the default value of [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`CircularChartGroupMode.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartGroupMode.html#point).
+The small segments in the doughnut chart can be grouped into the **Others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is used to specify the grouping type based on the actual data point value or the points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is used to set the limit for grouping data points into a single slice. The grouped segment is labeled as **Others** in the legend and toggled like any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is `null`, and the default value of the [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`CircularChartGroupMode.point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartGroupMode.html#point).
 
 {% tabs %}
 {% highlight dart hl_lines="13 14" %} 

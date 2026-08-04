@@ -11,7 +11,7 @@ documentation: ug
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
+The chart renders based on the parent widget size. If you need the chart to be rendered in a specific size, set the size (width/height) on the parent widget.
 
 You can also customize the following properties:
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/backgroundColor.html) - used to change the background color of the chart.

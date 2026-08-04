@@ -11,7 +11,7 @@ documentation: ug
 
 ## Chart sizing
 
-The chart renders based on the parent widget size. If you need the chart to be rendered in a specific size, then set the size(width/height) to the parent widget.
+The chart renders based on the parent widget size. If you need the chart to be rendered in a specific size, set the width and height on the parent widget.
 
 {% tabs %}
 {% highlight dart hl_lines="13 14" %} 
@@ -51,7 +51,7 @@ The chart renders based on the parent widget size. If you need the chart to be r
 
 ## Chart margin
 
-Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/margin.html) property.
+The chart margin can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/margin.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %} 
@@ -82,7 +82,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 ## Chart area customization
 
-You can customize the area of the chart using the below properties.
+You can customize the chart area using the following properties.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/backgroundImage.html) - used to set the image path.

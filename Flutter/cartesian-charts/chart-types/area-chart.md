@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Cartesian Charts Area Chart (SfCartesianChart)
 
-To create a Flutter area chart quickly, you can check this video.
+To create a Flutter area chart quickly, you can watch this video.
 
 <style>#flutterAreaChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterAreaChartTutorial' src='https://www.youtube.com/embed/E_odUnOsBtQ'></iframe>

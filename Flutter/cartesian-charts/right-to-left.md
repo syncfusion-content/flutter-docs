@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Cartesian Chart (SfCartesianChart)
 
-Cartesian chart supports the right to left rendering. However chart axis, series, and other chart elements rendering will be the same for both LTR and RTL except trackball, tooltip, and legend.
+Cartesian chart supports right-to-left rendering. However, chart axes, series, and other chart elements render the same for both LTR and RTL except for trackball, tooltip, and legend.
 
 ## RTL rendering ways
 

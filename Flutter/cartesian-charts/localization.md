@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Flutter Cartesian Charts (SfCartesianChart)
 
-By default, the Cartesian charts widget supports US English localizations. You can change the other languages by specifying the [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp/MaterialApp.html) properties and adding the `flutter_localizations` package to your application.
+By default, the Cartesian charts widget supports US English localization. You can change it to other languages by specifying the [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp/MaterialApp.html) properties and adding the `flutter_localizations` package to your application.
 
 To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
 

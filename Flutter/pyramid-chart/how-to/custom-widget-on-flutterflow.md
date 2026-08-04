@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our SfPyramidChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the SfPyramidChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 ### Create a new project
 
@@ -23,7 +23,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 2. Click on the `+ Add` button to open a dropdown menu, then select `Widget`.
 3. Update the widget name as desired.
 4. Click the `View Boilerplate Code` button on the right side, represented by this icon `[</>]`.
-5. A popup will appear with startup code; locate the button labeled `</> Copy to Editor` and click on it.
+5. A popup will appear with startup code. Locate the button labeled `</> Copy to Editor` and click it.
 6. Save the widget.
 
 ![Custom Widget](how-to-section-images/custom-widget.png)

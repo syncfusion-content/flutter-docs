@@ -9,9 +9,9 @@ documentation: ug
 
 # Flutter Cartesian Charts Axis Types (SfCartesianChart)
 
-Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
+Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis and a horizontal (X) axis.
 
-The vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the following types of scale:
+The vertical (Y) axis always uses a numerical scale. The horizontal (X) axis supports the following types of scale:
 
 * Category
 * Numeric
@@ -21,7 +21,7 @@ The vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports th
 
 ## Numeric axis
 
-Numeric axis uses numerical scale and displays numbers as labels. By default, [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis-class.html) is set to both horizontal axis and vertical axis.
+Numeric axis uses a numerical scale and displays numbers as labels. By default, [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis-class.html) is set for both the horizontal axis and the vertical axis.
 
 {% tabs %}
 {% highlight dart hl_lines="14 15" %} 
@@ -74,7 +74,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 ### Inversed numeric axis
 
-By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. The axis is rendered from the minimum value to the maximum value by default and can be inverted from the maximum value to the minimum value.
 
 {% tabs %}
 {% highlight dart hl_lines="18 19" %} 
@@ -123,7 +123,7 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 ### Customizing range
 
-To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) properties of [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/NumericAxis.html). By default, nice range will be calculated automatically based on the provided data.
+To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) properties of [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/NumericAxis.html). By default, a nice range is calculated automatically based on the provided data.
 
 {% tabs %}
 {% highlight dart hl_lines="15 16" %} 
@@ -164,7 +164,7 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
 
 ### Customizing interval
 
-Axis interval can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of [`ChartAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis-class.html). By default, nice interval will be calculated based on the minimum and maximum values of the provided data.
+Axis interval can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of [`ChartAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis-class.html). By default, a nice interval is calculated based on the minimum and maximum values of the provided data.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %} 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Cartesian Charts Chart Types (SfCartesianChart)
 
-This page helps to navigate to the Chart types available in the Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts widgets.
+This page helps you navigate the chart types available in the Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts widgets.
 
 <table>
  <tr>

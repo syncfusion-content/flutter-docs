@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in Flutter Circular Charts (SfCircularChart)
 
-Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
+The chart supports annotations, which allow you to mark a specific area of interest in the chart area. You can add custom widgets using this annotation feature, as shown below.
 
 {% tabs %}
 {% highlight dart %} 
@@ -43,13 +43,13 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 ## Positioning the annotation
 
-The [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) values can be specified to align the annotation widget either horizontally or vertically, and the also the property [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html) can be used for placing the annotation whose values range from `0%` to `100%`. 
+The [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) values can be specified to align the annotation widget horizontally or vertically, and the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html) property can be used to place the annotation, with values ranging from `0%` to `100%`. 
 
 Defaults to `0%`.
 
 **Positioning based on Alignment and Radius**
 
-To place the annotation based on the radius values, set the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html), and for changing the alignment of the annotation use the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) properties of annotation are shown in the following code snippet.
+To place the annotation based on the radius value, set the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html). To change the annotation alignment, use the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) properties, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -85,7 +85,7 @@ To place the annotation based on the radius values, set the [`radius`](https://p
 
 ## Chart with watermark
 
-Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
+The chart supports watermark, which allows you to mark a specific area of interest in the chart area. You can add custom widgets and watermarks using this annotation feature, as shown below.
 
 {% tabs %}
 {% highlight dart %} 

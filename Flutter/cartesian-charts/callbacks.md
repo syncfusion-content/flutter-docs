@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Cartesian Charts Callback Events (SfCartesianChart)
 
-This document describes the callbacks available for the Cartesian chart
+This document describes the callbacks available for the Cartesian chart.
 
 ## onTooltipRender
 

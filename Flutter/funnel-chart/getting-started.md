@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
-To get start quickly with our Flutter chart widget, you can check out this video.
+To get started quickly with our Flutter chart widget, you can check out this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/t3Dczqj8-10'></iframe>
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel charts. Here, as we are rendering Funnel chart, initialize SfFunnelChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel charts. Here, since we are rendering a Funnel chart, initialize the SfFunnelChart widget as a child of a Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -81,7 +81,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: An empty chart will be displayed. This is the charts default behavior. 
+>**Note**: An empty chart will be displayed. This is the chart's default behavior. 
 
 ## Bind data source
 
@@ -127,7 +127,7 @@ Based on your data, initialize the series type. In the series, you need to map t
 
 ## Add title
 
-You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
+You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title of the chart can be set as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -173,7 +173,7 @@ You can add data labels to improve the readability of the chart using the [`data
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
-                            // Render the data label
+                            // Render data labels
                             dataLabelSettings:DataLabelSettings(isVisible : true)
                         )
                     )
@@ -191,7 +191,7 @@ You can add data labels to improve the readability of the chart using the [`data
 
 The legend provides information about the series rendered in the chart.
 
-You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
+You can display a legend in the chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
 {% tabs %}
 {% highlight dart %} 
@@ -224,7 +224,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
 
 The tooltip is used when you cannot display information using the data labels due to space constraints.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the Funnel series. The tooltip is enabled as demonstrated in the following code snippet.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/tooltipBehavior.html) property in the chart is used to enable and customize the tooltip for the Funnel series. The tooltip is enabled as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 

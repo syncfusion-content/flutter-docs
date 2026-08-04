@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Flutter Pyramid Chart (SfPyramidChart)
 
-The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains a list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
+The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains a list of chart series and data points in the chart. The information provided in each legend item helps identify the corresponding data series in the chart.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %} 

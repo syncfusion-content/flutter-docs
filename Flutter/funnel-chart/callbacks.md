@@ -9,11 +9,11 @@ documentation: ug
 
 # Callbacks in Flutter Funnel Chart (SfFunnelChart)
 
-The below Callbacks are for Funnel chart.
+The following callbacks are available for the Funnel chart.
 
 ## onLegendItemRender
 
-Triggers when the legend item is rendering. Here, you can customize the legend's text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendItemRender.html) Callback contains the following arguments.
+Triggers when the legend item is rendered. Here, you can customize the legend's text and shape. The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendItemRender.html) callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/text.html) - specifies the content of the legend.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for Funnel chart type alone.
@@ -45,7 +45,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend's
 
 ## onTooltipRender
 
-Triggers while tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onTooltipRender.html) Callback contains the following arguments.
+Triggers while the tooltip is rendering. Here, you can customize the text, header, and x and y positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onTooltipRender.html) callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/text.html) - specifies the content of the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/header.html) - specifies the header content of the tooltip.
@@ -87,7 +87,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
 ## onDataLabelRender
 
-Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelRender.html) Callback contains the following arguments.
+Triggers when the data label is rendered. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelRender.html) callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - specifies the content of the data label.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
@@ -123,7 +123,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 ## onLegendTapped
 
-Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendTapped.html) Callback contains the following arguments.
+Triggers when the legend item is tapped. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendTapped.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/pointIndex.html) - specifies the current point index that is applicable for Funnel series.
@@ -153,7 +153,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 ## onSelectionChanged
 
-Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onSelectionChanged.html) Callback contains the following arguments.
+Triggers while selection changes. Here, you can customize the `selectedColor`, `unselectedColor`, `selectedBorderColor`, `selectedBorderWidth`, `unselectedBorderColor`, and `unselectedBorderWidth` properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onSelectionChanged.html) callback contains the following arguments.
 
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
@@ -201,7 +201,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 ## onDataLabelTapped
 
-Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelTapped.html) Callback contains the following arguments.
+Triggers when the data label of the data point in the series is tapped. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelTapped.html) callback contains the following arguments.
 
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label.
@@ -210,7 +210,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
->**Note**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+>**Note**: This callback will not be called when the builder is specified for the data label (data label template). In this case, the custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html), and this functionality can be achieved at the application level.
 
 {% tabs %}
 {% highlight dart %}
@@ -237,7 +237,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointTap.html) callback contains the following arguments.
+Triggers when the series point is tapped. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -268,7 +268,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointDoubleTap.html) callback contains the following arguments.
+Triggers when the series point is double-tapped. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointDoubleTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -299,7 +299,7 @@ Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointLongPress.html) callback contains the following arguments.
+Triggers when the series point is long-pressed. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/onPointLongPress.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Cartesian Charts Bar Chart (SfCartesianChart)
 
-To create a Flutter bar chart quickly, you can check this video.
+To create a Flutter bar chart quickly, you can watch this video.
 
 <style>#flutterBarChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterBarChartTutorial' src='https://www.youtube.com/embed/MHQzCN_jD1Q'></iframe>

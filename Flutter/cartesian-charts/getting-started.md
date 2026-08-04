@@ -9,9 +9,9 @@ documentation: ug
 
 # Flutter Cartesian Charts Getting Started (SfCartesianChart)
 
-This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
+This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the essential features needed to get started with the chart.
 
-To get started quickly with our Flutter chart widget, you can check out this video.
+To get started quickly with our Flutter chart widget, you can watch this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/JAAnmOfoqg8'></iframe>
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -62,7 +62,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render charts that are plotted in Cartesian coordinates. Here, as we are plotting a line chart, initialize the SfCartesianChart widget as a child of the Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -144,7 +144,7 @@ To know more about how to create Flutter Charts from JSON data, you can watch th
 
 ## Add title
 
-You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
+You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information about the plotted data. The chart title can be set as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -244,9 +244,9 @@ You can add data labels to improve the readability of the chart using the [`data
 
 The legend provides information about the series rendered in the chart.
 
-You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
+You can enable the legend in a chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-Additionally, the series [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in corresponding legends.
+Additionally, the series [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in the corresponding legend.
 
 {% tabs %}
 {% highlight dart %} 
@@ -357,9 +357,9 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Tooltip in Flutter Charts.](images/getting-started/flutter-charts-tooltip.png)
 
-You can find the complete getting started example from this [`link`](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
+You can find the complete getting started example from this [link](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
 
->**Note**: You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its feature highlights. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) to see how to render various chart types and configure them with built-in support for creating visual effects.
 
 #### See Also
 

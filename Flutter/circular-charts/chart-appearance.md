@@ -11,7 +11,7 @@ documentation: ug
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget. By default initializing only the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) without defining any of its properties renders a white screen.
+The chart renders based on the parent widget size. If you need the chart to be rendered in a specific size, set the size (width and height) on the parent widget. By default, initializing only the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) without defining any of its properties renders a white screen.
 
 {% tabs %}
 {% highlight dart hl_lines="8 10" %} 
@@ -38,7 +38,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
 ## Chart margin
 
-Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/margin.html) property.
+The chart margin can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/margin.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="13" %} 
@@ -68,7 +68,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 ## Chart area customization
 
-You can customize the area of the chart using the below properties.
+You can customize the chart area using the following properties.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundImage.html) - used to set the image path.

@@ -35,7 +35,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
->**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) has been migrated to the latest version of Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
+>**Note**: The live version of [Syncfusion<sup>&reg;</sup> Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) has been migrated to the latest version of the Flutter SDK. To ensure compatibility, check [FlutterFlow](https://app.flutterflow.io/dashboard)'s current Flutter version and obtain the corresponding version of [Syncfusion<sup>&reg;</sup> Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) by referring to the [SDK compatibility](https://help.syncfusion.com/flutter/system-requirements#sdk-version-compatibility).
 
 ![Dependency](how-to-section-images/dependency.png)
 
@@ -50,21 +50,21 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 2. Paste the copied import statement into the code editor and then `Save` it.
 ![Import](how-to-section-images/import-package-flutterflow.png)
 
-### Add widget code snippet in code editor
+### Add widget code snippet in the code editor
 
 1. Navigate to the [Example](https://pub.dev/packages/syncfusion_flutter_charts/example) tab in [Syncfusion<sup>&reg;</sup> Flutter Charts](https://pub.dev/packages/syncfusion_flutter_charts) and copy the widget specific codes.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code sample into the code editor, click `Format Code`, and `Save` it.
 ![Code snippet](how-to-section-images/Adding-code-snippent.png)
 
-### Compiling the codes
+### Compiling the code
 
-1. Click the 'Compile Code' button located in the top right corner.
+1. Click the 'Compile Code' button located in the top-right corner.
 2. If there are no errors, save the process. If errors are present, fix them and compile the code again. Once the code has been successfully compiled, save the process.
 
 ![Compile code](how-to-section-images/compile-code.png)
 
->**Note**: The compilation progress takes 2 to 3 minutes to complete.
+>**Note**: The compilation process takes 2 to 3 minutes to complete.
 
 ### Utilizing the custom widget
 

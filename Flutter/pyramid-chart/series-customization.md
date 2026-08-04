@@ -11,7 +11,7 @@ documentation: ug
 
 ## Animation
 
-[`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides animation support for the series. The series will be animated while rendering. Animation is enabled by default, and you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
+[`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides animation support for the series. The series animates while rendering. Animation is enabled by default, and you can also control the duration of the animation using the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property. You can disable the animation by setting the value to 0.
 
 {% tabs %}
 {% highlight dart %} 
@@ -39,7 +39,7 @@ documentation: ug
 
 ### Animation delay
 
-The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
+The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series animates for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDelay.html) is specified, then the series begins to animate after the specified duration. Defaults to `0`.
 
 {% tabs %}
 {% highlight dart %}

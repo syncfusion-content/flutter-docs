@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Flutter Cartesian Charts (SfCartesianChart)
 
-The selection feature in chart let you to select a segment in a series or the series itself. This feature allows you to select either individual or cluster of segments in the chart series.
+The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either an individual segment or a cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart %} 

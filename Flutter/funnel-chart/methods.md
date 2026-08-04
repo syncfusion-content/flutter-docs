@@ -11,16 +11,16 @@ documentation: ug
 
 ## PixelToPoint 
 
-Converts logical pixel value to the data point value.
+Converts a logical pixel value to a data point value.
  
-The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
+The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController/pixelToPoint.html) method takes a logical pixel value as input and returns a chart data point.
 
->**Note**: The method will return the center value of the segment.
+>**Note**: The method returns the center value of the segment.
 
 {% tabs %}
 {% highlight dart %}
 
-    //Initialize the series controller
+    // Initialize the series controller
     FunnelSeriesController? seriesController;
 
     @override

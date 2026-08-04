@@ -9,7 +9,7 @@ documentation: ug
 
 # On-demand loading in Flutter Cartesian Charts (SfCartesianChart)
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to return a widget which can be used to load more data to the chart when the visible range reaches the end on dragging in the chart with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support for returning a widget that can be used to load more data to the chart when the visible range reaches the end while dragging in the chart, with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
 
 To learn more about how to lazy load data while panning in Flutter Charts, you can watch this video.
 

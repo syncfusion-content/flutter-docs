@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left (RTL) in Flutter Pyramid Chart (SfPyramidChart)
 
-Pyramid chart supports right to left rendering. However, series and other chart elements rendering will be the same for both LTR and RTL except legend and tooltip.
+The pyramid chart supports right-to-left rendering. However, series and other chart elements render the same for both LTR and RTL, except for the legend and tooltip.
 
 ## RTL rendering ways
 
