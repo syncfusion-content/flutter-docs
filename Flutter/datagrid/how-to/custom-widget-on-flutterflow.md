@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DataGrid Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Data Grid ( SfDataGrid Widget ) widget in FlutterFlow.
+title: How to add custom widget in Flutter DataGrid | Syncfusion®
+description: You can learn here all about adding Syncfusion® Flutter DataGrid control widget in FlutterFlow including setup, configuration, and customization options.
 platform: flutter
 control: SfDataGrid
 documentation: ug

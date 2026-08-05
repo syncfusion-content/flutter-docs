@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Localization in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about localization of static strings in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Localization in Flutter DataGrid | Syncfusion®
+description: Learn how to localize static strings in Syncfusion® Flutter DataGrid to support multiple languages and provide a localized user experience.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
-# Localization in Flutter DataGrid and DataPager
+# Localization in Flutter DataGrid
 
 ## Localization in Flutter DataGrid (SfDataGrid)
 

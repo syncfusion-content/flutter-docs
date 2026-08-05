@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load More in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to perform lazy loading of rows in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Load More in Flutter DataGrid | Syncfusion®
+description: Learn how to implement lazy loading in Syncfusion® Flutter DataGrid to load rows on demand and improve performance when working with large datasets.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Load more in Flutter Datagrid (SfDataGrid)
+# Load more in Flutter DataGrid 
 
 The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) builder to display the view at bottom of datagrid. 
 

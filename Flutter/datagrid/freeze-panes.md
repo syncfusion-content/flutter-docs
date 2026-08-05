@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze panes in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about the freeze Panes (fixed headers) feature of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Freeze columns in Flutter DataGrid | Syncfusion®
+description: Learn how to use freeze panes in Syncfusion® Flutter DataGrid to keep rows and columns fixed while scrolling through large datasets.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Freeze Panes in Flutter DataGrid (SfDataGrid)
+# Freeze Panes in Flutter DataGrid
 
 The rows and columns can freeze in view like in Excel. They can be frozen by setting the following properties.
 

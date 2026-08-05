@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Flutter DataGrid | DataTable | Syncfusion
-description: Learn all about how to filter the data rows in Syncfusion Flutter DataGrid (SfDataGrid) widget and more here.
+title: Programmatic Filtering in Flutter DataGrid | Syncfusion®
+description: Learn how to filter data rows in Syncfusion® Flutter DataGrid, including built-in filtering options, custom filter conditions, and data filtering customization.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Filtering in Flutter DataGrid (SfDataGrid)
+# Filtering in Flutter DataGrid
 
 Filtering is the process of fetching the values from a collection that satisfy specified condition. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied both through the UI and programmatically.
 
