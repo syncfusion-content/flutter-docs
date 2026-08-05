@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Charts in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to create multiple charts in Syncfusion Flutter Cartesian Charts—add series, use axes, combine types, and configure key features.
+title: Multiple Charts in Flutter Cartesian Chart | Syncfusion®
+description: The multiple charts support in Flutter Cartesian Chart offers displaying and arranging multiple chart instances to compare and analyze datasets together.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Multiple Charts (SfCartesianChart)
+# Multiple Charts in Flutter Cartesian Chart
 
 ## Multiple series
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Cartesian Charts—add dependencies, import, create SfCartesianChart, and configure key features.
+title: Getting Started with Flutter Cartesian Chart | Syncfusion
+description: 	Learn how to get started with Flutter Cartesian Chart provides step-by-step guidance to create, configure, and display interactive charts quickly.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Getting Started (SfCartesianChart)
+# Getting Started with Flutter Cartesian Chart
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the essential features needed to get started with the chart.
 
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml file.
+Add the Syncfusion®<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -34,7 +34,7 @@ Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 

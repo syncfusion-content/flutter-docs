@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Accessibility in Flutter Funnel Chart | Syncfusion®
+description: The accessibility support in Flutter Funnel Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Funnel Chart (SfFunnelChart)
+# Accessibility in Flutter Funnel Chart
 
 ## Sufficient contrast
 

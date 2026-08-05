@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to control annotations in Syncfusion Flutter Cartesian Charts (SfCartesianChart)—learn to add, style annotations, and more key features.
+title: Annotation in Flutter Cartesian Chart | Syncfusion®
+description: The annotation support in Flutter Cartesian Chart offers custom content placement within the chart area to highlight insights and enhance visualization.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Annotation (SfCartesianChart)
+# Annotation in Flutter Cartesian Chart
 
 The chart supports annotations, which allow you to mark a specific area of interest in the chart area. You can add custom widgets using this annotation feature as shown below.
 

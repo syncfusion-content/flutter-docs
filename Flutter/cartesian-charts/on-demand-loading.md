@@ -1,13 +1,13 @@
 ---
 layout: post
-title: On-demand loading in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about On-demand loading feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: On-demand loading in Flutter Cartesian Chart | Syncfusion®
+description: The on-demand loading support in Flutter Cartesian Chart offers dynamic data loading as users interact, improving performance with large datasets.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# On-demand loading in Flutter Cartesian Charts (SfCartesianChart)
+# On-demand loading in Flutter Cartesian Chart
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support for returning a widget that can be used to load more data to the chart when the visible range reaches the end while dragging in the chart, with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
 

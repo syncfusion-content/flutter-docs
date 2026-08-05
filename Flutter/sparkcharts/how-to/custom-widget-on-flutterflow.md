@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spark Chart Widget in FlutterFlow | Sparkline | Syncfusion
-description: Learn here all about adding Syncfusion Flutter Spark Line Chart (SfSparkLineChart) widget in FlutterFlow.
+title: How to add Syncfusion® Spark Chart in FlutterFlow | Syncfusion®
+description: Add Syncfusion® Flutter Spark Chart in FlutterFlow to create compact, interactive charts that visualize trends and data patterns with ease.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> Spark Chart widget in FlutterFlow?
+# How to add Syncfusion® Spark Chart in FlutterFlow
 
 ## Overview
 

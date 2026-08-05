@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart types in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about the available Chart types of Syncfusion Spark Charts widget, its features and more.
+title: Chart types in Flutter Spark Chart | Syncfusion®
+description: The chart types support in Flutter Spark Chart offers line, area, bar, and win-loss charts for compact and effective trend visualization.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Chart types in Flutter Spark Charts
+# Chart types in Flutter Spark Chart
 
 ## Line chart
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Trendlines in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Trendlines feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Trendlines in Flutter Cartesian Chart | Syncfusion®
+description: The trendlines support in Flutter Cartesian Chart offers built-in trend analysis by displaying data patterns and forecasting directions visually.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Trendlines in Flutter Cartesian Charts (SfCartesianChart)
+# Trendlines in Flutter Cartesian Chart
 
 Trendlines are used to show the direction and speed of price changes.
 

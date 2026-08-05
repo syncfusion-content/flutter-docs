@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Spark Charts widget, its features and more.
+title: Accessibility in Flutter Spark Chart | Syncfusion®
+description: The accessibility support in Flutter Spark Chart offers sufficient contrast and large font options, improving readability for all users.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Accessibility in Flutter Spark Charts
+# Accessibility in Flutter Spark Chart
 
 ## Sufficient contrast
 

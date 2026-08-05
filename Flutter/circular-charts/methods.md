@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about available Methods of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Methods in Flutter Circular Chart | Syncfusion®
+description: The methods in Flutter Circular Chart documentation provide publicly accessible APIs for performing chart-related operations programmatically.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Flutter Circular Charts (SfCircularChart)
+# Methods in Flutter Circular Chart
 
 ## Methods in tooltipBehavior
 

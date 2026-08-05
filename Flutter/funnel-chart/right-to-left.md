@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL support in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here about the RTL support in Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: RTL support in Flutter Funnel Chart | Syncfusion®
+description: The RTL support in Flutter Funnel Chart offers right-to-left rendering for chart elements, improving usability in RTL language applications.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter Funnel Chart (SfFunnelChart)
+# Right to Left (RTL) support in Flutter Funnel Chart
 
 The funnel chart supports right-to-left rendering. However, series and other chart elements render the same for both LTR and RTL, except for the legend and tooltip.
 

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Plot band in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about the plot band feature of Syncfusion Spark Charts widget, its properties, and more.
+title: Plot band in Flutter Spark Chart | Syncfusion®
+description: The plot band support in Flutter Spark Chart offers visual highlighting of value ranges to identify targets and thresholds.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
-# Plot band in Flutter Spark Charts 
+# Plot band in Flutter Spark Chart
 
 This feature is used to highlight a particular region in spark charts along the Y axis.
 

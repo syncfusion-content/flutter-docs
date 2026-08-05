@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Callbacks in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Callbacks feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Callbacks in Flutter Funnel Chart | Syncfusion®
+description: The callback support in Flutter Funnel Chart offers events for selection, legend, data labels, tooltips, and rendering to enable interactive experiences.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Flutter Funnel Chart (SfFunnelChart)
+# Callbacks in Flutter Funnel Chart
 
 The following callbacks are available for the Funnel chart.
 

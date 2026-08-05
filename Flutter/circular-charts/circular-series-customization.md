@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series Customization in Flutter Circular Charts | Syncfusion
-description: Step-by-step guide to create and customize series in Syncfusion Flutter Circular Charts—add, style, and configure series, and key features.
+title: Series Customization in Flutter Circular Chart | Syncfusion®
+description: The series customization support in Flutter Circular Chart offers control over colors, borders, spacing, animations, and segment appearance.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Series customization (SfCircularChart)
+# Series Customization in Flutter Circular Chart
 
 ## Animation
 

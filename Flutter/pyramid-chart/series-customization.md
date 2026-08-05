@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about Series customization of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
+title: Series customization in Flutter Pyramid Chart | Syncfusion®
+description: The series customization support in Flutter Pyramid Chart offers control over segment appearance, spacing, colors, and rendering for tailored visualizations.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization in Flutter Pyramid Chart (SfPyramidChart)
+# Series customization in Flutter Pyramid Chart
 
 ## Animation
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title:  Accessibility in Flutter Cartesian Chart | Syncfusion®
+description: The accessibility support in Flutter Cartesian Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Cartesian Charts (SfCartesianChart)
+# Accessibility in Flutter Cartesian Chart
 
 ## Sufficient contrast
 

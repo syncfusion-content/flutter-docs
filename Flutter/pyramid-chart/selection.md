@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about Selection feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
+title: Selection in Flutter Pyramid Chart | Syncfusion®
+description: The selection support in Flutter Pyramid Chart offers interactive segment selection with customizable styles to highlight and analyze data points.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Flutter Pyramid Chart (SfPyramidChart)
+# Selection in Flutter Pyramid Chart
 
 The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either individual segments or a cluster of segments in the chart series.
 

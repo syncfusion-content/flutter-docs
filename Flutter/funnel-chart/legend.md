@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Legend feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Legend in Flutter Funnel Chart | Syncfusion®
+description: The legend support in Flutter Funnel Chart offers customizable legend items and positioning to improve chart readability and data understanding.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Legend in Flutter Funnel Chart (SfFunnelChart)
+# Legend in Flutter Funnel Chart
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/legend.html) contains a list of chart series or data points in the chart. The information provided in each legend item helps identify the corresponding data series in the chart.
 

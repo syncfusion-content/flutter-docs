@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Zooming and Panning in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to enable zooming and panning in Syncfusion Flutter Cartesian Charts—use pinch, double-tap, selection, and configure key features.
+title: Zooming and Panning in Flutter Cartesian Chart | Syncfusion®
+description: The zooming and panning support in Flutter Cartesian Chart offers intuitive navigation to explore, inspect, and analyze large datasets efficiently.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Zooming and Panning (SfCartesianChart)
+# Zooming and Panning in Flutter Cartesian Chart
 
 
 ## Pinch zooming

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Customization of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Customization in Flutter Funnel Chart | Syncfusion®
+description: The customization support in Flutter Funnel Chart offers control over funnel size, neck size, segment gaps, explode behavior, and palette colors.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Customization in Flutter Funnel Chart (SfFunnelChart)
+# Customization in Flutter Funnel Chart
 
 To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html) and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). The following properties are used to customize the appearance of a funnel segment:
 

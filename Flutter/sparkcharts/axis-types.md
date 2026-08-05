@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis types in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about the available axis types of Syncfusion Spark Charts widget, its features and more.
+title: Axis types in Flutter Spark Chart | Syncfusion®
+description: The axis types support in Flutter Spark Chart offers numeric, datetime, and category axes, enabling accurate visualization of diverse data formats.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Axis types in Flutter Spark Charts
+# Axis types in Flutter Spark Chart
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis and a horizontal (X) axis.
 

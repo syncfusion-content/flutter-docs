@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title:  Accessibility in Flutter Circular Chart | Syncfusion®
+description: The accessibility support in Flutter Circular Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Circular Charts (SfCircularChart)
+# Accessibility in Flutter Circular Chart
 
 ## Sufficient contrast
 

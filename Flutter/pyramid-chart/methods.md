@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about available methods of Syncfusion Flutter Pyramid Chart(SfPyramidChart) widget and more.
+title: Methods in Flutter Pyramid Chart | Syncfusion®
+description: The methods in Flutter Pyramid Chart documentation provide publicly accessible APIs for performing chart-related operations programmatically.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Flutter Pyramid Chart (SfPyramidChart)
+# Methods in Flutter Pyramid Chart
 
 ## PixelToPoint 
 

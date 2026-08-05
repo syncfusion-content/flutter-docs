@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to use methods in Syncfusion Flutter Cartesian Charts—show or hide tooltips, trackball, zoom, and configure key features.
+title: Methods in Flutter Cartesian Chart | Syncfusion®
+description: The methods in Flutter Cartesian Chart documentation provide publicly accessible APIs for performing chart-related operations programmatically.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Methods (SfCartesianChart)
+# Methods in Flutter Cartesian Chart
 
 ## Methods in Plot band
 

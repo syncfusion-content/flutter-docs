@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Tooltip feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Tooltip in Flutter Circular Chart | Syncfusion®
+description: The tooltip support in Flutter Circular Chart offers interactive data insights with customizable content and appearance for better user engagement.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Tooltip in Flutter Circular Charts (SfCircularChart)
+# Tooltip in Flutter Circular Chart
 
 The chart provides tooltip support for all the series. It is used to show information about the segment when you tap the segment. To enable the tooltip, you need to set the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property to `true`.
 

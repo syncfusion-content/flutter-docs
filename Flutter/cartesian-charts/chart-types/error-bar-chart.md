@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Error bar chart in Flutter Cartesian Charts widget | Syncfusion
-description: Learn here all about error bar chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Error bar chart in Flutter Cartesian Chart | Syncfusion®
+description: The error bar chart support in Flutter Cartesian Chart offers data variability visualization with customizable error indicators for accurate analysis.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Error bar chart in Flutter Cartesian Charts (SfCartesianChart)
+# Error bar chart in Flutter Cartesian Chart
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement.
 

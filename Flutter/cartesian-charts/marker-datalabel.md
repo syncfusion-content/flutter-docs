@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Marker and Data Label Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to control markers and data labels in Syncfusion Flutter Cartesian Charts—enable, style, and configure key features.
+title: Marker and Data Label in Flutter Cartesian Chart | Syncfusion®
+description: The marker and data label support in Flutter Cartesian Chart offers customizable markers and labels to enhance data visibility and interpretation.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Marker and Data Label (SfCartesianChart)
+# Marker and Data Label in Flutter Cartesian Chart
 
 ## Marker
 

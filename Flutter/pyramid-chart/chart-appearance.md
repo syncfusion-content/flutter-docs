@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance customization in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about Appearance customization of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
+title: Appearance customization in Flutter Pyramid Chart | Syncfusion®
+description: The appearance customization support in Flutter Pyramid Chart offers chart sizing, margins, and chart area settings for flexible visual design.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance customization in Flutter Pyramid Chart (SfPyramidChart)
+# Appearance customization in Flutter Pyramid Chart
 
 ## Chart sizing
 

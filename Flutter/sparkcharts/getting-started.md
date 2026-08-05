@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Spark Charts | Sparkline | Syncfusion
-description: Learn how to get started with the Syncfusion Flutter Spark Charts widget (Sparkline), its elements, and more.
+title: Getting Started with Flutter Spark Chart | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Spark Charts widget, its elements, and customization options.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Getting started with Flutter Spark Charts
+# Getting Started with Flutter Spark Chart
 
 This section explains the steps required to populate the spark charts with data, data labels, and trackball. It covers only the minimal features needed to get started with spark charts.
 
@@ -30,7 +30,7 @@ Add the Syncfusion<sup>&reg;</sup> Flutter Charts package dependency to your pub
 {% endtabs %}
 
 > **NOTE** 
-Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Selection feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Selection in Flutter Funnel Chart | Syncfusion®
+description: The selection support in Flutter Funnel Chart offers interactive segment selection with customizable styles to highlight and analyze data points.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Flutter Funnel Chart (SfFunnelChart)
+# Selection in Flutter Funnel Chart
 
 The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either individual segments or clusters of segments in the chart series.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Selection feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Selection in Flutter Circular Chart | Syncfusion®
+description: The selection support in Flutter Circular Chart offers interactive point and segment selection with customizable styles to highlight data insights.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Flutter Circular Charts (SfCircularChart)
+# Selection in Flutter Circular Chart
 
 The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either an individual segment or a cluster of segments in the chart series.
 

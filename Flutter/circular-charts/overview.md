@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Circular Charts widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Circular Charts (SfCircularChart) widget, its features, and more.
+title: About Syncfusion® Flutter Circular Chart widget | Syncfusion®
+description: Learn here all about introduction of Syncfusion® Flutter Circular Charts widget, its features, and more details.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts (SfCircularChart) Overview
+# About Syncfusion® Flutter Circular Chart
 
 Syncfusion<sup>&reg;</sup> Flutter Circular Charts (SfCircularChart) widget is written natively in Dart for creating beautiful and high-performance circular charts, which are used to build high-quality Flutter applications.
 

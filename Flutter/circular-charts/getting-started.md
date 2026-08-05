@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter Circular Charts | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Circular Charts—add dependencies, import, create SfCircularChart, and configure key features.
+title: Getting Started with Flutter Circular Chart | Syncfusion®
+description: Learn how to get started with Flutter Circular Chart provides step-by-step guidance to create, configure, and display interactive circular charts quickly.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Circular Charts Getting Started (SfCircularChart)
+# Getting Started with Flutter Circular Chart
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
@@ -33,7 +33,7 @@ Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/fl
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
