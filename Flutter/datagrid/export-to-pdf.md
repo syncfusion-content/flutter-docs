@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export Flutter DataGrid to PDF | Flutter DataTable | Syncfusion®
-description: Learn here all about how to export the Syncfusion® Flutter DataGrid (SfDataGrid) into PDF Document and more.
+title: Export Flutter DataGrid to PDF Flutter DataGrid | Syncfusion®
+description: Learn how to export data from Syncfusion® Flutter DataGrid to PDF, including formatting, styling, and customization options for document generation.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Export Flutter DataGrid to PDF (SfDataGrid)
+# Export to PDF in Flutter DataGrid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to PDF document with several customization options. 
 

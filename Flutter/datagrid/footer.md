@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Footer in the Flutter DataGrid | Flutter DataTable | Syncfusion
-description: Learn here all about how to set the footer view to the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Footer in the Flutter DataGrid | Syncfusion®
+description: Learn how to add and customize a footer view in Syncfusion® Flutter DataGrid to display summaries, custom content, and additional information.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Footer in Flutter DataGrid (SfDataGrid)
+# Footer in Flutter DataGrid
 
 Creates an additional row that can be displayed under the last row. Widgets can be displayed in the additional row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 

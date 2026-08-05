@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Selection in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to select a row or multiple rows in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Selection modes in Flutter DataGrid | Syncfusion®
+description: Learn how to select rows and multiple rows in Syncfusion® Flutter DataGrid, including selection modes, customization options, and user interaction features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
-# Selection in Flutter DataGrid (SfDataGrid)
+# Selection in Flutter DataGrid
 
 This section explains how to enable selection in the Datagrid; modes, properties, and callbacks involved in selection and customizations available for selection.
 

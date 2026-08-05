@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns Resizing in Flutter DataGrid | Syncfusion | DataTable
-description: Learn here all about how to resize a column in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Columns Resizing in Flutter DataGrid | Syncfusion®
+description: Learn how to resize columns in Syncfusion® Flutter DataGrid including user-driven resizing, customization options, and responsive layout management.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Columns Resizing in Flutter DataGrid (SfDataGrid)
+# Columns Resizing in Flutter DataGrid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`.
 
