@@ -16,8 +16,8 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
 <div class="table-responsive">
 <table style="table-layout:fixed; width:100%; min-width:900px; border-collapse:collapse;">
   <colgroup>
-    <col >
-    <col>
+    <col style="width:120px">
+    <col style="width:200px">
     <col>
     <col>
     <col>
@@ -44,7 +44,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
            style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;">
           <img src="Images/google_play.svg" width="22" height="22" alt="" style="display:block;">
           <span style="display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;">
-            <span style="font-size:14px; font-weight:700; margin-top:1px;">Google Play Store</span>
+            <span style="font-size:14px;">Google Play Store</span>
           </span>
         </a>
       </td>
@@ -62,7 +62,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
       <td>
         <a href="https://flutter.syncfusion.com" target="_blank" rel="noopener noreferrer"
            style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;"><img src="Images/web_icon.svg" width="22" height="22" alt="" style="display:block;">
-          <span style="font-size:14px; font-weight:700;">Live Demos on Web</span>
+          <span style="font-size:14px;">Live Demos on Web</span>
         </a>
       </td>
       <td>Explore Flutter widget demos directly in your web browser without installation.</td>
@@ -79,7 +79,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
       <td>
         <a href="https://www.microsoft.com/en-us/p/syncfusion-flutter-gallery/9nhnbwcsf85d?activetab=pivot:overviewtab" target="_blank" rel="noopener noreferrer"
            style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;"><img src="Images/microsoft.svg" width="22" height="22" alt="" style="display:block;">
-          <span style="font-size:14px; font-weight:700;">Microsoft Store</span>
+          <span style="font-size:14px; ">Microsoft Store</span>
         </a>
       </td>
       <td>Flutter demos for Windows are available through the Microsoft Store.</td>
@@ -96,7 +96,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
       <td>
         <a href="https://snapcraft.io/syncfusion-flutter-gallery" target="_blank" rel="noopener noreferrer"
            style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;"><img src="Images/snapcraft.svg" width="22" height="22" alt="" style="display:block;">
-          <span style="font-size:14px; font-weight:700;">Snapcraft</span>
+          <span style="font-size:14p"> Get it on Snapcraft</span>
         </a>
       </td>
       <td>Flutter demos for Linux are available through the Snap Store.</td>
