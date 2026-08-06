@@ -2,7 +2,7 @@
 layout: post
 title: About Flutter SignaturePad Control | Syncfusion®
 description: Learn about the Syncfusion® Flutter SignaturePad (SfSignaturePad), its features, signature capture capabilities, and customization options.
-platform: Flutter
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---

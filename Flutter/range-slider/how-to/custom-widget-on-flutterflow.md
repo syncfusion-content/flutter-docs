@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add Range Slider in FlutterFlow (SfRangeSlider)
-description: Learn how to add and use Syncfusion® Flutter Range Slider (SfRangeSlider) in FlutterFlow, including setup, integration, and configuration.
+title: How to Add Range Slider in FlutterFlow | Syncfusion®
+description: Learn Overview in Flutter Button using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# How to Add Range Slider in FlutterFlow | Syncfusion®
+# How to Add Range Slider in FlutterFlow (SfRangeSlider)
 
 ## Overview
 
