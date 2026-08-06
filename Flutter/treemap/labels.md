@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Flutter Treemap widget | Syncfusion
-description: Learn here all about adding the Labels feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
+title: Labels in Flutter Treemap | Syncfusion®
+description: Learn about label support in Syncfusion® Flutter Treemap (SfTreemap), including label customization, text styling, placement, and data visualization.
 platform: flutter
 control: SfTreemap
 documentation: ug

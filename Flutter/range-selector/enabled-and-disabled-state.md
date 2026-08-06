@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable & Disable States in Flutter Range Selector Widget | Syncfusion
-description: Learn here all about the enabled and disabled states in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
+title: Enabled and Disabled States in Flutter Range Selector | Syncfusion®
+description: Learn about enabled and disabled states in Syncfusion® Flutter Range Selector (SfRangeSelector), including customization, appearance, and interaction behavior.
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Enabled and Disabled states in Flutter Range Selector
+# Enabled and Disabled States in Flutter Range Selector
 
 This section explains the enabled and disabled states in the Flutter range selector.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Flutter Slider widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter Slider (SfSlider) widget and how to customize the text.
+title: Accessibility in Flutter Slider | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Slider (SfSlider), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfSlider
 documentation: ug

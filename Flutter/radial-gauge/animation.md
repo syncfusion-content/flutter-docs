@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing animation of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title: Animation in Flutter Radial Gauge | Syncfusion®
+description: Learn about animation support in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including pointer animations, duration settings, and visual effects.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

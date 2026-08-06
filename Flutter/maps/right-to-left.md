@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL in Flutter Maps widget | Syncfusion
-description: This section explains about enabling the RTL rendering in the Syncfusion Flutter Maps (SfMaps) widget.
+title: Right-to-Left (RTL) in Flutter Maps | Syncfusion®
+description: Learn about right-to-left (RTL) support in Syncfusion® Flutter Maps (SfMaps), including map rendering, localization, and layout customization.
 platform: flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter Maps (SfMaps)
+# Right-to-Left (RTL) in Flutter Maps (SfMaps)
 
 ## Enable RTL rendering
 

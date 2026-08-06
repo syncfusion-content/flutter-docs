@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lines in Flutter Maps widget | Syncfusion
-description: Learn here all about adding the Line Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Line Layer in Flutter Maps | Syncfusion®
+description: Learn about line layers in Syncfusion® Flutter Maps (SfMaps), including route visualization, line customization, styling, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Lines in Flutter Maps (SfMaps)
+# Line Layer in Flutter Maps (SfMaps)
 
 Line layer is a sublayer that renders a group of [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add lines and customize them.
 

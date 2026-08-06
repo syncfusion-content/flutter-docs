@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tile Layer in Flutter Maps | Syncfusion
-description: Step-by-step guide to configure the Tile Layer in Syncfusion Flutter Maps—set URL templates, add providers (OSM, Bing, TomTom), and focal point and zoom.
+title: Tile Layer in Flutter Maps | Syncfusion®
+description: Learn about tile layers in Syncfusion® Flutter Maps (SfMaps), including map providers, URL templates, zooming, and tile customization.
 platform: flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Flutter Maps Tile Layer (SfMaps)
+# Tile Layer in Flutter Maps (SfMaps)
 
 The tile layer renders the tiles returned from web map tile services such as Bing Maps, OpenStreetMap, Google Maps, TomTom, and others.
 

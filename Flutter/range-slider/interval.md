@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interval in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the Interval feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Interval in Flutter Range Slider | Syncfusion®
+description: Learn about interval support in Syncfusion® Flutter Range Slider (SfRangeSlider), including interval customization, labels, ticks, and range selection.
 platform: flutter
 control: SfRangeSlider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding polygons in Flutter Maps widget | Syncfusion
-description: Learn here all about adding the Polygons feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Polygons in Flutter Maps | Syncfusion®
+description: Learn about polygon support in Syncfusion® Flutter Maps (SfMaps), including polygon customization, styling, data visualization, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug

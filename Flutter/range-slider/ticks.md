@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tick in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the Tick feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Ticks in Flutter Range Slider | Syncfusion®
+description: Learn about tick support in Syncfusion® Flutter Range Slider (SfRangeSlider), including major ticks, minor ticks, intervals, and customization options.
 platform: flutter
 control: SfRangeSlider
 documentation: ug

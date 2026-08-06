@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Sublayer in Flutter Maps widget | Syncfusion
-description: Learn here all about the Shape Sublayer feature of the Syncfusion Flutter Maps (SfMaps) widget in the tile and the shape layer.
+title: Shape Sublayer in Flutter Maps | Syncfusion®
+description: Learn about shape sublayers in Syncfusion® Flutter Maps (SfMaps), including shape layer customization, data visualization, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tile selection in Flutter Treemap widget | Syncfusion
-description: Learn here all about the Tile selection feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
+title: Tile Selection in Flutter Treemap | Syncfusion®
+description: Learn about tile selection in Syncfusion® Flutter Treemap (SfTreemap), including selection customization, interaction, highlighting, and styling options.
 platform: flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Tile selection in Flutter Treemap (SfTreemap)
+# Tile Selection in Flutter Treemap (SfTreemap)
 
 You can select a tile to highlight that area on the treemap. You can use the callback to perform any action during tile selection.
 

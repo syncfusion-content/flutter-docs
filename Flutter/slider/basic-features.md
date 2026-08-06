@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic features in Flutter Slider | Syncfusion
-description: Step-by-step guide to the core features of Syncfusion Flutter Slider—min/max, value, callbacks, colors, and configuration for numeric and date sliders.
+title: Basic Features in Flutter Slider | Syncfusion®
+description: Learn about the basic features of Syncfusion® Flutter Slider (SfSlider), including values, ranges, callbacks, customization, and date sliders.
 platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Basic Features (SfSlider)
+# Basic Features in Flutter Slider (SfSlider)
 This section explains how to add and configure numeric and date sliders, core properties, and callbacks.
 
 ## Minimum
