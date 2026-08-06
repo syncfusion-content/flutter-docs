@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 	Getting started with Flutter Barcodes widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget, its elements, and more.
+title: 	Getting Started with Flutter Barcodes | Syncfusion® 
+description: Learn how to get started with the Syncfusion® Flutter Barcodes (SfBarcodeGenerator). Explore setup, barcode generation, and customization options.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Getting started with Flutter Barcodes (SfBarcodeGenerator)
+# Getting Started with Flutter Barcodes (SfBarcodeGenerator)
 
 This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> barcode generator widget. 
 

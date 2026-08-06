@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about the interactions in Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more
+title: Interaction in Flutter Linear Gauge | Syncfusion®
+description: Learn about interaction support in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including dragging, pointer interaction, and user input handling.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

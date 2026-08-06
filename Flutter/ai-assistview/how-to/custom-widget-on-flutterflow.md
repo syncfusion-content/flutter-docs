@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AIAssistView Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter AIAssistView ( SfAIAssistView Widget ) widget in FlutterFlow.
+title: How to Add AI AssistView in FlutterFlow | Syncfusion®
+description: Learn how to add and use the Syncfusion® Flutter AI AssistView (SfAIAssistView) in FlutterFlow, including setup, integration, and configuration.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> AIAssistView widget in FlutterFlow?
+# How to Add AI AssistView in FlutterFlow (SfAIAssistView)
 
 ## Overview
 

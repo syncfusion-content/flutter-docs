@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter AI AssistView widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter AI AssistView (SfAIAssistView) widget, its elements, and more.
+title: Getting Started with Flutter AI AssistView | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter AI AssistView (SfAIAssistView). Explore setup, basic features, and customization options.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Getting started with Flutter AI AssistView (SfAIAssistView)
+# Getting Started with Flutter AI AssistView (SfAIAssistView)
 
 This section explains how to add the Flutter AI AssistView widget to a single Flutter application and how to use its basic features.
 

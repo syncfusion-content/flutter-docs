@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Labels of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+title: Labels in Flutter Linear Gauge | Syncfusion®
+description: Learn about label customization in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including label placement, formatting, styling, and appearance.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

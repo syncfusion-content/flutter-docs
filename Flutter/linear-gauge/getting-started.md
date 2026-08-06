@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter Linear Gauge | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Linear Gauge (SfLinearGauge)—add dependencies, import, create `SfLinearGauge`, and configure key features.
+title: Getting Started with Flutter Linear Gauge | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Linear Gauge (SfLinearGauge). Explore setup, gauge configuration, and customization options.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Getting Started (SfLinearGauge)
+# Getting Started with Flutter Linear Gauge (SfLinearGauge)
 
 This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer. It also covers the basic features needed to get started with the Linear Gauge widget.
 
