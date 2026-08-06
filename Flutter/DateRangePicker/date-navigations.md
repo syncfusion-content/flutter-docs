@@ -2,7 +2,7 @@
 layout: post
 title: Date Navigation in Flutter DateRangePicker | Syncfusion®
 description: Learn about date navigation in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including view navigation, date scrolling, and programmatic navigation.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---

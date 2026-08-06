@@ -2,7 +2,7 @@
 layout: post
 title: Callbacks in Flutter DateRangePicker | Syncfusion®
 description: Learn about callback support in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including date selection, view changes, and navigation events.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
