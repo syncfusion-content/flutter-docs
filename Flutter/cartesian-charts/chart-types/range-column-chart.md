@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range Column Chart in Flutter Cartesian Chart
+title: Range Column Chart in Flutter Cartesian Chart | Syncfusion®
 description: The range column chart support in Flutter Cartesian Chart offers visualization of value ranges using columns to compare upper and lower bounds effectively.
 platform: flutter
 control: Chart
