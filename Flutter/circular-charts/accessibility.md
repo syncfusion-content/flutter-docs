@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  Accessibility in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title:  Accessibility in Flutter Circular Chart | Syncfusion®
+description: The accessibility support in Flutter Circular Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Circular Charts (SfCircularChart)
+# Accessibility in Flutter Circular Chart
 
 ## Sufficient contrast
 
-The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set colors for all UI elements.
 
 The customization of colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/circular-charts/chart-title)
@@ -26,7 +26,7 @@ The customization of colors can be done for the following chart elements.
 
 ## Large fonts
 
-The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in Circular chart.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) font size can be adjusted automatically based on device settings and scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in the circular chart.
 * [Chart title](https://help.syncfusion.com/flutter/circular-charts/chart-title)
 * [Data label](https://help.syncfusion.com/flutter/circular-charts/datalabel)
 * [Legend title](https://help.syncfusion.com/flutter/circular-charts/legend#legend-title)
@@ -35,7 +35,7 @@ The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Easily tappable targets
 
-The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides callback support to notify when tapping essential elements in the chart.
 * [Data points](https://help.syncfusion.com/flutter/circular-charts/callbacks#onpointtap)
 * [Data labels](https://help.syncfusion.com/flutter/circular-charts/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/circular-charts/callbacks#onlegendtapped)

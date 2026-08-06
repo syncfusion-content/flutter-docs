@@ -1,15 +1,15 @@
 ---
 layout: post
-title: RTL support in Flutter Circular Charts widget | Syncfusion 
-description: Learn here about the RTL support in Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: RTL support in Flutter Circular Chart | Syncfusion®
+description: The RTL support in Flutter Circular Chart offers right-to-left rendering for chart elements, improving usability in RTL language applications.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Right To Left (RTL) in Flutter Circular Chart (SfCircularChart)
+# RTL support in Flutter Circular Chart
 
-Circular chart supports right to left rendering. But series and other chart elements rendering will be the same for both LTR and RTL except legend and tooltip.
+Circular charts support right-to-left rendering. However, series and other chart elements render the same for both LTR and RTL, except for the legend and tooltip.
 
 ## RTL rendering ways
 
@@ -17,7 +17,7 @@ Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfCircularChart with Directionality widget
 
-To change the rendering direction from right to left, you can wrap the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
+To change the rendering direction from right to left, you can wrap the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}
