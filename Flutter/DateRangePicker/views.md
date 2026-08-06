@@ -2,7 +2,7 @@
 layout: post
 title: Views in Flutter DateRangePicker | Syncfusion®
 description: Learn about view support in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including month, year, decade, and century views.
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
