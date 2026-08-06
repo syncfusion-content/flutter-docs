@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Chart title in Flutter Pyramid Chart | Syncfusion®
-description: The chart title support in Flutter Pyramid Chart offers customizable titles with appearance settings for enhanced context and visual presentation.
+title: Chart title in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Chart title feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart title in Flutter Pyramid Chart
+# Chart title in Flutter Pyramid Chart (SfPyramidChart)
 
-You can define and customize the chart title using the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) property of [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the title text.
+You can define and customize the chart title using [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) property of [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the text for the title. 
 
-The following properties can be used to customize its appearance.
+The Following properties can be used to customize its appearance.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/backgroundColor.html) - used to change the background color.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderColor.html) - used to change the border color.
@@ -22,9 +22,9 @@ The following properties can be used to customize its appearance.
 * [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the chart title.
 * [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the chart title.
 
-### Title alignment
+### Title Alignment
 
-You can align the title text horizontally to the near, center, or far positions of the chart using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/alignment.html) property of the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html).
+You can align the title text content horizontally to the near, center, or far of the chart using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/alignment.html) property of the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html).
 
 {% tabs %}
 {% highlight dart %} 
@@ -40,7 +40,7 @@ You can align the title text horizontally to the near, center, or far positions 
                 backgroundColor: Colors.lightGreen,
                 borderColor: Colors.blue,
                 borderWidth: 2,
-                // Aligns the chart title to the left
+                // Aligns the chart title to left
                 alignment: ChartAlignment.near,
                 textStyle: TextStyle(
                   color: Colors.red,
@@ -49,15 +49,17 @@ You can align the title text horizontally to the near, center, or far positions 
                   fontSize: 14,
                 )
               ),
+              // Initialize category axis
               series: PyramidSeries<ChartData, String>(
                   dataSource: [
+                    // Bind data source
                     ChartData('Jan', 35),
                     ChartData('Feb', 28),
                     ChartData('Mar', 34),
                     ChartData('Apr', 32),
                     ChartData('May', 40)
                   ],
-                  xValueMapper: (ChartData data, _) => data.x,
+                  xValueMapper: (ChartData data, _) =>   data.x,
                   yValueMapper: (ChartData data, _) => data.y
                 )
             )

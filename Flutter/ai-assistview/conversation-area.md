@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conversation Area in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about the conversation area of Syncfusion Flutter AI AssistView (SfAIAssistView) widget and more.
+title: Conversation Area in Flutter AI AssistView | Syncfusion®
+description: Learn about the conversation area in Syncfusion® Flutter AI AssistView (SfAIAssistView), including messages, headers, avatars, suggestions, and toolbars.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Conversation area in Flutter AI AssistView (SfAIAssistView)
+# Conversation Area in Flutter AI AssistView (SfAIAssistView)
 
 This section explains the customization options available for modifying the request and response messages in the AI AssistView widget.
 

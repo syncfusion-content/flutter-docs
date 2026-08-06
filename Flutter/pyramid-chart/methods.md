@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Methods in Flutter Pyramid Chart | Syncfusion®
-description: The methods in Flutter Pyramid Chart documentation provide publicly accessible APIs for performing chart-related operations programmatically.
+title: Methods in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about available methods of Syncfusion Flutter Pyramid Chart(SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Flutter Pyramid Chart
+# Methods in Flutter Pyramid Chart (SfPyramidChart)
 
 ## PixelToPoint 
 
-Converts a logical pixel value to the corresponding data point value.
-
+Converts logical pixel value to the data point value.
+ 
 The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
  
  >**Note**: The method will return the center value of the segment.

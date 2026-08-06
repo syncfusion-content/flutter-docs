@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Radial Gauge Widget in FlutterFlow | Syncfusion
-description: Learn here all about adding Syncfusion Flutter Radial Gauge ( SfRadialGauge Widget ) widget in FlutterFlow.
+title: How to Add Radial Gauge in FlutterFlow | Syncfusion®
+description: Learn how to add and use Syncfusion® Flutter Radial Gauge (SfRadialGauge) in FlutterFlow, including setup, integration, and configuration.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> Radial Gauge widget in Flutter?
+# How to Add Radial Gauge in FlutterFlow (SfRadialGauge)
 
 ## Overview
 

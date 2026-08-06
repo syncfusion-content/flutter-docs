@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag modes in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the multiple drag modes in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Drag Modes in Flutter Range Slider | Syncfusion®
+description: Learn about drag modes in Syncfusion® Flutter Range Slider (SfRangeSlider), including thumb dragging, range dragging, and combined drag interactions.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Drag modes in Flutter Range Slider (SfRangeSlider)
+# Drag Modes in Flutter Range Slider (SfRangeSlider)
 
 ## On thumb
 

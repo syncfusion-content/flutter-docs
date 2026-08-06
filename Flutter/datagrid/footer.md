@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Footer in the Flutter DataGrid | Flutter DataTable | Syncfusion
-description: Learn here all about how to set the footer view to the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Footer in the Flutter DataGrid | Syncfusion®
+description: Learn how to add and customize a footer view in Syncfusion® Flutter DataGrid to display summaries, custom content, and additional information.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Footer in Flutter DataGrid (SfDataGrid)
+# Footer in Flutter DataGrid
 
-The footer row is an additional row that displays below the last data row in the grid. Widgets can be displayed in the footer row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
-
-> **Note:** Before implementing the footer functionality, ensure you have set up the SfDataGrid with a valid [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) and configured the necessary columns.
+Creates an additional row that can be displayed under the last row. Widgets can be displayed in the additional row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -76,9 +74,7 @@ The footer row is an additional row that displays below the last data row in the
 
 ## Change the footer row height
 
-The footer row height can be customized by using the [SfDataGrid.footerHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerHeight.html) property. The default height of the footer row is 49.0 logical pixels.
-
-> **NOTE:** When setting a custom footer height, ensure it is sufficient to display all the content without text overflow or clipping.
+An additional row height can be personalized by using the [SfDataGrid.footerHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerHeight.html) property. The default value of the additional row is 49.0.
 
 {% tabs %}
 {% highlight Dart %}
@@ -135,9 +131,7 @@ The footer row height can be customized by using the [SfDataGrid.footerHeight](h
 
 ## Show the footer row always
 
-By default, the footer row is displayed below the last data row. To keep the footer visible at the bottom of the grid while scrolling vertically, set the [SfDataGrid.footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) property to 1.
-
-> **NOTE:** Setting `footerFrozenRowsCount` to 1 freezes the footer row, ensuring it remains visible when users scroll through the data, similar to freezing header rows.
+By default, the additional row will be displayed below the last row. To show the additional row always on the view bottom, simply set the [SfDataGrid.footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) property to 1.
 
 {% tabs %}
 {% highlight Dart %}

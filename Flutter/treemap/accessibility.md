@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Flutter treemap widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter treemap (SfTreemap) widget and how to customize it.
+title: Accessibility in Flutter Treemap | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Treemap (SfTreemap), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfTreemap
 documentation: ug

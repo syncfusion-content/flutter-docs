@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Message Content in Flutter Chat widget | Syncfusion
-description: Step-by-step guide to customize message content in Syncfusion Flutter Chat (SfChat)—builders, settings, suggestions, avatars.
+title: Message Content in Flutter Chat | Syncfusion®
+description: Learn about message content customization in Syncfusion® Flutter Chat (SfChat), including builders, message settings, suggestions, avatars, and layouts.
 platform: flutter
 control: SfChat
 documentation: ug
 ---
 
-# Messages Content in Flutter Chat (SfChat)
+# Message Content in Flutter Chat (SfChat)
 
 This section explains the customization options available for incoming and outgoing messages in the chat widget.
 

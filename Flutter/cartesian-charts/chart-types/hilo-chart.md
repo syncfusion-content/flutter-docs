@@ -1,13 +1,13 @@
 ---
 layout: post
-title: HiLo Chart in Flutter Cartesian Chart | Syncfusion®
-description: The HiLo chart support in Flutter Cartesian Chart offers visualization of high and low values across categories for effective range analysis.
+title: HiLo Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about hiLo chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# HiLo Chart in Flutter Cartesian Chart
+# HiLo Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter hilo chart quickly, you can check this video.
 

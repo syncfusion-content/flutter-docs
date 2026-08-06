@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Marker and Data label in Flutter Spark Chart | Syncfusion®
-description: The marker and data label support in Flutter Spark Chart offers clear data point value display, improving chart readability and data interpretation.
+title: Marker and data label in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about marker and data label feature of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Marker and Data label in Flutter Spark Chart
+# Marker and data label in Flutter Spark Charts
 
 ## Marker
 
-Markers provide information about the exact point location. You can add a shape to each data point by using the [`marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker-class.html) property with [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) and [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) widgets.
+Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Using the [`marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker-class.html) property, add markers to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), and [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) widgets.
 
 You can use the following properties to customize the appearance:
 
@@ -85,13 +85,13 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
 
 ## Data label
 
-Data labels display data point values to improve readability.
+Data labels are used to display values of data points to improve the readability.
 
-### Enable data labels
+### Enable data label
 
-To enable data labels for spark charts, use the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property in spark chart widgets.
+To enable data label for spark charts, use the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property in spark charts widgets.
 
-The following values are available in spark charts to render data labels:
+Following possible values are available in spark charts to render data label:
 
 * [`SparkChartLabelDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Does not allow to display data points on any side.
 * [`SparkChartLabelDisplayMode.all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on all points.
@@ -123,4 +123,4 @@ The following values are available in spark charts to render data labels:
 
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
 
-> **Note**: The [`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) widget doesn't support data labels.
+N> The [`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) widget doesn't provide data label support.

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Exporting in Flutter Funnel Chart | Syncfusion®
-description: The exporting support in Flutter Funnel Chart offers image and document export options for easy sharing, reporting, and presentation.
+title: Exporting in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Exporting feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Exporting in Flutter Funnel Chart
+# Exporting in Flutter Funnel Chart (SfFunnelChart)
 
-[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support for exporting the funnel chart as a PNG image or as a PDF document.
+[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the funnel chart as a PNG image or as a PDF document.
 
 ## Export image
 
-To export the funnel chart as a PNG image, you can get the image by calling the [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method on the repaint boundary.
+To export the funnel chart as a PNG image, we can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary.
 
 {% tabs %}
 {% highlight dart %} 
@@ -136,7 +136,7 @@ Add the following additional packages to the dependencies in your pubspec.yaml f
 
 {% endhighlight %}
 
-Include the following code snippet in the main.dart file of your Flutter application to export the rendered Funnel chart as a PDF document.
+Include the following code snippet in the main.dart file of your flutter application to export the rendered Funnel chart as a PDF document.
 
 {% tabs %}
 {% highlight dart %} 
@@ -152,7 +152,7 @@ Include the following code snippet in the main.dart file of your Flutter applica
     /// Chart import.
     import 'package:syncfusion_flutter_charts/charts.dart';
 
-    /// PDF import.
+    /// Pdf import.
     import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 
@@ -228,15 +228,15 @@ Include the following code snippet in the main.dart file of your Flutter applica
               bitmap, Rect.fromLTWH(0, 0, pageSize.width, pageSize.height));
           final List<int> bytes = document.saveSync();
           document.dispose();
-          // Get external storage directory
+          //Get external storage directory
           final Directory directory = await getApplicationSupportDirectory();
-          // Get directory path
+          //Get directory path
           final String path = directory.path;
-          // Create an empty file to write PDF data
+          //Create an empty file to write PDF data
           File file = File('$path/Output.pdf');
-          // Write PDF bytes data
+          //Write PDF bytes data
           await file.writeAsBytes(bytes, flush: true);
-          // Open the PDF document on mobile
+          //Open the PDF document in mobile
           OpenFile.open('$path/Output.pdf');
       }
 
@@ -258,4 +258,4 @@ Include the following code snippet in the main.dart file of your Flutter applica
 {% endhighlight %}
 {% endtabs %}
   
-![pdf_export](images/export-funnel-chart/pdf_view.png)
+  ![pdf_export](images/export-funnel-chart/pdf_view.png)

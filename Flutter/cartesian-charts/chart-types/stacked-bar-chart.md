@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Bar Chart in Flutter Cartesian Chart | Syncfusion®
-description: The stacked bar chart support in Flutter Cartesian Chart offers cumulative data comparison by stacking series values to show overall contribution.
+title: Stacked Bar Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Stacked Bar Chart in Syncfusion Flutter Cartesian Charts—add stacked bar series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Stacked Bar Chart in Flutter Cartesian Chart
+# Flutter Cartesian Charts Stacked Bar Chart (SfCartesianChart)
 
 To create a Flutter stacked bar chart quickly, you can check this video.
 

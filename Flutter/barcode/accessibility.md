@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Accessibility in Flutter Barcodes widget | Syncfusion 
-description: Learn here all about the accessibility feature of Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget and more.
+title: Accessibility in Flutter Barcodes | Syncfusion®
+
+description: Learn about accessibility support in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open High Low Close in Flutter Cartesian Chart | Syncfusion®
-description: The open high low close chart support in Flutter Cartesian Chart offers financial data visualization for market analysis.
+title: Open High Low Close in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about open high low close chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Open High Low Close in Flutter Cartesian Chart
+# Open High Low Close in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter open high low close chart quickly, you can check this video.
 

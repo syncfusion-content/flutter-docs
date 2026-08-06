@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Flutter Cartesian Chart | Syncfusion®
-description: The column chart support in Flutter Cartesian Chart offers vertical data comparison with customizable styling to visualize trends and category-based values.
+title: Column Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to create and customize Column Chart in Syncfusion Flutter Cartesian Charts—add column series, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Column Chart in Flutter Cartesian Chart
+# Flutter Cartesian Charts Column Chart (SfCartesianChart)
 
 To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Zooming and Panning in Flutter Cartesian Chart | Syncfusion®
-description: The zooming and panning support in Flutter Cartesian Chart offers intuitive navigation to explore, inspect, and analyze large datasets efficiently.
+title: Zooming and Panning in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to enable zooming and panning in Syncfusion Flutter Cartesian Charts—use pinch, double-tap, selection, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Zooming and Panning in Flutter Cartesian Chart
+# Flutter Cartesian Charts Zooming and Panning (SfCartesianChart)
 
 
 ## Pinch zooming
@@ -50,7 +50,7 @@ Pinch zooming can be enabled by setting the [`enablePinching`](https://pub.dev/d
 
 ## Directional zooming
 
-The directional zooming feature improves the zoom experience by allowing users to zoom in and out in a specific direction (horizontal, vertical, or diagonal) based on their finger gesture. To enable this feature, set the [`enableDirectionalZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDirectionalZooming.html) property to `true`. The default value is `false`. The following code sample demonstrates how to enable directional zooming.
+The directional zooming feature improves the zoom experience by allowing users to zoom in and out in a specific direction (horizontal, vertical, or diagonal) based on their finger gesture. To enable this feature, set the [`enableDirectionalZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDirectionalZooming.html) property to `true`, the default value is `false`. The following code sample demonstrates how to enable directional zooming.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}

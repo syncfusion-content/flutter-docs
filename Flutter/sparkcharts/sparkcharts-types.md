@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Chart types in Flutter Spark Chart | Syncfusion®
-description: The chart types support in Flutter Spark Chart offers line, area, bar, and win-loss charts for compact and effective trend visualization.
+title: Chart types in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about the available Chart types of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Chart types in Flutter Spark Chart
+# Chart types in Flutter Spark Charts
 
 ## Line chart
 
-[`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) is used to identify patterns and trends in data such as seasonal effects, large changes, and turning points over time.
+[`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) is used for identifying patterns and trends in the data such as seasonal effects, large changes and turning points over a period of time. 
 
 The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/color.html) - Specifies the spark line color.
-* [`data`] - Used to bind data to spark line charts.
+* [`data`]()  - Used to bind the data to spark line charts.
 * [`axisCrossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/axisCrossesAt.html) - Specifies the axis line's position.
 * [`axisLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/axisLineColor.html) - Specifies the color of the axis line.
 * [`axisLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/axisLineWidth.html) - Specifies the width of the axis line.
@@ -97,7 +97,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ## Area chart
 
-[`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) is used to emphasize changes in values. It is primarily used when the magnitude of the trend should be communicated rather than individual data values.
+[`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) is used to emphasize a change in values. This is primarily used when the magnitude of the trend is to be communicated rather than individual data values.
 
 The following properties are used to customize the appearance:
 
@@ -149,7 +149,7 @@ The following properties are used to customize the appearance:
 
 ## Bar chart
 
-[`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html) is used to render spark bar series. The following properties are used to customize the appearance:
+[`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html) is used to render the spark bar type series.The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/color.html) - Specifies the fill color of the spark bar chart.
 * [`data`]()  - Used to bind the data to spark area charts.
@@ -203,7 +203,7 @@ The following properties are used to customize the appearance:
 
 ## WinLoss Sparkline chart
 
-[`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) is used to show whether each value is positive or negative and visualize a win-loss scenario.
+[`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) is used to show whether each value is positive or negative visualizing a Win/Loss scenario. 
 
 The following properties are used to customize the appearance:
 
@@ -222,7 +222,7 @@ The following properties are used to customize the appearance:
 * [`lastPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/lastPointColor.html) - Specifies the last point color.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/borderWidth.html) - Changes the stroke width of the win loss chart.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/borderColor.html) - Changes the stroke color of the win loss chart.
-* [`tiePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/tiePointColor.html) - Specifies the tie point color of the win-loss chart.
+* [`tiePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/tiePointColor.html) - Specifies the tie point color of win loss chart. color.
 
 {% tabs %}
 {% highlight dart %} 

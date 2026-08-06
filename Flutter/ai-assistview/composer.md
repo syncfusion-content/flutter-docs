@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Composer in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about Composer feature of Syncfusion Flutter AI AssistView (SfAIAssistView) widget, including its properties and more.
+title: Composer in Flutter AI AssistView | Syncfusion®
+description: Learn about the composer in Syncfusion® Flutter AI AssistView (SfAIAssistView), including text input, styling, decorations, and custom layouts.
 platform: flutter
 control: SfAIAssistView
 documentation: ug

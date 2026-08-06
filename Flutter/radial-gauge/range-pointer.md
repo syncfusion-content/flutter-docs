@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range Pointer in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Range Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title: Range Pointer in Flutter Radial Gauge | Syncfusion®
+description: Learn about range pointers in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including value representation, customization, animation, and styling options.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

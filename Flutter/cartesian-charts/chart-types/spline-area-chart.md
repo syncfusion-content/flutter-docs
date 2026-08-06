@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Area Chart in Flutter Cartesian Chart | Syncfusion®
-description: The spline area chart support in Flutter Cartesian Chart offers smooth, filled curve visualizations to highlight trends and variations across data points.
+title: Spline Area Chart in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to customize Spline Area Chart in Syncfusion Flutter Cartesian Charts—add, style, and configure spline area series, and key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Spline Area Chart in Flutter Cartesian Chart
+# Flutter Cartesian Charts Spline Area Chart (SfCartesianChart)
 
 To render a spline area chart, create an instance of [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of the spline area chart:
 

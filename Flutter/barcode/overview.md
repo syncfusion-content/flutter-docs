@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Barcodes widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget, its features, and more.
+title: About Flutter Barcode Generator | Syncfusion®
+description: Learn about the Syncfusion® Flutter Barcodes (SfBarcodeGenerator), its features, barcode symbologies, and customization options.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Flutter Barcodes (SfBarcodeGenerator) Overview
+# About Flutter Barcode Generator (SfBarcodeGenerator)
 
 The Syncfusion<sup>&reg;</sup> Flutter Barcode Generator is a data visualization widget designed to generate and display data in a machine-readable format. It offers an efficient way to encode text using supported symbology types.
 

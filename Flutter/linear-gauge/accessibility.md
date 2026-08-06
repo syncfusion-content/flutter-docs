@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and how to customize it.
+title: Accessibility in Flutter Linear Gauge | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

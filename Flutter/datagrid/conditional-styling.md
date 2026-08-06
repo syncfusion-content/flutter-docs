@@ -1,46 +1,21 @@
 ---
 layout: post
-title: Conditional Styling in Flutter DataGrid | SfDataGrid | Syncfusion
-description: Learn here all about how to style the rows and cells in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Conditional Styling in Flutter DataGrid | Syncfusion®
+description: Learn how to style rows and columns in Syncfusion® Flutter DataGrid, including custom colors, fonts, templates, and visual enhancements.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Conditional Styling in Flutter DataGrid (SfDataGrid)
+# Conditional Styling in Flutter DataGrid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows customizing the style of individual cells and rows based on your requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
-
-## Employee Model Class
-
-The following examples use an `Employee` model class. Define it as shown below:
-
-```dart
-class Employee {
-  Employee({
-    required this.id,
-    required this.name,
-    required this.designation,
-    required this.salary,
-  });
-
-  final int id;
-  final String name;
-  final String designation;
-  final int salary;
-}
-```
-
-## When to Use Cell-Level vs Row-Level Styling
-
-- **Cell-level styling:** Use when you need to style specific cells based on their individual content or column type. This allows fine-grained control over individual cell appearance.
-- **Row-level styling:** Use when you want to apply consistent styling across an entire row based on row data. This is more efficient for styling multiple cells at once.
 
 ## Cells
 
 ### Styling based on content
 
-Customize the appearance of cells conditionally based on their content by defining custom widgets in the `DataGridRowAdapter.cells` property. In the example below, cells in the designation column are styled with different background colors and text styles based on their values.
+The appearance of cells in `SfDataGrid` can be customized conditionally based on their content by setting your widget to the `DataGridRowAdapter.cells`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -173,7 +148,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Styling alternate cells
 
-Customize the appearance of alternating cells in a column by using the `DataGridSource.buildRow` method and the `effectiveRows` property to determine the row index. The `effectiveRows` property contains the sorted collection of rows if sorting is applied.
+The appearance of alternating cells in a column can be customized conditionally by using the `DataGridSource.buildRow` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -240,7 +215,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Styling based on content
 
-Customize the appearance of rows conditionally based on their content using the `DataGridRowAdapter.color` property. In the example below, rows are styled with different background and text colors based on salary values.
+The appearance of rows in `SfDataGrid` can be customized conditionally based on the content using `DataGridRowAdapter.color`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -315,7 +290,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Styling alternate rows
 
-Customize the appearance of alternating rows in `SfDataGrid` using the `DataGridRowAdapter.color` property. Use the [effectiveRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/effectiveRows.html) property to get the row index. The `effectiveRows` collection contains sorted rows when sorting is applied, ensuring alternate row styling works correctly with sorted data.
+The appearance of the alternating rows in `SfDataGrid` can be customized using the `DataGridRowAdapter.color`. Use the [effectiveRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/effectiveRows.html) property to get the index of the row. This collection contains the sorted collection if the sorting is applied.
 
 {% tabs %}
 {% highlight Dart %} 

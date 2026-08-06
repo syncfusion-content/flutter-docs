@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mirror in Flutter Linear Gauge widget | Syncfusion
-description: Learn here about mirroring the Syncfusion Flutter Linear Gauge (SfLinearGauge) widget with isMirrored property
+title: Mirroring in Flutter Linear Gauge | Syncfusion®
+description: Learn about mirroring support in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including reverse layout configuration using the isMirrored property.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Mirrored in Flutter Linear Gauge (SfLinearGauge)
+# Mirroring in Flutter Linear Gauge (SfLinearGauge)
 
 The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows you to mirror all the gauge elements. This feature is useful when you need to display the gauge in the opposite direction.
 

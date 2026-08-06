@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Area Chart in Flutter Cartesian Chart | Syncfusion®
-description: The step area chart support in Flutter Cartesian Chart offers stepped, filled visualizations to highlight changes that occur at discrete intervals.
+title: Step area Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about step area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Step Area Chart in Flutter Cartesian Chart
+# Step area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To render a step area chart, create an instance of [`StepAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of the step area chart.
 

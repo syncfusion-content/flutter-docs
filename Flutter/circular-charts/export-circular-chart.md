@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Exporting in Flutter Circular Chart | Syncfusion®
-description: The exporting support in Flutter Circular Chart offers image and document export options for easy sharing, reporting, and presentation.
+title: Exporting in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Exporting feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Exporting in Flutter Circular Chart
+# Exporting in Flutter Circular Charts (SfCircularChart)
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support to export the circular chart as a PNG image or as PDF document.
 
 ## Export image
 
-To export the circular chart as a PNG image, you can get the image by calling the [`toImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChartState/toImage.html) method on the repaint boundary.
+To export the circular chart as a PNG image, we can get the image by calling [`toImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChartState/toImage.html) method in repaint boundary.
 
 {% tabs %}
 {% highlight dart %}
@@ -111,7 +111,7 @@ Similar to the above way, we can also export the rendered circular chart as a PD
 
 **Add dependency**
 
-Add the following additional packages to the dependencies in your pubspec.yaml file:
+Add the following additional packages to the dependencies in your pubspec.yaml file.
 
 {% highlight dart %} 
 

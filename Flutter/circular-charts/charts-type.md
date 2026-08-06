@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Chart Types in Flutter Circular Chart | Syncfusion®
-description: The chart types support in Flutter Circular Chart offers pie, doughnut, radial bar charts for diverse data visualization needs.
+title: Chart Types in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about available chart types of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart Types in Flutter Circular Chart
+# Chart Types in Flutter Circular Charts (SfCircularChart)
 
-This page helps you navigate to the chart types available in the Syncfusion<sup>&reg;</sup> Flutter Circular Charts widgets.
+This page helps to navigate to the Chart types available in the Syncfusion<sup>&reg;</sup> Flutter Circular Charts widgets.
 
 <table>
 	<tr>

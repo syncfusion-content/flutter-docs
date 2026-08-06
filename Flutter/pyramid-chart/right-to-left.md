@@ -1,15 +1,15 @@
 ---
 layout: post
-title: RTL support in Flutter Pyramid Chart | Syncfusion®
-description: The RTL support in Flutter Pyramid Chart offers right-to-left rendering for chart elements, improving usability in RTL language applications.
+title: RTL support in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here about the RTL support in Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Right To Left (RTL) in Flutter Pyramid Chart
+# Right To Left (RTL) in Flutter Pyramid Chart (SfPyramidChart)
 
-The pyramid chart supports right-to-left rendering. However, series and other chart elements render the same for both LTR and RTL, except for the legend and tooltip.
+Pyramid chart supports right to left rendering. However, series and other chart elements rendering will be the same for both LTR and RTL except legend and tooltip.
 
 ## RTL rendering ways
 

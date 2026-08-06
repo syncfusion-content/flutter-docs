@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Marker Pointer in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Shape Marker Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+title: Shape Marker Pointer in Flutter Linear Gauge | Syncfusion®
+description: Learn about shape marker pointers in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including marker types, positioning, customization, and styling.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

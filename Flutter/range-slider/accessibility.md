@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Flutter Range Slider widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter Range Slider (SfRangeSlider) widget.
+title: Accessibility in Flutter Slider | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Slider (SfSlider), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Accessibility in Flutter Range Slider (SfRangeSlider)
+# Accessibility in Flutter Slider (SfSlider)
 
 ## Keyboard support
 

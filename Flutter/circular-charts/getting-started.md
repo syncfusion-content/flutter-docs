@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Flutter Circular Chart | Syncfusion®
-description: Learn how to get started with Flutter Circular Chart provides step-by-step guidance to create, configure, and display interactive circular charts quickly.
+title: Getting Started with Flutter Circular Charts | Syncfusion
+description: Step-by-step guide to set up Syncfusion Flutter Circular Charts—add dependencies, import, create SfCircularChart, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting Started with Flutter Circular Chart
+# Flutter Circular Charts Getting Started (SfCircularChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
-To get started quickly with our Flutter chart widget, you can check out this video.
+To get start quickly with our Flutter chart widget, you can check out this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/VJxPp7-2nGk'></iframe>
@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -33,7 +33,7 @@ Add the Syncfusion<sup>&reg;</sup> [Flutter Chart](https://www.syncfusion.com/fl
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, since we are rendering a pie chart, initialize the SfCircularChart widget as a child of a Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -85,7 +85,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 ## Bind data source
 
-Based on your data, initialize the appropriate series type. In the series, you need to map the data source and the fields for x and y data points. Here, a pie series is rendered, as demonstrated in the following code snippet.
+Based on your data, initialize the series type. In the series, you need to map the data source and the fields for x and y data points. Here, pie series is rendered that is demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -127,7 +127,7 @@ Based on your data, initialize the appropriate series type. In the series, you n
 
 ## Add title
 
-You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The chart title can be set as demonstrated in the following code snippet.
+You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart hl_lines="10" %}
@@ -213,7 +213,7 @@ You can add data labels to improve the readability of the chart using the [`data
 
 The legend provides information about the series rendered in the chart.
 
-You can enable the legend in the chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html).
+You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html).
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -257,7 +257,7 @@ You can enable the legend in the chart by setting the [`isVisible`](https://pub.
 
 The tooltip is used when you cannot display information using the data labels due to space constraints.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series. The [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled as demonstrated in the following code snippet.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}

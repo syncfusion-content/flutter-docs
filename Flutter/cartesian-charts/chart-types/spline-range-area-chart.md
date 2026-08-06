@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Range Area Chart in Flutter Cartesian Chart | Syncfusion®
-description: The spline range area chart support in Flutter Cartesian Chart offers smooth visualization of value ranges between upper and lower bounds across data points.
+title: Spline range area in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about spline range area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Spline Range Area Chart in Flutter Cartesian Chart
+# Spline range area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter spline range area chart quickly, you can check this video.
 

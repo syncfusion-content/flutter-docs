@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line Chart in Flutter Cartesian Chart | Syncfusion®
-description: The line chart support in Flutter Cartesian Chart offers trend visualization with customizable lines, markers, and styling for effective data analysis.
+title: Line Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about line chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Line Chart in Flutter Cartesian Chart
+# Line Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter line chart quickly, you can check this video.
 

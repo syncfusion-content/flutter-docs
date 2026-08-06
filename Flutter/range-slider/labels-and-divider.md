@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the Labels feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more. 
+title: Labels in Flutter Range Slider | Syncfusion®
+description: Learn about labels in Syncfusion® Flutter Range Slider (SfRangeSlider), including label formatting, customization, placement, and styling options.
 platform: flutter
 control: SfRangeSlider
 documentation: ug

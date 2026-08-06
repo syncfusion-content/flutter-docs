@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Line Chart in Flutter Cartesian Chart | Syncfusion®
-description: The step line chart support in Flutter Cartesian Chart offers stepped trend visualization to represent data changes that occur at distinct intervals.
+title: Step line Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about step line chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Step Line Chart in Flutter Cartesian Chart
+# Step line Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To render a step line chart, create an instance of [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of the step line chart:
 

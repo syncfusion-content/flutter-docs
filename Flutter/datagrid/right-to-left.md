@@ -1,15 +1,15 @@
 ---
 layout: post
-title: RTL support in Flutter DataGrid | DataTable | Syncfusion 
-description: Learn here about the right to left (RTL) support in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: RTL support in Flutter DataGrid | Syncfusion®
+description: Learn how to enable right-to-left (RTL) support in Syncfusion® Flutter DataGrid to create localized user experiences for RTL languages.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter DataGrid (SfDataGrid)
+# Right to Left (RTL) in Flutter DataGrid
 
-SfDataGrid supports right-to-left (RTL) rendering. When RTL is enabled, columns will be rendered in reverse order, scrollbars will appear on the left side, and text alignment will be mirrored accordingly.
+SfDataGrid supports right-to-left rendering. The columns will be rendered based on LTR and RTL direction.
 
 ## RTL rendering ways
 
@@ -27,48 +27,41 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.fill,
-          columns: <GridColumn>[
-            GridColumn(
-              columnName: 'id',
-              label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text('ID'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'name',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'designation',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Designation', overflow: TextOverflow.ellipsis),
-              ),
-            ),
-            GridColumn(
-              columnName: 'salary',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+        textDirection: TextDirection.rtl,
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            columnWidthMode: ColumnWidthMode.fill,
+            columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.all(16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'ID',
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text('Name'))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text('Salary'))),
+            ]));
   }
 
 {% endhighlight %}
@@ -76,19 +69,19 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 ### Changing the locale to RTL languages
 
-Change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) property of [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) to an RTL language such as Arabic, Persian, Hebrew, Pashto, or Urdu to enable RTL rendering.
+To change the Datagrid rendering direction from right to left, change the [locale](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
-> **Note:** The `flutter_localizations` package is required. Add it to your `pubspec.yaml` file:
-> 
-> ```dart
-> dependencies:
->   flutter_localizations:
->     sdk: flutter
-> ```
-> 
-> Then run `flutter pub get` to download the package.
+To use `flutter_localizations`, add the package as a dependency to `pubspec.yaml` file.
 
-Import the `flutter_localizations` library and configure [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` in your `MaterialApp`.
+{% highlight dart %}
+
+dependencies:
+flutter_localizations:
+  sdk: flutter
+
+{% endhighlight %}
+
+Then, import the `flutter_localizations` library, specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -99,61 +92,50 @@ import 'package:flutter_localizations/flutter_localizations.dart';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: <Locale>[
-        Locale('en'),
-        Locale('ar'),
-        Locale('fa'),
-        Locale('he'),
-        Locale('ps'),
-        Locale('ur'),
-      ],
-      locale: Locale('ar'),
-      home: Scaffold(
-        appBar: AppBar(title: Text('RTL DataGrid')),
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.fill,
-          columns: <GridColumn>[
-            GridColumn(
-              columnName: 'id',
-              label: Container(
-                padding: EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: Text('ID'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'name',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Name'),
-              ),
-            ),
-            GridColumn(
-              columnName: 'designation',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Designation', overflow: TextOverflow.ellipsis),
-              ),
-            ),
-            GridColumn(
-              columnName: 'salary',
-              label: Container(
-                padding: EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: Text('Salary'),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: <Locale>[
+          Locale('en'),
+          Locale('ar'),
+          // ... other locales the app supports
+        ],
+        locale: Locale('ar'),
+        home: SfDataGrid(
+            source: _employeeDataSource,
+            columnWidthMode: ColumnWidthMode.fill,
+            columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.all(16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'ID',
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text('Name'))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text('Salary'))),
+            ]));
   }
 
 {% endhighlight %}

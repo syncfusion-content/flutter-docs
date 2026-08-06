@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Technical Indicators in Flutter Cartesian Chart | Syncfusion®
-description: The technical indicators support in Flutter Cartesian Chart offers built-in financial indicators to analyze trends, momentum, and market movements effectively.
+title: Technical Indicators in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to add technical indicators in Syncfusion Flutter Cartesian Charts—configure AD, ATR, EMA, MACD, RSI, and key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Technical Indicators in Flutter Cartesian Chart
+# Flutter Cartesian Charts Technical Indicators (SfCartesianChart)
 
 The different types of technical indicators available in the chart are as follows:
 
@@ -26,7 +26,7 @@ The different types of technical indicators available in the chart are as follow
 
 ## Adding Technical indicator into Chart
  
-To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator-class.html) collection using the indicators in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance:
+To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator-class.html) collection using the indicators in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties can be used to customize the appearance:
 
 * [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/isVisible.html) - To check the visibility of the indicator.
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AtrIndicator/period.html)- Used to indicates the moving average period.

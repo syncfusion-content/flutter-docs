@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DateRangePicker Widget in FlutterFlow framework | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter DateRangePicker ( SfDateRangePicker ) widget in FlutterFlow framework.
+title: How to Add DateRangePicker in FlutterFlow | Syncfusion®
+description: Learn how to add and use Syncfusion® Flutter DateRangePicker (SfDateRangePicker) in FlutterFlow, including setup, integration, and configuration.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> DateRangePicker widget in FlutterFlow?
+# How to Add DateRangePicker in FlutterFlow (SfDateRangePicker)
 
 ## Overview
 

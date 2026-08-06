@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Plot band in Flutter Spark Chart | Syncfusion®
-description: The plot band support in Flutter Spark Chart offers visual highlighting of value ranges to identify targets and thresholds.
+title: Plot band in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about the plot band feature of Syncfusion Spark Charts widget, its properties, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
-# Plot band in Flutter Spark Chart
+# Plot band in Flutter Spark Charts 
 
-This feature is used to highlight a particular region in spark charts along the Y axis.
+This feature is used to highlight a particular region in the spark charts along the Y axis.
 
-The following properties are used to customize the appearance:
-* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/start.html) - Configures the start plot band value on the Y axis.
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/end.html) - Configures the end plot band value on the Y axis.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/color.html) - Changes the plot band color.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderColor.html) - Changes the plot band border color.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderWidth.html) - Changes the plot band border width.
+The following properties are used to customize the appearances:
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/start.html) - used to configure the start plot band value in Y axis.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/end.html) - used to configure the end plot band values in Y axis.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/color.html) - used to change the color for plot band.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderColor.html) - used to change the border color of plot band.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/borderWidth.html) - used to change the border width of plot band.
 
 {% tabs %}
 {% highlight dart %} 

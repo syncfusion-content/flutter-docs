@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Box and Whisker Chart in Flutter Cartesian Chart | Syncfusion®
-description: The box and whisker chart support in Flutter Cartesian Chart offers statistical data visualization to display distribution, quartiles, and outliers effectively.
+title: Box and Whisker Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about box and whisker chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Box and Whisker Chart in Flutter Cartesian Chart
+# Box and Whisker Chart in Flutter Cartesian Charts (SfCartesianChart)
 
-The [Flutter Box and Whisker Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/box-and-whisker-chart) can be used to visualize a group of numerical data through their quartiles. It is also referred to as a box plot. Box plots may also have lines extending vertically from the boxes (whiskers), indicating variability outside the upper and lower quartiles.
+The [Flutter Box and Whisker Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/box-and-whisker-chart) can be used to visualize a group of numerical data through their quartiles. It is also referred to as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
 
 To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance.
 

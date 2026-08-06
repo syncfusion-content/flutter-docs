@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Area Chart in Flutter Cartesian Chart | Syncfusion®
-description: The stacked area chart support in Flutter Cartesian Chart offers visualization of cumulative trends by stacking series values to show overall contribution.
+title: Stacked area Chart in Flutter Cartesian Charts | Syncfusion 
+description: Learn here all about stacked area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Stacked Area Chart in Flutter Cartesian Chart
+# Stacked area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter stacked area chart quickly, you can check this video.
 

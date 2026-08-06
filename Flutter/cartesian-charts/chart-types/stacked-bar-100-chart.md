@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Bar Chart in Flutter Cartesian Chart | Syncfusion®
-description: The 100% stacked bar chart support in Flutter Cartesian Chart offers proportional data comparison, showing each series contribution as a percentage of the total
+title: 100% Stacked bar in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about 100% stacked bar chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# 100% Stacked Bar Chart in Flutter Cartesian Chart
+# 100% Stacked bar Chart in Flutter Cartesian Charts (SfCartesianChart)
 
 To create a Flutter 100% stacked bar chart quickly, you can check this video.
 

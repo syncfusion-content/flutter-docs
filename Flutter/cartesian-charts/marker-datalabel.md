@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Marker and Data Label in Flutter Cartesian Chart | Syncfusion®
-description: The marker and data label support in Flutter Cartesian Chart offers customizable markers and labels to enhance data visibility and interpretation.
+title: Marker and Data Label Customization in Flutter Cartesian Charts | Syncfusion
+description: Step-by-step guide to control markers and data labels in Syncfusion Flutter Cartesian Charts—enable, style, and configure key features.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Marker and Data Label in Flutter Cartesian Chart
+# Flutter Cartesian Charts Marker and Data Label (SfCartesianChart)
 
 ## Marker
 
-Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Markers can be enabled by using the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/markerSettings.html). You can use the following properties to customize their appearance.
+Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Markers can be enabled by using the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/markerSettings.html). You can use the following properties to customize the appearance.
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/color.html) - used to change the color of the marker shape.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/borderWidth.html) - used to change the stroke width of the marker shape.

@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Getting Started with Flutter Spark Chart | Syncfusion®
-description: Learn how to get started with the Syncfusion® Flutter Spark Charts widget, its elements, and customization options.
+title: Getting started with Flutter Spark Charts | Sparkline | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Spark Charts widget (Sparkline), its elements, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Getting Started with Flutter Spark Chart
+# Getting started with Flutter Spark Charts
 
-This section explains the steps required to populate the spark charts with data, data labels, and trackball. It covers only the minimal features needed to get started with spark charts.
+This section explains the steps required to populate the spark charts with data, data labels, markers, and trackball. This section covers only the minimal features needed to get started with the spark charts.
 
 ## Add Flutter Spark charts to an application
 
-Create a new Flutter project by following the instructions in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter Charts package dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Chart dependency to your pubspec.yaml  file.
 
 {% tabs %}
 {% highlight dart %} 
@@ -30,7 +30,7 @@ Add the Syncfusion<sup>&reg;</sup> Flutter Charts package dependency to your pub
 {% endtabs %}
 
 > **NOTE** 
-Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 ## Initialize spark charts
 
-Once the package has been imported, place the spark chart as a child of any widget. Here, as we are rendering a line chart, initialize [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) as a child of the `Container` widget.
+Once the package has been imported, initialize the spark charts as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) widget as a child of Container widget.
 
 {% tabs %}
 {% highlight dart %} 
@@ -80,7 +80,7 @@ Once the package has been imported, place the spark chart as a child of any widg
 
 ## Bind data source
 
-Use the `data` property to bind data to the spark charts. This property accepts a list of numeric values.
+The `data` property is used for binding data to the spark charts. This property takes the list value as input. 
 
 {% tabs %}
 {% highlight dart %} 
@@ -92,9 +92,9 @@ Use the `data` property to bind data to the spark charts. This property accepts 
                 child: Container(
                     //Initialize the spark line chart
                     child: SfSparkLineChart(
-                        data: <double>[
-                            10, 6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
-                        ]
+                         data: <double>[
+                             10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                         ]
                     )
                 ),
             )
@@ -108,9 +108,10 @@ Use the `data` property to bind data to the spark charts. This property accepts 
 
 ## Spark charts types
 
-You can use the following widgets to create spark charts: [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html), [`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html), or [`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html).
+You can initialize the required spark charts type by specifying the widget name to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html), [`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html), [`SfSparkLWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html).
 
-In this example, the spark chart type is set to [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html).
+Here, the spark chart type has been set to 
+[`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html).
 
 {% tabs %}
 {% highlight dart %} 
@@ -123,9 +124,9 @@ In this example, the spark chart type is set to [`SfSparkAreaChart`](https://pub
                     //Initialize the spark area chart
                     child: SfSparkAreaChart(
                         axisLineWidth:0,
-                         data: <double 0,
-                        data: <double>[
-                            10, 
+                         data: <double>[
+                             10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                        ]
                     )
                 ),
             )
@@ -137,9 +138,9 @@ In this example, the spark chart type is set to [`SfSparkAreaChart`](https://pub
 
 ![chart type](images/getting-started/sparkline-type.png)
 
-## Enable data labels
+## Enable data label
 
-You can add data labels to improve chart readability by using the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property.
+You can add data labels to improve the readability of the chart using the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property.
 
 {% tabs %}
 {% highlight dart %} 
@@ -150,12 +151,12 @@ You can add data labels to improve chart readability by using the [`labelDisplay
             body: Center(
                 child: Container(
                     //Initialize spark line chart
-                    child: SfSparthe spark line chart
                     child: SfSparkLineChart(
-                        //Enable data labels
+                        //Enable data label
                         labelDisplayMode: SparkChartLabelDisplayMode.all,
                         data: <double>[
-                            10, 
+                            10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                        ]
                     )
                 )
             )
@@ -169,7 +170,8 @@ You can add data labels to improve chart readability by using the [`labelDisplay
 
 ## Enable trackball for spark chart
 
-The spark charts display additional information through trackball when you tap a specific location in the chart area. You can enable the trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property to [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it appears in the UI and moves based on your touch movement until you stop touching the chart.
+The spark charts display additional information through trackball when touched on a specific location of the chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
+
 {% tabs %}
 {% highlight dart %} 
 
@@ -179,12 +181,12 @@ The spark charts display additional information through trackball when you tap a
             body: Center(
                 child: Container(
                     child: SfSparkLineChart(
-                        //Enable trackball
+                        //Enable the trackball
                         trackball: SparkChartTrackball(
                             activationMode: SparkChartActivationMode.tap
                         ),
                         data: <double>[
-                            10, 6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                            10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
                         ]
                     )
                 )

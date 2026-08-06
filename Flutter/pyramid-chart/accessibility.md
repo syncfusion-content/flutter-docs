@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Flutter Pyramid Chart | Syncfusion®
-description: The accessibility support in Flutter Pyramid Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
+title: Accessibility in Flutter Pyramid Chart widget | Syncfusion
+description: Learn here all about Accessibility feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Pyramid Chart
+# Accessibility in Flutter Pyramid Charts (SfPyramidChart)
 
 ## Sufficient contrast
 

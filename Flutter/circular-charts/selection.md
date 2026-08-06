@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection in Flutter Circular Chart | Syncfusion®
-description: The selection support in Flutter Circular Chart offers interactive point and segment selection with customizable styles to highlight data insights.
+title: Selection in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Selection feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Flutter Circular Chart
+# Selection in Flutter Circular Charts (SfCircularChart)
 
-The selection feature in the chart lets you select a segment in a series or the series itself. This feature allows you to select either an individual segment or a cluster of segments in the chart series.
+The selection feature in chart lets you select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -51,7 +51,7 @@ The selection feature in the chart lets you select a segment in a series or the 
 
 ## Customizing the segments
 
-You can customize the segments using the following properties.
+You can customize the segments using the below properties.
 
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedColor.html) - used to change the background color of selected segment.
 * [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedColor.html) - used to change the background color of unselected segment.
@@ -127,8 +127,8 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Toggle selection
 
-You can decide whether to deselect the selected data point or series, or keep it selected when interacted with again, by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property to `true` or `false`. If set to `true`, deselection is performed; otherwise, the point is not deselected.
-This works even while calling public methods, in various selection modes, with multi-selection, and during dynamic changes.
+You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property `true` or `false`. If set to true, deselection will be performed else the point will not get deselected.
+This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
 {% tabs %}
