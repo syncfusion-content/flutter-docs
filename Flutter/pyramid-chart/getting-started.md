@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Pyramid Chart widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget, its elements, and more.
+title: Getting Started with Flutter Pyramid Chart | Syncfusion®
+description: Learn how to get started with Syncfusion® Flutter Pyramid Chart widget, its elements, features and more customization.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting started with Flutter Pyramid Chart (SfPyramidChart)
+# Getting Started with Flutter Pyramid Chart
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
@@ -22,18 +22,18 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pubspec file.
 
 {% tabs %}
 {% highlight dart %} 
 
     dependencies:
-    syncfusion_flutter_charts: ^xx.x.xx
+      syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
 {% endtabs %}
 
->**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion® Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. The SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. The SfPyramidChart can be used to render pyramid charts. Here, since we are rendering a pyramid chart, initialize the SfPyramidChart widget as a child of a Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -81,7 +81,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 {% endhighlight %}
 {% endtabs %}
 
-_note_ : An empty chart will be displayed. This is charts default behavior. 
+_note_: An empty chart will be displayed. This is the chart’s default behavior.
 
 ## Bind data source
 
@@ -126,7 +126,7 @@ Based on your data, initialize the series type. In the series, you need to map t
 
 ## Add title
 
-You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The title to chart can be set as demonstrated in the following code snippet.
+You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) to the chart to provide quick information to users about the data plotted in the chart. The chart title can be set as demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight dart %} 
@@ -168,12 +168,12 @@ You can add data labels to improve the readability of the chart using the [`data
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                      series:PyramidSeries<ChartData, String>(
+                      series: PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
                             // Render the data label
-                            dataLabelSettings:DataLabelSettings(isVisible : true)
+                            dataLabelSettings: DataLabelSettings(isVisible: true)
                         )
                     )
                 )
@@ -190,7 +190,7 @@ You can add data labels to improve the readability of the chart using the [`data
 
 The legend provides information about the series rendered in the chart.
 
-You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
+You can enable the legend in the chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}  
@@ -203,7 +203,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                     child: SfPyramidChart(
                       // Enables the legend
                       legend: Legend(isVisible: true), 
-                      series:PyramidSeries<ChartData, String>(
+                      series: PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
@@ -223,7 +223,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
 
 The tooltip is used when you cannot display information using the data labels due to space constraints.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the pyramid series. The tooltip is enabled as demonstrated in the following code snippet.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/tooltipBehavior.html) property in the chart is used to enable and customize the tooltip for the pyramid series. The tooltip is enabled as shown in the following code snippet.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}  
@@ -244,7 +244,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                     child: SfPyramidChart(
                       // Enables the tooltip for all the series in chart
                         tooltipBehavior: _tooltipBehavior,
-                        series:PyramidSeries<ChartData, String>(
+                        series: PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,

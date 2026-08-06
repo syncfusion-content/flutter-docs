@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Trackball and Crosshair Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to control trackball and crosshair in Syncfusion Flutter Cartesian Charts—enable, format, style, and configure key features.
+title: Trackball and Crosshair in Flutter Cartesian Chart | Syncfusion®
+description: The trackball and crosshair support in Flutter Cartesian Chart offers precise data inspection with interactive pointers for accurate analysis and comparison.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Trackball and Crosshair (SfCartesianChart)
+# Trackball and Crosshair in Flutter Cartesian Chart
 
 ## Trackball
 
-Trackball feature displays the tooltip for the data points that are closer to the point where you touch on the chart area. This feature, especially, can be used instead of data label feature when you cannot show data labels for all data points due to space constraint. This feature can be enabled using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/enable.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/trackballBehavior.html). Trackball will be activated once you long-press anywhere on the chart area. Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
+The trackball feature displays the tooltip for the data points that are closer to the point where you touch the chart area. This feature can be used instead of the data label feature when you cannot show data labels for all data points due to space constraints. It can be enabled using the [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/enable.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/trackballBehavior.html). The trackball is activated once you long-press anywhere on the chart area. Once activated, it appears in the UI and moves based on your touch movement until you stop touching the chart.
 
 The trackball state will be preserved on the device's orientation change and on browser resize. For example, if the trackball's [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of trackball display, the trackball will be displayed for the next 5,000ms in landscape mode before disappearing.
 

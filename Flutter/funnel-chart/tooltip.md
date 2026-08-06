@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Tooltip in Flutter Funnel Chart | Syncfusion
-description: Step-by-step guide to customize tooltips in Syncfusion Flutter Funnel Chart—enable, format, style tooltips, set activation modes, and key features.
+title: Tooltip in Flutter Funnel Chart | Syncfusion®
+description: The tooltip support in Flutter Funnel Chart offers interactive data insights with customizable content and appearance for better user engagement.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Funnel Chart Tooltip (SfFunnelChart)
+# Tooltip in Flutter Funnel Chart
 
-Chart provides tooltip support for all the series. It is used to show information about the segment when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as true.
+The chart provides tooltip support for all series. It is used to show information about the segment when you tap the segment. To enable the tooltip, you need to set the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property to true.
 
-The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
+The tooltip state is preserved when the device orientation changes or when the browser is resized. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000 ms, and you change the orientation of your device from portrait to landscape after 5,000 ms of tooltip display, the tooltip will continue for the next 5,000 ms in landscape mode before disappearing.
 
 {% tabs %}
 {% highlight dart %} 
@@ -19,14 +19,14 @@ The tooltip state will be preserved on the device's orientation change and on br
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
+    void initState() {
       _tooltipBehavior = TooltipBehavior(enable: true);
       super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-      List<ChartData> chartData = [
+        final List<ChartData> chartData = [
           ChartData('Jan', 35),
           ChartData('Feb', 28),
           ChartData('Mar', 38),
@@ -48,7 +48,7 @@ The tooltip state will be preserved on the device's orientation change and on br
         )
       );
     }
-    class ChartData{
+    class ChartData {
       ChartData(this.x, this.y);
       final String x;
       final double? y;
@@ -68,7 +68,7 @@ You can use the following properties to customize the tooltip appearance.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderColor.html) - used to change the stroke color of the tooltip.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/opacity.html) - used to control the transparency of the tooltip.
 * [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to `3000`.
-* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip that default to 350.
+* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip, and the default is 350.
 * [`elevation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/elevation.html) - specifies the elevation of tooltip.
 * [`canShowMarker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/canShowMarker.html) - toggles the visibility of the marker in the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - specifies the header for tooltip. By default, the series name will be displayed in the header.
@@ -232,16 +232,16 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 ![Tooltip template](images/tooltip/tooltip_template.png)
 
-##	Activation mode
+## Activation mode
 
-The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html) property is used to restrict the visibility of tooltip based on the touch actions. The default value of this property is [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap).
+The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html) property is used to restrict tooltip visibility based on touch actions. The default value of this property is [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap).
 
 The ActivationMode enum contains the following values:
 
-* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates tooltip only when performing the long press action.
-* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap) - activates tooltip only when performing single tap action.
-* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#doubleTap) - activates tooltip only when performing double tap action.
-* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the visibility of tooltip when setting activation mode to none.
+* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#longPress) - activates the tooltip only when performing the long-press action.
+* [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#singleTap) - activates the tooltip only when performing a single-tap action.
+* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#doubleTap) - activates the tooltip only when performing a double-tap action.
+* [`ActivationMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode.html#none) - hides the tooltip when activation mode is set to none.
 
 {% tabs %}
 {% highlight dart %} 
@@ -274,4 +274,4 @@ The ActivationMode enum contains the following values:
 {% endhighlight %}
 {% endtabs %}
 
-Also refer [`tooltip event`](./callbacks#ontooltiprender) for customizing the tooltip further.
+Also refer to the [`tooltip event`](./callbacks#ontooltiprender) for further tooltip customization.

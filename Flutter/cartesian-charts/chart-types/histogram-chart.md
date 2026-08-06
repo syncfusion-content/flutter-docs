@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Histogram Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about histogram chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Histogram Chart in Flutter Cartesian Chart | Syncfusion®
+description: The histogram chart support in Flutter Cartesian Chart offers data distribution visualization by grouping values into bins for statistical analysis.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Histogram Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Histogram Chart in Flutter Cartesian Chart
 
 Histogram chart is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a bar chart. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges.
 
