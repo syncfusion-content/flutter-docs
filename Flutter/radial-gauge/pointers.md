@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pointers in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Pointers of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title: Pointers in Flutter Radial Gauge | Syncfusion®
+description: Learn about pointers in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including needle, marker, and range pointers with customization options.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

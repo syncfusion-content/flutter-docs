@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Maps Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter Maps ( SfMaps Widget ) widget in FlutterFlow.
+title: How to Add Maps in FlutterFlow | Syncfusion®
+description: Learn how to add and use Syncfusion® Flutter Maps (SfMaps) in FlutterFlow, including setup, integration, data visualization, and configuration.
 platform: flutter
 control: SfMaps
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> Maps widget in FlutterFlow?
+# How to Add Maps in FlutterFlow (SfMaps)
 
 ## Overview
 

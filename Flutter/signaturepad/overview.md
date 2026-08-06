@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Signature Pad widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its features, and more.
-platform: Flutter
+title: About Flutter SignaturePad Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter SignaturePad (SfSignaturePad), its features, signature capture capabilities, and customization options.
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Flutter Signature Pad (SfSignaturePad) Overview
+# About Flutter SignaturePad Control (SfSignaturePad)
 
 The SignaturePad is a widget for capturing smooth and realistic signatures. This widget allows you to save signatures as images and sync them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, or other input device to draw your own signature on this SignaturePad widget.
 

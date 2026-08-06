@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drilldown in Flutter Treemap widget | Syncfusion
-description: Learn here all about how to drilled down hierarchical level tiles in Syncfusion Flutter Treemap (SfTreemap) widget and more.
+title: Drilldown in Flutter Treemap | Syncfusion®
+description: Learn about drilldown support in Syncfusion® Flutter Treemap (SfTreemap), including hierarchical navigation, drilldown levels, and interactive data exploration.
 platform: flutter
 control: SfTreemap
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: One-dimensional symbology in Flutter Barcodes widget | Syncfusion 
-description: Learn here all about One-dimensional symbology feature of Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget and more.
+title: One-Dimensional Symbology in Flutter Barcodes | Syncfusion®
+description: Learn about one-dimensional symbology support in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including Code128, EAN, UPC, Codabar, and Code39.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# One-dimensional symbology in Flutter Barcodes (SfBarcodeGenerator)
+# One-Dimensional Symbology in Flutter Barcodes (SfBarcodeGenerator)
 
 To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcodes](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 

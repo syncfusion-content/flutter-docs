@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Track in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the Track feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+title: Track in Flutter Range Selector | Syncfusion®
+description: Learn about track customization in Syncfusion® Flutter Range Selector (SfRangeSelector), including active and inactive tracks, appearance, and styling options.
 platform: flutter
 control: SfRangeSelector
 documentation: ug

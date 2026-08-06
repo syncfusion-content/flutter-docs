@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Flutter Hijri Date Range Picker Overview | Syncfusion
-description: Overview and usage guide for Syncfusion Hijri Date Range Picker (SfHijriDateRangePicker)—features, views, selection modes, and programmatic controls.
+title: About Flutter Hijri DateRangePicker Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter Hijri DateRangePicker (SfHijriDateRangePicker), its features, selection modes, views, and customization options.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Flutter Hijri Date Range Picker Brief (SfHijriDateRangePicker)
+# About Flutter Hijri DateRangePicker Control (SfHijriDateRangePicker)
 
 Along with the Gregorian calendar, the picker package contains a Hijri date picker to display the Islamic calendar. Islamic calendar or Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days. To know more about the Islamic calendar, kindly refer to [Wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).
 

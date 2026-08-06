@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the Labels feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+title: Labels and Dividers in Flutter Range Selector | Syncfusion®
+description: Learn about labels and dividers in Syncfusion® Flutter Range Selector (SfRangeSelector), including label formatting, divider customization, and styling options.
 platform: flutter
 control: SfRangeSelector
 documentation: ug

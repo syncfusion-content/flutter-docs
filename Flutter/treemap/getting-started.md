@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Treemap widget | Syncfusion
-description: Learn about getting started with Syncfusion Flutter Treemap (SfTreemap) widget, its elements, and more.
+title: Getting Started with Flutter Treemap | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Treemap (SfTreemap). Explore setup, hierarchical data visualization, and customization options.
 platform: flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Getting started with Flutter Treemap (SfTreemap)
+# Getting Started with Flutter Treemap (SfTreemap)
 
 This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> treemap.
 

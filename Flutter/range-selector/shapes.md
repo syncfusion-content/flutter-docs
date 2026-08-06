@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom shapes in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the custom shapes in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+title: Custom Shapes in Flutter Range Selector | Syncfusion®
+description: Learn about custom shapes in Syncfusion® Flutter Range Selector (SfRangeSelector), including track, thumb, divider, tick, and tooltip customization.
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Shapes in Flutter Range Selector (SfRangeSelector)
+# Custom Shapes in Flutter Range Selector (SfRangeSelector)
 
 This section explains how to customize the shapes of the range selector elements.
 

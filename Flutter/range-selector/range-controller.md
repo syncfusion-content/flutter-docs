@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Controller in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the Controller in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+title: Controller in Flutter Range Selector | Syncfusion®
+description: Learn about controller support in Syncfusion® Flutter Range Selector (SfRangeSelector), including synchronization and programmatic updates.
 platform: flutter
 control: SfRangeSelector
 documentation: ug

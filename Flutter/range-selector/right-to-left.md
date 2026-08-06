@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL in Flutter Range Selector widget | Syncfusion
-description: Learn here all about the RTL rendering in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
+title: Right-to-Left (RTL) in Flutter Range Selector | Syncfusion®
+description: Learn about right-to-left (RTL) support in Syncfusion® Flutter Range Selector (SfRangeSelector), including localization and RTL rendering.
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
+# Right-to-Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
 N> RTL is not applicable for the vertical orientation of the range selector.
 

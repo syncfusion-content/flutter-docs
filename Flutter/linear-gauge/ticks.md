@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ticks in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Ticks of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+title: Ticks in Flutter Linear Gauge | Syncfusion®
+description: Learn about tick customization in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including major ticks, minor ticks, intervals, and styling options.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

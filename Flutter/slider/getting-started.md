@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter Slider | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Slider—add dependencies, import, create SfSlider, and configure key features.
+title: Getting Started with Flutter Slider | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Slider (SfSlider). Explore setup, slider configuration, and customization options.
 platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Getting Started (SfSlider)
+# Getting Started with Flutter Slider (SfSlider)
 This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> slider.
 
 To get started quickly with our Flutter Slider widget, check out this video.
