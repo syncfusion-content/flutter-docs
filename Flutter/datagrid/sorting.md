@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to sort a column or multiple columns with tristate sorting in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Sorting in Flutter DataGrid | Syncfusion®
+description: Learn how to sort single or multiple columns in Syncfusion® Flutter DataGrid including ascending, descending, and tristate sorting options.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Sorting in Flutter Datagrid (SfDataGrid)
+# Sorting in Flutter DataGrid
 
 The Datagrid provides the built-in support to sort one or more columns by setting the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When the `SfDataGrid.allowSorting` is true, sort the data by tapping the column header.
 

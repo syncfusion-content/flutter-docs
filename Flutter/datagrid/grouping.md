@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Flutter DataGrid | DataTable | Syncfusion
-description: Learn all about how to perform grouping and multi-grouping to the data source through column in the Syncfusion Flutter DataGrid (SfDataGrid) widget and more here.
+title: Grouping in Flutter DataGrid | Syncfusion®
+description: Learn how to perform grouping and multi-grouping in Syncfusion® Flutter DataGrid to organize, analyze, and display data through column-based grouping.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Grouping in Flutter DataGrid (SfDataGrid)
+# Grouping in Flutter DataGrid
 
 Grouping in a DataGrid involves organizing and categorizing data based on specific criteria or field values. This feature enables you to group related records together, forming a hierarchical structure within the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html). Each group is represented by the `CaptionSummaryRow` that displays at the top of each group and holds the caption summary value of that group.
 
@@ -723,7 +723,7 @@ The group expand and collapse functionality can be enabled by setting the [SfDat
 
 ## Disable group expanding on the initial loading
 
-By default, the SfDataGrid always expands all the groups. All the groups can be collapsed intially by setting the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property to false.
+By default, the SfDataGrid always expands all the groups. All the groups can be collapsed initially by setting the [SfDataGrid.autoExpandGroups](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/autoExpandGroups.html) property to false.
 
 {% tabs %}
 {% highlight Dart %}
