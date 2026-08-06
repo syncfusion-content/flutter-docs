@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Methods in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about available methods of Syncfusion Flutter Funnel Chart(SfFunnelChart) widget and more.
+title: Methods in Flutter Funnel Chart | Syncfusion®
+description: The methods in Flutter Funnel Chart documentation provide publicly accessible APIs for performing chart-related operations programmatically.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Flutter Funnel Chart (SfFunnelChart)
+# Methods in Flutter Funnel Chart
 
 ## PixelToPoint 
 
-Converts logical pixel value to the data point value.
+Converts a logical pixel value to a data point value.
  
-The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
+The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeriesController/pixelToPoint.html) method takes a logical pixel value as input and returns a chart data point.
 
->**Note**: The method will return the center value of the segment.
+>**Note**: The method returns the center value of the segment.
 
 {% tabs %}
 {% highlight dart %}
 
-    //Initialize the series controller
+    // Initialize the series controller
     FunnelSeriesController? seriesController;
 
     @override

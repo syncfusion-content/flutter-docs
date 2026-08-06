@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Column Chart in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to create and customize Stacked Column Chart in Syncfusion Flutter Cartesian Charts—add stacked column series, and configure key features.
+title: Stacked Column Chart in Flutter Cartesian Chart | Syncfusion®
+description: The stacked column chart support in Flutter Cartesian Chart offers cumulative data comparison by stacking series values to show overall contribution.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Stacked Column Chart (SfCartesianChart)
+# Stacked Column Chart in Flutter Cartesian Chart
 
 To create a Flutter stacked column chart quickly, you can check this video.
 

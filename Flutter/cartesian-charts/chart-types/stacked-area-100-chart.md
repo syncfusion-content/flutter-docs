@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 100% Stacked area in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about 100% stacked area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: 100% Stacked Area Chart in Flutter Cartesian Chart | Syncfusion®
+description: The 100% stacked area chart support in Flutter Cartesian Chart offers proportional trend visualization, showing each series contribution as a percentage.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
 
-# 100% Stacked area Chart in Flutter Cartesian Charts (SfCartesianChart)
+# 100% Stacked Area Chart in Flutter Cartesian Chart
 
 To create a Flutter 100% stacked area chart quickly, you can check this video.
 
