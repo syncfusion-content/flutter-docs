@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Appearance customization in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about Appearance customization of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+title: Appearance customization in Flutter Funnel Chart | Syncfusion®
+description: The appearance customization support in Flutter Funnel Chart offers chart sizing, margins, and chart area settings for flexible visual design.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance customization in Flutter Funnel Chart (SfFunnelChart)
+# Appearance customization in Flutter Funnel Chart
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
+The chart renders based on the parent widget's size. If you need the chart to be rendered in a specific size, set the width and height on the parent widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8" %} 
@@ -36,7 +36,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
 ## Chart margin
 
-Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/margin.html) property.
+The chart margin can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/margin.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %} 
@@ -59,7 +59,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
                 child: SfFunnelChart(
                   borderColor: Colors.red,
                   borderWidth: 2,
-                  // Sets 15 logical pixels as margin for all the 4 sides.
+                  // Sets 15 logical pixels as margin for all four sides.
                   margin: EdgeInsets.all(15),
                   series: FunnelSeries<ChartData, String>(
                     dataSource: chartData,
@@ -81,7 +81,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 ## Chart area customization
 
-You can customize the area of the chart using the below properties.
+You can customize the chart area using the following properties.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/backgroundImage.html) - used to set the image path.
