@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic features in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the basic features in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Basic Features in Flutter Slider | Syncfusion®
+description: Learn about the basic features of Syncfusion® Flutter Slider (SfSlider), including values, ranges, callbacks, customization, and date sliders.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Basic features in Flutter Range Slider (SfRangeSlider)
+# Basic Features in Flutter Slider (SfSlider)
 This section explains about how to add the numeric and date range slider.
 
 ## Minimum

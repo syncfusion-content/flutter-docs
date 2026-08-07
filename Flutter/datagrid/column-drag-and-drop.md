@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column drag and drop in Flutter DataGrid | DataTable | Syncfusion
-description: Learn all about how to drag and drop the columns in Syncfusion Flutter DataGrid (SfDataGrid) widget and more here.
+title: Column drag and drop in Flutter DataGrid | Syncfusion®
+description: Learn how to drag and drop columns in Syncfusion® Flutter DataGrid including column reordering, customization options, and user interaction features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Column drag and drop in Flutter DataGrid (SfDataGrid)
+# Column drag and drop in Flutter DataGrid
 
 The SfDataGrid enables columns to be dragged and dropped by setting the [SfDataGrid.allowColumnsDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsDragging.html) property to `true` and returning `true` from the [SfDataGrid.onColumnDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnDragging.html) callback. During the column-dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` callback, you can handle drag and drop operations to reorder columns dynamically.
 

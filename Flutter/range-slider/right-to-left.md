@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL in Flutter Range Slider widget | Syncfusion
-description: This section explains about the RTL rendering in Syncfusion Flutter Range Slider (SfRangeSlider) widget.
+title: Right-to-Left (RTL) in Flutter Range Slider | Syncfusion®
+description: Learn about right-to-left (RTL) support in Syncfusion® Flutter Range Slider (SfRangeSlider), including layout customization, localization, and RTL rendering.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter Range Slider (SfRangeSlider)
+# Right-to-Left (RTL) in Flutter Range Slider (SfRangeSlider)
 
 ## RTL rendering ways
 

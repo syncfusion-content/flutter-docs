@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Accessibility in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and how to customize it.
+title:  Accessibility in Flutter Radial Gauge | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

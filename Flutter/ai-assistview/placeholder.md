@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about Placeholder feature of Syncfusion Flutter AI AssistView (SfAIAssistView) widget, including its properties and more.
+title: Placeholder in Flutter AI AssistView | Syncfusion®
+description: Learn about placeholder support in Syncfusion® Flutter AI AssistView (SfAIAssistView), including placeholder behavior and customization options.
 platform: flutter
 control: SfAIAssistView
 documentation: ug

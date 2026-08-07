@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left (RTL) in Flutter AI AssistView widget | Syncfusion
-description: Learn here about the RTL support in Syncfusion Flutter AI AssistView (SfAIAssistView) widget and more.
+title: Right-to-Left (RTL) in Flutter AI AssistView | Syncfusion®
+description: Learn about right-to-left (RTL) support in Syncfusion® Flutter AI AssistView (SfAIAssistView), including layout and message rendering.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
 
-# Right to left (RTL) in Flutter AI AssistView (SfAIAssistView)
+# Right-to-Left (RTL) in Flutter AI AssistView (SfAIAssistView)
 
 
 The AI AssistView supports right-to-left rendering for all the elements in the AI AssistView widget. 

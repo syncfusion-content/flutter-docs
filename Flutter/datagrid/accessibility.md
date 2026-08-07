@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about the accessibility features of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Accessibility in Flutter DataGrid | Syncfusion®
+description: Learn here all about the accessibility features of the Syncfusion® Flutter DataGrid widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Accessibility in Flutter DataGrid (SfDataGrid)
+# Accessibility in Flutter DataGrid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) widget is designed with comprehensive accessibility features to ensure all users, including those using assistive technologies, can interact with data effectively. This section covers built-in accessibility support and best practices for implementing an accessible data grid experience.
 

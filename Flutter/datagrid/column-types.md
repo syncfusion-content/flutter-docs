@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to add columns to Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Column types in Flutter DataGrid | Syncfusion®
+description: Learn how to add and configure columns in Syncfusion® Flutter DataGrid including column types, customization options, and data binding.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Column Types in Flutter DataGrid (SfDataGrid)
+# Column Types in Flutter DataGrid
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column. The `SfDataGrid` supports two main column types: `GridColumn` for standard data binding and a `Checkbox` column for row selection. This document covers the features and customization options available for each column type.
 

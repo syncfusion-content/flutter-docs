@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Summaries feature in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to add summary rows to the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+title: Summaries feature in Flutter DataGrid | Syncfusion®
+description: Learn how to add and customize summary rows in Syncfusion® Flutter DataGrid to display totals, averages, counts, and other aggregate values.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Summaries in Flutter DataGrid (SfDataGrid)
+# Summaries in Flutter DataGrid
 
 ## Table summary
 

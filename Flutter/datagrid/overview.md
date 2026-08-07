@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter DataGrid widget | DataTable | Syncfusion®
-description: Learn about the introduction of the Syncfusion® Flutter DataGrid (SfDataGrid) widget, its features, and more.
+title: About Syncfusion Flutter DataGrid Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter DataGrid widget, its powerful features, and capabilities for displaying, managing, and interacting with data efficiently.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Flutter DataGrid (SfDataGrid) Overview 
+# About Syncfusion Flutter DataGrid Control
 
 The Syncfusion® Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 

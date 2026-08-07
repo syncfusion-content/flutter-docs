@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Title in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Title of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title: Title in Flutter Radial Gauge | Syncfusion®
+description: Learn about title customization in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including title text, alignment, styling, and appearance options.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

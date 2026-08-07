@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Flutter Date Range Picker | Syncfusion
-description: Step-by-step guide to configure localization in Syncfusion Flutter Date Range Picker—add flutter_localizations, set localizationsDelegates, and define locales.
+title: Localization in Flutter DateRangePicker | Syncfusion®
+description: Learn about localization support in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including locale settings, translations, and regional formats.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Flutter Date Range Picker Localization (SfDateRangePicker)
+# Localization in Flutter DateRangePicker (SfDateRangePicker)
 
 By default, the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget supports US English localizations. You can change other languages by specifying the [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) properties and adding the `flutter_localizations` package to your application.
 

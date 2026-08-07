@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Flutter Treemap widget | Syncfusion
-description: Learn here all about adding the Tooltip feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
+title: Tooltip in Flutter Treemap | Syncfusion®
+description: Learn about tooltip support in Syncfusion® Flutter Treemap (SfTreemap), including customization, formatting, templates, and data visualization.
 platform: flutter
 control: SfTreemap
 documentation: ug

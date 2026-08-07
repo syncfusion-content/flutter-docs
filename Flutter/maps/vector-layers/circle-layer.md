@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding Circle Layer in Flutter Maps widget | Syncfusion
-description: Learn here all about adding Circle Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Circle Layer in Flutter Maps | Syncfusion®
+description: Learn about circle layers in Syncfusion® Flutter Maps (SfMaps), including circle customization, styling, data visualization, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Flutter Radial Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Annotation in Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
+title: Annotation in Flutter Radial Gauge | Syncfusion®
+description: Learn about annotations in Syncfusion® Flutter Radial Gauge (SfRadialGauge), including custom content, positioning, styling, and gauge annotations.
 platform: flutter
 control: SfRadialGauge
 documentation: ug

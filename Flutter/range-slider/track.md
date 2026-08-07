@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Track in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the Track feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Track in Flutter Range Slider | Syncfusion®
+description: Learn about track customization in Syncfusion® Flutter Range Slider (SfRangeSlider), including active and inactive tracks, appearance, and styling options.
 platform: flutter
 control: SfRangeSlider
 documentation: ug

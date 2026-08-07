@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Flutter Barcodes widget | Syncfusion 
-description: Learn all about the customization features of the Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget and more.
+title: Customization in Flutter Barcodes | Syncfusion®
+description: Learn about customization options in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including appearance, sizing, colors, and styling.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug

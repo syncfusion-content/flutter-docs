@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom shapes in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the custom shapes in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
+title: Custom Shapes in Flutter Range Slider | Syncfusion®
+description: Learn about custom shapes in Syncfusion® Flutter Range Slider (SfRangeSlider), including track, thumb, divider, tick, and tooltip customization.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Shapes in Flutter Range Slider (SfRangeSlider)
+# Custom Shapes in Flutter Range Slider (SfRangeSlider)
 
 This section explains how to customize the shapes of the range slider elements.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in Flutter Treemap widget | Syncfusion
-description: Learn here all about adding the Legend feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
+title: Legend in Flutter Treemap | Syncfusion®
+description: Learn about legend support in Syncfusion® Flutter Treemap (SfTreemap), including legend customization, color mapping, positioning, and styling options.
 platform: flutter
 control: SfTreemap
 documentation: ug

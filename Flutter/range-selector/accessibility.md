@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Flutter Range Selector widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
+title: Accessibility in Flutter Range Selector | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Range Selector (SfRangeSelector), including screen readers, keyboard navigation, and more.
 platform: flutter
 control: SfRangeSelector
 documentation: ug

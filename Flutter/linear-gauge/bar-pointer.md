@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bar Pointer in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Bar Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+title: Bar Pointer in Flutter Linear Gauge | Syncfusion®
+description: Learn about bar pointers in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including value representation, customization, animation, and styling options.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
