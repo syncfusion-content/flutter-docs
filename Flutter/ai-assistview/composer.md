@@ -52,7 +52,7 @@ class MinMaxLinesExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer support](images/composer/composer-minLines-maxLines.gif)
+![AI AssistView composer support](images/composer/composer-minLines-maxLines.gif)
 
 ### Decoration
 
@@ -110,7 +110,7 @@ class BorderExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer border](images/composer/composer-border.png)
+![AI AssistView composer border](images/composer/composer-border.png)
 
 #### Content padding
 
@@ -146,7 +146,7 @@ class ContentPaddingExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer contentPadding](images/composer/composer-contentPadding.png)
+![AI AssistView composer contentPadding](images/composer/composer-contentPadding.png)
 
 #### Hint text
 
@@ -181,7 +181,7 @@ class HintTextExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer hintText](images/composer/composer-hintText.png)
+![AI AssistView composer hintText](images/composer/composer-hintText.png)
 
 #### Hint text style
 
@@ -221,7 +221,7 @@ class HintTextStyleExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer hintTextStyle](images/composer/composer-hintTextStyle.png)
+![AI AssistView composer hintTextStyle](images/composer/composer-hintTextStyle.png)
 
 #### Prefix and suffix icons
 
@@ -263,7 +263,7 @@ class PrefixSuffixIconExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer icon](images/composer/composer-prefix-suffix-icon.png)
+![AI AssistView composer icon](images/composer/composer-prefix-suffix-icon.png)
 
 ### Margin
 
@@ -298,7 +298,7 @@ class ComposerMarginExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer margin](images/composer/composer-padding.png)
+![AI AssistView composer margin](images/composer/composer-padding.png)
 
 ### Text style
 
@@ -335,7 +335,7 @@ class TextStyleExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistview composer text style](images/composer/composer-textStyle.gif)
+![AI AssistView composer text style](images/composer/composer-textStyle.gif)
 
 ## Builder
 
@@ -451,6 +451,6 @@ class _ComposerBuilderExampleState extends State<ComposerBuilderExample> {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView composer builder support](images/composer/composer-builder-support.png)
+![AI AssistView composer builder support](images/composer/composer-builder-support.png)
 
 >You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.
