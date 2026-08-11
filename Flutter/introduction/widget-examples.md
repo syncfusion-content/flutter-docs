@@ -20,7 +20,7 @@ The section contains the GitHub link for each widget's code examples. This is ve
 
 <tr>
 <td>AI AssistView</td>
-<td><a href ="https://help.syncfusion.com/flutter/ai-assistview/overview">AIAssistView</a></td>
+<td><a href ="https://help.syncfusion.com/flutter/ai-assistview/overview">AI AssistView</a></td>
 <td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/ai_assist_view">samples/AI_assist_view</a></td>
 </tr>
 
@@ -122,7 +122,7 @@ The section contains the GitHub link for each widget's code examples. This is ve
 
 <tr>
 <td><p>Viewer</p></td>
-<td><p><a href="http://172.16.0.76/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf_viewer">samples/pdfviewer</a></p>
 </td></tr>
 
