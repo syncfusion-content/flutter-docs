@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatic Filtering in Flutter Data Grid | Syncfusion®
-description: Learn how to filter data rows in Syncfusion® Flutter Data Grid, including built-in filtering options, custom filter conditions, and data filtering customization.
+description: Learn how to filter data rows in Syncfusion® Flutter Data Grid using built-in filters, custom conditions, and advanced customization for precise data insights.
 platform: flutter
 control: SfDataGrid
 documentation: ug
