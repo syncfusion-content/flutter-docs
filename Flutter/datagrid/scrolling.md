@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Flutter DataGrid | Syncfusion®
-description: Learn how to show scrollbars always and perform programmatic scrolling in Syncfusion® Flutter DataGrid.
+title: Scrolling in Flutter Data Grid | Syncfusion®
+description: Learn how to show scrollbars always and perform programmatic scrolling in Syncfusion® Flutter Data Grid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Scrolling in Flutter DataGrid
+# Scrolling in Flutter Data Grid
 
 SfDataGrid provides support to scroll the content in both horizontal and vertical directions. 
 
@@ -84,7 +84,7 @@ The following code snippets demonstrate how to hide the scrollbars in the DataGr
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: ScrollConfiguration(
         behavior: const ScrollBehavior().copyWith(scrollbars: false),
@@ -675,7 +675,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter DataGrid Sample'),
+        title: Text('Flutter Data Grid Sample'),
       ),
       body: SfDataGrid(
           source: _employeeDataSource,
@@ -781,7 +781,7 @@ The `rowsCacheExtent` property creates additional rows internally alongside the 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: employeeDataSource,
@@ -903,7 +903,7 @@ In the SfDataGrid, you can obtain the starting and ending indices of the visible
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: Column(children: [
         ElevatedButton(
             onPressed: () {

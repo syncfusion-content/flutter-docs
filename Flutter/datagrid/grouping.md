@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Flutter DataGrid | Syncfusion®
-description: Learn how to perform grouping and multi-grouping in Syncfusion® Flutter DataGrid to organize, analyze, and display data through column-based grouping.
+title: Grouping in Flutter Data Grid | Syncfusion®
+description: Learn how to perform grouping and multi-grouping in Syncfusion® Flutter Data Grid to organize, analyze, and display data through column-based grouping.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Grouping in Flutter DataGrid
+# Grouping in Flutter Data Grid
 
 Grouping in a DataGrid involves organizing and categorizing data based on specific criteria or field values. This feature enables you to group related records together, forming a hierarchical structure within the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html). Each group is represented by the `CaptionSummaryRow` that displays at the top of each group and holds the caption summary value of that group.
 
@@ -45,7 +45,7 @@ class SfDataGridDemoState extends State<SfDataGridDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -125,7 +125,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows the single level grouping" src="images/grouping/flutter-datagrid-add-group.gif" width="400"/>
+<img alt="Flutter Data Grid shows the single level grouping" src="images/grouping/flutter-datagrid-add-group.gif" width="400"/>
 
 ### Remove column group
 
@@ -148,7 +148,7 @@ To disable column grouping for a particular column, remove that `ColumnGroup` in
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: Column(children: [
         ElevatedButton(
             onPressed: () {
@@ -208,7 +208,7 @@ To clear all the column groups, simply call the [DataGridSource.clearColumnGroup
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: Column(children: [
         ElevatedButton(
             onPressed: () {
@@ -277,7 +277,7 @@ Initially, data is grouped according to the first column added to the `DataGridS
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -315,7 +315,7 @@ Initially, data is grouped according to the first column added to the `DataGridS
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows the multi level grouping" src="images/grouping/flutter-datagrid-multi-level grouping.gif" width="400"/>
+<img alt="Flutter Data Grid shows the multi level grouping" src="images/grouping/flutter-datagrid-multi-level grouping.gif" width="400"/>
 
 ## Callbacks
 
@@ -340,7 +340,7 @@ The [SfDataGrid.groupExpanding](https://pub.dev/documentation/syncfusion_flutter
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -392,7 +392,7 @@ The [SfDataGrid.groupExpanded](https://pub.dev/documentation/syncfusion_flutter_
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -443,7 +443,7 @@ The [SfDataGrid.groupCollapsing](https://pub.dev/documentation/syncfusion_flutte
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -495,7 +495,7 @@ The [SfDataGrid.groupCollapsed](https://pub.dev/documentation/syncfusion_flutter
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -557,7 +557,7 @@ The `DataGridSource.performGrouping` method is invoked when grouping is applied 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -663,7 +663,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows the custom grouping" src="images/grouping/flutter-datagrid-custom-group.png" width="400"/>
+<img alt="Flutter Data Grid shows the custom grouping" src="images/grouping/flutter-datagrid-custom-group.png" width="400"/>
 
 ## Enable group expand and collapse 
 
@@ -684,7 +684,7 @@ The group expand and collapse functionality can be enabled by setting the [SfDat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -731,7 +731,7 @@ By default, the SfDataGrid always expands all the groups. All the groups can be 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           autoExpandGroups: false,
@@ -808,7 +808,7 @@ The format can be customized by using the [SfDataGrid.groupCaptionTitleFormat](h
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
           source: employeeDataSource,
           allowExpandCollapseGroup: true,
@@ -846,7 +846,7 @@ The format can be customized by using the [SfDataGrid.groupCaptionTitleFormat](h
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows the customized summary format" src="images/grouping/flutter-datagrid-customize-summary-format.png" width="400"/>
+<img alt="Flutter Data Grid shows the customized summary format" src="images/grouping/flutter-datagrid-customize-summary-format.png" width="400"/>
 
 ## Customize the indent column appearance
 
@@ -861,7 +861,7 @@ The width and color of the indent column can be personalized using the [SfDataGr
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
             indentColumnWidth: 100, indentColumnColor: Colors.amber),
@@ -914,7 +914,7 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [sy
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
             groupExpanderIcon: Icon(Icons.expand_circle_down_outlined,
@@ -956,7 +956,7 @@ The `SfDataGridThemeData` and `SfDataGridTheme` classes are available in the [sy
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows the custom group expander icon" src="images/grouping/flutter-datagrid-custom-group-expander-icon.png" width="400"/>
+<img alt="Flutter Data Grid shows the custom group expander icon" src="images/grouping/flutter-datagrid-custom-group-expander-icon.png" width="400"/>
 
 ## Limitations
 

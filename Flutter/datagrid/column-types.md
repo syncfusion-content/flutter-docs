@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column types in Flutter DataGrid | Syncfusion®
-description: Learn how to add and configure columns in Syncfusion® Flutter DataGrid including column types, customization options, and data binding.
+title: Column types in Flutter Data Grid | Syncfusion®
+description: Learn how to add and configure columns in Syncfusion® Flutter Data Grid including column types, customization options, and data binding.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Column Types in Flutter DataGrid
+# Column Types in Flutter Data Grid
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for loading any type of widget in each column. The `SfDataGrid` supports two main column types: `GridColumn` for standard data binding and a `Checkbox` column for row selection. This document covers the features and customization options available for each column type.
 
@@ -285,7 +285,7 @@ By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flu
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
+![Flutter Data Grid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
 
 ### Show text in the header cell
 
@@ -358,7 +358,7 @@ Display widgets along with the checkbox in the header cell by adding a widget to
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows text in checkbox column header](images/column-types/flutter-datagrid-shows-text-in-checkbox-column-header.png)
+![Flutter Data Grid shows text in checkbox column header](images/column-types/flutter-datagrid-shows-text-in-checkbox-column-header.png)
 
 ### Hide the checkbox in the header cell
 
@@ -429,7 +429,7 @@ By default, a checkbox is displayed in the header cell. By setting the [DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-![checkbox is disabled in checkbox column header in flutter datagrid](images/column-types/checkbox-is-disabled-in-checkbox-column-header-in-flutter-datagrid.png)
+![checkbox is disabled in checkbox column header in Flutter Data Grid](images/column-types/checkbox-is-disabled-in-checkbox-column-header-in-flutter-datagrid.png)
 
 ### Change the background color of the checkbox column
 
@@ -500,7 +500,7 @@ The background color of the entire checkbox column can be customized by using th
 {% endhighlight %}
 {% endtabs %}
 
-![background color in checkbox column in flutter datagrid](images/column-types/background-color-in-checkbox-column-in-flutter-datagrid.png)
+![background color in checkbox column in Flutter Data Grid](images/column-types/background-color-in-checkbox-column-in-flutter-datagrid.png)
 
 ### Get checked items
 
@@ -604,7 +604,7 @@ By default, checkboxes in the DataGrid appear as a square shape. Change the chec
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         showCheckboxColumn: true,
@@ -651,7 +651,7 @@ By default, checkboxes in the DataGrid appear as a square shape. Change the chec
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid checkbox shape](images/column-types/flutter-datagrid-checkbox-shape.png)
+![Flutter Data Grid checkbox shape](images/column-types/flutter-datagrid-checkbox-shape.png)
 
 ### Callbacks
 
@@ -671,7 +671,7 @@ The [DataGridCheckboxValueChangedDetails](https://pub.dev/documentation/syncfusi
   @override  
   Widget build(BuildContext context) {  
     return Scaffold(  
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),  
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),  
       body: SfDataGrid(  
         source: employeeDataSource,  
         showCheckboxColumn: true,  
@@ -741,7 +741,7 @@ To display column header icons, such as sort and filter icons, when the mouse ho
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: employeeDataSource,
@@ -803,4 +803,4 @@ To display column header icons, such as sort and filter icons, when the mouse ho
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif" width="1177"/>
+<img alt="Flutter Data Grid shows column header icons when hover over the header cell" src="images/column-types/flutter-datagrid-show-column-header-icon-on-hover.gif" width="1177"/>

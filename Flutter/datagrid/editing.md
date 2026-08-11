@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Flutter DataGrid | Syncfusion®
-description: Learn how to perform editing in Syncfusion® Flutter DataGrid, including cell editing, validation, and customization options for data management.
+title: Editing in Flutter Data Grid | Syncfusion®
+description: Learn how to perform editing in Syncfusion® Flutter Data Grid, including cell editing, validation, and customization options for data management.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Editing in Flutter DataGrid
+# Editing in Flutter Data Grid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) supports editing the cell values by setting the [SfDataGrid.allowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property to true, [SfDataGrid.navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) to cell, and [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) to a value other than none.
 
@@ -231,7 +231,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid editing](images/editing/datagrid_editing.gif)
+![Flutter Data Grid editing](images/editing/datagrid_editing.gif)
 
 > **Note:** The `TextEditingController` used in the example should be disposed to free up resources. Consider implementing disposal in your State class: `@override void dispose() { editingController.dispose(); super.dispose(); }`
 
@@ -306,7 +306,7 @@ To disable the editing for a particular column, set the [GridColumn.allowEditing
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid disable the editing for specific column](images/editing/disable_editing.gif)
+![Flutter Data Grid disable the editing for specific column](images/editing/disable_editing.gif)
 
 > **Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
@@ -604,7 +604,7 @@ The SfDataGrid allows moving the cell into edit mode programmatically by calling
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid begin edit](images/editing/begin_editing.gif)
+![Flutter Data Grid begin edit](images/editing/begin_editing.gif)
 
 > **Note:** Download the complete programmatic editing demo from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
@@ -886,7 +886,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: StreamBuilder(
             stream: loadingController.stream,

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Headers in Flutter DataGrid | Syncfusion®
-description: Learn how to add and customize stacked headers in Syncfusion® Flutter DataGrid to group related columns and create organized multi-column header layouts.
+title: Stacked Headers in Flutter Data Grid | Syncfusion®
+description: Learn how to add and customize stacked headers in Syncfusion® Flutter Data Grid to group related columns and create organized multi-column header layouts.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Stacked headers in Flutter DataGrid
+# Stacked headers in Flutter Data Grid
 
 The Datagrid provides support to display additional unbound header rows known as [StackedHeaderRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/stackedHeaderRows.html) that span across multiple DataGrid columns. This feature allows you to group one or more columns under each stacked header, creating a hierarchical header structure.
 
@@ -99,7 +99,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows stacked headers](images/stacked-headers/flutter-stacked-headers.png)
+![Flutter Data Grid shows stacked headers](images/stacked-headers/flutter-stacked-headers.png)
 
 > **Note:** The `columnNames` property must contain valid column names that exactly match the `columnName` properties defined in your grid columns. Column names are case-sensitive, and specifying non-existent column names will result in those columns not being grouped under the stacked header.
 
@@ -212,7 +212,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multi stacked headers](images/stacked-headers/flutter-multi-stacked-headers.png)
+![Flutter Data Grid shows multi stacked headers](images/stacked-headers/flutter-multi-stacked-headers.png)
 
 ## Changing the row height of stacked headers
 
@@ -316,7 +316,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of stacked header row heights](images/stacked-headers/flutter-stacked-header-row-height.png)
+![Flutter Data Grid shows customization of stacked header row heights](images/stacked-headers/flutter-stacked-header-row-height.png)
 
 ### Using headerRowHeight property
 

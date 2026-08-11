@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conditional Styling in Flutter DataGrid | Syncfusion®
-description: Learn how to style rows and columns in Syncfusion® Flutter DataGrid, including custom colors, fonts, templates, and visual enhancements.
+title: Conditional Styling in Flutter Data Grid | Syncfusion®
+description: Learn how to style rows and columns in Syncfusion® Flutter Data Grid, including custom colors, fonts, templates, and visual enhancements.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Conditional Styling in Flutter DataGrid
+# Conditional Styling in Flutter Data Grid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows customizing the style of individual cells and rows based on your requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
 
@@ -144,7 +144,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows conditional formatting in cells](images/conditional-styling/flutter-datagrid-cells-styling-based-on-content.png)
+![Flutter Data Grid shows conditional formatting in cells](images/conditional-styling/flutter-datagrid-cells-styling-based-on-content.png)
 
 ### Styling alternate cells
 
@@ -209,7 +209,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows alternate cells styling](images/conditional-styling/flutter-datagrid-alternate-cells-styling.png)
+![Flutter Data Grid shows alternate cells styling](images/conditional-styling/flutter-datagrid-alternate-cells-styling.png)
 
 ## Rows
 
@@ -286,7 +286,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling a row based on content](images/conditional-styling/flutter-datagrid-rows-styling-based-on-content.png)
+![Flutter Data Grid shows styling a row based on content](images/conditional-styling/flutter-datagrid-rows-styling-based-on-content.png)
 
 ### Styling alternate rows
 
@@ -347,4 +347,4 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling alternate rows](images/conditional-styling/flutter-datagrid-alternate-rows-styling.png)
+![Flutter Data Grid shows styling alternate rows](images/conditional-styling/flutter-datagrid-alternate-rows-styling.png)

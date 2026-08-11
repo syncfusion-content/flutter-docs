@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze columns in Flutter DataGrid | Syncfusion®
-description: Learn how to use freeze panes in Syncfusion® Flutter DataGrid to keep rows and columns fixed while scrolling through large datasets.
+title: Freeze columns in Flutter Data Grid | Syncfusion®
+description: Learn how to use freeze panes in Syncfusion® Flutter Data Grid to keep rows and columns fixed while scrolling through large datasets.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Freeze Panes in Flutter DataGrid
+# Freeze Panes in Flutter Data Grid
 
 The rows and columns can freeze in view like in Excel. They can be frozen by setting the following properties.
 
@@ -172,7 +172,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen column at left](images/frozen-pane/flutter-datagrid-frozen-column.gif)
+![Flutter Data Grid shows frozen column at left](images/frozen-pane/flutter-datagrid-frozen-column.gif)
 
 The following code example shows how to freeze a column at right using the `footerFrozenColumnsCount`:
 
@@ -267,7 +267,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen column at right](images/frozen-pane/flutter-datagrid-footer-frozen-column.png)
+![Flutter Data Grid shows frozen column at right](images/frozen-pane/flutter-datagrid-footer-frozen-column.png)
 
 ### Limitation
 
@@ -372,7 +372,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen row at top](images/frozen-pane/flutter-datagrid-frozen-row.gif)
+![Flutter Data Grid shows frozen row at top](images/frozen-pane/flutter-datagrid-frozen-row.gif)
 
 The following code example shows how to freeze a row at the bottom using the `footerFrozenRowsCount`:
 
@@ -467,7 +467,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen row at bottom](images/frozen-pane/flutter-datagrid-footer-frozen-row.png)
+![Flutter Data Grid shows frozen row at bottom](images/frozen-pane/flutter-datagrid-footer-frozen-row.png)
 
 ### Limitation
 
@@ -589,7 +589,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
+![Flutter Data Grid shows frozen pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
 
 ### Customize frozen pane elevation
 
@@ -687,7 +687,7 @@ The `SfDataGrid` allows customizing the appearance of the frozen pane elevation 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of frozen pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
+![Flutter Data Grid shows customization of frozen pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
 
 ### Customize frozen pane line appearance
 
@@ -792,7 +792,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)
+![Flutter Data Grid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)
 
 > **Note:** 
 >- **Header row behavior** — The header row is frozen by default and remains frozen regardless of the `frozenRowsCount` property. This ensures the column headers remain visible while scrolling through data.
