@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL support in Flutter DataGrid | Syncfusion®
-description: Learn how to enable right-to-left (RTL) support in Syncfusion® Flutter DataGrid to create localized user experiences for RTL languages.
+title: RTL support in Flutter Data Grid | Syncfusion®
+description: Learn how to enable right-to-left (RTL) support in Syncfusion® Flutter Data Grid to create localized user experiences for RTL languages.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter DataGrid
+# Right to Left (RTL) in Flutter Data Grid
 
 SfDataGrid supports right-to-left (RTL) rendering. When RTL is enabled, columns will be rendered in reverse order, scrollbars will appear on the left side, and text alignment will be mirrored accordingly.
 

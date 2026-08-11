@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder in Flutter DataGrid | Syncfusion®
-description: Learn how to add and customize a placeholder in Syncfusion® Flutter DataGrid to display meaningful content when no data is available.
+title: Placeholder in Flutter Data Grid | Syncfusion®
+description: Learn how to add and customize a placeholder in Syncfusion® Flutter Data Grid to display meaningful content when no data is available.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Placeholder in Flutter DataGrid
+# Placeholder in Flutter Data Grid
 
 The `SfDataGrid` provides built-in support for displaying a placeholder when the data source is empty by setting the [SfDataGrid.placeholder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/placeholder.html) property. When the `SfDataGrid.placeholder` is set, the DataGrid automatically shows the specified widget in the scroll view area. By default, the `SfDataGrid` does not display anything when the data source is empty.
 
@@ -20,7 +20,7 @@ The following example shows how to add a `placeholder` in SfDataGrid:
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: employeeDataSource,
@@ -82,4 +82,4 @@ The following example shows how to add a `placeholder` in SfDataGrid:
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter DataGrid displays a placeholder when there are no rows" src="images/placeholder/flutter-datagrid-placeholder.png" width="404" height="396"/>
+<img alt="Flutter Data Grid displays a placeholder when there are no rows" src="images/placeholder/flutter-datagrid-placeholder.png" width="404" height="396"/>

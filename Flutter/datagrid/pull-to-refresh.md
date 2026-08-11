@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pull to Refresh in Flutter DataGrid | Syncfusion®
-description: Learn how to use the pull-to-refresh feature in Syncfusion® Flutter DataGrid to reload data dynamically and keep grid content up to date.
+title: Pull to Refresh in Flutter Data Grid | Syncfusion®
+description: Learn how to use the pull-to-refresh feature in Syncfusion® Flutter Data Grid to reload data dynamically and keep grid content up to date.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Pull to Refresh in Flutter DataGrid
+# Pull to Refresh in Flutter Data Grid
 
 The SfDataGrid provides support to add more data at runtime by using the pull-to-refresh feature. You can enable the pull-to-refresh option by setting the [SfDataGrid.allowPullToRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowPullToRefresh.html) property to `true` and overriding the [DataGridSource.handleRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleRefresh.html) method to add new data to the data source at runtime, then notify the data grid about the changes.
 
@@ -210,7 +210,7 @@ class EmployeeDataSource extends DataGridSource {
 
 > **Reference:** Download the demo application from [GitHub](https://github.com/SyncfusionExamples/pull-to-refresh-support-in-flutter-datatable-sfdatagrid).
 
-![flutter datagrid shows default view of refresh indicator](images/pull-to-refresh/flutter-datagrid-pull-to-refresh.gif)
+![Flutter Data Grid shows default view of refresh indicator](images/pull-to-refresh/flutter-datagrid-pull-to-refresh.gif)
 
 ## Customizing the refresh indicator
 
@@ -297,7 +297,7 @@ class CustomRefreshIndicatorDemoState
 
 > **Reference:** Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-refresh-indicator-appearance-in-flutter-datatable-sfdatagrid).
 
-![flutter datagrid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
+![Flutter Data Grid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
 
 ## Programmatic Pull to Refresh
 
@@ -485,4 +485,4 @@ class EmployeeDataSource extends DataGridSource {
 
 > **Reference:** Download the demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-pull-to-refresh-programmatically-in-flutter-datatable-sfdatagrid).
 
-![flutter datagrid shows programmatic refresh indicator](images/pull-to-refresh/flutter-datagrid-programmatic-pull-to-refresh.gif)
+![Flutter Data Grid shows programmatic refresh indicator](images/pull-to-refresh/flutter-datagrid-programmatic-pull-to-refresh.gif)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Swiping in Flutter DataGrid | Syncfusion®
-description: Learn how to swipe data rows in both directions in Syncfusion® Flutter DataGrid  including custom swipe views, row actions, and gesture-based interactions.
+title: Swiping in Flutter Data Grid | Syncfusion®
+description: Learn how to swipe data rows in both directions in Syncfusion® Flutter Data Grid  including custom swipe views, row actions, and gesture-based interactions.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Swiping in Flutter DataGrid
+# Swiping in Flutter Data Grid
 
 The Flutter DataTable provides support to swipe a row by setting the [SfDataGrid.allowSwiping](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSwiping.html) property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the [SfDataGrid.swipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/swipeMaxOffset.html) property.
 
@@ -206,7 +206,7 @@ class _SfDataGridExampleState extends State<SfDataGridExample> {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid shows swiping a row in both directions](images/swiping/flutter-datagrid-swiping.gif)
+![Flutter Data Grid shows swiping a row in both directions](images/swiping/flutter-datagrid-swiping.gif)
 
 ## Swipe callbacks
 
@@ -345,7 +345,7 @@ class _SfDataGridSwipeDeleteExampleState extends State<SfDataGridSwipeDeleteExam
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid shows customized swiping delete functionality](images/swiping/flutter-datagrid-customized-swiping-delete-funtionality.gif)
+![Flutter Data Grid shows customized swiping delete functionality](images/swiping/flutter-datagrid-customized-swiping-delete-funtionality.gif)
 
 ## Set different swipe offsets for start and end directions
 
@@ -478,4 +478,4 @@ class _SfDataGridDifferentSwipeOffsetsExampleState extends State<SfDataGridDiffe
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid shows swiping a row in both directions with different swiping offset](images/swiping/flutter-datagrid-individual-swiping.gif)
+![Flutter Data Grid shows swiping a row in both directions with different swiping offset](images/swiping/flutter-datagrid-individual-swiping.gif)

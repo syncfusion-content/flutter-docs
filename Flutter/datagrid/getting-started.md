@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Flutter DataGrid | Syncfusion®
-description: Learn how to get started with Syncfusion® Flutter DataGrid including setup, data binding, column configuration, and essential grid features.
+title: Getting Started with Flutter Data Grid | Syncfusion®
+description: Learn how to get started with Syncfusion® Flutter Data Grid including setup, data binding, column configuration, and essential grid features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Getting Started with Flutter DataGrid
+# Getting Started with Flutter Data Grid
 
-This section explains the steps required to add the SfDataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter DataGrid widget.
+This section explains the steps required to add the SfDataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter Data Grid widget.
 
 > **Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
@@ -23,7 +23,7 @@ Create a simple project using the instruction given in the [Getting Started with
 
 **Add dependency**
 
-Add the Syncfusion® Flutter DataGrid dependency to your `pubspec.yaml` file.
+Add the Syncfusion® Flutter Data Grid dependency to your `pubspec.yaml` file.
 
 {% highlight dart %} 
 
@@ -33,7 +33,7 @@ Add the Syncfusion® Flutter DataGrid dependency to your `pubspec.yaml` file.
 
 {% endhighlight %}
 
-> **Note:** Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter DataGrid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package. Refer to the [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) page to check the latest available version.
+> **Note:** Here **xx.x.xx** denotes the current version of the [`Syncfusion® Flutter Data Grid`](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) package. Refer to the [pub.dev](https://pub.dev/packages/syncfusion_flutter_datagrid/versions) page to check the latest available version.
 
 **Get packages**
 
@@ -309,7 +309,7 @@ The `SfDataGrid` supports adding any widget in a column using the [GridColumn](h
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png)
+![Flutter Data Grid shows different column types](images/getting-started/getting-started-flutter-datagrid.png)
 
 ## Selection
 
@@ -379,7 +379,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
+![Flutter Data Grid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
 **Retrieve selection information:**
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styling in Flutter DataGrid | Syncfusion®
-description: Learn how to customize the appearance of Syncfusion® Flutter DataGrid, including row, cell, header, and grid styling options for enhanced visual experiences.
+title: Styling in Flutter Data Grid | Syncfusion®
+description: Learn how to customize the appearance of Syncfusion® Flutter Data Grid, including row, cell, header, and grid styling options for enhanced visual experiences.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Styling in Flutter DataGrid
+# Styling in Flutter Data Grid
 
 The DataGrid supports changing the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
@@ -36,7 +36,7 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: SfDataGridTheme(
             data: SfDataGridThemeData(headerColor: const Color(0xff009889)),
@@ -79,7 +79,7 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid header background color](images/styles/flutter-datagrid-column-header-styling.png)
+![Flutter Data Grid header background color](images/styles/flutter-datagrid-column-header-styling.png)
 
 ## Change the header hover color
 
@@ -94,7 +94,7 @@ Change the color of the header on hovering by using the [headerHoverColor]( http
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: SfDataGridTheme(
             data: SfDataGridThemeData(headerHoverColor: Colors.yellow),
@@ -137,7 +137,7 @@ Change the color of the header on hovering by using the [headerHoverColor]( http
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
+![Flutter Data Grid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
 
 ## Change the row background color
 
@@ -192,7 +192,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid row background color](images/styles/flutter-datagrid-rows-styling.png)
+![Flutter Data Grid row background color](images/styles/flutter-datagrid-rows-styling.png)
 
 ## Styling grid lines
 
@@ -252,7 +252,7 @@ The color and thickness of the grid lines can be changed by using the [SfDataGri
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
+![Flutter Data Grid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
 
 ## Configure grid line visibility
 
@@ -324,7 +324,7 @@ The following code describes how to show vertical and horizontal grid lines for 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
+![Flutter Data Grid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
 
 ## Disable the row highlighting
 
@@ -430,7 +430,7 @@ Change the row highlighting color and text style by using the [SfDataGridThemeDa
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
+![Flutter Data Grid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
 
 ## Change the cell value color
 
@@ -488,4 +488,4 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)
+![Flutter Data Grid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)
