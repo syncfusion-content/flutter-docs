@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Flutter DataGrid | Syncfusion®
-description: Learn how to sort single or multiple columns in Syncfusion® Flutter DataGrid including ascending, descending, and tristate sorting options.
+title: Sorting in Flutter Data Grid | Syncfusion®
+description: Learn how to sort single or multiple columns in Syncfusion® Flutter Data Grid including ascending, descending, and tristate sorting options.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Sorting in Flutter DataGrid
+# Sorting in Flutter Data Grid
 
 The Datagrid provides the built-in support to sort one or more columns by setting the [SfDataGrid.allowSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSorting.html) property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When the `SfDataGrid.allowSorting` is true, sort the data by tapping the column header.
 
@@ -95,7 +95,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows programmatical sorting](images/sorting/flutter-datagrid-programmatical-sorting.jpg)
+![Flutter Data Grid shows programmatical sorting](images/sorting/flutter-datagrid-programmatical-sorting.jpg)
 
 ## Multi-column sorting
 
@@ -159,7 +159,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multi-column sorting](images/sorting/flutter-datagrid-multicolumn-sorting.gif)
+![Flutter Data Grid shows multi-column sorting](images/sorting/flutter-datagrid-multicolumn-sorting.gif)
 
 ## Tri-state sorting
 
@@ -222,7 +222,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows tri-state sorting](images/sorting/flutter-datagrid-tristate-sorting.gif)
+![Flutter Data Grid shows tri-state sorting](images/sorting/flutter-datagrid-tristate-sorting.gif)
 
 ## Sort column in double tap
 
@@ -434,7 +434,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
+![Flutter Data Grid shows sort sequence numbers during multi-column sorting](images/sorting/flutter-datagrid-showsortnumbers.gif)
 
 ## Change the sort number and background color
 
@@ -449,7 +449,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
             sortOrderNumberBackgroundColor: Colors.tealAccent,
@@ -494,7 +494,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid sort order number and its background color change](images/sorting/flutter-datagrid-sort-order-number-style.png)
+![Flutter Data Grid sort order number and its background color change](images/sorting/flutter-datagrid-sort-order-number-style.png)
 
 ## Disable sorting for an individual column
 
@@ -622,7 +622,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.jpg)
+![Flutter Data Grid shows customized the sort icon color](images/sorting/flutter-datagrid-customized-sorticon-color.jpg)
 
 ## Change the position of the sort icon
 
@@ -686,7 +686,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sorticon-position.png)
+![Flutter Data Grid shows customized the sort icon position](images/sorting/flutter-datagrid-customized-sorticon-position.png)
 
 ## Set a custom sorting icon
 
@@ -713,7 +713,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
           sortIcon: Builder(
@@ -784,7 +784,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.jpg)
+![Flutter Data Grid shows custom the sort icon](images/sorting/flutter-datagrid-custom-sort-icon.jpg)
 
 ## Custom sorting
 
@@ -875,7 +875,7 @@ class EmployeeDataSource extends DataGridSource {
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-sort-the-columns-based-on-length-of-the-text-in-Flutter-datagrid).
 
-![flutter datagrid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.jpg)
+![Flutter Data Grid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.jpg)
 
 ### Case-insensitive sorting
 
@@ -956,7 +956,7 @@ class EmployeeDataSource extends DataGridSource {
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
 
-![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
+![Flutter Data Grid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.jpg)
 
 ## Perform sorting asynchronously
 
@@ -986,7 +986,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: StreamBuilder(
             stream: loadingController.stream,

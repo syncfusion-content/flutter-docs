@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load More in Flutter DataGrid | Syncfusion®
-description: Learn how to implement lazy loading in Syncfusion® Flutter DataGrid to load rows on demand and improve performance when working with large datasets.
+title: Load More in Flutter Data Grid | Syncfusion®
+description: Learn how to implement lazy loading in Syncfusion® Flutter Data Grid to load rows on demand and improve performance when working with large datasets.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Load more in Flutter DataGrid 
+# Load more in Flutter Data Grid 
 
 The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) builder to display the view at bottom of datagrid. 
 
@@ -195,7 +195,7 @@ class EmployeeDataSource extends DataGridSource {
 **NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
 
-![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
+![Flutter Data Grid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
 
 ## Load more button
 
@@ -412,4 +412,4 @@ class EmployeeDataSource extends DataGridSource {
 **NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
 
-![flutter datagrid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)
+![Flutter Data Grid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Selection modes in Flutter DataGrid | Syncfusion®
-description: Learn how to select rows and multiple rows in Syncfusion® Flutter DataGrid, including selection modes, customization options, and user interaction features.
+title: Selection modes in Flutter Data Grid | Syncfusion®
+description: Learn how to select rows and multiple rows in Syncfusion® Flutter Data Grid, including selection modes, customization options, and user interaction features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
-# Selection in Flutter DataGrid
+# Selection in Flutter Data Grid
 
 This section explains how to enable selection in the Datagrid; modes, properties, and callbacks involved in selection and customizations available for selection.
 
@@ -100,7 +100,7 @@ Keyboard navigation through the cells and rows is determined based on the [navig
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows currentCell](images/selection/flutter-datagrid-currentcell.png)
+![Flutter Data Grid shows currentCell](images/selection/flutter-datagrid-currentcell.png)
 
 ### Single row selection
 
@@ -158,7 +158,7 @@ It allows you to select only one row. For example, you have selected a row. Now 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows single row selection](images/selection/flutter-datagrid-single-selection.png)
+![Flutter Data Grid shows single row selection](images/selection/flutter-datagrid-single-selection.png)
 
 ### Multiple row selection
 
@@ -218,7 +218,7 @@ When using `multiple`, you can select multiple rows by pressing the key modifier
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-multiple-selection.png)
+![Flutter Data Grid shows multiple row selection](images/selection/flutter-datagrid-multiple-selection.png)
 
 > **Note:**  When the `selectionMode` is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selections, pressing the navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
 
@@ -642,7 +642,7 @@ Multiple rows can be selected by adding a collection of `DataGridRow` to the `se
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-programmatic-multiple-selection.png)
+![Flutter Data Grid shows multiple row selection](images/selection/flutter-datagrid-programmatic-multiple-selection.png)
 
 ### Get the current cell
 
@@ -1064,7 +1064,7 @@ All rows or cells will be selected.
 <kbd>F2</kbd> 
 </td>
 <td>
-If the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html">DataGrid.AllowEditing </a> property is true and the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowEditing.html">GridColumn.AllowEditing </a> property is true for the current column, the current cell enters into edit mode.
+If the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html" aria-label="DataGrid AllowEditing property">DataGrid.AllowEditing </a> property is true and the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowEditing.html" aria-label="GridColumn AllowEditing property">GridColumn.AllowEditing </a> property is true for the current column, the current cell enters into edit mode.
 </td>
 </tr>
 <tr>
@@ -1072,7 +1072,7 @@ If the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/lates
 <kbd>Esc</kbd>
 </td>
 <td>
-If the current cell is in edit mode, call the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html">DataGridSource.onCellCancelEdit </a> method to revert the current changes and ends the editing.
+If the current cell is in edit mode, call the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html" aria-label="DataGridSource onCellCancelEdit method">DataGridSource.onCellCancelEdit </a> method to revert the current changes and ends the editing.
 </td>
 </tr>
 </table>
@@ -1679,7 +1679,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized multiple selection](images/selection/flutter-datagrid-customized-multiple-selection.png)
+![Flutter Data Grid shows customized multiple selection](images/selection/flutter-datagrid-customized-multiple-selection.png)
 
 ### Current cell
 
@@ -1746,6 +1746,6 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
+![Flutter Data Grid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
 
 > **Note:** When [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) is set to [GridNavigationMode.row](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridNavigationMode.html), the `currentCellStyle` property customizes the current row border's color instead of individual cell borders.  

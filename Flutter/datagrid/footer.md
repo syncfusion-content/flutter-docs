@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Footer in the Flutter DataGrid | Syncfusion®
-description: Learn how to add and customize a footer view in Syncfusion® Flutter DataGrid to display summaries, custom content, and additional information.
+title: Footer in the Flutter Data Grid | Syncfusion®
+description: Learn how to add and customize a footer view in Syncfusion® Flutter Data Grid to display summaries, custom content, and additional information.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Footer in Flutter DataGrid
+# Footer in Flutter Data Grid
 
 The footer row is an additional row that displays below the last data row in the grid. Widgets can be displayed in the footer row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 
@@ -72,7 +72,7 @@ The footer row is an additional row that displays below the last data row in the
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows footer](images/footer/flutter-datagrid-footer.png)
+![Flutter Data Grid shows footer](images/footer/flutter-datagrid-footer.png)
 
 ## Change the footer row height
 
@@ -131,7 +131,7 @@ The footer row height can be customized by using the [SfDataGrid.footerHeight](h
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows footer height customization](images/footer/flutter-datagrid-footer-height-customization.png)
+![Flutter Data Grid shows footer height customization](images/footer/flutter-datagrid-footer-height-customization.png)
 
 ## Show the footer row always
 
@@ -190,4 +190,4 @@ By default, the footer row is displayed below the last data row. To keep the foo
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows footer always on bottom](images/footer/flutter-datagrid-footer-on-bottom.gif)
+![Flutter Data Grid shows footer always on bottom](images/footer/flutter-datagrid-footer-on-bottom.gif)

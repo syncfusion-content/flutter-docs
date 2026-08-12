@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column drag and drop in Flutter DataGrid | Syncfusion®
-description: Learn how to drag and drop columns in Syncfusion® Flutter DataGrid including column reordering, customization options, and user interaction features.
+title: Column drag and drop in Flutter Data Grid | Syncfusion®
+description: Learn how to drag and drop columns in Syncfusion® Flutter Data Grid including column reordering, customization options, and user interaction features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Column drag and drop in Flutter DataGrid
+# Column drag and drop in Flutter Data Grid
 
 The SfDataGrid enables columns to be dragged and dropped by setting the [SfDataGrid.allowColumnsDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsDragging.html) property to `true` and returning `true` from the [SfDataGrid.onColumnDragging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onColumnDragging.html) callback. During the column-dragging process, a drag feedback widget is displayed. By utilizing the `SfDataGrid.onColumnDragging` callback, you can handle drag and drop operations to reorder columns dynamically.
 
@@ -112,7 +112,7 @@ The following code example shows how to enable column drag and drop functionalit
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.fill,
@@ -183,7 +183,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/column-drag-and-drop.gif" width="400"/>
+<img alt="Flutter Data Grid shows a checkbox filter in web platform" src="images/column-drag-and-drop/column-drag-and-drop.gif" width="400"/>
 
 > **Note:**
 >* To reorder the columns in the DataGrid, create an instance variable to hold the columns and then assign that instance to the [SfDataGrid.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) property instead of directly assigning a list literal. This allows you to reorder the collection within the callback, maintaining the desired column order.
@@ -211,7 +211,7 @@ In the following example, columns cannot be dropped at index 2 (the third column
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         allowColumnsDragging: true,
@@ -252,7 +252,7 @@ The DataGrid allows you to customize the feedback widget displayed during column
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         allowColumnsDragging: true,
@@ -294,7 +294,7 @@ The DataGrid allows you to customize the feedback widget displayed during column
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/feedback-widget.gif" width="400"/>
+<img alt="Flutter Data Grid shows a checkbox filter in web platform" src="images/column-drag-and-drop/feedback-widget.gif" width="400"/>
 
 ## Drag indicator customization
 
@@ -315,7 +315,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
           columnDragIndicatorColor: Colors.pink,
@@ -346,4 +346,4 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/column-drag-and-drop/drag-indicator-color.png" width="400"/>
+<img alt="Flutter Data Grid shows a checkbox filter in web platform" src="images/column-drag-and-drop/drag-indicator-color.png" width="400"/>

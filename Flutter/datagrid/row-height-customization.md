@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Height Customization in Flutter DataGrid | Syncfusion®
-description: Learn how to customize row heights in Syncfusion® Flutter DataGrid including fixed, dynamic, and content-based sizing options for enhanced data presentation.
+title: Row Height Customization in Flutter Data Grid | Syncfusion®
+description: Learn how to customize row heights in Syncfusion® Flutter Data Grid including fixed, dynamic, and content-based sizing options for enhanced data presentation.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Row Height Customization in Flutter DataGrid
+# Row Height Customization in Flutter Data Grid
 
 This section explains options to customize the header row height and the row height of all the grid rows or particular rows based on your requirements.
 
@@ -69,7 +69,7 @@ The row height of a particular row can be set by using the [SfDataGrid.onQueryRo
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows custom row height for the specific row](images/row-height-customization/flutter-datagrid-specific-row-height-customization.png)
+![Flutter Data Grid shows custom row height for the specific row](images/row-height-customization/flutter-datagrid-specific-row-height-customization.png)
 
 ## Fit the row height based on its content
 
@@ -128,7 +128,7 @@ The row height can be autofit based on its content in the `SfDataGrid.onQueryRow
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows auto-fitting the row height based on content](images/row-height-customization/flutter-datagrid-autofit-rows.png)
+![Flutter Data Grid shows auto-fitting the row height based on content](images/row-height-customization/flutter-datagrid-autofit-rows.png)
 
 The [RowHeightDetails.getIntrinsicRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowHeightDetails/getIntrinsicRowHeight.html) method provides some properties to customize the autofit calculation:
 
@@ -200,7 +200,7 @@ The [RowHeightDetails.getIntrinsicRowHeight](https://pub.dev/documentation/syncf
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of autofit row height calculation](images/row-height-customization/flutter-datagrid-autofit-customization.png)
+![Flutter Data Grid shows customization of autofit row height calculation](images/row-height-customization/flutter-datagrid-autofit-customization.png)
 
 ## Fit the row based on different TextStyle
 
@@ -336,7 +336,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 > **Note:** The `CustomColumnSizer` is a custom class that should be added to your dart file. You can download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
 
-![flutter datagrid shows auto-fitting the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
+![Flutter Data Grid shows auto-fitting the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
 
 ## Fit the row based on the formatted value
 
@@ -367,7 +367,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: const Text('Syncfusion Flutter DataGrid'),
+              title: const Text('Syncfusion Flutter Data Grid'),
             ),
             body: SfDataGrid(
                 source: employeeDataSource,
@@ -485,7 +485,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 > **Note:** Download the complete demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
-![flutter datagrid shows auto-fitting the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
+![Flutter Data Grid shows auto-fitting the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
 
 ## Set height for the header row
 
@@ -546,7 +546,7 @@ class CustomColumnSizer extends ColumnSizer {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows header row with custom height ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
+![Flutter Data Grid shows header row with custom height ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
 
 ## Set height for rows except for header row
 
@@ -607,7 +607,7 @@ You can customize the height of the grid rows in `SfDataGrid` by using the [rowH
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows rows except header row with custom height](images/row-height-customization/flutter-datagrid-row-height.jpg)
+![Flutter Data Grid shows rows except header row with custom height](images/row-height-customization/flutter-datagrid-row-height.jpg)
 
 ## Refresh row height for a specific row
 
@@ -643,7 +643,7 @@ In the following example, row data is updated when `refreshRow` is called in the
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: Column(children: [
           TextButton(
@@ -777,7 +777,7 @@ In the following example, the row data is refreshed along with its row height wh
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: Column(
         children: [
           TextButton(

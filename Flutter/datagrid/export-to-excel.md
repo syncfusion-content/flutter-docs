@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export Flutter DataGrid to Excel Flutter DataGrid | Syncfusion®
-description: Learn how to export data from Syncfusion® Flutter DataGrid to Excel, including customization options, formatting, and export configuration settings.
+title: Export Flutter Data Grid to Excel | Syncfusion®
+description: Learn how to export data from Syncfusion® Flutter Data Grid to Excel, including customization options, formatting, and export configuration settings.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Export to Excel in Flutter DataGrid
+# Export to Excel in Flutter Data Grid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to Excel with several customization options.
 
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: const Text(
-        'Syncfusion Flutter DataGrid Export',
+        'Syncfusion Flutter Data Grid Export',
         overflow: TextOverflow.ellipsis,
       ),
     ),
