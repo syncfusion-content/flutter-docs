@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Two-Dimensional Symbology in Flutter Barcodes | Syncfusion®
+title: Two-Dimensional Symbology in Flutter Barcode Generator | Syncfusion®
 description: Learn about two-dimensional symbology support in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including QR Code, Data Matrix, and PDF417.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Two-Dimensional Symbology in Flutter Barcodes (SfBarcodeGenerator)
+# Two-Dimensional Symbology in Flutter Barcode Generator (SfBarcodeGenerator)
 
-To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcodes](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
+To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 
-Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but can represent more data per unit area. The barcode generator control supports the following two-dimensional symbology:
+	Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but can represent more data per unit area. The Flutter Barcode Generator widget supports the following two-dimensional symbology:
 
 * [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
 * [`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
@@ -21,7 +21,7 @@ Two-dimensional barcode is a way to represent information by using the two-dimen
 A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
 
 * The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40 that measures 177 modules x 177 modules. 
-* Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text.
+* Each version has its own capacity. By default, the Barcode Generator widget automatically sets the version according to the length of the input text.
 * The QR Barcodes are designed for industrial uses and also commonly used in consumer advertising.
 
 {% tabs %}
