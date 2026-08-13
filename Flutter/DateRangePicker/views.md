@@ -7,9 +7,9 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Views in Flutter DateRangePicker (SfDateRangePicker)
+# Views in Flutter Date Range Picker (SfDateRangePicker)
 
-The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the Date Range Picker views.
 
 ## Month view
 
@@ -178,7 +178,7 @@ The number of weeks in the month view can be customized by setting the [numberOf
 
 ## Multi-date picker view
 
-You can enable a multi-date range picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
+You can enable a multi-view Date Range Picker by using the [enableMultiView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enableMultiView.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/viewSpacing.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -205,7 +205,7 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 
 ## Vertical picker
 
-You can arrange the two date range picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as [DateRangePickerNavigationDirection.vertical](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#vertical) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).`
+You can arrange the two Date Range Picker views in the vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as [DateRangePickerNavigationDirection.vertical](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationDirection.html#vertical) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).`
 
 {% tabs %}
 {% highlight dart hl_lines="7" %}
@@ -226,7 +226,7 @@ You can arrange the two date range picker views in the vertical direction by set
 {% endhighlight %}
 {% endtabs %}
 
-![vertical date picker](images/views/vertical-datepicker.png)
+![vertical Date Range Picker](images/views/vertical-datepicker.png)
 
 ## See also
 

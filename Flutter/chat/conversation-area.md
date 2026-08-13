@@ -9,11 +9,11 @@ documentation: ug
 
 # Message Content in Flutter Chat (SfChat)
 
-This section explains the customization options available for incoming and outgoing messages in the chat widget.
+This section explains the customization options available for incoming and outgoing messages in the Flutter Chat widget.
 
 ## Messages
 
-The [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) property is the data source of the Chat widget. It accepts a list of [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) objects that are displayed as incoming or outgoing based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html) value.
+The [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) property is the data source of the Flutter Chat widget. It accepts a list of [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) objects that are displayed as incoming or outgoing based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html) value.
 
 Each [`ChatMessage`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessage-class.html) contains:
 
@@ -592,7 +592,7 @@ class MessageSettingsExample extends StatelessWidget {
 
 ![Bubble settings](images/message-content/contentbackgroundcolor-for-bubblesettings.png)
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the Flutter Chat widget with built-in support for creating stunning visual effects.
 
 #### See Also
 
