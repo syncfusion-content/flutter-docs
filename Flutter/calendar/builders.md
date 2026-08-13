@@ -9,14 +9,14 @@ documentation: ug
 
 # Flutter Event Calendar Builders (SfCalendar)
 
-The calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view for the month cells and month header of schedule view in the calendar.
+The Flutter Event Calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view for the month cells and month header of schedule view.
 
-The calendar has two builders to create and assign your custom view:
+The Flutter Event Calendar has two builders to create and assign your custom view:
 * Month cell builder
 * Schedule view month header builder
 
 ## Month cell builder
-The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellBuilder.html) allows you to design your custom view and assign the view to the month cells of the calendar by returning an appropriate widget in the [monthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthCellBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellBuilder.html) allows you to design your custom view and assign the view to the month cells of the Flutter Event Calendar by returning an appropriate widget in the [monthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthCellBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [MonthCellDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails-class.html) - returns the details of the month cell.
 
@@ -81,7 +81,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Schedule view month header builder
 
-You can design your custom view and assign this view to the month header of a schedule view in the calendar by returning an appropriate widget using the [scheduleViewMonthHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/scheduleViewMonthHeaderBuilder.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+You can design your custom view and assign this view to the month header of a schedule view  by returning an appropriate widget using the [scheduleViewMonthHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/scheduleViewMonthHeaderBuilder.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ScheduleViewMonthHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewMonthHeaderDetails-class.html) - returns the required details of the schedule view month header.
 
@@ -143,7 +143,7 @@ class CalendarApp extends StatelessWidget {
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
 
 ## Appointment builder
-The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentBuilder.html) allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentBuilder.html) allows you to design your custom view and assign the view to the appointment UI of the Flutter Event Calendar by returning an appropriate widget in the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [CalendarAppointmentDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails-class.html): Returns the details of the appointment view.
 
@@ -292,7 +292,7 @@ class _CalendarAppState extends State<CalendarApp> {
 
 
 ## Time region builder
-The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionBuilder.html) allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeRegionBuilder.html) of SfCalendar.
+The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionBuilder.html) allows you to design your custom view and assign the view to the time region view of the Flutter Event Calendar by returning an appropriate widget in the [timeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeRegionBuilder.html).
 
 [TimeRegionDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails-class.html): Returns the details of the time region view.
 
@@ -368,7 +368,7 @@ class CalendarApp extends StatelessWidget {
 ![Time regions builder](images/builder/timeregion-builder.png)
 
 ## Resource view header builder
-The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows you to design the custom view, and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+	The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows you to design the custom view, and assign the view to the resource view header by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ResourceViewHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails-class.html) - returns the required details of the resource view header builder.
 
@@ -421,7 +421,7 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Resource View Header Builder in Flutter Calendar](images/builder/flutter-calendar-resource-view-header-builder.png)
+![Resource View Header Builder in Flutter Event Calendar](images/builder/flutter-calendar-resource-view-header-builder.png)
 
 ## See also
 

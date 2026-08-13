@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# One-Dimensional Symbology in Flutter Barcode Generator (SfBarcodeGenerator)
+# One-Dimensional Symbology in Flutter Barcode  (SfBarcodeGenerator)
 
 To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 

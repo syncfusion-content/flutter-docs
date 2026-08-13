@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Event Calendar Callbacks (SfCalendar)
 
-The calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedCallback.html) and [CalendarTapCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTapCallback.html) to interact with the Flutter calendar.
+The Flutter Event Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedCallback.html) and [CalendarTapCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTapCallback.html) to handle user interaction.
 
 ## View changed callback
 
-The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onViewChanged.html) callback triggers when the current view of calendar changed, that is view swiped to previous/next view, calendar view switched to another calendar view.
+The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onViewChanged.html) callback triggers when the current view of Flutter Event Calendar changed, that is view swiped to previous/next view, or when the calendar view is switched to another view.
 
 * [visibleDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedDetails/visibleDates.html) - returns the current view visible dates collection.
 
@@ -55,7 +55,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Calendar tap callback
 
-The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar is tapped.
+The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the Flutter Event Calendar is tapped.
 
 * [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/date.html) - returns the selected date.
 * [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/appointments.html) - returns the selected appointments.
@@ -99,15 +99,15 @@ class CalendarApp extends StatelessWidget {
 
 >**NOTE**
 * For recurrence appointment, the tap details will always return as `Appointment`, even for the custom business object.
-* The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) and [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onLongPress.html) callbacks are not applicable for pop-ups like allowedViews and date picker in the calendar header.
+* The [onTap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) and [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onLongPress.html) callbacks are not applicable for pop-ups like allowedViews and date picker in the header of the Flutter Event Calendar.
 
-## Calendar details callback
+## Flutter Event Calendar details callback
 
-Return calendar details based on the given offset passed through an argument by using the [getCalendarDetailsAtOffset](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/getCalendarDetailsAtOffset.html) method.
+Return details of the Flutter Event Calendar based on the given offset passed through an argument by using the [getCalendarDetailsAtOffset](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/getCalendarDetailsAtOffset.html) method.
 
 * [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/date.html) - returns the date based on the given offset.
 * [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/appointments.html) - returns the appointments based on the given offset.
-* [targetElement](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/targetElement.html) - returns the calendar element based on the given offset.
+* [targetElement](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/targetElement.html) - returns the Flutter Event Calendar element based on the given offset.
 * [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/resource.html) - returns the resource based on the given offset.
 
 {% tabs %}
@@ -166,8 +166,8 @@ The long-pressed date, appointments, and element details when the long-press act
 
 * [date](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/date.html) - returns the long-pressed date.
 * [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/appointments.html) - returns the long-pressed appointments.
-* [targetElement](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/targetElement.html) - returns the long-pressed calendar element.
-* [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/resource.html) - returns the long-pressed calendar resource.
+* [targetElement](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/targetElement.html) - returns the long-pressed element in the Flutter Event Calendar.
+* [resource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTouchDetails/resource.html) - returns the long-pressed resource in the Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="18 19 20 21 22" %}

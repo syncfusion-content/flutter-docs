@@ -9,21 +9,21 @@ documentation: ug
 
 # Flutter Event Calendar Getting Started (SfCalendar)
 
-This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> calendar widget.
+This section explains the steps required to add the Flutter Event Calendar widget and populate it with appointments. This section covers only basic features needed to get started with Syncfusion® Flutter Calendar widget.
 
-To get started quickly with our [Flutter event calendar widget](https://www.syncfusion.com/flutter-widgets/flutter-calendar), you can refer to this video.
+To get started quickly with our [Flutter Event Calendar widget](https://www.syncfusion.com/flutter-widgets/flutter-calendar), you can refer to this video.
 
 <style>#flutterEventCalendarVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterEventCalendarVideoTutorial' src='https://www.youtube.com/embed/3OROjbAQS8Y'></iframe>
 
-N> You can also explore our [Flutter Calendar example](https://flutter.syncfusion.com/#/event-calendar/getting-started) to know how to render and configure the Flutter Examples.
+N> You can also explore our [Flutter Event Calendar example](https://flutter.syncfusion.com/#/event-calendar/getting-started) to know how to render and configure the Flutter Examples.
 
-## Add Flutter calendar to an application
+## Add Flutter Event Calendar to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter calendar dependency to your pubspec.yaml file.
+Add the Syncfusion® Flutter Calendar dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %}
@@ -61,9 +61,9 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize calendar
+## Initialize Flutter Event Calendar
 
-After importing the package, initialize the calendar widget as a child of any widget. Here, the calendar widget is added as a child of the scaffold widget.
+After importing the package, initialize the Flutter Event Calendar widget as a child of any widget. Here, the Flutter Event Calendar widget is added as a child of the scaffold widget.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
@@ -131,8 +131,8 @@ class CalendarApp extends StatelessWidget {
 
 ## Add data source
 
-The calendar widget has a built-in capability to handle appointment arrangement internally based on the appointment collections. You need to assign the created collection to the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) property.
-You can also map custom appointment data to our calendar.
+The Flutter Event Calendar widget has a built-in capability to handle appointment arrangement internally based on the appointment collections. You need to assign the created collection to the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) property.
+You can also map custom appointment data to our Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="16 22 23 24 25 26 27 28 29 30 31" %}
@@ -221,7 +221,7 @@ class Meeting {
 
 ## Change first day of week
 
-The calendar widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/firstDayOfWeek.html) property.
+The Flutter Event Calendar widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/firstDayOfWeek.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="12" %}
@@ -256,7 +256,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Initial selected date
 
-You can programmatically select the specific calendar month cell, and time slot by setting corresponding date and time value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialSelectedDate.html) property of calendar. By default, it is null.
+You can programmatically select the specific  month cell and time slot in the Flutter Event Calendar by setting corresponding date and time value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialSelectedDate.html) property. By default, it is null.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -293,7 +293,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Initial display date
 
-You can change the initial display date of calendar by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of calendar, which displays the calendar based on the given date time. By default, current date will be set as `initialDisplayDate`.
+You can change the initial display date of the Flutter Event Calendar by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property, which displays the calendar based on the given date time. By default, current date will be set as `initialDisplayDate`.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -330,7 +330,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Selection decoration
 
-You can decorate the selection view of calendar by using the [selectionDecoration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/selectionDecoration.html) property of Calendar.
+You can decorate the selection view of the Flutter Event Calendar by using the [selectionDecoration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/selectionDecoration.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="14 15 16 17 18 19" %}
@@ -372,7 +372,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Today highlight color
 
-You can customize the today highlight color of calendar by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property in calendar, which will highlight the today text in calendar view header, month cell, and agenda view.
+You can customize the today highlight color of the Flutter Event Calendar by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property. This property highlights the today text in the  view header, month cell, and agenda view.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -409,7 +409,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Cell border color
 
-You can customize the vertical and horizontal line color of calendar by using the [cellBorderColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellBorderColor.html) property in calendar.
+You can customize the vertical and horizontal line color of the Flutter Event Calendar by using the [cellBorderColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellBorderColor.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -446,7 +446,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Background color
 
-The calendar widgets background color can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/backgroundColor.html) property in calendar.
+The background color of the Flutter Event Calendar can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar/backgroundColor.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -482,7 +482,7 @@ class CalendarApp extends StatelessWidget {
 ![Background color](images/getting-started/calendar-background-color.png)
 
 ## Navigation arrow
-Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html), you can navigate to the next or previous views of the calendar without swiping.
+Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html), you can navigate to the next or previous views of the Flutter Event Calendar without swiping.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -520,7 +520,7 @@ class CalendarApp extends StatelessWidget {
 * The  [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property is not applicable when the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) is set to [CalendarView.schedule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarView.html).
 
 ## Cell end padding
-You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
+You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the Flutter Event Calendar, which allows you to tap the calendar cell when the cell has appointments.
 
 {% tabs %}
 {% highlight dart hl_lines="15" %}
@@ -594,7 +594,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Week number
 
-Display the Week number of the year in all views except schedule view of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
+Display the Week number of the year in all views except schedule view of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar-class.html) by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight dart hl_lines="15" %}
@@ -625,11 +625,11 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number in Flutter Calendar](images\getting-started\flutter-calendar-week-number.png)
+![Week Number in Flutter Event Calendar](images\getting-started\flutter-calendar-week-number.png)
 
 ## Week number appearance
 
-Customize the Week number text style of the calendar by using the [WeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle-class.html) property. Allows to customize the [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/backgroundColor.html) in the Week number of the calendar.
+Customize the Week number text style of the Flutter Event Calendar by using the [WeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle-class.html) property. Allows to customize the [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekNumberStyle/backgroundColor.html) in the Week number of the Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="16 17 18 19" %}
@@ -664,7 +664,7 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Week Number Appearance in Flutter Calendar](images\getting-started\flutter-calendar-week-number-appearance.png)
+![Week Number Appearance in Flutter Event Calendar](images\getting-started\flutter-calendar-week-number-appearance.png)
 
 Get the complete "getting started" sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 

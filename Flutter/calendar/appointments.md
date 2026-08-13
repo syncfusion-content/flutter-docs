@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar Appointments (SfCalendar)
 
-SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
+	SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="16 23 24 25 26 27 28 29 30 31 32 34 35 37 38 39 40 41" %}
@@ -64,7 +64,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ## Calendar data source and mapping
 
-[CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar appointments in [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
+[CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) is an abstract class used to set the appointment datasource for calendar and has properties to map the custom appointments to the calendar `Appointment`. Flutter Event Calendar supports full data binding to any type of List source. Specify the corresponding property override method to map the properties in the underlying data source to the calendar appointments in [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -329,7 +329,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-You can map those properties of `Meeting` class with our calendar widget by using the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) override methods properties.
+You can map those properties of `Meeting` class with our Flutter Event Calendar widget by using the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html) override methods properties.
 
 {% tabs %}
 {% highlight dart hl_lines="3 4 6 7 8 9 11 12 13 14 16 17 18 19 21 22 23 24 26 27 28 29 31 32 33 34 36 37 38 39 40" %}
@@ -603,7 +603,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 #### Recurrence appointments on last day of month
 
-To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in the flutter event calendar.
+To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in the Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -668,7 +668,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-You can map those properties of `Meeting` class with our calendar widget by using [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
+You can map those properties of `Meeting` class with our Flutter Event Calendar widget by using [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="31 32 33 34" %}
@@ -803,7 +803,7 @@ class Meeting {
 
 #### How to get the Recurrence editor field values from RRULE?
 
-You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from calendar.
+	You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from the Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="2 3" %}
@@ -850,7 +850,7 @@ You can delete any occurrence appointment, which exception from the recurrence p
 
 #### Recurrence exception appointment
 
-You can also change any occurrence appointment, which exception from recurrence pattern appointment by adding the recurrence exception appointment to the calendar [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html).
+You can also change any occurrence appointment, which exception from recurrence pattern appointment by adding the recurrence exception appointment to the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) of the Flutter Event Calendar.
 
 #### Create recurrence exceptions for calendar appointment
 
@@ -912,7 +912,7 @@ You can add the recurrence exception appointments and recurrence exception dates
 
 #### Delete occurrence from custom recurrence pattern appointment or adding exception dates to custom recurrence pattern appointment
 
-You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) override method of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which is used to map the exception dates to the calendar recurrence appointment. The deleted occurrence date will be considered as recurrence exception dates.
+You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) override method of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which is used to map the exception dates to the recurrence appointment of the Flutter Event Calendar. The deleted occurrence date will be considered as recurrence exception dates.
 To add the exception dates in the recurrence series of custom appointment, add the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property to custom class Meeting.
 
 {% tabs %}
@@ -1065,7 +1065,7 @@ AppointmentDataSource _getDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
+![Recurrence Series in Flutter Event Calendar](images/appointments/flutter-calendar-recurrence-series.png)
 
 >**NOTE**
 * The RecurrenceId of the changed occurrence should hold the exact recurrence pattern appointment Id.
@@ -1074,7 +1074,7 @@ AppointmentDataSource _getDataSource() {
 
 
 ## Appearance customization
-The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
+The appointment text style of the Flutter Event Calendar can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property .
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11 12 13" %}
@@ -1104,7 +1104,7 @@ Widget build(BuildContext context) {
 ![Appearance customization](images/appointments/appearance-customization.png)
 
 ## Appointment time format
-You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property of the SfCalendar.
+You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of the Flutter Event Calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -1129,7 +1129,7 @@ You can customize the displaying time format in the appointment widget in the mo
 
 ### Get visible appointments
 
-You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
+You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the CalendarDataSource.
 
 {% tabs %}
 {% highlight dart hl_lines="19 20 21" %}
@@ -1240,7 +1240,7 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 
 ## See also
 
-To know more about how to display more appointments in the Flutter Calendar, you can watch this video.
+To know more about how to display more appointments in the Flutter Event Calendar, you can watch this video.
 
 <style>#flutterCalendarVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterCalendarVideoTutorial' src='https://www.youtube.com/embed/I7B_XUuQNwo'></iframe>

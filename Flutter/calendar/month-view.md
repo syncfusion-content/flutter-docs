@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Event Calendar Month View (SfCalendar)
 
-The `month` view of Flutter Event [Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) (SfCalendar) is used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
+The `month` view of [Flutter Event Calendar](https://www.syncfusion.com/flutter-widgets/flutter-Calendar) is used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 
 ## Month agenda view
 
-The calendar month view displays a divided agenda view that is used to show the selected date’s appointments below the month. You can show the agenda view by setting the [showAgenda](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showAgenda.html) property to true in [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html).
+The month view of the Flutter Event Calendar displays a divided agenda view that is used to show the selected date’s appointments below the month. You can show the agenda view by setting the [showAgenda](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showAgenda.html) property to true in [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="16" %}
@@ -52,7 +52,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Month appointment display mode
 
-You can handle the calendar month view appointment display by using the [appointmentDisplayMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayMode.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html). By default, `appointmentDisplayMode` is set to Indicator, using the `appointmentDisplayMode` you can set the month view appointments display as follows.
+You can handle the Flutter Event Calendar month view appointment display by using the [appointmentDisplayMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayMode.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html). By default, `appointmentDisplayMode` is set to Indicator, using the `appointmentDisplayMode` you can set the month view appointments display as follows.
 
 * [indicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthAppointmentDisplayMode.html) - appointment will be denoted as the circle.
 * [appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthAppointmentDisplayMode.html) - appointment subject will be displayed in month cell.
@@ -94,7 +94,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Agenda view height
 
-You can customize the month agenda view height from calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaViewHeight.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html). By default, the agenda view will occupy the 30% height of the calendar height.
+You can customize the month agenda view height from the Flutter Event Calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/MonthViewSettings/agendaViewHeight.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/MonthViewSettings-class.html). By default, the agenda view will occupy the 30% height of the Flutter Event Calendar height.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -216,7 +216,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Month navigation direction
 
-MonthView of calendar can be navigated in both horizontal and vertical direction. You can change the direction of navigation using the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/navigationDirection.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html), by default Month navigation direction is Horizontal.
+MonthView of the Flutter Event Calendar can be navigated in both horizontal and vertical direction. You can change the direction of navigation using the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/navigationDirection.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html), by default Month navigation direction is Horizontal.
 
 {% tabs %}
 {% highlight dart hl_lines="18 19" %}
@@ -298,7 +298,7 @@ class CalendarApp extends StatelessWidget {
 ![Blackout dates](images/monthview/blackout-dates.png)
 
 ## Hide leading and trailing dates
-You can hide the previous and next month dates of a calendar month view by using the [showTrailingAndLeadingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html) of the calendar.
+You can hide the previous and next month dates of the Flutter Event Calendar month view by using the [showTrailingAndLeadingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="16" %}
@@ -336,7 +336,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Customize number of month rows
 
-The number of weeks in the month view can be changed by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) property in [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html). By default, `numberOfWeeksInView` starts from current week, and this can be modified using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of calendar, the two weeks calendar can be achieved by setting the `numberOfWeeksInView` property with the value 2.
+The number of weeks in the month view can be changed by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) property in [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html). By default, `numberOfWeeksInView` starts from current week, and this can be modified using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of the Flutter Event Calendar. A two-week calendar can be achieved by setting the `numberOfWeeksInView` property to 2.
 
 {% tabs %}
 {% highlight dart hl_lines="18" %}
@@ -373,7 +373,7 @@ class CalendarApp extends StatelessWidget {
 
 >**NOTE**
 * Week number ranges from 1 to 6. If lesser or greater than these range is considered, [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) will be displayed as 6.
-* Dynamically changing [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) shows the first row of month view dates. It can be handled using the  [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of calendar.
+* Dynamically changing [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) shows the first row of month view dates. It can be handled using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of the Flutter Event Calendar.
 
 ## View header DayFormat
 
