@@ -7,16 +7,16 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# Getting Started with Flutter SignaturePad (SfSignaturePad)
+# Getting Started with Flutter Signature Pad (SfSignaturePad)
 
-This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color, and background color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad, and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the SignaturePad widget.
+This section explains the steps required to add the Signature Pad widget and its elements such as minimum and maximum stroke widths, stroke color, and background color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad, and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the Flutter Signature Pad widget.
 
-To get started quickly with our Flutter SignaturePad widget, you can watch this video:
+To get started quickly with our Flutter Signature Pad widget, you can watch this video:
 
 <style>#FlutterSignaturePadVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
 
-## Add Flutter SignaturePad to an application
+## Add Flutter Signature Pad to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
@@ -56,9 +56,9 @@ import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize SignaturePad
+## Initialize Signature Pad
 
-After importing the package, initialize the SignaturePad widget as a child of any widget. Here, the SignaturePad widget is added as a child of the Container widget to get a position and size. Also, a background color is applied to show the SignaturePad widget with a white background. The default [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/backgroundColor.html) is `Colors.transparent`.
+After importing the package, initialize the Flutter Signature Pad widget as a child of any widget. Here, the Signature Pad widget is added as a child of the Container widget to get a position and size. Also, a background color is applied to show the SignaturePad widget with a white background. The default [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/backgroundColor.html) is `Colors.transparent`.
 
 {% tabs %}
 {% highlight dart %}
@@ -86,11 +86,11 @@ class SignaturePadExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Flutter SignaturePad](images/getting-started/blank_signature_pad.PNG)
+![Flutter Signature Pad](images/getting-started/blank_signature_pad.PNG)
 
 ## Customize signature stroke color
 
-You can customize the stroke color of the SignaturePad widget by using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/strokeColor.html) property. The default stroke color for the dark theme is `Colors.white` and the default color for the light theme is `Colors.black`.
+You can customize the stroke color of the Flutter Signature Pad widget by using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/strokeColor.html) property. The default stroke color for the dark theme is `Colors.white` and the default color for the light theme is `Colors.black`.
 
 {% tabs %}
 {% highlight dart %}
@@ -154,7 +154,7 @@ class SignaturePadExample extends StatelessWidget {
 
 ## Save signatures as images in mobile and desktop platforms
 
-You can save the signature drawn in the SignaturePad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the code example below for Android, iOS, and desktop platforms. Since this [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the `pixelRatio` parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the higher quality image you get. The default value of the pixel ratio parameter is 1.
+You can save the signature drawn in the Signature Pad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the code example below for Android, iOS, and desktop platforms. Since this [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method is defined in the state object of Flutter Signature Pad, you have to use a global key assigned to the Signature Pad instance to call this method. Optionally, the `pixelRatio` parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the higher quality image you get. The default value of the pixel ratio parameter is 1.
 
 {% tabs %}
 {% highlight dart %}
