@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Flutter Signature Pad (SfSignaturePad)
 
-This section explains the steps required to add the Signature Pad widget and its elements such as minimum and maximum stroke widths, stroke color, and background color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad, and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the Flutter Signature Pad widget.
+This section explains the steps required to add the Flutter Signature Pad widget and its elements such as minimum and maximum stroke widths, stroke color, and background color. This section also covers how to save the signature as an image, clear the existing signature in Signature Pad, and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the Flutter Signature Pad widget.
 
 To get started quickly with our Flutter Signature Pad widget, you can watch this video:
 
@@ -58,7 +58,7 @@ import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
 
 ## Initialize Signature Pad
 
-After importing the package, initialize the Flutter Signature Pad widget as a child of any widget. Here, the Signature Pad widget is added as a child of the Container widget to get a position and size. Also, a background color is applied to show the SignaturePad widget with a white background. The default [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/backgroundColor.html) is `Colors.transparent`.
+After importing the package, initialize the Flutter Signature Pad widget as a child of any widget. Here, the Signature Pad widget is added as a child of the Container widget to get a position and size. Also, a background color is applied to show the Signature Pad widget with a white background. The default [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/backgroundColor.html) is `Colors.transparent`.
 
 {% tabs %}
 {% highlight dart %}
@@ -248,7 +248,7 @@ class _SignaturePadExampleState extends State<SignaturePadExample> {
 
 ## Save signatures as images in web (mobile browser)
 
-You can save the signature drawn in the SignaturePad as an image using the [`renderToContext2D`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method as shown in the code snippet below. Since this [`renderToContext2D()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+You can save the signature drawn in the Flutter Signature Pad as an image using the [`renderToContext2D`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method as shown in the code snippet below. Since this [`renderToContext2D()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
 {% tabs %}
 {% highlight dart %}
@@ -307,9 +307,9 @@ class _SignaturePadExampleState extends State<SignaturePadExample> {
 
 N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://docs.flutter.dev/development/tools/web-renderers) page for more details.
 
-## Clear the existing signature in SignaturePad
+## Clear the existing signature in Signature Pad
 
-You can clear the signature drawn in the SignaturePad using the [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method as shown in the code snippet below. Since this [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+You can clear the signature drawn in the Flutter Signature Pad using the [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method as shown in the code snippet below. Since this [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
 {% tabs %}
 {% highlight dart %}
@@ -355,7 +355,8 @@ class _SignaturePadExampleState extends State<SignaturePadExample> {
 
 ## Signature path collection
 
-You can get the path collection of the signature drawn in the SignaturePad using the [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method. Since this [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+You can get the path collection of the signature drawn in the Flutter Signature
+Pad using the [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method. Since this [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
 {% tabs %}
 {% highlight dart %}
@@ -402,7 +403,7 @@ class _SignaturePadExampleState extends State<SignaturePadExample> {
 
 ## Handle onDrawStart, onDraw, and onDrawEnd callbacks
 
-The widget allows you to handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks for every stroke updated to the SignaturePad. The [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html) callback will be called when the user starts signing on `SfSignaturePad`, the [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html) callback will be called when updating a stroke on the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html), and the [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
+The widget allows you to handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks for every stroke updated to the Flutter Signature Pad. The [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html) callback will be called when the user starts signing on `SfSignaturePad`, the [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html) callback will be called when updating a stroke on the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html), and the [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
 
 {% tabs %}
 {% highlight dart %}
