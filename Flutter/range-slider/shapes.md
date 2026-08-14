@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Shapes in Flutter Range Slider (SfRangeSlider)
 
-This section explains how to customize the shapes of the range slider elements.
+This section explains how to customize the shapes of the Flutter Range Slider elements.
 
 ## Track shape
 
