@@ -196,4 +196,4 @@ class _LinearGaugeDemoState extends State<LinearGaugeDemo> {
 {% endhighlight %}
 {% endtabs %}
 
-![Shape pointer interaction in linear gauge](images/interaction/interaction.gif)
+![Shape pointer interaction in Flutter Linear Gauge](images/interaction/interaction.gif)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Ranges in Flutter Linear Gauge (SfLinearGauge)
 
-A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
+A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a Flutter Linear Gauge. The default style of range will be as below. 
 
 {% tabs %}
 {% highlight dart %}
@@ -44,7 +44,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize linear gauge for range](images/gauge-range/default-range.png)
+![Initialize Flutter Linear Gauge for range](images/gauge-range/default-range.png)
 
 
 ## Customize range shape 
@@ -91,7 +91,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Draw linear gauge concave range](images/gauge-range/range-concave.png)
+![Draw Flutter Linear Gauge concave range](images/gauge-range/range-concave.png)
 
 ## Customize edge style
 
@@ -177,7 +177,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Set linear gauge range color](images/gauge-range/color_range.png)
+![Set Flutter Linear Gauge range color](images/gauge-range/color_range.png)
 
 ## Apply radial gradient to a range
 
@@ -318,7 +318,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Apply sweep gradient to linear gauge range](images/gauge-range/sweep_gradient_range.png)
+![Apply sweep gradient to Flutter Linear Gauge range](images/gauge-range/sweep_gradient_range.png)
 
 ## Customize range position
 
@@ -356,7 +356,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Position the linear gauge range](images/gauge-range/range_position.png)
+![Position the Flutter Linear Gauge range](images/gauge-range/range_position.png)
 
 ## Setting range color to axis element
 
@@ -462,4 +462,4 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Add multiple ranges in a linear gauge](images/gauge-range/multiple_ranges.png)
+![Add multiple ranges in a Flutter Linear Gauge](images/gauge-range/multiple_ranges.png)

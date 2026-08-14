@@ -39,10 +39,10 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Mirror linear gauge](images/mirrored/mirrored.png)
+![Mirror Flutter Linear Gauge](images/mirrored/mirrored.png)
 
 ## Comparison for the mirrored and normal gauge
 
 The following screenshot provides a visual comparison between a mirrored Linear Gauge and a normal Linear Gauge. 
 
-![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)
+![Mirrored Flutter Linear Gauge comparsion](images/mirrored/mirror_comparison.png)

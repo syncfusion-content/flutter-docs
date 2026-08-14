@@ -8,19 +8,19 @@ documentation: ug
 ---
 
 # Getting Started with Flutter Slider (SfSlider)
-This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> slider.
+This section explains the steps required to add the Flutter Slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion® Flutter Slider.
 
 To get started quickly with our Flutter Slider widget, check out this video.
 
 <style>#FlutterSliderVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterSliderVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe>
 
-## Add Flutter slider to an application
+## Add Flutter Slider to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter slider dependency to your pubspec.yaml file.
+Add the Syncfusion® Flutter Sliders dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %}
@@ -58,11 +58,11 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize slider
+## Initialize Flutter Slider
 
-After importing the package, initialize the slider widget as a child of any widget. Here, the slider widget is added as a child of the Center widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) properties of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) are 0.0 and 1.0 respectively. So, the [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) property must be given within the range.
+After importing the package, initialize the Flutter Slider widget as a child of any widget. Here, the slider widget is added as a child of the Center widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) properties of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) are 0.0 and 1.0 respectively. So, the [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) property must be given within the range.
 
-N> The slider passes the new value to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the slider with the new value.
+N> The Flutter Slider passes the new value to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the slider with the new value.
 
 ### Horizontal
 
@@ -144,7 +144,7 @@ class _VerticalSliderPageState extends State<VerticalSliderPage> {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is used to get the current value of the slider when the user selects a value through interaction.
 
-N> The slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with the new value.
+N> The Flutter Slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with the new value.
 
 ### Horizontal
 
@@ -232,7 +232,7 @@ class _VerticalHandleValuePageState extends State<VerticalHandleValuePage> {
 
 ## Set numeric value
 
-You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show numeric values in the Flutter Slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 ### Horizontal
 
@@ -324,11 +324,11 @@ class _VerticalNumericSliderPageState extends State<VerticalNumericSliderPage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/getting-started/vertical_numeric_slider.png)
+![Numeric Slider](images/getting-started/vertical_numeric_slider.png)
 
 ## Set date value
 
-You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show date values in the Flutter Slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -473,7 +473,7 @@ class _TicksSliderPageState extends State<TicksSliderPage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/getting-started/slider_with_tick.png)
+![Numeric Flutter Slider](images/getting-started/Flutter Slider_with_tick.png)
 
 ### Vertical
 
@@ -520,9 +520,9 @@ class _VerticalTicksSliderPageState extends State<VerticalTicksSliderPage> {
 
 ![Numeric slider](images/getting-started/vertical_slider_with_tick.png)
 
-## Inverse the horizontal slider
+## Inverse the horizontal Flutter Slider
 
-You can invert the horizontal slider by wrapping the slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
+You can invert the horizontal slider by wrapping the Flutter Slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -566,7 +566,7 @@ class _InversedHorizontalSliderPageState extends State<InversedHorizontalSliderP
 
 ![Inversed horizontal slider](images/getting-started/inversed_horizontal_slider.png)
 
-## Inverse the vertical slider
+## Inverse the vertical Flutter Slider
 
 You can invert the vertical slider using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property. The default value of the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property is `false`.
 
@@ -614,7 +614,7 @@ class _InversedVerticalSliderPageState extends State<InversedVerticalSliderPage>
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) properties.
 
-N> The format type (numeric or date) of the slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+N> The format type (numeric or date) of the Flutter Slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 

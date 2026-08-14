@@ -9,7 +9,7 @@ documentation: ug
 
 # Flat and Hierarchical Levels in Flutter Treemap (SfTreemap)
 
-The levels of the treemap can be categorized into the following two types:
+The levels of the Flutter Treemap can be categorized into the following two types:
 
 * Flat level.
 * Hierarchical level.
@@ -90,13 +90,13 @@ class PopulationModel {
 
 N>
 * Refer the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), for customizing the tile color.
-* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the treemap.
+* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the Flutter Treemap.
 * Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), for adding and customizing the label on the tile.
 * Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the treemap.
 
 ## Hierarchical level
 
-Hierarchical levels arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one [`TreemapLevel`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel-class.html) in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap.
+Hierarchical levels arrange the tiles in the form of nested rectangles. Each tile of the Flutter Treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one [`TreemapLevel`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel-class.html) in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap.
 
 The first level will work similarly to the flat level. From the next level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection, the items returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) for the indices, will be placed inside the rectangle for the same indices returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) in the previous level. This will go on until the last level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection.
 
@@ -403,4 +403,4 @@ N>
 * Refer the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), for customizing the tile color.
 * Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the treemap.
 * Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), for adding and customizing the label on the tile.
-* Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the treemap.
+* Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the Flutter Treemap.

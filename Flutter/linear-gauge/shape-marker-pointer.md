@@ -47,7 +47,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize linear gauge for shape pointer](images/shape-pointer/default_shape_pointer.png)
+![Initialize Flutter Linear Gauge for shape pointer](images/shape-pointer/default_shape_pointer.png)
 
 ## Change the size
 
@@ -82,7 +82,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Set size of linear gauge shape pointer](images/shape-pointer/shape_pointer_size.png)
+![Set size of Flutter Linear Gauge shape pointer](images/shape-pointer/shape_pointer_size.png)
 
 ## Customize color
 
@@ -319,7 +319,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.png)
+![Customize Flutter Linear Gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.png)
 
 ## Drag behavior
 

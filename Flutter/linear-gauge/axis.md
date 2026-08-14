@@ -41,7 +41,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
+![Initialize Flutter Linear Gauge for axis](images/getting-started/default_linear_gauge.png)
 
 ## Customize minimum and maximum axis values
 
@@ -73,7 +73,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
+![Update Flutter Linear Gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
 
 ## Customize axis track style
 
@@ -104,7 +104,7 @@ The following code sample demonstrates how to customize the [`thickness`](https:
 
 {% endhighlight %}
 
-![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
+![Change axis track thickness in Flutter Linear Gauge](images/axis/axis_thickness.png)
 
 ## Apply solid color
 
@@ -138,7 +138,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Apply color to axis in linear gauge](images/axis/axis_solid_color.png)
+![Apply color to axis in Flutter Linear Gauge](images/axis/axis_solid_color.png)
 
 ## Apply gradient
 
@@ -182,7 +182,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Apply color to axis in linear gauge](images/axis/axis_gradient.png)
+![Apply color to axis in Flutter Linear Gauge](images/axis/axis_gradient.png)
 
 ## Customize borders
 
@@ -268,7 +268,7 @@ class LinearGaugeDemo extends StatelessWidget {
 
 ## Inverse the axis
 
-The direction of the linear gauge axis can be customized using the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property. When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is set to true, the axis will be displayed in an inverse direction. The default value is false.
+The direction of the Flutter Linear Gauge axis can be customized using the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property. When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is set to true, the axis will be displayed in an inverse direction. The default value is false.
 
 {% tabs %}
 {% highlight dart %} 

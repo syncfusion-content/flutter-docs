@@ -169,7 +169,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.png)
+![Customize Flutter Linear Gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.png)
 
 ## Customize the offset
 
@@ -210,7 +210,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
+![Customize Flutter Linear Gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
 
 ## Change the color of bar pointer
 
@@ -437,7 +437,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge bar pointer border](images/bar-pointer/bar_border.png)
+![Customize Flutter Linear Gauge bar pointer border](images/bar-pointer/bar_border.png)
 
 
 ## Add multiple bar pointers
