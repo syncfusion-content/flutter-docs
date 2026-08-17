@@ -11,47 +11,85 @@ documentation: ug
 
 The system requirements for using our Syncfusion<sup>&reg;</sup> Flutter platform are as follows:
 
-## Operating Systems
+## Development Requirements
+
+<table>
+    <tr>
+        <th style="text-align:center">Requirement</th>
+        <th style="text-align:center">Details</th>
+   </tr>
+   <tr>
+      <td style="text-align:center">Operating System</td>
+      <td style="text-align:center">Windows, macOS, Linux</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Processor</td>
+      <td style="text-align:center">x64 or Arm64</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">RAM</td>
+      <td style="text-align:center">8 GB minimum, 16 GB recommended</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Hard Disk Space</td>
+      <td style="text-align:center">Up to 3 GB free space</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Flutter SDK Installation</td>
+      <td style="text-align:center"><a href="https://docs.flutter.dev/get-started/install/windows">Windows</a>, <a href="https://docs.flutter.dev/get-started/install/macos">macOS</a>, <a href="https://docs.flutter.dev/get-started/install/linux">Linux</a> installation guides</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Verify Installation</td>
+      <td style="text-align:center"><code>flutter --version</code></td>
+   </tr>
+</table>
+
+## Supported Deployment Targets
 
 Syncfusion Flutter widgets can be developed on Windows, macOS, or Linux and deployed to mobile, desktop, and web targets. The supported deployment platforms and versions follow the [Flutter supported platforms](https://docs.flutter.dev/reference/supported-platforms) matrix.
 
-**Mobile deployment targets**
-
-* Android: API level 24 to 36 (API 23 and earlier unsupported)
-* iOS: 13 to 26 (iOS 12 and earlier unsupported)
-
-**Desktop deployment targets**
-
-* Windows: 10, 11 (Windows 8 and earlier unsupported)
-* macOS: Catalina (10.15) to Tahoe (26) (Mojave 10.14 and earlier unsupported)
-* Linux: Ubuntu 20.04 LTS to 24.04 LTS
-
-**Web deployment targets**
-
-* Chrome (latest 2 stable releases)
-* Edge (latest 2 stable releases)
-* Firefox (latest 2 stable releases)
-* Safari 15.6 and newer
-
-## Hardware Environment
-
-* Processor: x64 or Arm64
-* RAM: 8 GB (minimum), 16 GB (recommended)
-* Hard disk: up to 3 GB of free space required.
-
-See the links below for the recommended Flutter SDK installation guides:
-
-* Windows - [`https://docs.flutter.dev/get-started/install/windows`](https://docs.flutter.dev/get-started/install/windows)
-* macOS - [`https://docs.flutter.dev/get-started/install/macos`](https://docs.flutter.dev/get-started/install/macos)
-* Linux - [`https://docs.flutter.dev/get-started/install/linux`](https://docs.flutter.dev/get-started/install/linux)
-
-To verify your installed Flutter SDK version after setup, run the following command:
-
-{% highlight dart %}
-
-    $ flutter --version
-
-{% endhighlight %}
+<table>
+    <tr>
+        <th style="text-align:center">Platform</th>
+        <th style="text-align:center">Supported Versions</th>
+   </tr>
+   <tr>
+      <td style="text-align:center">Android</td>
+      <td style="text-align:center">API 24–36 (API 23 and earlier unsupported)</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">iOS</td>
+      <td style="text-align:center">13–26 (iOS 12 and earlier unsupported)</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Windows</td>
+      <td style="text-align:center">10, 11 (Windows 8 and earlier unsupported)</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">macOS</td>
+      <td style="text-align:center">Catalina (10.15) to Tahoe (26) (Mojave 10.14 and earlier unsupported)</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Linux</td>
+      <td style="text-align:center">Ubuntu 20.04 LTS to 24.04 LTS</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Chrome</td>
+      <td style="text-align:center">Latest 2 stable releases</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Edge</td>
+      <td style="text-align:center">Latest 2 stable releases</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Firefox</td>
+      <td style="text-align:center">Latest 2 stable releases</td>
+   </tr>
+   <tr>
+      <td style="text-align:center">Safari</td>
+      <td style="text-align:center">15.6 and newer</td>
+   </tr>
+</table>
 
 ### SDK Version Compatibility
 
