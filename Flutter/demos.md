@@ -101,7 +101,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
       </td>
       <td>Flutter demos for Linux are available through the Snap Store.</td>
       <td>Ubuntu 20.04 LTS to 24.04 LTS</td>
-      <td>Ensure that <a href="https://snapcraft.io/docs/installing-snapd" target="_blank" rel="noopener noreferrer">snapd</a> is installed before installing the Flutter Sample Browser App.</td>
+      <td>Ensure that <a href="https://snapcraft.io/docs/installing-snapd" target="_blank" rel="noopener noreferrer" aria-label="Open Snapd installation documentation">snapd</a> is installed before installing the Flutter Sample Browser App.</td>
     </tr>
   </tbody>
 </table>
