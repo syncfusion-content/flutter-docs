@@ -459,9 +459,9 @@ class _TicksSliderPageState extends State<TicksSliderPage> {
           interval: 20,
           showTicks: true,
           showLabels: true,
-          onChanged: (double newValue) {
+          onChanged: (dynamic newValue) {
             setState(() {
-              _value = newValue;
+              _value = newValue as double;
             });
           },
         ),
@@ -473,7 +473,7 @@ class _TicksSliderPageState extends State<TicksSliderPage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric Flutter Slider](images/getting-started/Flutter Slider_with_tick.png)
+![Numeric Flutter Slider](images/getting-started/flutter_slider_with_tick.png)
 
 ### Vertical
 
@@ -504,9 +504,9 @@ class _VerticalTicksSliderPageState extends State<VerticalTicksSliderPage> {
           interval: 20,
           showTicks: true,
           showLabels: true,
-          onChanged: (double newValue) {
+          onChanged: (dynamic newValue) {
             setState(() {
-              _value = newValue;
+              _value = newValue as double;
             });
           },
         ),
@@ -550,9 +550,9 @@ class _InversedHorizontalSliderPageState extends State<InversedHorizontalSliderP
           interval: 20,
           showTicks: true,
           showLabels: true,
-          onChanged: (double newValue) {
+          onChanged: (dynamic newValue) {
             setState(() {
-              _value = newValue;
+              _value = newValue as double;
             });
           },
         ),
@@ -649,9 +649,9 @@ class _PrefixSuffixSliderPageState extends State<PrefixSuffixSliderPage> {
           showTicks: true,
           showLabels: true,
           numberFormat: NumberFormat("\$"),
-          onChanged: (double newValue) {
+          onChanged: (dynamic newValue) {
             setState(() {
-              _value = newValue;
+              _value = newValue as double;
             });
           },
         ),
@@ -696,9 +696,9 @@ class _VerticalPrefixSuffixSliderPageState extends State<VerticalPrefixSuffixSli
           showTicks: true,
           showLabels: true,
           numberFormat: NumberFormat("\$"),
-          onChanged: (double newValue) {
+          onChanged: (dynamic newValue) {
             setState(() {
-              _value = newValue;
+              _value = newValue as double;
             });
           },
         ),

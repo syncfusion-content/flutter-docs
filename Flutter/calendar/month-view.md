@@ -94,7 +94,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Agenda view height
 
-You can customize the month agenda view height from the Flutter Event Calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/MonthViewSettings/agendaViewHeight.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/MonthViewSettings-class.html). By default, the agenda view will occupy the 30% height of the Flutter Event Calendar height.
+You can customize the month agenda view height from the Flutter Event Calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaViewHeight.html) property of [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthViewSettings.html). By default, the agenda view will occupy the 30% height of the Flutter Event Calendar height.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}

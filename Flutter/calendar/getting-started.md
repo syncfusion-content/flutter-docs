@@ -446,7 +446,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Background color
 
-The background color of the Flutter Event Calendar can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar/backgroundColor.html) property.
+The background color of the Flutter Event Calendar can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/backgroundColor.html) property.
 
 {% tabs %}
 {% highlight dart hl_lines="14" %}
@@ -594,7 +594,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Week number
 
-Display the Week number of the year in all views except schedule view of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar-class.html) by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_Calendar/latest/Calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
+Display the Week number of the year in all views except schedule view of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showWeekNumber.html) property as true and by default it is false. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight dart hl_lines="15" %}

@@ -149,7 +149,7 @@ events.notifyListeners(CalendarDataSourceAction.reset, null);
 
 Whenever the datasource changes, to notify the datasource action (add, remove, and reset) through notify listener. In the following example, the appointment and resource are added, removed, and replaced and notifyListeners is called in onPressed callback of the FloatingActionButton.
 
-#### Add Action
+### Add Action
 
 When dynamically adding appointments to a data source, we must notify the data source for the add action.
 
@@ -221,7 +221,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-#### Remove Action
+### Remove Action
 
 When we remove appointments from a data source dynamically, we must notify the data source for the remove action.
 
@@ -237,7 +237,7 @@ _events?.notifyListeners(CalendarDataSourceAction.remove,
 {% endhighlight %}
 {% endtabs %}
 
-#### Reset Action
+### Reset Action
 
 When we replace appointments in a data source dynamically, we must notify the data source for the reset action.
 
@@ -252,7 +252,7 @@ _events?.notifyListeners(
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Resource
+### Add Resource
 
 When dynamically adding resource to a data source, we must notify the data source for add resource.
 
@@ -272,7 +272,7 @@ _events!.notifyListeners(CalendarDataSourceAction.addResource,
 {% endhighlight %}
 {% endtabs %}
 
-#### Remove Resource
+### Remove Resource
 
 When we remove resource from a data source dynamically, we must notify the data source for remove resource.
 
@@ -289,7 +289,7 @@ _events!.notifyListeners(
 {% endhighlight %}
 {% endtabs %}
 
-#### Reset Resource
+### Reset Resource
 
 When we replace resource in a data source dynamically, we must notify the data source for reset resource.
 
@@ -541,7 +541,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 Recurring appointment on a daily, weekly, monthly, or yearly interval. Recurring appointments can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) property in `Appointment`.
 
-#### Recurrence rule
+### Recurrence rule
 
 The [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) is a string value (RRULE) that contains the details of the recurrence appointments such as repeat type - daily/weekly/monthly/yearly, how many times it needs to be repeated, the interval duration, also the time period to render the appointment, and more. The [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) has the following properties and based on this property value, the recurrence appointments are rendered in the SfCalendar widget with its respective time period.
 
@@ -556,7 +556,7 @@ The [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/l
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
 | BYSETPOS | This property is used to store the index value of the week. For example, when you create the monthly appointment in second week of the month, the index value of the second week (2) is stored in BYSETPOS. Example: FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;UNTIL=20200810T183000Z . If the property value is set to -1 and -2, the appointment will be added to the last week and second last week of the month.|
 
-#### Adding recurrence appointment
+### Adding recurrence appointment
 
 Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html).
 
@@ -601,7 +601,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ![Adding recurrence appointment](images/appointments/recurrence-appointment.png)
 
-#### Recurrence appointments on last day of month
+### Recurrence appointments on last day of month
 
 To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in the Flutter Event Calendar.
 
@@ -641,7 +641,7 @@ class DataSource extends CalendarDataSource {
 
 ![Recurrence appointment on last day of month](images/appointments/lastDayOfMonth.png)
 
-#### Creating custom recurrence appointment
+### Creating custom recurrence appointment
 
 For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html).
 
@@ -801,7 +801,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
-#### How to get the Recurrence editor field values from RRULE?
+### How to get the Recurrence editor field values from RRULE?
 
 	You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from the Flutter Event Calendar.
 
@@ -821,7 +821,7 @@ recurrenceProperties.interval = 1;
 recurrenceProperties.recurrenceCount = 3;
 recurrenceProperties.recurrenceRange = RecurrenceRange.count;
 
-#### How to get the recurrence dates from RRULE?
+### How to get the recurrence dates from RRULE?
 
 You can get the occurrences date time list of recurring appointment from RRULE using the [getRecurrenceDateTimeCollection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/getRecurrenceDateTimeCollection.html) method of SfCalendar.
 
@@ -844,19 +844,19 @@ var date2 = 3/17/2019;
 
 You can delete or change any recurrence pattern appointment by handling exception dates and exception appointments to that recurring appointment.
 
-#### Recurrence exception dates
+### Recurrence exception dates
 
 You can delete any occurrence appointment, which exception from the recurrence pattern appointment by adding exception dates to the recurring appointment.
 
-#### Recurrence exception appointment
+### Recurrence exception appointment
 
 You can also change any occurrence appointment, which exception from recurrence pattern appointment by adding the recurrence exception appointment to the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) of the Flutter Event Calendar.
 
-#### Create recurrence exceptions for calendar appointment
+### Create recurrence exceptions for calendar appointment
 
 You can add the recurrence exception appointments and recurrence exception dates to `Appointment` or remove them from `Appointment` by using its [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property.
 
-#### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
+### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
@@ -906,11 +906,11 @@ class _AppointmentDataSource extends CalendarDataSource {
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
-#### Create recurrence exceptions for custom appointment
+### Create recurrence exceptions for custom appointment
 
 You can add the recurrence exception appointments and recurrence exception dates to the CustomAppointment or remove them from CustomAppointment, you can create a custom class `Meeting` with mandatory field [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html).
 
-#### Delete occurrence from custom recurrence pattern appointment or adding exception dates to custom recurrence pattern appointment
+### Delete occurrence from custom recurrence pattern appointment or adding exception dates to custom recurrence pattern appointment
 
 You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) override method of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which is used to map the exception dates to the recurrence appointment of the Flutter Event Calendar. The deleted occurrence date will be considered as recurrence exception dates.
 To add the exception dates in the recurrence series of custom appointment, add the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) property to custom class Meeting.
@@ -1014,7 +1014,7 @@ class Meeting {
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
-#### Add exception appointment to the recurrence series
+### Add exception appointment to the recurrence series
 
 Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the [dateSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceId.html) of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/id.html). We can get the type of appointment from the [appointmentType](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/appointmentType.html) property. 
 

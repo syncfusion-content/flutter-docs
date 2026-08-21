@@ -33,7 +33,7 @@ This view displays the entire dates of a particular month. By default, the curre
 ![Month view Date Range Picker](images/views/monthview.png)
 
 
-#### Week number
+### Week number
 
 Display the Week number of the year in the MonthView by setting the [showWeekNumber](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/showWeekNumber.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html) as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
 {% tabs %}
@@ -58,7 +58,7 @@ Display the Week number of the year in the MonthView by setting the [showWeekNum
 
 ![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
 
-#### Week number appearance
+### Week number appearance
 
 Customize the Week number style by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/textStyle.html) and the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle/backgroundColor.html) properties of the [DateRangePickerWeekNumberStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerWeekNumberStyle-class.html).
 
