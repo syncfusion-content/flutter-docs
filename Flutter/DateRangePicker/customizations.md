@@ -29,51 +29,64 @@ You can customize the calendar month view by using the [monthCellStyle](https://
 
 *    **Special Dates** – You can add special dates to the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using [specialDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/specialDates.html) property, and you can also customize the special dates text style and background by using the [specialDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/specialDatesTextStyle.html) and [specialDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/specialDatesDecoration.html).
 
-*    **Weekend Dates** – You can change weekend dates to [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [weekendDays](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/weekendDays.html) property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendTextStyle.html) and [weekendDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendDatesDecoration.html).
+*    **Weekend Dates** – You can change weekend dates to [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [weekendDays](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/weekendDays.html) property, and you can also customize the weekend dates text style and background by using the [weekendTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendTextStyle.html) and [weekendDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/weekendDatesDecoration.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight dart hl_lines="16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthViewSettings: DateRangePickerMonthViewSettings(
-          blackoutDates: [DateTime(2020, 03, 26)],
-          weekendDays: [7, 6],
-          specialDates: [
-            DateTime(2020, 03, 20),
-            DateTime(2020, 03, 16),
-            DateTime(2020, 03, 17),
-          ],
-          showTrailingAndLeadingDates: true,
-        ),
-        monthCellStyle: DateRangePickerMonthCellStyle(
-          blackoutDatesDecoration: BoxDecoration(
-            color: Colors.red,
-            border: Border.all(color: const Color(0xFFF44436), width: 1),
-            shape: BoxShape.circle,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings: const DateRangePickerMonthViewSettings(
+            blackoutDates: [DateTime(2020, 03, 26)],
+            weekendDays: [7, 6],
+            specialDates: [
+              DateTime(2020, 03, 20),
+              DateTime(2020, 03, 16),
+              DateTime(2020, 03, 17),
+            ],
+            showTrailingAndLeadingDates: true,
           ),
-          weekendDatesDecoration: BoxDecoration(
-            color: const Color(0xFFDFDFDF),
-            border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
-            shape: BoxShape.circle,
+          monthCellStyle: const DateRangePickerMonthCellStyle(
+            blackoutDatesDecoration: BoxDecoration(
+              color: Colors.red,
+              border: Border.all(color: Color(0xFFF44436), width: 1),
+              shape: BoxShape.circle,
+            ),
+            weekendDatesDecoration: BoxDecoration(
+              color: Color(0xFFDFDFDF),
+              border: Border.all(color: Color(0xFFB6B6B6), width: 1),
+              shape: BoxShape.circle,
+            ),
+            specialDatesDecoration: BoxDecoration(
+              color: Colors.green,
+              border: Border.all(color: Color(0xFF2B732F), width: 1),
+              shape: BoxShape.circle,
+            ),
+            blackoutDateTextStyle: TextStyle(
+              color: Colors.white,
+              decoration: TextDecoration.lineThrough,
+            ),
+            specialDatesTextStyle: TextStyle(color: Colors.white),
           ),
-          specialDatesDecoration: BoxDecoration(
-            color: Colors.green,
-            border: Border.all(color: const Color(0xFF2B732F), width: 1),
-            shape: BoxShape.circle,
-          ),
-          blackoutDateTextStyle: TextStyle(
-            color: Colors.white,
-            decoration: TextDecoration.lineThrough,
-          ),
-          specialDatesTextStyle: const TextStyle(color: Colors.white),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -88,17 +101,30 @@ You can customize the calendar month view by using the [monthCellStyle](https://
 You can customize the month format of the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
 
 {% tabs %}
-{% highlight dart hl_lines="6" %}
+{% highlight dart hl_lines="14" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        monthFormat: 'MMM',
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthFormat: 'MMM',
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,34 +133,47 @@ You can customize the month format of the [SfDateRangePicker](https://pub.dev/do
 
 ## Selection cell customization
 
-You can also customize the date range picker section by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthCellStyle.html) of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
+You can also customize the selection cells by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthCellStyle.html) of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html).
 
-*    **Selection date text style** – Selected date text style can be customized using the [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionTextStyle.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) that is applicable for [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is [single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single) and [multiple](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiple), it is also applicable to start and end of the selected range text style in the [single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single) and [multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange) selection.
+*    **Selection date text style** – Selected date text style can be customized using the [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionTextStyle.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) that is applicable for [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is [single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single) and [multiple](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiple), it is also applicable to start and end of the selected range text style in the [range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range) and [multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange) selection.
 
 *    **Selection color** – Selected date background color can be customized using the [selectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionColor.html) property of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) that is applicable for [single](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#single) and [multiple](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiple) selections.
 
 *    **Range selection text style** – Range selection date text style can be customized using the [rangeTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/rangeTextStyle.html) property that is applicable when [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is [range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range) or [multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange).
 
-*    **Range selection color** - Range selection color text style can be customized using the [startRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/startRangeSelectionColor.html), [endRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/endRangeSelectionColor.html) , [rangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/rangeSelectionColor.html)  properties that is applicable when [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is in [range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range) or [multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange).
+*    **Range selection color** – The range selection background color can be customized using the [startRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/startRangeSelectionColor.html), [endRangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/endRangeSelectionColor.html) , [rangeSelectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/rangeSelectionColor.html)  properties that is applicable when [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is in [range](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#range) or [multiRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html#multiRange).
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 12" %}
+{% highlight dart hl_lines="16 17 18 19 20 21 25" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        selectionMode: DateRangePickerSelectionMode.range,
-        selectionTextStyle: const TextStyle(color: Colors.white),
-        selectionColor: Colors.blue,
-        startRangeSelectionColor: Colors.purple,
-        endRangeSelectionColor: Colors.purple,
-        rangeSelectionColor: Colors.purpleAccent,
-        rangeTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          selectionMode: DateRangePickerSelectionMode.range,
+          selectionTextStyle: const TextStyle(color: Colors.white),
+          selectionColor: Colors.blue,
+          startRangeSelectionColor: Colors.purple,
+          endRangeSelectionColor: Colors.purple,
+          rangeSelectionColor: Colors.purpleAccent,
+          rangeTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
+        ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -145,47 +184,59 @@ You can also customize the date range picker section by using the [monthCellStyl
 
 You can customize the calendar `year`, `decade`, and `century` view by using the [yearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/yearCellStyle.html) of [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html). 
 
-*   **Current year** – You can customize the text style and background of the current year in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/cellDecoration.html) properties of [DateRangePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle-class.html)
+*   **Current year** – You can customize the text style and background of the current year in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/cellDecoration.html) properties of [DateRangePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle-class.html).
 
-*   **Disabled dates** – Disable dates text style and background of the [minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), and the dates which are disabled by the [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback are customized by using [disabledDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesTextStyle.html) and  [disabledDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesDecoration.html).
+*   **Disabled dates** – Disable dates text style and background of the [minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html), and the dates which are disabled by the [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback are customized by using [disabledDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/disabledDatesTextStyle.html) and  [disabledDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/disabledDatesDecoration.html).
 
-*   **Leading dates** –  You can also customize the text style and background of the leading month dates in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [leadingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/leadingDatesTextStyle.html) and [leadingDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/leadingDatesDecoration.html).
+*   **Leading dates** –  You can also customize the text style and background of the leading year cells in the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [leadingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/leadingDatesTextStyle.html) and [leadingDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/leadingDatesDecoration.html).
 
-*   **Today date** – You can customize the text style and background of the today's date in the  [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayCellDecoration.html).
+*   **Today date** – You can customize the text style and background of the today's date in the  [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle/todayCellDecoration.html).
 
 {% tabs %}
-{% highlight dart hl_lines="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24" %}
+{% highlight dart hl_lines="16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 40" %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const DateRangePickerApp());
+}
+
+class DateRangePickerApp extends StatelessWidget {
+  const DateRangePickerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfDateRangePicker(
-        view: DateRangePickerView.month,
-        selectionMode: DateRangePickerSelectionMode.range,
-        yearCellStyle: DateRangePickerYearCellStyle(
-          disabledDatesDecoration: BoxDecoration(
-            color: const Color(0xFFDFDFDF),
-            border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
-            shape: BoxShape.circle,
+    return MaterialApp(
+      home: Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.year,
+          yearCellStyle: const DateRangePickerYearCellStyle(
+            disabledDatesDecoration: BoxDecoration(
+              color: Color(0xFFDFDFDF),
+              border: Border.all(color: Color(0xFFB6B6B6), width: 1),
+              shape: BoxShape.circle,
+            ),
+            disabledDatesTextStyle: TextStyle(color: Colors.black),
+            leadingDatesDecoration: BoxDecoration(
+              color: Color(0xFFDFDFDF),
+              border: Border.all(color: Color(0xFFB6B6B6), width: 1),
+              shape: BoxShape.circle,
+            ),
+            leadingDatesTextStyle: TextStyle(color: Colors.black),
+            textStyle: TextStyle(color: Colors.blue),
+            todayCellDecoration: BoxDecoration(
+              color: Color(0xFFDFDFDF),
+              border: Border.all(color: Color(0xFFB6B6B6), width: 1),
+              shape: BoxShape.circle,
+            ),
+            todayTextStyle: TextStyle(color: Colors.purple),
           ),
-          disabledDatesTextStyle: const TextStyle(color: Colors.black),
-          leadingDatesDecoration: BoxDecoration(
-            color: const Color(0xFFDFDFDF),
-            border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
-            shape: BoxShape.circle,
-          ),
-          leadingDatesTextStyle: const TextStyle(color: Colors.black),
-          textStyle: const TextStyle(color: Colors.blue),
-          todayCellDecoration: BoxDecoration(
-            color: const Color(0xFFDFDFDF),
-            border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
-            shape: BoxShape.circle,
-          ),
-          todayTextStyle: const TextStyle(color: Colors.purple),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}

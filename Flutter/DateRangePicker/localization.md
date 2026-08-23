@@ -9,47 +9,64 @@ documentation: ug
 
 # Flutter Date Range Picker Localization (SfDateRangePicker)
 
-By default, the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget supports US English localizations. You can change other languages by specifying the [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) properties and adding the `flutter_localizations` package to your application.
+By default, the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget supports US English localizations. You can change to other languages by specifying the [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) properties and adding the `flutter_localizations` package to your application.
 
 To use `flutter_localizations`, add the package as a dependency to your `pubspec.yaml` file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight yaml %}
 
 dependencies:
-flutter_localizations:
-  sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
 {% endhighlight %}
+{% endtabs %}
 
-Next, import the `flutter_localizations` library and specify [localizationsDelegates](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) and [supportedLocale](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) for [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html).
+Next, import the `flutter_localizations` library and specify [localizationsDelegates](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html) and [supportedLocales](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html) for [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html).
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9 10 11 12 13 14 15" %}
+{% highlight dart hl_lines="16 17 18 19 20 21 22" %}
 
-  import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: [
-        const Locale('zh'),
-        const Locale('ar'),
-        const Locale('ja'),
+      supportedLocales: const [
+        Locale('zh'),
+        Locale('ar'),
+        Locale('ja'),
       ],
       locale: const Locale('zh'),
       title: 'DateRangePicker Localization',
       home: Scaffold(
-        appBar: AppBar(title: Text('Calendar')),
+        appBar: AppBar(title: const Text('Calendar')),
         body: SfDateRangePicker(view: DateRangePickerView.month),
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Localization Date Range Picker](images/localization/localization.png)
+
+## See also
+
+* [Globalization in Flutter Date Range Picker](https://help.syncfusion.com/flutter/globalization)
+* [Right to left in Flutter Date Range Picker](https://help.syncfusion.com/flutter/daterangepicker/right-to-left)
