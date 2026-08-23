@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Enable & disable states in Flutter Slider widget | Syncfusion
+title: Enabled and Disabled States in Flutter Slider | Syncfusion
 description: Learn here all about the enabled and disabled states of the Syncfusion Flutter Slider (SfSlider) widget and how to customize them.
-platform: Flutter
+platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Enabled and disabled states in Flutter Slider (SfSlider)
+# Enabled and Disabled States in Flutter Slider (SfSlider)
 
-This section helps to learn about the enabled and disabled state in the Flutter slider.
+This section explains the enabled and disabled states in the Flutter slider.
 
 ## Enabled state
 
@@ -20,26 +20,36 @@ The slider will be in enabled state if [`onChanged`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              )
-          )
-      )
-  );
+class EnabledStatePage extends StatefulWidget {
+  @override
+  _EnabledStatePageState createState() => _EnabledStatePageState();
+}
+
+class _EnabledStatePageState extends State<EnabledStatePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -52,26 +62,36 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider.vertical(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              )
-          )
-      )
-  );
+class VerticalEnabledStatePage extends StatefulWidget {
+  @override
+  _VerticalEnabledStatePageState createState() => _VerticalEnabledStatePageState();
+}
+
+class _VerticalEnabledStatePageState extends State<VerticalEnabledStatePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider.vertical(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -89,22 +109,32 @@ The slider will be in disabled state if [`onChanged`](https://pub.dev/documentat
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: null,
-              )
-          )
-      )
-  );
+class DisabledStatePage extends StatefulWidget {
+  @override
+  _DisabledStatePageState createState() => _DisabledStatePageState();
+}
+
+class _DisabledStatePageState extends State<DisabledStatePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: null,
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -117,22 +147,32 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider.vertical(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: null,
-              )
-          )
-      )
-  );
+class VerticalDisabledStatePage extends StatefulWidget {
+  @override
+  _VerticalDisabledStatePageState createState() => _VerticalDisabledStatePageState();
+}
+
+class _VerticalDisabledStatePageState extends State<VerticalDisabledStatePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider.vertical(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: null,
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -143,7 +183,7 @@ Widget build(BuildContext context) {
 
 ## Disabled color
 
-You can change,
+You can change the following:
 
 * The color of the active and inactive track in disabled state using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledInactiveTrackColor.html) properties.
 * The color of the active and inactive major ticks in disabled state using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledInactiveTickColor.html) properties.
@@ -151,46 +191,55 @@ You can change,
 * The color of the active and inactive dividers in disabled state using the [`disabledActiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledActiveDividerColor.html) and [`disabledInactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledInactiveDividerColor.html) properties.
 * The color of the thumb in disabled state using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledThumbColor.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
-
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  disabledActiveTrackColor: Colors.orange,
-                  disabledInactiveTrackColor: Colors.orange[200],
-                  disabledActiveTickColor: Colors.orange,
-                  disabledInactiveTickColor: Colors.orange[200],
-                  disabledActiveMinorTickColor: Colors.orange,
-                  disabledInactiveMinorTickColor: Colors.orange[200],
-                  disabledActiveDividerColor: Colors.purple,
-                  disabledInactiveDividerColor: Colors.purple[200],
-                  disabledThumbColor: Colors.orange,
-                ),
-                child: SfSlider(
-                  min: 2.0,
-                  max: 10.0,
-                  interval: 2,
-                  showTicks: true,
-                  minorTicksPerInterval: 1,
-                  showDividers: true,
-                  value: _value,
-                  onChanged: null,
-                ),
-              )
-          )
-      )
-  );
+class DisabledColorPage extends StatefulWidget {
+  @override
+  _DisabledColorPageState createState() => _DisabledColorPageState();
+}
+
+class _DisabledColorPageState extends State<DisabledColorPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    disabledActiveTrackColor: Colors.orange,
+                    disabledInactiveTrackColor: Colors.orange[200],
+                    disabledActiveTickColor: Colors.orange,
+                    disabledInactiveTickColor: Colors.orange[200],
+                    disabledActiveMinorTickColor: Colors.orange,
+                    disabledInactiveMinorTickColor: Colors.orange[200],
+                    disabledActiveDividerColor: Colors.purple,
+                    disabledInactiveDividerColor: Colors.purple[200],
+                    disabledThumbColor: Colors.orange,
+                  ),
+                  child: SfSlider(
+                    min: 2.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    minorTicksPerInterval: 1,
+                    showDividers: true,
+                    value: _value,
+                    onChanged: null,
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -203,39 +252,50 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 6.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSliderTheme(
-                data: SfSliderThemeData(
-                  disabledActiveTrackColor: Colors.orange,
-                  disabledInactiveTrackColor: Colors.orange[200],
-                  disabledActiveTickColor: Colors.orange,
-                  disabledInactiveTickColor: Colors.orange[200],
-                  disabledActiveMinorTickColor: Colors.orange,
-                  disabledInactiveMinorTickColor: Colors.orange[200],
-                  disabledActiveDividerColor: Colors.purple,
-                  disabledInactiveDividerColor: Colors.purple[200],
-                  disabledThumbColor: Colors.orange,
-                ),
-                child: SfSlider.vertical(
-                  min: 2.0,
-                  max: 10.0,
-                  interval: 2,
-                  showTicks: true,
-                  minorTicksPerInterval: 1,
-                  showDividers: true,
-                  value: _value,
-                  onChanged: null,
-                ),
-              )
-          )
-      )
-  );
+class VerticalDisabledColorPage extends StatefulWidget {
+  @override
+  _VerticalDisabledColorPageState createState() => _VerticalDisabledColorPageState();
+}
+
+class _VerticalDisabledColorPageState extends State<VerticalDisabledColorPage> {
+  double _value = 6.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSliderTheme(
+                  data: SfSliderThemeData(
+                    disabledActiveTrackColor: Colors.orange,
+                    disabledInactiveTrackColor: Colors.orange[200],
+                    disabledActiveTickColor: Colors.orange,
+                    disabledInactiveTickColor: Colors.orange[200],
+                    disabledActiveMinorTickColor: Colors.orange,
+                    disabledInactiveMinorTickColor: Colors.orange[200],
+                    disabledActiveDividerColor: Colors.purple,
+                    disabledInactiveDividerColor: Colors.purple[200],
+                    disabledThumbColor: Colors.orange,
+                  ),
+                  child: SfSlider.vertical(
+                    min: 2.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    minorTicksPerInterval: 1,
+                    showDividers: true,
+                    value: _value,
+                    onChanged: null,
+                  ),
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
