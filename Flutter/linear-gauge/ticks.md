@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Ticks in Flutter Linear Gauge (SfLinearGauge)
+# Ticks in Flutter Linear Gauge
 
 The default style of axis ticks is as follows.
 

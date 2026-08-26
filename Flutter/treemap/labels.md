@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Labels in Flutter Treemap (SfTreemap)
+# Labels in Flutter Treemap
 
 You can add any type of widget, like a text widget, to improve the readability of the individual tiles by providing brief descriptions on labels.
 

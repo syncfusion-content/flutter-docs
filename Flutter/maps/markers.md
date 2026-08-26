@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Markers in Flutter Maps (SfMaps)
+# Markers in Flutter Maps
 
 Markers can be used to denote specific locations on a Flutter Maps. You can use built-in symbols or display custom widgets at specific latitude and longitude coordinates on the Flutter Maps.
 

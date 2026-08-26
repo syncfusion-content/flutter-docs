@@ -7,13 +7,13 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Right-to-Left (RTL) in Flutter Treemap (SfTreemap)
+# Right-to-Left (RTL) in Flutter Treemap
 
 ## Enable RTL rendering
 
 Right-to-left rendering can be achieved in the following ways:
 
-### Wrapping the SfTreemap with the Directionality widget
+### Wrapping the Flutter Treemap with the Directionality widget
 
 The Flutter Treemap can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget, and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [`rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
 

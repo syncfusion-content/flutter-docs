@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Shape Sublayer in Flutter Maps (SfMaps)
+# Shape Sublayer in Flutter Maps
 
 The shape sublayer is where geographical rendering happens for the sublayer. This is similar to the main [`shape layer`](https://help.syncfusion.com/flutter/maps/getting-started#add-a-geojson-file-for-shape-layer) rendering. This section explains how to add a shape sublayer on both the shape layer and tile layer.
 

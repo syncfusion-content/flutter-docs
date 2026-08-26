@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Widget Pointer in Flutter Radial Gauge (SfRadialGauge)
+# Widget Pointer in Flutter Radial Gauge
 
 [`WidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer-class.html) allows you to point to a desired value with any Flutter widget in a gauge scale. You can set the desired widget to its [`child`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/child.html) property to annotate the pointer value.
 

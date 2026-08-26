@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Polygons in Flutter Maps (SfMaps)
+# Polygons in Flutter Maps
 
 Polygon layer is a sublayer that renders a group of [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add polygons and customize them.
 

@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Animation in Flutter Radial Gauge (SfRadialGauge)
+# Animation in Flutter Radial Gauge
 
 ## Initial animation
 

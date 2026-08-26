@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Item Builder in Flutter Treemap (SfTreemap)
+# Item Builder in Flutter Treemap
 
 You can add any type of custom widget, such as an image widget as a background, to easily visualize the type of data that a particular tile shows.
 

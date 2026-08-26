@@ -8,7 +8,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Accessibility in Flutter Barcode Generator (SfBarcodeGenerator)
+# Accessibility in Flutter Barcode Generator
 
 ## Sufficient contrast
 

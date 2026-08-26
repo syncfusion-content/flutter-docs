@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Tile Selection in Flutter Treemap (SfTreemap)
+# Tile Selection in Flutter Treemap
 
 You can select a tile to highlight that area on the Flutter Treemap. You can use the callback to perform any action during tile selection.
 

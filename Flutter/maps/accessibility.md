@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Accessibility in Flutter Maps (SfMaps)
+# Accessibility in Flutter Maps
 
 ## Screen reader
 

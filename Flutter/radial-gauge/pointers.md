@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Pointers in Flutter Radial Gauge (SfRadialGauge)
+# Pointers in Flutter Radial Gauge
 
 Pointer is used to indicate values on an axis. The Syncfusion® Flutter Radial Gauge control offers four types of pointers:
 

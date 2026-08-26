@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# About Flutter Linear Gauge Control (SfLinearGauge)
+# About Flutter Linear Gauge Control
 
 Syncfusion<sup>&reg;</sup> Flutter Linear Gauge is a powerful data visualization widget designed to display data on a linear scale. It's an ideal component for crafting high-quality mobile application user interfaces that require visual representation of data along a linear axis.
 

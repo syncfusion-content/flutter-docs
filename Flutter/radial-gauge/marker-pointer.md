@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Marker Pointer in Flutter Radial Gauge (SfRadialGauge)
+# Marker Pointer in Flutter Radial Gauge
 
 A [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) is used to indicate a specific value on the axis of the Flutter Radial Gauge. It supports seven built-in marker shapes and additional customization options such as image, text, color, size, border, elevation, overlay, and position offset. The marker type can be changed using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property. The default marker type is [`MarkerType.invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html).
 

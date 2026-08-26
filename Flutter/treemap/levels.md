@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Flat and Hierarchical Levels in Flutter Treemap (SfTreemap)
+# Flat and Hierarchical Levels in Flutter Treemap
 
 The levels of the Flutter Treemap can be categorized into the following two types:
 

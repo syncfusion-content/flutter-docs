@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Accessibility in Flutter Radial Gauge (SfRadialGauge)
+# Accessibility in Flutter Radial Gauge
 
 ## Screen reader
 

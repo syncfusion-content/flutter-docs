@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Widget Marker Pointer in Flutter Linear Gauge (SfLinearGauge)
+# Widget Marker Pointer in Flutter Linear Gauge
 
 The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/LinearWidgetPointer.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) allows you to use any Flutter widget as a marker pointer. The following code sample uses a [`Container`](https://api.flutter.dev/flutter/widgets/Container-class.html) as a marker widget.
 

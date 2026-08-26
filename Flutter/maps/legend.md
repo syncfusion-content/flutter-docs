@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Legend in Flutter Maps (SfMaps)
+# Legend in Flutter Maps
 
 You can provide clear information on the data plotted on the Flutter Maps using legend.
 

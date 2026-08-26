@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Arc Layer in Flutter Maps (SfMaps)
+# Arc Layer in Flutter Maps
 
 Arc layer is a sublayer that renders a group of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add arcs and customize them.
 

@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Annotation in Flutter Radial Gauge (SfRadialGauge)
+# Annotation in Flutter Radial Gauge
 
 [`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text and image as annotations to specific points of interest in the Flutter Radial Gauge.
 

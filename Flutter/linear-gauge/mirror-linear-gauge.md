@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Mirroring in Flutter Linear Gauge (SfLinearGauge)
+# Mirroring in Flutter Linear Gauge
 
 The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows you to mirror all the gauge elements. This feature is useful when you need to display the gauge in the opposite direction.
 
