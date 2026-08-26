@@ -1249,7 +1249,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
-#### See Also
+### See Also
 
 * [Synchronize on-demand loading in the Cartesian charts](https://support.syncfusion.com/kb/article/11533/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 
@@ -1299,7 +1299,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 
 ## Auto scrolling
 
-Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingDelta.html) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property's value, whenever a new point is added dynamically.
+Auto scrolling feature available in Flutter Cartesian Chart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingDelta.html) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property's value, whenever a new point is added dynamically.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

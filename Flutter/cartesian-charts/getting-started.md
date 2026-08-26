@@ -62,7 +62,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render charts that are plotted in Cartesian coordinates. Here, as we are plotting a line chart, initialize the SfCartesianChart widget as a child of the Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. Flutter Cartesian Chart is used to render charts that are plotted in Cartesian coordinates. Here, as we are plotting a line chart, initialize the Flutter Cartesian Chart widget as a child of the Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
@@ -131,7 +131,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 ![Bind data source in Flutter Charts.](images/getting-started/flutter-charts-data-source.jpg)
 
-#### See Also
+### See Also
 
 * [Bind data from the list to the Flutter Cartesian chart](https://support.syncfusion.com/kb/article/10935/how-to-bind-data-from-the-list-to-the-flutter-cartesian-chart-sfcartesianchart).
 
@@ -361,6 +361,6 @@ You can find the complete getting started example from this [link](https://suppo
 
 >**Note**: You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its feature highlights. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) to see how to render various chart types and configure them with built-in support for creating visual effects.
 
-#### See Also
+### See Also
 
 * [Integrate Syncfusion<sup>&reg;</sup> Flutter charts in Flutter web Application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).
