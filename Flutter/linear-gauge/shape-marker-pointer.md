@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Shape Marker Pointer in Flutter Linear Gauge
+# Shape Marker Pointer in Flutter Linear Gauge (SfLinearGauge)
 
 The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) provides pre-defined shapes to mark specific values. The default shape pointer is `invertedTriangle`. 
 

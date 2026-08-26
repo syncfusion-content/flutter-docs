@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Accessibility in Flutter Linear Gauge
+# Accessibility in Flutter Linear Gauge (SfLinearGauge)
 
 ## Screen reader
 

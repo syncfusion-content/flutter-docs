@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Tooltip in Flutter Treemap
+# Tooltip in Flutter Treemap (SfTreemap)
 
 Tooltip is used to provide information about a tile during tap or click interaction. This section helps you learn how to show a tooltip on a tile and customize it.
 

@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# How to Add Radial Gauge in FlutterFlow (Flutter Radial Gauge)
+# How to Add Radial Gauge in FlutterFlow (SfRadialGauge)
 
 ## Overview
 

@@ -7,13 +7,13 @@ control: SfMaps
 documentation: ug
 ---
 
-# Right-to-Left (RTL) in Flutter Maps
+# Right-to-Left (RTL) in Flutter Maps (SfMaps)
 
 ## Enable RTL rendering
 
 Right to left rendering can be achieved in the following ways:
 
-### Wrapping the Flutter Maps with Directionality widget
+### Wrapping the SfMaps with Directionality widget
 
 The Flutter Maps can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 

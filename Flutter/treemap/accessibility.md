@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Accessibility in Flutter Treemap
+# Accessibility in Flutter Treemap (SfTreemap)
 
 ## Screen reader
 

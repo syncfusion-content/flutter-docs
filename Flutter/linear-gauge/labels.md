@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Labels in Flutter Linear Gauge
+# Labels in Flutter Linear Gauge (SfLinearGauge)
 
 The default style of axis labels is as follows.
 

@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# About Flutter Treemap Control
+# About Flutter Treemap Control (SfTreemap)
 
 Syncfusion<sup>&reg;</sup> Flutter Treemap is a powerful and customizable widget that allows you to create interactive treemaps in Flutter applications. It offers a rich feature set including selection, legends, labels, tooltips, color mapping, and more.
 

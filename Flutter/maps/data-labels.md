@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Data Labels in Flutter Maps
+# Data Labels in Flutter Maps (SfMaps)
 
 Data labels provide identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 

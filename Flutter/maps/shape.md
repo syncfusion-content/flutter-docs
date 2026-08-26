@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Shape Colors in Flutter Maps
+# Shape Colors in Flutter Maps (SfMaps)
 
 This section explains about shapes and how to apply colors to the shapes based on specific values in the Flutter Maps.
 

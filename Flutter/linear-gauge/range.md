@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Ranges in Flutter Linear Gauge
+# Ranges in Flutter Linear Gauge (SfLinearGauge)
 
 A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a Flutter Linear Gauge. The default style of range will be as below. 
 

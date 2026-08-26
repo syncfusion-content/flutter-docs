@@ -7,11 +7,11 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# How to Add Barcode Generator in FlutterFlow (Flutter Barcode Generator)
+# How to Add Barcode Generator in FlutterFlow (SfBarcodeGenerator)
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our Flutter Barcode Generator widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our `SfBarcodeGenerator` widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 

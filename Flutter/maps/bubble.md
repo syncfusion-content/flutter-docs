@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Bubbles in Flutter Maps
+# Bubbles in Flutter Maps (SfMaps)
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more.
 

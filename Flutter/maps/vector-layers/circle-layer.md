@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Circle Layer in Flutter Maps
+# Circle Layer in Flutter Maps (SfMaps)
 
 Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add circles and customize them.
 

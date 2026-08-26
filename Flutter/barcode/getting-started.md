@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Getting Started with Flutter Barcode Generator
+# Getting Started with Flutter Barcode Generator (SfBarcodeGenerator)
 
 This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion® Flutter Barcode Generator widget.
 
@@ -97,7 +97,7 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
 
 {% endtabs %}
 
-N> The default symbology of Flutter Barcode Generator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html).
+N> The default symbology of SfBarcodeGenerator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html).
 
 ![Initialize Barcode Generator](images/getting-started/getting_started1.jpg)
 

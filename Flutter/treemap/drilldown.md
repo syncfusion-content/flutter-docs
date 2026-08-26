@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Drilldown in Flutter Treemap
+# Drilldown in Flutter Treemap (SfTreemap)
 
 The drilldown feature provides better visualization of a larger set of hierarchical-level data.
 

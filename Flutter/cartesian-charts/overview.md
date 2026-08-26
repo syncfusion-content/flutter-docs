@@ -41,6 +41,6 @@ To get started quickly with our Flutter chart widget, you can check out this vid
 
 >**Note**: You can refer to our [Flutter Charts](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
 
-#### See Also
+### See Also
 
 * [Integrating syncfusion<sup>&reg;</sup> flutter charts in a flutter web application](https://support.syncfusion.com/kb/article/9941/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).

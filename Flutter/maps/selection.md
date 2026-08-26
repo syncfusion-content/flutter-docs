@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Shape Selection in Flutter Maps
+# Shape Selection in Flutter Maps (SfMaps)
 
 You can select a shape to highlight a specific area on a Flutter Maps. You can also use callbacks to perform custom actions during shape selection.
 

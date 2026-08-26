@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Tile Layer in Flutter Maps
+# Tile Layer in Flutter Maps (SfMaps)
 
 The tile layer renders the tiles returned from web map tile services such as Bing Maps, OpenStreetMap, Google Maps, TomTom, and others.
 

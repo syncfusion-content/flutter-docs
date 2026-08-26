@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Axis in Flutter Linear Gauge
+# Axis in Flutter Linear Gauge (SfLinearGauge)
 
 The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color, and edge styles. Axis elements such as labels and ticks can also be easily customized, and you can inverse the axis.
 

@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# About Flutter Maps Control
+# About Flutter Maps Control (SfMaps)
 
 [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) is a powerful data visualization component that displays statistical information for geographical areas. Its rich feature set includes tile rendering from OpenStreetMap, Bing Maps, and other tile providers with marker support, as well as shape layer capabilities such as selection, legends, labels, markers, tooltips, bubbles, color mapping, and much more.
 

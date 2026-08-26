@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Polylines in Flutter Maps
+# Polylines in Flutter Maps (SfMaps)
 
 Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps you learn how to add polylines and customize them.
 

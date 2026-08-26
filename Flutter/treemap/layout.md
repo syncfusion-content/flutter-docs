@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Layouts in Flutter Treemap
+# Layouts in Flutter Treemap (SfTreemap)
 
 This section explains the different layouts in the Treemap widget. The available layouts are:
 

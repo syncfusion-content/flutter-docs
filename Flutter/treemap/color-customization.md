@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Color Customization in Flutter Treemap
+# Color Customization in Flutter Treemap (SfTreemap)
 
 This section explains the customization of color for the tiles based on a specific value or range of values.
 

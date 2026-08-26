@@ -1249,7 +1249,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
-#### See Also
+### See Also
 
 * [Synchronize on-demand loading in the Cartesian charts](https://support.syncfusion.com/kb/article/11533/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 

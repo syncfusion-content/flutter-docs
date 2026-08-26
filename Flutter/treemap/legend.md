@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Legend in Flutter Treemap
+# Legend in Flutter Treemap (SfTreemap)
 
 The legend provides clarity about the data plotted on the treemap.
 
