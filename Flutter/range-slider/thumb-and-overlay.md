@@ -9,16 +9,16 @@ documentation: ug
 
 # Thumb and Thumb Overlay in Flutter Range Slider (SfRangeSlider)
 
-This section explains how to customize the thumb and thumb overlay in the range slider.
+This section explains how to customize the thumb and thumb overlay in the Flutter Range Slider.
 
-* Thumb - It is one of the elements of range slider which can be used to drag and change the selected values of the range slider.
+* Thumb - It is one of the elements of Flutter Range Slider which can be used to drag and change the selected values of the Range Slider.
 * Thumb overlay - It is rendered around the thumb while interacting with it.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html). This applies to all the code examples in this section except the [Thumb icon](#thumb-icon) section, which uses properties exposed directly on `SfRangeSlider`.
 
 ## Thumb size
 
-You can change the size of the thumb in the range slider using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbRadius.html) property.
+You can change the size of the thumb in the Flutter Range Slider using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbRadius.html) property.
 
 ### Horizontal
 
@@ -434,7 +434,7 @@ class _HomePageState extends State<HomePage> {
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the range slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the Flutter Range Slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
 
 ### Horizontal
 
@@ -634,7 +634,7 @@ class _HomePageState extends State<HomePage> {
 
 ## Thumb overlap stroke color
 
-You can change the overlap stroke color of the thumb in the range slider using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
+You can change the overlap stroke color of the thumb in the Flutter Range Slider using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
 
 ### Horizontal
 

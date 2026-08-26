@@ -28,7 +28,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add AIAssistView widget as a dependency
+### Add AI AssistView widget as a dependency
 
 1. Click on `+ Add Dependency`, and a text editor will appear.
 2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.

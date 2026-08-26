@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar Resource View (SfCalendar)
 
-The timeline resource grouping is a discrete view integrated into our Event Calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
+The timeline resource grouping is a discrete view integrated into our Flutter Event Calendar widget that allows you to group the appointments based on the available resource in timeline views. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view.
 
 You can create a resource view by setting the [displayName](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/displayName.html), [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/color.html), [id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/id.html), and [image](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/image.html) property of the [CalendarResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource-class.html).
 
@@ -81,7 +81,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 ![Resource view](images/resourceview/resource-view.png)
 
 ## Assigning events for resources
-You can associate resources to the appointments by adding `id` of a resource to the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/resourceIds.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html). The appointments will be displayed in the row associates with the resource in the event calendar timeline views.
+You can associate resources to the appointments by adding `id` of a resource to the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/resourceIds.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html). The appointments will be displayed in the row associates with the resource in the Flutter Event Calendar timeline views.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -357,7 +357,7 @@ class _CalendarAppState extends State<CalendarApp> {
 ![Display name text style](images/resourceview/display_name_text_style.png)
 
 ### Resource panel size
-You can customize the size of the panel that displays the resource views in the calendar by setting an appropriate value to the [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html).
+You can customize the size of the panel that displays the resource views in the Flutter Event Calendar by setting an appropriate value to the [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html).
 
 {% tabs %}
 {% highlight dart hl_lines="21" %}

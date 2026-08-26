@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Date Restrictions in Flutter DateRangePicker (SfDateRangePicker)
+# Date Restrictions in Flutter Date Range Picker (SfDateRangePicker)
 
 ## Minimum display date
 
@@ -97,7 +97,7 @@ In [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepick
 
 ## SelectableDayPredicate
 
-[selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) returns `true` will be selectable in the date range picker.
+[selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that [selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) returns `true` will be selectable in the Flutter Date Range Picker.
 
 {% tabs %}
 {% highlight dart hl_lines="4 5 6 7 8 9" %}

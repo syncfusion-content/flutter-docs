@@ -409,7 +409,7 @@ class SocialMediaUsers {
 
 ## Title
 
-You can set a title specifically for the legend in the treemap by using the [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property. This property lets you display a descriptive heading for the legend, helping users understand what the legend represents within the treemap.
+You can set a title specifically for the legend in the Flutter Treemap by using the [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property. This property lets you display a descriptive heading for the legend, helping users understand what the legend represents within the Flutter Treemap.
 
 By default, the value of the legend's [`title`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/title.html) property is `null`, indicating that no title is displayed for the legend, unless it is specified explicitly.
 
@@ -566,7 +566,7 @@ N>
 
 You can place the legend in a custom position using the [`TreemapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) property. The default value of the [`offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) property is `null`.
 
-If the property [`TreemapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) has been set with the property [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) as top, then the legend will be placed at the top but with an absolute position, meaning it will not take a dedicated position and will be drawn at the top of the map.
+If the property [`TreemapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) has been set with the property [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) as top, then the legend will be placed at the top but with an absolute position, meaning it will not take a dedicated position and will be drawn at the top of the Flutter Treemap.
 
 {% tabs %}
 {% highlight dart %}

@@ -15,7 +15,7 @@ Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfTreemap with the Directionality widget
 
-The treemap can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget, and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [`rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
+The Flutter Treemap can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget, and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [`rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
 
 {% tabs %}
 {% highlight dart %}
@@ -99,7 +99,7 @@ class PopulationModel {
 
 ### Changing the locale to RTL languages
 
-The treemap elements will render in the right-to-left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, or Urdu. You can achieve this by specifying the MaterialApp properties such as [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html), [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html), [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html), and adding the flutter_localizations package to your pubspec.yaml file.
+The elements of the Flutter Treemap will render in the right-to-left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, or Urdu. You can achieve this by specifying the MaterialApp properties such as [`localizationsDelegates`](https://api.flutter.dev/flutter/material/MaterialApp/localizationsDelegates.html), [`supportedLocales`](https://api.flutter.dev/flutter/material/MaterialApp/supportedLocales.html), [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html), and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight yaml %}

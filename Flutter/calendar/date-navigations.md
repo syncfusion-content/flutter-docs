@@ -76,7 +76,7 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
+![MinMaxDate Flutter Event Calendar](images/date-navigation/minmaxdate.png)
 
 ![minDate and maxDate](images/date-navigation/min-maxDate.png) 
 
@@ -85,7 +85,7 @@ class CalendarApp extends StatelessWidget {
 
 
 ## Programmatic date navigation
-You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
+You can programmatically navigate dates in the Flutter Event Calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="3 12 22" %}
@@ -130,7 +130,7 @@ class _CalendarAppState extends State<CalendarApp> {
 {% endtabs %}
 
 ## Programmatic date selection
-You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
+You can programmatically select the dates in the Flutter Event Calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
 {% highlight dart hl_lines="3 12 22" %}
@@ -277,7 +277,7 @@ class _CalendarAppState extends State<CalendarApp> {
 {% endtabs %}
 
 ## Show date picker
-You can enable the date picker for the calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property in the calendar, which displays the date picker in the header view. It allows you to quickly navigate to the different calendar views.
+You can enable the date picker for the Flutter Event Calendar by using the [showDatePickerButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showDatePickerButton.html) property, which displays the date picker in the header view. It allows you to quickly navigate to the different calendar views.
 
 {% tabs %}
 {% highlight dart hl_lines="15" %}
@@ -316,7 +316,7 @@ To know more about how to customize the Date Picker's appearance in the Flutter 
 <iframe id='flutterCalendarVideoTutorial' src='https://www.youtube.com/embed/f16Mvv6_88g'></iframe>
 
 ## Show today button
-You can enable the today button by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showTodayButton.html) property in the calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today's view.
+You can enable the today button by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showTodayButton.html) property in the Flutter Event Calendar, which displays the today button in the header view. It allows you to quickly navigate from the current view to the today's view.
 
 {% tabs %}
 {% highlight dart hl_lines="15" %}
@@ -348,7 +348,7 @@ class CalendarApp extends StatelessWidget {
 {% endtabs %}
 
 ## Allow view navigation
-You can quickly navigate to the day view by a tap on the month cell and view header of the calendar views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowViewNavigation.html) property of the calendar.
+You can quickly navigate to the day view by a tap on the month cell and view header of the calendar views by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowViewNavigation.html) property of the Flutter Event Calendar.
 
 
 {% tabs %}
@@ -383,7 +383,7 @@ class CalendarApp extends StatelessWidget {
 ![Allow view navigation](images/date-navigation/allow_view_navigation.gif)
 
 ## Allowed views
-You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
+You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). The views set to this property will display as a view button in the header view of the Flutter Event Calendar. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
 
 {% tabs %}
 {% highlight dart hl_lines="15 16 17 18 19 20 21 22" %}

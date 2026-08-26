@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in Flutter Radial Gauge (SfRadialGauge)
 
-[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text and image as annotations to specific points of interest in the radial gauge.
+[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text and image as annotations to specific points of interest in the Flutter Radial Gauge.
 
 The following properties are available in [`annotation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) to customize the position and alignment of [`annotation widget-based`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/widget.html)
 
@@ -199,7 +199,7 @@ By default, the value of [`positionFactor`](https://pub.dev/documentation/syncfu
 
 ## Setting image for annotation
 
-Annotations provide options to add any image over the gauge control with respect to its offset position. You can add multiple images in a single control.
+Annotations provide options to add any image over the Flutter Radial Gauge with respect to its offset position. You can add multiple images in a single control.
 
 {% tabs %}
 {% highlight dart %}

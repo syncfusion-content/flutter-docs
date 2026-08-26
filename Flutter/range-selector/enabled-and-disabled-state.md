@@ -9,11 +9,11 @@ documentation: ug
 
 # Enabled and Disabled States in Flutter Range Selector
 
-This section explains the enabled and disabled states in the Flutter range selector.
+This section explains the enabled and disabled states in the Flutter Range Selector.
 
 ## Enabled state
 
-By default, the range selector is rendered in the enabled state. You can explicitly control it using the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property. The default value of the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
+By default, the Flutter Range Selector is rendered in the enabled state. You can explicitly control it using the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property. The default value of the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -92,7 +92,7 @@ class Data {
 
 ## Disabled state
 
-You can render the range selector in a disabled state using the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property. The default value of the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
+You can render the Flutter Range Selector in a disabled state using the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property. The default value of the [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -169,7 +169,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector disabled state](images/disabled-state/selector_disabled_state.png)
+![Range Selector disabled state](images/disabled-state/selector_disabled_state.png)
 
 ## Disabled color
 

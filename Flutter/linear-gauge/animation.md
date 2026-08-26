@@ -44,7 +44,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Animate axis in linear gauge](images/animation/animation-axis-range/animation-axis.gif)
+![Animate axis in Flutter Linear Gauge](images/animation/animation-axis-range/animation-axis.gif)
 
 ## Animate range
 
@@ -79,7 +79,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Animate range in linear gauge](images/animation/animation-axis-range/animation-range.gif)
+![Animate range in Flutter Linear Gauge](images/animation/animation-axis-range/animation-range.gif)
 
 ## Pointer animation
 
@@ -182,4 +182,4 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
+![Animate marker pointer in Flutter Linear Gauge](images/animation/shape-pointer/bounceout.gif)

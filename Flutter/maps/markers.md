@@ -9,13 +9,13 @@ documentation: ug
 
 # Markers in Flutter Maps (SfMaps)
 
-Markers can be used to denote specific locations on a map. You can use built-in symbols or display custom widgets at specific latitude and longitude coordinates on the map.
+Markers can be used to denote specific locations on a Flutter Maps. You can use built-in symbols or display custom widgets at specific latitude and longitude coordinates on the Flutter Maps.
 
 ## Adding markers
 
 ### Shape layer
 
-You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
+You can show markers at any position on the Flutter Maps by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
 
 The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
 
@@ -88,7 +88,7 @@ N>
 
 ### Tile layer
 
-You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`MapTileLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
+You can show markers at any position on the Flutter Maps by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`MapTileLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) property.
 
 The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
 
@@ -886,9 +886,9 @@ typedef MapTapCallback = void Function(Offset position);
 
 ## Zoom markers to fit bounds
 
-You can visualize a specific area on the map by specifying the northeast and southwest coordinate points to the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). It renders the map by calculating the center coordinate and zoom level depending on the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) value.
+You can visualize a specific area on the Flutter Maps by specifying the northeast and southwest coordinate points to the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). It renders the Flutter Maps by calculating the center coordinate and zoom level depending on the [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) value.	
 
-The [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property can be set at load time alone. You can use the [`latLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/latLngBounds.html) property of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to dynamically update the map bounds.
+The [`initialLatLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialLatLngBounds.html) property can be set at load time alone. You can use the [`latLngBounds`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/latLngBounds.html) property of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to dynamically update the bounds of the Flutter Maps.
 
 {% tabs %}
 {% highlight Dart %}

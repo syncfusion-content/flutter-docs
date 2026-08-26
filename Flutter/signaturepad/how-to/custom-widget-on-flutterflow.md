@@ -7,7 +7,7 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# How to Add SignaturePad in FlutterFlow (SfSignaturePad)
+# How to Add Signature Pad in FlutterFlow (SfSignaturePad)
 
 ## Overview
 
@@ -28,7 +28,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add SignaturePad widget as a dependency
+### Add Signature Pad widget as a dependency
 
 1. Click on `+ Add Dependency`, and a text editor will appear.
 2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter SignaturePad](https://pub.dev/packages/syncfusion_flutter_signaturepad) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.

@@ -15,7 +15,7 @@ Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfSlider with Directionality widget
 
-The slider can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+The Flutter Slider can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -63,7 +63,7 @@ class _RTLDirectionalityPageState extends State<RTLDirectionalityPage> {
 
 ### Changing the locale to RTL languages
 
-The slider will render in right to left direction if the locale belongs to RTL languages such as (Arabic, Persian, Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+The Flutter Slider will render in right to left direction if the locale belongs to RTL languages such as (Arabic, Persian, Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 N> The Persian (Farsi) locale `Locale("fa", "IR")` is used in the example below. Replace it with your desired RTL locale (e.g., `Locale("ar")` for Arabic, `Locale("he")` for Hebrew, `Locale("ps")` for Pashto, or `Locale("ur")` for Urdu).
 
