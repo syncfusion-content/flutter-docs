@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 
-	Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but can represent more data per unit area. The Flutter Barcode Generator widget supports the following two-dimensional symbology:
+Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but can represent more data per unit area. The Flutter Barcode Generator widget supports the following two-dimensional symbology:
 
 * [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
 * [`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)

@@ -368,7 +368,7 @@ class CalendarApp extends StatelessWidget {
 ![Time regions builder](images/builder/timeregion-builder.png)
 
 ## Resource view header builder
-	The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows you to design the custom view, and assign the view to the resource view header by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) allows you to design the custom view, and assign the view to the resource view header by returning an appropriate widget in the [ResourceViewHeaderBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderBuilder.html) of the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ResourceViewHeaderDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewHeaderDetails-class.html) - returns the required details of the resource view header builder.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar Appointments (SfCalendar)
 
-	SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in Flutter Event Calendar.
+SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in Flutter Event Calendar.
 
 {% tabs %}
 {% highlight dart hl_lines="16 23 24 25 26 27 28 29 30 31 32 34 35 37 38 39 40 41" %}
