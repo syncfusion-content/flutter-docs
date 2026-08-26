@@ -62,7 +62,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. Flutter Cartesian Chart is used to render charts that are plotted in Cartesian coordinates. Here, as we are plotting a line chart, initialize the Flutter Cartesian Chart widget as a child of the Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. Flutter Cartesian Chart is used to render charts that are plotted in Cartesian coordinates. Here, as we are plotting a line chart, initialize the SfCartesianChart  widget as a child of the Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
