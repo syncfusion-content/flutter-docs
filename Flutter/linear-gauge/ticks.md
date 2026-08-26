@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Ticks in Flutter Linear Gauge
+# Ticks in Flutter Linear Gauge (SfLinearGauge)
 
 The default style of axis ticks is as follows.
 
@@ -174,5 +174,3 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endtabs %}
 
 ![Customize Flutter Linear Gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
-
-
