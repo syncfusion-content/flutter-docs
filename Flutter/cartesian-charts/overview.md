@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# About Syncfusion® Flutter Cartesian Chart
+# About Syncfusion® Flutter Cartesian Chart widget
 
 Syncfusion<sup>&reg;</sup> Flutter Cartesian Charts widget is written natively in Dart for creating beautiful, high-performance Cartesian charts that are used to craft high-quality applications using Flutter.
 
