@@ -609,7 +609,7 @@ class RadialGaugeDemo extends StatelessWidget {
 
 **Background color support**
 
-[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows customizing its background color using [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/backgroundColor.html) property.
+[`Radial Gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows customizing its background color using [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/backgroundColor.html) property.
 
 {% tabs %}
 {% highlight dart %}
@@ -1413,7 +1413,7 @@ class RadialGaugeDemo extends StatelessWidget {
 
 ## Custom scale
 
-[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event of the axis. The [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
+[`Radial Gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event of the axis. The [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
 
 {% tabs %}
 {% highlight dart %}

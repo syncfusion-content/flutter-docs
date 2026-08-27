@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Flutter Maps (SfMaps)
 
-You can provide clear information on the data plotted on the map using legend.
+You can provide clear information on the data plotted on the Flutter Maps using legend.
 
 ## Shape legend
 
@@ -633,7 +633,7 @@ N>
 
 You can place the legend in custom position using the [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) property. The default value of the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) property is `null`.
 
-If the property [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) has been set with the property [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the map.
+If the property [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) has been set with the property [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the Flutter Maps.
 
 {% tabs %}
 {% highlight Dart %}

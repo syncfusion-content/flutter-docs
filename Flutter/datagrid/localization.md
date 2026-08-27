@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Flutter DataGrid | Syncfusion®
-description: Learn how to localize static strings in Syncfusion® Flutter DataGrid to support multiple languages and provide a localized user experience.
+title: Localization in Flutter Data Grid | Syncfusion®
+description: Learn how to localize static strings in Syncfusion® Flutter Data Grid to support multiple languages and provide a localized user experience.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
-# Localization in Flutter DataGrid
+# Localization in Flutter Data Grid
 
-## Localization in Flutter DataGrid (SfDataGrid)
+## Localization in Flutter Data Grid
 
 ### Localization in filter pop-up menu
 By default, the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) filter popup menu supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and [syncfusion_localizations](https://pub.dev/packages/syncfusion_localizations) package to your application.
@@ -55,7 +55,7 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
       home: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: SfDataGrid(
           source: _employeeDataSource,
@@ -110,7 +110,7 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
 
 > **Note:** After adding the packages, hot reload or restart your app to apply the localization changes.
 
-<img alt="flutter datagrid localization" src="images/localization/flutter-datagrid-localization.jpg" width="480"/>
+<img alt="Flutter Data Grid localization" src="images/localization/flutter-datagrid-localization.jpg" width="480"/>
 
 ## Localization in Flutter DataPager (SfDataPager)
 
@@ -255,7 +255,7 @@ class EmployeeDataSource extends DataGridSource {
 
 > **Note:** After adding the packages, hot reload or restart your app to apply the localization changes.
 
-<img alt="flutter datagrid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
+<img alt="Flutter Data Grid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
 
 ### Localize Static Strings in DataPager
 
@@ -401,4 +401,4 @@ class EmployeeDataSource extends DataGridSource {
 
 > **Note:** After adding the packages, hot reload or restart your app to apply the localization changes. Supported locales include Chinese (zh), Arabic (ar), Japanese (ja), Hindi (hi), French (fr), German (de), Spanish (es), Portuguese (pt), Russian (ru), and more. See [SfGlobalLocalizations](https://pub.dev/documentation/syncfusion_localizations/latest/syncfusion_localizations/SfGlobalLocalizations-class.html) for the complete list.
 
-<img alt="flutter datagrid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>
+<img alt="Flutter Data Grid localization" src="images/localization/flutter-datapager-localization.jpg" width="480"/>

@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Localization in Flutter DateRangePicker (SfDateRangePicker)
+# Localization in Flutter Date Range Picker (SfDateRangePicker)
 
 By default, the [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) widget supports US English localizations. You can change other languages by specifying the [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) properties and adding the `flutter_localizations` package to your application.
 

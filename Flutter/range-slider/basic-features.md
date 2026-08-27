@@ -20,13 +20,13 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 ## Values
 
-It represents the values currently selected in the range slider. The range slider's thumbs are drawn corresponding to these values.
+It represents the values currently selected in the Flutter Range Slider. The thumbs of the Flutter Range Slider are drawn corresponding to these values.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
+For date values, the Flutter Range Slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
 **Numeric range slider**
 
-You can show numeric values in the range slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+You can show numeric values in the Flutter Range Slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
 ### Horizontal
 
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
 
 **Date range slider**
 
-You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+You can show date values in the Flutter Range Slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -204,13 +204,13 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Date range slider](images/basic-features/vertical-date-labels.png)
+![Date Range Slider](images/basic-features/vertical-date-labels.png)
 
 ## Handle onChangeStart, onChanged, and onChangeEnd callbacks
 
 **onChangeStart**
 
-The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeStart.html) callback is called when the user begins to interact with the range slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range slider thumb.
+The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeStart.html) callback is called when the user begins to interact with the Flutter Range Slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
 
 **onChangeEnd**
 
-The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeEnd.html) callback is called when the user stops interacting with the range slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range slider thumb.
+The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChangeEnd.html) callback is called when the user stops interacting with the Flutter Range Slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range slider thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -294,9 +294,9 @@ class _HomePageState extends State<HomePage> {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
-N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with the new values.
+N> The Flutter Range Slider passes the new values to the callback but does not change its state until the parent widget rebuilds the Flutter Range Slider with the new values.
 
-N> If it is null, the range slider will be disabled.
+N> If it is null, the Flutter Range Slider will be disabled.
 
 ### Horizontal
 
@@ -335,7 +335,7 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Enabled range slider](images/basic-features/enabled-state.png)
+![Enabled Range Slider](images/basic-features/enabled-state.png)
 
 ### Vertical
 
@@ -378,7 +378,7 @@ class _HomePageState extends State<HomePage> {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the range slider is between the start and end thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the Flutter Range Slider is between the start and end thumbs.
 
 ### Horizontal
 
@@ -466,7 +466,7 @@ class _HomePageState extends State<HomePage> {
 
 It represents the color applied to the inactive track and active dividers.
 
-The inactive side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the start thumb, and the end thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+The inactive side of the Flutter Range Slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the start thumb, and the end thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value and the start thumb, and the end thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value.
 

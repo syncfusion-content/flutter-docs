@@ -11,9 +11,9 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> Flutter Barcode Generator is a data visualization widget designed to generate and display data in a machine-readable format. It offers an efficient way to encode text using supported symbology types.
 
-To get started with the Flutter Barcode Generator, refer to the [Getting Started with Flutter Barcodes](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
+To get started with the Flutter Barcode Generator, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 
-![Overview flutter barcode](images/getting-started/overview1.jpg)
+![Overview Flutter Barcode Generator](images/getting-started/overview1.jpg)
 
 ![Overview flutter QR Code](images/getting-started/getting_started3.jpg)
 
@@ -29,4 +29,4 @@ To quickly get started with our Flutter Barcode Generator widget, watch the tuto
 * **Barcode customization** - Customize the visual appearance of barcodes using the [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) and [`barColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/barColor.html) properties and adjust the size of smallest line or dot of the code using the [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property.
 * **Text customization** - Configure to display the barcode value and customize the position and style of the barcode text.
 
-You can get the barcode sample in the following link: [`Flutter Barcode Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/barcodes).
+You can get the barcode sample in the following link: [`Flutter Barcode Generator  Examples`](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/barcodes).

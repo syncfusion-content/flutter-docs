@@ -9,9 +9,9 @@ documentation: ug
 
 # Marker Pointer in Flutter Radial Gauge (SfRadialGauge)
 
-A [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) is used to indicate a specific value on the radial gauge axis. It supports seven built-in marker shapes and additional customization options such as image, text, color, size, border, elevation, overlay, and position offset. The marker type can be changed using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property. The default marker type is [`MarkerType.invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html).
+A [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) is used to indicate a specific value on the axis of the Flutter Radial Gauge. It supports seven built-in marker shapes and additional customization options such as image, text, color, size, border, elevation, overlay, and position offset. The marker type can be changed using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property. The default marker type is [`MarkerType.invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html).
 
-The following example demonstrates adding a default marker pointer to the radial gauge.
+The following example demonstrates adding a default marker pointer to the Radial Gauge.
 
 {% highlight dart %}
 
@@ -60,7 +60,7 @@ class MarkerPointerExample extends StatelessWidget {
 
 ## Marker types
 
-The radial gauge supports the following built-in marker types that can be set using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property of [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html):
+The Flutter Radial Gauge supports the following built-in marker types that can be set using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property of [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html):
 
 * [`MarkerType.circle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html) - Renders the pointer as a circle.
 * [`MarkerType.diamond`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html) - Renders the pointer as a diamond.
@@ -292,7 +292,7 @@ class RectangleMarkerExample extends StatelessWidget {
 
 ### Triangle
 
-The [`MarkerType.triangle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html) renders the marker pointer as an upward-pointing triangle. It is commonly used as a directional indicator on the gauge.
+The [`MarkerType.triangle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType.html) renders the marker pointer as an upward-pointing triangle. It is commonly used as a directional indicator on the Flutter Radial Gauge.
 
 {% highlight dart %}
 

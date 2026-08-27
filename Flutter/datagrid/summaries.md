@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Summaries feature in Flutter DataGrid | Syncfusion®
-description: Learn how to add and customize summary rows in Syncfusion® Flutter DataGrid to display totals, averages, counts, and other aggregate values.
+title: Summaries feature in Flutter Data Grid | Syncfusion®
+description: Learn how to add and customize summary rows in Syncfusion® Flutter Data Grid to display totals, averages, counts, and other aggregate values.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Summaries in Flutter DataGrid
+# Summaries in Flutter Data Grid
 
 ## Table summary
 
@@ -85,7 +85,7 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -143,7 +143,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid displays table summary column in the row](images/summaries/flutter-datagrid-summary-column-in-row.png)
+![Flutter Data Grid displays table summary column in the row](images/summaries/flutter-datagrid-summary-column-in-row.png)
 
 ### Display table summary for column
 
@@ -159,7 +159,7 @@ The summary information can be displayed in a column by setting the `GridTableSu
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -216,7 +216,7 @@ The summary information can be displayed in a column by setting the `GridTableSu
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid displays table summary column in column](images/summaries/flutter-datagrid-summary-column-in-column.png)
+![Flutter Data Grid displays table summary column in column](images/summaries/flutter-datagrid-summary-column-in-column.png)
 
 ### Positioning table summary row
 
@@ -228,7 +228,7 @@ The table summary row can be shown at either the top or bottom position by using
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -297,7 +297,7 @@ The table summary row can be shown at either the top or bottom position by using
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid shows the positioning of the table summary column](images/summaries/flutter-datagrid-position-of-summary-column.png)
+![Flutter Data Grid shows the positioning of the table summary column](images/summaries/flutter-datagrid-position-of-summary-column.png)
 
 ### Summary calculation types
 
@@ -319,7 +319,7 @@ The SfDataGrid supports displaying a summary title along with column summary val
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -383,7 +383,7 @@ The SfDataGrid supports displaying a summary title along with column summary val
 {% endhighlight %}
 {% endtabs %}
 
-![flutter Datagrid shows the table summary column along with the title](images/summaries/flutter-datagrid-summary-column-with-title.png)
+![Flutter Data Grid shows the table summary column along with the title](images/summaries/flutter-datagrid-summary-column-with-title.png)
 
 ### Set the background color for the table summary row
 
@@ -395,7 +395,7 @@ The background color of the table summary row can be customized by using the [Gr
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -454,7 +454,7 @@ The background color of the table summary row can be customized by using the [Gr
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customization of table summary row](images/summaries/flutter-datagrid-summary-row-customization.png)
+![Flutter Data Grid shows customization of table summary row](images/summaries/flutter-datagrid-summary-row-customization.png)
 
 ### Customize table summary calculation
 
@@ -567,7 +567,7 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: _employeeDataSource,
         tableSummaryRows: [
@@ -625,4 +625,4 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows custom logic for table summary column](images/summaries/flutter-datagrid-summary-column-custom-logic.png)
+![Flutter Data Grid shows custom logic for table summary column](images/summaries/flutter-datagrid-summary-column-custom-logic.png)

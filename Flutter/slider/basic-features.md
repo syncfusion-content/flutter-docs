@@ -22,11 +22,11 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 It represents the value currently selected in the slider. The slider's thumb is drawn corresponding to this value.
 
-For date values, the slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for date values.
+For date values, the Flutter Slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for date values.
 
 **Numeric slider**
 
-You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show numeric values in the Flutter Slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 ### Horizontal
 
@@ -118,7 +118,7 @@ class _VerticalNumericSliderPageState extends State<VerticalNumericSliderPage> {
 
 **Date slider**
 
-You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show date values in the Flutter Slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -304,9 +304,9 @@ class _OnChangeEndPageState extends State<OnChangeEndPage> {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
-N> The slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with the new value.
+N> The Flutter Slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with the new value.
 
-N> If it is null, the slider will be disabled.
+N> If it is null, the Flutter Slider will be disabled.
 
 ### Horizontal
 
@@ -394,7 +394,7 @@ class _VerticalOnChangedPageState extends State<VerticalOnChangedPage> {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) value and the thumb.
+It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the Flutter Slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) value and the thumb.
 
 ### Horizontal
 
@@ -494,7 +494,7 @@ class _VerticalActiveColorPageState extends State<VerticalActiveColorPage> {
 
 It represents the color applied to the inactive track and active dividers.
 
-The inactive side of the slider is between the thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) value.
+The inactive side of the Flutter Slider is between the thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) value.
 
 ### Horizontal
 

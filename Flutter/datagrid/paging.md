@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paging in Flutter DataGrid | Syncfusion®
-description: Learn how to use paging in Syncfusion® Flutter DataGrid, including page navigation, data management, and appearance customization options.
+title: Paging in Flutter Data Grid | Syncfusion®
+description: Learn how to use paging in Syncfusion® Flutter Data Grid, including page navigation, data management, and appearance customization options.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Paging in Flutter DataGrid
+# Paging in Flutter Data Grid
 
 The SfDataGrid interactively supports the manipulation of data using the [SfDataPager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager-class.html) control. This provides support to load data in segments when dealing with large volumes of data. The `SfDataPager` can be placed above or below the SfDataGrid based on your requirement to easily manage data paging.
 
@@ -500,7 +500,7 @@ Use the [availableRowsPerPage](https://pub.dev/documentation/syncfusion_flutter_
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
@@ -676,7 +676,7 @@ The spacing between page number buttons and navigation buttons (first, last, pre
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: SfDataPager(
             itemPadding: EdgeInsets.all(8.0),
@@ -702,7 +702,7 @@ The default width and height of the page number buttons are 50 and 50, respectiv
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: Center(
             child: SfDataPagerTheme(
@@ -746,7 +746,7 @@ To hide specific navigation buttons, use the following properties:
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter DataGrid'),
+          title: const Text('Syncfusion Flutter Data Grid'),
         ),
         body: SfDataPagerTheme(
           data: SfDataPagerThemeData(
@@ -794,7 +794,7 @@ You can control the number of page buttons displayed at once using the [visibleI
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter DataGrid Sample'),
+        title: Text('Flutter Data Grid Sample'),
       ),
       body: LayoutBuilder(builder: (context, constraint) {
         return Column(
@@ -831,7 +831,7 @@ Customize the appearance of page buttons by providing a custom widget using the 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Flutter DataGrid Sample'),
+          title: Text('Flutter Data Grid Sample'),
         ),
         body: LayoutBuilder(builder: (context, constraint) {
           return Column(children: [
@@ -1019,4 +1019,4 @@ class OrderInfoDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![sorting applied for all the rows in flutter datagrid paging](images/paging/sorting-applied-for-all-the-rows-in-flutter-datagrid-paging.gif)
+![sorting applied for all the rows in Flutter Data Grid paging](images/paging/sorting-applied-for-all-the-rows-in-flutter-datagrid-paging.gif)

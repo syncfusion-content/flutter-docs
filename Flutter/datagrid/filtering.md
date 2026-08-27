@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Programmatic Filtering in Flutter DataGrid | Syncfusion®
-description: Learn how to filter data rows in Syncfusion® Flutter DataGrid, including built-in filtering options, custom filter conditions, and data filtering customization.
+title: Programmatic Filtering in Flutter Data Grid | Syncfusion®
+description: Learn how to filter data rows in Syncfusion® Flutter Data Grid using built-in filters, custom conditions, and advanced customization for precise data insights.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 --- 
 
-# Filtering in Flutter DataGrid
+# Filtering in Flutter Data Grid
 
 Filtering is the process of fetching values from a collection that satisfy specified conditions. In the [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html), filtering can be applied both through the UI and programmatically.
 
@@ -541,15 +541,15 @@ The `SfDataGrid` provides the following types of filter UI modes:
 
 The following image shows the checkbox filter popup menu on the web and desktop platforms,
 
-<img alt="Flutter datagrid shows a checkbox filter in web platform" src="images/filtering/flutter-datagrid-checkbox-filter-view.png" width="689"/>
+<img alt="Flutter Data Grid shows a checkbox filter in web platform" src="images/filtering/flutter-datagrid-checkbox-filter-view.png" width="689"/>
 
 The following image shows the advanced filter popup menu on the web and desktop platforms,
 
-<img alt="Flutter datagrid shows a advanced filter in web platform" src="images/filtering/flutter-datagrid-advanced-filter-view.png" width="689"/>
+<img alt="Flutter Data Grid shows a advanced filter in web platform" src="images/filtering/flutter-datagrid-advanced-filter-view.png" width="689"/>
 
 The following images show the checkbox and advanced filter popup menu on the mobile platform,
 
-<img alt="Flutter datagrid shows checkbox and advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-filter-view-mobile.png" width="689"/>
+<img alt="Flutter Data Grid shows checkbox and advanced filter menu on mobile platform" src="images/filtering/flutter-datagrid-filter-view-mobile.png" width="689"/>
 
 ### Checkbox filtering
 
@@ -557,11 +557,11 @@ The Checkbox filtering is like the Excel-like filter popup that shows the checke
 
 The following image shows the checkbox filter popup menu with some selected rows in the checkbox list view in order to filter,
 
-<img alt="Flutter datagrid shows a checkbox filter popup view" src="images/filtering/flutter-datagrid-checkbox-view-before-filter.png" width="689"/>
+<img alt="Flutter Data Grid shows a checkbox filter popup view" src="images/filtering/flutter-datagrid-checkbox-view-before-filter.png" width="689"/>
 
 The following image shows the filtered data rows which are filtered by the checkbox filter popup menu,
 
-<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-checkbox-view-after-filter.png" width="689"/>
+<img alt="Flutter Data Grid shows the filtered rows" src="images/filtering/flutter-datagrid-checkbox-view-after-filter.png" width="689"/>
 
 ### Advanced filtering
 
@@ -585,9 +585,9 @@ Below are the built-in filter types supported:
 <td> When the DateTime type value is loaded to the <code>GridColumn</code>, then <code>DateFilters</code> options are loaded in <code>advanced filter view</code>. </td>
 </tr>
 <tr>
-<td> <img alt="Advanced text filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-text-filter.png"/> </td>
-<td> <img alt="Advanced number filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-number-filter.png"/> </td>
-<td> <img alt="Advanced date filter in Flutter DataGrid" src="images/filtering/flutter-datagrid-advanced-date-filter.png"/> </td>
+<td> <img alt="Advanced text filter in Flutter Data Grid" src="images/filtering/flutter-datagrid-advanced-text-filter.png"/> </td>
+<td> <img alt="Advanced number filter in Flutter Data Grid" src="images/filtering/flutter-datagrid-advanced-number-filter.png"/> </td>
+<td> <img alt="Advanced date filter in Flutter Data Grid" src="images/filtering/flutter-datagrid-advanced-date-filter.png"/> </td>
 </tr>
 <tr>
 <td align="left" valign="top"><b>Filter menu options</b> <ul><li>Equals</li> <li>Does Not Equal</li> <li>Begins With</li> <li>Does Not Begin With</li> <li>Ends With</li> <li>Does Not End With</li> <li>Contains</li> <li>Does Not Contain</li> <li>Empty</li> <li>Not Empty</li> <li>Null</li> <li>Not Null</li></ul> </td>
@@ -598,11 +598,11 @@ Below are the built-in filter types supported:
 
 The following image shows the advanced filter popup menu with multiple filter values and types in order to filter the range of data rows,
 
-<img alt="Flutter datagrid shows a advanced filter popup view" src="images/filtering/flutter-datagrid-advanced-view-before-filter.png" width="689"/>
+<img alt="Flutter Data Grid shows a advanced filter popup view" src="images/filtering/flutter-datagrid-advanced-view-before-filter.png" width="689"/>
 
 The following image shows the filtered data rows which are filtered by the advanced filter popup menu,
 
-<img alt="Flutter datagrid shows the filtered rows" src="images/filtering/flutter-datagrid-advanced-view-after-filter.png" width="689"/>
+<img alt="Flutter Data Grid shows the filtered rows" src="images/filtering/flutter-datagrid-advanced-view-after-filter.png" width="689"/>
 
 #### Case-sensitive filtering
 
@@ -610,7 +610,7 @@ Case-sensitive filtering can be enabled for the column using the case-sensitive 
 
 The following image shows the advanced filter popup menu with a case-sensitive icon,
 
-<img alt="Flutter datagrid shows the case sensitive icon" src="images/filtering/flutter-datagrid-casesensitive-filtering.png" width="689"/>
+<img alt="Flutter Data Grid shows the case sensitive icon" src="images/filtering/flutter-datagrid-casesensitive-filtering.png" width="689"/>
 
 ### Disable filtering for an individual column
 
@@ -820,7 +820,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
@@ -868,7 +868,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid filter popup menu with filter mode" src="images/filtering/flutter-datagrid-filter-mode-checkbox.png" width="400"/>
+<img alt="Flutter Data Grid filter popup menu with filter mode" src="images/filtering/flutter-datagrid-filter-mode-checkbox.png" width="400"/>
 
 ### Hiding sort options
 
@@ -882,7 +882,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
@@ -922,7 +922,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid hiding sort options in popup menu" src="images/filtering/flutter-datagrid-hide-sort-options.png" width="400"/>
+<img alt="Flutter Data Grid hiding sort options in popup menu" src="images/filtering/flutter-datagrid-hide-sort-options.png" width="400"/>
 
 ### Hiding clear filter option
 
@@ -936,7 +936,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
@@ -976,7 +976,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid hiding clear filter options in popup menu" src="images/filtering/flutter-datagrid-hide-clear-filter-option.png" width="400"/>
+<img alt="Flutter Data Grid hiding clear filter options in popup menu" src="images/filtering/flutter-datagrid-hide-clear-filter-option.png" width="400"/>
 
 ### Hiding column name from "clear filter" option
 
@@ -990,7 +990,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
@@ -1030,7 +1030,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid hiding column name in popup menu" src="images/filtering/flutter-datagrid-hide-column-name.png" width="400"/>
+<img alt="Flutter Data Grid hiding column name in popup menu" src="images/filtering/flutter-datagrid-hide-column-name.png" width="400"/>
 
 ### Change the color of the filter Icon
 
@@ -1045,7 +1045,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
           filterIconColor: Colors.pink,
@@ -1088,7 +1088,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon color" src="images/filtering/flutter-datagrid-filter-icon-color.png" width="400"/>
+<img alt="Flutter Data Grid with custom filter icon color" src="images/filtering/flutter-datagrid-filter-icon-color.png" width="400"/>
 
 ### Change the padding of the filter icon
 
@@ -1102,7 +1102,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGrid(
         source: employeeDataSource,
         columnWidthMode: ColumnWidthMode.auto,
@@ -1157,7 +1157,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(filterIcon: Builder(
           builder: (context) {
@@ -1225,7 +1225,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>
+<img alt="Flutter Data Grid with custom filter icon" src="images/filtering/flutter-datagrid-custom-filter-icon.png" width="400"/>
 
 ## Change the position of the filter icon
 
@@ -1296,7 +1296,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
+<img alt="Flutter Data Grid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-position.png"/>
 
 ## Change the text style of the filter popup menu
 
@@ -1370,7 +1370,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
+<img alt="Flutter Data Grid with custom filter icon" src="images/filtering/flutter-datagrid-customized-filter-popup-menu-textStyle.png"/>
 
 ## Show the filter icon when hovering the header cell
 
@@ -1383,7 +1383,7 @@ To show a filter icon when the mouse hovers over a column header in a DataGrid, 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: employeeDataSource,
@@ -1430,7 +1430,7 @@ To show a filter icon when the mouse hovers over a column header in a DataGrid, 
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
+<img alt="Flutter Data Grid shows filter icon when hover the header cell" src="images/filtering/flutter-datagrid-show-filter-icon-on-hover.gif"/>
 
 ## Perform filtering to the user-defined type
 By default, the `FilterBehavior.strongDataType` applies to numeric, String, and DateTime types. Now, it also applies to the user-defined types also. It can be enabled by extending the user-defined type with the [Comparable](https://api.dart.dev/stable/3.3.1/dart-core/Comparable-class.html) class.
@@ -1442,7 +1442,7 @@ By default, the `FilterBehavior.strongDataType` applies to numeric, String, and 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: Column(
         children: [
@@ -1571,7 +1571,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Syncfusion Flutter DataGrid')),
+      appBar: AppBar(title: const Text('Syncfusion Flutter Data Grid')),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
           filterPopupCheckboxFillColor:
@@ -1636,7 +1636,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="flutter datagrid shows filter popup menu with customized colors" src="images/filtering/flutter-datagrid-customized-filter-popup-menu.png" width="689"/>
+<img alt="Flutter Data Grid shows filter popup menu with customized colors" src="images/filtering/flutter-datagrid-customized-filter-popup-menu.png" width="689"/>
 
 
 

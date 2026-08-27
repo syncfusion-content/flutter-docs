@@ -9,16 +9,16 @@ documentation: ug
 
 # Thumb and Thumb Overlay in Flutter Range Selector (SfRangeSelector)
 
-This section explains how to customize the thumb and thumb overlay in the range selector.
+This section explains how to customize the thumb and thumb overlay in the Flutter Range Selector.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html). All the examples in this section use `SfRangeSelectorTheme` to customize the thumb and thumb overlay.
 
-* **Thumb** - It is one of the elements of range selector which can be used to drag and change the selected values of the range selector.
+* **Thumb** - It is one of the elements of Flutter Range Selector which can be used to drag and change the selected values of the Flutter Range Selector.
 * **Thumb overlay** - It is rendered around the thumb while interacting with it.
 
 ## Thumb size
 
-You can change the size of the thumb in the range selector using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbRadius.html) property.
+You can change the size of the thumb in the Flutter Range Selector using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbRadius.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -102,7 +102,7 @@ class ThumbSizeSample extends StatelessWidget {
 
 ## Thumb color
 
-You can change the color of the thumb in the range selector using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbColor.html) property.
+You can change the color of the thumb in the Flutter Range Selector using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -365,7 +365,7 @@ class ThumbIconSample extends StatelessWidget {
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the range selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the Flutter Range Selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -449,7 +449,7 @@ class ThumbOverlaySizeSample extends StatelessWidget {
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the range selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayColor.html) property.
+You can change the color of the thumb overlay in the Flutter Range Selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -533,7 +533,7 @@ class ThumbOverlayColorSample extends StatelessWidget {
 
 ## Thumb overlap stroke color
 
-You can change the overlap stroke color of the thumb in the range selector using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
+You can change the overlap stroke color of the thumb in the Flutter Range Selector using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}

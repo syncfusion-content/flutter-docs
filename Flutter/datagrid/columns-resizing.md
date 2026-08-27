@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns Resizing in Flutter DataGrid | Syncfusion®
-description: Learn how to resize columns in Syncfusion® Flutter DataGrid including user-driven resizing, customization options, and responsive layout management.
+title: Columns Resizing in Flutter Data Grid | Syncfusion®
+description: Learn how to resize columns in Syncfusion® Flutter Data Grid including user-driven resizing, customization options, and responsive layout management.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Columns Resizing in Flutter DataGrid
+# Columns Resizing in Flutter Data Grid
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to resize the columns by dragging the right end of the column header. The column resizing can be enabled by setting the [SfDataGrid.allowColumnsResizing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowColumnsResizing.html) property to `true`.
 
@@ -35,7 +35,7 @@ The following example demonstrates the basic column resizing setup. The `columnW
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -96,7 +96,7 @@ The following example demonstrates the basic column resizing setup. The `columnW
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows column resizing with onResize mode](images/columns-resizing/flutter-datagrid-resizing-onResize.gif)
+![Flutter Data Grid shows column resizing with onResize mode](images/columns-resizing/flutter-datagrid-resizing-onResize.gif)
 
 ## Column resizing modes
 
@@ -121,7 +121,7 @@ The following example demonstrates how to resize a column by setting the [SfData
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -183,7 +183,7 @@ The following example demonstrates how to resize a column by setting the [SfData
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows column resizing with onResizeEnd mode](images/columns-resizing/flutter-datagrid-resizing-onResizeEnd.gif)
+![Flutter Data Grid shows column resizing with onResizeEnd mode](images/columns-resizing/flutter-datagrid-resizing-onResizeEnd.gif)
 
 ## Callbacks
 
@@ -207,7 +207,7 @@ The following callbacks are called when you perform column resizing:
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -292,7 +292,7 @@ To disable resizing for a particular column, return `false` in the `onColumnResi
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -379,7 +379,7 @@ When checkbox selection is enabled (`showCheckboxColumn: true`), the checkbox co
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -466,7 +466,7 @@ To prevent a column from being hidden while resizing, use the `GridColumn.minimu
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGrid(
         source: _employeeDataSource,
@@ -561,7 +561,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
+        title: const Text('Syncfusion Flutter Data Grid'),
       ),
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
@@ -628,4 +628,4 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows column resizing with onResize mode](images/columns-resizing/flutter-datagrid-resizing-indicator-customization.png)
+![Flutter Data Grid shows column resizing with onResize mode](images/columns-resizing/flutter-datagrid-resizing-indicator-customization.png)

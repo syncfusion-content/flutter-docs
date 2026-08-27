@@ -15,7 +15,7 @@ Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfRangeSlider with Directionality widget
 
-The range slider can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+The Flutter Range Slider can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -124,6 +124,6 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-N> This RTL support is not applicable for the vertical orientation of the range slider.
+N> This RTL support is not applicable for the vertical orientation of the Flutter Range Slider.
 
 ![RTL support](images/right-to-left/right-to-left-support.png)
