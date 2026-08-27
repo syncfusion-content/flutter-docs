@@ -15,7 +15,7 @@ The funnel chart supports right-to-left rendering. However, series and other cha
 
 Right to left rendering can be switched in the following ways:
 
-### Wrapping the SfFunnelChart with the Directionality widget
+### Wrapping the Flutter Funnel Chart with the Directionality widget
 
 To change the rendering direction from right to left, you can wrap the [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
 

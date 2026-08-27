@@ -174,4 +174,3 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endtabs %}
 
 ![Customize Flutter Linear Gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
-
