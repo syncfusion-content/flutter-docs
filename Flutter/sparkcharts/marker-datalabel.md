@@ -89,7 +89,7 @@ Data labels display data point values to improve readability.
 
 ### Enable data labels
 
-To enable data labels for spark charts, use the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property in spark chart widgets.
+To enable data labels for spark charts, use the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property in Flutter Spark Chart widgets.
 
 The following values are available in spark charts to render data labels:
 
