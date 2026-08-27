@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# About Syncfusion® Flutter Circular Chart
+# About Syncfusion® Flutter Circular Chart widget
 
 Syncfusion<sup>&reg;</sup> Flutter Circular Charts widget is written natively in Dart for creating beautiful and high-performance circular charts, which are used to build high-quality Flutter applications.
 
