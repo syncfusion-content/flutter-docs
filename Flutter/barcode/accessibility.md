@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Flutter Barcodes | Syncfusion®
+title: Accessibility in Flutter Barcode Generator | Syncfusion®
 
 description: Learn about accessibility support in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including screen readers, keyboard navigation, and more.
 platform: flutter
@@ -8,7 +8,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Accessibility in Flutter Barcodes (SfBarcodeGenerator)
+# Accessibility in Flutter Barcode Generator (SfBarcodeGenerator)
 
 ## Sufficient contrast
 
@@ -20,9 +20,9 @@ You can customize colors for the following elements:
 
 ## Large fonts
 
-The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) automatically adjusts font size based on device settings and scales according to the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all text elements in the barcode generator.
-* [Input value of barcode](https://help.syncfusion.com/flutter/barcode/barcode-customization#text-customization)
+The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) automatically adjusts font size based on device settings and scales according to the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all text elements in Flutter Barcode Generator.
+* [Input value of Barcode Generator](https://help.syncfusion.com/flutter/barcode/barcode-customization#text-customization)
 
 ## Screen reader support
 
-The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) supports Flutter's built-in [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) framework, which provides voice-over and TalkBack screen reader support. You can wrap the barcode generator in a [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget and provide a descriptive label using the label property so that screen readers can announce the barcode's input value. Alternatively, the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget can be placed on the parent container holding the [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html). This improves accessibility for visually impaired users, especially since barcodes are inherently visual elements that cannot be interpreted by screen readers without a meaningful label.
+The [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html) supports Flutter's built-in [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) framework, which provides voice-over and TalkBack screen reader support. You can wrap the Flutter Barcode Generator in a [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget and provide a descriptive label using the label property so that screen readers can announce the barcode's input value. Alternatively, the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget can be placed on the parent container holding the [`SfBarcodeGenerator`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator-class.html). This improves accessibility for visually impaired users, especially since barcodes are inherently visual elements that cannot be interpreted by screen readers without a meaningful label.

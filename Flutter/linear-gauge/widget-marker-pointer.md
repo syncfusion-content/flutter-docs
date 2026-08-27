@@ -42,7 +42,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Initialize linear gauge for widget pointer](images/widget-pointer/default_widget_pointer.png)
+![Initialize Flutter Linear Gauge for widget pointer](images/widget-pointer/default_widget_pointer.png)
 
 ## Change marker alignment
 
@@ -166,7 +166,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/widget-pointer/widget_pointer_offset.png)
+![Customize Flutter Linear Gauge bar pointer offset](images/widget-pointer/widget_pointer_offset.png)
 
 ## Drag behavior
 

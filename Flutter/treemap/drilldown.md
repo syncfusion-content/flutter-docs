@@ -219,7 +219,7 @@ class CarSale {
 
 The breadcrumb is used to display information about the drilled item and provides an option to navigate back to the previous level. You can customize the breadcrumb items using the following properties:
 
-* **Position** - Positions the breadcrumbs either at the top or bottom of the treemap. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapBreadcrumbs/position.html) is [`TreemapBreadcrumbPosition.top`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapBreadcrumbPosition.html#top).
+* **Position** - Positions the breadcrumbs either at the top or bottom of the Flutter Treemap. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapBreadcrumbs/position.html) is [`TreemapBreadcrumbPosition.top`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapBreadcrumbPosition.html#top).
 * **Divider** - Used to add a separator between two breadcrumbs.
 
 {% tabs %}

@@ -9,11 +9,11 @@ documentation: ug
 
 # Tile Selection in Flutter Treemap (SfTreemap)
 
-You can select a tile to highlight that area on the treemap. You can use the callback to perform any action during tile selection.
+You can select a tile to highlight that area on the Flutter Treemap. You can use the callback to perform any action during tile selection.
 
 ## Enable tile selection
 
-You can enable tile selection on a treemap using the [`SfTreemap.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selection for hierarchical level.
+You can enable tile selection on a Flutter Treemap using the [`SfTreemap.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selection for hierarchical level.
 
 The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) callback will be called with the details of the selected tile when the user is selecting a tile by tapping and you will be able to do any specific functionalities like showing pop-up or navigate to a different page.
 

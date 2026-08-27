@@ -18,7 +18,7 @@ You can change the size and shape of the track using the [`trackShape`](https://
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the track shape.
 
-N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector track.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the track of the Flutter Range Selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -136,7 +136,7 @@ You can change the size and shape of the thumb using the [`thumbShape`](https://
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the thumb shape.
 
-N> You must use the `currentValues` parameter of the paint override method for customizing the range selector thumbs.
+N> You must use the `currentValues` parameter of the paint override method for customizing the thumbs of the Flutter Range Selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -250,7 +250,7 @@ You can change the size and shape of the divider using the [`dividerShape`](http
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the divider shape.
 
-N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector divider.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the divider of the Flutter Range Selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -357,7 +357,7 @@ You can change the size and shape of the major and minor ticks using the [`tickS
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the ticks shape.
 
-N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the range selector ticks.
+N> You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of the paint override method for customizing the ticks of the Range Selector.
 
 {% tabs %}
 {% highlight Dart %}

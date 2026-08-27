@@ -9,9 +9,9 @@ documentation: ug
 
 # Thumb and Thumb Overlay in Flutter Slider (SfSlider)
 
-This section explains how to customize the thumb and thumb overlay in the slider.
+This section explains how to customize the thumb and thumb overlay in the Flutter Slider.
 
-* Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the slider.
+* Thumb - It is one of the elements which can be used to drag and change the selected value of the Flutter Slider.
 * Thumb overlay - It is rendered around the thumb while interacting with it.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html) in all the examples shown below.
@@ -124,7 +124,7 @@ class _VerticalThumbSizePageState extends State<VerticalThumbSizePage> {
 
 ## Thumb color
 
-You can change the color of the thumb in the slider using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbColor.html) property.
+You can change the color of the thumb in the Flutter Slider using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/thumbColor.html) property.
 
 ### Horizontal
 
@@ -458,7 +458,7 @@ class _VerticalThumbIconPageState extends State<VerticalThumbIconPage> {
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the Flutter Slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayRadius.html) property.
 
 ### Horizontal
 
@@ -565,7 +565,7 @@ class _VerticalOverlaySizePageState extends State<VerticalOverlaySizePage> {
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the slider using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayColor.html) property.
+You can change the color of the thumb overlay in the Flutter Slider using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/overlayColor.html) property.
 
 ### Horizontal
 

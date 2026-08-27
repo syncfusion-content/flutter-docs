@@ -1,24 +1,24 @@
 ---
 layout: post
-title: 	Getting Started with Flutter Barcodes | Syncfusion® 
+title: Getting Started with Flutter Barcode Generator | Syncfusion®
 description: Learn how to get started with the Syncfusion® Flutter Barcodes (SfBarcodeGenerator). Explore setup, barcode generation, and customization options.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Getting Started with Flutter Barcodes (SfBarcodeGenerator)
+# Getting Started with Flutter Barcode Generator (SfBarcodeGenerator)
 
-This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> barcode generator widget. 
+This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion® Flutter Barcode Generator widget.
 
 
-## Add Flutter Barcode to an application
+## Add Flutter Barcode Generator to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter Barcode dependency to your pubspec.yaml file.
+Add the Syncfusion<sup>&reg;</sup> Flutter Barcodes dependency to your pubspec.yaml file.
 
 {% tabs %}
 
@@ -99,11 +99,11 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
 
 N> The default symbology of SfBarcodeGenerator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html).
 
-![Initialize barcode generator](images/getting-started/getting_started1.jpg)
+![Initialize Barcode Generator](images/getting-started/getting_started1.jpg)
 
 ## Initialize QR Code symbology
 
-You can set the required symbology type to the barcode generator based on input value by initializing the [`symbology`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology-class.html) property. In the following code snippet, the QR code is set as the barcode symbology.
+You can set the required symbology type to the Flutter Barcode Generator based on input value by initializing the [`symbology`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology-class.html) property. In the following code snippet, the QR code is set as the barcode symbology.
 
 {% tabs %}
 
@@ -144,7 +144,7 @@ You can set the required symbology type to the barcode generator based on input 
 
 ## Display input value
 
-The provided input value can be displayed below the barcode by enabling the [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property of barcode as shown in the following code snippet.
+The provided input value can be displayed below the barcode by enabling the [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property of Barcode Generator as shown in the following code snippet.
 
 {% tabs %}
 

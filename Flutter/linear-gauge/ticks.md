@@ -11,7 +11,7 @@ documentation: ug
 
 The default style of axis ticks is as follows.
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
+![Initialize Flutter Linear Gauge for axis](images/getting-started/default_linear_gauge.png)
 
 ## Customize tick style
 
@@ -47,7 +47,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the linear gauge axis tick style](images/axis-ticks/axis-tick-style.png)
+![Customize the Flutter Linear Gauge axis tick style](images/axis-ticks/axis-tick-style.png)
 
 ## Customize minor tick interval
 
@@ -77,7 +77,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
+![Customize Flutter Linear Gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
 
 ## Change tick visibility
 
@@ -109,7 +109,7 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
+![Customize Linear Gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 
 ## Customize tick position
 
@@ -173,5 +173,5 @@ class LinearGaugeDemo extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Customize linear gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
+![Customize Flutter Linear Gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
 

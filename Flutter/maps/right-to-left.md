@@ -15,7 +15,7 @@ Right to left rendering can be achieved in the following ways:
 
 ### Wrapping the SfMaps with Directionality widget
 
-The maps can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+The Flutter Maps can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,7 +52,7 @@ class MapsExample extends StatelessWidget {
 
 ### Changing the locale to RTL languages
 
-The maps elements will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, or Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+The elements of the Flutter Maps will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, or Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight Dart %}

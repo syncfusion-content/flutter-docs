@@ -15,7 +15,7 @@ This section explains the customization options available in [`ChatComposer`](ht
 
 The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the `minimum` and `maximum` number of lines, `decoration`, `margin`, `textStyle`, and theme-level `editorTextStyle` (see [Chat theme - Editor text style](chat-theme.md#editor-text-style)).
 
-When the composer is null, no default text field is added to the chat widget.
+When the composer is null, no default text field is added to the Flutter Chat widget.
 
 ### Minimum and maximum lines
 
@@ -562,4 +562,4 @@ class _ComposerBuilderExampleState extends State<ComposerBuilderExample> {
 
 ![Chat composer support](images/composer/composer-builder.png)
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the Flutter Chat widget with built-in support for creating stunning visual effects.

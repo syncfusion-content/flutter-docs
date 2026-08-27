@@ -9,7 +9,7 @@ documentation: ug
 
 # Range Pointer in Flutter Radial Gauge (SfRadialGauge)
 
-A range pointer is an accenting line or shaded background range that can be placed on a gauge to mark the current value. The default width is 10 logical pixels, with a default color of RGB(0, 168, 231).
+A range pointer is an accenting line or shaded background range that can be placed on a Flutter Radial Gauge to mark the current value. The default width is 10 logical pixels, with a default color of RGB(0, 168, 231).
 
 {% tabs %}
 {% highlight dart %}

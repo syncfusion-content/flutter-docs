@@ -9,11 +9,11 @@ documentation: ug
 
 # Enabled and Disabled States in Flutter Range Slider (SfRangeSlider)
 
-This section explains the enabled and disabled states of the Flutter range slider.
+This section explains the enabled and disabled states of the Flutter Range Slider.
 
 ## Enabled state
 
-The range slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
+The Flutter Range Slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
 
 ### Horizontal
 
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled range slider](images/enabled-and-disabled/disabled-state.png)
+![Disabled Range Slider](images/enabled-and-disabled/disabled-state.png)
 
 ### Vertical
 

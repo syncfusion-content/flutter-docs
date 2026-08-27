@@ -9,7 +9,7 @@ documentation: ug
 
 # Enabled and Disabled States in Flutter Slider (SfSlider)
 
-This section explains the enabled and disabled states in the Flutter slider.
+This section explains the enabled and disabled states in the Flutter Flutter Slider.
 
 ## Enabled state
 
@@ -102,7 +102,7 @@ class _VerticalEnabledStatePageState extends State<VerticalEnabledStatePage> {
 
 ## Disabled state
 
-The slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) is `null`.
+The Flutter Slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) is `null`.
 
 ### Horizontal
 
@@ -178,7 +178,7 @@ class _VerticalDisabledStatePageState extends State<VerticalDisabledStatePage> {
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled slider](images/enabled-and-disabled/vertical-disabled-state.png)
+![Disabled Flutter Slider](images/enabled-and-disabled/vertical-disabled-state.png)
 
 
 ## Disabled color

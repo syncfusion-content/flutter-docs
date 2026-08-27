@@ -13,7 +13,7 @@ Easily reschedule an appointment by dragging it from one time slot or month cell
 
 ## Allow Drag and Drop
 
-To perform drag-and-drop operations within the calendar, enable the [allowDragAndDrop](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowDragAndDrop.html) property of SfCalendar.
+To perform drag-and-drop operations within the Flutter Event Calendar, enable the [allowDragAndDrop](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowDragAndDrop.html) property of SfCalendar.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -210,7 +210,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
 
 ## Disabling navigation when dragging appointment
 
-You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings-class.html). Default value of [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property is true.
+You can restrict the navigation to the next/previous view when the dragging appointment reaches the start/end point of the current view in Flutter Event Calendar by using the [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings-class.html). Default value of [allowNavigation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowNavigation.html) property is true.
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
@@ -247,7 +247,7 @@ class CalendarApp extends StatelessWidget {
 
 ## Disabling scroll when dragging appointment
 
-You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
+You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of Flutter Event Calendar by using the [allowScroll](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/allowScroll.html) property of [DragAndDropSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DragAndDropSettings/DragAndDropSettings.html).
 
 {% tabs %}
 {% highlight dart hl_lines="20" %}
