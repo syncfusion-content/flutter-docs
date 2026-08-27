@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Flutter Funnel Chart Overview
+# About Syncfusion® Flutter Funnel Chart widget
 
 The Syncfusion<sup>&reg;</sup> Flutter Funnel Chart widget is written natively in Dart for creating beautiful, high-performance funnel charts, which are used to craft high-quality applications using Flutter.
 
