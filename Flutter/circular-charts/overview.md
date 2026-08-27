@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> Flutter Circular Charts widget is written natively in
 
 ![Overview Flutter chart](images/overview/overview.png)
 
-To get started quickly with our SfCircularChart widget, you can watch this video.
+To get started quickly with our Flutter circular chart widget, you can watch this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/FwUSJtv-3NY'></iframe>

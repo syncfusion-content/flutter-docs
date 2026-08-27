@@ -997,7 +997,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 #### See Also
 
-* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
+* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-line-at-a-specific-value-in-flutter-cartesianchart).
 
 ### Plot band padding
 
@@ -1945,7 +1945,7 @@ The different types of multi-level label's border are mentioned below,
 
 * [Rendering a particular part of a data in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 
-* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget-sfcartesianchart-).
 
 * [Changing the visible range of chart using range selector in the Cartesian chart](https://support.syncfusion.com/kb/article/10571/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
 
