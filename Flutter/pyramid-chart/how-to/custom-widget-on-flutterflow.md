@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the SfPyramidChart widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
+[FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate the `SfPyramidChart` widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
 ### Create a new project
 
