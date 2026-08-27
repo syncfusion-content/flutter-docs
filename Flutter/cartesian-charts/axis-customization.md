@@ -997,7 +997,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 #### See Also
 
-* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-a-line-at-a-specific-axis-value-in-cartesian-charts-sfcartesianchart).
+* [Render a line at a specific axis value in Cartesian charts](https://support.syncfusion.com/kb/article/11458/how-to-render-line-at-a-specific-value-in-flutter-cartesianchart).
 
 ### Plot band padding
 
@@ -1249,7 +1249,7 @@ To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/doc
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
-#### See Also
+### See Also
 
 * [Synchronize on-demand loading in the Cartesian charts](https://support.syncfusion.com/kb/article/11533/how-to-synchronize-on-demand-loading-in-the-cartesian-charts-sfcartesianchart).
 
@@ -1299,7 +1299,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 
 ## Auto scrolling
 
-Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingDelta.html) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property's value, whenever a new point is added dynamically.
+Auto scrolling feature available in Flutter Cartesian Chart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingDelta.html) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property's value, whenever a new point is added dynamically.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -1945,7 +1945,7 @@ The different types of multi-level label's border are mentioned below,
 
 * [Rendering a particular part of a data in the Cartesian chart](https://support.syncfusion.com/kb/article/9809/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 
-* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://support.syncfusion.com/kb/article/10796/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget-sfcartesianchart-).
 
 * [Changing the visible range of chart using range selector in the Cartesian chart](https://support.syncfusion.com/kb/article/10571/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
 

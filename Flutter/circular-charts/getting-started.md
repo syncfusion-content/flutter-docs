@@ -61,7 +61,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, since we are rendering a pie chart, initialize the SfCircularChart widget as a child of a Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. Flutter Circular Chart can be used to render pie, doughnut and radial bar charts. Here, since we are rendering a pie chart, initialize the `SfCircularChart` widget as a child of a Container widget.
 
 {% tabs %}
 {% highlight dart hl_lines="7" %} 
