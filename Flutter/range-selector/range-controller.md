@@ -9,19 +9,19 @@ documentation: ug
 
 # Controller in Flutter Range Selector (SfRangeSelector)
 
-You can use [`RangeController`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/RangeController-class.html) for setting and getting current selected values of range selector.
+You can use [`RangeController`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/RangeController-class.html) for setting and getting current selected values of Flutter Range Selector.
 
-The `start` represents the currently selected start value of the range selector. The left thumb of the range selector is drawn corresponding to this value.
+The `start` represents the currently selected start value of the Flutter Range Selector. The left thumb of the Range Selector is drawn corresponding to this value.
 
-The `end` represents the currently selected end value of the range selector. The right thumb of the range selector is drawn corresponding to this value.
+The `end` represents the currently selected end value of the Flutter Range Selector. The right thumb of the Range Selector is drawn corresponding to this value.
 
 You can get previous values using `previousStart` and `previousEnd` properties.
 
 The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime` based on whether it is date type [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-date-range) or numeric [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-numeric-range).
 
-I> You do not need to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
+I> You do not need to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the Flutter Range Selector.
 
-N> You must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
+N> You must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the Flutter Range Selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -114,11 +114,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector controller](images/range-controller/range-controller.png)
+![Range Selector controller](images/range-controller/range-controller.png)
 
 ## Selection with SfChart
 
-The range selector provides built-in support for selecting the chart segments based on the selected range in the range selector. To achieve this segment selection, you must set the `SelectionBehavior.selectionController` property in the `SfCartesianChart.series` property. The [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) links the chart selection to the range selector's controller.
+The Flutter Range Selector provides built-in support for selecting the chart segments based on the selected range in the Range Selector. To achieve this segment selection, you must set the `SelectionBehavior.selectionController` property in the `SfCartesianChart.series` property. The [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) links the chart selection to the controller of the Range Controller.
 
 {% tabs %}
 {% highlight Dart %}
@@ -240,7 +240,7 @@ class Data {
 
 ## Zooming with SfChart
 
-The range selector provides built-in support for updating the visible range of the chart based on the selected range in the range selector. To update the visible range, you must set the `primaryXAxis.rangeController` property in the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
+The Flutter Range Selector provides built-in support for updating the visible range of the chart based on the selected range in the Range Selector. To update the visible range, you must set the `primaryXAxis.rangeController` property in the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
 
 {% tabs %}
 {% highlight Dart %}

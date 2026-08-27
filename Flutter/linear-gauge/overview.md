@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion<sup>&reg;</sup> Flutter Linear Gauge is a powerful data visualization widget designed to display data on a linear scale. It's an ideal component for crafting high-quality mobile application user interfaces that require visual representation of data along a linear axis.
 
-![Overview flutter linear gauge](images/basic_elements.png)
+![Overview Flutter Linear Gauge](images/basic_elements.png)
 
 ## Key Features
 

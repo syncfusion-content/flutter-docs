@@ -23,7 +23,7 @@ The following properties are used to customize the appearance of title,
 
 ## Text alignment
 
-You can align the title text content horizontally to the near (left), center, or far (right) position relative to the gauge using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle/alignment.html) property of [`title`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle-class.html). The default alignment is `GaugeAlignment.center`.
+You can align the title text content horizontally to the near (left), center, or far (right) position relative to the Flutter Radial Gauge using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle/alignment.html) property of [`title`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle-class.html). The default alignment is `GaugeAlignment.center`.
 
 {% tabs %}
 {% highlight dart %}
@@ -84,4 +84,4 @@ class MyHomePage extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Gauge title](images/title/gauge_title.jpg)
+![Flutter Radial Gauge title](images/title/gauge_title.jpg)

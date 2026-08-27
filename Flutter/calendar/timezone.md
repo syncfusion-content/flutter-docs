@@ -9,14 +9,14 @@ documentation: ug
 
 # Flutter Event Calendar Time Zone (SfCalendar)
 
-[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
+[Flutter Event Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
 
 * Create appointments in different time zones.
 * Display appointments based on the client’s time zone.
-* Display appointments based on calendar time zone.
+* Display appointments based on time zone of the Flutter Event Calendar.
 * Display appointments at the same time everywhere regardless of client’s time zone.
 
-We have added the following Time Zones for the respective countries to cover all time zone regions. You can use any of the time zones from the following list for calendar time zone.
+We have added the following Time Zones for the respective countries to cover all time zone regions. You can use any of the time zones from the following list for Flutter Event Calendar time zone.
 
 <table>
 <tr>
@@ -1183,17 +1183,17 @@ appointments.add(Appointment(
 >**NOTE**
 * If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
 * If you create an all-day appointment, its start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
-* Calendar supports daylight saving time.
+* Flutter Event Calendar supports daylight saving time.
 * The time zone support is applicable for custom appointments too, so you need to map the corresponding property.
 * You can use TimeZone for custom appointments by mapping the `startTimeZoneMapper` and `endTimeZoneMapper` custom properties of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 ## Display appointment based on client’s time zone
 
-You can display the appointments based on the client’s local time zone in calendar. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 5.30 A.M. in Chennai. When you each view your calendar, you need to see the appointment displayed relative to your local time zones 5.30 A.M., 10 A.M., and 3 P.M., respectively. It can be achieved by setting calendar time zone to default (it will consider your device’s local time zone as calendar time zone) and appointment’s time zone to Eastern Standard Time (North Carolina) [as you are in North Carolina and its time zone is Eastern Standard Time].
+You can display the appointments based on the client’s local time zone in the Flutter Event Calendar. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 5.30 A.M. in Chennai. When you each view your calendar, you need to see the appointment displayed relative to your local time zones 5.30 A.M., 10 A.M., and 3 P.M., respectively. It can be achieved by setting calendar time zone to default (it will consider your device’s local time zone as calendar time zone) and appointment’s time zone to Eastern Standard Time (North Carolina) [as you are in North Carolina and its time zone is Eastern Standard Time].
 
-## Display appointments based on calendar time zone
+## Display appointments based on Flutter Event Calendar time zone
 
-You can set specific time zone to calendar using the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeZone.html) property of calendar. On this scenario, the appointments will be displayed in UTC time when the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment` are set to null. The appointments will be displayed in UTC time based on the given calendar time zone.
+You can set specific time zone to Flutter Event Calendar using the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeZone.html) property. On this scenario, the appointments will be displayed in UTC time when the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment` are set to null. The appointments will be displayed in UTC time based on the given calendar time zone.
 
 {% tabs %}
 {% highlight dart hl_lines="8" %}
@@ -1217,4 +1217,4 @@ Widget build(BuildContext context) {
 
 ## Display appointments at same time everywhere regardless of client’s time zone
 
-You can display appointments at the same time everywhere without considering the time zone when you set the `timeZone` property of calendar, the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment` to null. The appointments will be displayed based on the given `startTime` and `endTime` of appointment everywhere without considering the time zone.
+You can display appointments at the same time everywhere without considering the time zone when you set the `timeZone` property of the Flutter Event Calendar, the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment` to null. The appointments will be displayed based on the given `startTime` and `endTime` of appointment everywhere without considering the time zone.

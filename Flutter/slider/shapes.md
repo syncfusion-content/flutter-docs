@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom Shapes in Flutter Slider (SfSlider)
 
-This section explains how to customize slider shape elements—track, thumb, divider, and ticks.
+This section explains how to customize shape elements of the Flutter Slider—track, thumb, divider, and ticks.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html) in all the examples shown below. Define each custom shape class outside your widget class so the slider can reference it.
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html) in all the examples shown below. Define each custom shape class outside your widget class so the Flutter Slider can reference it.
 
 ## Track shape
 

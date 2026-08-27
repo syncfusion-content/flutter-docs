@@ -8,19 +8,19 @@ documentation: ug
 ---
 
 # Getting Started with Flutter Range Selector (SfRangeSelector)
-This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels, and tooltips, covering only the basic features needed to get started with the Syncfusion<sup>&reg;</sup> range selector.
+This section explains the steps required to add the Flutter Range Selector widget and its elements such as numeric and date values, ticks, labels, and tooltips, covering only the basic features needed to get started with the Syncfusion® Flutter Range Selector.
 
 To get started quickly with our Flutter Range Selector widget, you can check out this video.
 
 <style>#FlutterRangeSelectorVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/WX1IvK5R0q0'></iframe>
 
-## Add Flutter range selector to an application
+## Add Flutter Range Selector to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter range selector dependency to your pubspec.yaml file.
+Add the Syncfusion® Flutter Range Selector dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %}
@@ -58,11 +58,11 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize range selector
+## Initialize Range Selector
 
-After importing the package, initialize the range selector widget as a child of any widget. Here, the range selector widget is added as a child of the Container widget. The default values of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties of the SfRangeSelector are 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) widget is added as a child.
+After importing the package, initialize the Flutter Range Selector widget as a child of any widget. Here, the Range Selector widget is added as a child of the Container widget. The default values of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties of the SfRangeSelector are 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of the Flutter Range Selector. Here, [Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) widget is added as a child.
 
-I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update Range Selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
 
 {% tabs %}
 {% highlight Dart %}
@@ -124,7 +124,7 @@ class GettingStartedInitializeSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range selector](images/getting-started/default-range-selector.png)
+![Default Range Selector](images/getting-started/default-range-selector.png)
 
 ## Handle range change
 
@@ -199,7 +199,7 @@ class _HandleRangeChangeSampleState extends State<HandleRangeChangeSample> {
 
 ## Set numeric range
 
-You can show numeric values in the range selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+You can show numeric values in the Flutter Range Selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -268,11 +268,11 @@ class NumericRangeSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric range selector](images/getting-started/numeric-range-selector.png)
+![Numeric Range Selector](images/getting-started/numeric-range-selector.png)
 
 ## Set date range
 
-You can show date values in the range selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+You can show date values in the Flutter Range Selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -348,11 +348,11 @@ class DateRangeSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Date time range selector](images/getting-started/date-time-range-selector.png)
+![Date time Range Selector](images/getting-started/date-time-range-selector.png)
 
 ## Enable ticks
 
-You can enable ticks in the range selector using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property.
+You can enable ticks in the Range Selector using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -422,13 +422,13 @@ class EnableTicksSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Show ticks in range selector](images/getting-started/range-selector_with_ticks.png)
+![Show ticks in Range Selector](images/getting-started/range-selector_with_ticks.png)
 
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) properties.
 
-N> The format type (numeric or date) of the range selector is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+N> The format type (numeric or date) of the Flutter Range Selector is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range selector using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
@@ -507,4 +507,4 @@ class PrefixSuffixLabelsSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Format labels in range selector](images/getting-started/range-selector_with_formatted_label.png)
+![Format labels in Range Selector](images/getting-started/range-selector_with_formatted_label.png)

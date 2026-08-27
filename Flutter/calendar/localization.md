@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar Localization (SfCalendar)
 
-By default, the calendar widget supports US English localizations. You can change to other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
+By default, the Flutter Event Calendar widget supports US English localizations. You can change to other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
 To use `flutter_localizations`, add the package as dependency to your `pubspec.yaml` file.
 
@@ -68,8 +68,8 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-## Localize the custom text in Calendar
-Calendar custom text can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
+## Localize the custom text in Flutter Event Calendar
+Flutter Event Calendar custom text can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
 
 To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 
@@ -94,7 +94,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 {% endhighlight %}
 {% endtabs %}
 
-Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) used in the calendar and specify the `supportedLocales` as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) used in the Flutter Event Calendar and specify the `supportedLocales` as well.
 
 {% tabs %}
 {% highlight dart hl_lines="16" %}
@@ -141,7 +141,7 @@ class CalendarApp extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Localization Calendar](images/localization/localization.jpg)
+![Localization Flutter Event Calendar](images/localization/localization.jpg)
 
 ## See also
 

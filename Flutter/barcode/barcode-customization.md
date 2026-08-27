@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Customization in Flutter Barcodes | Syncfusion®
+title: Customization in Flutter Barcode Generator | Syncfusion®
 description: Learn about customization options in Syncfusion® Flutter Barcodes (SfBarcodeGenerator), including appearance, sizing, colors, and styling.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Customization in Flutter Barcodes (SfBarcodeGenerator)
+# Customization in Flutter Barcode Generator (SfBarcodeGenerator)
 
-To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcodes](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
+To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 
 ## Text customization 
 
 **Displaying input value**
 
-To display the input value of the barcode, enable its [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property. By default, it is set to false.
+To display the input value of the Barcode Generator, enable its [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property. By default, it is set to false.
 
 {% tabs %}
 
@@ -52,7 +52,7 @@ To display the input value of the barcode, enable its [`showValue`](https://pub.
 
 **Text style customization**
 
-The text style can be customized using the [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textStyle.html) property of the barcode generator.
+The text style can be customized using the [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textStyle.html) property of the Flutter Barcode Generator.
 
 {% tabs %}
 
@@ -99,7 +99,7 @@ The text style can be customized using the [`textStyle`](https://pub.dev/documen
 
 **Text spacing**
 
-Control the space between the text and the barcode with the [`textSpacing`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textSpacing.html) property of barcode generator. By default, it is set to 2.
+Control the space between the text and the barcode with the [`textSpacing`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textSpacing.html) property of the Flutter Barcode Generator. By default, it is set to 2.
 
 {% tabs %}
 
@@ -140,7 +140,7 @@ Control the space between the text and the barcode with the [`textSpacing`](http
 
 **Horizontal text alignment**
 
-The horizontal text alignment can be managed with the [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property of barcode generator. Position the displayed text at the [`start`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#start), [`center`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#center) or [`end`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#end) of the control. The default value of [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property is center.
+The horizontal text alignment can be managed with the [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property of the Flutter Barcode Generator. Position the displayed text at the [`start`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#start), [`center`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#center) or [`end`](https://api.flutter.dev/flutter/dart-ui/TextAlign.html#end) of the control. The default value of [`textAlign`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/textAlign.html) property is center.
 
 {% tabs %}
 
@@ -351,7 +351,7 @@ The following code snippet shows the two-dimensional barcode without the [`modul
 
 **Bar color customization**
 
-Customize the barcode's bar color using the [`barColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/barColor.html) property as shown in the following code snippet.
+Customize the bar color of the Barcode Generator using the [`barColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/barColor.html) property as shown in the following code snippet.
 
 {% tabs %}
 
@@ -391,7 +391,7 @@ Customize the barcode's bar color using the [`barColor`](https://pub.dev/documen
 
 **Background color customization**
 
-You can customize the barcode's background color with the [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) property of barcode generator as shown in the following code snippet.
+You can customize the background color  of the Barcode Generator using the [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/backgroundColor.html) property, as shown in the following code snippet.
 
 {% tabs %}
 

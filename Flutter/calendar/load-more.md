@@ -9,11 +9,11 @@ documentation: ug
 
 # Load more in Flutter Event Calendar (SfCalendar)
 
-The Calendar provides the support to display an interactive view when the calendar view is changed, or the schedule view reaches its start or end offset. You can use the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the calendar.
+The Flutter Event Calendar provides the support to display an interactive view when the calendar view is changed, or the schedule view reaches its start or end offset. You can use the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the Flutter Event Calendar.
 
 ## Building load more widget
 
-Build your own custom widget by using the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) that will be displayed as a loading indicator in the calendar when the calendar view changes, and in the calendar schedule view, the loading indicator will be displayed when it reaches the start or end position to load more appointments.
+Build your own custom widget by using the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) property. The widget will be displayed as a loading indicator when the view of the Flutter Event Calendar changes. In Schedule view, the loading indicator will be displayed when it reaches the start or end position to load more appointments.
 
 {% tabs %}
 {% highlight dart hl_lines="20 21 22 23 24 25 26 27 28 29 30 31 32 33" %}
@@ -95,7 +95,7 @@ You can get the complete load more sample from this [link](https://github.com/Sy
 
 ## Load appointments
 
-Update the appointments on-demand, when the loading indicator is displaying in the calendar by using the [handleLoadMore](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/handleLoadMore.html) method in the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which allows adding the appointments to the data source, update the data source, and notify the listener to update the appointment on view.
+Update the appointments on-demand, when the loading indicator is displaying in the Flutter Event Calendar by using the [handleLoadMore](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/handleLoadMore.html) method in the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html), which allows adding the appointments to the data source, update the data source, and notify the listener to update the appointment on view.
 
 {% tabs %}
 {% highlight dart hl_lines="3 9 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34" %}

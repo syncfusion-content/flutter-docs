@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting Started with Flutter Treemap (SfTreemap)
 
-This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> treemap.
+This section explains the steps required to add the Flutter Treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only the basic features needed to get started with Syncfusion® Flutter Treemap.
 
 To get started quickly with our Flutter Treemap widget, you can refer to this video.
 
 <style>#FlutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterTreemapVideoTutorial' src='https://www.youtube.com/embed/HlWevbXU0Hs'></iframe>
 
-## Add Flutter treemap to an application
+## Add Flutter Treemap to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
@@ -60,9 +60,9 @@ import 'package:syncfusion_flutter_treemap/treemap.dart';
 
 ## Initialize treemap and populate data source
 
-After importing the package, initialize the treemap widget as a child of any widget.
+After importing the package, initialize the Flutter Treemap widget as a child of any widget.
 
-To populate the data source, set its count to the [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/dataCount.html) property of the treemap. The data will be grouped based on the values returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback. You can have more than one TreemapLevel in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback. Based on this value, every tile (rectangle) will have its size.
+To populate the data source, set its count to the [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/dataCount.html) property of the Flutter Treemap. The data will be grouped based on the values returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback. You can have more than one TreemapLevel in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback. Based on this value, every tile (rectangle) will have its size.
 
 {% tabs %}
 {% highlight dart %}
@@ -275,7 +275,7 @@ class SocialMediaUsers {
 
 ## Add tooltip
 
-You can enable tooltip for any tile in the treemap and return a fully customized widget using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) property. The following example extends the initial sample by adding a tooltip builder.
+You can enable tooltip for any tile in the Flutter Treemap and return a fully customized widget using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) property. The following example extends the initial sample by adding a tooltip builder.
 
 {% tabs %}
 {% highlight dart %}

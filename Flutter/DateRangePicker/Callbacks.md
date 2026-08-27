@@ -7,9 +7,9 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Callbacks in Flutter DateRangePicker (SfDateRangePicker)
+# Callbacks in Flutter Date Range Picker (SfDateRangePicker)
 
-Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewChangedCallback.html) and [SelectionChangedCallback](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionChangedCallback.html) to interact with the Flutter date range picker.
+Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewChangedCallback.html) and [SelectionChangedCallback](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionChangedCallback.html) to interact with the Flutter Date Range Picker.
 
 ## View changed callback
 
@@ -40,7 +40,7 @@ The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/
 
 ## Selection changed callback
 
-The [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback triggers when selecting the dates from the date picker.
+The [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback triggers when selecting the dates from the Flutter Date Range Picker.
 
 * `args.value` - returns the dates based on the selection mode.
 

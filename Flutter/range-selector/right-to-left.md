@@ -9,7 +9,7 @@ documentation: ug
 
 # Right-to-Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
-N> RTL is not applicable for the vertical orientation of the range selector.
+N> RTL is not applicable for the vertical orientation of the Flutter Range Selector.
 
 ## RTL rendering ways
 
@@ -17,7 +17,7 @@ Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfRangeSelector with Directionality widget
 
-The range selector can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+The Flutter Range Selector can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -64,7 +64,7 @@ class _RtlDirectionalitySampleState extends State<RtlDirectionalitySample> {
 
 ### Changing the locale to RTL languages
 
-The range selector will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+The Flutter Range Selector will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight Dart %}

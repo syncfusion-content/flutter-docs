@@ -20,13 +20,13 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 ## Initial values
 
-It represents the initial values in the range selector. The range selector's thumbs are drawn corresponding to this value.
+It represents the initial values in the Flutter Range Selector. The thumbs of the Range Selector are drawn corresponding to this value.
 
-N> For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
+N> For date values, the Flutter Range Selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
 
-**Numeric range selector**
+**Numeric Range Selector**
 
-You can show numeric values in the range selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+You can show numeric values in the Flutter Range Selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,11 +100,11 @@ class NumericRangeSelectorSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric range selector](images/basic-features/selector_numeric_label.png)
+![Numeric Range Selector](images/basic-features/selector_numeric_label.png)
 
-**Date range selector**
+**Date Range Selector**
 
-You can show date values in the range selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+You can show date values in the Flutter Range Selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -184,13 +184,13 @@ class DateRangeSelectorSample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Date range selector](images/basic-features/selector_date_label.png)
+![Date Range Selector](images/basic-features/selector_date_label.png)
 
 ## Handle onChangeStart, onChanged, and onChangeEnd callbacks
 
 **onChangeStart**
 
-The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeStart.html) callback is called when the user begins to interact with the range selector using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range selector thumb.
+The [`onChangeStart`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeStart.html) callback is called when the user begins to interact with the Flutter Range Selector using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the Range Selector thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -230,7 +230,7 @@ class _OnChangeStartSampleState extends State<OnChangeStartSample> {
 
 **onChangeEnd**
 
-The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeEnd.html) callback is called when the user stops interacting with the range selector using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range selector thumb.
+The [`onChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChangeEnd.html) callback is called when the user stops interacting with the Flutter Range Selector using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the Range Selector thumb.
 
 {% tabs %}
 {% highlight Dart %}
@@ -342,7 +342,7 @@ class _OnChangedSampleState extends State<OnChangedSample> {
 
 It represents the color applied to the active track, thumb, overlay, and inactive dividers.
 
-The active side of the range selector is between start and end thumbs.
+The active side of the Flutter Range Selector is between start and end thumbs.
 
 {% tabs %}
 {% highlight Dart %}

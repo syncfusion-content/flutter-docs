@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Add Barcodes in FlutterFlow | Syncfusion®
+title: How to Add Barcode Generator in FlutterFlow | Syncfusion®
 description: Learn how to add and use Syncfusion® Flutter Barcodes (SfBarcodeGenerator) in FlutterFlow, including setup, integration, and configuration.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# How to Add Barcodes in FlutterFlow (SfBarcodeGenerator)
+# How to Add Barcode Generator in FlutterFlow (SfBarcodeGenerator)
 
 ## Overview
 
 [FlutterFlow](https://app.flutterflow.io/dashboard) enables you to create native applications using its graphical interface, reducing the need to write extensive amounts of code. Additionally, it offers the capability to include custom widgets that are not included in the default [FlutterFlow](https://app.flutterflow.io/dashboard) widget collection. This article explains how to incorporate our `SfBarcodeGenerator` widget as a custom widget in [FlutterFlow](https://app.flutterflow.io/dashboard).
 
-To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcodes](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
+To get started with the Flutter Barcode Generator and set up the package, refer to the [Getting Started with Flutter Barcode Generator](https://help.syncfusion.com/flutter/barcode/getting-started) documentation.
 
 ### Create a new project
 
@@ -30,7 +30,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add the Barcodes widget as a dependency
+### Add the Barcode Generator widget as a dependency
 
 1. Click on `+ Add Dependency`; a text editor will appear.
 2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.

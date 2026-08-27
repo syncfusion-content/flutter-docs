@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Slider Tooltip (SfSlider)
 
-This section explains how to add a tooltip in the slider.
+This section explains how to add a tooltip in the Flutter Slider.
 
 ## Enable tooltip
 
@@ -332,7 +332,7 @@ class _VerticalTooltipTextFormatPageState extends State<VerticalTooltipTextForma
 
 ## Tooltip color
 
-You can change the background color of the tooltip in the slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipBackgroundColor.html) property.
+You can change the background color of the tooltip in the Flutter Slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipBackgroundColor.html) property.
 
 ### Horizontal
 
@@ -440,7 +440,7 @@ class _VerticalTooltipColorPageState extends State<VerticalTooltipColorPage> {
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text in the slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipTextStyle.html) property.
+You can change the appearance of the tooltip text in the Flutter Slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipTextStyle.html) property.
 
 ### Horizontal
 

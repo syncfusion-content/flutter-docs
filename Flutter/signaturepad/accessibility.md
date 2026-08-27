@@ -7,7 +7,7 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# Accessibility in Flutter SignaturePad (SfSignaturePad)
+# Accessibility in Flutter Signature Pad (SfSignaturePad)
 
 ## Screen reader
 

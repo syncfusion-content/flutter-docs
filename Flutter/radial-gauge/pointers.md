@@ -9,14 +9,14 @@ documentation: ug
 
 # Pointers in Flutter Radial Gauge (SfRadialGauge)
 
- Pointer is used to indicate values on an axis. The Syncfusion Flutter Radial Gauge control offers four types of pointers:
+Pointer is used to indicate values on an axis. The Syncfusion® Flutter Radial Gauge control offers four types of pointers:
 
 [`Marker pointer`](https://help.syncfusion.com/flutter/radial-gauge/marker-pointer)
 [`Needle pointer`](https://help.syncfusion.com/flutter/radial-gauge/needle-pointer)
 [`Range pointer`](https://help.syncfusion.com/flutter/radial-gauge/range-pointer)
 [`Widget pointer`](https://help.syncfusion.com/flutter/radial-gauge/widget-pointer)
 
-All pointers can be customized to meet your specific requirement. You can add multiple pointers to the gauge to indicate multiple values on the same scale. The value of the pointer is set using the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/value.html) property.
+All pointers can be customized to meet your specific requirement. You can add multiple pointers to the Flutter Radial Gauge to indicate multiple values on the same scale. The value of the pointer is set using the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/value.html) property.
 
 ![multiple pointers](images/pointers/pointers.png)
 
@@ -213,7 +213,7 @@ class _EventExampleState extends State<EventExample> {
 {% endhighlight %}
 {% endtabs %}
 
-The [`onCreatePointerRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/onCreatePointerRenderer.html) callback allows you to create a custom pointer in the radial gauge. This callback is available for both the [`NeedlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) or [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) types.
+The [`onCreatePointerRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/onCreatePointerRenderer.html) callback allows you to create a custom pointer in the Flutter Radial Gauge. This callback is available for both the [`NeedlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) or [`MarkerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) types.
 
 {% tabs %}
 {% highlight dart %}

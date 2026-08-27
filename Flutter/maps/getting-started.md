@@ -9,20 +9,20 @@ documentation: ug
 
 # Getting Started with Flutter Maps (SfMaps)
 
-This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion<sup>&reg;</sup> maps.
+This section explains the steps required to add the Flutter Maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion® Flutter Maps.
 
 To get started quickly with our Flutter Maps widget, you can check on this video.
 
 <style>#flutterMapsVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterMapsVideoTutorial' src='https://www.youtube.com/embed/TNnAHfXXTFM'></iframe>
 
-## Add Flutter maps to an application
+## Add Flutter Maps to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter maps dependency to your pubspec.yaml file.
+Add the Syncfusion® Flutter Maps dependency to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight dart %}
@@ -60,9 +60,9 @@ import 'package:syncfusion_flutter_maps/maps.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize maps
+## Initialize Maps
 
-After importing the package, initialize the maps widget as a child of any widget.
+After importing the package, initialize the Flutter Maps widget as a child of any widget.
 
 {% tabs %}
 {% highlight Dart %}
@@ -99,7 +99,7 @@ The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps
 
 The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer to the unique field name in the .json source to identify each shape. In [`Mapping the data source`](https://help.syncfusion.com/flutter/maps/getting-started#mapping-the-data-source-for-shape-layer) section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with the respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
 
-I> The Mercator projection is the default projection in the maps.
+I> The Mercator projection is the default projection in Maps.
 
 ### From asset bundle
 
@@ -324,9 +324,9 @@ N>
 * Refer the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html), for customizing the data label text.
 * Refer the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), for customizing the shape colors.
 
-## Add shape layer maps elements
+## Add shape layer Maps elements
 
-Add the basic maps elements such as data labels, legend, and tooltip as shown in the code snippet below.
+Add the basic Maps elements such as data labels, legend, and tooltip as shown in the code snippet below.
 
 * **Data labels** - You can show data labels using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property. It is also possible to show data labels only for the particular shapes or show custom text using the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
