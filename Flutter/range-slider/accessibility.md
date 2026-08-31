@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in Flutter Range Slider widget | Syncfusion
 description: Learn here all about the accessibility support in Syncfusion Flutter Range Slider (SfRangeSlider) widget.
-platform: Flutter
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -11,9 +11,9 @@ documentation: ug
 
 ## Keyboard support
 
-This feature allows you to focus on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. By default, the start thumb receives focus first. The left and down arrow keys can be used to decrease the value of the focused thumb, while the right and up arrow keys can be used to increase it.
+This feature allows you to focus on the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) widget using the TAB key and adjust its values with the keyboard arrow keys. By default, the start thumb receives focus first. The left and down arrow keys can be used to decrease the value of the focused thumb, while the right and up arrow keys can be used to increase it. The value changes by [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) (for numeric values) or [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepDuration.html) (for date values) per key press.
 
-N> In [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html), keyboard accessibility is not supported when [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.betweenThumbs`, as focus can only be applied to one thumb at a time.
+N> In [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html), keyboard accessibility is not supported when [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dragMode.html) is set to `SliderDragMode.betweenThumbs`, as focus can only be applied to one thumb at a time.
 
 ## Screen reader
 
@@ -28,32 +28,42 @@ For iOS, you can adjust the value of each thumb by moving the focus to it and th
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-   return MaterialApp(
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: SfRangeSlider(
-              min: 0.0,
-              max: 100.0,
-              values: _values,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              semanticFormatterCallback: (dynamic value, SfThumb thumb){
-                return 'The $thumb value is $value';
-              },
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-            ),
-          )
+        body: Center(
+          child: SfRangeSlider(
+            min: 0.0,
+            max: 100.0,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            semanticFormatterCallback: (dynamic value, SfThumb thumb) {
+              return 'The $thumb value is $value';
+            },
+            onChanged: (SfRangeValues newValues) {
+              setState(() {
+                _values = newValues;
+              });
+            },
+          ),
+        ),
       ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -64,32 +74,42 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-   return MaterialApp(
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: SfRangeSlider.vertical(
-              min: 0.0,
-              max: 100.0,
-              values: _values,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              semanticFormatterCallback: (dynamic value, SfThumb thumb){
-                return 'The $thumb value is $value';
-              },
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-            ),
-          )
+        body: Center(
+          child: SfRangeSlider.vertical(
+            min: 0.0,
+            max: 100.0,
+            values: _values,
+            interval: 20,
+            showTicks: true,
+            showLabels: true,
+            semanticFormatterCallback: (dynamic value, SfThumb thumb) {
+              return 'The $thumb value is $value';
+            },
+            onChanged: (SfRangeValues newValues) {
+              setState(() {
+                _values = newValues;
+              });
+            },
+          ),
+        ),
       ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -114,6 +134,6 @@ The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_
 * [`Label style`](https://help.syncfusion.com/flutter/range-slider/labels-and-divider#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-slider/tooltip#tooltip-label-style)
 
-## Easily touch targets
+## Touch targets
 
-The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has touch target as 48 * 48 as per the standard for all the elements.
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) provides touch targets of 48 × 48 pixels for all interactive elements.
