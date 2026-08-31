@@ -76,7 +76,6 @@ You can use the following properties to customize the tooltip appearance.
 * [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
 * [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shouldAlwaysShow.html) - shows or hides the tooltip. By default, the tooltip will be hidden on touch. To avoid this, set this property to true.
 * [`textAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/textAlignment.html) - alignment of the text in the tooltip.
-* [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - header of the tooltip. By default, the series name will be displayed in the header.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/textStyle.html) - customizes the tooltip text.
 * [`shared`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shared.html) - share the tooltip with same index points.
 
