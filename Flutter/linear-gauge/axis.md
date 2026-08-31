@@ -2,9 +2,8 @@
 layout: post
 title: Axis in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Axis of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: Flutter
+platform: flutter
 control: SfLinearGauge
-
 documentation: ug
 ---
 
@@ -14,9 +13,18 @@ The Linear Gauge axis is a scale where a set of values can be plotted. An axis c
 
 ## Default axis
 
-By default axis will have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) axis value as 0 and a [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) axis value of 100. Without any customization, the default axis of the Linear Gauge will be displayed as follows:
+By default, the axis will have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of 0 and a [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 100. Without any customization, the default axis of the Linear Gauge will be displayed as follows:
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +36,27 @@ By default axis will have a [`minimum`](https://pub.dev/documentation/syncfusion
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
 ## Customize minimum and maximum axis values
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the example below, the axis is customized to have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by labels. which can be further customized as explained in later sections.  
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the example below, the axis is customized to have a [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value from -50 to a [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by labels, which can be further customized as explained in later sections.
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +68,10 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
       ),
     );
   }
-  
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
 
@@ -89,7 +110,16 @@ The following code sample demonstrates how to customize the [`thickness`](https:
 
 The code snippet below sets a solid color to the axis track:
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -103,10 +133,12 @@ The code snippet below sets a solid color to the axis track:
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
+![Apply color to axis in linear gauge](images/axis/axis_solid_color.png)
 
 ## Apply gradient
 
@@ -114,23 +146,30 @@ The [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gau
 
 The following code sample applies a gradient to the axis track.
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            child: SfLinearGauge(
-              axisTrackStyle: LinearAxisTrackStyle(
-                gradient: LinearGradient(
-                  colors: [Colors.purple, Colors.blue],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  stops: [0.1, 0.5],
-                  tileMode: TileMode.clamp,
-                ),
+          child: SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(
+              gradient: LinearGradient(
+                colors: [Colors.purple, Colors.blue],
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                stops: [0.1, 0.5],
+                tileMode: TileMode.clamp,
               ),
             ),
           ),
@@ -138,10 +177,12 @@ The following code sample applies a gradient to the axis track.
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_gradient.png)
+![Apply color to axis in linear gauge](images/axis/axis_gradient.png)
 
 ## Customize borders
 
@@ -149,7 +190,16 @@ The [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 The code snippet below sets a border to the axis track:
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -160,7 +210,7 @@ The code snippet below sets a border to the axis track:
             axisTrackStyle: LinearAxisTrackStyle(
               // Sets axis thickness for the better visibility of border
               thickness: 15,
-              // Hides axis axis color for the better visibility of border
+              // Hides axis color for the better visibility of border
               color: Colors.transparent,
               //Sets the border color
               borderColor: Colors.blueGrey,
@@ -172,8 +222,10 @@ The code snippet below sets a border to the axis track:
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Customize axis track border](images/axis/axis_border.png)
 
@@ -181,7 +233,16 @@ The code snippet below sets a border to the axis track:
 
 The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/edgeStyle.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) specifies the corner type for the axis track. The corners can be customized with `bothFlat`, `bothCurve`, `startCurve`, and `endCurve` options. The default value is `bothFlat`.
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -198,17 +259,27 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Change axis track edge style](images/axis/axis_corner_style.png)
 
 ## Inverse the axis
 
-The direction of linear gauge axis can be customized using the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property.
-When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is set to true, the axis will be displayed in an inverse direction. The default value is false.
+The direction of the linear gauge axis can be customized using the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property. When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is set to true, the axis will be displayed in an inverse direction. The default value is false.
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -220,8 +291,10 @@ When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gau
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 You can see that the axis values are displayed from 100 to 0 as the axis track is inversed.
 
@@ -229,9 +302,18 @@ You can see that the axis values are displayed from 100 to 0 as the axis track i
 
 ## Extend the axis
 
-The axis track can be extended using the [`axisTrackExtent`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackExtent.html) property. This will extend the axis track at both ends. The following code sample demonstrates this: 
+The axis track can be extended using the [`axisTrackExtent`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackExtent.html) property. This will extend the axis track at both ends. The following code sample demonstrates this:
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -239,13 +321,15 @@ The axis track can be extended using the [`axisTrackExtent`](https://pub.dev/doc
       color: Colors.white,
       home: Scaffold(
         body: Center(
-          child: child: SfLinearGauge(maximum: 50, axisTrackExtent: 50),
+          child: SfLinearGauge(maximum: 50, axisTrackExtent: 50),
         ),
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Extend linear gauge axis tack](images/axis/extend_axis.png)
 
@@ -253,7 +337,16 @@ The axis track can be extended using the [`axisTrackExtent`](https://pub.dev/doc
 
 You can hide the axis track by setting the [`showAxisTrack`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showAxisTrack.html) property to false. The default value of this property is true.
 
+{% tabs %}
 {% highlight dart %} 
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -265,17 +358,33 @@ You can hide the axis track by setting the [`showAxisTrack`](https://pub.dev/doc
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Hide linear gauge axis track](images/axis/hide_axis_track.png)
 
 ## Customize axis values
 
-Linear gauge allows you to display a set of values along with a custom axis based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
+Linear Gauge allows you to display a set of values along with a custom axis based on your business logic using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks. The `valueToFactorCallback` allows you to convert axis values into a factor between 0 and 1, while `onGenerateLabels` enables you to define custom labels for specific intervals.
 
+{% tabs %}
 {% highlight dart %} 
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatefulWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
+
+  @override
+  State<LinearGaugeDemo> createState() => _LinearGaugeDemoState();
+}
+
+class _LinearGaugeDemoState extends State<LinearGaugeDemo> {
   double pointerValue = 50.0;
 
   // To return the label value based on interval
@@ -302,66 +411,76 @@ Linear gauge allows you to display a set of values along with a custom axis base
   }
 
   Widget _getLinearGauge() {
-    return Container(
-      child: SfLinearGauge(
-        minimum: 0,
-        maximum: 150.0,
-        interval: 18.75,
-        animateAxis: true,
-        animateRange: true,
-        labelPosition: LinearLabelPosition.outside,
-        tickPosition: LinearElementPosition.outside,
-        valueToFactorCallback: (value) {
-          if (value >= 0 && value <= 2) {
-            return (value * 0.125) / 2;
-          } else if (value > 2 && value <= 5) {
-            return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
-          } else if (value > 5 && value <= 10) {
-            return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
-          } else if (value > 10 && value <= 20) {
-            return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
-          } else if (value > 20 && value <= 30) {
-            return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
-          } else if (value > 30 && value <= 50) {
-            return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
-          } else if (value > 50 && value <= 100) {
-            return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
-          } else if (value > 100 && value <= 150) {
-            return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
-          } else {
-            return 1;
-          }
-        },
-        onGenerateLabels: () {
-          final List<LinearAxisLabel> _visibleLabels = <LinearAxisLabel>[];
-          for (num i = 0; i < 9; i++) {
-            final double _value = _calculateLabelValue(i);
-            final LinearAxisLabel label = LinearAxisLabel(
-                text: _value.toInt().toString(),
-                value: (i * 18.75).toDouble());
-            _visibleLabels.add(label);
-          }
-
-          return _visibleLabels;
-        },
-        markerPointers: [
-          LinearShapePointer(
-              value: pointerValue,
-              onChanged: (value) =>
-              {
-                setState(() => {pointerValue = value})
-              },
-              color: Color(0xff06589C),
-              width: 24,
-              position: LinearElementPosition.cross,
-              shapeType: LinearShapePointerType.triangle,
-              height: 16)
-        ],
-      ),
-      margin: EdgeInsets.all(10)
+    return SfLinearGauge(
+      minimum: 0,
+      maximum: 150.0,
+      interval: 18.75,
+      animateAxis: true,
+      animateRange: true,
+      labelPosition: LinearLabelPosition.outside,
+      tickPosition: LinearElementPosition.outside,
+      valueToFactorCallback: (value) {
+        if (value >= 0 && value <= 2) {
+          return (value * 0.125) / 2;
+        } else if (value > 2 && value <= 5) {
+          return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
+        } else if (value > 5 && value <= 10) {
+          return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
+        } else if (value > 10 && value <= 20) {
+          return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
+        } else if (value > 20 && value <= 30) {
+          return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
+        } else if (value > 30 && value <= 50) {
+          return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
+        } else if (value > 50 && value <= 100) {
+          return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
+        } else if (value > 100 && value <= 150) {
+          return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
+        } else {
+          return 1;
+        }
+      },
+      onGenerateLabels: () {
+        final List<LinearAxisLabel> _visibleLabels = <LinearAxisLabel>[];
+        for (num i = 0; i < 9; i++) {
+          final double _value = _calculateLabelValue(i);
+          final LinearAxisLabel label = LinearAxisLabel(
+              text: _value.toInt().toString(),
+              value: (i * 18.75).toDouble());
+          _visibleLabels.add(label);
+        }
+        return _visibleLabels;
+      },
+      markerPointers: [
+        LinearShapePointer(
+            value: pointerValue,
+            onChanged: (value) {
+              setState(() {
+                pointerValue = value;
+              });
+            },
+            color: Color(0xff06589C),
+            width: 24,
+            position: LinearElementPosition.cross,
+            shapeType: LinearShapePointerType.triangle,
+            height: 16)
+      ],
     );
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: _getLinearGauge(),
+        ),
+      ),
+    );
+  }
+}
+
 {% endhighlight %}
+{% endtabs %}
 
 ![Custom axis track](images/axis/custom_axis.png)
