@@ -416,7 +416,7 @@ Explore Features
     <div class="icon-circle">
     <span class="card-icon card-showcase"></span>
   </div>
-    <h3 class="form-title">Showcase Samples</h3>
+    <h3 class="form-title">Demos</h3>
 </div>
     <div class="form-description"> Explore real-world sample apps to see components in action and learn by example.</div>
     <a href="https://github.com/syncfusion/flutter-examples" class="explore-link">
