@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding Arc layer in Flutter Maps widget | Syncfusion
-description: Learn here all about adding the Arc Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Arc Layer in Flutter Maps | Syncfusion®
+description: Learn about arc layers in Syncfusion® Flutter Maps (SfMaps), including route visualization, arc customization, styling, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug

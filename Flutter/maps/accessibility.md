@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Flutter maps widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter maps (SfMaps) widget and how to customize it.
+title: Accessibility in Flutter Maps | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter Maps (SfMaps), including screen readers, keyboard navigation, and assistive technologies.
 platform: flutter
 control: SfMaps
 documentation: ug

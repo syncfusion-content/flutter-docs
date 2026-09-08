@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter AI AssistView widget | Syncfusion 
-description: Learn here all about the introduction of Syncfusion Flutter AI AssistView (SfAIAssistView) widget, its features, and more.
+title: About Flutter AI AssistView Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter AI AssistView (SfAssistView), its features, customization options, and AI conversation capabilities.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Flutter AI AssistView (SfAIAssistView) Overview
+# About Flutter AI AssistView Control (SfAIAssistView)
 
 The Syncfusion<sup>&reg;</sup> Flutter AI AssistView widget is a powerful and customizable tool designed to simplify the integration of AI assistant functionality. It allows users to customize message content, headers, footers, avatars, response toolbars, loading indicators, suggestion items, text editors, and action buttons.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Line Chart in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to create and customize Stacked Line Chart in Syncfusion Flutter Cartesian Charts—add stacked line series, and configure key features.
+title: Stacked Line Chart in Flutter Cartesian Chart | Syncfusion®
+description: The stacked line chart support in Flutter Cartesian Chart offers cumulative trend visualization by stacking series values to show overall contribution.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Stacked Line Chart (SfCartesianChart)
+# Stacked Line Chart in Flutter Cartesian Chart
 
 To create a Flutter stacked line chart quickly, you can check this video.
 

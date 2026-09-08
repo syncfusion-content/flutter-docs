@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility in Flutter SignaturePad widget | Syncfusion
-description: Learn here all about the accessibility support in Syncfusion Flutter SignaturePad (SfSignaturePad) widget and how to customize it.
-platform: Flutter
+title:  Accessibility in Flutter SignaturePad | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter SignaturePad (SfSignaturePad), including screen readers, keyboard navigation, and more.
+platform: flutter
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Accessibility in Flutter SignaturePad (SfSignaturePad)
+# Accessibility in Flutter Signature Pad (SfSignaturePad)
 
 ## Screen reader
 

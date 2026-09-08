@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Tooltip in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Tooltip feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Tooltip in Flutter Circular Chart | Syncfusion®
+description: The tooltip support in Flutter Circular Chart offers interactive data insights with customizable content and appearance for better user engagement.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Tooltip in Flutter Circular Charts (SfCircularChart)
+# Tooltip in Flutter Circular Chart
 
-Chart provides tooltip support for all the series. It is used to show information about the segment when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as `true`.
+The chart provides tooltip support for all the series. It is used to show information about the segment when you tap the segment. To enable the tooltip, you need to set the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property to `true`.
 
-The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
+The tooltip state is preserved during device orientation changes and browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000 ms, and you change the orientation of your device from portrait to landscape after 5,000 ms of tooltip display, the tooltip is displayed for the next 5,000 ms in landscape mode before disappearing.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %} 

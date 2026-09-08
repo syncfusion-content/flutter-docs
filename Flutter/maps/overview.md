@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Maps widget | Syncfusion 
-description: Learn here all about the introduction of Syncfusion Flutter Maps (SfMaps) widget, its features, and more.
+title: About Flutter Maps Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter Maps (SfMaps), its features, map layers, data visualization capabilities, and customization options.
 platform: flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Flutter Maps (SfMaps) Overview
+# About Flutter Maps Control (SfMaps)
 
 [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) is a powerful data visualization component that displays statistical information for geographical areas. Its rich feature set includes tile rendering from OpenStreetMap, Bing Maps, and other tile providers with marker support, as well as shape layer capabilities such as selection, legends, labels, markers, tooltips, bubbles, color mapping, and much more.
 
@@ -23,19 +23,19 @@ Render GeoJSON data as geographical shapes or any custom shapes on a shape layer
 
 * **Data Labels** - Provide identification for shapes by displaying their names. Labels can be trimmed or hidden if they exceed shape boundaries.
 
-* **Markers** - Denote specific locations using built-in symbols or display custom widgets at particular latitude and longitude coordinates on the map.
+* **Markers** - Denote specific locations using built-in symbols or display custom widgets at particular latitude and longitude coordinates on the Flutter Maps.
 
 * **Bubbles** - Add information to shapes such as population density, number of users, and more. Bubbles can be rendered in different colors and sizes based on the data values of their assigned shapes.
 
-* **Shape Selection** - Select shapes to highlight specific areas on the map. You can use callbacks to perform custom actions during shape selection.
+* **Shape Selection** - Select shapes to highlight specific areas on the Flutter Maps. You can use callbacks to perform custom actions during shape selection.
 
-* **Legend** - Provide clear information about the data plotted on the map. The legend toggling feature allows you to visualize only the shapes to which a specific legend applies.
+* **Legend** - Provide clear information about the data plotted on the Flutter Maps. The legend toggling feature allows you to visualize only the shapes to which a specific legend applies.
 
 * **Colors** - Categorize shapes by customizing their colors based on underlying values. You can set shape colors for specific values or for ranges of values.
 
 * **Tooltip** - Display additional information about shapes and bubbles using customizable tooltips.
 
-* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.
+* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the Flutter Maps to navigate across regions. You can also customize the initial zoom level and center point.
 
 ## Tile layer
 
@@ -45,6 +45,6 @@ The interactive tile layer allows you to load map tiles from web map tile servic
 
 ### Features
 
-* **Markers** - Denote specific locations using built-in symbols or display custom widgets at particular latitude and longitude coordinates on the map.
+* **Markers** - Denote specific locations using built-in symbols or display custom widgets at particular latitude and longitude coordinates on the Flutter Maps.
 
-* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the map to navigate across regions. You can also customize the initial zoom level and center point.
+* **Zooming and Panning** - Zoom in for a closer look at specific regions by pinching the map, scrolling the mouse wheel or track-pad, or using the toolbar on web platforms. Pan the Flutter Maps to navigate across regions. You can also customize the initial zoom level and center point.

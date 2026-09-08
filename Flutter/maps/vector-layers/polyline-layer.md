@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding Polylines in Flutter Maps widget | Syncfusion
-description: Learn here all about adding the Polylines feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Polylines in Flutter Maps | Syncfusion®
+description: Learn about polyline support in Syncfusion® Flutter Maps (SfMaps), including route visualization, line customization, styling, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug

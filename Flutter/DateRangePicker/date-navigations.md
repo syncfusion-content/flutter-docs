@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Navigations in Flutter Date Range Picker widget | Syncfusion
-description: Learn here all about Date navigations feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
-platform: Flutter
+title: Date Navigation in Flutter DateRangePicker | Syncfusion®
+description: Learn about date navigation in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including view navigation, date scrolling, and programmatic navigation.
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Date Navigations in Flutter Date Range Picker (SfDateRangePicker)
+# Date Navigation in Flutter Date Range Picker (SfDateRangePicker)
 
 ## Programmatic date navigation
 
@@ -392,7 +392,7 @@ You can customize the navigation mode of the date range picker by using the [nav
 >**NOTE**
 When the navigation mode is set to [DateRangePickerNavigationMode.scroll](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode.html#scroll).
 * Swipe selection is not supported when the range and multi-range are the selection modes.
-* The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onViewChanged.html) will be called when the view reaches the starting position of the date range picker view.
+* The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onViewChanged.html) will be called when the view reaches the starting position of the Date Range Picker view.
 * [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) is not supported.
 
 

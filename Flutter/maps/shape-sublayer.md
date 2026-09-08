@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Sublayer in Flutter Maps widget | Syncfusion
-description: Learn here all about the Shape Sublayer feature of the Syncfusion Flutter Maps (SfMaps) widget in the tile and the shape layer.
+title: Shape Sublayer in Flutter Maps | Syncfusion®
+description: Learn about shape sublayers in Syncfusion® Flutter Maps (SfMaps), including shape layer customization, data visualization, and map overlays.
 platform: flutter
 control: SfMaps
 documentation: ug
@@ -823,7 +823,7 @@ class DataModel {
 
 ## Marker
 
-You can show markers at any position on the map by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) property.
+You can show markers at any position on the Flutter Maps by providing latitude and longitude coordinates to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is returned from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) property.
 
 The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) callback will be called a number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property is null.
 

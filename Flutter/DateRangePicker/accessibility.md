@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Accessibility in Flutter Date Range Picker widget | Syncfusion
-description: Learn here all about Accessibility feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
+title:  Accessibility in Flutter DateRangePicker | Syncfusion®
+description: Learn about accessibility support in Syncfusion® Flutter DateRangePicker (SfDateRangePicker), including keyboard navigation, screen readers, and more.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
@@ -75,7 +75,7 @@ The following APIs allows you to customize the colors of the following elements.
 
 ## Large fonts
 
-The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [MediaQueryData.textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all elements in date range picker.
+The [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [MediaQueryData.textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). It also allows you to change the font size of all elements in Flutter Date Range Picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)

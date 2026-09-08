@@ -1,50 +1,62 @@
 ---
 layout: post
-title: RTL in Flutter Range Selector widget | Syncfusion
-description: Learn here all about the RTL rendering in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
-platform: Flutter
+title: Right-to-Left (RTL) in Flutter Range Selector | Syncfusion®
+description: Learn about right-to-left (RTL) support in Syncfusion® Flutter Range Selector (SfRangeSelector), including localization and RTL rendering.
+platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
+# Right-to-Left (RTL) in Flutter Range Selector (SfRangeSelector)
+
+N> RTL is not applicable for the vertical orientation of the Flutter Range Selector.
 
 ## RTL rendering ways
 
-Right to left rendering can be achieved in the following ways:
+Right-to-left rendering can be achieved in the following ways:
 
 ### Wrapping the SfRangeSelector with Directionality widget
 
-The range selector can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+The Flutter Range Selector can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+class RtlDirectionalitySample extends StatefulWidget {
+  @override
+  _RtlDirectionalitySampleState createState() => _RtlDirectionalitySampleState();
+}
+
+class _RtlDirectionalitySampleState extends State<RtlDirectionalitySample> {
+  SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Center(
-              child: SfRangeSelector(
-                min: 2.0,
-                max: 10.0,
-                interval: 1,
-                showLabels: true,
-                showTicks: true,
-                initialValues: _initialValues,
-                child: Container(
-                    color: Colors.pink[200],
-                    height: 150,
-                 ),
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Center(
+            child: SfRangeSelector(
+              min: 2.0,
+              max: 10.0,
+              interval: 1,
+              showLabels: true,
+              showTicks: true,
+              initialValues: _initialValues,
+              child: Container(
+                color: Colors.pink[200],
+                height: 150,
               ),
-            )
-         ),
-      )
-  );
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -52,7 +64,7 @@ Widget build(BuildContext context) {
 
 ### Changing the locale to RTL languages
 
-The range selector will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+The Flutter Range Selector will render in right to left direction if the locale belongs to RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu. This can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -67,35 +79,46 @@ dependencies:
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    localizationsDelegates: [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-    ],
-    supportedLocales: [
-      Locale("fa", "IR"),
-    ],
-    locale: Locale("fa", "IR"),
-    home: Scaffold(
-      backgroundColor: Colors.white,
-      body: SfRangeSelector(
-        min: 2.0,
-        max: 10.0,
-        interval: 1,
-        showLabels: true,
-        showTicks: true,
-        initialValues: _initialValues,
-        child: Container(
-          color: Colors.pink[200],
-          height: 150,
+class RtlLocaleSample extends StatefulWidget {
+  @override
+  _RtlLocaleSampleState createState() => _RtlLocaleSampleState();
+}
+
+class _RtlLocaleSampleState extends State<RtlLocaleSample> {
+  SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("fa", "IR"),
+      ],
+      locale: Locale("fa", "IR"),
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: SfRangeSelector(
+          min: 2.0,
+          max: 10.0,
+          interval: 1,
+          showLabels: true,
+          showTicks: true,
+          initialValues: _initialValues,
+          child: Container(
+            color: Colors.pink[200],
+            height: 150,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}

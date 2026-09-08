@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Callbacks in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about available Callbacks feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+title: Callbacks in Flutter Circular Chart | Syncfusion®
+description: The callback support in Flutter Circular Chart offers events for selection, legend, data labels, tooltips, and rendering to enable interactive experiences.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Flutter Circular Charts (SfCircularChart)
+# Callbacks in Flutter Circular Chart
 
 Circular chart contains the below listed callbacks
 

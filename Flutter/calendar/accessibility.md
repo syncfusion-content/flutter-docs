@@ -70,7 +70,7 @@ The following APIs allow you to customize the colors of the following elements.
 
 ## Large fonts
 
-The [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaler`. And also it allows to change the font size of all UI elements in the calendar.
+The [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaler`. And also it allows to change the font size of all UI elements in the Flutter Calendar.
 * [appointmentTextStyle](https://help.syncfusion.com/flutter/calendar/appointments#appearance-customization)
 * [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
 * [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
@@ -90,7 +90,7 @@ The following keyboard interactions are supported by the [SfCalendar](https://pu
 | Left arrow        | Moves selection to the same time slot on the previous day                                                                                                                                          |
 | Tab               | Focuses the next clickable element, except appointments and cells						                                                                                                             |
 | Shift + tab       | Focuses the previous clickable element, except appointment and cells                                                                                                                               |
-| Alt + number      | Calendar view changes in the order of day, week, work week, month, timeline and schedule. Also view change will be restricted if it is not mentioned in the allowed views property of the calendar |
+| Alt + number | Calendar view changes in the order of day, week, work week, month, timeline and schedule. Also view change will be restricted if it is not mentioned in the allowed views property of the Flutter Event Calendar |
 | Ctrl + left arrow | To navigate to the previous view                                                                                                                                                                   |
 | Ctrl + right arrow| To navigate to the next view                                                                                                                                                                       |
 | Page up/down      | Vertically scrolls through the timeslot views                                                                                                                                                      |

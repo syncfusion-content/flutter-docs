@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Theme in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about Theme feature of Syncfusion Flutter AI AssistView (SfAIAssistViewTheme) widget and how it enhances user interaction and customization.
+title: Themes in Flutter AI AssistView | Syncfusion®
+description: Learn about theming support in Syncfusion® Flutter AI AssistView (SfAIAssistView), including messages, editors, buttons, suggestions, and toolbars.
 platform: flutter
 control: SfAIAssistViewTheme
 documentation: ug
 ---
 
-# Theme in Flutter AI AssistView (SfAIAssistViewTheme)
+# Themes in Flutter AI AssistView (SfAIAssistView)
 
 This section explains the customization properties available in [`SfAIAssistViewThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfAIAssistViewThemeData-class.html).
 

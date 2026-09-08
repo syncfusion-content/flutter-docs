@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder in Flutter AI AssistView widget | Syncfusion
-description: Learn here all about Placeholder feature of Syncfusion Flutter AI AssistView (SfAIAssistView) widget, including its properties and more.
+title: Placeholder in Flutter AI AssistView | Syncfusion®
+description: Learn about placeholder support in Syncfusion® Flutter AI AssistView (SfAIAssistView), including placeholder behavior and customization options.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
@@ -145,7 +145,7 @@ class _HideOnMessageExampleState extends State<HideOnMessageExample> {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView placeholder support](images/placeholder/placeholder-hideOnMessage.gif)
+![AI AssistView placeholder support](images/placeholder/placeholder-hideOnMessage.gif)
 
 ## Scroll with message
 
@@ -157,10 +157,13 @@ The placeholder can [`scroll`](https://pub.dev/documentation/syncfusion_flutter_
   // Replace the placeholderBehavior value in the previous sample to
   // make the placeholder scroll along with messages.
   placeholderBehavior: AssistPlaceholderBehavior.scrollWithMessage,
-  
+      ),
+    );
+  }
+
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView placeholder support](images/placeholder/placeholder-scrollWithMessage.gif)
+![AI AssistView placeholder support](images/placeholder/placeholder-scrollWithMessage.gif)
 
 >You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.

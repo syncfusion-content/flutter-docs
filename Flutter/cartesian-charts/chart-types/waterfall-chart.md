@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Waterfall Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about waterfall chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Waterfall Chart in Flutter Cartesian Chart | Syncfusion®
+description: The waterfall chart support in Flutter Cartesian Chart offers visualization of cumulative positive and negative changes to analyze value progression.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Waterfall Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Waterfall Chart in Flutter Cartesian Chart
 
 The waterfall chart explains gradual changes in the quantitative value of an entity that is subject to changes by increments or decrements. Using the waterfall chart, you can quickly illustrate changes in revenues.
 

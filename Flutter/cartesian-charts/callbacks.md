@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Callbacks in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to handle callback events in Syncfusion Flutter Cartesian Charts—handle tooltip, data label, legend, and configure key features.
+title: Callbacks in Flutter Cartesian Chart | Syncfusion®
+description: The callback support in Flutter Cartesian Chart offers events for selection, zooming, tooltips, axes, rendering, and user interactions.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Callback Events (SfCartesianChart)
+# Callbacks in Flutter Cartesian Chart
 
-This document describes the callbacks available for the Cartesian chart
+This document describes the callbacks available for the Cartesian chart.
 
 ## onTooltipRender
 

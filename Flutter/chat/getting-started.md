@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Chat widget | Syncfusion
-description: Step-by-step guide to get started with Syncfusion Flutter Chat (SfChat)—initialize, add composer, placeholder, action button.
+title: Getting Started with Flutter Chat | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Chat (SfChat). Explore setup, message composition, customization, and key features.
 platform: flutter
 control: SfChat
 documentation: ug
 ---
 
-# Getting started with Flutter Chat (SfChat)
+# Getting Started with Flutter Chat (SfChat)
 
 This section explains how to add the Flutter Chat widget to a single Flutter application and how to use its basic features.
 
@@ -57,9 +57,9 @@ import 'package:syncfusion_flutter_chat/chat.dart';
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize chat widget
+## Initialize Flutter Chat widget
 
-Add a chat widget with the necessary properties, such as [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) and [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html).
+Add a Flutter Chat widget with the necessary properties, such as [`messages`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messages.html) and [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html).
 
 {% tabs %}
 {% highlight dart hl_lines="16 42" %}
@@ -115,7 +115,7 @@ class ChatInitializeExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![Default chat](images/getting-started/initialize-chat.png)
+![Default Chat](images/getting-started/initialize-chat.png)
 
 ## Add composer
 
@@ -235,7 +235,7 @@ class ChatPlaceholderExample extends StatelessWidget {
 
 The action button represents the send button, which is not included by default. To add it, create an instance of [`ChatActionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton-class.html) for the [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/actionButton.html) property.
 
-When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback is invoked. In that callback, add the newly composed message to the messages list and rebuild the chat widget.
+When the send button is clicked, the [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) callback is invoked. In that callback, add the newly composed message to the messages list and rebuild the Flutter Chat widget.
 
 {% tabs %}
 {% highlight dart hl_lines="55" %}
@@ -321,6 +321,6 @@ class _ChatActionButtonExampleState extends State<ChatActionButtonExample> {
 {% endhighlight %}
 {% endtabs %}
 
-![Action button chat](images/getting-started/actionbutton-chat.png)
+![Action button Chat](images/getting-started/actionbutton-chat.png)
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the Flutter Chat widget with built-in support for creating stunning visual effects.

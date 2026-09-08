@@ -1,27 +1,28 @@
 ---
 layout: post
-title: Getting Started with Flutter Slider | Syncfusion
-description: Step-by-step guide to set up Syncfusion Flutter Slider—add dependencies, import, create SfSlider, and configure key features.
+title: Getting Started with Flutter Slider | Syncfusion®
+description: Learn how to get started with the Syncfusion® Flutter Slider (SfSlider). Explore setup, slider configuration, and customization options.
 platform: flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Flutter Slider Getting Started (SfSlider)
-This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> slider.
+# Getting Started with Flutter Slider (SfSlider)
+This section explains the steps required to add the Flutter Slider widget and its elements such as numeric and date values, ticks, labels, and tooltip. This section covers only basic features needed to get started with Syncfusion® Flutter Slider.
 
-To get start quickly with our Flutter Slider widget, you can check on this video.
+To get started quickly with our Flutter Slider widget, check out this video.
 
 <style>#FlutterSliderVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterSliderVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe>
 
-## Add Flutter slider to an application
+## Add Flutter Slider to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup> Flutter slider dependency to your pubspec.yaml file.
+Add the Syncfusion® Flutter Sliders dependency to your pubspec.yaml file.
 
+{% tabs %}
 {% highlight dart %}
 
 dependencies:
@@ -29,6 +30,7 @@ dependencies:
 syncfusion_flutter_sliders: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`](https://pub.dev/packages/syncfusion_flutter_sliders/versions) package.
 
@@ -36,53 +38,65 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`
 
 Run the following command to get the required packages.
 
+{% tabs %}
 {% highlight dart %}
 
-$ flutter pub get
+flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
 {% tabs %}
-{% highlight Dart %}
+{% highlight dart %}
 
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize slider
+## Initialize Flutter Slider
 
-After importing the package, initialize the slider widget as a child of any widget. Here, the slider widget is added as a child of the Center widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) properties of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) is 0.0 and 1.0 respectively. So, the [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) property must be given within the range.
+After importing the package, initialize the Flutter Slider widget as a child of any widget. Here, the slider widget is added as a child of the Center widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) properties of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) are 0.0 and 1.0 respectively. So, the [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) property must be given within the range.
 
-N> The slider passes the new value to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the slider with new value.
+N> The Flutter Slider passes the new value to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the slider with the new value.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 0.5;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider(
-        value: _value,
-        onChanged: (dynamic newValue){
-          setState(() {
-            _value = newValue;
-          });
-        },
-      ),
-    ),
-  );
+class HorizontalSliderPage extends StatefulWidget {
+  @override
+  _HorizontalSliderPageState createState() => _HorizontalSliderPageState();
 }
-	
+
+class _HorizontalSliderPageState extends State<HorizontalSliderPage> {
+  double _value = 0.5;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider(
+          value: _value,
+          onChanged: (double newValue){
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
+      ),
+    );
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,22 +107,32 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 0.5;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider.vertical(
-        value: _value,
-        onChanged: (dynamic newValue){
-          setState(() {
-            _value = newValue;
-          });
-        },
+class VerticalSliderPage extends StatefulWidget {
+  @override
+  _VerticalSliderPageState createState() => _VerticalSliderPageState();
+}
+
+class _VerticalSliderPageState extends State<VerticalSliderPage> {
+  double _value = 0.5;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider.vertical(
+          value: _value,
+          onChanged: (double newValue){
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -120,33 +144,43 @@ Widget build(BuildContext context) {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is used to get the current value of the slider when the user selects a value through interaction.
 
-N> The slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with new value.
+N> The Flutter Slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with the new value.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              )
-          )
-      )
-  );
+class HorizontalHandleValuePage extends StatefulWidget {
+  @override
+  _HorizontalHandleValuePageState createState() => _HorizontalHandleValuePageState();
+}
+
+class _HorizontalHandleValuePageState extends State<HorizontalHandleValuePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -159,26 +193,36 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 5.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfSlider.vertical(
-                min: 0.0,
-                max: 10.0,
-                value: _value,
-                onChanged: (dynamic newValue) {
-                  setState(() {
-                    _value = newValue;
-                  });
-                },
-              )
-          )
-      )
-  );
+class VerticalHandleValuePage extends StatefulWidget {
+  @override
+  _VerticalHandleValuePageState createState() => _VerticalHandleValuePageState();
+}
+
+class _VerticalHandleValuePageState extends State<VerticalHandleValuePage> {
+  double _value = 5.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfSlider.vertical(
+                  min: 0.0,
+                  max: 10.0,
+                  value: _value,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      _value = newValue;
+                    });
+                  },
+                )
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -188,37 +232,47 @@ Widget build(BuildContext context) {
 
 ## Set numeric value
 
-You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show numeric values in the Flutter Slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider(
-              min: _min,
-              max: _max,
-              value: _value,
-              interval: 20,
-              showLabels: true,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class NumericSliderPage extends StatefulWidget {
+  @override
+  _NumericSliderPageState createState() => _NumericSliderPageState();
+}
+
+class _NumericSliderPageState extends State<NumericSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider(
+                min: _min,
+                max: _max,
+                value: _value,
+                interval: 20,
+                showLabels: true,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
@@ -231,40 +285,50 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfSlider.vertical(
-              min: _min,
-              max: _max,
-              value: _value,
-              interval: 20,
-              showLabels: true,
-              onChanged: (dynamic newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-      )
-  );
+class VerticalNumericSliderPage extends StatefulWidget {
+  @override
+  _VerticalNumericSliderPageState createState() => _VerticalNumericSliderPageState();
+}
+
+class _VerticalNumericSliderPageState extends State<VerticalNumericSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfSlider.vertical(
+                min: _min,
+                max: _max,
+                value: _value,
+                interval: 20,
+                showLabels: true,
+                onChanged: (double newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            )
+        )
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/getting-started/vertical_numeric_slider.png)
+![Numeric Slider](images/getting-started/vertical_numeric_slider.png)
 
 ## Set date value
 
-You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+You can show date values in the Flutter Slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
@@ -273,30 +337,41 @@ N> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-DateTime _value = DateTime(2012, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 2,
-        showLabels: true,
-        dateIntervalType: DateIntervalType.years,
-        dateFormat: DateFormat.y(),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class DateSliderPage extends StatefulWidget {
+  @override
+  _DateSliderPageState createState() => _DateSliderPageState();
+}
+
+class _DateSliderPageState extends State<DateSliderPage> {
+  DateTime _min = DateTime(2008, 01, 01);
+  DateTime _max = DateTime(2018, 01, 01);
+  DateTime _value = DateTime(2012, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 2,
+          showLabels: true,
+          dateIntervalType: DateIntervalType.years,
+          dateFormat: DateFormat.y(),
+          onChanged: (DateTime newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -309,30 +384,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-DateTime _value = DateTime(2012, 01, 01);
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider.vertical(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 2,
-        showLabels: true,
-        dateIntervalType: DateIntervalType.years,
-        dateFormat: DateFormat.y(),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class VerticalDateSliderPage extends StatefulWidget {
+  @override
+  _VerticalDateSliderPageState createState() => _VerticalDateSliderPageState();
+}
+
+class _VerticalDateSliderPageState extends State<VerticalDateSliderPage> {
+  DateTime _min = DateTime(2008, 01, 01);
+  DateTime _max = DateTime(2018, 01, 01);
+  DateTime _value = DateTime(2012, 01, 01);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider.vertical(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 2,
+          showLabels: true,
+          dateIntervalType: DateIntervalType.years,
+          dateFormat: DateFormat.y(),
+          onChanged: (DateTime newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -349,64 +435,84 @@ You can enable ticks in the slider using the [`showTicks`](https://pub.dev/docum
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class TicksSliderPage extends StatefulWidget {
+  @override
+  _TicksSliderPageState createState() => _TicksSliderPageState();
+}
+
+class _TicksSliderPageState extends State<TicksSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _value = newValue as double;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/getting-started/slider_with_tick.png)
+![Numeric Flutter Slider](images/getting-started/flutter_slider_with_tick.png)
 
 ### Vertical
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider.vertical(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class VerticalTicksSliderPage extends StatefulWidget {
+  @override
+  _VerticalTicksSliderPageState createState() => _VerticalTicksSliderPageState();
+}
+
+class _VerticalTicksSliderPageState extends State<VerticalTicksSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider.vertical(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _value = newValue as double;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -414,35 +520,45 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/getting-started/vertical_slider_with_tick.png)
 
-## Inverse the horizontal slider
+## Inverse the horizontal Flutter Slider
 
-You can invert the horizontal slider by wrapping the slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
+You can invert the horizontal slider by wrapping the Flutter Slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Directionality(
-      textDirection: TextDirection.rtl,
-      child: SfSlider(
-        min: 0,
-        max: 100,
-        value: _value,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class InversedHorizontalSliderPage extends StatefulWidget {
+  @override
+  _InversedHorizontalSliderPageState createState() => _InversedHorizontalSliderPageState();
+}
+
+class _InversedHorizontalSliderPageState extends State<InversedHorizontalSliderPage> {
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SfSlider(
+          min: 0,
+          max: 100,
+          value: _value,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _value = newValue as double;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -450,33 +566,43 @@ Widget build(BuildContext context) {
 
 ![Inversed horizontal slider](images/getting-started/inversed_horizontal_slider.png)
 
-## Inverse the vertical slider
+## Inverse the vertical Flutter Slider
 
 You can invert the vertical slider using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property. The default value of the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/isInversed.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
 
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfSlider.vertical(
-      min: 0,
-      max: 100,
-      value: _value,
-      interval: 20,
-      isInversed: true,
-      showTicks: true,
-      showLabels: true,
-      onChanged: (dynamic newValue) {
-        setState(() {
-          _value = newValue;
-        });
-      },
-    ),
-  );
+class InversedVerticalSliderPage extends StatefulWidget {
+  @override
+  _InversedVerticalSliderPageState createState() => _InversedVerticalSliderPageState();
+}
+
+class _InversedVerticalSliderPageState extends State<InversedVerticalSliderPage> {
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfSlider.vertical(
+        min: 0,
+        max: 100,
+        value: _value,
+        interval: 20,
+        isInversed: true,
+        showTicks: true,
+        showLabels: true,
+        onChanged: (double newValue) {
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -488,7 +614,7 @@ Widget build(BuildContext context) {
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) properties.
 
-N> The format type (numeric or date) of the slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+N> The format type (numeric or date) of the Flutter Slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
@@ -497,30 +623,41 @@ I> You must import [`intl`](https://pub.dev/packages/intl) package for formattin
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        numberFormat: NumberFormat("\$"),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class PrefixSuffixSliderPage extends StatefulWidget {
+  @override
+  _PrefixSuffixSliderPageState createState() => _PrefixSuffixSliderPageState();
+}
+
+class _PrefixSuffixSliderPageState extends State<PrefixSuffixSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          numberFormat: NumberFormat("\$"),
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _value = newValue as double;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -533,30 +670,41 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 0;
-final double _max = 100;
-double _value = 40.0;
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfSlider.vertical(
-        min: _min,
-        max: _max,
-        value: _value,
-        interval: 20,
-        showTicks: true,
-        showLabels: true,
-        numberFormat: NumberFormat("\$"),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+class VerticalPrefixSuffixSliderPage extends StatefulWidget {
+  @override
+  _VerticalPrefixSuffixSliderPageState createState() => _VerticalPrefixSuffixSliderPageState();
+}
+
+class _VerticalPrefixSuffixSliderPageState extends State<VerticalPrefixSuffixSliderPage> {
+  final double _min = 0;
+  final double _max = 100;
+  double _value = 40.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfSlider.vertical(
+          min: _min,
+          max: _max,
+          value: _value,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          numberFormat: NumberFormat("\$"),
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _value = newValue as double;
+            });
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 {% endhighlight %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AIAssistView Widget in FlutterFlow | Syncfusion
-description: You can learn here all about adding Syncfusion Flutter AIAssistView ( SfAIAssistView Widget ) widget in FlutterFlow.
+title: How to Add AI AssistView in FlutterFlow | Syncfusion®
+description: Learn how to add and use the Syncfusion® Flutter AI AssistView (SfAIAssistView) in FlutterFlow, including setup, integration, and configuration.
 platform: flutter
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to add Syncfusion<sup>&reg;</sup> AIAssistView widget in FlutterFlow?
+# How to Add AI AssistView in FlutterFlow (SfAIAssistView)
 
 ## Overview
 
@@ -28,7 +28,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ![Custom Widget](how-to-section-images/custom-widget.png)
 
-### Add AIAssistView widget as a dependency
+### Add AI AssistView widget as a dependency
 
 1. Click on `+ Add Dependency`, and a text editor will appear.
 2. Navigate to [Syncfusion<sup>&reg;</sup> Flutter Chat](https://pub.dev/packages/syncfusion_flutter_chat) in [pub.dev](https://pub.dev/) and copy the dependency name and version using the `Copy to Clipboard` option.

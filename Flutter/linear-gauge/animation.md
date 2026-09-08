@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Animation in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing animation of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: Flutter
+title: Animation in Flutter Linear Gauge | Syncfusion®
+description: Learn about animation support in Syncfusion® Flutter Linear Gauge (SfLinearGauge), including pointer animations, duration settings, and visual effects.
+platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -15,7 +15,16 @@ All Linear Gauge elements such as axis (along with ticks and labels), range, bar
 
 The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) are used to animate the axis track along with the ticks and labels. The axis will have a fade-in with opacity animation when [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to true. By default, the [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateAxis.html) is set to false. 
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +39,27 @@ The [`animateAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
-![Animate axis in linear gauge](images/animation/animation-axis-range/animation-axis.gif)
+![Animate axis in Flutter Linear Gauge](images/animation/animation-axis-range/animation-axis.gif)
 
 ## Animate range
 
 The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) and [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animationDuration.html) properties in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) are used to animate ranges. The range will have a fade-in with opacity animation when [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to true. By default, the [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/animateRange.html) is set to false. 
 
+{% tabs %}
 {% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +74,12 @@ The [`animateRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/lat
       ),
     );
   }
+}
 
-  {% endhighlight %}
+{% endhighlight %}
+{% endtabs %}
 
-  ![Animate range in linear gauge](images/animation/animation-axis-range/animation-range.gif)
+![Animate range in Flutter Linear Gauge](images/animation/animation-axis-range/animation-range.gif)
 
 ## Pointer animation
 
@@ -83,7 +105,16 @@ The [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 
 The following code example demonstrates how to customize the animation for bar pointer:
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +134,10 @@ The following code example demonstrates how to customize the animation for bar p
       ),
     );
   }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Animate marker pointers (Shape and Widget Pointers)
 
@@ -112,4 +145,41 @@ Both the shape and widget marker pointers have the same set of properties and be
 
 ### Marker pointer with `bounceOut` animation
 
-![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
+The following code example demonstrates how to animate a shape marker pointer with `bounceOut` animation type:
+
+{% tabs %}
+{% highlight dart %}
+
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
+void main() => runApp(const LinearGaugeDemo());
+
+class LinearGaugeDemo extends StatelessWidget {
+  const LinearGaugeDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            markerPointers: [
+              LinearShapePointer(
+                value: 60,
+                animationType: LinearAnimationType.bounceOut,
+                animationDuration: 2000,
+                enableAnimation: true,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Animate marker pointer in Flutter Linear Gauge](images/animation/shape-pointer/bounceout.gif)

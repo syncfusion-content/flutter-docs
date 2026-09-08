@@ -1,21 +1,21 @@
 ---
 layout: post
-title: RTL support in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here about the RTL support in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Right To Left (RTL) support in Flutter Cartesian Chart | Syncfusion®
+description: The RTL support in Flutter Cartesian Chart offers right-to-left rendering for chart elements, improving usability in RTL language applications.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Right To Left (RTL) in Flutter Cartesian Chart (SfCartesianChart)
+# Right To Left (RTL) in Flutter Cartesian Chart
 
-Cartesian chart supports the right to left rendering. However chart axis, series, and other chart elements rendering will be the same for both LTR and RTL except trackball, tooltip, and legend.
+Cartesian chart supports right-to-left rendering. However, chart axes, series, and other chart elements render the same for both LTR and RTL except for trackball, tooltip, and legend.
 
 ## RTL rendering ways
 
 Right to left rendering can be switched in the following ways:
 
-### Wrapping the SfCartesianChart with Directionality widget
+### Wrapping the Flutter Cartesian Chart with Directionality widget
 
 To change the rendering direction from right to left, you can wrap the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html#rtl).
 

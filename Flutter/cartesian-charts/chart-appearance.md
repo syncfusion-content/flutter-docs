@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customization in Flutter Cartesian Charts | Syncfusion
-description: Step-by-step guide to control chart appearance in Syncfusion Flutter Cartesian Charts—learn to set chart size, margin, border, and more key features.
+title: Customization in Flutter Cartesian Chart | Syncfusion®
+description: The customization support in Flutter Cartesian Chart offers extensive control over chart appearance, layout, styling, colors, and interactive behavior.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Cartesian Charts Customization (SfCartesianChart)
+# Customization in Flutter Cartesian Chart
 
 ## Chart sizing
 
-Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
+The chart renders based on the parent widget size. If you need the chart to be rendered in a specific size, set the size (width/height) on the parent widget.
 
 You can also customize the following properties:
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/backgroundColor.html) - used to change the background color of the chart.

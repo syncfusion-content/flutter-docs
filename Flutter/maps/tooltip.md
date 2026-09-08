@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Flutter Maps (SfMaps)
 
-Tooltip is used to indicate shape, bubble, and marker information during tap or click interactions. This section helps you learn how to show tooltips for shapes, bubbles, and markers in maps and customize them.
+Tooltip is used to indicate shape, bubble, and marker information during tap or click interactions. This section helps you learn how to show tooltips for shapes, bubbles, and markers in Flutter Maps and customize them.
 
 ## Tooltip for the shapes
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range area Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about range area Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Range Area Chart in Flutter Cartesian Chart | Syncfusion®
+description: The range area chart support in Flutter Cartesian Chart offers visualization of value ranges between upper and lower bounds to highlight data variation.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Range area Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Range Area Chart in Flutter Cartesian Chart
 
 To create a Flutter range area chart quickly, you can check this video.
 

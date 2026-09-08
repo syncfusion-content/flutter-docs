@@ -1,45 +1,52 @@
 ---
 layout: post
-title: Enable & disable states in Flutter Range Slider widget | Syncfusion
-description: Learn here all about enable & disable states in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
-platform: Flutter
+title: Enabled and Disabled States in Flutter Range Slider | Syncfusion®
+description: Learn about enabled and disabled states in Syncfusion® Flutter Range Slider (SfRangeSlider), including customization, appearance, and interaction behavior.
+platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Enabled and disabled states in Flutter Range Slider (SfRangeSlider)
+# Enabled and Disabled States in Flutter Range Slider (SfRangeSlider)
 
-This section helps to learn about the enabled and disabled state in the Flutter range slider.
+This section explains the enabled and disabled states of the Flutter Range Slider.
 
 ## Enabled state
 
-The range slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
+The Flutter Range Slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
 
 ### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -52,26 +59,33 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider.vertical(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -88,50 +102,64 @@ The range slider will be in disabled state if [`onChanged`](https://pub.dev/docu
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: null,
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: null,
+    ))));
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled range slider](images/enabled-and-disabled/disabled-state.png)
+![Disabled Range Slider](images/enabled-and-disabled/disabled-state.png)
 
 ### Vertical
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider.vertical(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: null,
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(3.0, 7.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSlider.vertical(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChanged: null,
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -141,7 +169,7 @@ Widget build(BuildContext context) {
 
 ## Disabled color
 
-You can change,
+You can change the following:
 
 * The color of the active and inactive track in disabled state using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledInactiveTrackColor.html) properties.
 * The color of the active and inactive major ticks in disabled state using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledInactiveTickColor.html) properties.
@@ -156,39 +184,47 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        disabledActiveTrackColor: Colors.orange,
-                        disabledInactiveTrackColor: Colors.orange[200],
-                        disabledActiveTickColor: Colors.orange,
-                        disabledInactiveTickColor: Colors.orange[200],
-                        disabledActiveMinorTickColor: Colors.orange,
-                        disabledInactiveMinorTickColor: Colors.orange[200],
-                        disabledActiveDividerColor: Colors.purple,
-                        disabledInactiveDividerColor: Colors.purple[200],
-                        disabledThumbColor: Colors.orange,
-                    ),
-                    child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 2,
-                     showTicks: true,
-                     minorTicksPerInterval: 1,
-                     showDividers: true,
-                     values: _values,
-                     onChanged: null,
-                  ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        disabledActiveTrackColor: Colors.orange,
+        disabledInactiveTrackColor: Colors.orange[200],
+        disabledActiveTickColor: Colors.orange,
+        disabledInactiveTickColor: Colors.orange[200],
+        disabledActiveMinorTickColor: Colors.orange,
+        disabledInactiveMinorTickColor: Colors.orange[200],
+        disabledActiveDividerColor: Colors.purple,
+        disabledInactiveDividerColor: Colors.purple[200],
+        disabledThumbColor: Colors.orange,
+      ),
+      child: SfRangeSlider(
+        min: 2.0,
+        max: 10.0,
+        interval: 2,
+        showTicks: true,
+        minorTicksPerInterval: 1,
+        showDividers: true,
+        values: _values,
+        onChanged: null,
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}
@@ -201,39 +237,47 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        disabledActiveTrackColor: Colors.orange,
-                        disabledInactiveTrackColor: Colors.orange[200],
-                        disabledActiveTickColor: Colors.orange,
-                        disabledInactiveTickColor: Colors.orange[200],
-                        disabledActiveMinorTickColor: Colors.orange,
-                        disabledInactiveMinorTickColor: Colors.orange[200],
-                        disabledActiveDividerColor: Colors.purple,
-                        disabledInactiveDividerColor: Colors.purple[200],
-                        disabledThumbColor: Colors.orange,
-                    ),
-                    child:  SfRangeSlider.vertical(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 2,
-                     showTicks: true,
-                     minorTicksPerInterval: 1,
-                     showDividers: true,
-                     values: _values,
-                     onChanged: null,
-                  ),
-              )
-          )
-      )
-  );
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  SfRangeValues _values = const SfRangeValues(4.0, 8.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(
+        disabledActiveTrackColor: Colors.orange,
+        disabledInactiveTrackColor: Colors.orange[200],
+        disabledActiveTickColor: Colors.orange,
+        disabledInactiveTickColor: Colors.orange[200],
+        disabledActiveMinorTickColor: Colors.orange,
+        disabledInactiveMinorTickColor: Colors.orange[200],
+        disabledActiveDividerColor: Colors.purple,
+        disabledInactiveDividerColor: Colors.purple[200],
+        disabledThumbColor: Colors.orange,
+      ),
+      child: SfRangeSlider.vertical(
+        min: 2.0,
+        max: 10.0,
+        interval: 2,
+        showTicks: true,
+        minorTicksPerInterval: 1,
+        showDividers: true,
+        values: _values,
+        onChanged: null,
+      ),
+    ))));
+  }
 }
 
 {% endhighlight %}

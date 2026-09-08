@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  Accessibility in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Accessibility feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title:  Accessibility in Flutter Cartesian Chart | Syncfusion®
+description: The accessibility support in Flutter Cartesian Chart offers sufficient contrast, large fonts, and tappable targets for an inclusive user experience.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Accessibility in Flutter Cartesian Charts (SfCartesianChart)
+# Accessibility in Flutter Cartesian Chart
 
 ## Sufficient contrast
 
 The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
-The customization of colors can be done for the following chart elements.
+The colors can be customized for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/cartesian-charts/chart-title)
 * [Axis title](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-title)
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-label-customization)
@@ -33,7 +33,7 @@ The customization of colors can be done for the following chart elements.
 
 ## Large fonts
 
-The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in Cartesian chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) font size can be adjusted automatically based on device settings, and the font size is scaled based on the [`MediaQueryData.textScaler`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaler.html). It also allows you to change the font size of all elements in the Cartesian chart.
 * [Chart title](https://help.syncfusion.com/flutter/cartesian-charts/chart-title)
 * [Axis title](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-title)
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-label-customization)
@@ -47,7 +47,7 @@ The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Easily tappable targets
 
-The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides callback support to notify when the essential elements in the chart are tapped.
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onaxislabeltapped)
 * [Data points](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onpointtapped)
 * [Data label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#ondatalabeltapped)

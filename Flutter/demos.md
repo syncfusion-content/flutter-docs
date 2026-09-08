@@ -61,7 +61,7 @@ The Flutter Sample Browser App is now available for Android, Web, Windows, and L
       </td>
       <td>
         <a href="https://flutter.syncfusion.com" target="_blank" rel="noopener noreferrer"
-           style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;"><img src="Images/web_icon.svg" width="22" height="22" alt="" style="display:block;">
+           style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; line-height:1;"><img src="Images/web.svg" width="22" height="22" alt="" style="display:block;">
           <span style="font-size:14px;">Live Demos on Web</span>
         </a>
       </td>

@@ -48,7 +48,7 @@ class DefaultActionButtonExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView actionButton support](images/action-button/default-actionbutton.gif)
+![AI AssistView actionButton support](images/action-button/default-actionbutton.gif)
 
 ### Child
 
@@ -84,7 +84,7 @@ class ActionButtonChildExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView actionButton child](images/action-button/actionbutton-child-property.png)
+![AI AssistView actionButton child](images/action-button/actionbutton-child-property.png)
 
 ### onPressed callback
 
@@ -172,7 +172,7 @@ class ActionButtonTooltipExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView actionButton tooltip](images/action-button/actionbutton-tooltip-property.gif)
+![AI AssistView actionButton tooltip](images/action-button/actionbutton-tooltip-property.gif)
 
 ### Colors
 
@@ -297,7 +297,7 @@ class ActionButtonMouseCursorExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView actionButton mousecursor](images/action-button/actionbutton-mousecursor-property.gif)
+![AI AssistView actionButton mousecursor](images/action-button/actionbutton-mousecursor-property.gif)
 
 ### Shape
 
@@ -340,7 +340,7 @@ class ActionButtonShapeExample extends StatelessWidget {
 {% endhighlight %}
 {% endtabs %}
 
-![AIAssistView actionButton shape](images/action-button/actionbutton-shape-property.png)
+![AI AssistView actionButton shape](images/action-button/actionbutton-shape-property.png)
 
 ### Margin
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Selection in Flutter Maps widget | Syncfusion
-description: Learn here all about the Shape Selection feature of Syncfusion Flutter Maps (SfMaps) widget and more.
+title: Shape Selection in Flutter Maps | Syncfusion®
+description: Learn about shape selection in Syncfusion® Flutter Maps (SfMaps), including selection customization, interaction, highlighting, and styling options.
 platform: flutter
 control: SfMaps
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Shape Selection in Flutter Maps (SfMaps)
 
-You can select a shape to highlight a specific area on a map. You can also use callbacks to perform custom actions during shape selection.
+You can select a shape to highlight a specific area on a Flutter Maps. You can also use callbacks to perform custom actions during shape selection.
 
 ## Enable shape selection
 
-You can enable shape selection on a map using the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) property along with setting the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property. The default value of the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property is `-1`.
+You can enable shape selection on a Flutter Maps using the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) property along with setting the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property. The default value of the [`selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectedIndex.html) property is `-1`.
 
 The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is triggered when a user selects a shape by tapping or clicking, or when a shape is selected programmatically. It provides the index of the selected shape.
 

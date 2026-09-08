@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Chat widget | Syncfusion 
-description: Step-by-step overview of Syncfusion Flutter Chat (SfChat) features—composer, messages, suggestions, headers, footers, avatars.
+title: About Flutter Chat Control | Syncfusion®
+description: Learn about the Syncfusion® Flutter Chat (SfChat), its features, message customization options, and conversational UI capabilities.
 platform: flutter
 control: SfChat
 documentation: ug
 ---
 
-# Flutter Chat (SfChat) Overview
+# About Flutter Chat Control (SfChat)
 
 The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations between two or more users and offers a wide range of customization options, including the composer, action button, and message content (header, footer, content, and avatar).
 
@@ -31,6 +31,6 @@ The Syncfusion<sup>&reg;</sup> Flutter Chat widget displays conversations betwee
 
 * **Custom Message Content** - The actual message content can be customized using the [`messageContentBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageContentBuilder.html), which lets you build a fully custom layout for each message. For customization details, refer to the [Conversation Area](conversation-area.md) documentation.
 
-* **Message Avatar** - Displays user avatars or profile pictures of the respective message. Using the [`messageAvatarBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageAvatarBuilder.html), a custom widget can be specified to display the chat message avatar with relevant details.
+* **Message Avatar** - Displays user avatars or profile pictures of the respective message. Using the [`messageAvatarBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/messageAvatarBuilder.html), a custom widget can be specified to display the message avatar of the Flutter Chat with relevant details.
 
->You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the chat with built-in support for creating stunning visual effects.
+>You can refer to our [Flutter Chat](https://www.syncfusion.com/flutter-widgets/flutter-chat) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Chat example](https://flutter.syncfusion.com/#/chat/getting-started) which demonstrates conversations between two or more users in a fully customizable layout and shows how to easily configure the Flutter Chat widget with built-in support for creating stunning visual effects.
