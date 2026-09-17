@@ -40,7 +40,7 @@ import 'package:syncfusion_flutter_pdf/pdf.dart';
 {% endtabs %}
 
 
-You can export the `SfDataGrid` to PDF by using the following extension methods present in the [SfDataGridState]((https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html)) class:
+You can export the `SfDataGrid` to PDF by using the following extension methods present in the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class:
 
    * [exportToPdfDocument](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfDocument.html)
    * [exportToPdfGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid_export/latest/syncfusion_flutter_datagrid_export/DataGridPdfExportExtensions/exportToPdfGrid.html)
