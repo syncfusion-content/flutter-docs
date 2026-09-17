@@ -16,7 +16,7 @@ To get started quickly with our Flutter Range Selector widget, you can check out
 <iframe id='FlutterRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/WX1IvK5R0q0'></iframe>
 
 ## Add Flutter Range Selector to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
