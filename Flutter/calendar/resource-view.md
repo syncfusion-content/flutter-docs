@@ -408,6 +408,6 @@ class _CalendarAppState extends State<CalendarApp> {
 
 ## See also
 
-* [How to add appointment for the selected resources using appointment editor in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10550)
+* [How to add appointment for the selected resources using appointment editor in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10550/how-to-add-appointment-for-the-selected-resources-using-appointment-editor-in-the-flutter-calendar)
 * [How to add resources in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10393/how-to-add-resources-in-the-flutter-calendar)
 * [How to customize the resource view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10738/how-to-customize-the-resource-view-in-the-flutter-calendar)
