@@ -232,5 +232,5 @@ You can arrange the two Date Range Picker views in the vertical direction by set
 
 * [How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/9781/how-to-switch-between-the-flutter-date-range-picker-views)
 * [How to get the current view dates in Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/10063/how-to-get-the-current-view-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to show two pickers vertically in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10675/how-to-show-two-pickers-vertically-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to show two pickers vertically in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10675/how-to-show-two-pickers-vertically-in-flutter-daterangepicker)
 * [How to change the number of weeks in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10619/how-to-change-the-number-of-weeks-in-the-flutter-date-range-picker)
