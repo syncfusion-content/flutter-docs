@@ -13,7 +13,7 @@ This section explains the steps required to create an Excel document with a few 
 
 ## Steps to create Excel document in Flutter application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -196,7 +196,7 @@ Future<void> _createExcel() async {
 
 ## Create an Excel document on desktop
 
-Run `flutter config --enable-windows-desktop --enable-macos-desktop --enable-linux-desktop` to enable desktop support, then follow the steps in the [Flutter desktop guide](https://flutter.dev/multi-platform/desktop).
+Run `flutter config --enable-windows-desktop --enable-macos-desktop --enable-linux-desktop` to enable desktop support, then follow the steps in the [Flutter desktop guide](https://flutter.dev/development/desktop).
 
 You can create an Excel document on desktop by using the following steps:
 

@@ -198,11 +198,11 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
 ## See also
 
 * [How to customize the month cell of the Flutter date range picker (SfDateRangePicker)?](https://support.syncfusion.com/kb/article/9811/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to style the current month date cell in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10681/how-to-style-the-current-month-date-cell-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to style the current month date cell in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10681/how-to-style-the-current-month-date-cell-in-the-flutter-date-range-picker)
 * [How to change the week end dates in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10661/how-to-change-the-week-end-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
 * [How to change the month format in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10612/how-to-change-the-month-format-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to customize the selected range cells in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10773/how-to-customize-the-selected-range-cells-in-the-flutter-date-range-picker)
-* [How to add the indicator in the month cells of the date range picker (SfDateRangePicker), when the Flutter event calendar (SfCalendar) has an appointments?](https://support.syncfusion.com/kb/article/10500/how-to-add-the-indicator-in-the-month-cells-of-the-date-range-picker-sfdaterangepicker-when)
+* [How to customize the selected range cells in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10773/how-to-customize-the-selected-range-cells-in-flutter-daterangepicker)
+* [How to add the indicator in the month cells of the date range picker (SfDateRangePicker), when the Flutter event calendar (SfCalendar) has an appointments?](https://support.syncfusion.com/kb/article/10500/how-to-add-indicator-in-the-month-cells-of-flutter-sfdaterangepicker)
 * [How to add custom fonts in Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10705/how-to-add-custom-fonts-in-the-flutter-date-range-picker-sfdaterangepicker)
-* [How to style the year, decade, century views in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10789/how-to-style-the-year-decade-century-views-in-the-flutter-date-range-picker)
+* [How to style the year, decade, century views in the Flutter date range picker (SfDateRangePicker)](https://support.syncfusion.com/kb/article/10789/how-to-style-the-year-decade-century-views-in-the-flutter-date-range-picker-sfdaterangepicker)
 * [How to customize the special dates using builder in the Flutter date picker](https://support.syncfusion.com/kb/article/10750/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-range-picker)

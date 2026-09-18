@@ -489,7 +489,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 #### See Also
 
-* [Disable marker for a specific series in trackball](https://support.syncfusion.com/kb/article/10485/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts).
+* [Disable marker for a specific series in trackball](https://support.syncfusion.com/kb/article/10485/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts-sfcartesianchart-).
 
 ### Trackball tooltip template
 
@@ -732,9 +732,9 @@ Defaults to `true`.
 
 #### See Also
 
-* [Synchronize trackball with multiple charts in Cartesian charts](https://support.syncfusion.com/kb/article/10568/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
+* [Synchronize trackball with multiple charts in Cartesian charts](https://support.syncfusion.com/kb/article/10568/how-to-synchronize-trackball-in-multiple-flutter-sfcartesianchart-).
 
-* [Hide the marker displayed in the trackball tooltip](https://support.syncfusion.com/kb/article/10857/how-to-hide-the-marker-displayed-in-the-trackball-tooltip-sfcartesianchart).
+* [Hide the marker displayed in the trackball tooltip](https://support.syncfusion.com/kb/article/10857/how-to-hide-the-marker-displayed-in-the-trackball-tooltip-sfcartesianchart-).
 
 ## Crosshair
 
@@ -895,6 +895,6 @@ Also refer [`crosshair`](https://help.syncfusion.com/flutter/cartesian-charts/ca
 
 #### See Also
 
-* [Disabling trackball tooltip for particular series in Cartesian chart](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+* [Disabling trackball tooltip for particular series in Cartesian chart](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-flutter-cartesian-charts-).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

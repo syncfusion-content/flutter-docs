@@ -395,4 +395,4 @@ The [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flut
 
 #### See Also
 
-* [To Synchronize panning in multiple charts](https://support.syncfusion.com/kb/article/9939/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
+* [To Synchronize panning in multiple charts](https://support.syncfusion.com/kb/article/9939/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart-).

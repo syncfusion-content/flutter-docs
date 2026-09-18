@@ -21,7 +21,7 @@ Right-to-left rendering can be switched in the following ways:
 
 To change the rendering direction from right to left, you can wrap the [`SfAIAssistView`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
->For app-wide RTL support, configure the `MaterialApp` with the appropriate `locale` and `localizationsDelegates`, or set `builder` to wrap the app in a `Directionality` widget. See the Flutter [internationalization guide](https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization) for details.
+>For app-wide RTL support, configure the `MaterialApp` with the appropriate `locale` and `localizationsDelegates`, or set `builder` to wrap the app in a `Directionality` widget. See the Flutter [internationalization guide](https://docs.flutter.dev/ui/internationalization) for details.
 
 {% tabs %}
 {% highlight dart hl_lines="5" %}

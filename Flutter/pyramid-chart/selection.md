@@ -191,7 +191,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 ![Initial selection](images/selection/initial_render_selection.png)
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [selection event](./callbacks#onselectionchanged) for customizing the selection further.
 
 ## Methods in SelectionBehavior
 

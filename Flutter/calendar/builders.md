@@ -427,6 +427,6 @@ class CalendarApp extends StatelessWidget {
 
 
 * [How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10677/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-calendar)
-* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10679/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-calendar)
-* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10707/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
+* [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10679/how-to-customize-appointments-using-custom-builder-in-the-flutter-calendar)
+* [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10707/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter-calendar)
 * [How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10747/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-calendar)

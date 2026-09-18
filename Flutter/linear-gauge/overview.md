@@ -15,7 +15,7 @@ Syncfusion<sup>&reg;</sup> Flutter Linear Gauge is a powerful data visualization
 
 ## Key Features
 
-* **[Orientation](orientation.md)** - The Linear Gauge supports both vertical and horizontal orientations, giving you flexibility in your layout design.
+* **[Orientation](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/orientation.html)** - The Linear Gauge supports both vertical and horizontal orientations, giving you flexibility in your layout design.
 * **[Axis](axis.md)** - The axis serves as a scale where values are plotted. You can customize the axis by adjusting its thickness and edge styles, and even inverse the axis direction.
 * **[Labels and Ticks](labels.md)** - Axis elements such as labels, major ticks, and minor ticks can be styled in various ways to match your application's design.
 * **[Ranges](range.md)** - Ranges are visual elements that help users quickly visualize where specific values fall on the axis track. You can add multiple ranges with different styles to enhance data visualization.

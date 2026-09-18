@@ -178,7 +178,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 #### See Also 
 
-* [Rendering flutter candlestick chart](https://support.syncfusion.com/kb/article/10683/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
+* [Rendering flutter candlestick chart](https://support.syncfusion.com/kb/article/10683/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart-).
 
 * [Display volume data of financial series](https://support.syncfusion.com/kb/article/11479/display-volume-data-of-financial-series-in-flutter-cartesian-chart)
 

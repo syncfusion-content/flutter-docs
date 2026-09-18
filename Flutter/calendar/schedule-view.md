@@ -268,6 +268,6 @@ class CalendarApp extends StatelessWidget {
 ## See also
 
 * [How do I view schedule in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10138/how-to-view-schedule-in-the-flutter-calendar)
-* [How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10710/how-to-customize-the-day-week-month-header-of-schedule-view-in-the-flutter-calendar)
-* [How to customize the schedule view month header using builder in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10399/how-to-customize-the-schedule-view-month-header-using-builder-in-the-flutter-calendar)
+* [How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10710/how-to-customize-date-header-of-schedule-view-in-flutter-calendar)
+* [How to customize the schedule view month header using builder in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10399/how-to-customize-schedule-view-month-header-builder-in-flutter-calendar)
 * [How to customize the appointment height in schedule view of the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10650/how-to-customize-the-appointment-height-in-schedule-view-of-the-flutter-calendar)

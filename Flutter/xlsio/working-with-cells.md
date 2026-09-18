@@ -127,7 +127,7 @@ Future<void> addHyperlinks() async {
   final Hyperlink hyperlink = sheet.hyperlinks.add(
     sheet.getRangeByName('A1'),
     HyperlinkType.url,
-    'http://www.syncfusion.com',
+    'https://www.syncfusion.com/',
   );
   hyperlink.screenTip = 'To know more about Syncfusion products, go through this link.';
   hyperlink.textToDisplay = 'Syncfusion';
@@ -193,7 +193,7 @@ Future<void> addPictureHyperlink() async {
   final Hyperlink link = sheet.hyperlinks.addImage(
     picture1,
     HyperlinkType.url,
-    'http://www.syncfusion.com',
+    'https://www.syncfusion.com/',
   );
   link.screenTip = 'About Syncfusion';
 

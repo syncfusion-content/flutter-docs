@@ -558,7 +558,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 
 #### See Also
 
-* [Navigating to an hyperlink on axis label tap](https://support.syncfusion.com/kb/article/10658/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
+* [Navigating to an hyperlink on axis label tap](https://support.syncfusion.com/kb/article/10658/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart-).
 
 ## onLegendTapped
 
@@ -1055,9 +1055,9 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 #### See Also
 
-* [Achieve sliding viewport functionality using Cartesian chart](https://support.syncfusion.com/kb/article/11332/how-to-achieve-sliding-viewport-functionality-using-cartesian-chart-sfcartesianchart).
+* [Achieve sliding viewport functionality using Cartesian chart](https://support.syncfusion.com/kb/article/11332/how-flutter-cartesianchart-achieve-sliding-viewport-functionality).
 
-* [Perform an action on swiping over the Cartesian chart](https://support.syncfusion.com/kb/article/10860/how-to-perform-an-action-on-swiping-over-the-cartesian-chart-sfcartesianchart).
+* [Perform an action on swiping over the Cartesian chart](https://support.syncfusion.com/kb/article/10860/how-to-perform-an-action-on-swiping-in-flutter-cartesianchart-).
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
@@ -1370,14 +1370,14 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 
 #### See Also
 
-* [Customize the tooltip using its callback event](https://support.syncfusion.com/kb/article/9958/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+* [Customize the tooltip using its callback event](https://support.syncfusion.com/kb/article/9958/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart-).
 
-* [Customize the axis labels using its callback event](https://support.syncfusion.com/kb/article/10114/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+* [Customize the axis labels using its callback event](https://support.syncfusion.com/kb/article/10114/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart-).
 
-* [Customize the data labels using its callback event](https://support.syncfusion.com/kb/article/10115/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+* [Customize the data labels using its callback event](https://support.syncfusion.com/kb/article/10115/how-to-customize-data-labels-using-callback-events-sfcartesianchart-).
 
-* [Disabling trackball tooltip for particular series using its callback event](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+* [Disabling trackball tooltip for particular series using its callback event](https://support.syncfusion.com/kb/article/10176/how-to-disable-trackball-tooltip-for-particular-series-in-flutter-cartesian-charts-).
 
-* [To Synchronize panning in multiple charts](https://support.syncfusion.com/kb/article/9939/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
+* [To Synchronize panning in multiple charts](https://support.syncfusion.com/kb/article/9939/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart-).
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
