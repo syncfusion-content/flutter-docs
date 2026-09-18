@@ -21,4 +21,4 @@ Syncfusion<sup>&reg;</sup> Flutter Range Slider is a highly interactive UI widge
 * **Highly customizable** - In addition to the rich set of built-in features, the control is fully customizable through its wide range of options.
 * **Tooltips** - Renders tooltips to clearly show the selected range. It is also possible to customize the format of text shown in tooltips. For more details, refer to the [Tooltips](./tooltip.md) documentation.
 * **Orientation** - Supports both horizontal and vertical orientations. For more details, refer to the [Horizontal](./getting-started.md#horizontal) and [Vertical](./getting-started.md#vertical) sections.
-* **Thumb icon support** - Accepts custom widgets like icons or text inside the thumbs. For more details, refer to the [Thumb icon support](./thumb-and-overlay.md) documentation.
+* **Thumb icon support** - Accepts custom widgets like icons or text inside the thumbs. For more details, refer to the [Thumb icon support](./thumb-and-overlay.md#thumb-icon) documentation.
