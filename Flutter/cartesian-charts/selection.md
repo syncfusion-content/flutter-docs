@@ -359,7 +359,7 @@ Defaults to `true`.
 
 Also refer [selection event](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onselectionchanged) for customizing the selection further.
 
-#### See Also
+### See Also
 
 * [Dynamically selecting the data points in a chart](https://support.syncfusion.com/kb/article/10146/how-to-select-the-data-points-dynamically-in-sfcartesianchart).
 

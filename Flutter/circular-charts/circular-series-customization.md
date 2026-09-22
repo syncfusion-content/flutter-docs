@@ -658,6 +658,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 ![Sorting](images/circular-customization/sortings.jpg)
 
-#### See Also
+### See Also
 
 * [Creating a circular drilldown chart using SfCircular charts](https://support.syncfusion.com/kb/article/10175/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart-).

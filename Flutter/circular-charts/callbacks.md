@@ -157,7 +157,7 @@ Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/do
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Show the tapped point value at the center of the doughnut chart](https://support.syncfusion.com/kb/article/11377/how-to-show-the-tapped-point-value-at-the-center-of-the-doughnut-chart).
 

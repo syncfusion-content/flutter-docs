@@ -71,6 +71,6 @@ The example below demonstrates the infinite scrolling by showing the ci
 
 >**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
 
-#### See Also
+### See Also
 
 * [Lazily load more data to the chart](https://support.syncfusion.com/kb/article/10855/how-to-lazily-load-more-data-to-the-chart).

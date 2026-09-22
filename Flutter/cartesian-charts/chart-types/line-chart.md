@@ -102,7 +102,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Dashed line chart](cartesian-chart-types-images/dashed_line.jpg)
 
-#### See Also
+### See Also
 
 * [Applying dashed pattern for line chart](https://support.syncfusion.com/kb/article/10763/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesiancharts-widget).
 
@@ -153,7 +153,7 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 
-#### See Also
+### See Also
 
 * [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)

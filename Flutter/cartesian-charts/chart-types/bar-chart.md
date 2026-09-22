@@ -188,7 +188,7 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 >**Note**: You can refer to our [Flutter Bar Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bar-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bar Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bar/default-bar-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
 
-#### See Also
+### See Also
 
 * [Create vertical bar chart](https://support.syncfusion.com/kb/article/10833/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart-).
 

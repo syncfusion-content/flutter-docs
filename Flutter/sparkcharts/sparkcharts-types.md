@@ -195,7 +195,7 @@ The following properties are used to customize the appearance:
 
 ![Spark Bar chart](images/sparkline-types/spark-bar.png)
 
-#### See Also
+### See Also
 
 * [Export Flutter Spark bar charts as a pdf](https://support.syncfusion.com/kb/article/11432/how-to-export-flutter-spark-bar-charts-as-a-pdfsfsparkbarchart).
 

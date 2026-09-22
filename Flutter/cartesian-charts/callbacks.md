@@ -556,7 +556,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Navigating to an hyperlink on axis label tap](https://support.syncfusion.com/kb/article/10658/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart-).
 
@@ -1053,7 +1053,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Achieve sliding viewport functionality using Cartesian chart](https://support.syncfusion.com/kb/article/11332/how-flutter-cartesianchart-achieve-sliding-viewport-functionality).
 
@@ -1287,7 +1287,7 @@ Defaults to `null`.
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Format the date-time axis labels in Cartesian chart](https://support.syncfusion.com/kb/article/11396/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart).
 
@@ -1368,7 +1368,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Customize the tooltip using its callback event](https://support.syncfusion.com/kb/article/9958/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart-).
 

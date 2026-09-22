@@ -692,7 +692,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 
-#### See Also
+### See Also
 
 * [Rendering a chart using JSON data retrieved from a fire base](https://support.syncfusion.com/kb/article/10589/how-to-render-the-flutter-chart-using-json-data-stored-in-firebase-database).
 

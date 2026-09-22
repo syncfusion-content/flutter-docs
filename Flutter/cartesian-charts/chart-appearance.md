@@ -112,7 +112,7 @@ You can customize the plot area of the chart using the below properties.
 
 ![Chart plot area](images/appearance/plot_area_customization.jpg)
 
-#### See Also
+### See Also
 
 * [Rendering a background image in the plot area of the Cartesian chart](https://support.syncfusion.com/kb/article/9741/how-to-render-the-flutter-cartesianchart-with-background-image-for-plot-area).
 

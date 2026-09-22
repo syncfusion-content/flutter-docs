@@ -2272,7 +2272,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Rendering real time live charts using updateDataSource method](https://support.syncfusion.com/kb/article/10783/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart-).
 
@@ -2371,7 +2371,7 @@ and funnel charts.
 {% endhighlight %}
 {% endtabs %}
 
-#### See Also
+### See Also
 
 * [Show or hide tooltip dynamically in Cartesian chart](https://support.syncfusion.com/kb/article/9957/how-to-show-or-hide-the-tooltip-dynamically-in-flutter-cartesian-charts-sfcartesianchart-).
 * [Show or hide trackball dynamically in Cartesian chart](https://support.syncfusion.com/kb/article/9960/how-to-show-or-hide-trackball-dynamically-in-flutter-cartesiancharts).

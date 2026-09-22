@@ -176,7 +176,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](cartesian-chart-types-images\candle_round_corner.png)
 
-#### See Also 
+### See Also 
 
 * [Rendering flutter candlestick chart](https://support.syncfusion.com/kb/article/10683/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart-).
 
@@ -239,7 +239,7 @@ The following are the types of indication when the combination of high, low, ope
 
 ![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
 
-#### See Also
+### See Also
 
 * [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
