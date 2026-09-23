@@ -84,6 +84,6 @@ class PlaceholderExample extends StatelessWidget {
 
 ## See Also
 
-* [Action button](action-button.md)
-* [Conversation area](conversation-area.md)
-* [Getting started](getting-started.md)
+* [Action button](action-button)
+* [Conversation area](conversation-area)
+* [Getting started](getting-started)

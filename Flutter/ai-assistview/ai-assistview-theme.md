@@ -1368,7 +1368,7 @@ class ThemeExample extends StatelessWidget {
 
 #### See Also
 
-* [Action button](action-button.md)
-* [Composer](composer.md)
-* [Conversation area](conversation-area.md)
-* [Placeholder](placeholder.md)
+* [Action button](action-button)
+* [Composer](composer)
+* [Conversation area](conversation-area)
+* [Placeholder](placeholder)

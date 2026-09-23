@@ -31,4 +31,4 @@ Syncfusion<sup>&reg;</sup> Flutter Treemap is a powerful and customizable widget
 
 * **Custom background widgets** - Add custom widgets, such as image widgets, as backgrounds of the tiles to enrich the UI and easily visualize the data type that a particular tile represents.
 
-For step-by-step installation and setup instructions, see [Getting Started with Flutter Treemap](getting-started.md).
+For step-by-step installation and setup instructions, see [Getting Started with Flutter Treemap](getting-started).
