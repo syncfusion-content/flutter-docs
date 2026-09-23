@@ -17,7 +17,7 @@ To get started quickly with our Flutter Range Slider widget, check out this vide
 <iframe id='FlutterRangeSliderVideoTutorial' src='https://www.youtube.com/embed/ndF9XToq4rI'></iframe>
 
 ## Add Flutter Range Slider to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -527,7 +527,7 @@ class _HomePageState extends State<HomePage> {
 
 ## Inverse the horizontal Range Slider
 
-You can invert the horizontal range slider by wrapping the Flutter Range Slider in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`. The [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget only affects horizontal sliders; to invert a vertical range slider, use the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/isInversed.html) property described in the [Inverse the vertical range slider](#inverse-the-vertical-range-slider) section.
+You can invert the horizontal range slider by wrapping the Flutter Range Slider in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`. The [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget only affects horizontal sliders; to invert a vertical range slider, use the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/isInversed.html) property described in the [Inverse the vertical range slider](#inverse-the-vertical-flutter-range-slider) section.
 
 {% tabs %}
 {% highlight Dart %}

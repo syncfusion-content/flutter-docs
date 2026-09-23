@@ -33,7 +33,7 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 ### Add DataGrid widget as a dependency
 
 1. Click on `+ Add Dependency`, a text editor will appear.
-2. Navigate to the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid) on pub.dev and copy the dependency name and version using the `Copy to Clipboard` option.
+2. Navigate to the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_datagrid) on pub.dev and copy the dependency name and version using the `Copy to Clipboard` option.
 ![Version](how-to-section-images/copy-version.png)
 3. Paste the copied dependency into the text editor, then click `Refresh` and `Save` it.
 
@@ -45,14 +45,14 @@ Navigate to the [FlutterFlow dashboard](https://app.flutterflow.io/dashboard) an
 
 ### Import the package
 
-1. Navigate to the **Installing** tab on the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid) page. Under the **Import it** section, copy the package import statement.
+1. Navigate to the **Installing** tab on the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_datagrid) page. Under the **Import it** section, copy the package import statement.
 ![Package](how-to-section-images/copy-package.png)
 2. Paste the copied import statement into the code editor and click `Save`.
 ![Import](how-to-section-images/import-package-flutterflow.png)
 
 ### Add widget code snippet in code editor
 
-1. Navigate to the **Example** tab in the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_DataGrid/example) page and copy the widget code example.
+1. Navigate to the **Example** tab in the [Syncfusion Flutter DataGrid package](https://pub.dev/packages/syncfusion_flutter_datagrid/example) page and copy the widget code example.
 ![Code](how-to-section-images/code-snippet.png)
 2. Paste the copied code into the editor, click `Format Code` to format it to standard style, and then click `Save`.
 ![Code snippet](how-to-section-images/Adding-code-snippent.png)

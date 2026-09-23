@@ -194,11 +194,11 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
-#### See Also
+### See Also
 
-* [Rendering each data points with different border radius in column charts](https://support.syncfusion.com/kb/article/10378/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
+* [Rendering each data points with different border radius in column charts](https://support.syncfusion.com/kb/article/10378/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the-implementation-of-cartesian-charts-sfcartesianchart-).
 
-* [Adding rounded corners for the specific sides in column charts](https://support.syncfusion.com/kb/article/10374/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart).
+* [Adding rounded corners for the specific sides in column charts](https://support.syncfusion.com/kb/article/10374/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart-).
 
 * [Render a customized column chart](https://support.syncfusion.com/kb/article/11410/how-to-render-a-customized-column-chart-sfcartesianchart).
 
@@ -247,7 +247,7 @@ Renders columns with tracks. A track is a rectangular bar rendered from the star
 
 ![Track](cartesian-chart-types-images/track_column.jpg)
 
-#### See Also
+### See Also
 
 * [Color palette](/flutter/cartesian-charts/series-customization#color-palette) 
 * [Color mapping](/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)

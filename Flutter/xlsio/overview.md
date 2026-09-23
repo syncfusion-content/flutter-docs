@@ -15,7 +15,7 @@ The Syncfusion Flutter XlsIO is a native Dart library used to create Excel docum
 
 Before getting started, ensure the following are installed:
 
-* [Flutter SDK](https://docs.flutter.dev/get-started/install) - version compatible with the current Syncfusion Flutter XlsIO release.
+* [Flutter SDK](https://docs.flutter.dev/install) - version compatible with the current Syncfusion Flutter XlsIO release.
 * [Dart SDK](https://dart.dev/get-dart) - bundled with the Flutter SDK.
 * A code editor such as [Visual Studio Code](https://code.visualstudio.com/).
 

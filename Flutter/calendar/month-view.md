@@ -527,15 +527,15 @@ class CalendarApp extends StatelessWidget {
 
 ## See also
 
-* [How to show a custom agenda view in the Flutter event calendar widget?](https://support.syncfusion.com/kb/article/9607/how-to-show-a-custom-agenda-view-in-the-flutter-calendar)
+* [How to show a custom agenda view in the Flutter event calendar widget?](https://support.syncfusion.com/kb/article/9607/how-to-show-custom-agenda-view-in-the-flutter-calendar)
 * [How to customize the agenda item height in the flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/9636/how-to-customize-the-agenda-item-height-in-the-flutter-calendar)
-* [How to customize agenda view height based on the Flutter event calendar widget height](https://support.syncfusion.com/kb/article/9645/how-to-customize-agenda-view-height-based-on-the-flutter-calendar-widget-height)
+* [How to customize agenda view height based on the Flutter event calendar widget height](https://support.syncfusion.com/kb/article/9645/how-to-customize-view-height-based-on-widget-in-flutter-calendar)
 * [How to change the number of weeks in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10777/how-to-change-the-number-of-weeks-in-the-flutter-calendar)
 * [How to display two month view Calendar in a screen using Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10548/how-to-display-two-month-view-calendar-in-a-screen-using-flutter-calendar)
 * [How to style the month cell in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10547/how-to-style-the-month-cell-in-the-flutter-calendar)
-* [How to clear the appointments in month agenda view using onViewChange callback in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10545/how-to-clear-the-appointments-in-month-agenda-view-using-onviewchange-callback-in-the)
-* [How to customize the leading and trailing dates of the month cells in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10362/how-to-customize-the-leading-and-trailing-dates-of-the-month-cells-in-the-flutter-calendar)
-* [How to customize the month cells of the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10480/how-to-customize-the-month-cells-of-the-flutter-calendar)
+* [How to clear the appointments in month agenda view using onViewChange callback in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10545/how-to-clear-the-appointments-in-month-agenda-view-using-onviewchange-callback-in-the-flutter-calendar)
+* [How to customize the leading and trailing dates of the month cells in the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10362/how-to-customize-the-leading-and-trailing-dates-of-the-month-cells-in-the-flutter-calendarntify)
+* [How to customize the month cells of the Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10480/how-to-customize-the-month-cells-in-flutter-calendar)
 * [How to customize the agenda view appointment using the style properties in Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10689/how-to-customize-the-agenda-view-appointment-using-the-style-properties-in-flutter-calendar)
-* [How to get the month and year of month view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10806/how-to-get-the-month-and-year-of-month-view-in-the-flutter-calendar)
+* [How to get the month and year of month view in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10806/how-to-get-the-month-and-year-of-month-view-in-flutter-calendar)
 * [How to handle the appointment display mode in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10766/how-to-handle-the-appointment-display-mode-in-the-flutter-calendar)

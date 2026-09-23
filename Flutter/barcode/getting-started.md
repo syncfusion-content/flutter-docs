@@ -14,7 +14,7 @@ This section explains the steps required to add the barcode and set its symbolog
 
 ## Add Flutter Barcode Generator to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -85,7 +85,7 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
           body: Center(
             child: Container(
               height: 150,
-              child: SfBarcodeGenerator(value: 'http://www.syncfusion.com'),
+              child: SfBarcodeGenerator(value: 'https://www.syncfusion.com/'),
             ),
           ),
         ),
@@ -126,7 +126,7 @@ You can set the required symbology type to the Flutter Barcode Generator based o
               height: 350,
               width: 350,
               child: SfBarcodeGenerator(
-                value: 'http://www.syncfusion.com',
+                value: 'https://www.syncfusion.com/',
                 symbology: QRCode(),
               ),
             ),
@@ -167,7 +167,7 @@ The provided input value can be displayed below the barcode by enabling the [`sh
               height: 350,
               width: 350,
               child: SfBarcodeGenerator(
-                value: 'http://www.syncfusion.com',
+                value: 'https://www.syncfusion.com/',
                 showValue: true,
                 textSpacing: 15,
                 symbology: QRCode(),

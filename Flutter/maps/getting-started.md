@@ -18,7 +18,7 @@ To get started quickly with our Flutter Maps widget, you can check on this video
 
 ## Add Flutter Maps to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -180,7 +180,7 @@ class _MapsExampleState extends State<MapsExample> {
   @override
   void initState() {
     _dataSource = MapShapeSource.network(
-      'http://www.json-generator.com/api/json/get/bVqXoJvfjC?indent=2',
+      'https://json-generator.com/api/json/get/bVqXoJvfjC?indent=2',
        shapeDataField: 'name',
     );
     super.initState();

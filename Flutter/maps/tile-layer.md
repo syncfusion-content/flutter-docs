@@ -102,7 +102,7 @@ Our tile layer is not limited or specific to any of the tile providers mentioned
 
 For other map providers like TomTom, MapBox, etc., you can check their respective official websites and provide the URL in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section.
 
-Below is an example of adding TomTom map. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction).
+Below is an example of adding TomTom map. You can get the TomTom API key from this [`link`](https://docs.tomtom.com/map-display-api/documentation/tomtom-maps/v2/product-information/introduction).
 
 {% tabs %}
 {% highlight Dart %}
