@@ -14,7 +14,7 @@ The Essential Studio<sup>&reg;</sup> Flutter Mac installer provides the Syncfusi
 
 ## Prerequisites
 
-* You must have already downloaded the Syncfusion<sup>&reg;</sup> Flutter Mac installer (DMG) from the [Mac installer download page](how-to-download.md).
+* You must have already downloaded the Syncfusion<sup>&reg;</sup> Flutter Mac installer (DMG) from the [Mac installer download page](how-to-download).
 * A Mac running macOS Catalina (10.15) or later (see [System Requirements](https://help.syncfusion.com/flutter/system-requirements) for the latest supported versions).
 * Flutter SDK 3.0 or later installed on your development machine.
 * You must have a Syncfusion account. If you do not have one, sign up at [Syncfusion Account](https://www.syncfusion.com/account/register).

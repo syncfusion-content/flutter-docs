@@ -73,4 +73,3 @@ For Syncfusion Flutter version 18.3.0.x and later, neither license keys nor unlo
 
 - [How to generate a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate)
 - [Syncfusion Licensing Knowledge Base](https://www.syncfusion.com/kb/flutter)
-- [Installation for older versions](../../installation/how-to-install.md)
