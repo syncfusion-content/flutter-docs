@@ -18,7 +18,7 @@ To get started quickly with our Flutter Signature Pad widget, you can watch this
 
 ## Add Flutter Signature Pad to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -305,7 +305,7 @@ class _SignaturePadExampleState extends State<SignaturePadExample> {
 {% endhighlight %}
 {% endtabs %}
 
-N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://docs.flutter.dev/development/tools/web-renderers) page for more details.
+N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://docs.flutter.dev/platform-integration/web) page for more details.
 
 ## Clear the existing signature in Signature Pad
 

@@ -14,7 +14,7 @@ documentation: ug
 Flutter XlsIO provides the ability to import data into a worksheet from collections, including `List<Object>` and `List<T>`. The available approaches are:
 
 * [Import Data from List](#import-data-from-list)
-* [Import Data from List<T>](#import-data-from-list-t)
+* [Import Data from List<T>](#import-data-from-list-1)
 
 N> Before you begin, complete the [Getting Started with Flutter XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/flutter/getting-started) steps, then import the package and required helpers in your Dart file:
 

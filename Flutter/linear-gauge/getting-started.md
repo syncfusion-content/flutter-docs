@@ -18,7 +18,7 @@ To get started quickly with our Flutter Linear Gauge widget, you can check out t
 
 ## Add Linear Gauge to an application
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 

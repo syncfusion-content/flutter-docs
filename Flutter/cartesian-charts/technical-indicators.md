@@ -759,11 +759,11 @@ Refer the following example below
 
 ![Binding data source to Indicators](images/technical-indicators/indicator_binding.jpg)
 
-#### See Also
+### See Also
 
 * [Refer this link for technical indicators callback](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onrenderdetailsupdate).
 
-* [Bind data source to technical indicators in Flutter Cartesian chart](https://support.syncfusion.com/kb/article/11420/bind-data-source-to-technical-indicators-in-flutter-cartesian-chart).
+* [Bind data source to technical indicators in Flutter Cartesian chart](https://support.syncfusion.com/kb/article/11420/how-to-bind-data-source-to-technical-indicators-in-flutter-cartesian-chart).
 
 >**Note**: Each indicators has their own number of value mappers available,
 * [`Accumulation distribution indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AccumulationDistributionIndicator-class.html) (AD) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/highValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/closeValueMapper.html), [`volumeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicator/volumeValueMapper.html)).

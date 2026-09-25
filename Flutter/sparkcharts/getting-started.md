@@ -13,7 +13,7 @@ This section explains the steps required to populate the spark charts with data,
 
 ## Add Flutter Spark charts to an application
 
-Create a new Flutter project by following the instructions in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a new Flutter project by following the instructions in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 

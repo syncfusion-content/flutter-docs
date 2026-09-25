@@ -19,7 +19,7 @@ To get started quickly with our [Flutter Event Calendar widget](https://www.sync
 N> You can also explore our [Flutter Event Calendar example](https://flutter.syncfusion.com/#/event-calendar/getting-started) to know how to render and configure the Flutter Examples.
 
 ## Add Flutter Event Calendar to an application
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 
@@ -671,15 +671,15 @@ Get the complete "getting started" sample from [here](https://github.com/Syncfus
 ## See also
 
 * [How to switch between views of the event calendar in Flutter?](https://support.syncfusion.com/kb/article/9634/how-to-switch-between-views-of-the-flutter-calendar)
-* [How to update event calendar (SfCalendar) DisplayDate using showDatePicker in flutter](https://support.syncfusion.com/kb/article/9551/how-to-update-event-calendar-sfcalendar-displaydate-using-showdatepicker-in-flutter)
-* [How can we move to specific time while switching from month to day view in Flutter event calendar](https://support.syncfusion.com/kb/article/9637/how-to-move-to-a-specific-time-while-switching-from-month-to-day-view-in-the-flutter)
+* [How to update event calendar (SfCalendar) DisplayDate using showDatePicker in flutter](https://support.syncfusion.com/kb/article/9551/how-to-update-event-calendar-display-date-in-flutter)
+* [How can we move to specific time while switching from month to day view in Flutter event calendar](https://support.syncfusion.com/kb/article/9637/how-to-move-to-a-specific-time-while-switching-from-month-to-day-view-in-the-flutter-calendar)
 * [How to customize the cell border in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10502/how-to-customize-the-cell-border-in-the-flutter-calendar)
 * [How to apply theming in Flutter event calendar (SfCalendar)?](https://support.syncfusion.com/kb/article/10583/how-to-apply-theming-in-flutter-calendar)
 * [How to add an image as background in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10645/how-to-add-an-image-as-background-in-the-flutter-calendar)
 * [How to change the first day of week in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10744/how-to-change-the-first-day-of-week-in-the-flutter-calendar)
 * [How to interact with event calendar cell when appointments loaded in the Flutter (SfCalendar)](https://support.syncfusion.com/kb/article/10795/how-to-interact-with-event-calendar-cell-when-appointments-loaded-in-the-flutter-calendar)
 * [How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10641/how-to-customize-the-selection-using-decoration-in-the-flutter-calendar)
-* [How to navigate to the previous or next views using navigation arrows in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10638/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter)
+* [How to navigate to the previous or next views using navigation arrows in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10638/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-calendar)
 * [How to customize the current day color in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10814/how-to-customize-the-current-day-color-in-the-flutter-calendar)
 * [How to show a particular week in a day view of Flutter event calendar(SfCalendar)](https://support.syncfusion.com/kb/article/10774/how-to-show-a-particular-week-in-a-day-view-of-flutter-calendar)
 * [How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://support.syncfusion.com/kb/article/10764/how-to-format-the-view-header-day-and-date-in-the-flutter-calendar)

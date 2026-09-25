@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to add the SfDataGrid widget and its features. This section covers only the basic features needed to get started with the Syncfusion® Flutter Data Grid widget.
 
-> **Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+> **Note:** Ensure you have Flutter SDK installed. For detailed setup instructions, refer to the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 To get started quickly with Flutter SfDataGrid, check out this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
@@ -19,7 +19,7 @@ To get started quickly with Flutter SfDataGrid, check out this video:
 
 ## Add Flutter SfDataGrid to an application
 
-Create a simple project using the instruction given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instruction given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/learn/pathway) documentation.
 
 **Add dependency**
 

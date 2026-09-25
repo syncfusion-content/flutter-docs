@@ -46,7 +46,7 @@ sheet.getRangeByIndex(1, 1).setText('Enter a number between 10 and 20');
 
 {% endhighlight %}
 
-When the criteria set for the target range is satisfied, the defined formats (like the ones below) are applied in the order of priority. For more details about conditional format priority, see [Manage conditional formatting rule precedence](https://support.microsoft.com/en-us/office/video-manage-conditional-formatting-6b69364e-dc79-4fe4-bd94-1883e40848f9).
+When the criteria set for the target range is satisfied, the defined formats (like the ones below) are applied in the order of priority. For more details about conditional format priority, see [Manage conditional formatting rule precedence](https://support.microsoft.com/en-us/excel/).
 
 N> `formatType` must be set before `operator` and any formula properties, because the operator's valid values depend on the chosen `ExcelCFType`.
 

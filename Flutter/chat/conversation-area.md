@@ -439,7 +439,7 @@ class MessageContentBuilderExample extends StatelessWidget {
 
 Based on the [`outgoingUser`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/outgoingUser.html) property, messages are rendered as incoming or outgoing. The following options are available to customize bubble display settings:
 
->Import the [`intl`](https://pub.dev/documentation/intl/latest/intl/intl-library.html) package to use [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/timestampFormat.html).
+>Import the [`intl`](https://pub.dev/documentation/intl/latest/intl/) package to use [`timestampFormat`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatMessageSettings/timestampFormat.html).
 
 ### Author name
 
