@@ -39,6 +39,6 @@ The Syncfusion<sup>&reg;</sup> Flutter AI AssistView widget is a powerful and cu
 
 * **Message Footer Builder** - The [`SfAIAssistView.messageFooterBuilder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/assist_view/SfAIAssistView/messageFooterBuilder.html) allows you to specify a custom widget that will be displayed as a footer within each chat message. This is particularly useful for displaying timestamps or other additional information related to the message.
 
->To get started with the AI AssistView widget, refer to the [Getting started with Flutter AI AssistView](getting-started.md) documentation.
+>To get started with the AI AssistView widget, refer to the [Getting started with Flutter AI AssistView](getting-started) documentation.
 >
 >You can refer to our [Flutter AI AssistView](https://www.syncfusion.com/flutter-widgets/flutter-aiassistview) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter AI AssistView example](https://flutter.syncfusion.com/#/ai-assist-view/getting-started) which demonstrates interaction between users and AI services in a fully customizable layout and shows how to easily configure the AI AssistView with built-in support for creating stunning visual effects.

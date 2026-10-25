@@ -13,7 +13,7 @@ This section explains the customization options available in [`ChatComposer`](ht
 
 ## Composer
 
-The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the `minimum` and `maximum` number of lines, `decoration`, `margin`, `textStyle`, and theme-level `editorTextStyle` (see [Chat theme - Editor text style](chat-theme.md#editor-text-style)).
+The [`composer`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/SfChat/composer.html) is a customizable text editor designed for typing new messages. It offers options to adjust the appearance and behavior of the text editor, including settings for the `minimum` and `maximum` number of lines, `decoration`, `margin`, `textStyle`, and theme-level `editorTextStyle` (see [Chat theme - Editor text style](chat-theme#editor-text-style)).
 
 When the composer is null, no default text field is added to the Flutter Chat widget.
 
@@ -432,7 +432,7 @@ The [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_ch
 
 If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) is used, the action button will always be enabled.
 
-When using `ChatComposer.builder`, the default `ChatActionButton.onPressed` text argument is empty. Handle message creation using your custom controller state, then clear the controller after adding the message. For action button behavior details, see [Action button](action-button.md).
+When using `ChatComposer.builder`, the default `ChatActionButton.onPressed` text argument is empty. Handle message creation using your custom controller state, then clear the controller after adding the message. For action button behavior details, see [Action button](action-button).
 
 {% tabs %}
 {% highlight dart %}

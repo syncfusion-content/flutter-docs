@@ -17,7 +17,7 @@ The [`actionButton`](https://pub.dev/documentation/syncfusion_flutter_chat/lates
 
 When the button is pressed, [`ChatActionButton.onPressed`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatActionButton/onPressed.html) is called. `SfChat` does not auto-add composed text to the message list, so you must create a `ChatMessage` and add it manually in the callback.
 
-If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) is used, the `onPressed` text argument is always empty. Read the custom text from your controller and append it to the message list manually. For a builder-based composer flow, see [Composer](composer.md).
+If [`ChatComposer.builder`](https://pub.dev/documentation/syncfusion_flutter_chat/latest/chat/ChatComposer/ChatComposer.builder.html) is used, the `onPressed` text argument is always empty. Read the custom text from your controller and append it to the message list manually. For a builder-based composer flow, see [Composer](composer).
 
 {% tabs %}
 {% highlight dart %}
