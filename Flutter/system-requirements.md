@@ -64,9 +64,16 @@ N> All Syncfusion Flutter packages share the same version number. The version li
    </tr>
    <tr>
       <td style="text-align:center">
+         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.47.0-stable.zip">3.47.0</a>
+      </td>
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46">35.1.46</a> <35.2.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+      </td>
+   </tr>
+   <tr>
+      <td style="text-align:center">
          <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.44.0-stable.zip">3.44.0</a>
       </td>
-      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.13">33.2.13</a> <34.1.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.13">33.2.13</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46">35.1.46</a>
       </td>
    </tr>
       <tr>
