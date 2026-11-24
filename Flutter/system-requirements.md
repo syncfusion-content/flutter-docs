@@ -64,114 +64,114 @@ N> All Syncfusion Flutter packages share the same version number. The version li
    </tr>
    <tr>
       <td style="text-align:center">
-         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.47.0-stable.zip">3.47.0</a>
+         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.47.0-stable.zip" aria-label="Flutter SDK 3.47.0 stable archive">3.47.0</a>
       </td>
-      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46">35.1.46</a> <35.2.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2">latest</a>)
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46" aria-label="Syncfusion Flutter Charts version 35.1.46">35.1.46</a> <35.2.xx(<a href="https://pub.dev/packages?q=publisher%3Asyncfusion.com&page=2" aria-label="Latest Syncfusion Flutter package versions">latest</a>)
       </td>
    </tr>
    <tr>
       <td style="text-align:center">
-         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.44.0-stable.zip">3.44.0</a>
+         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.44.0-stable.zip" aria-label="Flutter SDK 3.44.0 stable archive">3.44.0</a>
       </td>
-      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.13">33.2.13</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46">35.1.46</a>
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.13" aria-label="Syncfusion Flutter Charts version 33.2.13">33.2.13</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/35.1.46" aria-label="Syncfusion Flutter Charts version 35.1.46">35.1.46</a>
       </td>
    </tr>
       <tr>
       <td style="text-align:center">
-         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.41.0-stable.zip">3.41.0</a>
+         <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.41.0-stable.zip" aria-label="Flutter SDK 3.41.0 stable archive">3.41.0</a>
       </td>
-      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15">31.2.15</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.12">33.2.12</a>
+      <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15" aria-label="Syncfusion Flutter Charts version 31.2.15">31.2.15</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.12" aria-label="Syncfusion Flutter Charts version 33.2.12">33.2.12</a>
       </td>
    </tr>
    <tr>
        <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.38.1-stable.zip">3.38.1</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.38.1-stable.zip" aria-label="Flutter SDK 3.38.1 stable archive">3.38.1</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15">31.2.15</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.12">33.2.12</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15" aria-label="Syncfusion Flutter Charts version 31.2.15">31.2.15</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/33.2.12" aria-label="Syncfusion Flutter Charts version 33.2.12">33.2.12</a>
          </td>
     </tr>
     <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.35.1-stable.zip">3.35.1</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.35.1-stable.zip" aria-label="Flutter SDK 3.35.1 stable archive">3.35.1</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.1.20">31.1.20</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15">31.2.15</a>
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.32.0-stable.zip">3.32.0</a>
-        </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/30.1.37">30.1.37</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.1.19">31.1.19</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.1.20" aria-label="Syncfusion Flutter Charts version 31.1.20">31.1.20</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.2.15" aria-label="Syncfusion Flutter Charts version 31.2.15">31.2.15</a>
         </td>
     </tr>
     <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.29.0-stable.zip">3.29.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.32.0-stable.zip" aria-label="Flutter SDK 3.32.0 stable archive">3.32.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/29.1.33">29.1.33</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/29.2.11">29.2.11</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/30.1.37" aria-label="Syncfusion Flutter Charts version 30.1.37">30.1.37</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/31.1.19" aria-label="Syncfusion Flutter Charts version 31.1.19">31.1.19</a>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.29.0-stable.zip" aria-label="Flutter SDK 3.29.0 stable archive">3.29.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/29.1.33" aria-label="Syncfusion Flutter Charts version 29.1.33">29.1.33</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/29.2.11" aria-label="Syncfusion Flutter Charts version 29.2.11">29.2.11</a>
         </td>
     </tr>
         <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.27.0-stable.zip">3.27.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.27.0-stable.zip" aria-label="Flutter SDK 3.27.0 stable archive">3.27.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.36">28.1.36</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.2.12">28.2.12</a>
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.0-stable.zip">3.24.0</a>
-        </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.14">26.2.14</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.35">28.1.35</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.36" aria-label="Syncfusion Flutter Charts version 28.1.36">28.1.36</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.2.12" aria-label="Syncfusion Flutter Charts version 28.2.12">28.2.12</a>
         </td>
     </tr>
     <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.22.0-stable.zip">3.22.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.0-stable.zip" aria-label="Flutter SDK 3.24.0 stable archive">3.24.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/25.2.5">25.2.5</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.13">26.2.13</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.14" aria-label="Syncfusion Flutter Charts version 26.2.14">26.2.14</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/28.1.35" aria-label="Syncfusion Flutter Charts version 28.1.35">28.1.35</a>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.22.0-stable.zip" aria-label="Flutter SDK 3.22.0 stable archive">3.22.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/25.2.5" aria-label="Syncfusion Flutter Charts version 25.2.5">25.2.5</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/26.2.13" aria-label="Syncfusion Flutter Charts version 26.2.13">26.2.13</a>
         </td>
     </tr>
       <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.19.0-stable.zip">3.19.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.19.0-stable.zip" aria-label="Flutter SDK 3.19.0 stable archive">3.19.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.7">24.2.7</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/25.2.4">25.2.4</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.7" aria-label="Syncfusion Flutter Charts version 24.2.7">24.2.7</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/25.2.4" aria-label="Syncfusion Flutter Charts version 25.2.4">25.2.4</a>
         </td>
     </tr>
       <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip">3.16.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip" aria-label="Flutter SDK 3.16.0 stable archive">3.16.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5">23.2.5</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.6">24.2.6</a>
-        </td>
-    </tr>
-     <tr>
-        <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.13.0-stable.zip">3.13.0</a>
-        </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.11">22.2.11</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.4">23.2.4</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.5" aria-label="Syncfusion Flutter Charts version 23.2.5">23.2.5</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/24.2.6" aria-label="Syncfusion Flutter Charts version 24.2.6">24.2.6</a>
         </td>
     </tr>
      <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip">3.10.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.13.0-stable.zip" aria-label="Flutter SDK 3.13.0 stable archive">3.13.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9">21.2.9</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10">22.2.10</a>
-        </td>
-    </tr>
-     <tr>
-        <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip">3.7.0</a>
-        </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.50">20.4.50</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.8">21.2.8</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.11" aria-label="Syncfusion Flutter Charts version 22.2.11">22.2.11</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/23.2.4" aria-label="Syncfusion Flutter Charts version 23.2.4">23.2.4</a>
         </td>
     </tr>
      <tr>
         <td style="text-align:center">
-           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.0-stable.zip">3.3.0</a>
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.0-stable.zip" aria-label="Flutter SDK 3.10.0 stable archive">3.10.0</a>
         </td>
-        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47">20.3.47</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.49">20.4.49</a>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.9" aria-label="Syncfusion Flutter Charts version 21.2.9">21.2.9</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/22.2.10" aria-label="Syncfusion Flutter Charts version 22.2.10">22.2.10</a>
+        </td>
+    </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip" aria-label="Flutter SDK 3.7.0 stable archive">3.7.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.50" aria-label="Syncfusion Flutter Charts version 20.4.50">20.4.50</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/21.2.8" aria-label="Syncfusion Flutter Charts version 21.2.8">21.2.8</a>
+        </td>
+    </tr>
+     <tr>
+        <td style="text-align:center">
+           <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.0-stable.zip" aria-label="Flutter SDK 3.3.0 stable archive">3.3.0</a>
+        </td>
+        <td style="text-align:center">>=<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.3.47" aria-label="Syncfusion Flutter Charts version 20.3.47">20.3.47</a> <<a href="https://pub.dev/packages/syncfusion_flutter_charts/versions/20.4.49" aria-label="Syncfusion Flutter Charts version 20.4.49">20.4.49</a>
         </td>
     </tr>
 </table>
